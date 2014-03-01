@@ -1,0 +1,247 @@
+@font-face {
+	font-family: 'devicon';
+	src:url('fonts/devicon.eot?pjetjn');
+	src:url('fonts/devicon.eot?#iefixpjetjn') format('embedded-opentype'),
+		url('fonts/devicon.woff?pjetjn') format('woff'),
+		url('fonts/devicon.ttf?pjetjn') format('truetype'),
+		url('fonts/devicon.svg?pjetjn#devicon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'devicon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Logo colors
+$sass-color: #cc6699;
+$photoshop-color: #80b5e2;
+$mysql-color: #00618a;
+$less-color: #2a4d80;
+$laravel-color: #fd4f31;
+$js-color: #f0db4f;
+$jquery-color: #0769ad;
+$javascript-color: #eab553;
+$bower-color: #ef5734;
+$css3-color: #3d8fc6;
+$foundation-color: #008cba;
+$git-color: #f34f29;
+$grunt-color: #fcaa1a;
+$angularjs-color: #c4473a;
+$html5-color: #e54d26;
+$bootstrap-color: #59407f;
+$illustrator-color: #faa625;
+
+.icon-sass:before {
+	content: "\e600";
+}
+.icon-sass-color:before {
+	content: "\e600";
+	color: $sass-color;
+}
+.icon-photoshop:before {
+	content: "\e601";
+}
+.icon-photoshop-color:before {
+	content: "\e601";
+	color: $photoshop-color;
+}
+.icon-mysql:before {
+	content: "\e602";
+}
+.icon-mysql-color:before {
+	content: "\e602";
+	color: $mysql-color;
+}
+.icon-mysql-text:before {
+	content: "\e603";
+}
+.icon-mysql-text-color:before {
+	content: "\e603";
+	color: $mysql-color;
+}
+.icon-less:before {
+	content: "\e604";
+}
+.icon-less-color:before {
+	content: "\e604";
+	color: $less-color;
+}
+.icon-laravel:before {
+	content: "\e605";
+}
+.icon-laravel-color:before {
+	content: "\e605";
+	color: $laravel-color;
+}
+.icon-laravel-text:before {
+	content: "\e606";
+}
+.icon-laravel-text-color:before {
+	content: "\e606";
+	color: $laravel-color;
+}
+.icon-js:before {
+	content: "\e607";
+}
+.icon-js-color:before {
+	content: "\e607";
+	color: $js-color;
+}
+.icon-jquery:before {
+	content: "\e608";
+}
+.icon-jquery-color:before {
+	content: "\e608";
+	color: $jquery-color;
+}
+.icon-jquery-text:before {
+	content: "\e609";
+}
+.icon-jquery-text-color:before {
+	content: "\e609";
+	color: $jquery-color;
+}
+.icon-javascript:before {
+	content: "\e60a";
+}
+.icon-javascript-color:before {
+	content: "\e60a";
+	color: $javascript-color;
+}
+.icon-javascript-text:before {
+	content: "\e60b";
+}
+.icon-javascript-text-color:before {
+	content: "\e60b";
+	color: $javascript-color;
+}
+.icon-bower:before {
+	content: "\e60c";
+}
+.icon-bower-color:before {
+	content: "\e60c";
+	color: $bower-color;
+}
+.icon-bower-text:before {
+	content: "\e61c";
+}
+.icon-bower-text-color:before {
+	content: "\e61c";
+	color: $bower-color;
+}
+.icon-css3:before {
+	content: "\e60e";
+}
+.icon-css3-color:before {
+	content: "\e60e";
+	color: $css3-color;
+}
+.icon-css3-text:before {
+	content: "\e60d";
+}
+.icon-css3-text-color:before {
+	content: "\e60d";
+	color: $css3-color;
+}
+.icon-foundation:before {
+	content: "\e610";
+}
+.icon-foundation-color:before {
+	content: "\e610";
+	color: $foundation-color;
+}
+.icon-foundation-text:before {
+	content: "\e60f";
+}
+.icon-foundation-text-color:before {
+	content: "\e60f";
+	color: $foundation-color;
+}
+.icon-git:before {
+	content: "\e612";
+}
+.icon-git-color:before {
+	content: "\e612";
+	color: $git-color;
+}
+.icon-git-text:before {
+	content: "\e611";
+}
+.icon-git-text-color:before {
+	content: "\e611";
+	color: $git-color;
+}
+.icon-grunt:before {
+	content: "\e616";
+}
+.icon-grunt-color:before {
+	content: "\e616";
+	color: $grunt-color;
+}
+.icon-grunt-text:before {
+	content: "\e613";
+}
+.icon-grunt-text-color:before {
+	content: "\e613";
+	color: $grunt-color;
+}
+.icon-angularjs:before {
+	content: "\e615";
+}
+.icon-angularjs-color:before {
+	content: "\e615";
+	color: $angularjs-color;
+}
+.icon-angularjs-text:before {
+	content: "\e614";
+}
+.icon-angularjs-text-color:before {
+	content: "\e614";
+	color: $angularjs-color;
+}
+.icon-bootstrap:before {
+	content: "\e619";
+}
+.icon-bootstrap-color:before {
+	content: "\e619";
+	color: $bootstrap-color;
+}
+.icon-bootstrap-text:before {
+	content: "\e618";
+}
+.icon-bootstrap-text-color:before {
+	content: "\e618";
+	color: $bootstrap-color;
+}
+.icon-html5:before {
+	content: "\e61a";
+}
+.icon-html5-color:before {
+	content: "\e61a";
+	color: $html5-color;
+}
+.icon-html5-text:before {
+	content: "\e617";
+}
+.icon-html5-text-color:before {
+	content: "\e617";
+	color: $html5-color;
+}
+.icon-illustrator:before {
+	content: "\e61b";
+}
+.icon-illustrator-color:before {
+	content: "\e61b";
+	color: $illustrator-color;
+}
