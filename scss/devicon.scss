@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="devicon-"], [class*=" devicon-"] {
 	font-family: 'devicon';
 	speak: none;
 	font-style: normal;
@@ -42,206 +42,206 @@ $html5-color: #e54d26;
 $bootstrap-color: #59407f;
 $illustrator-color: #faa625;
 
-.icon-sass:before {
+.devicon-sass:before {
 	content: "\e600";
 }
-.icon-sass-color:before {
+.devicon-sass-color:before {
 	content: "\e600";
 	color: $sass-color;
 }
-.icon-photoshop:before {
+.devicon-photoshop:before {
 	content: "\e601";
 }
-.icon-photoshop-color:before {
+.devicon-photoshop-color:before {
 	content: "\e601";
 	color: $photoshop-color;
 }
-.icon-mysql:before {
+.devicon-mysql:before {
 	content: "\e602";
 }
-.icon-mysql-color:before {
+.devicon-mysql-color:before {
 	content: "\e602";
 	color: $mysql-color;
 }
-.icon-mysql-text:before {
+.devicon-mysql-text:before {
 	content: "\e603";
 }
-.icon-mysql-text-color:before {
+.devicon-mysql-text-color:before {
 	content: "\e603";
 	color: $mysql-color;
 }
-.icon-less:before {
+.devicon-less:before {
 	content: "\e604";
 }
-.icon-less-color:before {
+.devicon-less-color:before {
 	content: "\e604";
 	color: $less-color;
 }
-.icon-laravel:before {
+.devicon-laravel:before {
 	content: "\e605";
 }
-.icon-laravel-color:before {
+.devicon-laravel-color:before {
 	content: "\e605";
 	color: $laravel-color;
 }
-.icon-laravel-text:before {
+.devicon-laravel-text:before {
 	content: "\e606";
 }
-.icon-laravel-text-color:before {
+.devicon-laravel-text-color:before {
 	content: "\e606";
 	color: $laravel-color;
 }
-.icon-js:before {
+.devicon-js:before {
 	content: "\e607";
 }
-.icon-js-color:before {
+.devicon-js-color:before {
 	content: "\e607";
 	color: $js-color;
 }
-.icon-jquery:before {
+.devicon-jquery:before {
 	content: "\e608";
 }
-.icon-jquery-color:before {
+.devicon-jquery-color:before {
 	content: "\e608";
 	color: $jquery-color;
 }
-.icon-jquery-text:before {
+.devicon-jquery-text:before {
 	content: "\e609";
 }
-.icon-jquery-text-color:before {
+.devicon-jquery-text-color:before {
 	content: "\e609";
 	color: $jquery-color;
 }
-.icon-javascript:before {
+.devicon-javascript:before {
 	content: "\e60a";
 }
-.icon-javascript-color:before {
+.devicon-javascript-color:before {
 	content: "\e60a";
 	color: $javascript-color;
 }
-.icon-javascript-text:before {
+.devicon-javascript-text:before {
 	content: "\e60b";
 }
-.icon-javascript-text-color:before {
+.devicon-javascript-text-color:before {
 	content: "\e60b";
 	color: $javascript-color;
 }
-.icon-bower:before {
+.devicon-bower:before {
 	content: "\e60c";
 }
-.icon-bower-color:before {
+.devicon-bower-color:before {
 	content: "\e60c";
 	color: $bower-color;
 }
-.icon-bower-text:before {
+.devicon-bower-text:before {
 	content: "\e61c";
 }
-.icon-bower-text-color:before {
+.devicon-bower-text-color:before {
 	content: "\e61c";
 	color: $bower-color;
 }
-.icon-css3:before {
+.devicon-css3:before {
 	content: "\e60e";
 }
-.icon-css3-color:before {
+.devicon-css3-color:before {
 	content: "\e60e";
 	color: $css3-color;
 }
-.icon-css3-text:before {
+.devicon-css3-text:before {
 	content: "\e60d";
 }
-.icon-css3-text-color:before {
+.devicon-css3-text-color:before {
 	content: "\e60d";
 	color: $css3-color;
 }
-.icon-foundation:before {
+.devicon-foundation:before {
 	content: "\e610";
 }
-.icon-foundation-color:before {
+.devicon-foundation-color:before {
 	content: "\e610";
 	color: $foundation-color;
 }
-.icon-foundation-text:before {
+.devicon-foundation-text:before {
 	content: "\e60f";
 }
-.icon-foundation-text-color:before {
+.devicon-foundation-text-color:before {
 	content: "\e60f";
 	color: $foundation-color;
 }
-.icon-git:before {
+.devicon-git:before {
 	content: "\e612";
 }
-.icon-git-color:before {
+.devicon-git-color:before {
 	content: "\e612";
 	color: $git-color;
 }
-.icon-git-text:before {
+.devicon-git-text:before {
 	content: "\e611";
 }
-.icon-git-text-color:before {
+.devicon-git-text-color:before {
 	content: "\e611";
 	color: $git-color;
 }
-.icon-grunt:before {
+.devicon-grunt:before {
 	content: "\e616";
 }
-.icon-grunt-color:before {
+.devicon-grunt-color:before {
 	content: "\e616";
 	color: $grunt-color;
 }
-.icon-grunt-text:before {
+.devicon-grunt-text:before {
 	content: "\e613";
 }
-.icon-grunt-text-color:before {
+.devicon-grunt-text-color:before {
 	content: "\e613";
 	color: $grunt-color;
 }
-.icon-angularjs:before {
+.devicon-angularjs:before {
 	content: "\e615";
 }
-.icon-angularjs-color:before {
+.devicon-angularjs-color:before {
 	content: "\e615";
 	color: $angularjs-color;
 }
-.icon-angularjs-text:before {
+.devicon-angularjs-text:before {
 	content: "\e614";
 }
-.icon-angularjs-text-color:before {
+.devicon-angularjs-text-color:before {
 	content: "\e614";
 	color: $angularjs-color;
 }
-.icon-bootstrap:before {
+.devicon-bootstrap:before {
 	content: "\e619";
 }
-.icon-bootstrap-color:before {
+.devicon-bootstrap-color:before {
 	content: "\e619";
 	color: $bootstrap-color;
 }
-.icon-bootstrap-text:before {
+.devicon-bootstrap-text:before {
 	content: "\e618";
 }
-.icon-bootstrap-text-color:before {
+.devicon-bootstrap-text-color:before {
 	content: "\e618";
 	color: $bootstrap-color;
 }
-.icon-html5:before {
+.devicon-html5:before {
 	content: "\e61a";
 }
-.icon-html5-color:before {
+.devicon-html5-color:before {
 	content: "\e61a";
 	color: $html5-color;
 }
-.icon-html5-text:before {
+.devicon-html5-text:before {
 	content: "\e617";
 }
-.icon-html5-text-color:before {
+.devicon-html5-text-color:before {
 	content: "\e617";
 	color: $html5-color;
 }
-.icon-illustrator:before {
+.devicon-illustrator:before {
 	content: "\e61b";
 }
-.icon-illustrator-color:before {
+.devicon-illustrator-color:before {
 	content: "\e61b";
 	color: $illustrator-color;
 }
