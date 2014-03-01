@@ -85,10 +85,10 @@ $illustrator-color: #faa625;
 	color: $laravel-color;
 }
 .devicon-laravel-text:before {
-	content: "\e606";
+	content: "\e61f";
 }
 .devicon-laravel-text-color:before {
-	content: "\e606";
+	content: "\e61f";
 	color: $laravel-color;
 }
 .devicon-js:before {
@@ -138,6 +138,20 @@ $illustrator-color: #faa625;
 }
 .devicon-bower-text-color:before {
 	content: "\e61c";
+	color: $bower-color;
+}
+.devicon-bower-plain:before {
+	content: "\e61c";
+}
+.devicon-bower-plain-color:before {
+	content: "\e61c";
+	color: $bower-color;
+}
+.devicon-bower-plain-text:before {
+	content: "\e606";
+}
+.devicon-bower-plain-text-color:before {
+	content: "\e606";
 	color: $bower-color;
 }
 .devicon-css3:before {
@@ -196,6 +210,20 @@ $illustrator-color: #faa625;
 	content: "\e613";
 	color: $grunt-color;
 }
+.devicon-grunt-plain:before {
+	content: "\e61e";
+}
+.devicon-grunt-plain-color:before {
+	content: "\e61e";
+	color: $grunt-color;
+}
+.devicon-grunt-plain-text:before {
+	content: "\e61d";
+}
+.devicon-grunt-plain-text-color:before {
+	content: "\e61d";
+	color: $bower-color;
+}
 .devicon-angularjs:before {
 	content: "\e615";
 }
@@ -245,3 +273,4 @@ $illustrator-color: #faa625;
 	content: "\e61b";
 	color: $illustrator-color;
 }
+
