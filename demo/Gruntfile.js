@@ -39,21 +39,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-
-    /*
-    |   Project variables
-    | _________________________________________________
-    |
-    */
-    project: {
-
-      src_bower: '<%= project.src %>/bower_components',
-      src_components: '<%= project.src %>/components',
-      src_scss: '<%= project.src %>/scss',
-      src_js: '<%= project.src %>/js',
-
-    },
-
     /*
     |   Connect port/livereload
     | _________________________________________________
@@ -71,6 +56,34 @@ module.exports = function(grunt) {
           }
         }
       }
+    },
+
+    /*
+    | _________________________________________________
+    |
+    |   Copy task
+    | _________________________________________________
+    |
+    */
+    copy: {
+      dev: {
+        files: [
+          {
+            src:'../font/*', 
+            dest:'assets/font',
+            flatten:true, 
+            filter:'isFile', 
+            expand:true 
+          },
+          {
+            src:'../scss/devicon.scss', 
+            dest:'assets/scss/', 
+            flatten:true, 
+            filter:'isFile', 
+            expand:true 
+          }
+        ],
+      },
     },
 
     /*
@@ -101,21 +114,6 @@ module.exports = function(grunt) {
     /*
     | _________________________________________________
     |
-    |   Copy task
-    | _________________________________________________
-    |
-    */
-    copy: {
-      dev: {
-        files: [
-          {src:'<%= project.src_components %>/**/*.blade.php', dest:'<%= project.dist_views %>/layouts/components/', flatten:true, filter:'isFile', expand:true }
-        ],
-      },
-    },
-
-    /*
-    | _________________________________________________
-    |
     |   Sass task
     | _________________________________________________
     |
@@ -124,70 +122,21 @@ module.exports = function(grunt) {
       dev: {
         options: {
           style: 'expanded',
-          compass: true,
-          loadPath: '<%= project.src_bower %>/foundation/scss'
+          compass: true
         },
         files: {
-          '<%= project.dist_css %>/main.min.css': '<%= project.src_scss %>/main.scss'
+          'assets/style.css': 'assets/scss/style.scss'
         }
       },
       prod: {
         options: {
           style: 'compressed',
-          compass: true,
-          loadPath: '<%= project.src_bower %>/foundation/scss'
+          compass: true        
         },
         files: {
-          '<%= project.dist_css %>/main.min.css': '<%= project.src_scss %>/main.scss'
+          'assets/style.css': 'assets/scss/style.scss'
         }
       },
-    },
-
-    /*
-    | _________________________________________________
-    |
-    |   Concat task
-    | _________________________________________________
-    |
-    */
-    concat: {
-      dev: {
-        files: {
-
-          /* Create page.js
-          ----------------- */
-          /*'<%= project.dist_js %>/page.min.js': [
-            '<%= project.src_components %>/component/component.js',
-            '<%= project.src_js %>/page.js',
-          ],*/
-        }
-      }
-    },
-
-    /*
-    | _________________________________________________
-    |
-    |   Uglify task
-    | _________________________________________________
-    |
-    */
-    uglify: {
-      dev: {
-        files: {
-          '<%= project.dist_js %>/modernizr.min.js': '<%= project.src_bower %>/modernizr/modernizr.js'
-        }
-      },
-      prod: {
-        files: {
-          '<%= project.dist_js %>/modernizr.min.js': '<%= project.src_bower %>/modernizr/modernizr.js'
-          /* Create page.js
-          ----------------- */
-          /*'<%= project.dist_js %>/page.min.js': [
-            '<%= project.src_components %>/component/component.js',
-            '<%= project.src_js %>/page.js',
-          ],*/
-        }
-      }
     },
 
     /*
@@ -202,9 +151,12 @@ module.exports = function(grunt) {
         files: 'assets/scss/**/*.scss',
         tasks: ['sass:dev']
       },
-      uglify: {
-        files: 'assets/js/**/*.js',
-        tasks: ['concat:dev']
+      copy: {
+        files: [
+          '../font/*',
+          '../scss/devicon.scss'
+        ],
+        tasks: ['copy:dev']
       },
       livereload: {
         options: {
@@ -212,7 +164,8 @@ module.exports = function(grunt) {
         },
         files: [
           'assets/**/*.css',
-          'assets/**/*.js'
+          'assets/**/*.js',
+          '**/*.html'
         ]
       }
     }
@@ -226,7 +179,7 @@ module.exports = function(grunt) {
   | _________________________________________________
   |
   */
-  grunt.registerTask('default', ['sass:dev','bower:dev','concat:dev','connect:livereload','open','watch']);
-  grunt.registerTask('prod', ['copy:dev','sass:prod','uglify:prod']);
+  grunt.registerTask('default', ['copy:dev','bower:dev','sass:dev','connect:livereload','open','watch']);
+  grunt.registerTask('prod', ['sass:prod']);
 
 };

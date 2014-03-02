@@ -1,0 +1,321 @@
+@font-face {
+  font-family: 'devicon';
+  src: url("font/devicon.eot?pjetjn");
+  src: url("font/devicon.eot?#iefixpjetjn") format("embedded-opentype"), url("font/devicon.woff?pjetjn") format("woff"), url("font/devicon.ttf?pjetjn") format("truetype"), url("font/devicon.svg?pjetjn#devicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="devicon-"], [class*=" devicon-"] {
+  font-family: 'devicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.devicon-sass:before {
+  content: "\e600";
+}
+
+.devicon-sass-color:before {
+  content: "\e600";
+  color: #cc6699;
+}
+
+.devicon-photoshop:before {
+  content: "\e601";
+}
+
+.devicon-photoshop-color:before {
+  content: "\e601";
+  color: #80b5e2;
+}
+
+.devicon-mysql:before {
+  content: "\e602";
+}
+
+.devicon-mysql-color:before {
+  content: "\e602";
+  color: #00618a;
+}
+
+.devicon-mysql-text:before {
+  content: "\e603";
+}
+
+.devicon-mysql-text-color:before {
+  content: "\e603";
+  color: #00618a;
+}
+
+.devicon-less:before {
+  content: "\e604";
+}
+
+.devicon-less-color:before {
+  content: "\e604";
+  color: #2a4d80;
+}
+
+.devicon-laravel:before {
+  content: "\e605";
+}
+
+.devicon-laravel-color:before {
+  content: "\e605";
+  color: #fd4f31;
+}
+
+.devicon-laravel-text:before {
+  content: "\e61f";
+}
+
+.devicon-laravel-text-color:before {
+  content: "\e61f";
+  color: #fd4f31;
+}
+
+.devicon-js:before {
+  content: "\e607";
+}
+
+.devicon-js-color:before {
+  content: "\e607";
+  color: #f0db4f;
+}
+
+.devicon-jquery:before {
+  content: "\e608";
+}
+
+.devicon-jquery-color:before {
+  content: "\e608";
+  color: #0769ad;
+}
+
+.devicon-jquery-text:before {
+  content: "\e609";
+}
+
+.devicon-jquery-text-color:before {
+  content: "\e609";
+  color: #0769ad;
+}
+
+.devicon-javascript:before {
+  content: "\e60a";
+}
+
+.devicon-javascript-color:before {
+  content: "\e60a";
+  color: #eab553;
+}
+
+.devicon-javascript-text:before {
+  content: "\e60b";
+}
+
+.devicon-javascript-text-color:before {
+  content: "\e60b";
+  color: #eab553;
+}
+
+.devicon-bower:before {
+  content: "\e60c";
+}
+
+.devicon-bower-color:before {
+  content: "\e60c";
+  color: #ef5734;
+}
+
+.devicon-bower-text:before {
+  content: "\e61c";
+}
+
+.devicon-bower-text-color:before {
+  content: "\e61c";
+  color: #ef5734;
+}
+
+.devicon-bower-plain:before {
+  content: "\e61c";
+}
+
+.devicon-bower-plain-color:before {
+  content: "\e61c";
+  color: #ef5734;
+}
+
+.devicon-bower-plain-text:before {
+  content: "\e606";
+}
+
+.devicon-bower-plain-text-color:before {
+  content: "\e606";
+  color: #ef5734;
+}
+
+.devicon-css3:before {
+  content: "\e60e";
+}
+
+.devicon-css3-color:before {
+  content: "\e60e";
+  color: #3d8fc6;
+}
+
+.devicon-css3-text:before {
+  content: "\e60d";
+}
+
+.devicon-css3-text-color:before {
+  content: "\e60d";
+  color: #3d8fc6;
+}
+
+.devicon-foundation:before {
+  content: "\e610";
+}
+
+.devicon-foundation-color:before {
+  content: "\e610";
+  color: #008cba;
+}
+
+.devicon-foundation-text:before {
+  content: "\e60f";
+}
+
+.devicon-foundation-text-color:before {
+  content: "\e60f";
+  color: #008cba;
+}
+
+.devicon-git:before {
+  content: "\e612";
+}
+
+.devicon-git-color:before {
+  content: "\e612";
+  color: #f34f29;
+}
+
+.devicon-git-text:before {
+  content: "\e611";
+}
+
+.devicon-git-text-color:before {
+  content: "\e611";
+  color: #f34f29;
+}
+
+.devicon-grunt:before {
+  content: "\e616";
+}
+
+.devicon-grunt-color:before {
+  content: "\e616";
+  color: #fcaa1a;
+}
+
+.devicon-grunt-text:before {
+  content: "\e613";
+}
+
+.devicon-grunt-text-color:before {
+  content: "\e613";
+  color: #fcaa1a;
+}
+
+.devicon-grunt-plain:before {
+  content: "\e61e";
+}
+
+.devicon-grunt-plain-color:before {
+  content: "\e61e";
+  color: #fcaa1a;
+}
+
+.devicon-grunt-plain-text:before {
+  content: "\e61d";
+}
+
+.devicon-grunt-plain-text-color:before {
+  content: "\e61d";
+  color: #ef5734;
+}
+
+.devicon-angularjs:before {
+  content: "\e615";
+}
+
+.devicon-angularjs-color:before {
+  content: "\e615";
+  color: #c4473a;
+}
+
+.devicon-angularjs-text:before {
+  content: "\e614";
+}
+
+.devicon-angularjs-text-color:before {
+  content: "\e614";
+  color: #c4473a;
+}
+
+.devicon-bootstrap:before {
+  content: "\e619";
+}
+
+.devicon-bootstrap-color:before {
+  content: "\e619";
+  color: #59407f;
+}
+
+.devicon-bootstrap-text:before {
+  content: "\e618";
+}
+
+.devicon-bootstrap-text-color:before {
+  content: "\e618";
+  color: #59407f;
+}
+
+.devicon-html5:before {
+  content: "\e61a";
+}
+
+.devicon-html5-color:before {
+  content: "\e61a";
+  color: #e54d26;
+}
+
+.devicon-html5-text:before {
+  content: "\e617";
+}
+
+.devicon-html5-text-color:before {
+  content: "\e617";
+  color: #e54d26;
+}
+
+.devicon-illustrator:before {
+  content: "\e61b";
+}
+
+.devicon-illustrator-color:before {
+  content: "\e61b";
+  color: #faa625;
+}
+
+i {
+  font-size: 5rem;
+}

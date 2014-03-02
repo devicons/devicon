@@ -1,0 +1,276 @@
+@font-face {
+	font-family: 'devicon';
+	src:url('font/devicon.eot?pjetjn');
+	src:url('font/devicon.eot?#iefixpjetjn') format('embedded-opentype'),
+		url('font/devicon.woff?pjetjn') format('woff'),
+		url('font/devicon.ttf?pjetjn') format('truetype'),
+		url('font/devicon.svg?pjetjn#devicon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="devicon-"], [class*=" devicon-"] {
+	font-family: 'devicon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Logo colors
+$sass-color: #cc6699;
+$photoshop-color: #80b5e2;
+$mysql-color: #00618a;
+$less-color: #2a4d80;
+$laravel-color: #fd4f31;
+$js-color: #f0db4f;
+$jquery-color: #0769ad;
+$javascript-color: #eab553;
+$bower-color: #ef5734;
+$css3-color: #3d8fc6;
+$foundation-color: #008cba;
+$git-color: #f34f29;
+$grunt-color: #fcaa1a;
+$angularjs-color: #c4473a;
+$html5-color: #e54d26;
+$bootstrap-color: #59407f;
+$illustrator-color: #faa625;
+
+.devicon-sass:before {
+	content: "\e600";
+}
+.devicon-sass-color:before {
+	content: "\e600";
+	color: $sass-color;
+}
+.devicon-photoshop:before {
+	content: "\e601";
+}
+.devicon-photoshop-color:before {
+	content: "\e601";
+	color: $photoshop-color;
+}
+.devicon-mysql:before {
+	content: "\e602";
+}
+.devicon-mysql-color:before {
+	content: "\e602";
+	color: $mysql-color;
+}
+.devicon-mysql-text:before {
+	content: "\e603";
+}
+.devicon-mysql-text-color:before {
+	content: "\e603";
+	color: $mysql-color;
+}
+.devicon-less:before {
+	content: "\e604";
+}
+.devicon-less-color:before {
+	content: "\e604";
+	color: $less-color;
+}
+.devicon-laravel:before {
+	content: "\e605";
+}
+.devicon-laravel-color:before {
+	content: "\e605";
+	color: $laravel-color;
+}
+.devicon-laravel-text:before {
+	content: "\e61f";
+}
+.devicon-laravel-text-color:before {
+	content: "\e61f";
+	color: $laravel-color;
+}
+.devicon-js:before {
+	content: "\e607";
+}
+.devicon-js-color:before {
+	content: "\e607";
+	color: $js-color;
+}
+.devicon-jquery:before {
+	content: "\e608";
+}
+.devicon-jquery-color:before {
+	content: "\e608";
+	color: $jquery-color;
+}
+.devicon-jquery-text:before {
+	content: "\e609";
+}
+.devicon-jquery-text-color:before {
+	content: "\e609";
+	color: $jquery-color;
+}
+.devicon-javascript:before {
+	content: "\e60a";
+}
+.devicon-javascript-color:before {
+	content: "\e60a";
+	color: $javascript-color;
+}
+.devicon-javascript-text:before {
+	content: "\e60b";
+}
+.devicon-javascript-text-color:before {
+	content: "\e60b";
+	color: $javascript-color;
+}
+.devicon-bower:before {
+	content: "\e60c";
+}
+.devicon-bower-color:before {
+	content: "\e60c";
+	color: $bower-color;
+}
+.devicon-bower-text:before {
+	content: "\e61c";
+}
+.devicon-bower-text-color:before {
+	content: "\e61c";
+	color: $bower-color;
+}
+.devicon-bower-plain:before {
+	content: "\e61c";
+}
+.devicon-bower-plain-color:before {
+	content: "\e61c";
+	color: $bower-color;
+}
+.devicon-bower-plain-text:before {
+	content: "\e606";
+}
+.devicon-bower-plain-text-color:before {
+	content: "\e606";
+	color: $bower-color;
+}
+.devicon-css3:before {
+	content: "\e60e";
+}
+.devicon-css3-color:before {
+	content: "\e60e";
+	color: $css3-color;
+}
+.devicon-css3-text:before {
+	content: "\e60d";
+}
+.devicon-css3-text-color:before {
+	content: "\e60d";
+	color: $css3-color;
+}
+.devicon-foundation:before {
+	content: "\e610";
+}
+.devicon-foundation-color:before {
+	content: "\e610";
+	color: $foundation-color;
+}
+.devicon-foundation-text:before {
+	content: "\e60f";
+}
+.devicon-foundation-text-color:before {
+	content: "\e60f";
+	color: $foundation-color;
+}
+.devicon-git:before {
+	content: "\e612";
+}
+.devicon-git-color:before {
+	content: "\e612";
+	color: $git-color;
+}
+.devicon-git-text:before {
+	content: "\e611";
+}
+.devicon-git-text-color:before {
+	content: "\e611";
+	color: $git-color;
+}
+.devicon-grunt:before {
+	content: "\e616";
+}
+.devicon-grunt-color:before {
+	content: "\e616";
+	color: $grunt-color;
+}
+.devicon-grunt-text:before {
+	content: "\e613";
+}
+.devicon-grunt-text-color:before {
+	content: "\e613";
+	color: $grunt-color;
+}
+.devicon-grunt-plain:before {
+	content: "\e61e";
+}
+.devicon-grunt-plain-color:before {
+	content: "\e61e";
+	color: $grunt-color;
+}
+.devicon-grunt-plain-text:before {
+	content: "\e61d";
+}
+.devicon-grunt-plain-text-color:before {
+	content: "\e61d";
+	color: $bower-color;
+}
+.devicon-angularjs:before {
+	content: "\e615";
+}
+.devicon-angularjs-color:before {
+	content: "\e615";
+	color: $angularjs-color;
+}
+.devicon-angularjs-text:before {
+	content: "\e614";
+}
+.devicon-angularjs-text-color:before {
+	content: "\e614";
+	color: $angularjs-color;
+}
+.devicon-bootstrap:before {
+	content: "\e619";
+}
+.devicon-bootstrap-color:before {
+	content: "\e619";
+	color: $bootstrap-color;
+}
+.devicon-bootstrap-text:before {
+	content: "\e618";
+}
+.devicon-bootstrap-text-color:before {
+	content: "\e618";
+	color: $bootstrap-color;
+}
+.devicon-html5:before {
+	content: "\e61a";
+}
+.devicon-html5-color:before {
+	content: "\e61a";
+	color: $html5-color;
+}
+.devicon-html5-text:before {
+	content: "\e617";
+}
+.devicon-html5-text-color:before {
+	content: "\e617";
+	color: $html5-color;
+}
+.devicon-illustrator:before {
+	content: "\e61b";
+}
+.devicon-illustrator-color:before {
+	content: "\e61b";
+	color: $illustrator-color;
+}
+
