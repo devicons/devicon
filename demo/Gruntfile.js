@@ -81,6 +81,13 @@ module.exports = function(grunt) {
             flatten:true, 
             filter:'isFile', 
             expand:true 
+          },
+          {
+            src:'../devicon.json', 
+            dest:'assets/', 
+            flatten:true, 
+            filter:'isFile', 
+            expand:true 
           }
         ],
       },
@@ -154,7 +161,8 @@ module.exports = function(grunt) {
       copy: {
         files: [
           '../font/*',
-          '../scss/devicon.scss'
+          '../scss/devicon.scss',
+          '../devicon.json'
         ],
         tasks: ['copy:dev']
       },
@@ -165,6 +173,7 @@ module.exports = function(grunt) {
         files: [
           'assets/**/*.css',
           'assets/**/*.js',
+          'assets/**/*.json',
           '**/*.html'
         ]
       }

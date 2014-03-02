@@ -16,29 +16,36 @@
 
     <script src="assets/components/modernizr.js"></script>
   </head>
-  <body>
+  <body ng-app="devicon">
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <header class="header">
+    <!-- <header class="header">
       <h1>devicon</h1>
-    </header>
+    </header> -->
 
-    <main class="main">
-      <ul>
-        <li><i class="devicon-sass"></i></li>
+    <main class="main" ng-controller="IconListCtrl">
+      <ul class="devicons" ng-repeat="type in icons">
+        <h2>{{ type.name }}</h2>
+        <li ng-repeat="icon in type.icons">
+          <i class="devicon-{{ icon.name }}"></i>
+          <i class="devicon-{{ icon.name }}-color"></i>
+          <i ng-if="icon.options.text == true" class="devicon-{{ icon.name }}-text"></i>
+          <i ng-if="icon.options.text == true" class="devicon-{{ icon.name }}-text-color"></i>
+        </li>
       </ul>
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <a href="http://konpa.fr">konpa</a>
-    </footer>
+    </footer> -->
 
     <script src="assets/components/jquery.js"></script>
     <script src="assets/components/fastclick.js"></script>
     <script src="assets/components/foundation.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/components/angular.js"></script>
+    <script src="assets/script.js"></script>
 
     <script>
   	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

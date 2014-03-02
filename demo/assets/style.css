@@ -316,6 +316,14 @@
   color: #faa625;
 }
 
+.devicons {
+  list-style: none;
+}
+.devicons li {
+  display: inline-block;
+  padding: 1rem 2rem;
+}
+
 i {
   font-size: 5rem;
 }

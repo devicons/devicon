@@ -1,6 +1,14 @@
 @import
 	"../scss/devicon.scss";
 
+.devicons {
+  list-style: none;
+  li {
+    display: inline-block;
+    padding: 1rem 2rem;
+  }
+}
+
 i {
   font-size: 5rem;
 }
