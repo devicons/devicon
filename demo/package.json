@@ -1,0 +1,30 @@
+{
+  "name": "devicon",
+  "title": "Set of icons representing programming languages, designing & development tools",
+  "version": "1.0.0",
+  "url": "http://devicon.fr",
+  "author": "Konpa - Julien Monty",
+  "copyright": "2014",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/konpa/devicon.git"
+  },
+  "devDependencies": {
+    "bower": "~1.2.6",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-sass": "~0.5.1",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-bower": "~0.7.0",
+    "connect-livereload": "~0.2.0",
+    "grunt-open": "~0.2.0",
+    "matchdep": "~0.1.2"
+  },
+  "scripts": {
+    "postinstall" : "bower install"
+  }
+}
