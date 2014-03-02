@@ -316,12 +316,17 @@
   color: #faa625;
 }
 
+ul {
+  margin: 0;
+}
+
 .devicons {
+  padding: 3rem 0;
   list-style: none;
 }
 .devicons li {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
 }
 
 i {

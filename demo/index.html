@@ -16,7 +16,7 @@
 
     <script src="assets/components/modernizr.js"></script>
   </head>
-  <body ng-app="devicon">
+  <body ng-app="devicon" class="row">
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
@@ -25,15 +25,21 @@
       <h1>devicon</h1>
     </header> -->
 
-    <main class="main" ng-controller="IconListCtrl">
-      <ul class="devicons" ng-repeat="type in icons">
+    <main class="main columns large-12" ng-controller="IconListCtrl">
+      <label>Search icon
+        <input type="text" placeholder="Search icon" ng-model="search">
+      </label>
+      <label>Options</label>
+      <input id="color" type="checkbox" ng-true-value="-color" ng-false-value="" ng-model="color"><label for="color">Color</label>
+      <input id="text" type="checkbox" ng-true-value="-text" ng-false-value="" ng-model="text"><label for="text">Text</label>
+      </label>
+      <ul class="devicons" ng-repeat="type in icons | toArray | orderBy:'order'">
         <h2>{{ type.name }}</h2>
-        <li ng-repeat="icon in type.icons">
-          <i class="devicon-{{ icon.name }}"></i>
-          <i class="devicon-{{ icon.name }}-color"></i>
-          <i ng-if="icon.options.text == true" class="devicon-{{ icon.name }}-text"></i>
-          <i ng-if="icon.options.text == true" class="devicon-{{ icon.name }}-text-color"></i>
-        </li>
+        <ul>
+          <li ng-repeat="icon in type.icons | filter:search | orderBy:'name'" class="">
+            <i class="devicon-{{ icon.name }}{{text}}{{color}}"></i>
+          </li>
+        </ul>
       </ul>
     </main>
 

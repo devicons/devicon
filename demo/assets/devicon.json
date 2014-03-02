@@ -2,6 +2,7 @@
 
   "ProgrammingLanguages": {
     "name": "Programming Languages",
+    "order": 1,
     "icons": [
 
       {
@@ -46,6 +47,7 @@
 
   "DevelopmentTools": {
     "name": "Development tools",
+    "order": 2,
     "icons": [
 
       {
@@ -125,6 +127,7 @@
 
   "DesigningTools": {
     "name": "Designing tools",
+    "order": 3,
     "icons": [
 
       {
