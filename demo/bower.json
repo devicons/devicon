@@ -1,9 +1,0 @@
-{
-  "name": "devicon",
-  "version": "1.0.0",
-  "dependencies": {
-    "normalize-css": "~2.1.3",
-    "foundation": "~5.0.2",
-    "angular": "*"
-  }
-}
