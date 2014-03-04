@@ -1,0 +1,165 @@
+[{
+
+  "ProgrammingLanguages": {
+    "name": "Programming Languages",
+    "order": 1,
+    "icons": [
+
+      {
+        "name": "html5",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "css3",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "js",
+        "options": {
+          "simple": true,
+          "text": false,
+          "color": true
+        }
+      }, {
+        "name": "javascript",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "mysql",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }
+
+    ]
+  },
+
+  "DevelopmentTools": {
+    "name": "Development tools",
+    "order": 2,
+    "icons": [
+
+      {
+        "name": "sass",
+        "options": {
+          "simple": true,
+          "text": false,
+          "color": true
+        }
+      }, {
+        "name": "less",
+        "options": {
+          "simple": true,
+          "text": false,
+          "color": true
+        }
+      }, {
+        "name": "laravel",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "wordpress",
+        "color": "#494949",
+        "options": {
+          "original": true,
+          "line": false,
+          "plain": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "bootstrap",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "foundation",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "angularjs",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "jquery",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "grunt",
+        "color": "#fcaa1a",
+        "options": {
+          "original": true,
+          "line": true,
+          "plain": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "bower",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }, {
+        "name": "git",
+        "options": {
+          "simple": true,
+          "text": true,
+          "color": true
+        }
+      }
+
+    ]
+  },
+
+  "DesigningTools": {
+    "name": "Designing tools",
+    "order": 3,
+    "icons": [
+
+      {
+        "name": "photoshop",
+        "options": {
+          "simple": true,
+          "text": false,
+          "color": true
+        }
+      }, {
+        "name": "illustrator",
+        "options": {
+          "simple": true,
+          "text": false,
+          "color": true
+        }
+      }
+
+    ]
+  }
+
+}]
