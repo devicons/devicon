@@ -7,39 +7,12 @@
 
       {
         "name": "html5",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
+        "main-color": "#e54d26",
+        "options": "original;plain;wordmark"
       }, {
         "name": "css3",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
-      }, {
-        "name": "js",
-        "options": {
-          "simple": true,
-          "text": false,
-          "color": true
-        }
-      }, {
-        "name": "javascript",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
-      }, {
-        "name": "mysql",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
+        "main-color": "#3d8fc6",
+        "options": "original;plain;wordmark"
       }
 
     ]
@@ -51,88 +24,25 @@
     "icons": [
 
       {
-        "name": "sass",
-        "options": {
-          "simple": true,
-          "text": false,
-          "color": true
-        }
-      }, {
-        "name": "less",
-        "options": {
-          "simple": true,
-          "text": false,
-          "color": true
-        }
-      }, {
         "name": "laravel",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
+        "main-color": "#fd4f31",
+        "options": "plain;wordmark"
       }, {
         "name": "wordpress",
-        "color": "#494949",
-        "options": {
-          "original": true,
-          "line": false,
-          "plain": true,
-          "text": true,
-          "color": true
-        }
-      }, {
-        "name": "bootstrap",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
+        "main-color": "#494949",
+        "options": "original;plain;wordmark"
       }, {
         "name": "foundation",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
-      }, {
-        "name": "angularjs",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
-      }, {
-        "name": "jquery",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
+        "main-color": "#008cba",
+        "options": "original;plain;wordmark"
       }, {
         "name": "grunt",
-        "color": "#fcaa1a",
-        "options": {
-          "original": true,
-          "line": true,
-          "plain": true,
-          "text": true,
-          "color": true
-        }
+        "main-color": "#fcaa1a",
+        "options": "original;line;plain;wordmark"
       }, {
         "name": "bower",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
-      }, {
-        "name": "git",
-        "options": {
-          "simple": true,
-          "text": true,
-          "color": true
-        }
+        "main-color": "#ef5734",
+        "options": "original;line;plain;wordmark"
       }
 
     ]
@@ -143,21 +53,7 @@
     "order": 3,
     "icons": [
 
-      {
-        "name": "photoshop",
-        "options": {
-          "simple": true,
-          "text": false,
-          "color": true
-        }
-      }, {
-        "name": "illustrator",
-        "options": {
-          "simple": true,
-          "text": false,
-          "color": true
-        }
-      }
+
 
     ]
   }
