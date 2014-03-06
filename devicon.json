@@ -13,6 +13,22 @@
         "name": "css3",
         "main-color": "#3d8fc6",
         "options": "original;plain;wordmark"
+      }, {
+        "name": "javascript",
+        "main-color": "#f0db4f",
+        "options": "original;plain"
+      }, {
+        "name": "jquery",
+        "main-color": "#0769ad",
+        "options": "original;plain;wordmark"
+      }, {
+        "name": "mysql",
+        "main-color": "#00618a",
+        "options": "original;line;wordmark"
+      }, {
+        "name": "angularjs",
+        "main-color": "#c4473a",
+        "options": "original;plain;wordmark"
       }
 
     ]
@@ -36,6 +52,10 @@
         "main-color": "#008cba",
         "options": "original;plain;wordmark"
       }, {
+        "name": "bootstrap",
+        "main-color": "#59407f",
+        "options": "original;plain;line;wordmark"
+      }, {
         "name": "grunt",
         "main-color": "#fcaa1a",
         "options": "original;line;plain;wordmark"
@@ -43,6 +63,18 @@
         "name": "bower",
         "main-color": "#ef5734",
         "options": "original;line;plain;wordmark"
+      }, {
+        "name": "git",
+        "main-color": "#f34f29",
+        "options": "original;plain;wordmark"
+      }, {
+        "name": "sass",
+        "main-color": "#cc6699",
+        "options": "original;line;wordmark"
+      }, {
+        "name": "less",
+        "main-color": "#2a4d80",
+        "options": "line;wordmark"
       }
 
     ]
@@ -53,7 +85,15 @@
     "order": 3,
     "icons": [
 
-
+      {
+        "name": "photoshop",
+        "main-color": "#80b5e2",
+        "options": "original;plain;line"
+      }, {
+        "name": "illustrator",
+        "main-color": "#faa625",
+        "options": "original;plain;line"
+      }
 
     ]
   }
