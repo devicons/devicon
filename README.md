@@ -5,29 +5,24 @@ devicon aims to gather all logos representing development languages and tools in
 
 Final font is built with [icomoon](http://icomoon.io).
 
-Available icons
----------------
+How to use it
+--------------
 
-#### Programming languages:
-- HTML 5 (html5:text/color)
-- CSS 3 (css3:text/color)
-- Javascript (javascript:text/color; js:color)
-- JQuery (jquery:text/color)
-- MySQL (mysql:text/color)
+```html
+<head>
+  <link rel="stylesheet" href="devicon.css">
+</head>
 
-#### Frameworks:
-- Laravel (laravel:text/color)
-- Foundation (foundation:text/color)
-- Bootstrap (bootstrap:text/color)
-- Angular JS (angularjs:text/color)
+<body>
+  <!--  for git plain version -->
+  <i class="devicon-git-plain"></i>
+  
+  <!--  for git plain version with wordmark -->
+  <i class="devicon-git-plain-wordmark"></i>
+  
+  <!--  for git plain version colored with git main color -->
+  <i class="devicon-git-plain git-color"></i>
+</body>
+```
 
-#### Development tools:
-- Grunt (grunt:plain/text/color)
-- Bower (bower:plain/text/color)
-- SASS (sass:color)
-- LESS (less:color)
-- Git (git:text/color)
-
-#### Designing tools:
-- Illustrator (illustrator:color)
-- Photoshop (photoshop:color)
+See the icons folder or devicon.json file for complete reference of icon's available versions.
