@@ -1,101 +1,97 @@
-[{
+[
 
-  "ProgrammingLanguages": {
-    "name": "Programming Languages",
-    "order": 1,
-    "icons": [
-
-      {
-        "name": "html5",
-        "main-color": "#e54d26",
-        "options": "original;plain;wordmark"
-      }, {
-        "name": "css3",
-        "main-color": "#3d8fc6",
-        "options": "original;plain;wordmark"
-      }, {
-        "name": "javascript",
-        "main-color": "#f0db4f",
-        "options": "original;plain"
-      }, {
-        "name": "jquery",
-        "main-color": "#0769ad",
-        "options": "original;plain;wordmark"
-      }, {
-        "name": "mysql",
-        "main-color": "#00618a",
-        "options": "original;line;wordmark"
-      }, {
-        "name": "angularjs",
-        "main-color": "#c4473a",
-        "options": "original;plain;wordmark"
-      }
-
-    ]
-  },
-
-  "DevelopmentTools": {
-    "name": "Development tools",
-    "order": 2,
-    "icons": [
-
-      {
-        "name": "laravel",
-        "main-color": "#fd4f31",
-        "options": "plain;wordmark"
-      }, {
-        "name": "wordpress",
-        "main-color": "#494949",
-        "options": "original;plain;wordmark"
-      }, {
-        "name": "foundation",
-        "main-color": "#008cba",
-        "options": "original;plain;wordmark"
-      }, {
-        "name": "bootstrap",
-        "main-color": "#59407f",
-        "options": "original;plain;line;wordmark"
-      }, {
-        "name": "grunt",
-        "main-color": "#fcaa1a",
-        "options": "original;line;plain;wordmark"
-      }, {
-        "name": "bower",
-        "main-color": "#ef5734",
-        "options": "original;line;plain;wordmark"
-      }, {
-        "name": "git",
-        "main-color": "#f34f29",
-        "options": "original;plain;wordmark"
-      }, {
-        "name": "sass",
-        "main-color": "#cc6699",
-        "options": "original;line;wordmark"
-      }, {
-        "name": "less",
-        "main-color": "#2a4d80",
-        "options": "line;wordmark"
-      }
-
-    ]
-  },
-
-  "DesigningTools": {
-    "name": "Designing tools",
-    "order": 3,
-    "icons": [
-
-      {
-        "name": "photoshop",
-        "main-color": "#80b5e2",
-        "options": "original;plain;line"
-      }, {
-        "name": "illustrator",
-        "main-color": "#faa625",
-        "options": "original;plain;line"
-      }
-
-    ]
+  {
+    "name": "html5",
+    "main-color": "#e54d26",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "css3",
+    "main-color": "#3d8fc6",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "javascript",
+    "main-color": "#f0db4f",
+    "options": "original;plain"
+  }, {
+    "name": "jquery",
+    "main-color": "#0769ad",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "mysql",
+    "main-color": "#00618a",
+    "options": "original;line;wordmark"
+  }, {
+    "name": "angularjs",
+    "main-color": "#c4473a",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "laravel",
+    "main-color": "#fd4f31",
+    "options": "plain;wordmark"
+  }, {
+    "name": "wordpress",
+    "main-color": "#494949",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "foundation",
+    "main-color": "#008cba",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "bootstrap",
+    "main-color": "#59407f",
+    "options": "original;plain;line;wordmark"
+  }, {
+    "name": "grunt",
+    "main-color": "#fcaa1a",
+    "options": "original;line;plain;wordmark"
+  }, {
+    "name": "bower",
+    "main-color": "#ef5734",
+    "options": "original;line;plain;wordmark"
+  }, {
+    "name": "git",
+    "main-color": "#f34f29",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "sass",
+    "main-color": "#cc6699",
+    "options": "original;line;wordmark"
+  }, {
+    "name": "less",
+    "main-color": "#2a4d80",
+    "options": "line;wordmark"
+  }, {
+    "name": "photoshop",
+    "main-color": "#80b5e2",
+    "options": "original;plain;line"
+  }, {
+    "name": "illustrator",
+    "main-color": "#faa625",
+    "options": "original;plain;line"
+  }, {
+    "name": "php",
+    "main-color": "#6181b6",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "java",
+    "main-color": "#ea2d2e",
+    "options": "original;line;wordmark"
+  }, {
+    "name": "yii",
+    "main-color": "#0073bb",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "codeigniter",
+    "main-color": "#ee4323",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "zend",
+    "main-color": "#68b604",
+    "options": "original;plain;wordmark"
+  }, {
+    "name": "python",
+    "main-color": "#ffd845",
+    "options": "original;plain;wordmark"
   }
 
-}]
+]
