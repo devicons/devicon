@@ -27,4 +27,4 @@ How to use it
 
 See the icons folder or devicon.json file for complete reference of icon's available versions.
 
-#### Please don't hesitate to contribute :)
+#### I'll add some icons to the collection soon (gulp, sketch, github, bitbucket, ruby, ruby on rails, travis, etc.) but please don't hesitate to contribute :)
