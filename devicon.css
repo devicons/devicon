@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'devicon';
-	src:url('fonts/devicon.eot?-eupjdn');
-	src:url('fonts/devicon.eot?#iefix-eupjdn') format('embedded-opentype'),
-		url('fonts/devicon.woff?-eupjdn') format('woff'),
-		url('fonts/devicon.ttf?-eupjdn') format('truetype'),
-		url('fonts/devicon.svg?-eupjdn#devicon') format('svg');
+	src:url('font/devicon.eot?-eupjdn');
+	src:url('font/devicon.eot?#iefix-eupjdn') format('embedded-opentype'),
+		url('font/devicon.woff?-eupjdn') format('woff'),
+		url('font/devicon.ttf?-eupjdn') format('truetype'),
+		url('font/devicon.svg?-eupjdn#devicon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,153 +23,249 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* Zend */
 .devicon-zend-plain-wordmark:before {
 	content: "\e600";
 }
 .devicon-zend-plain:before {
 	content: "\e601";
 }
+.devicon-zend-plain-wordmark.colored, .devicon-zend-plain.colored {
+	color: #68b604;
+}
+/* Yii */
 .devicon-yii-plain-wordmark:before {
 	content: "\e602";
 }
 .devicon-yii-plain:before {
 	content: "\e603";
 }
+.devicon-yii-plain-wordmark.colored, .devicon-yii-plain.colored {
+	color: #0073bb;
+}
+/* Wordpress */
 .devicon-wordpress-plain-wordmark:before {
 	content: "\e604";
 }
 .devicon-wordpress-plain:before {
 	content: "\e605";
 }
-.devicon-sass-original:before {
+.devicon-wordpress-plain-wordmark.colored, .devicon-wordpress-plain.colored {
+	color: #494949;
+}
+/* Sass */
+.devicon-sass-plain:before {
 	content: "\e606";
 }
+.devicon-sass-plain.colored {
+	color: #cc6699;
+}
+/* Python */
 .devicon-python-plain-wordmark:before {
 	content: "\e607";
 }
 .devicon-python-plain:before {
 	content: "\e608";
 }
+.devicon-python-plain-wordmark.colored, .devicon-python-plain.colored {
+	color: #ffd845;
+}
+/* PHP */
 .devicon-php-plain:before {
 	content: "\e609";
 }
-.devicon-photoshop-plain:before {
+.devicon-php-plain.colored {
+	color: #6181b6;
+}
+/* Photoshop */
+.devicon-photoshop-line:before {
 	content: "\e60a";
 }
-.devicon-photoshop-line:before {
+.devicon-photoshop-plain:before {
 	content: "\e60b";
+}
+.devicon-photoshop-line.colored, .devicon-photoshop-plain.colored {
+	color: #80b5e2;
+}
+/* MySQL */
+.devicon-mysql-line:before {
+	content: "\e60d";
 }
 .devicon-mysql-line-wordmark:before {
 	content: "\e60c";
 }
-.devicon-mysql-line:before {
-	content: "\e60d";
+.devicon-mysql-line.colored, .devicon-mysql-line-wordmark.colored {
+	color: #00618a;
 }
+/* Less */
 .devicon-less-plain:before {
 	content: "\e60e";
 }
+.devicon-less-plain.colored {
+	color: #2a4d80;
+}
+/* Laravel */
 .devicon-laravel-plain-wordmark:before {
 	content: "\e60f";
 }
 .devicon-laravel-plain:before {
 	content: "\e610";
 }
+.devicon-laravel-plain-wordmark.colored, .devicon-laravel-plain.colored {
+	color: #fd4f31;
+}
+/* JQuery */
 .devicon-jquery-plain-wordmark:before {
 	content: "\e611";
 }
 .devicon-jquery-plain:before {
 	content: "\e612";
 }
+.devicon-jquery-plain-wordmark.colored, .devicon-jquery-plain.colored {
+	color: #0769ad;
+}
+/* Javascript */
 .devicon-javascript-plain:before {
 	content: "\e613";
 }
+.devicon-javascript-plain.colored {
+	color: #f0db4f;
+}
+/* Java */
 .devicon-java-line-wordmark:before {
 	content: "\e614";
 }
 .devicon-java-line:before {
 	content: "\e615";
 }
-.devicon-illustrator-plain:before {
+.devicon-java-line-wordmark.colored, .devicon-java-line.colored {
+	color: #ea2d2e;
+}
+/* Illustrator */
+.devicon-illustrator-line:before {
 	content: "\e616";
 }
-.devicon-illustrator-line:before {
+.devicon-illustrator-plain:before {
 	content: "\e617";
 }
+.devicon-illustrator-line.colored, .devicon-illustrator-plain.colored {
+	color: #faa625;
+}
+/* HTML5 */
 .devicon-html5-plain-wordmark:before {
 	content: "\e618";
 }
 .devicon-html5-plain:before {
 	content: "\e619";
 }
-.devicon-grunt-plain-wordmark:before {
+.devicon-html5-plain-wordmark.colored, .devicon-html5-plain.colored {
+	color: #e54d26;
+}
+/* Grunt */
+.devicon-grunt-line-wordmark:before {
 	content: "\e61a";
 }
-.devicon-grunt-plain:before {
+.devicon-grunt-line:before {
 	content: "\e61b";
 }
-.devicon-grunt-line-wordmark:before {
+.devicon-grunt-plain-wordmark:before {
 	content: "\e61c";
 }
-.devicon-grunt-line:before {
+.devicon-grunt-plain:before {
 	content: "\e61d";
 }
+.devicon-grunt-line-wordmark.colored, .devicon-grunt-line.colored, .devicon-grunt-plain-wordmark.colored, .devicon-grunt-plain.colored {
+	color: #fcaa1a;
+}
+/* Git */
 .devicon-git-plain-wordmark:before {
 	content: "\e61e";
 }
 .devicon-git-plain:before {
 	content: "\e61f";
 }
+.devicon-git-plain-wordmark.colored, .devicon-git-plain.colored {
+	color: #f34f29;
+}
+/* Foundation */
 .devicon-foundation-plain-wordmark:before {
 	content: "\e620";
 }
 .devicon-foundation-plain:before {
 	content: "\e621";
 }
-.devicon-devdevicon-plain:before {
+.devicon-foundation-plain-wordmark.colored, .devicon-foundation-plain.colored {
+	color: #008cba;
+}
+/* Devicon */
+.devicon-devicon-line:before {
 	content: "\e622";
 }
-.devicon-devdevicon-line:before {
+.devicon-devicon-plain:before {
 	content: "\e623";
 }
+.devicon-devicon-line.colored, .devicon-devicon-plain.colored {
+	color: #60BE86;
+}
+/* CSS3 */
 .devicon-css3-plain-wordmark:before {
 	content: "\e624";
 }
 .devicon-css3-plain:before {
 	content: "\e625";
 }
+.devicon-css3-plain-wordmark.colored, .devicon-css3-plain.colored {
+	color: #3d8fc6;
+}
+/* Codeigniter */
 .devicon-codeigniter-plain-wordmark:before {
 	content: "\e626";
 }
 .devicon-codeigniter-plain:before {
 	content: "\e627";
 }
-.devicon-bower-plain-wordmark:before {
+.devicon-codeigniter-plain-wordmark.colored, .devicon-codeigniter-plain.colored {
+	color: #ee4323;
+}
+/* Bower */
+.devicon-bower-line-wordmark:before {
 	content: "\e628";
 }
-.devicon-bower-plain:before {
+.devicon-bower-line:before {
 	content: "\e629";
 }
-.devicon-bower-line-wordmark:before {
+.devicon-bower-plain-wordmark:before {
 	content: "\e62a";
 }
-.devicon-bower-line:before {
+.devicon-bower-plain:before {
 	content: "\e62b";
 }
-.devicon-bootstrap-plain-wordmark:before {
+.devicon-bower-line-wordmark.colored, .devicon-bower-line.colored, .devicon-bower-plain-wordmark.colored, .devicon-bower-plain.colored {
+	color: #ef5734;
+}
+/* Bootstrap */
+.devicon-bootstrap-line-wordmark:before {
 	content: "\e62c";
 }
-.devicon-bootstrap-plain:before {
+.devicon-bootstrap-line:before {
 	content: "\e62d";
 }
-.devicon-bootstrap-line-wordmark:before {
+.devicon-bootstrap-plain-wordmark:before {
 	content: "\e62e";
 }
-.devicon-bootstrap-line:before {
+.devicon-bootstrap-plain:before {
 	content: "\e62f";
 }
+.devicon-bootstrap-line-wordmark.colored, .devicon-bootstrap-line.colored, .devicon-bootstrap-plain-wordmark.colored, .devicon-bootstrap-plain.colored {
+	color: #59407f;
+}
+/* AngularJS */
 .devicon-angularjs-plain-wordmark:before {
 	content: "\e630";
 }
 .devicon-angularjs-plain:before {
 	content: "\e631";
+}
+.devicon-angularjs-plain-wordmark.colored, .devicon-angularjs-plain.colored {
+	color: #c4473a;
 }
