@@ -3,95 +3,173 @@
   {
     "name": "html5",
     "main-color": "#e54d26",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e619",
+      "plain-wordmark": "e618"
+    }
   }, {
     "name": "css3",
     "main-color": "#3d8fc6",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e625",
+      "plain-wordmark": "e624"
+    }
   }, {
     "name": "javascript",
     "main-color": "#f0db4f",
-    "options": "original;plain"
+    "options": {
+      "plain": "e613"
+    }
   }, {
     "name": "jquery",
     "main-color": "#0769ad",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e612",
+      "plain-wordmark": "e611"
+    }
   }, {
     "name": "mysql",
     "main-color": "#00618a",
-    "options": "original;line;wordmark"
+    "options": {
+      "line": "e60d",
+      "line-wordmark": "e60c"
+    }
   }, {
     "name": "angularjs",
     "main-color": "#c4473a",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e631",
+      "plain-wordmark": "e630"
+    }
   }, {
     "name": "laravel",
     "main-color": "#fd4f31",
-    "options": "plain;wordmark"
+    "options": {
+      "plain": "e610",
+      "plain-wordmark": "e60f"
+    }
   }, {
     "name": "wordpress",
     "main-color": "#494949",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e605",
+      "plain-wordmark": "e604"
+    }
   }, {
     "name": "foundation",
     "main-color": "#008cba",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e620",
+      "plain-wordmark": "e621"
+    }
   }, {
     "name": "bootstrap",
     "main-color": "#59407f",
-    "options": "original;plain;line;wordmark"
+    "options": {
+      "plain": "e62f",
+      "plain-wordmark": "e62e",
+      "line": "e62d",
+      "line-wordmark": "e62c"
+    }
   }, {
     "name": "grunt",
     "main-color": "#fcaa1a",
-    "options": "original;line;plain;wordmark"
+    "options": {
+      "plain": "e61d",
+      "plain-wordmark": "e61c",
+      "line": "e61b",
+      "line-wordmark": "e61a"
+    }
   }, {
     "name": "bower",
     "main-color": "#ef5734",
-    "options": "original;line;plain;wordmark"
+    "options": {
+      "plain": "e62b",
+      "plain-wordmark": "e62a",
+      "line": "e629",
+      "line-wordmark": "e628"
+    }
   }, {
     "name": "git",
     "main-color": "#f34f29",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e61f",
+      "plain-wordmark": "e61e"
+    }
   }, {
     "name": "sass",
     "main-color": "#cc6699",
-    "options": "original;line;wordmark"
+    "options": {
+      "plain": "e606"
+    }
   }, {
     "name": "less",
     "main-color": "#2a4d80",
-    "options": "line;wordmark"
+    "options": {
+      "plain": "e60e"
+    }
   }, {
     "name": "photoshop",
     "main-color": "#80b5e2",
-    "options": "original;plain;line"
+    "options": {
+      "plain": "e60b",
+      "line": "e60a"
+    }
   }, {
     "name": "illustrator",
     "main-color": "#faa625",
-    "options": "original;plain;line"
+    "options": {
+      "plain": "e617",
+      "line": "e616"
+    }
   }, {
     "name": "php",
     "main-color": "#6181b6",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e609"
+    }
   }, {
     "name": "java",
     "main-color": "#ea2d2e",
-    "options": "original;line;wordmark"
+    "options": {
+      "line": "e615",
+      "line-wordmark": "e614"
+    }
   }, {
     "name": "yii",
     "main-color": "#0073bb",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e603",
+      "plain-wordmark": "e602"
+    }
   }, {
     "name": "codeigniter",
     "main-color": "#ee4323",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e627",
+      "plain-wordmark": "e626"
+    }
   }, {
     "name": "zend",
     "main-color": "#68b604",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e601",
+      "plain-wordmark": "e600"
+    }
   }, {
     "name": "python",
     "main-color": "#ffd845",
-    "options": "original;plain;wordmark"
+    "options": {
+      "plain": "e608",
+      "plain-wordmark": "e607"
+    }
+  }, {
+    "name": "devicon",
+    "main-color": "#60BE86",
+    "options": {
+      "plain": "e623",
+      "line": "e622"
+    }
   }
 
 ]
