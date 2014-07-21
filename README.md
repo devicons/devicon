@@ -40,11 +40,14 @@ Available icons (alphabetical order)
 
 - .NET
 - AngularJS
+- Backbone.js
 - Bootstrap
 - Bower
+- Chrome
 - Codeigniter
 - CSS3
 - Devicon
+- Firefox
 - Foundation
 - Git
 - Grunt
@@ -73,8 +76,7 @@ Upcoming icons
 - Github
 - Bitbucket
 - Sketch
-- Backbone.js
-- browsers: firefox, chrome, safari, opera, IE
+- browsers: safari, opera, IE
 - operating systems: linux (ubuntu, debian), windows, mac
 - ... Please contribute or open an issue for requesting an icon
 
