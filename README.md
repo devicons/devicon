@@ -21,10 +21,10 @@ How to use it
   <i class="devicon-git-plain-wordmark"></i>
   
   <!--  for git plain version colored with git main color -->
-  <i class="devicon-git-plain git-color"></i>
+  <i class="devicon-git-plain colored"></i>
 </body>
 ```
 
-See the icons folder or devicon.json file for complete reference of icon's available versions.
+See devicon.html or devicon.json file for complete reference of icon's available versions.
 
 #### I'll add some icons to the collection soon (gulp, sketch, github, bitbucket, ruby, ruby on rails, travis, etc.) but please don't hesitate to contribute :)
