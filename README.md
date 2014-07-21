@@ -22,6 +22,9 @@ How to use it
   
   <!--  for git plain version colored with git main color -->
   <i class="devicon-git-plain colored"></i>
+  
+  <!--  for git plain version with wordmark colored with git main color -->
+  <i class="devicon-git-plain-wordmark colored"></i>
 </body>
 ```
 
