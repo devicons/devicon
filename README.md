@@ -32,6 +32,9 @@ How to use it
 
 See devicon.html or devicon.json file for complete and up to date reference of icon's available versions.
 
+Original files (.ai, .svg) are available in the "icons" folder.
+
+
 Available icons (alphabetical order)
 ---------------
 
@@ -70,6 +73,9 @@ Upcoming icons
 - Github
 - Bitbucket
 - Sketch
+- Backbone.js
+- browsers: firefox, chrome, safari, opera, IE
+- operating systems: linux (ubuntu, debian), windows, mac
 - ... Please contribute or open an issue for requesting an icon
 
 
