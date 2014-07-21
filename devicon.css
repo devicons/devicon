@@ -23,6 +23,42 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* Firefox */
+.devicon-firefox-plain-wordmark:before {
+	content: "\e63f";
+}
+.devicon-firefox-plain:before {
+	content: "\e640";
+}
+.devicon-firefox-plain-wordmark.colored, .devicon-firefox-plain.colored {
+	color: #DD732A;
+}
+/* Chrome */
+.devicon-chrome-plain-wordmark:before {
+	content: "\e63d";
+}
+.devicon-chrome-plain:before {
+	content: "\e63e";
+}
+.devicon-chrome-plain-wordmark.colored, .devicon-chrome-plain.colored {
+	color: #ce4e4e;
+}
+/* Backbone */
+.devicon-backbone-line-wordmark:before {
+	content: "\e639";
+}
+.devicon-backbone-line:before {
+	content: "\e63a";
+}
+.devicon-backbone-plain-wordmark:before {
+	content: "\e63b";
+}
+.devicon-backbone-plain:before {
+	content: "\e63c";
+}
+.devicon-backbone-line-wordmark.colored, .devicon-backbone-line.colored, .devicon-backbone-plain-wordmark.colored, .devicon-backbone-plain.colored {
+	color: #002a41;
+}
 /* Ruby on rails */
 .devicon-rails-plain-wordmark:before {
 	content: "\e637";

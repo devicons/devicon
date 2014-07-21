@@ -197,6 +197,29 @@
       "plain": "e638",
       "plain-wordmark": "e637"
     }
+  }, {
+    "name": "backbone",
+    "main-color": "#002a41",
+    "options": {
+      "plain": "e63c",
+      "plain-wordmark": "e63b",
+      "line": "e63a",
+      "line-wordmark": "e639"
+    }
+  }, {
+    "name": "firefox",
+    "main-color": "#DD732A",
+    "options": {
+      "plain": "e640",
+      "plain-wordmark": "e63f"
+    }
+  }, {
+    "name": "chrome",
+    "main-color": "#ce4e4e",
+    "options": {
+      "plain": "e63e",
+      "plain-wordmark": "e63d"
+    }
   }
 
 ]
