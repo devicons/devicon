@@ -3,6 +3,8 @@ devicon
 
 devicon aims to gather all logos representing development languages and tools in one font.
 
+See all available icons on the github page: http://konpa.github.io/devicon/
+
 Final font is built with [icomoon](http://icomoon.io).
 
 How to use it
