@@ -170,6 +170,33 @@
       "plain": "e623",
       "line": "e622"
     }
+  }, {
+    "name": "gulp",
+    "main-color": "#eb4a4b",
+    "options": {
+      "plain": "e632"
+    }
+  }, {
+    "name": "dot-net",
+    "main-color": "#1384c8",
+    "options": {
+      "plain": "e634",
+      "plain-wordmark": "e633"
+    }
+  }, {
+    "name": "ruby",
+    "main-color": "#d91404",
+    "options": {
+      "plain": "e636",
+      "plain-wordmark": "e635"
+    }
+  }, {
+    "name": "rails",
+    "main-color": "#a62c46",
+    "options": {
+      "plain": "e638",
+      "plain-wordmark": "e637"
+    }
   }
 
 ]

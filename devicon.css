@@ -23,6 +23,43 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* Ruby on rails */
+.devicon-rails-plain-wordmark:before {
+	content: "\e637";
+}
+.devicon-rails-plain:before {
+	content: "\e638";
+}
+.devicon-rails-plain-wordmark.colored, .devicon-rails-plain.colored {
+	color: #a62c46;
+}
+/* Ruby */
+.devicon-ruby-plain-wordmark:before {
+	content: "\e635";
+}
+.devicon-ruby-plain:before {
+	content: "\e636";
+}
+.devicon-ruby-plain-wordmark.colored, .devicon-ruby-plain.colored {
+	color: #d91404;
+}
+/* .NET */
+.devicon-dot-net-plain-wordmark:before {
+	content: "\e633";
+}
+.devicon-dot-net-plain:before {
+	content: "\e634";
+}
+.devicon-dot-net-plain-wordmark.colored, .devicon-dot-net-plain.colored {
+	color: #1384c8;
+}
+/* Gulp */
+.devicon-gulp-plain:before {
+	content: "\e632";
+}
+.devicon-gulp-plain.colored {
+	color: #eb4a4b;
+}
 /* Zend */
 .devicon-zend-plain-wordmark:before {
 	content: "\e600";
