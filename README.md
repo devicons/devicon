@@ -30,6 +30,50 @@ How to use it
 </body>
 ```
 
-See devicon.html or devicon.json file for complete reference of icon's available versions.
+See devicon.html or devicon.json file for complete and up to date reference of icon's available versions.
 
-#### I'll add some icons to the collection soon (gulp, sketch, github, bitbucket, ruby, ruby on rails, travis, etc.) but please don't hesitate to contribute :)
+Available icons (alphabetical order)
+---------------
+
+- .NET
+- AngularJS
+- Bootstrap
+- Bower
+- Codeigniter
+- CSS3
+- Devicon
+- Foundation
+- Git
+- Grunt
+- Gulp
+- HTML5
+- Illustrator
+- Java
+- Javascript
+- JQuery
+- Laravel
+- Less
+- MySQL
+- Photoshop
+- PHP
+- Python
+- Rails
+- Ruby
+- Sass
+- Wordpress
+- Yii
+- Zend
+
+Upcoming icons
+---------------
+- Travis
+- Github
+- Bitbucket
+- Sketch
+- ... Please contribute or open an issue for requesting an icon
+
+
+
+
+
+
