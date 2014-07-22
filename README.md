@@ -46,7 +46,7 @@ Available icons (alphabetical order)
 - Chrome
 - Codeigniter
 - CSS3
-- Debian
+- Debian (new)
 - Devicon
 - Firefox
 - Foundation
@@ -60,7 +60,7 @@ Available icons (alphabetical order)
 - JQuery
 - Laravel
 - Less
-- Linux
+- Linux (new)
 - MySQL
 - Photoshop
 - PHP
@@ -68,8 +68,8 @@ Available icons (alphabetical order)
 - Rails
 - Ruby
 - Sass
-- Travis
-- Ubuntu
+- Travis (new)
+- Ubuntu (new)
 - Wordpress
 - Yii
 - Zend
