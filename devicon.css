@@ -23,6 +23,43 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* Travis */
+.devicon-travis-plain-wordmark:before {
+	content: "\e641";
+}
+.devicon-travis-plain:before {
+	content: "\e642";
+}
+.devicon-travis-plain-wordmark.colored, .devicon-travis-plain.colored {
+	color: #BB2031;
+}
+/* Linux */
+.devicon-linux-plain:before {
+	content: "\e647";
+}
+.devicon-linux-plain.colored {
+	color: #000000;
+}
+/* Ubuntu */
+.devicon-ubuntu-plain-wordmark:before {
+	content: "\e645";
+}
+.devicon-ubuntu-plain:before {
+	content: "\e646";
+}
+.devicon-ubuntu-plain-wordmark.colored, .devicon-ubuntu-plain.colored {
+	color: #DD4814;
+}
+/* Debian */
+.devicon-debian-plain-wordmark:before {
+	content: "\e643";
+}
+.devicon-debian-plain:before {
+	content: "\e644";
+}
+.devicon-debian-plain-wordmark.colored, .devicon-debian-plain.colored {
+	color: #A80030;
+}
 /* Firefox */
 .devicon-firefox-plain-wordmark:before {
 	content: "\e63f";

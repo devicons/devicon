@@ -220,6 +220,33 @@
       "plain": "e63e",
       "plain-wordmark": "e63d"
     }
+  }, {
+    "name": "travis",
+    "main-color": "#BB2031",
+    "options": {
+      "plain": "e642",
+      "plain-wordmark": "e641"
+    }
+  }, {
+    "name": "linux",
+    "main-color": "#000000",
+    "options": {
+      "plain": "e647"
+    }
+  }, {
+    "name": "ubuntu",
+    "main-color": "#DD4814",
+    "options": {
+      "plain": "e646",
+      "plain-wordmark": "e645"
+    }
+  }, {
+    "name": "debian",
+    "main-color": "#A80030",
+    "options": {
+      "plain": "e644",
+      "plain-wordmark": "e643"
+    }
   }
 
 ]
