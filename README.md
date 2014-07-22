@@ -46,6 +46,7 @@ Available icons (alphabetical order)
 - Chrome
 - Codeigniter
 - CSS3
+- Debian
 - Devicon
 - Firefox
 - Foundation
@@ -59,6 +60,7 @@ Available icons (alphabetical order)
 - JQuery
 - Laravel
 - Less
+- Linux
 - MySQL
 - Photoshop
 - PHP
@@ -66,18 +68,19 @@ Available icons (alphabetical order)
 - Rails
 - Ruby
 - Sass
+- Travis
+- Ubuntu
 - Wordpress
 - Yii
 - Zend
 
 Upcoming icons
 ---------------
-- Travis
 - Github
 - Bitbucket
 - Sketch
 - browsers: safari, opera, IE
-- operating systems: linux (ubuntu, debian), windows, mac
+- operating systems: windows, mac
 - ... Please contribute or open an issue for requesting an icon
 
 
