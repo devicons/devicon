@@ -247,6 +247,34 @@
       "plain": "e644",
       "plain-wordmark": "e643"
     }
+  }, {
+    "name": "postgresql",
+    "main-color": "#336791",
+    "options": {
+      "plain": "e648",
+      "plain-wordmark": "e649"
+    }
+  }, {
+    "name": "nodejs",
+    "main-color": "#83CD29",
+    "options": {
+      "plain": "e64a",
+      "plain-wordmark": "e64b"
+    }
+  }, {
+    "name": "mongodb",
+    "main-color": "#4FAA41",
+    "options": {
+      "plain": "e64c",
+      "plain-wordmark": "e64d"
+    }
+  }, {
+    "name": "krakenjs",
+    "main-color": "#0081C2",
+    "options": {
+      "plain": "e64e",
+      "plain-wordmark": "e64f"
+    }
   }
 
 ]

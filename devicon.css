@@ -23,6 +23,46 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* PostgreSQL */
+.devicon-postgresql-plain:before {
+	content: "\e648";
+}
+.devicon-postgresql-plain-wordmark:before {
+	content: "\e649";
+}
+.devicon-postgresql-plain.colored, .devicon-postgresql-plain-wordmark.colored {
+	color: #336791;
+}
+/* NodeJS */
+.devicon-nodejs-plain:before {
+	content: "\e64a";
+}
+.devicon-nodejs-plain-wordmark:before {
+	content: "\e64b";
+}
+.devicon-nodejs-plain.colored, .devicon-nodejs-plain-wordmark.colored {
+	color: #83CD29;
+}
+/* MongoDB */
+.devicon-mongodb-plain:before {
+	content: "\e64c";
+}
+.devicon-mongodb-plain-wordmark:before {
+	content: "\e64d";
+}
+.devicon-mongodb-plain.colored, .devicon-mongodb-plain-wordmark.colored {
+	color: #4FAA41;
+}
+/* Kraken JS */
+.devicon-krakenjs-plain:before {
+	content: "\e64e";
+}
+.devicon-krakenjs-plain-wordmark:before {
+	content: "\e64f";
+}
+.devicon-krakenjs-plain.colored, .devicon-krakenjs-plain-wordmark.colored {
+	color: #0081C2;
+}
 /* Travis */
 .devicon-travis-plain-wordmark:before {
 	content: "\e641";
