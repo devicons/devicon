@@ -58,12 +58,16 @@ Available icons (alphabetical order)
 - Java
 - Javascript
 - JQuery
+- KrakenJS (new)
 - Laravel
 - Less
 - Linux (new)
+- MongoDB (new)
 - MySQL
+- NodeJS (new)
 - Photoshop
 - PHP
+- PostgreSQL (new)
 - Python
 - Rails
 - Ruby
