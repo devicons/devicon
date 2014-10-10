@@ -1,280 +1,394 @@
 [
-
+  {
+    "name": "amazonwebservices",
+    "tags": ["cloud", "hosting", "server"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain-wordmark"],
+      "font": ["original", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "android",
+    "tags": ["os", "mobile"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "angularjs",
+    "tags": ["framework", "javascript"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "appcelerator",
+    "tags": ["app", "mobile"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain-wordmark"],
+      "font": ["original", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "apple",
+    "tags": ["brand", "mobile"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
+    "name": "atom",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
+    }
+  },
+  {
+    "name": "backbonejs",
+    "tags": ["javascript", "framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "bootstrap",
+    "tags": ["css", "framework"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "bower",
+    "tags": ["package", "manager"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
+  },
+  {
+    "name": "chrome",
+    "tags": ["browser"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "codeigniter",
+    "tags": ["php", "framework"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "css3",
+    "tags": ["language", "programming"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "debian",
+    "tags": ["os", "server"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "dot-net",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "drupal",
+    "tags": ["cms"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "firefox",
+    "tags": ["browser"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "foundation",
+    "tags": ["framework", "css"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "git",
+    "tags": ["version-control"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "grunt",
+    "tags": ["task-runner", "nodejs"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
+  },
+  {
+    "name": "gulp",
+    "tags": ["task-runner", "nodejs"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
+    }
+  },
   {
     "name": "html5",
-    "main-color": "#e54d26",
-    "options": {
-      "plain": "e619",
-      "plain-wordmark": "e618"
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
-  }, {
-    "name": "css3",
-    "main-color": "#3d8fc6",
-    "options": {
-      "plain": "e625",
-      "plain-wordmark": "e624"
+  },
+  {
+    "name": "ie10",
+    "tags": ["browser"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
     }
-  }, {
-    "name": "javascript",
-    "main-color": "#f0db4f",
-    "options": {
-      "plain": "e613"
-    }
-  }, {
-    "name": "jquery",
-    "main-color": "#0769ad",
-    "options": {
-      "plain": "e612",
-      "plain-wordmark": "e611"
-    }
-  }, {
-    "name": "mysql",
-    "main-color": "#00618a",
-    "options": {
-      "line": "e60d",
-      "line-wordmark": "e60c"
-    }
-  }, {
-    "name": "angularjs",
-    "main-color": "#c4473a",
-    "options": {
-      "plain": "e631",
-      "plain-wordmark": "e630"
-    }
-  }, {
-    "name": "laravel",
-    "main-color": "#fd4f31",
-    "options": {
-      "plain": "e610",
-      "plain-wordmark": "e60f"
-    }
-  }, {
-    "name": "wordpress",
-    "main-color": "#494949",
-    "options": {
-      "plain": "e605",
-      "plain-wordmark": "e604"
-    }
-  }, {
-    "name": "foundation",
-    "main-color": "#008cba",
-    "options": {
-      "plain": "e620",
-      "plain-wordmark": "e621"
-    }
-  }, {
-    "name": "bootstrap",
-    "main-color": "#59407f",
-    "options": {
-      "plain": "e62f",
-      "plain-wordmark": "e62e",
-      "line": "e62d",
-      "line-wordmark": "e62c"
-    }
-  }, {
-    "name": "grunt",
-    "main-color": "#fcaa1a",
-    "options": {
-      "plain": "e61d",
-      "plain-wordmark": "e61c",
-      "line": "e61b",
-      "line-wordmark": "e61a"
-    }
-  }, {
-    "name": "bower",
-    "main-color": "#ef5734",
-    "options": {
-      "plain": "e62b",
-      "plain-wordmark": "e62a",
-      "line": "e629",
-      "line-wordmark": "e628"
-    }
-  }, {
-    "name": "git",
-    "main-color": "#f34f29",
-    "options": {
-      "plain": "e61f",
-      "plain-wordmark": "e61e"
-    }
-  }, {
-    "name": "sass",
-    "main-color": "#cc6699",
-    "options": {
-      "plain": "e606"
-    }
-  }, {
-    "name": "less",
-    "main-color": "#2a4d80",
-    "options": {
-      "plain": "e60e"
-    }
-  }, {
-    "name": "photoshop",
-    "main-color": "#80b5e2",
-    "options": {
-      "plain": "e60b",
-      "line": "e60a"
-    }
-  }, {
+  },
+  {
     "name": "illustrator",
-    "main-color": "#faa625",
-    "options": {
-      "plain": "e617",
-      "line": "e616"
+    "tags": ["editor", "vector"],
+    "versions": {
+      "svg": ["plain", "line"],
+      "font": ["original"]
     }
-  }, {
-    "name": "php",
-    "main-color": "#6181b6",
-    "options": {
-      "plain": "e609"
-    }
-  }, {
+  },
+  {
     "name": "java",
-    "main-color": "#ea2d2e",
-    "options": {
-      "line": "e615",
-      "line-wordmark": "e614"
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
-  }, {
-    "name": "yii",
-    "main-color": "#0073bb",
-    "options": {
-      "plain": "e603",
-      "plain-wordmark": "e602"
+  },
+  {
+    "name": "javascript",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
     }
-  }, {
-    "name": "codeigniter",
-    "main-color": "#ee4323",
-    "options": {
-      "plain": "e627",
-      "plain-wordmark": "e626"
+  },
+  {
+    "name": "jquery",
+    "tags": ["library", "javascript"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
-  }, {
-    "name": "zend",
-    "main-color": "#68b604",
-    "options": {
-      "plain": "e601",
-      "plain-wordmark": "e600"
-    }
-  }, {
-    "name": "python",
-    "main-color": "#ffd845",
-    "options": {
-      "plain": "e608",
-      "plain-wordmark": "e607"
-    }
-  }, {
-    "name": "devicon",
-    "main-color": "#60BE86",
-    "options": {
-      "plain": "e623",
-      "line": "e622"
-    }
-  }, {
-    "name": "gulp",
-    "main-color": "#eb4a4b",
-    "options": {
-      "plain": "e632"
-    }
-  }, {
-    "name": "dot-net",
-    "main-color": "#1384c8",
-    "options": {
-      "plain": "e634",
-      "plain-wordmark": "e633"
-    }
-  }, {
-    "name": "ruby",
-    "main-color": "#d91404",
-    "options": {
-      "plain": "e636",
-      "plain-wordmark": "e635"
-    }
-  }, {
-    "name": "rails",
-    "main-color": "#a62c46",
-    "options": {
-      "plain": "e638",
-      "plain-wordmark": "e637"
-    }
-  }, {
-    "name": "backbone",
-    "main-color": "#002a41",
-    "options": {
-      "plain": "e63c",
-      "plain-wordmark": "e63b",
-      "line": "e63a",
-      "line-wordmark": "e639"
-    }
-  }, {
-    "name": "firefox",
-    "main-color": "#DD732A",
-    "options": {
-      "plain": "e640",
-      "plain-wordmark": "e63f"
-    }
-  }, {
-    "name": "chrome",
-    "main-color": "#ce4e4e",
-    "options": {
-      "plain": "e63e",
-      "plain-wordmark": "e63d"
-    }
-  }, {
-    "name": "travis",
-    "main-color": "#BB2031",
-    "options": {
-      "plain": "e642",
-      "plain-wordmark": "e641"
-    }
-  }, {
-    "name": "linux",
-    "main-color": "#000000",
-    "options": {
-      "plain": "e647"
-    }
-  }, {
-    "name": "ubuntu",
-    "main-color": "#DD4814",
-    "options": {
-      "plain": "e646",
-      "plain-wordmark": "e645"
-    }
-  }, {
-    "name": "debian",
-    "main-color": "#A80030",
-    "options": {
-      "plain": "e644",
-      "plain-wordmark": "e643"
-    }
-  }, {
-    "name": "postgresql",
-    "main-color": "#336791",
-    "options": {
-      "plain": "e648",
-      "plain-wordmark": "e649"
-    }
-  }, {
-    "name": "nodejs",
-    "main-color": "#83CD29",
-    "options": {
-      "plain": "e64a",
-      "plain-wordmark": "e64b"
-    }
-  }, {
-    "name": "mongodb",
-    "main-color": "#4FAA41",
-    "options": {
-      "plain": "e64c",
-      "plain-wordmark": "e64d"
-    }
-  }, {
+  },
+  {
     "name": "krakenjs",
-    "main-color": "#0081C2",
-    "options": {
-      "plain": "e64e",
-      "plain-wordmark": "e64f"
+    "tags": ["nodejs", "framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "laravel",
+    "tags": ["php", "framework"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "less",
+    "tags": ["css", "pre-processor"],
+    "versions": {
+      "svg": ["plain-wordmark"],
+      "font": ["plain-wordmark"]
+    }
+  },
+  {
+    "name": "linux",
+    "tags": ["os"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "mongodb",
+    "tags": ["database"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "moodle",
+    "tags": ["platform"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "mysql",
+    "tags": ["database", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "nodejs",
+    "tags": ["javascript", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "oracle",
+    "tags": ["database"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
+    "name": "photoshop",
+    "tags": ["editor", "graphic"],
+    "versions": {
+      "svg": ["plain", "line"],
+      "font": ["plain", "line"]
+    }
+  },
+  {
+    "name": "php",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "postgresql",
+    "tags": ["database"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "python",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "rails",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "ruby",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "sass",
+    "tags": ["pre-processor", "css"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
+    "name": "travis",
+    "tags": ["platform", "integration"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "trello",
+    "tags": ["platform", "organize"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "ubuntu",
+    "tags": ["os"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "windows8",
+    "tags": ["os"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
+    }
+  },
+  {
+    "name": "wordpress",
+    "tags": ["cms"],
+    "versions": {
+      "svg": ["original", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "yii",
+    "tags": ["php", "framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "zend",
+    "tags": ["php", "framework"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   }
-
 ]
