@@ -1,13 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
-<g>
-	<polygon fill="#BB2031" points="178,142 242,142 242,347 218,347 218,382 313,382 313,343 283,343 283,139 351,139 351,169 
-		382,169 382,108 143,108 143,169 178,169 	"/>
-	<path fill="#BB2031" d="M457.24,38H68.994C62.223,38,56,43.02,56,49.701V437.9c0,6.683,6.223,12.1,12.994,12.1H457.24
-		c6.771,0,11.76-5.417,11.76-12.1V49.701C469,43.02,464.011,38,457.24,38z M402,189h-71v-30h-28v164h30v79H198v-75h24V162h-24v27
-		h-75V88h279V189z"/>
-</g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 128 128">
+	<polygon fill="#BB2031" points="40,34 58,34 58,95 50,95 50,106 78,106 78,94 71,94 71,33 90,33 90,42 100,42 100,24 29,24 29,42
+		40,42 	"/>
+	<path fill="#BB2031" d="M122.2,3H6.031C4.005,3,2,4.226,2,6.225v116.154c0,2,2.005,3.621,4.031,3.621H122.2
+		c2.026,0,2.8-1.621,2.8-3.621V6.225C125,4.226,124.226,3,122.2,3z M106,48H85v-9h-9v48h9v24H45V88h6V40h-6v8H22V18h84V48z"/>
 </svg>
