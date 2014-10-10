@@ -2,9 +2,11 @@
 
 devicon aims to gather all logos representing development languages and tools.
 
+See [devicon.fr](http://devicon.fr) (not up to date, coming really soon!)
+
 ## How to use
 
-2 ways of using devicon:
+_2 ways of using devicon:_
 
 ### SVG icons
 
