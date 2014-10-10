@@ -1,94 +1,57 @@
-devicon
-=======
+# devicon V2
 
-devicon aims to gather all logos representing development languages and tools in one font.
+devicon aims to gather all logos representing development languages and tools.
 
-See all available icons on the github page: http://konpa.github.io/devicon/
+## How to use
 
-Final font is built with [icomoon](http://icomoon.io).
+### SVG icons
 
-How to use it
---------------
+- Copy/paste svg code from [devicon](http://devicon.fr) (coming soon) or from svg file
 
 ```html
-<head>
-  <link rel="stylesheet" href="devicon.css">
-</head>
-
-<body>
-  <!--  for git plain version -->
-  <i class="devicon-git-plain"></i>
-  
-  <!--  for git plain version with wordmark -->
-  <i class="devicon-git-plain-wordmark"></i>
-  
-  <!--  for git plain version colored with git main color -->
-  <i class="devicon-git-plain colored"></i>
-  
-  <!--  for git plain version with wordmark colored with git main color -->
-  <i class="devicon-git-plain-wordmark colored"></i>
-</body>
+<!--  for git plain version -->
+<svg class="devicon" viewBox="0 0 128 128">
+  <path fill="#F34F29" d="M124.742,58.378L69.625,3.264c-3.172-3.174-8.32-3.174-11.497,0L46.685,14.71l14.518,14.518c3.375-1.139,7.243-0.375,9.932,2.314c2.703,2.706,3.462,6.607,2.293,9.993L87.42,55.529c3.385-1.167,7.292-0.413,9.994,2.295c3.78,3.777,3.78,9.9,0,13.679c-3.78,3.78-9.901,3.78-13.683,0c-2.842-2.844-3.545-7.019-2.105-10.521L68.578,47.933l-0.002,34.341c0.922,0.455,1.791,1.063,2.559,1.828c3.779,3.777,3.779,9.898,0,13.683c-3.779,3.777-9.904,3.777-13.679,0c-3.778-3.784-4.088-9.905-0.311-13.683C58.079,83.169,59,82.464,60,81.992V47.333c-1-0.472-1.92-1.172-2.856-2.111c-2.861-2.86-3.396-7.06-1.928-10.576L40.983,20.333L3.229,58.123c-3.175,3.177-3.155,8.325,0.02,11.5l55.126,55.114c3.173,3.174,8.325,3.174,11.503,0l54.86-54.858C127.913,66.703,127.916,61.552,124.742,58.378z"/>
+</svg>
 ```
 
-See devicon.html or devicon.json file for complete and up to date reference of icon's available versions.
+- Add css rules in your stylesheet
+```css
+.devicon {
+  max-width: 2em;
+}
 
-Original files (.ai, .svg) are available in the "icons" folder.
+/* if you want to change the original color */
+.devicon path {
+  fill: #4691f6;
+}
+```
 
+### Icons font
 
-Available icons (alphabetical order)
----------------
+- Upload devicon.css and font files to your project
 
-- .NET
-- AngularJS
-- Backbone.js
-- Bootstrap
-- Bower
-- Chrome
-- Codeigniter
-- CSS3
-- Debian (new)
-- Devicon
-- Firefox
-- Foundation
-- Git
-- Grunt
-- Gulp
-- HTML5
-- Illustrator
-- Java
-- Javascript
-- JQuery
-- KrakenJS (new)
-- Laravel
-- Less
-- Linux (new)
-- MongoDB (new)
-- MySQL
-- NodeJS (new)
-- Photoshop
-- PHP
-- PostgreSQL (new)
-- Python
-- Rails
-- Ruby
-- Sass
-- Travis (new)
-- Ubuntu (new)
-- Wordpress
-- Yii
-- Zend
+```html
+  <link rel="stylesheet" href="devicon.css">
 
-Upcoming icons
----------------
-- Github
-- Bitbucket
-- Sketch
-- browsers: safari, opera, IE
-- operating systems: windows, mac
-- ... Please contribute or open an issue for requesting an icon
+  <!--  if you want colored versions -->
+  <link rel="stylesheet" href="devicon-colors.css">
+```
 
+- Add icon using <i> tag
 
+```html
+  <!--  for git plain version -->
+  <i class="devicon-git-plain"></i>
 
+  <!--  for git plain version with wordmark -->
+  <i class="devicon-git-plain-wordmark"></i>
 
+  <!--  for git plain version colored with git main color (devicon-color.css required) -->
+  <i class="devicon-git-plain colored"></i>
 
+  <!--  for git plain version with wordmark colored with git main color (devicon-color.css required) -->
+  <i class="devicon-git-plain-wordmark colored"></i>
+```
 
+##### See devicon.json file for complete and up to date reference of icon's available versions.
