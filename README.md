@@ -4,15 +4,15 @@ devicon aims to gather all logos representing development languages and tools.
 
 See [devicon.fr](http://devicon.fr) (not up to date, coming really soon!)
 
-## Icon requests
+#### Icon requests
 
-Please leave a comment here #11 in order to request an icon.
+Please leave a comment [here](https://github.com/konpa/devicon/issues/11) in order to request an icon.
 
 ## How to use
 
 _2 ways of using devicon:_
 
-### SVG icons
+#### SVG icons
 
 - Copy/paste svg code from [devicon](http://devicon.fr) (coming soon) or from svg file
 
@@ -35,7 +35,7 @@ _2 ways of using devicon:_
 }
 ```
 
-### Icons font
+#### Icons font
 
 - Upload devicon.css and font files to your project
 
