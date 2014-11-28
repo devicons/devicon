@@ -4,6 +4,10 @@ devicon aims to gather all logos representing development languages and tools.
 
 See [devicon.fr](http://devicon.fr) (not up to date, coming really soon!)
 
+## Icon requests
+
+Please leave a comment here #11 in order to request an icon.
+
 ## How to use
 
 _2 ways of using devicon:_
@@ -59,3 +63,7 @@ _2 ways of using devicon:_
 ```
 
 ##### See devicon.json file for complete and up to date reference of icon's available versions.
+
+## Contribute
+
+Please have a look at the CONTRIBUTING.md file
