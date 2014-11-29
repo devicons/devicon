@@ -180,7 +180,7 @@
     "tags": ["editor", "vector"],
     "versions": {
       "svg": ["plain", "line"],
-      "font": ["original"]
+      "font": ["plain", "line"]
     }
   },
   {
