@@ -1,5 +1,6 @@
 .devicon-amazonwebservices-plain-wordmark.colored,
-.devicon-amazonwebservices-original.colored {
+.devicon-amazonwebservices-original.colored,
+.devicon-amazonwebservices-plain.colored {
 	color: #F7A80D;
 }
 .devicon-android-plain-wordmark.colored,
@@ -11,14 +12,18 @@
 	color: #c4473a;
 }
 .devicon-appcelerator-plain-wordmark.colored,
-.devicon-appcelerator-original.colored {
+.devicon-appcelerator-original.colored,
+.devicon-appcelerator-plain.colored {
 	color: #AC162C;
 }
-.devicon-apple-original.colored {
+.devicon-apple-original.colored,
+.devicon-apple-plain.colored {
 	color: #000000;
 }
 .devicon-atom-original.colored,
-.devicon-atom-original-wordmark.colored {
+.devicon-atom-original-wordmark.colored,
+.devicon-atom-plain.colored,
+.devicon-atom-plain-wordmark.colored {
 	color: #67595D;
 }
 .devicon-backbonejs-plain.colored,
@@ -84,7 +89,8 @@
 .devicon-html5-plain.colored {
 	color: #e54d26;
 }
-.devicon-ie10-original.colored {
+.devicon-ie10-original.colored,
+.devicon-ie10-plain.colored {
 	color: #1EBBEE;
 }
 .devicon-illustrator-line.colored,
@@ -132,7 +138,9 @@
 .devicon-nodejs-plain-wordmark.colored {
 	color: #83CD29;
 }
-.devicon-oracle-original.colored {
+.devicon-oracle-original.colored,
+.devicon-oracle-plain.colored,
+.devicon-oracle-plain-wordmark.colored {
 	color: #EA1B22;
 }
 .devicon-photoshop-line.colored,
@@ -162,7 +170,9 @@
 .devicon-ubuntu-plain.colored {
 	color: #DD4814;
 }
-.devicon-sass-original.colored {
+.devicon-sass-original.colored,
+.devicon-sass-plain.colored,
+.devicon-sass-plain-wordmark.colored {
 	color: #cc6699;
 }
 .devicon-travis-plain-wordmark.colored,
@@ -178,7 +188,9 @@
 	color: #DD4814;
 }
 .devicon-windows8-original-wordmark.colored,
-.devicon-windows8-original.colored {
+.devicon-windows8-original.colored,
+.devicon-windows8-plain-wordmark.colored,
+.devicon-windows8-plain.colored {
 	color: #00ADEF;
 }
 .devicon-wordpress-plain-wordmark.colored,
