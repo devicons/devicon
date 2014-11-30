@@ -2,7 +2,7 @@
 
 devicon aims to gather all logos representing development languages and tools.
 
-See [devicon.fr](http://devicon.fr) (not up to date, coming really soon!)
+See all available icons on the [project page](http://konpa.github.io/devicon/).
 
 #### Icon requests
 
@@ -62,7 +62,7 @@ _2 ways of using devicon:_
   <i class="devicon-git-plain-wordmark colored"></i>
 ```
 
-##### See devicon.json file for complete and up to date reference of icon's available versions.
+##### See devicon.json file or [the project page](http://konpa.github.io/devicon/) for complete and up to date reference of icon's available versions.
 
 ## Contribute
 
