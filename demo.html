@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" charset="utf-8">
+  <link rel="stylesheet" href="devicon.css" charset="utf-8">
+  <link rel="stylesheet" href="devicon-colors.css" charset="utf-8">
+  <style media="screen">
+    body {
+      margin: 5rem;
+      text-align: center;
+      background: #d9d9d9;
+    }
+    .icon-version {
+      margin-bottom: 3rem;
+    }
+    i {
+      display: inline-block;
+      margin: 2rem;
+      font-size: 5rem;
+    }
+    img {
+      max-width: 5rem;
+    }
+  </style>
+</head>
+
+<body ng-app="app" ng-controller="IconsCtrl">
+
+  <div ng-repeat="icon in icons">
+    <div class="icon-version" ng-repeat="version in icon.versions.font">
+      <h4>{{icon.name}}-{{version}} (font icon)</h4>
+      <i class="devicon-{{icon.name}}-{{version}}"></i>
+      <i class="devicon-{{icon.name}}-{{version}} colored"></i>
+    </div>
+    <div class="icon-version" ng-repeat="version in icon.versions.svg">
+      <h4>{{icon.name}}-{{version}} (svg)</h4>
+      <img ng-src="icons/{{icon.name}}/{{icon.name}}-{{version}}.svg" alt="{{icon.name}}-{{version}}" />
+    </div>
+  </span>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js" charset="utf-8"></script>
+
+  <script charset="utf-8">
+    var app = angular.module("app", []);
+
+    app.controller('IconsCtrl', function($scope, $http) {
+      $http.get('https://rawgit.com/konpa/devicon/master/devicon.json').then(function(res){
+        $scope.icons = res.data;
+        console.log($scope.icons);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
