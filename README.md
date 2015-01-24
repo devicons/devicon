@@ -14,7 +14,7 @@ _2 ways of using devicon:_
 
 #### SVG icons
 
-- Copy/paste svg code from [devicon](http://devicon.fr) (coming soon) or from svg file
+- Copy/paste svg code (from the [svg folder](https://github.com/konpa/devicon/tree/master/icons) or the [project page](http://konpa.github.io/devicon/) using your dev tool)
 
 ```html
 <!--  for git plain version -->
