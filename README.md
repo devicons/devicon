@@ -62,7 +62,7 @@ _2 ways of using devicon:_
   <i class="devicon-git-plain-wordmark colored"></i>
 ```
 
-##### See devicon.json file or [the project page](http://konpa.github.io/devicon/) for complete and up to date reference of icon's available versions.
+##### See the [devicon.json file](https://github.com/konpa/devicon/blob/master/devicon.json) or [the project page](http://konpa.github.io/devicon/) for complete and up to date reference of icon's available versions.
 
 ## Contribute
 
