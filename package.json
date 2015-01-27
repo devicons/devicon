@@ -1,0 +1,30 @@
+{
+  "name": "devicon",
+  "version": "2.0.0",
+  "description": "Programming related icons collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konpa/devicon.git"
+  },
+  "keywords": [
+    "programming",
+    "icons",
+    "svg"
+  ],
+  "author": "konpa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konpa/devicon/issues"
+  },
+  "homepage": "https://github.com/konpa/devicon",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat-css": "^2.0.0",
+    "gulp-minify-css": "^0.4.3",
+    "gulp-plumber": "^0.6.6"
+  }
+}

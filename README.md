@@ -55,10 +55,10 @@ _2 ways of using devicon:_
   <!--  for git plain version with wordmark -->
   <i class="devicon-git-plain-wordmark"></i>
 
-  <!--  for git plain version colored with git main color (devicon-color.css required) -->
+  <!--  for git plain version colored with git main color (devicon-color.css or devicon.min.css required) -->
   <i class="devicon-git-plain colored"></i>
 
-  <!--  for git plain version with wordmark colored with git main color (devicon-color.css required) -->
+  <!--  for git plain version with wordmark colored with git main color (devicon-color.css or devicon.min.css required) -->
   <i class="devicon-git-plain-wordmark colored"></i>
 ```
 
