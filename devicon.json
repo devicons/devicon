@@ -88,6 +88,14 @@
     }
   },
   {
+    "name": "coffeescript",
+    "tags": ["javascript", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
+    }
+  },
+  {
     "name": "css3",
     "tags": ["language", "programming"],
     "versions": {
@@ -181,6 +189,14 @@
     "versions": {
       "svg": ["plain", "line"],
       "font": ["plain", "line"]
+    }
+  },
+  {
+    "name": "inkscape",
+    "tags": ["editor", "vector"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
@@ -320,6 +336,14 @@
     }
   },
   {
+    "name": "react",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
+    }
+  },
+  {
     "name": "ruby",
     "tags": ["programming", "language"],
     "versions": {
@@ -333,6 +357,14 @@
     "versions": {
       "svg": ["original"],
       "font": ["original"]
+    }
+  },
+  {
+    "name": "symfony",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
     }
   },
   {
@@ -357,6 +389,14 @@
     "versions": {
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "vim",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
     }
   },
   {

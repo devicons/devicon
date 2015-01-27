@@ -14,7 +14,7 @@
 .devicon-appcelerator-plain-wordmark.colored,
 .devicon-appcelerator-original.colored,
 .devicon-appcelerator-plain.colored {
-	color: #AC162C;
+	color: #ac162c;
 }
 .devicon-apple-original.colored,
 .devicon-apple-plain.colored {
@@ -47,6 +47,12 @@
 .devicon-codeigniter-plain-wordmark.colored,
 .devicon-codeigniter-plain.colored {
 	color: #ee4323;
+}
+.devicon-coffeescript-original-wordmark.colored,
+.devicon-coffeescript-original.colored,
+.devicon-coffeescript-plain-wordmark.colored,
+.devicon-coffeescript-plain.colored {
+	color: #28334c;
 }
 .devicon-css3-plain-wordmark.colored,
 .devicon-css3-plain.colored {
@@ -96,6 +102,10 @@
 .devicon-illustrator-line.colored,
 .devicon-illustrator-plain.colored {
 	color: #faa625;
+}
+.devicon-inkscape-plain-wordmark.colored,
+.devicon-inkscape-plain.colored {
+	color: #000000;
 }
 .devicon-java-plain-wordmark.colored,
 .devicon-java-plain.colored {
@@ -166,6 +176,12 @@
 .devicon-ruby-plain.colored {
 	color: #d91404;
 }
+.devicon-react-plain-wordmark.colored,
+.devicon-react-plain.colored,
+.devicon-react-original-wordmark.colored,
+.devicon-react-original.colored {
+	color: #61dafb;
+}
 .devicon-ubuntu-plain-wordmark.colored,
 .devicon-ubuntu-plain.colored {
 	color: #DD4814;
@@ -175,23 +191,32 @@
 .devicon-sass-plain-wordmark.colored {
 	color: #cc6699;
 }
+.devicon-symfony-original.colored,
+.devicon-symfony-original-wordmark.colored,
+.devicon-symfony-plain.colored,
+.devicon-symfony-plain-wordmark.colored {
+	color: #1A171B;
+}
 .devicon-travis-plain-wordmark.colored,
 .devicon-travis-plain.colored {
-	color: #BB2031;
+	color: #bb2031;
 }
 .devicon-trello-plain-wordmark.colored,
 .devicon-trello-plain.colored {
-	color: #23719F;
+	color: #23719f;
 }
 .devicon-ubuntu-plain-wordmark.colored,
 .devicon-ubuntu-plain.colored {
-	color: #DD4814;
+	color: #dd4814;
+}
+.devicon-vim-plain.colored {
+	color: #179a33;
 }
 .devicon-windows8-original-wordmark.colored,
 .devicon-windows8-original.colored,
 .devicon-windows8-plain-wordmark.colored,
 .devicon-windows8-plain.colored {
-	color: #00ADEF;
+	color: #00adef;
 }
 .devicon-wordpress-plain-wordmark.colored,
 .devicon-wordpress-plain.colored {

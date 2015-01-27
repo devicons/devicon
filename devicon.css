@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'devicon';
-	src:url('fonts/devicon.eot?hju4k8');
-	src:url('fonts/devicon.eot?#iefixhju4k8') format('embedded-opentype'),
-	url('fonts/devicon.woff?hju4k8') format('woff'),
-	url('fonts/devicon.ttf?hju4k8') format('truetype'),
-	url('fonts/devicon.svg?hju4k8#devicon') format('svg');
+	src:url('fonts/devicon.eot?-hdf3wh');
+	src:url('fonts/devicon.eot?#iefix-hdf3wh') format('embedded-opentype'),
+		url('fonts/devicon.woff?-hdf3wh') format('woff'),
+		url('fonts/devicon.ttf?-hdf3wh') format('truetype'),
+		url('fonts/devicon.svg?-hdf3wh#devicon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,318 +23,426 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.devicon-windows8-original-wordmark:before {
-	content: "\e600";
-}
-.devicon-windows8-original:before {
-	content: "\e601";
-}
-.devicon-windows8-plain-wordmark:before {
-	content: "\e600";
-}
-.devicon-windows8-plain:before {
-	content: "\e601";
-}
-.devicon-sass-original:before {
-	content: "\e602";
-}
-.devicon-sass-plain:before {
-	content: "\e602";
-}
-.devicon-sass-plain-wordmark:before {
-	content: "\e602";
-}
-.devicon-oracle-original:before {
-	content: "\e603";
-}
-.devicon-oracle-plain:before {
-	content: "\e603";
-}
-.devicon-oracle-plain-wordmark:before {
-	content: "\e603";
-}
-.devicon-ie10-original:before {
-	content: "\e604";
-}
-.devicon-ie10-plain:before {
-	content: "\e604";
-}
-.devicon-atom-original-wordmark:before {
-	content: "\e605";
-}
-.devicon-atom-original:before {
-	content: "\e606";
-}
-.devicon-atom-plain-wordmark:before {
-	content: "\e605";
-}
-.devicon-atom-plain:before {
-	content: "\e606";
-}
-.devicon-apple-original:before {
-	content: "\e607";
-}
-.devicon-apple-plain:before {
-	content: "\e607";
-}
-.devicon-appcelerator-original:before {
-	content: "\e608";
-}
-.devicon-appcelerator-plain:before {
-	content: "\e608";
-}
-.devicon-amazonwebservices-original:before {
-	content: "\e609";
-}
+.devicon-amazonwebservices-original:before,
 .devicon-amazonwebservices-plain:before {
-	content: "\e609";
+	content: "\e603";
 }
+
 .devicon-amazonwebservices-plain-wordmark:before {
-	content: "\e60a";
+	content: "\e604";
 }
+
 .devicon-android-plain-wordmark:before {
-	content: "\e60b";
-}
-.devicon-android-plain:before {
-	content: "\e60c";
-}
-.devicon-angularjs-plain-wordmark:before {
 	content: "\e60d";
 }
-.devicon-angularjs-plain:before {
+
+.devicon-android-plain:before {
 	content: "\e60e";
 }
-.devicon-appcelerator-plain-wordmark:before {
-	content: "\e60f";
-}
-.devicon-backbonejs-plain-wordmark:before {
-	content: "\e610";
-}
-.devicon-backbonejs-plain:before {
-	content: "\e611";
-}
-.devicon-bootstrap-plain-wordmark:before {
-	content: "\e612";
-}
-.devicon-bootstrap-plain:before {
-	content: "\e613";
-}
-.devicon-bower-line-wordmark:before {
-	content: "\e614";
-}
-.devicon-bower-line:before {
-	content: "\e615";
-}
-.devicon-bower-plain-wordmark:before {
-	content: "\e616";
-}
-.devicon-bower-plain:before {
-	content: "\e617";
-}
-.devicon-chrome-plain-wordmark:before {
-	content: "\e618";
-}
-.devicon-chrome-plain:before {
-	content: "\e619";
-}
-.devicon-codeigniter-plain-wordmark:before {
-	content: "\e61a";
-}
-.devicon-codeigniter-plain:before {
-	content: "\e61b";
-}
-.devicon-css3-plain-wordmark:before {
+
+.devicon-angularjs-plain-wordmark:before {
 	content: "\e61c";
 }
-.devicon-css3-plain:before {
+
+.devicon-angularjs-plain:before {
 	content: "\e61d";
 }
-.devicon-debian-plain-wordmark:before {
-	content: "\e61e";
-}
-.devicon-debian-plain:before {
-	content: "\e61f";
-}
-.devicon-dot-net-plain-wordmark:before {
+
+.devicon-appcelerator-original:before,
+.devicon-appcelerator-plain:before {
 	content: "\e620";
 }
-.devicon-dot-net-plain:before {
+
+.devicon-appcelerator-plain-wordmark:before {
 	content: "\e621";
 }
-.devicon-drupal-plain-wordmark:before {
+
+.devicon-apple-original:before,
+.devicon-apple-plain:before {
 	content: "\e622";
 }
-.devicon-drupal-plain:before {
+
+.devicon-atom-original-wordmark:before,
+.devicon-atom-plain-wordmark:before {
 	content: "\e623";
 }
-.devicon-firefox-plain-wordmark:before {
+
+.devicon-atom-original:before,
+.devicon-atom-plain:before {
 	content: "\e624";
 }
-.devicon-firefox-plain:before {
-	content: "\e625";
-}
-.devicon-foundation-plain-wordmark:before {
-	content: "\e626";
-}
-.devicon-foundation-plain:before {
-	content: "\e627";
-}
-.devicon-git-plain-wordmark:before {
-	content: "\e628";
-}
-.devicon-git-plain:before {
-	content: "\e629";
-}
-.devicon-grunt-line-wordmark:before {
-	content: "\e62a";
-}
-.devicon-grunt-line:before {
-	content: "\e62b";
-}
-.devicon-grunt-plain-wordmark:before {
+
+.devicon-backbonejs-plain-wordmark:before {
 	content: "\e62c";
 }
-.devicon-grunt-plain:before {
+
+.devicon-backbonejs-plain:before {
 	content: "\e62d";
 }
-.devicon-gulp-plain:before {
+
+.devicon-bootstrap-plain-wordmark:before {
 	content: "\e62e";
 }
-.devicon-html5-plain-wordmark:before {
+
+.devicon-bootstrap-plain:before {
 	content: "\e62f";
 }
-.devicon-html5-plain:before {
+
+.devicon-bower-line-wordmark:before {
 	content: "\e630";
 }
-.devicon-illustrator-line:before {
+
+.devicon-bower-line:before {
 	content: "\e631";
 }
-.devicon-illustrator-plain:before {
-	content: "\e632";
-}
-.devicon-java-plain-wordmark:before {
-	content: "\e633";
-}
-.devicon-java-plain:before {
-	content: "\e634";
-}
-.devicon-javascript-plain:before {
-	content: "\e635";
-}
-.devicon-jquery-plain-wordmark:before {
-	content: "\e636";
-}
-.devicon-jquery-plain:before {
-	content: "\e637";
-}
-.devicon-krakenjs-plain-wordmark:before {
-	content: "\e638";
-}
-.devicon-krakenjs-plain:before {
-	content: "\e639";
-}
-.devicon-laravel-plain-wordmark:before {
-	content: "\e63a";
-}
-.devicon-laravel-plain:before {
-	content: "\e63b";
-}
-.devicon-less-plain-wordmark:before {
-	content: "\e63c";
-}
-.devicon-linux-plain:before {
-	content: "\e63d";
-}
-.devicon-mongodb-plain-wordmark:before {
-	content: "\e63e";
-}
-.devicon-mongodb-plain:before {
-	content: "\e63f";
-}
-.devicon-moodle-plain-wordmark:before {
-	content: "\e640";
-}
-.devicon-moodle-plain:before {
-	content: "\e641";
-}
-.devicon-mysql-plain-wordmark:before {
-	content: "\e642";
-}
-.devicon-mysql-plain:before {
-	content: "\e643";
-}
-.devicon-nodejs-plain-wordmark:before {
-	content: "\e644";
-}
-.devicon-nodejs-plain:before {
-	content: "\e645";
-}
-.devicon-photoshop-line:before {
-	content: "\e646";
-}
-.devicon-photoshop-plain:before {
-	content: "\e647";
-}
-.devicon-php-plain:before {
-	content: "\e648";
-}
-.devicon-postgresql-plain-wordmark:before {
-	content: "\e649";
-}
-.devicon-postgresql-plain:before {
-	content: "\e64a";
-}
-.devicon-python-plain-wordmark:before {
-	content: "\e64b";
-}
-.devicon-python-plain:before {
-	content: "\e64c";
-}
-.devicon-rails-plain-wordmark:before {
-	content: "\e64d";
-}
-.devicon-rails-plain:before {
+
+.devicon-bower-plain-wordmark:before {
 	content: "\e64e";
 }
-.devicon-ruby-plain-wordmark:before {
+
+.devicon-bower-plain:before {
 	content: "\e64f";
 }
+
+.devicon-chrome-plain-wordmark:before {
+	content: "\e665";
+}
+
+.devicon-chrome-plain:before {
+	content: "\e666";
+}
+
+.devicon-codeigniter-plain-wordmark:before {
+	content: "\e667";
+}
+
+.devicon-codeigniter-plain:before {
+	content: "\e668";
+}
+
+.devicon-coffeescript-original-wordmark:before,
+.devicon-coffeescript-plain-wordmark:before {
+	content: "\e669";
+}
+
+.devicon-coffeescript-original:before,
+.devicon-coffeescript-plain:before {
+	content: "\e66a";
+}
+
+.devicon-css3-plain-wordmark:before {
+	content: "\e678";
+}
+
+.devicon-css3-plain:before {
+	content: "\e679";
+}
+
+.devicon-debian-plain-wordmark:before {
+	content: "\e67e";
+}
+
+.devicon-debian-plain:before {
+	content: "\e67f";
+}
+
+.devicon-dot-net-plain-wordmark:before {
+	content: "\e6d3";
+}
+
+.devicon-dot-net-plain:before {
+	content: "\e6d4";
+}
+
+.devicon-drupal-plain-wordmark:before {
+	content: "\e6e2";
+}
+
+.devicon-drupal-plain:before {
+	content: "\e6e3";
+}
+
+.devicon-firefox-plain-wordmark:before {
+	content: "\e75d";
+}
+
+.devicon-firefox-plain:before {
+	content: "\e75e";
+}
+
+.devicon-foundation-plain-wordmark:before {
+	content: "\e7a2";
+}
+
+.devicon-foundation-plain:before {
+	content: "\e7a3";
+}
+
+.devicon-git-plain-wordmark:before {
+	content: "\e7a7";
+}
+
+.devicon-git-plain:before {
+	content: "\e7a8";
+}
+
+.devicon-grunt-line-wordmark:before {
+	content: "\e7a9";
+}
+
+.devicon-grunt-line:before {
+	content: "\e7aa";
+}
+
+.devicon-grunt-plain-wordmark:before {
+	content: "\e7ea";
+}
+
+.devicon-grunt-plain:before {
+	content: "\e7eb";
+}
+
+.devicon-gulp-plain:before {
+	content: "\e7ec";
+}
+
+.devicon-html5-plain-wordmark:before {
+	content: "\e7f6";
+}
+
+.devicon-html5-plain:before {
+	content: "\e7f7";
+}
+
+.devicon-ie10-original:before,
+.devicon-ie10-plain:before {
+	content: "\e7f8";
+}
+
+.devicon-illustrator-line:before {
+	content: "\e7f9";
+}
+
+.devicon-illustrator-plain:before {
+	content: "\e7fa";
+}
+
+.devicon-inkscape-plain-wordmark:before {
+	content: "\e834";
+}
+
+.devicon-inkscape-plain:before {
+	content: "\e835";
+}
+
+.devicon-java-plain-wordmark:before {
+	content: "\e841";
+}
+
+.devicon-java-plain:before {
+	content: "\e842";
+}
+
+.devicon-javascript-plain:before {
+	content: "\e845";
+}
+
+.devicon-jquery-plain-wordmark:before {
+	content: "\e849";
+}
+
+.devicon-jquery-plain:before {
+	content: "\e84a";
+}
+
+.devicon-krakenjs-plain-wordmark:before {
+	content: "\e84f";
+}
+
+.devicon-krakenjs-plain:before {
+	content: "\e850";
+}
+
+.devicon-laravel-plain-wordmark:before {
+	content: "\e851";
+}
+
+.devicon-laravel-plain:before {
+	content: "\e852";
+}
+
+.devicon-less-plain-wordmark:before {
+	content: "\e853";
+}
+
+.devicon-linux-plain:before {
+	content: "\eb1c";
+}
+
+.devicon-mongodb-plain-wordmark:before {
+	content: "\eb43";
+}
+
+.devicon-mongodb-plain:before {
+	content: "\eb44";
+}
+
+.devicon-moodle-plain-wordmark:before {
+	content: "\eb5a";
+}
+
+.devicon-moodle-plain:before {
+	content: "\eb5b";
+}
+
+.devicon-mysql-plain-wordmark:before {
+	content: "\eb60";
+}
+
+.devicon-mysql-plain:before {
+	content: "\eb61";
+}
+
+.devicon-nodejs-plain-wordmark:before {
+	content: "\eb69";
+}
+
+.devicon-nodejs-plain:before {
+	content: "\eb6a";
+}
+
+.devicon-oracle-original:before,
+.devicon-oracle-plain:before {
+	content: "\eb6b";
+}
+
+.devicon-photoshop-line:before {
+	content: "\eb6c";
+}
+
+.devicon-photoshop-plain:before {
+	content: "\eb6d";
+}
+
+.devicon-php-plain:before {
+	content: "\eb71";
+}
+
+.devicon-postgresql-plain-wordmark:before {
+	content: "\eb7c";
+}
+
+.devicon-postgresql-plain:before {
+	content: "\eb7d";
+}
+
+.devicon-python-plain-wordmark:before {
+	content: "\eb88";
+}
+
+.devicon-python-plain:before {
+	content: "\eb89";
+}
+
+.devicon-rails-plain-wordmark:before {
+	content: "\eba2";
+}
+
+.devicon-rails-plain:before {
+	content: "\eba3";
+}
+
+.devicon-react-original-wordmark:before,
+.devicon-react-plain-wordmark:before {
+	content: "\e600";
+}
+
+.devicon-react-original:before,
+.devicon-react-plain:before {
+	content: "\e601";
+}
+
+.devicon-ruby-plain-wordmark:before {
+	content: "\ebc9";
+}
+
 .devicon-ruby-plain:before {
-	content: "\e650";
+	content: "\ebca";
 }
+
+.devicon-sass-original:before,
+.devicon-sass-plain:before {
+	content: "\ebcb";
+}
+
+.devicon-symfony-original-wordmark:before,
+.devicon-symfony-plain-wordmark:before {
+	content: "\e602";
+}
+
+.devicon-symfony-original:before,
+.devicon-symfony-plain:before {
+	content: "\e605";
+}
+
 .devicon-travis-plain-wordmark:before {
-	content: "\e651";
+	content: "\ebcc";
 }
+
 .devicon-travis-plain:before {
-	content: "\e652";
+	content: "\ebcd";
 }
+
 .devicon-trello-plain-wordmark:before {
-	content: "\e653";
+	content: "\ebce";
 }
+
 .devicon-trello-plain:before {
-	content: "\e654";
+	content: "\ebcf";
 }
+
 .devicon-ubuntu-plain-wordmark:before {
-	content: "\e655";
+	content: "\ebd0";
 }
+
 .devicon-ubuntu-plain:before {
-	content: "\e656";
+	content: "\ebd1";
 }
+
+.devicon-vim-plain:before {
+	content: "\ebf3";
+}
+
+.devicon-windows8-original-wordmark:before,
+.devicon-windows8-plain-wordmark:before {
+	content: "\ebf4";
+}
+
+.devicon-windows8-original:before,
+.devicon-windows8-plain:before {
+	content: "\ebf5";
+}
+
 .devicon-wordpress-plain-wordmark:before {
-	content: "\e657";
+	content: "\ebfd";
 }
+
 .devicon-wordpress-plain:before {
-	content: "\e658";
+	content: "\ebfe";
 }
+
 .devicon-yii-plain-wordmark:before {
-	content: "\e659";
+	content: "\ec01";
 }
+
 .devicon-yii-plain:before {
-	content: "\e65a";
+	content: "\ec02";
 }
+
 .devicon-zend-plain-wordmark:before {
-	content: "\e65b";
+	content: "\ec03";
 }
+
 .devicon-zend-plain:before {
-	content: "\e65c";
+	content: "\ec04";
 }
