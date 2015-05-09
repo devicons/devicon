@@ -3,7 +3,7 @@
 [http://devicon.fr/](http://devicon.fr/)
 
 Devicon aims to gather all logos representing development languages and tools.
-Each icon comes in several versions like original/plain/line, colored/not colored, wordmark/no wordmark.
+Each icon comes in several versions: original/plain/line, colored/not colored, wordmark/no wordmark.
 
 See all available icons on the [new website](http://devicon.fr/).
 
