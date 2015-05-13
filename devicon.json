@@ -24,6 +24,14 @@
     }
   },
   {
+    "name": "apache",
+    "tags": ["php"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
+  },
+  {
     "name": "appcelerator",
     "tags": ["app", "mobile"],
     "versions": {
@@ -120,6 +128,14 @@
     }
   },
   {
+    "name": "doctrine",
+    "tags": [],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
+  },
+  {
     "name": "dot-net",
     "tags": ["framework"],
     "versions": {
@@ -130,6 +146,14 @@
   {
     "name": "drupal",
     "tags": ["cms"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "erlang",
+    "tags": [],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
@@ -312,11 +336,27 @@
     }
   },
   {
+    "name": "nginx",
+    "tags": ["server"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original", "original-wordmark", "plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "nodejs",
     "tags": ["javascript", "language"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "nodewebkit",
+    "tags": [],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
   {

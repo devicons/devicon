@@ -11,6 +11,12 @@
 .devicon-angularjs-plain.colored {
 	color: #c4473a;
 }
+.devicon-apache-line-wordmark.colored,
+.devicon-apache-line.colored
+.devicon-apache-plain-wordmark.colored,
+.devicon-apache-plain.colored {
+	color: #303284;
+}
 .devicon-appcelerator-plain-wordmark.colored,
 .devicon-appcelerator-original.colored,
 .devicon-appcelerator-plain.colored {
@@ -66,6 +72,12 @@
 .devicon-docker-plain.colored {
 	color: #019bc6;
 }
+.devicon-doctrine-line-wordmark.colored,
+.devicon-doctrine-line.colored
+.devicon-doctrine-plain-wordmark.colored,
+.devicon-doctrine-plain.colored {
+	color: #f56d39;
+}
 .devicon-dot-net-plain-wordmark.colored,
 .devicon-dot-net-plain.colored {
 	color: #1384c8;
@@ -73,6 +85,10 @@
 .devicon-drupal-plain-wordmark.colored,
 .devicon-drupal-plain.colored {
 	color: #0073BA;
+}
+.devicon-erlang-plain-wordmark.colored,
+.devicon-erlang-plain.colored {
+	color: #a90533;
 }
 .devicon-firefox-plain-wordmark.colored,
 .devicon-firefox-plain.colored {
@@ -164,9 +180,21 @@
 .devicon-mysql-plain-wordmark.colored {
 	color: #00618a;
 }
+.devicon-nginx-original.colored,
+.devicon-nginx-original-wordmark.colored,
+.devicon-nginx-plain.colored,
+.devicon-nginx-plain-wordmark.colored {
+	color: #090;
+}
 .devicon-nodejs-plain.colored,
 .devicon-nodejs-plain-wordmark.colored {
 	color: #83CD29;
+}
+.devicon-nodewebkit-line.colored,
+.devicon-nodewebkit-line-wordmark.colored,
+.devicon-nodewebkit-plain.colored,
+.devicon-nodewebkit-plain-wordmark.colored {
+	color: #3d3b47;
 }
 .devicon-oracle-original.colored,
 .devicon-oracle-plain.colored,

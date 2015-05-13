@@ -23,6 +23,69 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-nodewebkit-line-wordmark:before {
+	content: "\e611";
+}
+
+.devicon-nodewebkit-line:before {
+	content: "\e612";
+}
+
+.devicon-nodewebkit-plain-wordmark:before {
+	content: "\e613";
+}
+
+.devicon-nodewebkit-plain:before {
+	content: "\e614";
+}
+
+.devicon-nginx-original:before,
+.devicon-nginx-original-wordmark:before,
+.devicon-nginx-plain:before,
+.devicon-nginx-plain-wordmark:before {
+	content: "\e615";
+}
+
+.devicon-erlang-plain-wordmark:before {
+	content: "\e616";
+}
+
+.devicon-erlang-plain:before {
+	content: "\e617";
+}
+
+.devicon-doctrine-line-wordmark:before {
+	content: "\e618";
+}
+
+.devicon-doctrine-line:before {
+	content: "\e619";
+}
+
+.devicon-doctrine-plain-wordmark:before {
+	content: "\e61a";
+}
+
+.devicon-doctrine-plain:before {
+	content: "\e625";
+}
+
+.devicon-apache-line-wordmark:before {
+	content: "\e626";
+}
+
+.devicon-apache-line:before {
+	content: "\e627";
+}
+
+.devicon-apache-plain-wordmark:before {
+	content: "\e628";
+}
+
+.devicon-apache-plain:before {
+	content: "\e629";
+}
+
 .devicon-go-line:before {
 	content: "\e610";
 }
