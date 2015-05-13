@@ -16,7 +16,3 @@ gulp.task('minify-css', function() {
   .pipe(minifyCSS())
   .pipe(gulp.dest('./'))
 });
-
-gulp.task('default', function() {
-  //
-});

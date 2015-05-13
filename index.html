@@ -17,10 +17,19 @@
     body {
       margin: 5rem;
       text-align: center;
-      background: #d9d9d9;
+      background: rgb(245, 245, 245);
+    }
+    .borders {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border: 8px solid #60be86;
+      z-index: -1;
     }
     .icon-version {
-      margin-bottom: 3rem;
+      margin: 4rem 0;
     }
     i {
       display: inline-block;
@@ -30,30 +39,35 @@
     img {
       max-width: 5rem;
     }
+    h4 {
+      margin: 0;
+      color: #60be86;
+    }
   </style>
 
 </head>
 
 <body ng-app="app" ng-controller="IconsCtrl">
 
+  <div class="borders"></div>
+
   <!--[if lt IE 7]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <label for="search">Search</label>
-  <input type="text" id="search" ng-model="search.name">
+  <input type="text" id="search" placeholder="Search for icons" ng-model="search.name">
 
   <div ng-repeat="icon in icons | filter:search">
 
     <div class="icon-version" ng-repeat="version in icon.versions.font">
-      <h4>{{icon.name}}-{{version}} (font icon)</h4>
       <i class="devicon-{{icon.name}}-{{version}}"></i>
       <i class="devicon-{{icon.name}}-{{version}} colored"></i>
+      <h4>{{icon.name}}-{{version}} (font icon)</h4>
     </div>
 
     <div class="icon-version" ng-repeat="version in icon.versions.svg">
-      <h4>{{icon.name}}-{{version}} (svg)</h4>
       <img ng-src="icons/{{icon.name}}/{{icon.name}}-{{version}}.svg" alt="{{icon.name}}-{{version}}" />
+      <h4>{{icon.name}}-{{version}} (svg)</h4>
     </div>
 
   </div>

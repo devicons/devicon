@@ -23,6 +23,56 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-go-line:before {
+	content: "\e610";
+}
+
+.devicon-redis-plain-wordmark:before {
+	content: "\e606";
+}
+
+.devicon-redis-plain:before {
+	content: "\e607";
+}
+
+.devicon-meteor-plain-wordmark:before {
+	content: "\e608";
+}
+
+.devicon-meteor-plain:before {
+	content: "\e609";
+}
+
+.devicon-heroku-line-wordmark:before,
+.devicon-heroku-original-wordmark:before {
+	content: "\e60a";
+}
+
+.devicon-heroku-line:before,
+.devicon-heroku-original:before {
+	content: "\e60b";
+}
+
+.devicon-heroku-plain-wordmark:before {
+	content: "\e60c";
+}
+
+.devicon-heroku-plain:before {
+	content: "\e60f";
+}
+
+.devicon-go-plain:before {
+	content: "\e61b";
+}
+
+.devicon-docker-plain-wordmark:before {
+	content: "\e61e";
+}
+
+.devicon-docker-plain:before {
+	content: "\e61f";
+}
+
 .devicon-amazonwebservices-original:before,
 .devicon-amazonwebservices-plain:before {
 	content: "\e603";

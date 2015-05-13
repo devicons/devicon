@@ -112,6 +112,14 @@
     }
   },
   {
+    "name": "docker",
+    "tags": ["platform", "deploy"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "dot-net",
     "tags": ["framework"],
     "versions": {
@@ -152,6 +160,14 @@
     }
   },
   {
+    "name": "go",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "plain", "line"],
+      "font": ["plain", "line"]
+    }
+  },
+  {
     "name": "grunt",
     "tags": ["task-runner", "nodejs"],
     "versions": {
@@ -165,6 +181,14 @@
     "versions": {
       "svg": ["plain"],
       "font": ["plain"]
+    }
+  },
+  {
+    "name": "heroku",
+    "tags": ["cloud"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
   {
@@ -256,6 +280,14 @@
     }
   },
   {
+    "name": "meteor",
+    "tags": ["javascript"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "mongodb",
     "tags": ["database"],
     "versions": {
@@ -341,6 +373,14 @@
     "versions": {
       "svg": ["original", "original-wordmark"],
       "font": ["original", "original-wordmark"]
+    }
+  },
+  {
+    "name": "redis",
+    "tags": ["server"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
