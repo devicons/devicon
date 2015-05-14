@@ -46,6 +46,18 @@
 .devicon-bower-plain.colored {
 	color: #ef5734;
 }
+.devicon-c-line-wordmark.colored,
+.devicon-c-line.colored,
+.devicon-c-plain-wordmark.colored,
+.devicon-c-plain.colored {
+	color: #03599c;
+}
+.devicon-c-line-wordmark.colored,
+.devicon-c-line.colored,
+.devicon-c-plain-wordmark.colored,
+.devicon-c-plain.colored {
+	color: #03599c;
+}
 .devicon-chrome-plain-wordmark.colored,
 .devicon-chrome-plain.colored {
 	color: #ce4e4e;
@@ -59,6 +71,18 @@
 .devicon-coffeescript-plain-wordmark.colored,
 .devicon-coffeescript-plain.colored {
 	color: #28334c;
+}
+.devicon-cplusplus-line-wordmark.colored,
+.devicon-cplusplus-line.colored,
+.devicon-cplusplus-plain-wordmark.colored,
+.devicon-cplusplus-plain.colored {
+	color: #9c033a;
+}
+.devicon-csharp-line-wordmark.colored,
+.devicon-csharp-line.colored,
+.devicon-csharp-plain-wordmark.colored,
+.devicon-csharp-plain.colored {
+	color: #68217a;
 }
 .devicon-css3-plain-wordmark.colored,
 .devicon-css3-plain.colored {
@@ -97,6 +121,10 @@
 .devicon-foundation-plain-wordmark.colored,
 .devicon-foundation-plain.colored {
 	color: #008cba;
+}
+.devicon-gimp-plain-wordmark.colored,
+.devicon-gimp-plain.colored {
+	color: #716955;
 }
 .devicon-git-plain-wordmark.colored,
 .devicon-git-plain.colored {
@@ -229,6 +257,12 @@
 .devicon-react-original-wordmark.colored,
 .devicon-react-original.colored {
 	color: #61dafb;
+}
+.devicon-redhat-plain-wordmark.colored,
+.devicon-redhat-plain.colored,
+.devicon-redhat-original-wordmark.colored,
+.devicon-redhat-original.colored {
+	color: #e93442;
 }
 .devicon-redis-plain-wordmark.colored,
 .devicon-redis-plain.colored{

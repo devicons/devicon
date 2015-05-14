@@ -80,6 +80,14 @@
     }
   },
   {
+    "name": "c",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "plain", "line"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
+  },
+  {
     "name": "chrome",
     "tags": ["browser"],
     "versions": {
@@ -101,6 +109,22 @@
     "versions": {
       "svg": ["original", "original-wordmark"],
       "font": ["original", "original-wordmark"]
+    }
+  },
+  {
+    "name": "cplusplus",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "plain", "line"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
+  },
+  {
+    "name": "csharp",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "plain", "line"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
   {
@@ -173,6 +197,14 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "gimp",
+    "tags": ["graphic"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain"]
     }
   },
   {
@@ -413,6 +445,14 @@
     "versions": {
       "svg": ["original", "original-wordmark"],
       "font": ["original", "original-wordmark"]
+    }
+  },
+  {
+    "name": "redhat",
+    "tags": ["server", "linux"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {

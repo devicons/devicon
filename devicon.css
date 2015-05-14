@@ -23,6 +23,48 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-gimp-plain:before {
+	content: "\e633";
+}
+
+.devicon-redhat-plain-wordmark:before {
+	content: "\e62a";
+}
+
+.devicon-redhat-plain:before {
+	content: "\e62b";
+}
+
+.devicon-cplusplus-line:before,
+.devicon-cplusplus-line-wordmark:before {
+	content: "\e634";
+}
+
+.devicon-cplusplus-plain:before,
+.devicon-cplusplus-plain-wordmark:before {
+	content: "\e635";
+}
+
+.devicon-csharp-line:before,
+.devicon-csharp-line-wordmark:before {
+	content: "\e636";
+}
+
+.devicon-csharp-plain:before,
+.devicon-csharp-plain-wordmark:before {
+	content: "\e637";
+}
+
+.devicon-c-line:before,
+.devicon-c-line-wordmark:before {
+	content: "\e638";
+}
+
+.devicon-c-plain:before,
+.devicon-c-plain-wordmark:before {
+	content: "\e639";
+}
+
 .devicon-nodewebkit-line-wordmark:before {
 	content: "\e611";
 }
