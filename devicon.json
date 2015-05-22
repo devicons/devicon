@@ -144,6 +144,14 @@
     }
   },
   {
+    "name": "django",
+    "tags": [],
+    "versions": {
+      "svg": ["original", "plain", "line"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
+  },
+  {
     "name": "docker",
     "tags": ["platform", "deploy"],
     "versions": {
@@ -293,6 +301,14 @@
     "versions": {
       "svg": ["original", "plain"],
       "font": ["plain"]
+    }
+  },
+  {
+    "name": "jetbrains",
+    "tags": [],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
   {
@@ -469,6 +485,14 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "safari",
+    "tags": ["browser"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line-wordmark", "line"],
+      "font": ["plain", "plain-wordmark", "line-wordmark", "line"]
     }
   },
   {

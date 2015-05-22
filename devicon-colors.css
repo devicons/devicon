@@ -92,6 +92,12 @@
 .devicon-debian-plain.colored {
 	color: #A80030;
 }
+.devicon-django-line.colored,
+.devicon-django-line-wordmark.colored,
+.devicon-django-plain.colored,
+.devicon-django-plain-wordmark.colored {
+	color: #003A2B;
+}
 .devicon-docker-plain-wordmark.colored,
 .devicon-docker-plain.colored {
 	color: #019bc6;
@@ -174,6 +180,12 @@
 .devicon-javascript-plain.colored {
 	color: #f0db4f;
 }
+.devicon-jetbrains-plain.colored,
+.devicon-jetbrains-line.colored,
+.devicon-jetbrains-line-wordmark.colored,
+.devicon-jetbrains-plain-wordmark.colored {
+	color: #F68B1F;
+}
 .devicon-jquery-plain-wordmark.colored,
 .devicon-jquery-plain.colored {
 	color: #0769ad;
@@ -251,6 +263,12 @@
 .devicon-ruby-plain-wordmark.colored,
 .devicon-ruby-plain.colored {
 	color: #d91404;
+}
+.devicon-safari-line-wordmark.colored,
+.devicon-safari-line.colored,
+.devicon-safari-plain-wordmark.colored,
+.devicon-safari-plain.colored {
+	color: #1B88CA;
 }
 .devicon-react-plain-wordmark.colored,
 .devicon-react-plain.colored,

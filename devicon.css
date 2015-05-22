@@ -23,6 +23,33 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-safari-line-wordmark:before {
+	content: "\e632";
+}
+.devicon-safari-line:before {
+	content: "\e63a";
+}
+.devicon-safari-plain-wordmark:before {
+	content: "\e63b";
+}
+.devicon-safari-plain:before {
+	content: "\e63c";
+}
+.devicon-jetbrains-plain:before,
+.devicon-jetbrains-line:before,
+.devicon-jetbrains-line-wordmark:before,
+.devicon-jetbrains-plain-wordmark:before {
+	content: "\e63d";
+}
+.devicon-django-line:before,
+.devicon-django-line-wordmark:before {
+	content: "\e63e";
+}
+.devicon-django-plain:before,
+.devicon-django-plain-wordmark:before {
+	content: "\e63f";
+}
+
 .devicon-gimp-plain:before {
 	content: "\e633";
 }
