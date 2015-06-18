@@ -69,12 +69,16 @@ _2 ways of using devicon:_
   <i class="devicon-git-plain-wordmark colored"></i>
 ```
 
-##### NPM package
+##### NPM and Bower packages
 
-You can install devicon as a dependency to your project
+You can install devicon as a dependency to your project either with NPM or Bower
 
 ```
+  // NPM
   npm install --save devicon
+  
+  // Bower
+  bower install --save devicon
 ```
 
 <sub>Final font is build with [Icomoon app](https://icomoon.io/)</sub>

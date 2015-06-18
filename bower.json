@@ -2,6 +2,10 @@
   "name": "devicon",
   "version": "2.0.0",
   "main": "devicon.min.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
   "homepage": "http://devicon.fr/",
   "repository": {
     "type": "git",
