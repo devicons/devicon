@@ -2,7 +2,7 @@
   "name": "devicon",
   "version": "2.0.0",
   "description": "Programming related icons collection",
-  "main": "index.js",
+  "main": "devicon.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/konpa/devicon/issues"
   },
-  "homepage": "https://github.com/konpa/devicon",
+  "homepage": "http://devicon.fr/",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-concat-css": "^2.0.0",
