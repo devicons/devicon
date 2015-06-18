@@ -69,6 +69,14 @@ _2 ways of using devicon:_
   <i class="devicon-git-plain-wordmark colored"></i>
 ```
 
+##### NPM package
+
+You can install devicon as a dependency to your project
+
+```
+  npm install --save devicon
+```
+
 <sub>Final font is build with [Icomoon app](https://icomoon.io/)</sub>
 
 ##### See the [devicon.json file](https://github.com/konpa/devicon/blob/master/devicon.json) or [devicon.fr](http://devicon.fr/) for complete and up to date reference of icon's available versions.
