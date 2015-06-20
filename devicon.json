@@ -184,6 +184,14 @@
     }
   },
   {
+    "name": "eclipse",
+    "tags": ["IDE", "java"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
     "name": "erlang",
     "tags": [],
     "versions": {
@@ -333,6 +341,14 @@
     "versions": {
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+   {
+    "name": "latex",
+    "tags": ["text", "editor"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
     }
   },
   {
@@ -567,6 +583,7 @@
       "font": ["plain", "plain-wordmark"]
     }
   },
+ 
   {
     "name": "zend",
     "tags": ["php", "framework"],
