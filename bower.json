@@ -1,7 +1,13 @@
 {
   "name": "devicon",
-  "version": "2.0.0",
-  "main": "devicon.min.css",
+  "version": "2.1.0",
+  "main": [
+    "css/devicon.css",
+    "fonts/devicon.eot",
+    "fonts/devicon.svg",
+    "fonts/devicon.ttf",
+    "fonts/devicon.woff"
+  ]
   "ignore": [
     ".jshintrc",
     "**/*.txt"
