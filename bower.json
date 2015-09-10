@@ -7,7 +7,7 @@
     "fonts/devicon.svg",
     "fonts/devicon.ttf",
     "fonts/devicon.woff"
-  ]
+  ],
   "ignore": [
     ".jshintrc",
     "**/*.txt"
