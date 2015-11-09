@@ -64,6 +64,14 @@
     }
   },
   {
+    "name": "bitbucket",
+    "tags": [],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "bootstrap",
     "tags": ["css", "framework"],
     "versions": {
@@ -112,6 +120,14 @@
     }
   },
   {
+    "name": "confluence",
+    "tags": [],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "cplusplus",
     "tags": ["language"],
     "versions": {
@@ -133,6 +149,14 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "d3js",
+    "tags": [],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
     }
   },
   {
@@ -224,6 +248,22 @@
     }
   },
   {
+    "name": "github",
+    "tags": ["version-control"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "gitlab",
+    "tags": ["version-control"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "go",
     "tags": ["language"],
     "versions": {
@@ -301,6 +341,14 @@
     "versions": {
       "svg": ["original", "plain"],
       "font": ["plain"]
+    }
+  },
+  {
+    "name": "jeet",
+    "tags": ["framework", "css"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
@@ -432,6 +480,14 @@
     }
   },
   {
+    "name": "phpstorm",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "postgresql",
     "tags": ["database"],
     "versions": {
@@ -501,6 +557,22 @@
     "versions": {
       "svg": ["original"],
       "font": ["original"]
+    }
+  },
+  {
+    "name": "sourcetree",
+    "tags": ["version-control"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "ssh",
+    "tags": ["security"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {

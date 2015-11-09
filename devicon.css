@@ -23,6 +23,67 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-ssh-original-wordmark:before,
+.devicon-ssh-plain-wordmark:before {
+	content: "\e900";
+}
+.devicon-ssh-original:before,
+.devicon-ssh-plain:before {
+	content: "\e901";
+}
+.devicon-sourcetree-original-wordmark:before,
+.devicon-sourcetree-plain-wordmark:before {
+	content: "\e902";
+}
+.devicon-sourcetree-original:before,
+.devicon-sourcetree-plain:before {
+	content: "\e903";
+}
+.devicon-phpstorm-plain-wordmark:before {
+	content: "\e904";
+}
+.devicon-phpstorm-plain:before {
+	content: "\e905";
+}
+.devicon-jeet-plain-wordmark:before {
+	content: "\e906";
+}
+.devicon-jeet-plain:before {
+	content: "\e907";
+}
+.devicon-gitlab-plain-wordmark:before {
+	content: "\e908";
+}
+.devicon-gitlab-plain:before {
+	content: "\e909";
+}
+.devicon-github-original-wordmark:before,
+.devicon-github-plain-wordmark:before {
+	content: "\e90a";
+}
+.devicon-github-original:before,
+.devicon-github-plain:before {
+	content: "\e90b";
+}
+.devicon-d3js-plain:before {
+	content: "\e90c";
+}
+.devicon-confluence-original-wordmark:before,
+.devicon-confluence-plain-wordmark:before {
+	content: "\e90d";
+}
+.devicon-confluence-original:before,
+.devicon-confluence-plain:before {
+	content: "\e90e";
+}
+.devicon-bitbucket-original-wordmark:before,
+.devicon-bitbucket-plain-wordmark:before {
+	content: "\e90f";
+}
+.devicon-bitbucket-original:before,
+.devicon-bitbucket-plain:before {
+	content: "\e910";
+}
 .devicon-safari-line-wordmark:before {
 	content: "\e632";
 }
