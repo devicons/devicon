@@ -5,7 +5,7 @@
 Devicon aims to gather all logos representing development languages and tools.
 Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
 
-Devicon it's 69 icons and 200+ versions. And it's growing!
+Devicon it's 78 icons and 200+ versions. And it's growing!
 
 See all available icons on the [new website](http://devicon.fr/).
 
