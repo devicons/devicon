@@ -152,6 +152,14 @@
     }
   },
   {
+    "name": "cucumber",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "d3js",
     "tags": [],
     "versions": {
@@ -269,6 +277,14 @@
     "versions": {
       "svg": ["original", "plain", "line"],
       "font": ["plain", "line"]
+    }
+  },
+  {
+    "name": "gradle",
+    "tags": ["task-runner"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
