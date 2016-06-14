@@ -488,6 +488,14 @@
     }
   },
   {
+    "name": "protractor",
+    "tags": ["framework", "javascript"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "postgresql",
     "tags": ["database"],
     "versions": {

@@ -45,6 +45,12 @@
 .devicon-phpstorm-plain:before {
 	content: "\e905";
 }
+.devicon-protractor-plain-wordmark:before {
+	content: "\e901";
+}
+.devicon-protractor-plain:before {
+	content: "\e900";
+}
 .devicon-jeet-plain-wordmark:before {
 	content: "\e906";
 }
