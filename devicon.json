@@ -240,6 +240,14 @@
     }
   },
   {
+    "name": "gatling",
+    "tags": ["framework", "testing"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "gimp",
     "tags": ["graphic"],
     "versions": {
