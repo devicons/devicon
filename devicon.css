@@ -23,6 +23,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-gatling-plain-wordmark:before {
+	content: "\e918";
+}
+.devicon-gatling-plain:before {
+	content: "\e917";
+}
+
 .devicon-ssh-original-wordmark:before,
 .devicon-ssh-plain-wordmark:before {
 	content: "\e916";
