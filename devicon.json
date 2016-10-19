@@ -56,6 +56,14 @@
     }
   },
   {
+    "name": "babel",
+    "tags": ["javascript", "transpiler"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "backbonejs",
     "tags": ["javascript", "framework"],
     "versions": {
@@ -152,6 +160,14 @@
     }
   },
   {
+    "name": "cucumber",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "d3js",
     "tags": [],
     "versions": {
@@ -232,6 +248,14 @@
     }
   },
   {
+    "name": "gatling",
+    "tags": ["framework", "testing"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "gimp",
     "tags": ["graphic"],
     "versions": {
@@ -269,6 +293,14 @@
     "versions": {
       "svg": ["original", "plain", "line"],
       "font": ["plain", "line"]
+    }
+  },
+  {
+    "name": "gradle",
+    "tags": ["task-runner"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
@@ -332,6 +364,14 @@
     "tags": ["programming", "language"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "jasmine",
+    "tags": ["testing"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },
@@ -405,6 +445,14 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "mocha",
+    "tags": ["testing"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
     }
   },
   {
@@ -484,6 +532,14 @@
     "tags": ["editor"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "protractor",
+    "tags": ["framework", "javascript"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },
@@ -597,6 +653,14 @@
     "versions": {
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "typescript",
+    "tags": ["programming", "transpiler"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
     }
   },
   {
