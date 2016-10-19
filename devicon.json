@@ -376,6 +376,14 @@
     }
   },
   {
+    "name": "jade",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "java",
     "tags": ["programming", "language"],
     "versions": {
