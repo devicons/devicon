@@ -56,6 +56,14 @@
     }
   },
   {
+    "name": "babel",
+    "tags": ["javascript", "transpiler"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "backbonejs",
     "tags": ["javascript", "framework"],
     "versions": {
@@ -668,6 +676,14 @@
     "tags": ["auth"],
     "versions": {
       "svg": ["original"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "typescript",
+    "tags": ["programming", "transpiler"],
+    "versions": {
+      "svg": ["original", "plain"],
       "font": ["plain"]
     }
   },
