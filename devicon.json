@@ -56,6 +56,14 @@
     }
   },
   {
+    "name": "babel",
+    "tags": ["javascript", "transpiler"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "backbonejs",
     "tags": ["javascript", "framework"],
     "versions": {
@@ -152,6 +160,14 @@
     }
   },
   {
+    "name": "cucumber",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "d3js",
     "tags": [],
     "versions": {
@@ -216,6 +232,14 @@
     }
   },
   {
+    "name": "facebook",
+    "tags": ["auth"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "firefox",
     "tags": ["browser"],
     "versions": {
@@ -228,6 +252,14 @@
     "tags": ["framework", "css"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "gatling",
+    "tags": ["framework", "testing"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },
@@ -269,6 +301,22 @@
     "versions": {
       "svg": ["original", "plain", "line"],
       "font": ["plain", "line"]
+    }
+  },
+  {
+    "name": "google",
+    "tags": ["auth"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "gradle",
+    "tags": ["task-runner"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
@@ -328,10 +376,26 @@
     }
   },
   {
+    "name": "jade",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "java",
     "tags": ["programming", "language"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "jasmine",
+    "tags": ["testing"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },
@@ -405,6 +469,14 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "mocha",
+    "tags": ["testing"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
     }
   },
   {
@@ -488,6 +560,14 @@
     }
   },
   {
+    "name": "protractor",
+    "tags": ["framework", "javascript"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "postgresql",
     "tags": ["database"],
     "versions": {
@@ -560,6 +640,14 @@
     }
   },
   {
+    "name": "sequelize",
+    "tags": ["database", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "sourcetree",
     "tags": ["version-control"],
     "versions": {
@@ -597,6 +685,22 @@
     "versions": {
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "twitter",
+    "tags": ["auth"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "typescript",
+    "tags": ["programming", "transpiler"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
     }
   },
   {
