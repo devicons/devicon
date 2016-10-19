@@ -1,8 +1,8 @@
 {
   "name": "devicon",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "description": "Programming related icons collection",
-  "main": "devicon.min.css",
+  "main": "less/devicon.less",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
