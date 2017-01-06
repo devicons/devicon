@@ -56,6 +56,14 @@
     }
   },
   {
+    "name": "babel",
+    "tags": ["javascript", "transpiler"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "backbonejs",
     "tags": ["javascript", "framework"],
     "versions": {
@@ -645,6 +653,14 @@
     "versions": {
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "typescript",
+    "tags": ["programming", "transpiler"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
     }
   },
   {
