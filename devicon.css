@@ -23,24 +23,29 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-typescript-original:before,
+.devicon-typescript-plain:before {
+  content: "\e920";
+}
+.devicon-babel-original:before,
+.devicon-babel-plain:before {
+  content: "\e921";
+}
 .devicon-mocha-plain:before {
   content: "\e919";
 }
-
 .devicon-jasmine-plain-wordmark:before {
   content: "\e91b";
 }
 .devicon-jasmine-plain:before {
   content: "\e91a";
 }
-
 .devicon-gatling-plain-wordmark:before {
 	content: "\e918";
 }
 .devicon-gatling-plain:before {
 	content: "\e917";
 }
-
 .devicon-ssh-original-wordmark:before,
 .devicon-ssh-plain-wordmark:before {
 	content: "\e916";

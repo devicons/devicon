@@ -118,6 +118,10 @@
 .devicon-atom-plain-wordmark.colored {
 	color: #67595D;
 }
+.devicon-babel-original.colored,
+.devicon-babel-plain.colored {
+	color: #f9dc3e;
+}
 .devicon-backbonejs-plain.colored,
 .devicon-backbonejs-plain-wordmark.colored {
 	color: #002A41;
@@ -401,6 +405,10 @@
 .devicon-trello-plain-wordmark.colored,
 .devicon-trello-plain.colored {
 	color: #23719f;
+}
+.devicon-typescript-original.colored,
+.devicon-typescript-plain.colored {
+	color: #007acc;
 }
 .devicon-ubuntu-plain-wordmark.colored,
 .devicon-ubuntu-plain.colored {
