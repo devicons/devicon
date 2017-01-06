@@ -210,6 +210,10 @@
 .devicon-erlang-plain.colored {
 	color: #a90533;
 }
+.devicon-facebook-original.colored,
+.devicon-facebook-plain.colored {
+	color: #3d5a98;
+}
 .devicon-firefox-plain-wordmark.colored,
 .devicon-firefox-plain.colored {
 	color: #DD732A;
@@ -229,6 +233,14 @@
 .devicon-go-line.colored,
 .devicon-go-plain.colored {
 	color: #000000;
+}
+.devicon-google-original-wordmark.colored,
+.devicon-google-plain-wordmark.colored {
+	color: #587dbd;
+}
+.devicon-google-original.colored,
+.devicon-google-plain.colored {
+	color: #587dbd;
 }
 .devicon-grunt-line-wordmark.colored,
 .devicon-grunt-line.colored,
@@ -405,6 +417,10 @@
 .devicon-trello-plain-wordmark.colored,
 .devicon-trello-plain.colored {
 	color: #23719f;
+}
+.devicon-twitter-original.colored,
+.devicon-twitter-plain.colored {
+	color: #1da1f2;
 }
 .devicon-typescript-original.colored,
 .devicon-typescript-plain.colored {
