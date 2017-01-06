@@ -404,6 +404,12 @@
 .devicon-sass-plain-wordmark.colored {
 	color: #cc6699;
 }
+.devicon-sequelize-original-wordmark.colored,
+.devicon-sequelize-plain-wordmark.colored,
+.devicon-sequelize-original.colored,
+.devicon-sequelize-plain.colored{
+	color: #3b4b72;
+}
 .devicon-symfony-original.colored,
 .devicon-symfony-original-wordmark.colored,
 .devicon-symfony-plain.colored,

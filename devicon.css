@@ -673,6 +673,16 @@
 	content: "\ebcb";
 }
 
+.devicon-sequelize-original-wordmark:before,
+.devicon-sequelize-plain-wordmark:before {
+	content: "\e922";
+}
+
+.devicon-sequelize-original:before,
+.devicon-sequelize-plain:before {
+	content: "\e923";
+}
+
 .devicon-symfony-original-wordmark:before,
 .devicon-symfony-plain-wordmark:before {
 	content: "\e602";
