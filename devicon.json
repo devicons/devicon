@@ -360,6 +360,14 @@
     }
   },
   {
+    "name": "jasmine",
+    "tags": ["testing"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "javascript",
     "tags": ["programming", "language"],
     "versions": {
@@ -429,6 +437,14 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "mocha",
+    "tags": ["testing"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
     }
   },
   {
