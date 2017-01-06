@@ -263,6 +263,10 @@
 .devicon-java-plain.colored {
 	color: #EA2D2E;
 }
+.devicon-jasmine-plain-wordmark.colored,
+.devicon-jasmine-plain.colored {
+	color: #8a4182;
+}
 .devicon-javascript-plain.colored {
 	color: #f0db4f;
 }
@@ -293,6 +297,9 @@
 .devicon-meteor-plain.colored,
 .devicon-meteor-plain-wordmark.colored {
 	color: #df5052;
+}
+.devicon-mocha-plain.colored {
+	color: #8d6748;
 }
 .devicon-mongodb-plain.colored,
 .devicon-mongodb-plain-wordmark.colored {
