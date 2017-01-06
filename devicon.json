@@ -232,6 +232,14 @@
     }
   },
   {
+    "name": "facebook",
+    "tags": ["auth"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "firefox",
     "tags": ["browser"],
     "versions": {
@@ -293,6 +301,14 @@
     "versions": {
       "svg": ["original", "plain", "line"],
       "font": ["plain", "line"]
+    }
+  },
+  {
+    "name": "google",
+    "tags": ["auth"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
@@ -653,6 +669,14 @@
     "versions": {
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "twitter",
+    "tags": ["auth"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["plain"]
     }
   },
   {

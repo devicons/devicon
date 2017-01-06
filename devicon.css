@@ -23,6 +23,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-facebook-original:before,
+.devicon-facebook-plain:before {
+	content: "\e91c";
+}
 .devicon-typescript-original:before,
 .devicon-typescript-plain:before {
   content: "\e920";
@@ -470,6 +474,16 @@
 	content: "\e7a8";
 }
 
+.devicon-google-original-wordmark:before,
+.devicon-google-plain-wordmark:before {
+	content: "\e91d";
+}
+
+.devicon-google-original:before,
+.devicon-google-plain:before {
+	content: "\e91e";
+}
+
 .devicon-grunt-line-wordmark:before {
 	content: "\e7a9";
 }
@@ -683,6 +697,11 @@
 
 .devicon-trello-plain:before {
 	content: "\ebcf";
+}
+
+.devicon-twitter-original:before,
+.devicon-twitter-plain:before {
+	content: "\e91f";
 }
 
 .devicon-ubuntu-plain-wordmark:before {
