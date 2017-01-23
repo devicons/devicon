@@ -1,6 +1,5 @@
 /*!
  *  Devicon by @oligibson
- *  THIS FILE IS GENERATED FROM LESS, PLEASE EDIT THE LESS FILES AND RUN 'GULP LESS' TO GENERATE CSS
  */
 /* FONT PATH
  * -------------------------- */
@@ -25,6 +24,14 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.devicon-webpack-plain-wordmark:before,
+.devicon-webpack-original-wordmark:before {
+  content: "\e92a";
+}
+.devicon-webpack-plain:before,
+.devicon-webpack-original:before {
+  content: "\e92b";
 }
 .devicon-tomcat-original-wordmark:before,
 .devicon-tomcat-plain-wordmark:before {
@@ -645,6 +652,14 @@
 }
 /* ICONS
  * -------------------------- */
+.devicon-webpack-plain-wordmark.colored,
+.devicon-webpack-original-wordmark.colored {
+  color: #1C78C0;
+}
+.devicon-webpack-plain.colored,
+.devicon-webpack-original.colored {
+  color: #1C78C0;
+}
 .devicon-gatling-plain-wordmark.colored {
   color: #E77500;
 }
