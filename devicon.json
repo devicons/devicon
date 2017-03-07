@@ -712,6 +712,14 @@
     }
   },
   {
+	  "name": "visualstudio",
+	  "tags": ["editor"],
+	  "versions": {
+		  "svg": ["plain", "plain-wordmark"],
+		  "font": ["plain", "plain-wordmark"]
+	  }
+  },
+  {
     "name": "windows8",
     "tags": ["os"],
     "versions": {
