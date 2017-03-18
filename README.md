@@ -1,13 +1,13 @@
 # Devicon v2
 
-[http://devicon.fr/](http://devicon.fr/)
+[http://konpa.github.io/devicon/](http://konpa.github.io/devicon/)
 
 Devicon aims to gather all logos representing development languages and tools.
 Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
 
 Devicon it's 78 icons and 200+ versions. And it's growing!
 
-See all available icons on the [new website](http://devicon.fr/).
+See all available icons on the [new website](http://konpa.github.io/devicon/).
 
 #### Icon requests
 
@@ -15,7 +15,7 @@ Please leave a comment [here](https://github.com/konpa/devicon/issues/11) in ord
 
 ## How to use
 
-For a super fast setup go check [devicon.fr](http://devicon.fr/)
+For a super fast setup go check [devicon.fr](http://konpa.github.io/devicon/)
 
 _2 ways of using devicon:_
 
