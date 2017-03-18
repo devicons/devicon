@@ -1,0 +1,4 @@
+[submodule "devicon.git"]
+    path = devicon.git
+    url = https://konpa@github.com/konpa/devicon.git
+    branch = master
