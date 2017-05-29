@@ -23,6 +23,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-visualstudio-plain-wordmark:before {
+  content: "\e926";
+}
+.devicon-visualstudio-plain:before {
+  content: "\e927";
+}
 .devicon-slack-plain-wordmark:before {
   content: "\e924";
 }
