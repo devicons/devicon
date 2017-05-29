@@ -640,6 +640,14 @@
     }
   },
   {
+    "name": "slack",
+    "tags": ["chat"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "sourcetree",
     "tags": ["version-control"],
     "versions": {
