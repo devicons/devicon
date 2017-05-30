@@ -22,6 +22,30 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.devicon-intellij-plain-wordmark:before {
+  content: "\e932";
+}
+.devicon-intellij-plain:before {
+  content: "\e933";
+}
+.devicon-pycharm-plain-wordmark:before {
+  content: "\e934";
+}
+.devicon-pycharm-plain:before {
+  content: "\e935";
+}
+.devicon-rubymine-plain-wordmark:before {
+  content: "\e936";
+}
+.devicon-rubymine-plain:before {
+  content: "\e937";
+}
+.devicon-webstorm-plain-wordmark:before {
+  content: "\e938";
+}
+.devicon-webstorm-plain:before {
+  content: "\e939";
+}
 .devicon-tomcat-line-wordmark:before {
   content: "\e92c";
 }

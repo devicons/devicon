@@ -376,6 +376,14 @@
     }
   },
   {
+    "name": "intellij",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "java",
     "tags": ["programming", "language"],
     "versions": {
@@ -576,6 +584,14 @@
     }
   },
   {
+    "name": "pycharm",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "rails",
     "tags": ["framework"],
     "versions": {
@@ -610,6 +626,14 @@
   {
     "name": "ruby",
     "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "rubymine",
+    "tags": ["editor"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
@@ -754,6 +778,14 @@
   {
     "name": "webpack",
     "tags": ["package", "manager"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "webstorm",
+    "tags": ["editor"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
