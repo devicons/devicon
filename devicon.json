@@ -728,6 +728,14 @@
 	  }
   },
   {
+    "name": "webpack",
+    "tags": ["package", "manager"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "windows8",
     "tags": ["os"],
     "versions": {
