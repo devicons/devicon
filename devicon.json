@@ -184,6 +184,14 @@
     }
   },
   {
+    "name": "devicon",
+    "tags": ["iconset"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "django",
     "tags": [],
     "versions": {
