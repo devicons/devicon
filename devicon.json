@@ -680,6 +680,14 @@
     }
   },
   {
+    "name": "tomcat",
+    "tags": ["server"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "line", "line-wordmark"],
+      "font": ["line", "line-wordmark"]
+    }
+  },
+  {
     "name": "travis",
     "tags": ["platform", "integration"],
     "versions": {
@@ -734,6 +742,14 @@
 		  "svg": ["plain", "plain-wordmark"],
 		  "font": ["plain", "plain-wordmark"]
 	  }
+  },
+  {
+    "name": "vuejs",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
   },
   {
     "name": "webpack",
