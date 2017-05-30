@@ -664,6 +664,14 @@
     }
   },
   {
+    "name": "swift",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "symfony",
     "tags": ["framework"],
     "versions": {
