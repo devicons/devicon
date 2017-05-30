@@ -22,6 +22,24 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.devicon-tomcat-line-wordmark:before {
+  content: "\e92c";
+}
+.devicon-tomcat-line:before {
+  content: "\e92d";
+}
+.devicon-vuejs-line-wordmark:before {
+  content: "\e92e";
+}
+.devicon-vuejs-line:before {
+  content: "\e92f";
+}
+.devicon-vuejs-plain-wordmark:before {
+  content: "\e930";
+}
+.devicon-vuejs-plain:before {
+  content: "\e931";
+}
 .devicon-swift-plain-wordmark:before {
   content: "\e92a";
 }
