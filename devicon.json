@@ -240,6 +240,14 @@
     }
   },
   {
+    "name": "express",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
+    }
+  },
+  {
     "name": "facebook",
     "tags": ["auth"],
     "versions": {
