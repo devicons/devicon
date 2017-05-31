@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/konpa/devicon/issues"
   },
-  "homepage": "http://devicon.fr/",
+  "homepage": "http://konpa.github.io/devicon/",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-concat-css": "^2.0.0",

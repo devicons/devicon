@@ -1,12 +1,12 @@
 {
   "name": "devicon",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "main": "devicon.min.css",
   "ignore": [
     ".jshintrc",
     "**/*.txt"
   ],
-  "homepage": "http://devicon.fr/",
+  "homepage": "http://konpa.github.io/devicon/",
   "repository": {
     "type": "git",
     "url": "git://github.com/konpa/devicon.git"
