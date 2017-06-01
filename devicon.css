@@ -22,6 +22,18 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.devicon-ceylon-plain-wordmark:before {
+  content: "\e943";
+}
+.devicon-ceylon-plain:before {
+  content: "\e944";
+}
+.devicon-elm-plain-wordmark:before {
+  content: "\e941";
+}
+.devicon-elm-plain:before {
+  content: "\e942";
+}
 .devicon-cakephp-plain-wordmark:before {
   content: "\e93f";
 }

@@ -112,6 +112,14 @@
     }
   },
   {
+    "name": "ceylon",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "chrome",
     "tags": ["browser"],
     "versions": {
@@ -234,6 +242,14 @@
   {
     "name": "drupal",
     "tags": ["cms"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "elm",
+    "tags": ["framework"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
