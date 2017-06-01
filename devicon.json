@@ -704,6 +704,14 @@
     }
   },
   {
+    "name": "stylus",
+    "tags": ["css", "pre-processor"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
     "name": "swift",
     "tags": ["language"],
     "versions": {

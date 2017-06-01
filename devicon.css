@@ -22,6 +22,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.devicon-stylus-original:before {
+  content: "\e93e";
+}
 .devicon-express-original-wordmark:before {
   content: "\e93c";
 }
