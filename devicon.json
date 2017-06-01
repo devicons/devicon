@@ -104,6 +104,14 @@
     }
   },
   {
+    "name": "cakephp",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "chrome",
     "tags": ["browser"],
     "versions": {

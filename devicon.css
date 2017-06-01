@@ -22,6 +22,12 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.devicon-cakephp-plain-wordmark:before {
+  content: "\e93f";
+}
+.devicon-cakephp-plain:before {
+  content: "\e940";
+}
 .devicon-stylus-original:before {
   content: "\e93e";
 }
