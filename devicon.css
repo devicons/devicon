@@ -22,6 +22,18 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.devicon-behance-plain-wordmark:before {
+  content: "\e943";
+}
+.devicon-behance-plain:before {
+  content: "\e945";
+}
+.devicon-linkedin-plain-wordmark:before {
+  content: "\e946";
+}
+.devicon-linkedin-plain:before {
+  content: "\e947";
+}
 .devicon-ceylon-plain-wordmark:before {
   content: "\e943";
 }

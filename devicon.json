@@ -72,6 +72,14 @@
     }
   },
   {
+    "name": "behance",
+    "tags": ["social", "website"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "bitbucket",
     "tags": [],
     "versions": {
@@ -493,6 +501,14 @@
     "versions": {
       "svg": ["plain-wordmark"],
       "font": ["plain-wordmark"]
+    }
+  },
+  {
+    "name": "linkedin",
+    "tags": ["social", "auth"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
