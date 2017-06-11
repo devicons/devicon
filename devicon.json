@@ -160,6 +160,14 @@
     }
   },
   {
+    "name": "couchdb",
+    "tags": ["database"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "cplusplus",
     "tags": ["language"],
     "versions": {
