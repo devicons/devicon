@@ -392,6 +392,14 @@
     }
   },
   {
+    "name": "handlebars",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "heroku",
     "tags": ["cloud"],
     "versions": {
