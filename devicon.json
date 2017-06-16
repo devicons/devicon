@@ -736,6 +736,14 @@
     }
   },
   {
+    "name": "sketch",
+    "tags": ["application"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["line", "line-wordmark"]
+    }
+  },
+  {
     "name": "slack",
     "tags": ["chat"],
     "versions": {
@@ -832,6 +840,14 @@
     }
   },
   {
+    "name": "vagrant",
+    "tags": ["platform"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "vim",
     "tags": ["editor"],
     "versions": {
@@ -884,6 +900,14 @@
     "tags": ["cms"],
     "versions": {
       "svg": ["original", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "yarn",
+    "tags": ["package", "manager"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },

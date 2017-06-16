@@ -1,6 +1,18 @@
+.devicon-sketch-line-wordmark.colored,
+.devicon-sketch-line.colored {
+  color: #fdad00;
+}
+.devicon-vagrant-plain-wordmark.colored,
+.devicon-vagrant-plain.colored {
+  color: #127eff;
+}
+.devicon-yarn-plain-wordmark.colored,
+.devicon-yarn-plain.colored {
+  color: #2c8ebb;
+}
 .devicon-handlebars-plain-wordmark.colored,
 .devicon-handlebars-plain.colored{
-	color: #000000;
+  color: #000000;
 }
 .devicon-couchdb-plain-wordmark.colored,
 .devicon-couchdb-plain.colored {
