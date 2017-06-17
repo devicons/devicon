@@ -28,6 +28,24 @@
 .devicon-sketch-line:before {
   content: "\e94d";
 }
+.devicon-npm-original-wordmark:before {
+  content: "\e952";
+}
+.devicon-ionic-original-wordmark:before {
+  content: "\e953";
+}
+.devicon-ionic-original:before {
+  content: "\e954";
+}
+.devicon-ember-original-wordmark:before {
+  content: "\e955";
+}
+.devicon-electron-original-wordmark:before {
+  content: "\e956";
+}
+.devicon-electron-original:before {
+  content: "\e957";
+}
 .devicon-vagrant-plain-wordmark:before {
   content: "\e94e";
 }

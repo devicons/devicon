@@ -2,6 +2,20 @@
 .devicon-sketch-line.colored {
   color: #fdad00;
 }
+.devicon-npm-original-wordmark.colored {
+  color: #cb3837;
+}
+.devicon-ionic-original-wordmark.colored,
+.devicon-ionic-original.colored {
+  color: #4e8ef7;
+}
+.devicon-ember-original-wordmark.colored {
+  color: #dd3f24;
+}
+.devicon-electron-original-wordmark.colored,
+.devicon-electron-original.colored {
+  color: #47848f;
+}
 .devicon-vagrant-plain-wordmark.colored,
 .devicon-vagrant-plain.colored {
   color: #127eff;
