@@ -1032,17 +1032,23 @@
         ],
         "versions": {
             "svg": [
-                "plain"
+                "original",
+                "original-wordmark"
             ],
             "font": [
-                "plain"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#010101",
         "aliases": [
           {
-            "base": "plain",
-            "alias": "original"
+            "base": "original",
+            "alias": "plain"
+          },
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
           }
         ]
     },
