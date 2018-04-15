@@ -9,9 +9,9 @@ Devicon it's 78 icons and 200+ versions. And it's growing!
 
 See all available icons on the [new website](http://konpa.github.io/devicon/).
 
-#### Icon requests
+## Icon requests
 
-Please leave a comment [here](https://github.com/konpa/devicon/issues/11) in order to request an icon.
+**Please leave a comment [here](https://github.com/konpa/devicon/issues/11) in order to request an icon.**
 
 ## How to use
 
