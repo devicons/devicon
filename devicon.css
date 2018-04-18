@@ -917,3 +917,15 @@
 .devicon-zend-plain:before {
 	content: "\ec04";
 }
+
+.devicon-arduino-plain:before {
+	content: "\e901";
+}
+
+.devicon-arduino-plain-wordmark:before {
+	content: "\e902";
+}
+
+.devicon-respberrypi-plain:before {
+	content: "\e900";
+}
