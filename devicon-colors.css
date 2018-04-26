@@ -99,7 +99,7 @@
 }
 .devicon-visualstudio-plain-wordmark.colored,
 .devicon-visualstudio-plain.colored {
-	color: #68217A;
+	color: #5b2d90;
 }
 .devicon-slack-plain-wordmark.colored,
 .devicon-slack-plain.colored {
@@ -128,10 +128,10 @@
 	color: #205081;
 }
 .devicon-phpstorm-plain-wordmark.colored {
-	color: #5058A6;
+	color: #8753f9;
 }
 .devicon-phpstorm-plain.colored {
-	color: #5058A6;
+	color: #8753f9;
 }
 .devicon-protractor-plain-wordmark.colored {
 	color: #b7111d;
@@ -234,7 +234,7 @@
 }
 .devicon-bootstrap-plain-wordmark.colored,
 .devicon-bootstrap-plain.colored {
-	color: #59407f;
+	color: #5f3f8a;
 }
 .devicon-bower-line-wordmark.colored,
 .devicon-bower-line.colored,
@@ -282,7 +282,7 @@
 }
 .devicon-css3-plain-wordmark.colored,
 .devicon-css3-plain.colored {
-	color: #3d8fc6;
+	color: #0170ba;
 }
 .devicon-debian-plain-wordmark.colored,
 .devicon-debian-plain.colored {
@@ -390,7 +390,7 @@
 	color: #8a4182;
 }
 .devicon-javascript-plain.colored {
-	color: #f0db4f;
+	color: #f7e018;
 }
 .devicon-jetbrains-plain.colored,
 .devicon-jetbrains-line.colored,
@@ -461,7 +461,7 @@
 	color: #80b5e2;
 }
 .devicon-php-plain.colored {
-	color: #6181b6;
+	color: #787cb4;
 }
 .devicon-postgresql-plain.colored,
 .devicon-postgresql-plain-wordmark.colored {
@@ -549,7 +549,7 @@
 .devicon-windows8-original.colored,
 .devicon-windows8-plain-wordmark.colored,
 .devicon-windows8-plain.colored {
-	color: #00adef;
+	color: #0077db;
 }
 .devicon-wordpress-plain-wordmark.colored,
 .devicon-wordpress-plain.colored {
@@ -567,32 +567,25 @@
 .devicon-bulma-plain.colored {
 	color: #00D1B2;
 }
-
 .devicon-excel-plain.colored {
 	color: #1D7044;
 }
-
 .devicon-matlab-line.colored,
 .devicon-matlab-plain.colored {
 	color: #FF830F;
 }
-
 .devicon-minitab-plain.colored {
 	color: #8DC63F;
 }
-
 .devicon-phalcon-plain.colored {
 	color: #76C39B;
 }
-
 .devicon-r-plain.colored {
 	color: #2165B6;
 }
-
 .devicon-rstudio-plain.colored {
 	color: #0053CC;
 }
-
 .devicon-spss-plain.colored {
 	color: #CC1E4C;
 }

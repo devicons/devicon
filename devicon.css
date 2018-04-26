@@ -313,39 +313,31 @@
 .devicon-django-plain-wordmark:before {
 	content: "\e63f";
 }
-
 .devicon-gimp-plain:before {
 	content: "\e633";
 }
-
 .devicon-redhat-plain-wordmark:before {
 	content: "\e62a";
 }
-
 .devicon-redhat-plain:before {
 	content: "\e62b";
 }
-
 .devicon-cplusplus-line:before,
 .devicon-cplusplus-line-wordmark:before {
 	content: "\e634";
 }
-
 .devicon-cplusplus-plain:before,
 .devicon-cplusplus-plain-wordmark:before {
 	content: "\e635";
 }
-
 .devicon-csharp-line:before,
 .devicon-csharp-line-wordmark:before {
 	content: "\e636";
 }
-
 .devicon-csharp-plain:before,
 .devicon-csharp-plain-wordmark:before {
 	content: "\e637";
 }
-
 .devicon-c-line:before,
 .devicon-c-line-wordmark:before {
 	content: "\e638";
@@ -919,39 +911,35 @@
 }
 
 .devicon-bulma-plain:before {
-	content: "";
+	content: "\e959";
 }
 
 .devicon-excel-plain:before {
-	content: "";
-}
-
-.devicon-matlab-line:before {
-	content: "";
+	content: "\e95a";
 }
 
 .devicon-matlab-plain:before {
-	content: "";
+	content: "\e95b";
 }
 
 .devicon-minitab-plain:before {
-	content: "";
+	content: "\e95c";
 }
 
 .devicon-phalcon-original:before
 .devicon-phalcon-plain:before {
-	content: "";
+	content: "\e95d";
 }
 
 .devicon-r-plain:before {
-	content: "";
+  content: "\e913";
 }
 
 .devicon-rstudio-plain:before {
-	content: "";
+	content: "\e95e";
 }
 
 .devicon-spss-original:before,
 .devicon-spss-plain:before {
-	content: "";
+	content: "\e95f";
 }
