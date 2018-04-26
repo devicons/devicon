@@ -917,3 +917,41 @@
 .devicon-zend-plain:before {
 	content: "\ec04";
 }
+
+.devicon-bulma-plain:before {
+	content: "";
+}
+
+.devicon-excel-plain:before {
+	content: "";
+}
+
+.devicon-matlab-line:before {
+	content: "";
+}
+
+.devicon-matlab-plain:before {
+	content: "";
+}
+
+.devicon-minitab-plain:before {
+	content: "";
+}
+
+.devicon-phalcon-original:before
+.devicon-phalcon-plain:before {
+	content: "";
+}
+
+.devicon-r-plain:before {
+	content: "";
+}
+
+.devicon-rstudio-plain:before {
+	content: "";
+}
+
+.devicon-spss-original:before,
+.devicon-spss-plain:before {
+	content: "";
+}
