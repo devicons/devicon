@@ -15,7 +15,7 @@ See all available icons on the [new website](http://konpa.github.io/devicon/).
 
 ## How to use
 
-For a super fast setup go check [devicon.fr](http://konpa.github.io/devicon/)
+For a super fast setup go check [http://konpa.github.io/devicon/](http://konpa.github.io/devicon/)
 
 _2 ways of using devicon:_
 
