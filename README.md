@@ -1,13 +1,13 @@
 # Devicon v2
 
-[http://konpa.github.io/devicon/](http://konpa.github.io/devicon/)
+[https://konpa.github.io/devicon/](https://konpa.github.io/devicon/)
 
 Devicon aims to gather all logos representing development languages and tools.
 Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
 
 Devicon it's 78 icons and 200+ versions. And it's growing!
 
-See all available icons on the [new website](http://konpa.github.io/devicon/).
+See all available icons on the [new website](https://konpa.github.io/devicon/).
 
 ## Icon requests
 
@@ -15,13 +15,13 @@ See all available icons on the [new website](http://konpa.github.io/devicon/).
 
 ## How to use
 
-For a super fast setup go check [devicon.fr](http://konpa.github.io/devicon/)
+For a super fast setup go check [https://konpa.github.io/devicon/](https://konpa.github.io/devicon/)
 
 _2 ways of using devicon:_
 
 #### SVG icons
 
-- Copy/paste svg code (from the [svg folder](https://github.com/konpa/devicon/tree/master/icons) or the [project page](http://konpa.github.io/devicon/) using your dev tool)
+- Copy/paste svg code (from the [svg folder](https://github.com/konpa/devicon/tree/master/icons) or the [project page](https://konpa.github.io/devicon/) using your dev tool)
 
 ```html
 <!--  for git plain version -->
@@ -83,7 +83,7 @@ You can install devicon as a dependency to your project either with NPM or Bower
 
 <sub>Final font is build with [Icomoon app](https://icomoon.io/)</sub>
 
-##### See the [devicon.json file](https://github.com/konpa/devicon/blob/master/devicon.json) or [devicon website](http://konpa.github.io/devicon/) for complete and up to date reference of icon's available versions.
+##### See the [devicon.json file](https://github.com/konpa/devicon/blob/master/devicon.json) or [devicon website](https://konpa.github.io/devicon/) for complete and up to date reference of icon's available versions.
 
 ## Contribute
 
