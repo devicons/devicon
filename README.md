@@ -53,7 +53,7 @@ _2 ways of using devicon:_
   <link rel="stylesheet" href="devicon-colors.css">
 ```
 
-- Add icon using <i> tag
+- Add icon using `<i>` tag
 
 ```html
   <!--  for git plain version -->
