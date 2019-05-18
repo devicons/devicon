@@ -958,5 +958,13 @@
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
+  },
+  {
+    "name": "nestjs",
+    "tags": ["framework", "nodejs", "javascript"],
+    "versions": {
+      "svg": ["original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
   }
 ]
