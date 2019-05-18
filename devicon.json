@@ -982,5 +982,13 @@
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
+  },
+  {
+    "name": "jest",
+    "tags": ["testing", "javascript"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
+    }
   }
 ]
