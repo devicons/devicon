@@ -990,5 +990,13 @@
       "svg": ["plain"],
       "font": ["plain"]
     }
+  },
+  {
+    "name": "karma",
+    "tags": ["testing", "test-runner"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
   }
 ]
