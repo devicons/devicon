@@ -507,6 +507,16 @@
         "aliases": []
     },
     {
+        "name": "circleci",
+        "tags": ["integration", "platform"],
+        "versions": {
+          "svg": ["plain", "plain-wordmark"],
+          "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#343434",
+        "aliases": []
+    },
+    {
         "name": "clojure",
         "tags": [
             "language"
