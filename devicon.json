@@ -974,5 +974,13 @@
       "svg": ["plain"],
       "font": ["plain"]
     }
+  },
+  {
+    "name": "circleci",
+    "tags": ["integration", "platform"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
   }
 ]
