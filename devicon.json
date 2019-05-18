@@ -966,5 +966,13 @@
       "svg": ["original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
+  },
+  {
+    "name": "codecov",
+    "tags": ["platform", "integration"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
+    }
   }
 ]
