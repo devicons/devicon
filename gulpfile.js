@@ -3,6 +3,8 @@ var minifyCSS = require('gulp-minify-css');
 var concatCss = require('gulp-concat-css');
 var plumber = require('gulp-plumber');
 
+gulp.task('default', ['concat-css', 'minify-css'])
+
 gulp.task('concat-css', function () {
   gulp.src(['./devicon.css', './devicon-colors.css'])
   .pipe(plumber())
