@@ -136,6 +136,22 @@
     }
   },
   {
+    "name": "clojure",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "line", "plain"],
+      "font": []
+    }
+  },
+  {
+    "name": "clojurescript",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": []
+    }
+  },
+  {
     "name": "codeigniter",
     "tags": ["php", "framework"],
     "versions": {
@@ -472,18 +488,18 @@
     }
   },
   {
-    "name": "java",
-    "tags": ["programming", "language"],
-    "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-      "font": ["plain", "plain-wordmark"]
-    }
-  },
-  {
     "name": "jasmine",
     "tags": ["testing"],
     "versions": {
       "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "java",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },
@@ -664,14 +680,6 @@
     }
   },
   {
-    "name": "protractor",
-    "tags": ["framework", "javascript"],
-    "versions": {
-      "svg": ["plain", "plain-wordmark"],
-      "font": ["plain", "plain-wordmark"]
-    }
-  },
-  {
     "name": "postgresql",
     "tags": ["database"],
     "versions": {
@@ -680,16 +688,24 @@
     }
   },
   {
-    "name": "python",
-    "tags": ["programming", "language"],
+    "name": "protractor",
+    "tags": ["framework", "javascript"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },
   {
     "name": "pycharm",
     "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "python",
+    "tags": ["programming", "language"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
@@ -949,6 +965,14 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "yunohost",
+    "tags": ["os"],
+    "versions": {
+      "svg": ["original"],
+      "font": []
     }
   },
   {
