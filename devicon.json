@@ -2232,6 +2232,27 @@
         "aliases": []
     },
     {
+        "name": "magento",
+        "tags": [
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line"
+            ]
+        },
+        "color": "#f26322",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "tags": [
             "javascript"
