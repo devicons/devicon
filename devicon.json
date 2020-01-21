@@ -3120,6 +3120,25 @@
         ]
     },
     {
+        "name": "shopware",
+        "tags": [
+            "cloud",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#179eff",
+        "aliases": []
+    },
+    {
         "name": "sketch",
         "tags": [
             "application"
