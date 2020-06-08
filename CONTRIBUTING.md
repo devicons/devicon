@@ -10,7 +10,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>optional: Reference the issues regarding the new icon</li>
 </ul>
 <h3>Icon formats and naming conventions</h3>
-<p>Each icon comes in different variantions:</p>
+<p>Each icon comes in different variations:</p>
 <ul>
   <li>original</li>
   <li>original-wordmark</li>
