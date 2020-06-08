@@ -87,7 +87,7 @@ You can install devicon as a dependency to your project either with NPM or Bower
 
 ## Contribute
 
-Please have a look at the CONTRIBUTING.md file
+Please have a look at the [CONTRIBUTING.md](https://github.com/konpa/devicon/blob/master/CONTRIBUTING.md) file
 
 Under [MIT Licence](https://github.com/konpa/devicon/blob/master/LICENSE)
 
