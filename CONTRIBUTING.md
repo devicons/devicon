@@ -8,6 +8,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Include the name of the icon in the pull request f.e. "new icon: html5 (original, plain, line)"</li>
   <li>At least the plain or line version of the icon is required (since those are required for the icon font)</li>
   <li>Modify <a href="https://github.com/konpa/devicon/blob/master/devicon.json">devicon.json</a> to include the icon (or variations)</li>
+  <li>Modify <a href="https://github.com/konpa/devicon/blob/master/devicon-colors.css">devicon-colors.css</a> to include the colored version of the icon</li>
   <li>optional: Add a image of the new icon(s) to the description of the pull request</li>
   <li>optional: Reference the issues regarding the new icon</li>
 </ul>
