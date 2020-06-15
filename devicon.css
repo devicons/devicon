@@ -1,17 +1,18 @@
 @font-face {
 	font-family: 'devicon';
-	src:url('fonts/devicon.eot?-hdf3wh');
-	src:url('fonts/devicon.eot?#iefix-hdf3wh') format('embedded-opentype'),
-		url('fonts/devicon.woff?-hdf3wh') format('woff'),
-		url('fonts/devicon.ttf?-hdf3wh') format('truetype'),
-		url('fonts/devicon.svg?-hdf3wh#devicon') format('svg');
+	src: url('fonts/devicon.eot?vwg4jy');
+	src: url('fonts/devicon.eot?vwg4jy#iefix') format('embedded-opentype'),
+		url('fonts/devicon.ttf?vwg4jy') format('truetype'),
+		url('fonts/devicon.woff?vwg4jy') format('woff'),
+		url('fonts/devicon.svg?vwg4jy#devicon') format('svg');
 	font-weight: normal;
 	font-style: normal;
+	font-display: block;
 }
 
 [class^="devicon-"], [class*=" devicon-"] {
 	font-family: 'devicon';
-	speak: none;
+	speak: never;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -269,6 +270,9 @@
 	content: "\e909";
 }
 .devicon-d3js-plain:before {
+    content: "\e90b";
+}
+.devicon-d3js-original:before {
 	content: "\e90c";
 }
 .devicon-confluence-original-wordmark:before,
