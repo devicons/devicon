@@ -27,7 +27,14 @@
     "name": "apache",
     "tags": ["php"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "svg": [
+        "original",
+        "original-wordmark",
+        "plain",
+        "plain-wordmark",
+        "line",
+        "line-wordmark"
+      ],
       "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
@@ -99,7 +106,14 @@
     "name": "bower",
     "tags": ["package", "manager"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "svg": [
+        "original",
+        "original-wordmark",
+        "plain",
+        "plain-wordmark",
+        "line",
+        "line-wordmark"
+      ],
       "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
@@ -259,7 +273,14 @@
     "name": "doctrine",
     "tags": [],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "svg": [
+        "original",
+        "original-wordmark",
+        "plain",
+        "plain-wordmark",
+        "line",
+        "line-wordmark"
+      ],
       "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
@@ -411,7 +432,14 @@
     "name": "grunt",
     "tags": ["task-runner", "nodejs"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "svg": [
+        "original",
+        "original-wordmark",
+        "plain",
+        "plain-wordmark",
+        "line",
+        "line-wordmark"
+      ],
       "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
@@ -436,7 +464,14 @@
     "tags": ["cloud"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-      "font": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"]
+      "font": [
+        "original",
+        "original-wordmark",
+        "plain",
+        "plain-wordmark",
+        "line",
+        "line-wordmark"
+      ]
     }
   },
   {
@@ -635,7 +670,14 @@
     "name": "nodewebkit",
     "tags": [],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "svg": [
+        "original",
+        "original-wordmark",
+        "plain",
+        "plain-wordmark",
+        "line",
+        "line-wordmark"
+      ],
       "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
@@ -744,6 +786,13 @@
     }
   },
   {
+    "name": "redux",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original"]
+    }
+  },
+  {
     "name": "ruby",
     "tags": ["programming", "language"],
     "versions": {
@@ -763,7 +812,14 @@
     "name": "safari",
     "tags": ["browser"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line-wordmark", "line"],
+      "svg": [
+        "original",
+        "original-wordmark",
+        "plain",
+        "plain-wordmark",
+        "line-wordmark",
+        "line"
+      ],
       "font": ["plain", "plain-wordmark", "line-wordmark", "line"]
     }
   },
@@ -904,18 +960,25 @@
     }
   },
   {
-	  "name": "visualstudio",
-	  "tags": ["editor"],
-	  "versions": {
-		  "svg": ["plain", "plain-wordmark"],
-		  "font": ["plain", "plain-wordmark"]
-	  }
+    "name": "visualstudio",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
   },
   {
     "name": "vuejs",
     "tags": ["framework"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "svg": [
+        "original",
+        "original-wordmark",
+        "plain",
+        "plain-wordmark",
+        "line",
+        "line-wordmark"
+      ],
       "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
     }
   },
