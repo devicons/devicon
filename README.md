@@ -10,8 +10,7 @@ Devicon it's 78 icons and 200+ versions. And it's growing!
 See all available icons on the [new website](https://konpa.github.io/devicon/).
 
 ## Icon requests
-
-**Please leave a comment [here](https://github.com/konpa/devicon/issues/11) in order to request an icon.**
+When you want to request a icon please feel feel to create a issue. See our [contribution guidelines](https://github.com/konpa/devicon/blob/master/CONTRIBUTING.md) for more information.
 
 ## How to use
 
@@ -92,3 +91,27 @@ Please have a look at the [CONTRIBUTING.md](https://github.com/konpa/devicon/blo
 Under [MIT Licence](https://github.com/konpa/devicon/blob/master/LICENSE)
 
 <sub>All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.</sub>
+
+## Go build yourself
+### Prerequisites
+Install gulp (and gulp plugins)
+```bash
+npm install
+```
+### Build the font and export stylesheet
+Open [icomoon app](https://icomoon.io/app/#/select) and import [icomoon.json](icomoon.json). Choose _yes_ when beeing asked
+if you like to restore the settings stored in the configuration file.
+
+The next step is to click on **Generate font** and download the resulting archive. Extract it
+contents and you will find a [fonts](./fonts) directory next to a `style.css`. Replace the content of the `fonts` folder,
+merge the `style.css` with [devicon.css](./devicon.css) and follow the next step to build the final stylesheet.
+
+**Note** the merge is required, because some icons are defined as alias, this should be replaced
+with a more elegant solution to support automated build processing.
+
+### Build and minify stylesheet
+Run the following commands to build the resulting file `devicon.min.css`
+```bash
+gulp concat-css
+gulp minify-css
+```
