@@ -106,9 +106,6 @@ The next step is to click on **Generate font** and download the resulting archiv
 contents and you will find a [fonts](./fonts) directory next to a `style.css`. Replace the content of the `fonts` folder,
 merge the `style.css` with [devicon.css](./devicon.css) and follow the next step to build the final stylesheet.
 
-**Note** the merge is required, because some icons are defined as alias, this should be replaced
-with a more elegant solution to support automated build processing.
-
 ### Build and minify stylesheet
 Run the following command to build the resulting file `devicon.min.css`
 ```bash
