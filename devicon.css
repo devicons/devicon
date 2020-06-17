@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'devicon';
-	src:url('fonts/devicon.eot?-hdf3wh');
-	src:url('fonts/devicon.eot?#iefix-hdf3wh') format('embedded-opentype'),
-		url('fonts/devicon.woff?-hdf3wh') format('woff'),
-		url('fonts/devicon.ttf?-hdf3wh') format('truetype'),
-		url('fonts/devicon.svg?-hdf3wh#devicon') format('svg');
+    src:  url('fonts/devicon.eot?56yybb');
+    src:  url('fonts/devicon.eot?56yybb#iefix') format('embedded-opentype'),
+    url('fonts/devicon.ttf?56yybb') format('truetype'),
+    url('fonts/devicon.woff?56yybb') format('woff'),
+    url('fonts/devicon.svg?56yybb#devicon') format('svg');
 	font-weight: normal;
 	font-style: normal;
   	font-display: block;
