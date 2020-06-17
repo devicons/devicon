@@ -110,8 +110,7 @@ merge the `style.css` with [devicon.css](./devicon.css) and follow the next step
 with a more elegant solution to support automated build processing.
 
 ### Build and minify stylesheet
-Run the following commands to build the resulting file `devicon.min.css`
+Run the following command to build the resulting file `devicon.min.css`
 ```bash
-gulp concat-css
-gulp minify-css
+gulp default
 ```
