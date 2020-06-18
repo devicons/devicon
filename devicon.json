@@ -744,6 +744,13 @@
     }
   },
   {
+    "name": "redux",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original"]
+    }
+  },
+  {
     "name": "ruby",
     "tags": ["programming", "language"],
     "versions": {
@@ -904,12 +911,12 @@
     }
   },
   {
-	  "name": "visualstudio",
-	  "tags": ["editor"],
-	  "versions": {
-		  "svg": ["plain", "plain-wordmark"],
-		  "font": ["plain", "plain-wordmark"]
-	  }
+    "name": "visualstudio",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
   },
   {
     "name": "vuejs",
