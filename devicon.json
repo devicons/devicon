@@ -408,6 +408,13 @@
     }
   },
   {
+    "name": "grails",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original"]
+    }
+  },
+  {
     "name": "grunt",
     "tags": ["task-runner", "nodejs"],
     "versions": {
