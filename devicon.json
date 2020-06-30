@@ -408,6 +408,13 @@
     }
   },
   {
+    "name": "groovy",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original"]
+    }
+  },
+  {
     "name": "grunt",
     "tags": ["task-runner", "nodejs"],
     "versions": {
