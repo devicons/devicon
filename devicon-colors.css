@@ -566,3 +566,7 @@
 .devicon-rust-plain.colored {
 	color: #000000;
 }
+.devicon-scala-plain-wordmark.colored,
+.devicon-scala-plain.colored {
+	color: #de3423;
+}

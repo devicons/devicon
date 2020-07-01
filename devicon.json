@@ -791,6 +791,14 @@
     }
   },
   {
+    "name": "scala",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "sequelize",
     "tags": ["database", "language"],
     "versions": {
