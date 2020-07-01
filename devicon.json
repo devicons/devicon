@@ -770,7 +770,8 @@
     "name": "rust",
     "tags": ["programming", "language"],
     "versions": {
-      "svg": ["plain"]
+      "svg": ["plain"],
+      "font": ["plain"]
     }
   },
   {
