@@ -767,6 +767,14 @@
     }
   },
   {
+    "name": "rust",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "safari",
     "tags": ["browser"],
     "versions": {
