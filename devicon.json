@@ -415,6 +415,13 @@
       "font": ["original", "plain"]
     }
   },
+    "name": "groovy",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
   {
     "name": "grunt",
     "tags": ["task-runner", "nodejs"],
@@ -772,6 +779,14 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "rust",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
     }
   },
   {
