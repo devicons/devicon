@@ -408,6 +408,21 @@
     }
   },
   {
+    "name": "grails",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["original", "plain"]
+    }
+  },
+    "name": "groovy",
+    "tags": ["programming", "language"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "grunt",
     "tags": ["task-runner", "nodejs"],
     "versions": {
