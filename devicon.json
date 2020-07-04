@@ -412,7 +412,7 @@
     "tags": ["framework"],
     "versions": {
       "svg": ["original", "plain"],
-      "font": ["original", "plain"]
+      "font": ["plain"]
     }
   },
   {
@@ -763,7 +763,8 @@
     "name": "redux",
     "tags": ["framework"],
     "versions": {
-      "svg": ["original"]
+      "svg": ["original"],
+      "font": []
     }
   },
   {
