@@ -415,6 +415,7 @@
       "font": ["original", "plain"]
     }
   },
+  {
     "name": "groovy",
     "tags": ["programming", "language"],
     "versions": {
