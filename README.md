@@ -1,26 +1,26 @@
 # Devicon v2
 
-[https://konpa.github.io/devicon/](https://konpa.github.io/devicon/)
+[https://devicons.github.io/devicon/](https://devicons.github.io/devicon/)
 
 Devicon aims to gather all logos representing development languages and tools.
 Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
 
 Devicon it's 78 icons and 200+ versions. And it's growing!
 
-See all available icons on the [new website](https://konpa.github.io/devicon/).
+See all available icons on the [new website](https://devicons.github.io/devicon/).
 
 ## Icon requests
 When you want to request a icon please feel feel to create a issue. See our [contribution guidelines](https://github.com/konpa/devicon/blob/master/CONTRIBUTING.md) for more information.
 
 ## How to use
 
-For a super fast setup go check [https://konpa.github.io/devicon/](https://konpa.github.io/devicon/)
+For a super fast setup go check [https://devicons.github.io/devicon/](https://devicons.github.io/devicon/)
 
 _2 ways of using devicon:_
 
 #### SVG icons
 
-- Copy/paste svg code (from the [svg folder](https://github.com/konpa/devicon/tree/master/icons) or the [project page](https://konpa.github.io/devicon/) using your dev tool)
+- Copy/paste svg code (from the [svg folder](https://github.com/devicons/devicon/tree/master/icons) or the [project page](https://github.com/devicons/devicon) using your dev tool)
 
 ```html
 <!--  for git plain version -->
@@ -82,13 +82,13 @@ You can install devicon as a dependency to your project either with NPM or Bower
 
 <sub>Final font is build with [Icomoon app](https://icomoon.io/)</sub>
 
-##### See the [devicon.json file](https://github.com/konpa/devicon/blob/master/devicon.json) or [devicon website](https://konpa.github.io/devicon/) for complete and up to date reference of icon's available versions.
+##### See the [devicon.json file](https://github.com/devicons/devicon/blob/master/devicon.json) or [devicon website](https://devicons.github.io/devicon/) for complete and up to date reference of icon's available versions.
 
 ## Contribute
 
-Please have a look at the [CONTRIBUTING.md](https://github.com/konpa/devicon/blob/master/CONTRIBUTING.md) file
+Please have a look at the [CONTRIBUTING.md](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md) file
 
-Under [MIT Licence](https://github.com/konpa/devicon/blob/master/LICENSE)
+Under [MIT Licence](https://github.com/devicons/devicon/blob/master/LICENSE)
 
 <sub>All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.</sub>
 
