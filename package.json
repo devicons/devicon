@@ -23,7 +23,7 @@
   },
   "homepage": "http://konpa.github.io/devicon/",
   "devDependencies": {
-    "gulp": "^3.8.10",
+    "gulp": "^4.0.0",
     "gulp-concat-css": "^2.0.0",
     "gulp-minify-css": "^0.4.3",
     "gulp-plumber": "^0.6.6"
