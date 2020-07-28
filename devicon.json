@@ -328,6 +328,14 @@
     }
   },
   {
+    "name": "figma",
+    "tags": ["designing-tool"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
     "name": "firefox",
     "tags": ["browser"],
     "versions": {
