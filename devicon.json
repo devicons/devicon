@@ -360,6 +360,14 @@
     }
   },
   {
+    "name": "gatsby",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
     "name": "gimp",
     "tags": ["graphic"],
     "versions": {
