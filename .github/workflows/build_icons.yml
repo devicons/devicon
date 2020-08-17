@@ -1,0 +1,12 @@
+name: Build Icons
+on: push
+
+jobs:
+  build:
+    name: Get Fonts From Icomoon
+    runs-on: windows-2019
+    steps:
+      - name: Hello World
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: 'Mona the Octocat'
