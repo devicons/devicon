@@ -6,7 +6,16 @@ jobs:
     name: Get Fonts From Icomoon
     runs-on: windows-2019
     steps:
-      - name: Hello World
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: 'Mona the Octocat'
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ./.github/scripts/requirements.txt
+      - name: Add geckodriver to PATH
+        run: set PATH=${{ format('{0}/.github/scripts/build_assets/geckodriver.exe', github.workspace) }};%PATH%	
+      - name: Run icomoon_upload.py
+        run: python ./.github/scripts/icomoon_upload.py ./icomoon.json ./devicon.json ./icons ./ --headless

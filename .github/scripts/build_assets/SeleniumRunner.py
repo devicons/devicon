@@ -1,0 +1,232 @@
+from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.common.exceptions import TimeoutException as SeleniumTimeoutException
+from typing import List
+
+
+class SeleniumRunner:
+    """
+    A runner that upload and download Icomoon resources using Selenium.
+    The WebDriver will use Firefox.
+    """
+
+    """
+    The long wait time for the driver in seconds.
+    """
+    LONG_WAIT_IN_SEC = 20
+
+    """
+    The medium wait time for the driver in seconds.
+    """
+    MED_WAIT_IN_SEC = 5
+
+    """
+    The short wait time for the driver in seconds.
+    """
+    SHORT_WAIT_IN_SEC = 0.6
+
+    """
+    The Icomoon Url.
+    """
+    ICOMOON_URL = "https://icomoon.io/app/#/select"
+
+    def __init__(self, icomoon_json_path: str, download_path: str,
+                 headless=True):
+        """
+        Create a SeleniumRunner object.
+        :param icomoon_json_path: a path to the iconmoon.json.
+        :param download_path: the location where you want to download
+        the icomoon.zip to.
+        svg folders.
+        :param headless: whether to run browser in headless (no UI) mode.
+        """
+        self.icomoon_json_path = icomoon_json_path
+        self.download_path = download_path
+        self.headless = headless
+        self.driver = None
+        self.set_options()
+
+    def set_options(self):
+        """
+        Build the WebDriver with Firefox Options allowing downloads and
+        set download to download_path.
+
+        :raises AssertionError: if the page title does not contain
+        "IcoMoon App".
+        """
+        options = Options()
+        allowed_mime_types = "application/zip, application/gzip, application/octet-stream"
+        # disable prompt to download from Firefox
+        options.set_preference("browser.helperApps.neverAsk.saveToDisk", allowed_mime_types)
+        options.set_preference("browser.helperApps.neverAsk.openFile", allowed_mime_types)
+
+        # set the default download path to downloadPath
+        options.set_preference("browser.download.folderList", 2)
+        options.set_preference("browser.download.dir", self.download_path)
+        options.headless = self.headless
+
+        self.driver = WebDriver(options=options)
+        self.driver.get(self.ICOMOON_URL)
+        assert "IcoMoon App" in self.driver.title
+
+    def upload_icomoon(self):
+        """
+        Upload the icomoon_test.json to icomoon.io.
+        :raises TimeoutException: happens when elements are not found.
+        """
+        print("Uploading JSON file...")
+        try:
+            # find the file input and enter the file path
+            import_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
+                ec.presence_of_element_located((By.CSS_SELECTOR, "div#file input"))
+            )
+            import_btn.send_keys(self.icomoon_json_path)
+        except Exception as e:
+            print("hi")
+            self.close()
+            raise e
+
+        try:
+            confirm_btn = WebDriverWait(self.driver, SeleniumRunner.MED_WAIT_IN_SEC).until(
+                ec.element_to_be_clickable((By.XPATH, "//div[@class='overlay']//button[text()='Yes']"))
+            )
+            confirm_btn.click()
+        except SeleniumTimeoutException as e:
+            print(e.stacktrace)
+            print("Cannot find the confirm button when uploading the icomoon_test.json",
+                  "Ensure that the icomoon_test.json is in the correct format for Icomoon.io",
+                  sep='\n')
+            self.close()
+
+        print("JSON file uploaded.")
+
+    def upload_svgs(self, svgs: List[str]):
+        """
+        Upload the SVGs provided in folder_info
+        :param svgs: a list of svg Paths that we'll upload to icomoon.
+        """
+        try:
+            print("Uploading SVGs...")
+
+            edit_mode_btn = self.driver.find_element_by_css_selector(
+                "div.btnBar button i.icon-edit"
+            )
+            edit_mode_btn.click()
+
+            self.click_hamburger_input()
+
+            for svg in svgs:
+                import_btn = self.driver.find_element_by_css_selector(
+                    "li.file input[type=file]"
+                )
+                import_btn.send_keys(svg)
+                print(f"Uploaded {svg}")
+                self.test_for_possible_alert()
+                self.remove_color_from_icon()
+
+            self.click_hamburger_input()
+            select_all_button = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
+                ec.element_to_be_clickable((By.XPATH, "//button[text()='Select All']"))
+            )
+            select_all_button.click()
+        except Exception as e:
+            self.close()
+            raise e
+
+    def click_hamburger_input(self):
+        """
+        Click the hamburger input until the pop up menu appears. This
+        method is needed because sometimes, we need to click the hamburger
+        input two times before the menu appears.
+        :return: None.
+        """
+        try:
+            hamburger_input = self.driver.find_element_by_css_selector(
+                "button.btn5.lh-def.transparent i.icon-menu"
+            )
+
+            menu_appear_callback = ec.element_to_be_clickable(
+                (By.CSS_SELECTOR, "h1#setH2 ul")
+            )
+
+            while not menu_appear_callback(self.driver):
+                hamburger_input.click()
+        except Exception as e:
+            self.close()
+            raise e
+
+    def test_for_possible_alert(self):
+        """
+        Test for the possible alert when we upload the svgs.
+        :return: None.
+        """
+        try:
+            dismiss_btn = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC, 0.15).until(
+                ec.element_to_be_clickable((By.XPATH, "//div[@class='overlay']//button[text()='Dismiss']"))
+            )
+            dismiss_btn.click()
+        except SeleniumTimeoutException:
+            pass
+
+    def remove_color_from_icon(self):
+        """
+        Remove the color from the most recent uploaded icon.
+        :return: None.
+        """
+        try:
+            recently_uploaded_icon = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
+                ec.element_to_be_clickable((By.XPATH, "//div[@id='set0']//mi-box[1]//div"))
+            )
+            recently_uploaded_icon.click()
+
+            color_tab = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
+                ec.element_to_be_clickable((By.CSS_SELECTOR, "div.overlayWindow i.icon-droplet"))
+            )
+            color_tab.click()
+
+            color_tab = self.driver\
+                .find_element_by_css_selector("div.overlayWindow i.icon-droplet-cross")
+            color_tab.click()
+
+            close_btn = self.driver\
+                .find_element_by_css_selector("div.overlayWindow i.icon-close")
+            close_btn.click()
+        except Exception as e:
+            self.close()
+            raise e
+
+    def download_icomoon_fonts(self):
+        """
+        Download the icomoon.zip from icomoon.io.
+        """
+        try:
+            print("Downloading Font files...")
+            self.driver.find_element_by_css_selector(
+                "a[href='#/select/font']"
+            ).click()
+
+            button = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
+                ec.presence_of_element_located((By.CSS_SELECTOR, "button.btn4 span"))
+            )
+            button.click()
+            print("Font files downloaded.")
+        except Exception as e:
+            self.close()
+            raise e
+
+    def close(self, err=True):
+        """
+        Close the SeleniumRunner instance.
+        :param err, whether this was called due to an error or not.
+        """
+        print("Closing down SeleniumRunner...")
+        self.driver.quit()
+
+        if err:
+            code = 1
+        else:
+            code = 0
+        exit(code)
