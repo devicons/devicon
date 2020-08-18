@@ -1,12 +1,15 @@
 [
   {
-    "name": "amazonwebservices",
-    "tags": ["cloud", "hosting", "server"],
+    "name": "haskell",
+    "color": "#5d5086",
+    "tags": ["language", "functional"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain-wordmark"],
-      "font": ["original", "plain-wordmark"]
-    }
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    },
+    "aliases": []
   },
+
   {
     "name": "android",
     "tags": ["os", "mobile"],
