@@ -143,16 +143,18 @@
     "tags": ["language"],
     "versions": {
       "svg": ["original", "line", "plain"],
-      "font": []
-    }
+      "font": ["plain"]
+    },
+    "aliases": []
   },
   {
     "name": "clojurescript",
     "tags": ["language"],
     "versions": {
       "svg": ["original", "plain"],
-      "font": []
-    }
+      "font": ["plain"]
+    },
+    "aliases": []
   },
   {
     "name": "codeigniter",
@@ -608,7 +610,8 @@
     "versions": {
       "svg": ["plain"],
       "font": ["plain"]
-    }
+    },
+    "aliases": []
   },
   {
     "name": "mongodb",

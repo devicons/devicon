@@ -34,25 +34,26 @@ class SeleniumRunner:
     ICOMOON_URL = "https://icomoon.io/app/#/select"
 
     def __init__(self, icomoon_json_path: str, download_path: str,
-                 headless=True):
+                 geckodriver_path: str, headless):
         """
         Create a SeleniumRunner object.
         :param icomoon_json_path: a path to the iconmoon.json.
         :param download_path: the location where you want to download
         the icomoon.zip to.
-        svg folders.
+        :param geckodriver_path: the path to the firefox executable.
         :param headless: whether to run browser in headless (no UI) mode.
         """
         self.icomoon_json_path = icomoon_json_path
         self.download_path = download_path
-        self.headless = headless
         self.driver = None
-        self.set_options()
+        self.set_options(geckodriver_path, headless)
 
-    def set_options(self):
+    def set_options(self, geckodriver_path: str, headless: bool):
         """
         Build the WebDriver with Firefox Options allowing downloads and
         set download to download_path.
+        :param geckodriver_path: the path to the firefox executable.
+        :param headless: whether to run browser in headless (no UI) mode.
 
         :raises AssertionError: if the page title does not contain
         "IcoMoon App".
@@ -66,9 +67,9 @@ class SeleniumRunner:
         # set the default download path to downloadPath
         options.set_preference("browser.download.folderList", 2)
         options.set_preference("browser.download.dir", self.download_path)
-        options.headless = self.headless
+        options.headless = headless
 
-        self.driver = WebDriver(options=options)
+        self.driver = WebDriver(options=options, executable_path=geckodriver_path)
         self.driver.get(self.ICOMOON_URL)
         assert "IcoMoon App" in self.driver.title
 
@@ -124,7 +125,7 @@ class SeleniumRunner:
                 )
                 import_btn.send_keys(svg)
                 print(f"Uploaded {svg}")
-                self.test_for_possible_alert()
+                self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Dismiss")
                 self.remove_color_from_icon()
 
             self.click_hamburger_input()
@@ -158,14 +159,18 @@ class SeleniumRunner:
             self.close()
             raise e
 
-    def test_for_possible_alert(self):
+    def test_for_possible_alert(self, wait_period: float, btn_text: str):
         """
         Test for the possible alert when we upload the svgs.
+        :param wait_period: the wait period for the possible alert
+        in seconds.
+        :param btn_text: the text that the alert's button will have.
         :return: None.
         """
         try:
-            dismiss_btn = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC, 0.15).until(
-                ec.element_to_be_clickable((By.XPATH, "//div[@class='overlay']//button[text()='Dismiss']"))
+            dismiss_btn = WebDriverWait(self.driver, wait_period, 0.15).until(
+                ec.element_to_be_clickable(
+                    (By.XPATH, f"//div[@class='overlay']//button[text()='{btn_text}']"))
             )
             dismiss_btn.click()
         except SeleniumTimeoutException:
@@ -181,17 +186,27 @@ class SeleniumRunner:
                 ec.element_to_be_clickable((By.XPATH, "//div[@id='set0']//mi-box[1]//div"))
             )
             recently_uploaded_icon.click()
+        except Exception as e:
+            self.close()
+            raise e
 
-            color_tab = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
+        try:
+            color_tab = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC).until(
                 ec.element_to_be_clickable((By.CSS_SELECTOR, "div.overlayWindow i.icon-droplet"))
             )
             color_tab.click()
 
-            color_tab = self.driver\
+            remove_color_btn = self.driver \
                 .find_element_by_css_selector("div.overlayWindow i.icon-droplet-cross")
-            color_tab.click()
+            remove_color_btn.click()
+        except SeleniumTimeoutException:
+            pass
+        except Exception as e:
+            self.close()
+            raise e
 
-            close_btn = self.driver\
+        try:
+            close_btn = self.driver \
                 .find_element_by_css_selector("div.overlayWindow i.icon-close")
             close_btn.click()
         except Exception as e:
@@ -208,25 +223,19 @@ class SeleniumRunner:
                 "a[href='#/select/font']"
             ).click()
 
-            button = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
+            self.test_for_possible_alert(self.MED_WAIT_IN_SEC, "Continue")
+            download_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
                 ec.presence_of_element_located((By.CSS_SELECTOR, "button.btn4 span"))
             )
-            button.click()
+            download_btn.click()
             print("Font files downloaded.")
         except Exception as e:
             self.close()
             raise e
 
-    def close(self, err=True):
+    def close(self):
         """
         Close the SeleniumRunner instance.
-        :param err, whether this was called due to an error or not.
         """
         print("Closing down SeleniumRunner...")
         self.driver.quit()
-
-        if err:
-            code = 1
-        else:
-            code = 0
-        exit(code)
