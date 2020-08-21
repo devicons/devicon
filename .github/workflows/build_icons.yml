@@ -19,3 +19,7 @@ jobs:
         run: >
           python ./.github/scripts/icomoon_upload.py ./.github/scripts/build_assets/geckodriver.exe
           ./icomoon.json ./devicon.json ./icons ./ --headless
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Built new icons, icomoon.json and devicon.css
