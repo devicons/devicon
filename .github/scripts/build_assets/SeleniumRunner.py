@@ -1,10 +1,13 @@
+from typing import List
+from pathlib import Path
+import time
+
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import TimeoutException as SeleniumTimeoutException
-from typing import List
 
 
 class SeleniumRunner:
@@ -213,9 +216,10 @@ class SeleniumRunner:
             self.close()
             raise e
 
-    def download_icomoon_fonts(self):
+    def download_icomoon_fonts(self, zip_path: Path):
         """
         Download the icomoon.zip from icomoon.io.
+        :param zip_path: the path to the zip file after it's downloaded.
         """
         try:
             print("Downloading Font files...")
@@ -228,10 +232,30 @@ class SeleniumRunner:
                 ec.presence_of_element_located((By.CSS_SELECTOR, "button.btn4 span"))
             )
             download_btn.click()
-            print("Font files downloaded.")
+            if self.wait_for_zip(zip_path):
+                print("Font files downloaded.")
+            else:
+                raise TimeoutError(f"Couldn't find {zip_path} after download button was clicked.")
         except Exception as e:
             self.close()
             raise e
+
+    def wait_for_zip(self, zip_path: Path) -> bool:
+        """
+        Wait for the zip file to be downloaded by checking for its existence
+        in the download path. Wait time is self.LONG_WAIT_IN_SEC and check time
+        is 1 sec.
+        :param zip_path: the path to the zip file after it's
+        downloaded.
+        :return: True if the file is found within the allotted time, else
+        False.
+        """
+        end_time = time.time() + self.LONG_WAIT_IN_SEC
+        while time.time() <= end_time:
+            if zip_path.exists():
+                return True
+            time.sleep(1)    
+        return False
 
     def close(self):
         """
