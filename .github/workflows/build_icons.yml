@@ -18,7 +18,7 @@ jobs:
       - name: Run icomoon_upload.py
         run: >
           python ./.github/scripts/icomoon_upload.py ./.github/scripts/build_assets/geckodriver.exe
-          ./icomoon.json ./devicon.json ./icons ./ --headless
+          ./icomoon.json ./devicon.json ./icons ./built_files --headless
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

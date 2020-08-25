@@ -1,7 +1,10 @@
-from build_assets.SeleniumRunner import SeleniumRunner
-import build_assets.filehandler as filehandler
 from pathlib import Path
 from argparse import ArgumentParser
+
+# pycharm complains that build_assets is an unresolved ref
+# don't worry about it, the script still runs
+from build_assets.SeleniumRunner import SeleniumRunner
+from build_assets import filehandler
 from build_assets.PathResolverAction import PathResolverAction
 
 
@@ -41,12 +44,12 @@ def main():
     new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
     svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path)
     runner.upload_svgs(svgs)
-    runner.download_icomoon_fonts()
 
-    # zip_name = "devicon-v1.0.zip"
-    # zip_path = str(Path(args.download_path, zip_name))
-    # filehandler.extract_files(zip_path, args.download_path)
-    # filehandler.rename_extracted_files(args.download_path)
+    zip_name = "devicon-v1.0.zip"
+    zip_path = Path(args.download_path, zip_name)
+    runner.download_icomoon_fonts(zip_path)
+    filehandler.extract_files(str(zip_path), args.download_path)
+    filehandler.rename_extracted_files(args.download_path)
     runner.close()
     print("Task completed.")
 
