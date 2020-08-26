@@ -160,6 +160,14 @@
     }
   },
   {
+    "name": "codepen",
+    "tags": ["social", "website", "editor"],
+    "versions": {
+      "svg": ["plain", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "coffeescript",
     "tags": ["javascript", "language"],
     "versions": {
