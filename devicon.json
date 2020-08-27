@@ -216,6 +216,14 @@
     }
   },
   {
+    "name": "dart",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "line", "line-wordmark"],
+      "font": ["line", "line-wordmark"]
+    }
+  },
+  {
     "name": "d3js",
     "tags": [],
     "versions": {
