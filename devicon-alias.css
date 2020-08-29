@@ -170,3 +170,10 @@
 .devicon-windows8-plain:before {
     content: "\ebf5";
 }
+
+.devicon-codepen-plain-wordmark:before {
+    content: "\e95d";
+}
+.devicon-codepen-original:before {
+    content: "\e95e";
+}
