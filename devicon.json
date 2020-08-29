@@ -352,6 +352,14 @@
     }
   },
   {
+    "name": "freecodecamp",
+    "tags": ["website", "education"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "gatling",
     "tags": ["framework", "testing"],
     "versions": {
