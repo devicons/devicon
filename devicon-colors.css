@@ -30,6 +30,10 @@
 .devicon-yarn-plain.colored {
   color: #2c8ebb;
 }
+.devicon-haskell-plain-wordmark.colored,
+.devicon-haskell-plain.colored{
+  color: #5E5185;
+}
 .devicon-handlebars-plain-wordmark.colored,
 .devicon-handlebars-plain.colored{
   color: #000000;
