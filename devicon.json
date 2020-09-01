@@ -448,6 +448,14 @@
     }
   },
   {
+    "name": "haskell",
+    "tags": ["language", "functional"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "handlebars",
     "tags": ["framework"],
     "versions": {
