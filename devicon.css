@@ -232,7 +232,7 @@
 .devicon-twitter-original:before {
   content: "\e91f";
 }
-.devicon-mocha:before {
+.devicon-mocha-plain:before {
   content: "\e919";
 }
 .devicon-jasmine-plain:before {
@@ -547,10 +547,10 @@
 .devicon-debian-plain:before {
   content: "\e67f";
 }
-.devicon-dot-net-plain-wordmark:before {
+.devicon-dotnet-plain-wordmark:before {
   content: "\e6d3";
 }
-.devicon-dot-net-plain:before {
+.devicon-dotnet-plain:before {
   content: "\e6d4";
 }
 .devicon-drupal-plain-wordmark:before {
