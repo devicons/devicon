@@ -165,6 +165,14 @@
     }
   },
   {
+    "name": "codepen",
+    "tags": ["social", "website", "editor"],
+    "versions": {
+      "svg": ["plain", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "coffeescript",
     "tags": ["javascript", "language"],
     "versions": {
@@ -442,6 +450,14 @@
     "versions": {
       "svg": ["plain"],
       "font": ["plain"]
+    }
+  },
+  {
+    "name": "haskell",
+    "tags": ["language", "functional"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
