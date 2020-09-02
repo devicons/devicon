@@ -56,9 +56,8 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str) -> List[str]:
     for icon_info in new_icons:
         folder_path = Path(icons_folder_path, icon_info['name'])
 
-        if not (folder_path.exists() and folder_path.is_dir()):
-            print(f"Invalid path. This is not a directory: {folder_path}\nSkipping entry...")
-            continue
+        if not folder_path.is_dir():
+            raise ValueError(f"Invalid path. This is not a directory: {folder_path}.")
 
         try:
             aliases = icon_info["aliases"]
@@ -74,6 +73,8 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str) -> List[str]:
 
             if path.exists():
                 file_paths.append(str(path))
+            else:
+                raise ValueError(f"This path doesn't exist: {path}")
 
     return file_paths
 

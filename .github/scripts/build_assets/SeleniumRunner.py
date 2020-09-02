@@ -78,7 +78,7 @@ class SeleniumRunner:
 
     def upload_icomoon(self):
         """
-        Upload the icomoon_test.json to icomoon.io.
+        Upload the icomoon.json to icomoon.io.
         :raises TimeoutException: happens when elements are not found.
         """
         print("Uploading JSON file...")
@@ -89,7 +89,6 @@ class SeleniumRunner:
             )
             import_btn.send_keys(self.icomoon_json_path)
         except Exception as e:
-            print("hi")
             self.close()
             raise e
 
@@ -100,8 +99,8 @@ class SeleniumRunner:
             confirm_btn.click()
         except SeleniumTimeoutException as e:
             print(e.stacktrace)
-            print("Cannot find the confirm button when uploading the icomoon_test.json",
-                  "Ensure that the icomoon_test.json is in the correct format for Icomoon.io",
+            print("Cannot find the confirm button when uploading the icomoon.json",
+                  "Ensure that the icomoon.json is in the correct format for Icomoon.io",
                   sep='\n')
             self.close()
 
