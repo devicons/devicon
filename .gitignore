@@ -3,3 +3,4 @@ node_modules
 .idea
 geckodriver.log
 __pycache__
+*.pyc
