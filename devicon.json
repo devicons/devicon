@@ -143,7 +143,7 @@
     "tags": ["language"],
     "versions": {
       "svg": ["original", "line", "plain"],
-      "font": ["plain"]
+      "font": []
     },
     "aliases": []
   },
@@ -152,7 +152,7 @@
     "tags": ["language"],
     "versions": {
       "svg": ["original", "plain"],
-      "font": ["plain"]
+      "font": []
     },
     "aliases": []
   },
@@ -625,7 +625,7 @@
     "tags": ["testing"],
     "versions": {
       "svg": ["plain"],
-      "font": ["plain"]
+      "font": []
     },
     "aliases": []
   },
