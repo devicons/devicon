@@ -1,3 +1,9 @@
+.devicon-codepen-original-wordmark.colored,
+.devicon-codepen-plain-wordmark.colored,
+.devicon-codepen-original.colored,
+.devicon-codepen-plain.colored {
+  color: #231F20;
+}
 .devicon-sketch-line-wordmark.colored,
 .devicon-sketch-line.colored {
   color: #fdad00;
@@ -23,6 +29,10 @@
 .devicon-yarn-plain-wordmark.colored,
 .devicon-yarn-plain.colored {
   color: #2c8ebb;
+}
+.devicon-haskell-plain-wordmark.colored,
+.devicon-haskell-plain.colored{
+  color: #5E5185;
 }
 .devicon-handlebars-plain-wordmark.colored,
 .devicon-handlebars-plain.colored{
