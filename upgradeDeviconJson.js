@@ -1,16 +1,22 @@
-/* Parse the devicon-colors.css and convert it to devicon-colors.json*/
 const fs = require("fs");
 const path = require('path');
-const techNameRegExp = /(?<=-)(\w+-)+\w+/ig;
-const contentRegExp = /(?<=")\\\w+(?=")/;
+const TECH_NAME_REG_EXP = /(?<=-)(\w+-)+\w+/ig;
+const CONTENT_REG_EXP = /(?<=")\\\w+(?=")/;
 
 function main() {
 	let contentMap = constructDeviconContentMap();
 	let aliasMap = constructAliasContentMap();
 	let colorsMap = constructColorsMap();
+
+	// if you want to see what the maps are like
+	// fs.writeFileSync(path.join(__dirname, "contentMap.json"),
+	// 	JSON.stringify(contentMap), "utf8");
+	// fs.writeFileSync(path.join(__dirname, "aliasMap.json"),
+	// 	JSON.stringify(aliasMap), "utf8");
+	// fs.writeFileSync(path.join(__dirname, "colorsMap.json"),
+	// 	JSON.stringify(colorsMap), "utf8");
+
 	createNewDeviconJson(colorsMap, contentMap, aliasMap);
-	// fs.writeFileSync(path.join(__dirname, "devContent.json"), JSON.stringify(contentMap));
-	// fs.writeFileSync(path.join(__dirname, "devAliasContent.json"), JSON.stringify(aliasMap));
 }
 
 /**
@@ -35,7 +41,7 @@ function constructColorsMap() {
 		}
 
 		if (line.match(/devicon/)) {
-			key = line.match(/-\w+/)[0].slice(1);
+			key = line.match(/(?<=-)\w+/)[0];
 		}
 	});
 	return deviconColors;
@@ -43,8 +49,8 @@ function constructColorsMap() {
 
 /**
  * Create a map of technology name and their corresponding 
- * colors by parsing the devicon.css.
- * @return an object that maps technology name to colors.
+ * content string by parsing the devicon.css.
+ * @return an object that maps technology name to content string.
  */
 function constructDeviconContentMap() {
 	let filePath = path.join(__dirname, "devicon.css");
@@ -61,26 +67,27 @@ function constructDeviconContentMap() {
  * put them in the contentMap.
  * @param {String} str, a css selector str 
  * @param {Object} contentMap, an object that maps the
- * class name to the content.
+ * technology name to the content string.
  */
 function getNameAndContentFromStr(str, contentMap) {
-	let techName = str.match(techNameRegExp)[0];
-	let content = str.match(contentRegExp)[0];
+	let techName = str.match(TECH_NAME_REG_EXP)[0];
+	let content = str.match(CONTENT_REG_EXP)[0];
 	contentMap[techName] = content;
 }
 
 /**
- * Create a map of technology name and their corresponding 
- * colors by parsing the devicon-alias.css.
- * @return an object that maps technology name to colors.
+ * Create a map of contents mapped to aliases
+ * by parsing the devicon-alias.css.
+ * @return an object that maps content string to an array of 
+ * aliases name.
  */
 function constructAliasContentMap() {
 	let filePath = path.join(__dirname, "devicon-alias.css");
 	let css = fs.readFileSync(filePath, "utf8");
-	let deviconContent = {};
+	let deviconAliases = {};
 	css.match(/\.devicon-(.*\s+){2,}?(?=})/g).forEach(str => 
-		getAliasAndContentFromStr(str, deviconContent));
-	return deviconContent;
+		getAliasAndContentFromStr(str, deviconAliases));
+	return deviconAliases;
 }
 
 /**
@@ -88,11 +95,11 @@ function constructAliasContentMap() {
  * put them in the aliasMap.
  * @param {String} str, a css selector str 
  * @param {Object} aliasMap, an object that maps the
- * content to an array of class names/aliases.
+ * content string to an array of class names/aliases.
  */
 function getAliasAndContentFromStr(str, aliasMap) {
-	let techNames = str.match(techNameRegExp);
-	let content = str.match(contentRegExp)[0];
+	let techNames = str.match(TECH_NAME_REG_EXP);
+	let content = str.match(CONTENT_REG_EXP)[0];
 	aliasMap[content] = techNames;
 }
 
@@ -100,8 +107,8 @@ function getAliasAndContentFromStr(str, aliasMap) {
  * Create a new devicon.json that contains font objects
  * with the color attributes.
  * @param {Object} colorsMap the colorsMap create by constructColorsMap()
- * @param {Object} contentMap the colorsMap create by constructDeviconContentMap()
- * @param {Object} aliasMap the colorsMap create by constructAliasContentMap()
+ * @param {Object} contentMap the contentMap create by constructDeviconContentMap()
+ * @param {Object} aliasMap the aliasMap create by constructAliasContentMap()
  */
 function createNewDeviconJson(colorsMap, contentMap, aliasMap) {
 	let deviconPath = path.join(__dirname, "devicon.json");
@@ -112,9 +119,18 @@ function createNewDeviconJson(colorsMap, contentMap, aliasMap) {
 		return addAliasesToObj(newObj, contentMap, aliasMap);
 	});
 
+	// run check to ensure every object has the needed attribute
+
 	let newDeviconPath = path.join(__dirname, "newDevicon.json");
 	fs.writeFileSync(newDeviconPath,
 		JSON.stringify(newDeviconJson), "utf8");
+
+	let specialFont = newDeviconJson.filter(fontObj => {
+		return !(typeof(fontObj["color"]) === "string"
+			&& Array.isArray(fontObj["aliases"]));
+	})
+
+	console.log(specialFont);
 }
 
 /**
@@ -125,7 +141,11 @@ function createNewDeviconJson(colorsMap, contentMap, aliasMap) {
  */
 function addColorToObj(fontObj, colorsMap) {
 	let key = fontObj.name;
-	fontObj["color"] = colorsMap[key];
+	if (!colorsMap[key]) {
+		console.log("This font doesn't have a color: " + key)
+	} else {
+		fontObj["color"] = colorsMap[key];
+	}
 	return fontObj;
 }
 
@@ -133,13 +153,48 @@ function addColorToObj(fontObj, colorsMap) {
  * Add the correct 'aliases' attribute to the fontObject by 
  * parsing through the colorsMap.
  * @param {Object} fontObj a font object from the devicon.json.
- * @param {Object} contentMap the colorsMap create by constructDeviconContentMap()
- * @param {Object} aliasMap the colorsMap create by constructAliasContentMap()
+ * @param {Object} contentMap the contentMap create by constructDeviconContentMap()
+ * @param {Object} aliasMap the aliasMap create by constructAliasContentMap()
  */
 function addAliasesToObj(fontObj, contentMap, aliasMap) {
+	fontObj["aliases"] = [];
+
 	// the contentMap contains the mappings of the base versions
 	// the aliasMap contains the mappings of the alias versions
+	let fontNames = fontObj["versions"]["font"].map(version => {
+		return `${fontObj["name"]}-${version}`;
+	});
 
+	// for each font version, we check if it has an entry in
+	// the content map. If it does, check if that content has an alias(es)
+	// If that also pass, we construct the alias object based on those info.
+	for (let fontName of fontNames) {
+		let content = contentMap[fontName];
+		if (typeof(content) !== "string") continue;
+
+		let aliases = aliasMap[content];
+		if (!Array.isArray(aliases)) continue;
+
+		let aliasObjs = aliases.map(alias => {
+			return {
+				"base": extractVersion(fontName),
+				"alias": extractVersion(alias)
+			};
+		});
+		fontObj["aliases"] = fontObj["aliases"].concat(aliasObjs);
+	}
+	return fontObj;
+}
+
+/**
+ * Extract the font version from a font name.
+ * @param {string} fontName, a font name in the format of
+ * "techname"-"version".
+ * @return the font version as a string ("original", "plain", etc..)
+ */
+function extractVersion(fontName) {
+	let fontVersioRegExp = /(original|plain|line)(-wordmark)?/;
+	return fontName.match(fontVersioRegExp)[0];
 }
 
 main();

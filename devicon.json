@@ -1,15 +1,5 @@
 [
   {
-    "name": "haskell",
-    "color": "#5d5086",
-    "tags": ["language", "functional"],
-    "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-      "font": ["plain", "plain-wordmark"]
-    },
-    "aliases": []
-  },
-  {
     "name": "amazonwebservices",
     "tags": ["cloud", "hosting", "server"],
     "versions": {
@@ -282,7 +272,7 @@
     }
   },
   {
-    "name": "dot-net",
+    "name": "dotnet",
     "tags": ["framework"],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
