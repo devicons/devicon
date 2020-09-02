@@ -2,3 +2,4 @@ node_modules
 .DS_Store
 .idea
 geckodriver.log
+__pycache__
