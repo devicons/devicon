@@ -49,7 +49,8 @@ def main():
     svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path)
     runner.upload_svgs(svgs)
 
-    zip_name = "devicon-v1.0.zip"
+    # get the downloaded zip file
+    zip_name = next(Path(".").glob("devicon-*.zip"))
     zip_path = Path(args.download_path, zip_name)
     runner.download_icomoon_fonts(zip_path)
     filehandler.extract_files(str(zip_path), args.download_path)
