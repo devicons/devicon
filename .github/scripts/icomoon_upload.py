@@ -37,11 +37,15 @@ def main():
 
     args = parser.parse_args()
 
+    new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
+    if len(new_icons) == 0:
+        print("No files need to be uploaded. Ending script...")
+        return
+
     runner = SeleniumRunner(args.icomoon_json_path, args.download_path,
                             args.geckodriver_path, args.headless)
     runner.upload_icomoon()
 
-    new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
     svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path)
     runner.upload_svgs(svgs)
 
