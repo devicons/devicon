@@ -1,17 +1,13 @@
 name: Build Icons
-on: 
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: push
 jobs:
   build:
     name: Get Fonts From Icomoon
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
+        with: 
+          ref: ${{ github.head_ref }}
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with: 
@@ -29,5 +25,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Built new icons, icomoon.json and devicon.css
-          branch: build-integrate
-          ref: ${{ github.head_ref }}
+          branch: action-fix
