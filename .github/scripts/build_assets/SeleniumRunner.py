@@ -19,12 +19,12 @@ class SeleniumRunner:
     """
     The long wait time for the driver in seconds.
     """
-    LONG_WAIT_IN_SEC = 20
+    LONG_WAIT_IN_SEC = 25
 
     """
     The medium wait time for the driver in seconds.
     """
-    MED_WAIT_IN_SEC = 5
+    MED_WAIT_IN_SEC = 6
 
     """
     The short wait time for the driver in seconds.
@@ -81,7 +81,7 @@ class SeleniumRunner:
         Upload the icomoon.json to icomoon.io.
         :raises TimeoutException: happens when elements are not found.
         """
-        print("Uploading JSON file...")
+        print("Uploading icomoon.json file...")
         try:
             # find the file input and enter the file path
             import_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(

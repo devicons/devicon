@@ -30,3 +30,4 @@ jobs:
         with:
           commit_message: Built new icons, icomoon.json and devicon.css
           branch: build-integrate
+          ref: ${{ github.head_ref }}
