@@ -2,7 +2,10 @@ name: Build Icons
 on:
   pull_request:
     branches:
-      - build-integrate
+      - master
+  push:
+    branches:
+      - master
 jobs:
   build:
     name: Get Fonts From Icomoon
@@ -23,9 +26,13 @@ jobs:
         run: >
           python ./.github/scripts/icomoon_upload.py 
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe
-          ./icomoon.json ./devicon.json ./icons ./built_files --headless
+          ./icomoon.json ./devicon.json ./icons ./ --headless
+      - name: Upload geckodriver.log for debugging purposes
+        uses: actions/upload-artifact@v2
+        with:
+          path: ./geckodriver.log
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Built new icons, icomoon.json and devicon.css
-          branch: action-fix
+          branch: build-integrate
