@@ -59,6 +59,7 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str) -> List[str]:
         if not folder_path.is_dir():
             raise ValueError(f"Invalid path. This is not a directory: {folder_path}.")
 
+        # TODO: remove the try-except when the devicon.json is upgraded
         try:
             aliases = icon_info["aliases"]
         except KeyError:
