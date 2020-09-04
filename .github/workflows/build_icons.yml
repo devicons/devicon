@@ -1,12 +1,15 @@
 name: Build Icons
-on: push
+on:
+  pull_request:
+    branches:
+      - build-integrate
 jobs:
   build:
     name: Get Fonts From Icomoon
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
-        with: 
+        with:
           ref: ${{ github.head_ref }}
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
