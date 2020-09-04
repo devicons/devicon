@@ -24,8 +24,12 @@ jobs:
           python ./.github/scripts/icomoon_upload.py 
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe
           ./icomoon.json ./devicon.json ./icons ./built_files --headless
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Upload geckodriver.log
+        uses: actions/upload-artifact@v2
         with:
-          commit_message: Built new icons, icomoon.json and devicon.css
-          branch: action-fix
+          path: ./geckodriver.log
+      # - name: Commit changes
+      #   uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: Built new icons, icomoon.json and devicon.css
+      #     branch: action-fix
