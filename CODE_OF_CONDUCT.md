@@ -55,9 +55,9 @@ further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting a maintainer of the [project team members](https://github.com/orgs/devicons/people). All
-complaints will be reviewed and investigated and will result in a response that
-is deemed necessary and appropriate to the circumstances. The project team is
+reported by contacting a maintainer of the [project team members](https://github.com/orgs/devicons/people)
+or write a email to info@devicon.dev. All complaints will be reviewed and investigated and will result 
+in a response that is deemed necessary and appropriate to the circumstances. The project team is
 obligated to maintain confidentiality with regard to the reporter of an incident.
 Further details of specific enforcement policies may be posted separately.
 
