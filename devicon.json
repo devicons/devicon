@@ -576,6 +576,14 @@
     }
   },
   {
+    "name": "labview",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "laravel",
     "tags": ["php", "framework"],
     "versions": {
