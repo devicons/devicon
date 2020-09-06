@@ -322,6 +322,10 @@
 .devicon-drupal-plain.colored {
 	color: #0073BA;
 }
+.devicon-embeddedc-plain-wordmark.colored,
+.devicon-embeddedc-plain.colored {
+	color: #444444;
+}
 .devicon-erlang-plain-wordmark.colored,
 .devicon-erlang-plain.colored {
 	color: #a90533;
