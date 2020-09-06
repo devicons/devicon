@@ -34,5 +34,4 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Built new icons, icomoon.json and devicon.css
-          branch: build-integrate
+          commit_message: Build new icons, icomoon.json and devicon.css
