@@ -43,6 +43,9 @@ def main():
         print("No files need to be uploaded. Ending script...")
         return
 
+    # print list of new icons, separated by comma
+    print("List of new icons:")
+    print(*new_icons, sep = "\n")
     try:
         runner = SeleniumRunner(args.icomoon_json_path, args.download_path,
                                 args.geckodriver_path, args.headless)
