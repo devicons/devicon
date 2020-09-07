@@ -63,7 +63,7 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str) -> List[str]:
         try:
             aliases = icon_info["aliases"]
         except KeyError:
-            continue
+            aliases = [] # create empty list of aliases if not provided in devicon.json
 
         for font_version in icon_info["versions"]["font"]:
             if is_alias(font_version, aliases):
