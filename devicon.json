@@ -1,15 +1,12 @@
 [
   {
-    "name": "haskell",
-    "color": "#5d5086",
-    "tags": ["language", "functional"],
+    "name": "amazonwebservices",
+    "tags": ["cloud", "hosting", "server"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-      "font": ["plain", "plain-wordmark"]
-    },
-    "aliases": []
+      "svg": ["original", "original-wordmark", "plain-wordmark"],
+      "font": ["original", "plain-wordmark"]
+    }
   },
-
   {
     "name": "android",
     "tags": ["os", "mobile"],
@@ -144,8 +141,7 @@
     "versions": {
       "svg": ["original", "line", "plain"],
       "font": []
-    },
-    "aliases": []
+    }
   },
   {
     "name": "clojurescript",
@@ -153,8 +149,7 @@
     "versions": {
       "svg": ["original", "plain"],
       "font": []
-    },
-    "aliases": []
+    }
   },
   {
     "name": "codeigniter",
@@ -626,8 +621,7 @@
     "versions": {
       "svg": ["plain"],
       "font": []
-    },
-    "aliases": []
+    }
   },
   {
     "name": "mongodb",
