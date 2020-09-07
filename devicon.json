@@ -113,7 +113,7 @@
   },
   {
     "name": "c3js",
-    "tags": ["javascript","chart","library"],
+    "tags": ["javascript", "chart", "library"],
     "versions": {
       "svg": ["original", "plain"],
       "font": ["plain"]
