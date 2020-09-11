@@ -416,6 +416,10 @@
 .devicon-krakenjs-plain-wordmark.colored {
 	color: #0081C2;
 }
+.devicon-labview-plain.colored,
+.devicon-labview-plain-wordmark.colored {
+	color: #fed500;
+}
 .devicon-laravel-plain-wordmark.colored,
 .devicon-laravel-plain.colored {
 	color: #fd4f31;
