@@ -112,6 +112,14 @@
     }
   },
   {
+    "name": "c3js",
+    "tags": ["javascript", "chart", "library"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "cakephp",
     "tags": ["framework"],
     "versions": {
