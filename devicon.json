@@ -1038,5 +1038,45 @@
       "svg": ["plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
+  },
+  {
+    "name": "nestjs",
+    "tags": ["framework", "nodejs", "javascript"],
+    "versions": {
+      "svg": ["original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "codecov",
+    "tags": ["platform", "integration"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "circleci",
+    "tags": ["integration", "platform"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "jest",
+    "tags": ["testing", "javascript"],
+    "versions": {
+      "svg": ["plain"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "karma",
+    "tags": ["testing", "test-runner"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
   }
 ]
