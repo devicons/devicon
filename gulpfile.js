@@ -34,7 +34,9 @@ async function createDeviconMinCSS() {
     await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
 
     return gulp.src(finalMinSCSSName)
-        .pipe(sass.sync({"outputStyle": "compressed"}).on('error', sass.logError))
+        // to get a minify version, uncomment line 38 and comment line 39
+        // .pipe(sass.sync({"outputStyle": "compressed"}).on('error', sass.logError))
+        .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest('./'));
 }
 
@@ -66,12 +68,6 @@ async function createCSSFiles() {
  * created.
  */
 function createAliasSCSS(deviconJson) {
-    // let css = await fsPromise.readFile(
-    //     path.join(__dirname, "devicon.css"), "utf8"
-    // );
-
-    // let statements = css.match(/\.devicon-(.*\s+){2,}?(?=})/g).map(str => 
-    // 	createAliasesStatement(str, deviconJson));
     let statements = deviconJson.map(createAliasStatement).join(" ");
     let sass = `@use "devicon";${statements}`;
     let sassPath = path.join(__dirname, aliasSCSSName);
@@ -119,10 +115,9 @@ function createColorsCSS(deviconJson) {
         } = fontObj;
 
         if (fonts.length === 0 || typeof(color) !== "string") {
-            console.log(name);
+            console.log(`This object doesn't have a font or a color: ${name}`);
             return "";
         } 
-        // loop through the fonts and create css classes
         let cssClasses = fonts.map(font => `.devicon-${name}-${font}`);
         return `${cssClasses.join(",")}{color: ${color}}`;
     }).join(" ");
