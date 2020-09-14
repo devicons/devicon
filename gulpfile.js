@@ -14,14 +14,14 @@ const path = require("path");
 async function createDeviconMinCSS() {
     await createCSSFiles();
 
-    let deviconMinPath = path.join(__dirname, "devicon.min.scss");
+    let deviconMinPath = path.join(__dirname, "min.scss");
     // recall that devicon-alias.scss imported the devicon.css => don't need
     // to reimport that file.
-    const fileContent = "@use \"devicon-alias\";@use \"devicon-colors\";";
+    const fileContent = "@use \"alias\";@use \"colors\";";
     await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
-    return gulp.src("devicon.min.scss")
-        .pipe(sass.sync())
-        .pipe(gulp.dest('./'));
+    return gulp.src("min.scss")
+        .pipe(sass.sync({"outputStyle": "compressed"}).on('error', sass.logError))
+        .pipe(gulp.dest('./css'));
 }
 
 /**
@@ -31,7 +31,7 @@ async function createDeviconMinCSS() {
 async function createCSSFiles() {
     const deviconJson = JSON.parse(
         await fsPromise.readFile(
-            path.join(__dirname, "devicon.json"), "utf8"
+            path.join(__dirname, "newDevicon.json"), "utf8"
         )
     );
 
@@ -60,7 +60,7 @@ function createAliasSCSS(deviconJson) {
     // 	createAliasesStatement(str, deviconJson));
     let statements = deviconJson.map(createAliasStatement).join(" ");
     let sass = `@use "devicon";${statements}`;
-    let sassPath = path.join(__dirname, "devicon-alias.scss");
+    let sassPath = path.join(__dirname, "alias.scss");
     return fsPromise.writeFile(sassPath, sass, "utf8");
 }
 
@@ -107,9 +107,9 @@ function createColorsCSS(deviconJson) {
         // loop through the fonts and create css classes
         let cssClasses = fonts.map(font => `.devicon-${name}-${font}`);
         return `${cssClasses.join(",")}{color: ${color}}`;
-    });
+    }).join(" ");
 
-    let cssPath = path.join(__dirname, "devicon-colors.css");
+    let cssPath = path.join(__dirname, "colors.css");
     return fsPromise.writeFile(cssPath, statements, "utf8");
 }
 
