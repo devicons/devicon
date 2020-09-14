@@ -187,12 +187,14 @@
     "name": "clojure",
     "tags": ["language"],
     "versions": { "svg": ["original", "line", "plain"], "font": [] },
+    "color": "#96ca4b",
     "aliases": []
   },
   {
     "name": "clojurescript",
     "tags": ["language"],
     "versions": { "svg": ["original", "plain"], "font": [] },
+    "color": "#96ca4b",
     "aliases": []
   },
   {
@@ -368,6 +370,7 @@
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     },
+    "color": "#1384c8",
     "aliases": []
   },
   {
@@ -987,6 +990,7 @@
     "name": "redux",
     "tags": ["framework"],
     "versions": { "svg": ["original"], "font": [] },
+    "color": "#764abc",
     "aliases": []
   },
   {
@@ -1298,6 +1302,7 @@
     "name": "yunohost",
     "tags": ["os"],
     "versions": { "svg": ["original"], "font": [] },
+    "color": "#000000",
     "aliases": []
   },
   {
