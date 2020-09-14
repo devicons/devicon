@@ -7,21 +7,35 @@ sass.compiler = require('sass')
 const fsPromise = require('fs').promises;
 const path = require("path");
 
+// global const
+// production
+// const deviconJSONName = "devicon.json";
+// const aliasSCSSName = "devicon-alias.scss";
+// const colorsCSSName = "devicon-colors.css";
+// const finalMinSCSSName = "devicon.min.scss";
+
+// testing
+const deviconJSONName = "newDevicon.json";
+const aliasSCSSName = "alias.scss";
+const colorsCSSName = "colors.css";
+const finalMinSCSSName = "min.scss";
+
 /**
  * Create the devicon.min.css by creating needed
- * css files and compiling using Sass.
+ * css files and compiling them together using Sass.
  */
 async function createDeviconMinCSS() {
     await createCSSFiles();
 
-    let deviconMinPath = path.join(__dirname, "min.scss");
+    let deviconMinPath = path.join(__dirname, finalMinSCSSName);
     // recall that devicon-alias.scss imported the devicon.css => don't need
     // to reimport that file.
     const fileContent = "@use \"alias\";@use \"colors\";";
     await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
-    return gulp.src("min.scss")
+
+    return gulp.src(finalMinSCSSName)
         .pipe(sass.sync({"outputStyle": "compressed"}).on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./'));
 }
 
 /**
@@ -31,7 +45,7 @@ async function createDeviconMinCSS() {
 async function createCSSFiles() {
     const deviconJson = JSON.parse(
         await fsPromise.readFile(
-            path.join(__dirname, "newDevicon.json"), "utf8"
+            path.join(__dirname, deviconJSONName), "utf8"
         )
     );
 
@@ -60,7 +74,7 @@ function createAliasSCSS(deviconJson) {
     // 	createAliasesStatement(str, deviconJson));
     let statements = deviconJson.map(createAliasStatement).join(" ");
     let sass = `@use "devicon";${statements}`;
-    let sassPath = path.join(__dirname, "alias.scss");
+    let sassPath = path.join(__dirname, aliasSCSSName);
     return fsPromise.writeFile(sassPath, sass, "utf8");
 }
 
@@ -104,13 +118,41 @@ function createColorsCSS(deviconJson) {
             color
         } = fontObj;
 
+        if (fonts.length === 0 || typeof(color) !== "string") {
+            console.log(name);
+            return "";
+        } 
         // loop through the fonts and create css classes
         let cssClasses = fonts.map(font => `.devicon-${name}-${font}`);
         return `${cssClasses.join(",")}{color: ${color}}`;
     }).join(" ");
 
-    let cssPath = path.join(__dirname, "colors.css");
+    let cssPath = path.join(__dirname, colorsCSSName);
     return fsPromise.writeFile(cssPath, statements, "utf8");
+}
+
+/**
+ * Remove the devicon-alias.scss, devicon-colors.css, 
+ * and the devicon.min.scss.
+ */
+function cleanUp() {
+    let fileNames = [
+        aliasSCSSName,
+        colorsCSSName,
+        finalMinSCSSName,
+    ];
+
+    return Promise.all(
+        fileNames.map(name => {
+            try {
+                let filePath = path.join(__dirname, name);
+                return fsPromise.unlink(filePath);
+            } catch(e) {
+                console.log("err was catch here");
+                console.log(e);
+            }
+        })
+    );
 }
 
 /**
@@ -135,8 +177,9 @@ function minify() {
         .pipe(gulp.dest('./'))
 }
 
-
 exports.concat = concat;
 exports.minify = minify;
 exports.updateCss = createDeviconMinCSS;
+exports.clean = cleanUp;
+exports.test = gulp.series(createDeviconMinCSS, cleanUp);
 exports.default = gulp.series(concat, minify);
