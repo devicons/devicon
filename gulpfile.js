@@ -2,11 +2,31 @@ var gulp      = require('gulp');
 var minifyCSS = require('gulp-minify-css');
 var concatCss = require('gulp-concat-css');
 var plumber   = require('gulp-plumber');
-const fsPromise = require('fs/promises');
+const sass = require('gulp-sass');
+sass.compiler = require('sass')
+const fsPromise = require('fs').promises;
 const path = require("path");
 
 /**
- * Create the CSS files from the devicon.json.
+ * Create the devicon.min.css by creating needed
+ * css files and compiling using Sass.
+ */
+async function createDeviconMinCSS() {
+    await createCSSFiles();
+
+    let deviconMinPath = path.join(__dirname, "devicon.min.scss");
+    // recall that devicon-alias.scss imported the devicon.css => don't need
+    // to reimport that file.
+    const fileContent = "@use \"devicon-alias\";@use \"devicon-colors\";";
+    await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
+    return gulp.src("devicon.min.scss")
+        .pipe(sass.sync())
+        .pipe(gulp.dest('./'));
+}
+
+/**
+ * Create the devicon-alias.scss and the
+ * devicon-colors.css from the devicon.json.
  */
 async function createCSSFiles() {
     const deviconJson = JSON.parse(
@@ -15,22 +35,33 @@ async function createCSSFiles() {
         )
     );
 
-    createAliasCSS(deviconJson);
-    createColorsCSS(deviconJson);
+    await Promise.all([
+        createAliasSCSS(deviconJson),
+        createColorsCSS(deviconJson)
+    ])
 }
 
 /**
- * Create an alias css file in the root dir based on the devicon.json  
+ * Create an alias scss file in the root dir based on the devicon.json.
+ * This function will use sass instead of normal css.
+ * This is due to sass's ability to extend classes => Make it easier
+ * to create aliases classes.
  * @param {Object} deviconJson, the object read from the
  * devicon.json file. 
+ * @return a Promise that'll resolve when the devicon-alias.scss is
+ * created.
  */
-async function createAliasCSS(deviconJson) {
-    let css = await fsPromise.readFile(
-        path.join(__dirname, "devicon.css"), "utf8"
-    );
+function createAliasSCSS(deviconJson) {
+    // let css = await fsPromise.readFile(
+    //     path.join(__dirname, "devicon.css"), "utf8"
+    // );
 
-    let statements = css.match(/\.devicon-(.*\s+){2,}?(?=})/g).map(str => 
-		createAliasesStatement(str, deviconJson));
+    // let statements = css.match(/\.devicon-(.*\s+){2,}?(?=})/g).map(str => 
+    // 	createAliasesStatement(str, deviconJson));
+    let statements = deviconJson.map(createAliasStatement).join(" ");
+    let sass = `@use "devicon";${statements}`;
+    let sassPath = path.join(__dirname, "devicon-alias.scss");
+    return fsPromise.writeFile(sassPath, sass, "utf8");
 }
 
 
@@ -38,24 +69,29 @@ async function createAliasCSS(deviconJson) {
  * Create the aliases statement by searching for the 
  * techname in the statement and finding its aliases in
  * the deviconJson.
- * @param {String} str, a css selector str 
- * @param {Object} deviconJson, an object that maps the
- * technology name to the content string.
+ * @param {Object} fontObj, a devicon font object.
+ * @return a string representing a css statement of the
+ * devicon-alias.scss.
  */
-function createAliasesStatement(str, deviconJson) {
-    try {
-        const TECH_NAME_REG_EXP = /(?<=-)(\w+-)*(?=-)/ig;
-        let techName = str.match(TECH_NAME_REG_EXP)[0];
-    } catch(e) {
-        console.log(str);
-        console.error(e);
-    }
+function createAliasStatement(fontObj) {
+    let {
+        name,
+        aliases
+    } = fontObj;
+
+    return aliases.map(aliasObj => {
+        return `.devicon-${name}-${aliasObj.alias} {
+            @extend .devicon-${name}-${aliasObj.base};
+        }`;
+    }).join(" ");
 }
 
 /**
  * Create a colors css file in the root dir based on the deviconJson.
  * @param {Object} deviconJson, the object read from the
  * devicon.json file. 
+ * @return a Promise that'll resolve when the devicon-alias.scss is
+ * created.
  */
 function createColorsCSS(deviconJson) {
     // create the color statements for each font object
@@ -70,14 +106,11 @@ function createColorsCSS(deviconJson) {
 
         // loop through the fonts and create css classes
         let cssClasses = fonts.map(font => `.devicon-${name}-${font}`);
-        // make the statement
         return `${cssClasses.join(",")}{color: ${color}}`;
     });
 
     let cssPath = path.join(__dirname, "devicon-colors.css");
-    fsPromise.writeFile(cssPath, statements, (err) => {
-        if (err) console.log(err);
-    })
+    return fsPromise.writeFile(cssPath, statements, "utf8");
 }
 
 /**
@@ -102,7 +135,8 @@ function minify() {
         .pipe(gulp.dest('./'))
 }
 
+
 exports.concat = concat;
 exports.minify = minify;
-exports.test = test;
+exports.updateCss = createDeviconMinCSS;
 exports.default = gulp.series(concat, minify);
