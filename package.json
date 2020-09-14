@@ -4,7 +4,7 @@
   "description": "Programming related icons collection",
   "main": "devicon.min.css",
   "scripts": {
-    "test": "gulp test",
+    "test": "gulp updateCss",
     "build": "gulp test"
   },
   "repository": {
