@@ -14,12 +14,13 @@ function main() {
 	let colorsMap = constructColorsMap();
 
 	// if you want to see what the maps are like
-	// fs.writeFileSync(path.join(__dirname, "contentMap.json"),
-	// 	JSON.stringify(contentMap), "utf8");
-	// fs.writeFileSync(path.join(__dirname, "aliasMap.json"),
-	// 	JSON.stringify(aliasMap), "utf8");
-	// fs.writeFileSync(path.join(__dirname, "colorsMap.json"),
-	// 	JSON.stringify(colorsMap), "utf8");
+	// these maps are essential to create the final newDevicon.json
+	fs.writeFileSync(path.join(__dirname, "contentMap.json"),
+		JSON.stringify(contentMap), "utf8");
+	fs.writeFileSync(path.join(__dirname, "aliasMap.json"),
+		JSON.stringify(aliasMap), "utf8");
+	fs.writeFileSync(path.join(__dirname, "colorsMap.json"),
+		JSON.stringify(colorsMap), "utf8");
 
 	createNewDeviconJson(colorsMap, contentMap, aliasMap);
 }
@@ -136,12 +137,12 @@ function createNewDeviconJson(colorsMap, contentMap, aliasMap) {
 
 	// run check to ensure every object has the needed attribute
     // log all fonts that are missing a color or don't have an array
-	// let specialFont = newDeviconJson.filter(fontObj => {
-	// 	return !(typeof(fontObj["color"]) === "string"
-	// 		&& Array.isArray(fontObj["aliases"]));
-	// })
+	let specialFont = newDeviconJson.filter(fontObj => {
+		return !(typeof(fontObj["color"]) === "string"
+			&& Array.isArray(fontObj["aliases"]));
+	})
 
-	// console.log(specialFont);
+	console.log(specialFont);
 }
 
 /**
