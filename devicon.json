@@ -1,5 +1,14 @@
 [
   {
+    "name": "jenkins",
+    "_comment1": "Add Jenkins icon please, I don't know if the things below are ok: I also added the png format, alongside with svg format",
+    "tags": ["cloud", "deploy"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
     "name": "amazonwebservices",
     "tags": ["cloud", "hosting", "server"],
     "versions": {
