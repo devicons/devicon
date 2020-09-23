@@ -344,6 +344,14 @@
     }
   },
   {
+    "name": "flutter",
+    "tags": ["framework", "sdk"],
+    "versions": {
+      "svg": ["original", "plain"],
+      "font": ["plain"]
+    }
+  },
+  {
     "name": "foundation",
     "tags": ["framework", "css"],
     "versions": {

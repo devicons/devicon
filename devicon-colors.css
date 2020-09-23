@@ -334,6 +334,10 @@
 .devicon-firefox-plain.colored {
 	color: #DD732A;
 }
+.devicon-flutter-original.colored,
+.devicon-flutter-plain.colored {
+	color:#3FB6D3;
+}
 .devicon-foundation-plain-wordmark.colored,
 .devicon-foundation-plain.colored {
 	color: #008cba;
