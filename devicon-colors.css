@@ -412,6 +412,12 @@
 .devicon-jquery-plain.colored {
 	color: #0769ad;
 }
+.devicon-kotlin-plain.colored,
+.devicon-kotlin-plain-wordmark.colored,
+.devicon-kotlin-original.colored,
+.devicon-kotlin-original-wordmark.colored {
+	color: #7C6DB2
+}
 .devicon-krakenjs-plain.colored,
 .devicon-krakenjs-plain-wordmark.colored {
 	color: #0081C2;

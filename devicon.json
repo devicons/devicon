@@ -568,6 +568,14 @@
     }
   },
   {
+    "name": "kotlin",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "krakenjs",
     "tags": ["nodejs", "framework"],
     "versions": {
