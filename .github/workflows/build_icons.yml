@@ -1,13 +1,10 @@
 name: Build Icons
 on:
-  pull_request:
-    branches:
-      - master
-  push:
-    branches:
-      - master
+  label:
+      type: [created,edited]
 jobs:
   build:
+    if: github.event.label.name == 'bot: build'
     name: Get Fonts From Icomoon
     runs-on: windows-2019
     steps:
@@ -33,10 +30,12 @@ jobs:
         with:
           name: geckodriver-log
           path: ./geckodriver.log
-      - name: Running gulp default task for building devicon.min.css
-        run: |
-          gulp default
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Running npm task for building devicon.min.css
+        run: npm run build-css
+      - name: Create new branch and push it
+        uses: technote-space/create-pr-action@v2
         with:
-          commit_message: Build new icons, icomoon.json and devicon.css
+          COMMIT_MESSAGE: "Built new icons, icomoon.json and devicon.css"
+          PR_BRANCH_PREFIX: "build/feature/"
+          PR_BRANCH_NAME: "test-123"
+          PR_TITLE: "Built new icons, icomoon.json and devicon.css"
