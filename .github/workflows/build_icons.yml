@@ -4,9 +4,9 @@ on:
       type: [created,edited]
 jobs:
   build:
-    if: github.event.label.name == 'bot: build'
     name: Get Fonts From Icomoon
     runs-on: windows-2019
+    if: ${{ github.event.label.name == 'bot:build'}}
     steps:
       - uses: actions/checkout@v2
         with:
