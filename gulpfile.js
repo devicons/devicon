@@ -1,24 +1,15 @@
 var gulp      = require('gulp');
-var minifyCSS = require('gulp-minify-css');
-var concatCss = require('gulp-concat-css');
-var plumber   = require('gulp-plumber');
 const sass = require('gulp-sass');
 sass.compiler = require('sass')
 const fsPromise = require('fs').promises;
 const path = require("path");
 
 // global const
-// production
-// const deviconJSONName = "devicon.json";
-// const aliasSCSSName = "devicon-alias.scss";
-// const colorsCSSName = "devicon-colors.css";
-// const finalMinSCSSName = "devicon.min.scss";
+const deviconJSONName = "devicon.json";
+const aliasSCSSName = "devicon-alias.scss";
+const colorsCSSName = "devicon-colors.css";
+const finalMinSCSSName = "devicon.min.scss";
 
-// testing
-const deviconJSONName = "newDevicon.json";
-const aliasSCSSName = "alias.scss";
-const colorsCSSName = "colors.css";
-const finalMinSCSSName = "min.scss";
 
 /**
  * Create the devicon.min.css by creating needed
@@ -30,13 +21,11 @@ async function createDeviconMinCSS() {
     let deviconMinPath = path.join(__dirname, finalMinSCSSName);
     // recall that devicon-alias.scss imported the devicon.css => don't need
     // to reimport that file.
-    const fileContent = "@use \"alias\";@use \"colors\";";
+    const fileContent = `@use "${aliasSCSSName}";@use "${colorsCSSName}";`;
     await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
 
     return gulp.src(finalMinSCSSName)
-        // to get a minify version, uncomment line 38 and comment line 39
-        // .pipe(sass.sync({"outputStyle": "compressed"}).on('error', sass.logError))
-        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sass.sync({"outputStyle": "compressed"}).on('error', sass.logError))
         .pipe(gulp.dest('./'));
 }
 
@@ -150,31 +139,6 @@ function cleanUp() {
     );
 }
 
-/**
- * Concat the devicon.css, the devicon-aias.css and the
- * devicon-colors.css together. Pipe the result into
- * the devicon.min.css.
- */
-function concat() {
-    return gulp.src(['./devicon.css', './devicon-alias.css', './devicon-colors.css'])
-        .pipe(plumber())
-        .pipe(concatCss('./devicon.min.css'))
-        .pipe(gulp.dest('./'));
-}
 
-/**
- * Minify the devicon.min.css file.
- */
-function minify() {
-    return gulp.src('./devicon.min.css')
-        .pipe(plumber())
-        .pipe(minifyCSS())
-        .pipe(gulp.dest('./'))
-}
-
-exports.concat = concat;
-exports.minify = minify;
 exports.updateCss = createDeviconMinCSS;
 exports.clean = cleanUp;
-exports.test = gulp.series(createDeviconMinCSS, cleanUp);
-exports.default = gulp.series(concat, minify);
