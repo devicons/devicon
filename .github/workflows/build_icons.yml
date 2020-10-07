@@ -33,9 +33,10 @@ jobs:
       #     path: ./geckodriver.log
       # - name: Running npm task for building devicon.min.css
       #   run: npm run build-css
-      - name: Create new branch and push it
-        run: |
-          git checkout -b 'build/feature/test-123'
-          git add .
-          git commit -m 'Built new icons, icomoon.json and devicon.css'
-          PR_TITLE: "Built new icons, icomoon.json and devicon.css"
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: 'build/feature/test-123'
+          destination_branch: ${{github.head_ref}}
+          pr_title: 'Built new icons, icomoon.json and devicon.css'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
