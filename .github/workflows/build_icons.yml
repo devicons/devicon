@@ -1,7 +1,7 @@
 name: Build Icons
 on:
   label:
-      type: [created,edited]
+      types: [created,edited]
 jobs:
   build:
     name: Get Fonts From Icomoon
