@@ -36,7 +36,12 @@ jobs:
       - name: Create new branch and push it
         uses: technote-space/create-pr-action@v2
         with:
-          COMMIT_MESSAGE: 'Built new icons, icomoon.json and devicon.css'
-          PR_BRANCH_PREFIX: 'build/feature/'
-          PR_BRANCH_NAME: 'test-123'
-          PR_TITLE: "Built new icons, icomoon.json and devicon.css"
+          # COMMIT_MESSAGE: 'Built new icons, icomoon.json and devicon.css'
+          # PR_BRANCH_PREFIX: 'build/feature/'
+          # PR_BRANCH_NAME: 'test-123'
+          # PR_TITLE: "Built new icons, icomoon.json and devicon.css"
+          COMMIT_MESSAGE: 'chore: update dependencies'
+          COMMIT_NAME: 'GitHub Actions'
+          COMMIT_EMAIL: 'example@example.com'
+          PR_BRANCH_NAME: 'chore-update-${PR_ID}'
+          PR_TITLE: 'chore: update dependencies'
