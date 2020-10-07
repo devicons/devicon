@@ -1,11 +1,11 @@
 name: Build Icons
 on:
-  label:
-      type: [created,edited]
+  pull_request:
+      types: [labeled]
 jobs:
   build:
-    if: github.event.label.name == 'bot: build'
     name: Get Fonts From Icomoon
+    if: contains(github.event.pull_request.labels.*.name, 'bot:build')
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
@@ -31,11 +31,14 @@ jobs:
           name: geckodriver-log
           path: ./geckodriver.log
       - name: Running npm task for building devicon.min.css
+        if: ${{ success() }}
         run: npm run build-css
-      - name: Create new branch and push it
-        uses: technote-space/create-pr-action@v2
+      - name: Create Pull Request
+        if: ${{ success() }}
+        uses: peter-evans/create-pull-request@v3
         with:
-          COMMIT_MESSAGE: "Built new icons, icomoon.json and devicon.css"
-          PR_BRANCH_PREFIX: "build/feature/"
-          PR_BRANCH_NAME: "test-123"
-          PR_TITLE: "Built new icons, icomoon.json and devicon.css"
+          branch: 'build/feature/test-123'
+          commit-message: 'Built new icons, icomoon.json and devicon.css'
+          title: 'bot:build new icons, icomoon.json and devicon.css'
+          body: 'Automated font-building task ran by GitHub Actions bot'
+          delete-branch: true
