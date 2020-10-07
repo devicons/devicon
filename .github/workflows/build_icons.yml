@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
     name: Get Fonts From Icomoon
-    if: contains(github.event.pull_request.labels.*.name, 'bot:build')
+    # if: contains(github.event.pull_request.labels.*.name, 'bot:build')
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
