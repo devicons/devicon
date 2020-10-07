@@ -34,14 +34,11 @@ jobs:
       # - name: Running npm task for building devicon.min.css
       #   run: npm run build-css
       - name: Create new branch and push it
-        uses: technote-space/create-pr-action@v2
+        uses: golfzaptw/action-commit-push-pr
         with:
-          # COMMIT_MESSAGE: 'Built new icons, icomoon.json and devicon.css'
-          # PR_BRANCH_PREFIX: 'build/feature/'
-          # PR_BRANCH_NAME: 'test-123'
-          # PR_TITLE: "Built new icons, icomoon.json and devicon.css"
-          COMMIT_MESSAGE: 'chore: update dependencies'
-          COMMIT_NAME: 'GitHub Actions'
-          COMMIT_EMAIL: 'example@example.com'
-          PR_BRANCH_NAME: 'chore-update-${PR_ID}'
-          PR_TITLE: 'chore: update dependencies'
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          PREFIX_BRANCHES: 'update'
+          DEFAULT_BRANCHES: 'develop'
+          COMMIT_MESSAGE: 'update value'
+          TITLE_PR: 'Chore: get some file update'
+          BODY_PR: '' 
