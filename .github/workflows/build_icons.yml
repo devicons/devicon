@@ -34,7 +34,7 @@ jobs:
       # - name: Running npm task for building devicon.min.css
       #   run: npm run build-css
       - name: Create new branch and push it
-        uses: golfzaptw/action-commit-push-pr@v1
+        uses: golfzaptw/action-commit-push-pr@1.0.1
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           PREFIX_BRANCHES: 'update'
