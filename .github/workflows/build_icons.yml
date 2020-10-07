@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-2019
     steps:
       - env: 
-          LABELS: ${{github.event}}
+          LABELS: ${{github.event.pull_request.id}}
         run: echo $LABELS
       # - uses: actions/checkout@v2
       #   with:
