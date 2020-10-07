@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-2019
     steps:
       - env: 
-          LABELS: ${{contains(github.event.pull_request.labels.*.name, "test-123")}}
+          LABELS: ${{contains(github.event.pull_request.labels.*.name, 'test-123')}}
         run: echo $LABELS
       # - uses: actions/checkout@v2
       #   with:
