@@ -34,11 +34,8 @@ jobs:
       # - name: Running npm task for building devicon.min.css
       #   run: npm run build-css
       - name: Create new branch and push it
-        uses: golfzaptw/action-commit-push-pr@1.0.1
-        with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          PREFIX_BRANCHES: 'update'
-          DEFAULT_BRANCHES: 'develop'
-          COMMIT_MESSAGE: 'update value'
-          TITLE_PR: 'Chore: get some file update'
-          BODY_PR: '' 
+        run: |
+          git checkout -b 'build/feature/test-123'
+          git add .
+          git commit -m 'Built new icons, icomoon.json and devicon.css'
+          PR_TITLE: "Built new icons, icomoon.json and devicon.css"
