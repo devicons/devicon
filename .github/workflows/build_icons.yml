@@ -1,7 +1,7 @@
 name: Build Icons
-on: push
-  # pull_request:
-  #     types: [labeled]
+on:
+  pull_request:
+      types: [labeled]
 jobs:
   build:
     name: Get Fonts From Icomoon
