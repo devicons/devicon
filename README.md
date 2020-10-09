@@ -43,13 +43,11 @@ _2 ways of using devicon:_
 
 #### Icons font
 
-- Upload devicon.css and font files to your project
+- Upload devicon.min.css and font files to your project
+- Note: the `devicon.css` file is not the same as the `devicon.min.css`. It doesn't contain any colors or aliases.
 
 ```html
-  <link rel="stylesheet" href="devicon.css">
-
-  <!--  if you want colored versions -->
-  <link rel="stylesheet" href="devicon-colors.css">
+  <link rel="stylesheet" href="devicon.min.css">
 ```
 
 - Add icon using `<i>` tag
