@@ -37,7 +37,7 @@ jobs:
         if: ${{ success() }}
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: 'build/feature/test-123'
+          branch: ${{ format('build/{0}', github.head_ref) }}
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
           body: 'Automated font-building task ran by GitHub Actions bot'
