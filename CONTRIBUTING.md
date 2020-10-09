@@ -6,10 +6,11 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <h2>Table of Content</h2>
 <ul>
   <li><a href="#overview">Overview on Submitting Icon</a></li>
-  <li><a href="#iconFormat">Icon Formats and Naming Conventions</a></li>
+  <li><a href="#versionNaming">Naming Conventions</a></li>
+  <li><a href="#svgStandards">SVG Standards</a></li>
   <li><a href="#orgGuidelines">Organizational Guidelines</a></li>
   <li><a href="#updateDevicon">Updating the <code>devicon.json</code></a></li>
-  <li><a href="#examples">Example</a></li>
+  <li><a href="#example">Example</a></li>
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
   <li><a href="#buildScript">Regarding the Build Script</a></li>
 </ul>
@@ -31,7 +32,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 </ol>
 
 <hr>
-<h2 id='iconFormat'>Icon Formats and Naming Conventions</h2>
+<h2 id='versionNaming'>Versions and Naming Conventions</h2>
 <p>Each icon can come in different versions. So far, we have:</p>
 <ul>
   <li><b>original</b>: the original logo. Can contains multiple colors. <a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original.svg"> Example </a> </li>
@@ -42,17 +43,28 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><b>line-wordmark</b>: a one-color, line version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line-wordmark.svg"> Example </a></li>
 </ul>
 <p>
-It is not mandatory to have 6 versions for each icon. An icon can only have one or two variations available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
+It is not mandatory to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
 </p>
 <p>
-The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font. This means they need to stay as simple as possible (one color and ensure that the paths are united before to export to svg). You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a> in order to optimize the svg file.
+The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font.
 </p>
 <p>
-The original versions are only available in svg format, so they do not need to be as simple and can contain numerous colors.
+The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
 </p>
 <p>
 Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention.
 </p>
+
+<hr>
+<h2 id='svgStandards'>SVG Standards</h2>
+<p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
+<ul>
+  <li>The background must be transparent.</li>
+  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united before exporting to svg. 
+  </li>
+  <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
+  <li>
+</ul>
 
 <hr>
 <h2 id='orgGuidelines'>Organizational Guidelines</h2>
@@ -65,7 +77,7 @@ Some icons are really simple (like the Apple one), so the original version can b
 </ul>
 
 <hr>
-<h2 id='updateDevicon'> Update the <code>devicon.json</code> </h2>
+<h2 id='updateDevicon'> Updating the <code>devicon.json</code> </h2>
 <p>
   Before you open a PR into Devicon, you'd have to update the <code>devicon.json</code>. This is essential for our build script to work and to document your work.
 </p>
@@ -110,7 +122,7 @@ Some icons are really simple (like the Apple one), so the original version can b
 </ol>
 
 <hr>
-<h2>Example </h2>
+<h2 id='example'>Example </h2>
 <p>
 As an example, let's assume you have created the svgs for Amazon Web Services and Redhat logos.
 </p>
