@@ -27,6 +27,7 @@ jobs:
           ./icomoon.json ./devicon.json ./icons ./ --headless
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
+        if: ${{always()}}
         with:
           name: geckodriver-log
           path: ./geckodriver.log
