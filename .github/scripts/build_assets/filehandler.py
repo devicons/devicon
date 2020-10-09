@@ -9,8 +9,8 @@ import re
 def find_new_icons(devicon_json_path: str, icomoon_json_path: str) -> List[dict]:
     """
     Find the newly added icons by finding the difference between
-    the devicon_test.json and the icomoon_test.json.
-    :param devicon_json_path, the path to the devicon_test.json.
+    the devicon.json and the icomoon.json.
+    :param devicon_json_path, the path to the devicon.json.
     :param icomoon_json_path: a path to the iconmoon.json.
     :return: a list of the new icons as JSON objects.
     """
@@ -33,8 +33,8 @@ def is_not_in_icomoon_json(icon, icomoon_json) -> bool:
     Checks whether the icon's name is not in the icomoon_json.
     :param icon: the icon object we are searching for.
     :param icomoon_json: the icomoon json object parsed from
-    icomoon_test.json.
-    :return: True if icon's name is not in the icomoon_test.json, else False.
+    icomoon.json.
+    :return: True if icon's name is not in the icomoon.json, else False.
     """
     pattern = re.compile(f"^{icon['name']}-")
 
@@ -46,7 +46,7 @@ def is_not_in_icomoon_json(icon, icomoon_json) -> bool:
 
 def get_svgs_paths(new_icons: List[dict], icons_folder_path: str) -> List[str]:
     """
-    Get all the suitable svgs file path listed in the devicon_test.json.
+    Get all the suitable svgs file path listed in the devicon.json.
     :param new_icons, a list containing the info on the new icons.
     :param icons_folder_path, the path where the function can find the
     listed folders.
@@ -66,6 +66,7 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str) -> List[str]:
             aliases = [] # create empty list of aliases if not provided in devicon.json
 
         for font_version in icon_info["versions"]["font"]:
+            # if it's an alias, we don't want to make it into an icon
             if is_alias(font_version, aliases):
                 continue
 

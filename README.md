@@ -5,7 +5,7 @@
 Devicon aims to gather all logos representing development languages and tools.
 Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
 
-Devicon it's 80+ icons and 200+ versions. And it's growing!
+Devicon has 80+ icons and 200+ versions. And it's growing!
 
 See all available icons on the [new website](https://devicons.github.io/devicon/).
 
@@ -104,10 +104,10 @@ if you like to restore the settings stored in the configuration file.
 
 The next step is to click on **Generate font** and download the resulting archive. Extract it
 contents and you will find a [fonts](./fonts) directory next to a `style.css`. Replace the content of the `fonts` folder,
-merge the `style.css` with [devicon.css](./devicon.css) and follow the next step to build the final stylesheet.
+rename the `style.css` to [devicon.css](./devicon.css) and follow the next step to build the final stylesheet.
 
 ### Build and minify stylesheet
 Run the following command to build the resulting file `devicon.min.css`
 ```bash
-gulp default
+npm run build-css
 ```
