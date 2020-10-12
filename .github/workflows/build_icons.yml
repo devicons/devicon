@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name}}
       - name: Setup Python v3.8
         uses: actions/setup-python@v2
         with: 
