@@ -412,8 +412,11 @@
                 "original",
                 "plain"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
+        "color": "#96ca4b",
         "aliases": []
     },
     {
@@ -2042,9 +2045,16 @@
             "svg": [
                 "original"
             ],
-            "font": []
+            "font": [
+                "original"
+            ]
         },
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "ruby",
@@ -2669,10 +2679,14 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
+        "color": "#ffffff",
         "aliases": []
     },
     {

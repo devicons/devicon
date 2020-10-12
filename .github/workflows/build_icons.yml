@@ -36,7 +36,7 @@ jobs:
         if: ${{success()}}
         with:
           name: new_icons
-          path: ./.github/scripts/new_icons.png
+          path: ./new_icons.png
       - name: Running npm task for building devicon.min.css
         if: ${{ success() }}
         run: npm run build-css
