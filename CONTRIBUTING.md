@@ -155,9 +155,9 @@ As an example, let's assume you have created the svgs for Amazon Web Services an
                   "original-wordmark",
                   "plain-wordmark"
                 ],
-                "font": [ // here are the versions that are available as font icons
+                "font": [ // here are the versions that will be used to create icons
                   "original", // original is simple enough to be used as plain
-                  "plain-wordmark"
+                  "plain-wordmark",
                 ]
               },
               "color": "#F7A80D", // note the '#' character

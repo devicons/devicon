@@ -387,12 +387,20 @@
         "versions": {
             "svg": [
                 "original",
+                "line"
+            ],
+            "font": [
                 "line",
                 "plain"
-            ],
-            "font": []
+            ]
         },
-        "aliases": []
+        "color": "#5881d8",
+        "aliases": [
+            {
+                "base": "line",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "clojurescript",
@@ -404,8 +412,11 @@
                 "original",
                 "plain"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
+        "color": "#96ca4b",
         "aliases": []
     },
     {
@@ -1620,7 +1631,9 @@
             "svg": [
                 "plain"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
         "color": "#8d6748",
         "aliases": []
@@ -2032,9 +2045,16 @@
             "svg": [
                 "original"
             ],
-            "font": []
+            "font": [
+                "original"
+            ]
         },
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "ruby",
@@ -2659,10 +2679,14 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
+        "color": "#ffffff",
         "aliases": []
     },
     {
