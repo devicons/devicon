@@ -387,12 +387,20 @@
         "versions": {
             "svg": [
                 "original",
+                "line"
+            ],
+            "font": [
                 "line",
                 "plain"
-            ],
-            "font": []
+            ]
         },
-        "aliases": []
+        "color": "#5881d8",
+        "aliases": [
+            {
+                "base": "line",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "clojurescript",
