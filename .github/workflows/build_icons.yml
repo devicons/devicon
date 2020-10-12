@@ -27,10 +27,16 @@ jobs:
           ./icomoon.json ./devicon.json ./icons ./ --headless
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
-        if: ${{always()}}
+        if: ${{failure()}}
         with:
           name: geckodriver-log
           path: ./geckodriver.log
+      - name: Upload screenshot of the newly made icons
+        uses: actions/upload-artifact@v2
+        if: ${{success()}}
+        with:
+          name: new_icons
+          path: ./new_icons.png
       - name: Running npm task for building devicon.min.css
         if: ${{ success() }}
         run: npm run build-css
