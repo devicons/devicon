@@ -100,14 +100,14 @@ function createColorsCSS(deviconJson) {
             versions: {
                 font: fonts
             },
-            color
+            color,
         } = fontObj;
 
         if (fonts.length === 0 || typeof(color) !== "string") {
             console.log(`This object doesn't have a font or a color: ${name}`);
             return "";
         } 
-        let cssClasses = fonts.map(font => `.devicon-${name}-${font}`);
+        let cssClasses = fonts.map(font => `.devicon-${name}-${font}.colored`);
         return `${cssClasses.join(",")}{color: ${color}}`;
     }).join(" ");
 
