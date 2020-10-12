@@ -20,7 +20,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Here is an overview of what you have to do to submit your icons to the repo.</p>
 <ol>
   <li>Create the svgs for each logo versions that you have </li>
-  <li>Put the svgs for each logo into its own folders in <code>/fonts</code> </li>
+  <li>Put the svgs for each logo into its own folders in <code>/icons</code> </li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new icon</a> </li>
   <li>Create a separated pull request (PR) for each icon (no matter how many versions). </li>
   <li>Include the name of the icon in the pull request title. Follow this format: <code>new icon: {{logoName}} ({{versions}})</code> </li>
@@ -130,7 +130,7 @@ As an example, let's assume you have created the svgs for Amazon Web Services an
 <p>For the Redhat svg, you have the "original", "original-wordmark", "plain", "plain-wordmark" versions. </p>
 <ol>
   <li>
-    Put the svgs for each logo that you have into its own folders in <code>/fonts</code>
+    Put the svgs for each logo that you have into its own folders in <code>/icons</code>
     <ul>
       <li>This means you would create two folders: one for <code>amazonwebservices</code> and one for <code>redhat</code></li>
       <li><b>Note</b>: don't do this in the same commits. We want to have each logo in its own PR so don't create these two folders in the same commit</li>
