@@ -1620,7 +1620,9 @@
             "svg": [
                 "plain"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
         "color": "#8d6748",
         "aliases": []
