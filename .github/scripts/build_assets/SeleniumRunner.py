@@ -130,6 +130,8 @@ class SeleniumRunner:
                 self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Dismiss")
                 self.remove_color_from_icon()
 
+            # take a screenshot of the icons that were just added
+            self.driver.save_screenshot("new_icons.png");
             self.click_hamburger_input()
             select_all_button = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
                 ec.element_to_be_clickable((By.XPATH, "//button[text()='Select All']"))
