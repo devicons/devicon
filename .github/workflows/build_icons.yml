@@ -48,4 +48,4 @@ jobs:
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
           body: 'Automated font-building task ran by GitHub Actions bot'
-          delete-branch: true
+          delete-branch: ${{true}}
