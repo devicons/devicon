@@ -100,7 +100,7 @@ function createColorsCSS(deviconJson) {
             versions: {
                 font: fonts
             },
-            color
+            color,
         } = fontObj;
 
         if (fonts.length === 0 || typeof(color) !== "string") {
