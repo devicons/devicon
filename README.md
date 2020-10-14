@@ -9,7 +9,7 @@ Devicon it's 80+ icons and 200+ versions. And it's growing!
 
 See all available icons on the [new website](https://devicons.github.io/devicon/).
 
-![Alt](https://puu.sh/GD0gH/750cc23a3a.png "devicons")
+![Alt](./doc/assets/img/devicons.png "devicons")
 
 
 ## Icon requests
