@@ -9,6 +9,9 @@ Devicon it's 80+ icons and 200+ versions. And it's growing!
 
 See all available icons on the [new website](https://devicons.github.io/devicon/).
 
+![Alt](https://puu.sh/GD0gH/750cc23a3a.png "devicons")
+
+
 ## Icon requests
 When you want to request a icon please feel feel to create a issue. See our [contribution guidelines](https://github.com/konpa/devicon/blob/master/CONTRIBUTING.md) for more information.
 
@@ -75,7 +78,7 @@ You can install devicon as a dependency to your project either with NPM or Bower
 ```
   // NPM
   npm install --save devicon
-  
+
   // Bower
   bower install --save devicon
 ```
