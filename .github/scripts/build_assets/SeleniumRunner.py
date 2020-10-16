@@ -36,26 +36,26 @@ class SeleniumRunner:
     """
     ICOMOON_URL = "https://icomoon.io/app/#/select"
 
-    def __init__(self, icomoon_json_path: str, download_path: str,
-                 geckodriver_path: str, headless):
+    def __init__(self, download_path: str,
+                 geckodriver_path: str, headless: bool):
         """
         Create a SeleniumRunner object.
-        :param icomoon_json_path: a path to the iconmoon.json.
         :param download_path: the location where you want to download
         the icomoon.zip to.
         :param geckodriver_path: the path to the firefox executable.
         :param headless: whether to run browser in headless (no UI) mode.
         """
-        self.icomoon_json_path = icomoon_json_path
-        self.download_path = download_path
         self.driver = None
-        self.set_options(geckodriver_path, headless)
+        self.set_options(download_path, geckodriver_path, headless)
 
-    def set_options(self, geckodriver_path: str, headless: bool):
+    def set_options(self, download_path: str, geckodriver_path: str,
+        headless: bool):
         """
         Build the WebDriver with Firefox Options allowing downloads and
         set download to download_path.
+        :param download_path: the location where you want to download
         :param geckodriver_path: the path to the firefox executable.
+        the icomoon.zip to.
         :param headless: whether to run browser in headless (no UI) mode.
 
         :raises AssertionError: if the page title does not contain
@@ -69,16 +69,17 @@ class SeleniumRunner:
 
         # set the default download path to downloadPath
         options.set_preference("browser.download.folderList", 2)
-        options.set_preference("browser.download.dir", self.download_path)
+        options.set_preference("browser.download.dir", download_path)
         options.headless = headless
 
         self.driver = WebDriver(options=options, executable_path=geckodriver_path)
         self.driver.get(self.ICOMOON_URL)
         assert "IcoMoon App" in self.driver.title
 
-    def upload_icomoon(self):
+    def upload_icomoon(self, icomoon_json_path: str):
         """
         Upload the icomoon.json to icomoon.io.
+        :param icomoon_json_path: a path to the iconmoon.json.
         :raises TimeoutException: happens when elements are not found.
         """
         print("Uploading icomoon.json file...")
@@ -87,7 +88,7 @@ class SeleniumRunner:
             import_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
                 ec.presence_of_element_located((By.CSS_SELECTOR, "div#file input"))
             )
-            import_btn.send_keys(self.icomoon_json_path)
+            import_btn.send_keys(icomoon_json_path)
         except Exception as e:
             self.close()
             raise e
