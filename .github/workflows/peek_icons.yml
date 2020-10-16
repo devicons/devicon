@@ -21,9 +21,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
           npm install
+<<<<<<< HEAD
       - name: Run icomoon_peek.py
         run: >
           python ./.github/scripts/icomoon_peek.py 
+=======
+      - name: Run icomoon_upload.py
+        run: >
+          python ./.github/scripts/icomoon_upload.py 
+>>>>>>> 89412c2... Added a peek script
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe
           ./icomoon.json ./devicon.json ./icons ./ --headless
       - name: Upload geckodriver.log for debugging purposes
@@ -37,4 +43,20 @@ jobs:
         if: ${{success()}}
         with:
           name: new_icons
+<<<<<<< HEAD
           path: ./new_icons.png
+=======
+          path: ./new_icons.png
+      - name: Create a comment alerting that the bot peeked
+        uses: peter-evans/commit-comment@v1
+        with:
+          body: >
+            Hi! I'm Devicons' GitHub Actions Bot!
+            
+            I just peeked at the icons that you wanted to add and upload them to the 
+            [Actions page](https://github.com/devicons/devicon/actions). The maintainers
+            will now take a look at it and decide whether to merge your PR.
+
+            Cheers :),
+            Bot
+>>>>>>> 89412c2... Added a peek script
