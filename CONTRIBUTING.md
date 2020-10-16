@@ -63,7 +63,7 @@ Some icons are really simple (like the Apple one), so the original version can b
   <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united before exporting to svg. 
   </li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
-  <li>
+  <li>The icon's strokes and texts must be fills. We use Icomoon to make our icon, which has its<a href="https://icomoon.io/#docs/stroke-to-fill"> requirements</a></li>
 </ul>
 
 <hr>
