@@ -1,11 +1,11 @@
-name: Build Icons
+name: Peek Icons
 on:
   pull_request:
       types: [labeled]
 jobs:
   build:
     name: Get Fonts From Icomoon
-    if: contains(github.event.pull_request.labels.*.name, 'bot:build')
+    if: contains(github.event.pull_request.labels.*.name, 'bot:peek')
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
@@ -21,9 +21,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
           npm install
-      - name: Run icomoon_upload.py
+      - name: Run icomoon_peek.py
         run: >
-          python ./.github/scripts/icomoon_upload.py 
+          python ./.github/scripts/icomoon_peek.py 
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe
           ./icomoon.json ./devicon.json ./icons ./ --headless
       - name: Upload geckodriver.log for debugging purposes
@@ -38,15 +38,3 @@ jobs:
         with:
           name: new_icons
           path: ./new_icons.png
-      - name: Running npm task for building devicon.min.css
-        if: ${{ success() }}
-        run: npm run build-css
-      - name: Create Pull Request
-        if: ${{ success() }}
-        uses: peter-evans/create-pull-request@v3
-        with:
-          branch: ${{ format('build/{0}', github.head_ref) }}
-          commit-message: 'Built new icons, icomoon.json and devicon.css'
-          title: 'bot:build new icons, icomoon.json and devicon.css'
-          body: 'Automated font-building task ran by GitHub Actions bot'
-          delete-branch: ${{true}}
