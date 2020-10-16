@@ -38,3 +38,20 @@ jobs:
         with:
           name: new_icons
           path: ./new_icons.png
+      - name: Pull Request Add Comment
+        uses: actions/github-script@0.3.0
+        env:
+          message: >
+            Hi! I'm Devicons' GitHub Actions Bot!
+            
+            I just peeked at the icons that you wanted to add and upload them to the 
+            [Actions page](https://github.com/devicons/devicon/actions). The maintainers
+            will now take a look at it and decide whether to merge your PR.
+
+            Cheers :),
+            Bot
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: pr_number }, repo: { owner, repo }  } = context;
+            github.issues.createComment({ pr_number, owner, repo, body: '$message' });
