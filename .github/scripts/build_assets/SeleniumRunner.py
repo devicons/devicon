@@ -75,6 +75,14 @@ class SeleniumRunner:
         self.driver = WebDriver(options=options, executable_path=geckodriver_path)
         self.driver.get(self.ICOMOON_URL)
         assert "IcoMoon App" in self.driver.title
+        
+        # wait until the whole web page is loaded by testing the hamburger input
+        hamburger_input = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
+            ec.element_to_be_clickable((By.CSS_SELECTOR,
+                "button.btn5.lh-def.transparent i.icon-menu"))
+        )
+        hamburger_input.click()
+        print("Accessed icomoon.io")
 
     def upload_icomoon(self, icomoon_json_path: str):
         """
@@ -86,7 +94,7 @@ class SeleniumRunner:
         try:
             # find the file input and enter the file path
             import_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
-                ec.presence_of_element_located((By.CSS_SELECTOR, "div#file input"))
+                ec.element_to_be_clickable((By.CSS_SELECTOR, "div#file input"))
             )
             import_btn.send_keys(icomoon_json_path)
         except Exception as e:
@@ -138,6 +146,7 @@ class SeleniumRunner:
                 ec.element_to_be_clickable((By.XPATH, "//button[text()='Select All']"))
             )
             select_all_button.click()
+            print("Finished uploading the svgs...")
         except Exception as e:
             self.close()
             raise e
@@ -155,7 +164,7 @@ class SeleniumRunner:
             )
 
             menu_appear_callback = ec.element_to_be_clickable(
-                (By.CSS_SELECTOR, "h1#setH2 ul")
+                (By.CSS_SELECTOR, "h1 ul.menuList2")
             )
 
             while not menu_appear_callback(self.driver):
