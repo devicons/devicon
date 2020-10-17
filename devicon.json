@@ -1456,6 +1456,27 @@
         "aliases": []
     },
     {
+        "name": "jenkins",
+        "tags": [
+            "platform",
+            "integration",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "line",
+                "original",
+                "plain"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ]
+        },
+        "color": "#F0D6B7",
+        "aliases": []
+    },
+    {
         "name": "jetbrains",
         "tags": [],
         "versions": {
