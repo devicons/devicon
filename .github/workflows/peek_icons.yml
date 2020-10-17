@@ -38,3 +38,16 @@ jobs:
         with:
           name: new_icons
           path: ./new_icons.png
+      - name: Comment on the PR about the result
+        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: >
+            Hi! I'm Devicons' GitHub Actions Bot!
+            
+            I just peeked at the icons that you wanted to add and upload them to the 
+            [Actions page](https://github.com/devicons/devicon/actions). The maintainers
+            will now take a look at it and decide whether to merge your PR.
+
+            Cheers :),
+            Bot
