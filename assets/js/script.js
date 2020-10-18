@@ -102,14 +102,9 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $http.get(baseUrl + 'devicon.git/icons/' + $scope.selectedIcon.name + '/' + $scope.selectedIcon.name + '-' + svgVersion + '.svg').success(function(data){
 
       var svg = angular.element(data);
-      var paths = svg.find("path");
+      var innerSVG = (svg[0].innerHTML);
 
-      $scope.selectedSvgIcon = "";
-
-      angular.forEach(paths, function(path, key) {
-        $scope.selectedSvgIcon = $scope.selectedSvgIcon + path.outerHTML;
-      });
-
+      $scope.selectedSvgIcon = innerSVG;
       $scope.selectedSvgIndex = index;
     });
   }
