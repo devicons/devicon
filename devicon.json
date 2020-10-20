@@ -1469,7 +1469,8 @@
                 "plain"
             ],
             "font": [
-                "line"
+                "line",
+                "plain"
             ]
         },
         "color": "#F0D6B7",
