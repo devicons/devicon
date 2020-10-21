@@ -1,11 +1,8 @@
 name: Build Icons
-on:
-  pull_request:
-      types: [labeled]
+on: workflow_dispatch
 jobs:
   build:
     name: Get Fonts From Icomoon
-    if: contains(github.event.pull_request.labels.*.name, 'bot:build')
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
@@ -46,7 +43,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           branch: ${{ format('build/{0}', github.head_ref) }}
+          base: 'develop'
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
           body: 'Automated font-building task ran by GitHub Actions bot'
-          delete-branch: ${{true}}
+          delete-branch: true
