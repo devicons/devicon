@@ -26,9 +26,8 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Include the name of the icon in the pull request title. Follow this format: <code>new icon: {{logoName}} ({{versions}})</code> </li>
   <li><i>Optional</i>: Add images of the new icon(s) to the description of the pull request. This would help speed up the review process </li>
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
-  <li>Wait for a repo maintainer to review your changes. Once they are satisfied, they will <a href="#buildScript">build your repo </a>. This will create a PR into your branch.</li>
-  <li>Review the PR. It should contain the icon versions of your svgs. Accept the changes if you are satisfied</li>
-  <li>Once you accept the changes, a maintainer will accept your PR into the repo.</li>
+  <li>Wait for a repo maintainer to review your changes. They will run a script to check your icons. </li>
+  <li>If there are no issue, they will accept your PR into the repo. Else, they will let you know and give you a chance to fix it.</li>
 </ol>
 
 <hr>
@@ -233,9 +232,13 @@ As an example, let's assume you have created the svgs for Amazon Web Services an
 <hr>
 <h2 id='buildScript'>Regarding The Build Script</h2>
 <p>To make adding icons easier for repo maintainers, we rely on GitHub Actions, Python, Selenium, and Gulp to automate our tasks.</p>
-<p>So far, the tasks that we have automated are:</p>
+<p>So far, the tasks in the build script are:</p>
 <ul>
   <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a></li>
   <li>Build, combine, and minify CSS files. For details, see <a href="https://github.com/devicons/devicon/pull/290">this</a></li>
+</ul>
+<p>There are also other tasks that we are automating, such as:</p>
+<ul>
   <li>Ensure code quality is up to standard</li>
+  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and take a screenshot for check.
 </ul>
