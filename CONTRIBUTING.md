@@ -64,6 +64,8 @@ Some icons are really simple (like the Apple one), so the original version can b
   </li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
   <li>The icon's strokes and texts must be fills. We use Icomoon to make our icon, which has its<a href="https://icomoon.io/#docs/stroke-to-fill"> requirements</a></li>
+  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox</li>
+  <li>The naming convention for the svg file is the following: <code>(icon name)-(original|plain|line)-(wordmark)</code></li>
 </ul>
 
 <hr>
@@ -72,8 +74,6 @@ Some icons are really simple (like the Apple one), so the original version can b
   <li>Each icon has its own folder located in the <code>icons</code> folder</li>
   <li>Each icon folder contains one <code>.eps</code> file and as many <code>.svg</code> files as versions available</li>
   <li>The <code>.eps</code> file contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
-  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox</li>
-  <li>The naming convention for the svg file is the following: <code>(icon name)-(original|plain|line)-(wordmark)</code></li>
 </ul>
 
 <hr>
@@ -158,6 +158,7 @@ As an example, let's assume you have created the svgs for Amazon Web Services an
                 "font": [ // here are the versions that will be used to create icons
                   "original", // original is simple enough to be used as plain
                   "plain-wordmark",
+                  // note that the alias "plain" is not listed here. It must be listed in the `aliases` attribute
                 ]
               },
               "color": "#F7A80D", // note the '#' character
