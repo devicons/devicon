@@ -926,6 +926,25 @@
         "aliases": []
     },
     {
+        "name": "flutter",
+        "tags": [
+            "framework",
+            "sdk"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#008cba",
+        "aliases": []
+    },
+    {
         "name": "foundation",
         "tags": [
             "framework",
@@ -939,11 +958,10 @@
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "plain"
             ]
         },
-        "color": "#008cba",
+        "color": "#3FB6D3",
         "aliases": []
     },
     {
