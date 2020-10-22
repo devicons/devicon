@@ -4,7 +4,7 @@
   "description": "Programming related icons collection",
   "main": "devicon.min.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "gulp updateCss && gulp clean"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,7 @@
   "homepage": "http://konpa.github.io/devicon/",
   "devDependencies": {
     "gulp": "^4.0.0",
-    "gulp-concat-css": "^2.0.0",
-    "gulp-minify-css": "^0.4.3",
-    "gulp-plumber": "^0.6.6"
+    "gulp-sass": "^4.1.0",
+    "sass": "^1.26.10"
   }
 }
