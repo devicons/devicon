@@ -1529,6 +1529,26 @@
         "aliases": []
     },
     {
+        "name": "kotlin",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#7C6DB2",
+        "aliases": []
+    },
+    {
         "name": "krakenjs",
         "tags": [
             "nodejs",
