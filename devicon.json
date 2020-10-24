@@ -926,6 +926,24 @@
         "aliases": []
     },
     {
+        "name": "flutter",
+        "tags": [
+            "framework",
+            "sdk"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#3FB6D3",
+        "aliases": []
+    },
+    {
         "name": "foundation",
         "tags": [
             "framework",
