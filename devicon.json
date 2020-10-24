@@ -937,11 +937,10 @@
                 "plain"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "plain"
             ]
         },
-        "color": "#008cba",
+        "color": "#3FB6D3",
         "aliases": []
     },
     {
@@ -958,10 +957,11 @@
                 "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
-        "color": "#3FB6D3",
+        "color": "#008cba",
         "aliases": []
     },
     {
