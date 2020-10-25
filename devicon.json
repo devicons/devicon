@@ -2673,6 +2673,23 @@
         ]
     },
     {
+        "name": "woocommerce",
+        "tags": [
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#9B5C8F",
+        "aliases": []
+    },
+    {
         "name": "wordpress",
         "tags": [
             "cms"
