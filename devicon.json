@@ -2680,10 +2680,13 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#9B5C8F",
