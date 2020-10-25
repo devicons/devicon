@@ -1243,6 +1243,23 @@
         "aliases": []
     },
     {
+        "name": "haxe",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#F28820",
+        "aliases": []
+    },
+    {
         "name": "heroku",
         "tags": [
             "cloud"
