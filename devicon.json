@@ -2525,6 +2525,27 @@
         ]
     },
     {
+        "name": "typo3",
+        "tags": [
+            "cms",
+            "php"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f49700",
+        "aliases": []
+    },
+    {
         "name": "ubuntu",
         "tags": [
             "os"
