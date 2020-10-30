@@ -1797,6 +1797,24 @@
         "aliases": []
     },
     {
+        "name": "nestjs",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#DF234F",
+        "aliases": []
+    },
+    {
         "name": "nginx",
         "tags": [
             "server"
