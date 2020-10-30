@@ -1700,6 +1700,25 @@
         "aliases": []
     },
     {
+        "name": "materialui",
+        "tags": [
+            "framework",
+            "design",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1FA6CA",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "tags": [
             "javascript"
