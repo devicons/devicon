@@ -984,6 +984,27 @@
         "aliases": []
     },
     {
+        "name": "gatsby",
+        "tags": [
+            "reactjs",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#64328B",
+        "aliases": []
+    },
+    {
         "name": "gimp",
         "tags": [
             "graphic"
