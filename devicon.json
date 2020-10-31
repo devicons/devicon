@@ -2748,6 +2748,26 @@
         ]
     },
     {
+        "name": "woocommerce",
+        "tags": [
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#7f54b3",
+        "aliases": []
+    },
+    {
         "name": "wordpress",
         "tags": [
             "cms"
