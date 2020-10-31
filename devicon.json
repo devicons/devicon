@@ -1,5 +1,23 @@
 [
     {
+        "name": "aftereffects",
+        "tags": [
+            "video",
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1F0740",
+        "aliases": []
+    },
+    {
         "name": "amazonwebservices",
         "tags": [
             "cloud",
