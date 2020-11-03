@@ -525,7 +525,22 @@
             "font": [
                 "line"
             ]
-        }
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "plain"
+            },
+            {
+                "base": "line-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "confluence",
