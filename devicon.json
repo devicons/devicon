@@ -510,6 +510,24 @@
         ]
     },
     {
+        "name": "composer",
+        "tags": [
+            "package",
+            "manager",
+            "php"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line"
+            ]
+        }
+    },
+    {
         "name": "confluence",
         "tags": [],
         "versions": {
