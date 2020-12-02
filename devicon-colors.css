@@ -228,6 +228,12 @@
 .devicon-apple-plain.colored {
 	color: #000000;
 }
+.devicon-appwrite-original.colored,
+.devicon-appwrite-original-wordmark.colored,
+.devicon-appwrite-plain.colored,
+.devicon-appwrite-plain-wordmark.colored {
+	color: #f02e65;
+}
 .devicon-atom-original.colored,
 .devicon-atom-original-wordmark.colored,
 .devicon-atom-plain.colored,
