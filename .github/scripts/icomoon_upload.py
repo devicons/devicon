@@ -47,9 +47,9 @@ def main():
     print("List of new icons:")
     print(*new_icons, sep = "\n")
     try:
-        runner = SeleniumRunner(args.icomoon_json_path, args.download_path,
+        runner = SeleniumRunner(args.download_path,
                                 args.geckodriver_path, args.headless)
-        runner.upload_icomoon()
+        runner.upload_icomoon(args.icomoon_json_path)
         svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path)
         runner.upload_svgs(svgs)
 

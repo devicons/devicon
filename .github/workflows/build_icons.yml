@@ -1,11 +1,5 @@
 name: Build Icons
-on:
-  pull_request:
-    branches:
-      - master
-  push:
-    branches:
-      - master
+on: workflow_dispatch
 jobs:
   build:
     name: Get Fonts From Icomoon
@@ -14,6 +8,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name}}
       - name: Setup Python v3.8
         uses: actions/setup-python@v2
         with: 
@@ -30,13 +25,26 @@ jobs:
           ./icomoon.json ./devicon.json ./icons ./ --headless
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
+        if: ${{failure()}}
         with:
           name: geckodriver-log
           path: ./geckodriver.log
-      - name: Running gulp default task for building devicon.min.css
-        run: |
-          gulp default
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Upload screenshot of the newly made icons
+        uses: actions/upload-artifact@v2
+        if: ${{success()}}
         with:
-          commit_message: Build new icons, icomoon.json and devicon.css
+          name: new_icons
+          path: ./new_icons.png
+      - name: Running npm task for building devicon.min.css
+        if: ${{ success() }}
+        run: npm run build-css
+      - name: Create Pull Request
+        if: ${{ success() }}
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: ${{ format('build/{0}', github.head_ref) }}
+          base: 'develop'
+          commit-message: 'Built new icons, icomoon.json and devicon.css'
+          title: 'bot:build new icons, icomoon.json and devicon.css'
+          body: 'Automated font-building task ran by GitHub Actions bot'
+          delete-branch: true
