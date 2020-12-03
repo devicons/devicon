@@ -59,7 +59,7 @@
     "name": "atom",
     "tags": ["editor"],
     "versions": {
-      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "svg": ["original", "original-wordmark"],
       "font": ["original", "original-wordmark"]
     }
   },
