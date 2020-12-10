@@ -56,6 +56,14 @@
     }
   },
   {
+    "name": "appwrite",
+    "tags": ["cloud", "platform", "server"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["original", "original-wordmark", "plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "atom",
     "tags": ["editor"],
     "versions": {

@@ -1,0 +1,54 @@
+name: Peek Icons
+on:
+  pull_request:
+      types: [labeled]
+jobs:
+  build:
+    name: Get Fonts From Icomoon
+    if: contains(github.event.pull_request.labels.*.name, 'bot:peek')
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name}}
+      - name: Setup Python v3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+      - name: Install dependencies (python, pip, npm)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ./.github/scripts/requirements.txt
+          npm install
+      - name: Run icomoon_peek.py
+        run: >
+          python ./.github/scripts/icomoon_peek.py 
+          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe
+          ./icomoon.json ./devicon.json ./icons ./ --headless
+      - name: Upload geckodriver.log for debugging purposes
+        uses: actions/upload-artifact@v2
+        if: ${{failure()}}
+        with:
+          name: geckodriver-log
+          path: ./geckodriver.log
+      - name: Upload screenshot of the newly made icons
+        uses: actions/upload-artifact@v2
+        if: ${{success()}}
+        with:
+          name: new_icons
+          path: ./new_icons.png
+      # - name: Comment on the PR about the result
+      #   uses: github-actions-up-and-running/pr-comment@v1.0.1
+      #   with:
+      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
+      #     message: >
+      #       Hi! I'm Devicons' GitHub Actions Bot!
+            
+      #       I just peeked at the icons that you wanted to add and upload them to the 
+      #       [Actions page](https://github.com/devicons/devicon/actions). The maintainers
+      #       will now take a look at it and decide whether to merge your PR.
+
+      #       Cheers :),
+      
+      #       Bot
