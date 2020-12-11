@@ -51,7 +51,7 @@ The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designe
 The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
 </p>
 <p>
-Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention.
+Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note that this only applies to font icon versions only, not the SVG versions. SVG versions don't need aliases.
 </p>
 
 <hr>
@@ -94,10 +94,20 @@ Some icons are really simple (like the Apple one), so the original version can b
             "font": VersionString[] // list the fonts acceptable versions that you have
         },
         "color": string, // the main color of the logo. Only track 1 color
-        "aliases": AliasObj[] // keeps track of the aliases
+        "aliases": AliasObj[] // keeps track of the aliases for the font versions ONLY
     }
   </code>
 </pre>
+
+<p>
+  Here is what VersionString means:
+</p>
+<ol>
+  <li> It's the version part of an `svg` file's name</li>
+  <li> If you have "html5-original", the version string would be "original" </li>
+  <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
+  <li> See <a href="#versionNaming">naming conventions section</a> for more details </li>
+</ol>
 
 <p>
   Here is the AliasObj interface:
@@ -110,24 +120,14 @@ Some icons are really simple (like the Apple one), so the original version can b
     }
   </code>
 </pre>
-
-<p>
-  Here is what VersionString means:
-</p>
-<ol>
-  <li> It's the version part of an `svg` file's name</li>
-  <li> If you have "html5-original", the version string would be "original" </li>
-  <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
-  <li> See <a href="#versionNaming">Icon Formats and Naming Conventions</a> for more details </li>
-</ol>
-
 <hr>
+
 <h2 id='example'>Example </h2>
 <p>
-As an example, let's assume you have created the svgs for Amazon Web Services and Redhat logos.
+As an example, let's assume you have created the svgs for Redhat and Amazon Web Services logos.
 </p>
-<p>For the Amazon Web Services svgs, you have the following versions: "original", "original-wordmark", "plain-wordmark". However, the "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
 <p>For the Redhat svg, you have the "original", "original-wordmark", "plain", and "plain-wordmark" versions. </p>
+<p>For the Amazon Web Services svgs, you have the following versions: "original", "original-wordmark", "plain-wordmark". The "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
 <ol>
   <li>
     Put the svgs for each logo that you have into its own folders in <code>/icons</code>
@@ -139,6 +139,33 @@ As an example, let's assume you have created the svgs for Amazon Web Services an
   <li>
     <a href="#updateDevicon">Update the <code>devicon.json</code> to include the icon (or variations)</a>
     <ul>
+      <li>For the <code>redhat</code>, you would do this 
+        <pre>
+          <code>
+            {
+              "name": "redhat",
+              "tags": [
+                "server",
+                "linux"
+              ],
+              "versions": {
+                "svg": [ // here are the versions that are available in svgs
+                  "original",
+                  "original-wordmark",
+                  "plain",
+                  "plain-wordmark"
+                ],
+                "font": [ // here are the versions that will be used to create icons
+                  "plain",
+                  "plain-wordmark"
+                ]
+              },
+              "color": "#e93442", // note the '#' character
+              "aliases": [] // no aliases in this case
+            },
+          </code>
+        </pre>
+      </li>
       <li>For the <code>amazonwebservices</code>, you would do this 
         <pre>
           <code>
@@ -156,7 +183,7 @@ As an example, let's assume you have created the svgs for Amazon Web Services an
                   "plain-wordmark"
                 ],
                 "font": [ // here are the versions that will be used to create icons
-                  "original", // original is simple enough to be used as plain
+                  "original", // "original" is simple enough to be used as the plain icon so we'll add "plain" to the aliases below
                   "plain-wordmark",
                   // note that the alias "plain" is not listed here. It must be listed in the `aliases` attribute
                 ]
@@ -164,38 +191,12 @@ As an example, let's assume you have created the svgs for Amazon Web Services an
               "color": "#F7A80D", // note the '#' character
               "aliases": [
                 {
-                    "base": "original", // here is the base version aka the one that we will upload to Icomoon
-                    "alias": "plain" // this is its alias. Our script will create a reference so we can search using "original" or "plain"
+                    "base": "original", // here is the base version that we will upload to Icomoon
+                    "alias": "plain" // this is its alias. Our script will create a reference so users can search using "original" or "plain" for this icon
+                    // note that you don't provide aliases for the svg version. If "original" is not a font version (i.e can't be made into a font), there's no need to provide it with a plain alias
                 }
               ]
             }
-          </code>
-        </pre>
-      </li>
-      <li>For the <code>redhat</code>, you would do this 
-        <pre>
-          <code>
-            {
-              "name": "redhat",
-              "tags": [
-                "server",
-                "linux"
-              ],
-              "versions": {
-                "svg": [
-                  "original",
-                  "original-wordmark",
-                  "plain",
-                  "plain-wordmark"
-                ],
-                "font": [
-                  "plain",
-                  "plain-wordmark"
-                ]
-              },
-              "color": "#e93442",
-              "aliases": [] // no aliases
-            },
           </code>
         </pre>
       </li>
