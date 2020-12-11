@@ -117,7 +117,7 @@ Some icons are really simple (like the Apple one), so the original version can b
 <ol>
   <li> If you have "html5-original", the version string would be "original" </li>
   <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
-  <li> See <a href="#iconFormat">Icon Formats and Naming Conventions</a> for more details </li>
+  <li> See <a href="#versionNaming">Icon Formats and Naming Conventions</a> for more details </li>
 </ol>
 
 <hr>

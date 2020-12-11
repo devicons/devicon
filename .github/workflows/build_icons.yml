@@ -32,7 +32,7 @@ jobs:
         with:
           name: new_icons
           path: ./new_icons.png
-      - name: Running npm task for building devicon.min.css
+      - name: Build devicon.min.css
         if: ${{ success() }}
         run: npm run build-css
       - name: Create Pull Request
