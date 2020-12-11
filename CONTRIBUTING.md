@@ -62,9 +62,9 @@ Some icons are really simple (like the Apple one), so the original version can b
   <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united before exporting to svg. 
   </li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
-  <li>The icon's strokes and texts must be fills. We use Icomoon to make our icon, which has its<a href="https://icomoon.io/#docs/stroke-to-fill"> requirements</a></li>
-  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox</li>
-  <li>The naming convention for the svg file is the following: <code>(icon name)-(original|plain|line)-(wordmark)</code></li>
+  <li>The icon's strokes and texts must be fills. We use Icomoon to make our icon, which has its<a href="https://icomoon.io/#docs/stroke-to-fill"> requirements.</a></li>
+  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox.</li>
+  <li>The naming convention for the svg file is the following: <code>(icon name)-(original|plain|line)(-wordmark?).</code></li>
 </ul>
 
 <hr>
@@ -87,7 +87,7 @@ Some icons are really simple (like the Apple one), so the original version can b
 <pre>
   <code>
     {
-        "name": string, // the official name of the technology. Must be lower case, no space or use the dash '-' character.
+        "name": string, // the official name of the technology. Must be lower case, no space and don't have the dash '-' character.
         "tags": string[], // list of tags relating to the technology for search purpose
         "versions": {
             "svg": VersionString[], // list the svgs that you have 
@@ -115,6 +115,7 @@ Some icons are really simple (like the Apple one), so the original version can b
   Here is what VersionString means:
 </p>
 <ol>
+  <li> It's the version part of an `svg` file's name</li>
   <li> If you have "html5-original", the version string would be "original" </li>
   <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
   <li> See <a href="#versionNaming">Icon Formats and Naming Conventions</a> for more details </li>
@@ -126,7 +127,7 @@ Some icons are really simple (like the Apple one), so the original version can b
 As an example, let's assume you have created the svgs for Amazon Web Services and Redhat logos.
 </p>
 <p>For the Amazon Web Services svgs, you have the following versions: "original", "original-wordmark", "plain-wordmark". However, the "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
-<p>For the Redhat svg, you have the "original", "original-wordmark", "plain", "plain-wordmark" versions. </p>
+<p>For the Redhat svg, you have the "original", "original-wordmark", "plain", and "plain-wordmark" versions. </p>
 <ol>
   <li>
     Put the svgs for each logo that you have into its own folders in <code>/icons</code>
@@ -201,12 +202,11 @@ As an example, let's assume you have created the svgs for Amazon Web Services an
       <li><b>Note</b>: again, don't do this in the same commits. We want to have each logo in its own PR so don't create two folders in the same commit</li>
     </ul>
   </li>
-  <li>Create a separated pull request (PR) for each icon (no matter how many variations).
+  <li>Create a separate pull request (PR) for each icon (no matter how many variations).
     <ul>
       <li>This means you would have to create two PRs</li>
       <li>For Amazon Web Services, the branch name would be icons/amazonwebservices. </li>
       <li>For Redhat, the branch name would be icons/redhat. </li>
-      <li> </li>
     </ul>
   </li>
   <li>
