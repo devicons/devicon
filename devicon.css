@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devicon';
-  src:  url('fonts/devicon.eot?6szfnm');
-  src:  url('fonts/devicon.eot?6szfnm#iefix') format('embedded-opentype'),
-    url('fonts/devicon.ttf?6szfnm') format('truetype'),
-    url('fonts/devicon.woff?6szfnm') format('woff'),
-    url('fonts/devicon.svg?6szfnm#devicon') format('svg');
+  src:  url('fonts/devicon.eot?flyg0o');
+  src:  url('fonts/devicon.eot?flyg0o#iefix') format('embedded-opentype'),
+    url('fonts/devicon.ttf?flyg0o') format('truetype'),
+    url('fonts/devicon.woff?flyg0o') format('woff'),
+    url('fonts/devicon.svg?flyg0o#devicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,63 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-woocommerce-plain-wordmark:before {
+  content: "\e966";
+}
+.devicon-woocommerce-plain:before {
+  content: "\e967";
+}
+.devicon-typo3-plain-wordmark:before {
+  content: "\e968";
+}
+.devicon-typo3-plain:before {
+  content: "\e969";
+}
+.devicon-premierepro-plain:before {
+  content: "\e96a";
+}
+.devicon-nestjs-plain-wordmark:before {
+  content: "\e96b";
+}
+.devicon-nestjs-plain:before {
+  content: "\e96c";
+}
+.devicon-materialui-plain:before {
+  content: "\e96d";
+}
+.devicon-kotlin-plain-wordmark:before {
+  content: "\e96e";
+}
+.devicon-kotlin-plain:before {
+  content: "\e96f";
+}
+.devicon-jenkins-plain:before {
+  content: "\e970";
+}
+.devicon-jenkins-line:before {
+  content: "\e971";
+}
+.devicon-haxe-plain:before {
+  content: "\e972";
+}
+.devicon-gatsby-plain-wordmark:before {
+  content: "\e973";
+}
+.devicon-gatsby-plain:before {
+  content: "\e974";
+}
+.devicon-flutter-plain:before {
+  content: "\e975";
+}
+.devicon-composer-line-wordmark:before {
+  content: "\e976";
+}
+.devicon-composer-line:before {
+  content: "\e977";
+}
+.devicon-aftereffects-plain:before {
+  content: "\e978";
+}
 .devicon-yunohost-plain:before {
   content: "\e963";
 }
