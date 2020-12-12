@@ -75,12 +75,14 @@ class SeleniumRunner:
         self.driver = WebDriver(options=options, executable_path=geckodriver_path)
         self.driver.get(self.ICOMOON_URL)
         assert "IcoMoon App" in self.driver.title
-        # wait until the whole web page is loaded by testing the hamburger input
-        WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
-            ec.element_to_be_clickable((By.XPATH, "(//i[@class='icon-menu'])[2]"))
-        )
-        print("Accessed icomoon.io")
         
+        # wait until the whole web page is loaded by testing the hamburger input
+        hamburger_input = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
+            ec.element_to_be_clickable((By.CSS_SELECTOR,
+                "button.btn5.lh-def.transparent i.icon-menu"))
+        )
+        hamburger_input.click()
+        print("Accessed icomoon.io")
 
     def upload_icomoon(self, icomoon_json_path: str):
         """
@@ -90,16 +92,11 @@ class SeleniumRunner:
         """
         print("Uploading icomoon.json file...")
         try:
-            self.click_hamburger_input()
-            
             # find the file input and enter the file path
-            import_btn = self.driver.find_element(By.XPATH, "(//li[@class='file'])[1]//input")
+            import_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
+                ec.element_to_be_clickable((By.CSS_SELECTOR, "div#file input"))
+            )
             import_btn.send_keys(icomoon_json_path)
-        except SeleniumTimeoutException as e:
-            print(e.stacktrace)
-            print("Selenium timed out. Couldn't find import button.")
-            self.close()
-            raise e
         except Exception as e:
             self.close()
             raise e
@@ -162,8 +159,8 @@ class SeleniumRunner:
         :return: None.
         """
         try:
-            hamburger_input = self.driver.find_element_by_xpath(
-                "(//i[@class='icon-menu'])[2]"
+            hamburger_input = self.driver.find_element_by_css_selector(
+                "button.btn5.lh-def.transparent i.icon-menu"
             )
 
             menu_appear_callback = ec.element_to_be_clickable(
