@@ -51,7 +51,7 @@ The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designe
 The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
 </p>
 <p>
-Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note that this only applies to font icon versions only, not the SVG versions. SVG versions don't need aliases.
+Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention.
 </p>
 
 <hr>
@@ -62,9 +62,9 @@ Some icons are really simple (like the Apple one), so the original version can b
   <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united before exporting to svg. 
   </li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
-  <li>The icon's strokes and texts must be fills. We use Icomoon to make our icon, which has its<a href="https://icomoon.io/#docs/stroke-to-fill"> requirements.</a></li>
-  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox.</li>
-  <li>The naming convention for the svg file is the following: <code>(icon name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>The icon's strokes and texts must be fills. We use Icomoon to make our icon, which has its<a href="https://icomoon.io/#docs/stroke-to-fill"> requirements</a></li>
+  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox</li>
+  <li>The naming convention for the svg file is the following: <code>(icon name)-(original|plain|line)-(wordmark)</code></li>
 </ul>
 
 <hr>
@@ -87,27 +87,17 @@ Some icons are really simple (like the Apple one), so the original version can b
 <pre>
   <code>
     {
-        "name": string, // the official name of the technology. Must be lower case, no space and don't have the dash '-' character.
+        "name": string, // the official name of the technology. Must be lower case, no space or use the dash '-' character.
         "tags": string[], // list of tags relating to the technology for search purpose
         "versions": {
             "svg": VersionString[], // list the svgs that you have 
             "font": VersionString[] // list the fonts acceptable versions that you have
         },
         "color": string, // the main color of the logo. Only track 1 color
-        "aliases": AliasObj[] // keeps track of the aliases for the font versions ONLY
+        "aliases": AliasObj[] // keeps track of the aliases
     }
   </code>
 </pre>
-
-<p>
-  Here is what VersionString means:
-</p>
-<ol>
-  <li> It's the version part of an `svg` file's name</li>
-  <li> If you have "html5-original", the version string would be "original" </li>
-  <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
-  <li> See <a href="#versionNaming">naming conventions section</a> for more details </li>
-</ol>
 
 <p>
   Here is the AliasObj interface:
@@ -120,14 +110,23 @@ Some icons are really simple (like the Apple one), so the original version can b
     }
   </code>
 </pre>
-<hr>
 
+<p>
+  Here is what VersionString means:
+</p>
+<ol>
+  <li> If you have "html5-original", the version string would be "original" </li>
+  <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
+  <li> See <a href="#iconFormat">Icon Formats and Naming Conventions</a> for more details </li>
+</ol>
+
+<hr>
 <h2 id='example'>Example </h2>
 <p>
-As an example, let's assume you have created the svgs for Redhat and Amazon Web Services logos.
+As an example, let's assume you have created the svgs for Amazon Web Services and Redhat logos.
 </p>
-<p>For the Redhat svg, you have the "original", "original-wordmark", "plain", and "plain-wordmark" versions. </p>
-<p>For the Amazon Web Services svgs, you have the following versions: "original", "original-wordmark", "plain-wordmark". The "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
+<p>For the Amazon Web Services svgs, you have the following versions: "original", "original-wordmark", "plain-wordmark". However, the "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
+<p>For the Redhat svg, you have the "original", "original-wordmark", "plain", "plain-wordmark" versions. </p>
 <ol>
   <li>
     Put the svgs for each logo that you have into its own folders in <code>/icons</code>
@@ -139,33 +138,6 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>
     <a href="#updateDevicon">Update the <code>devicon.json</code> to include the icon (or variations)</a>
     <ul>
-      <li>For the <code>redhat</code>, you would do this 
-        <pre>
-          <code>
-            {
-              "name": "redhat",
-              "tags": [
-                "server",
-                "linux"
-              ],
-              "versions": {
-                "svg": [ // here are the versions that are available in svgs
-                  "original",
-                  "original-wordmark",
-                  "plain",
-                  "plain-wordmark"
-                ],
-                "font": [ // here are the versions that will be used to create icons
-                  "plain",
-                  "plain-wordmark"
-                ]
-              },
-              "color": "#e93442", // note the '#' character
-              "aliases": [] // no aliases in this case
-            },
-          </code>
-        </pre>
-      </li>
       <li>For the <code>amazonwebservices</code>, you would do this 
         <pre>
           <code>
@@ -183,7 +155,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                   "plain-wordmark"
                 ],
                 "font": [ // here are the versions that will be used to create icons
-                  "original", // "original" is simple enough to be used as the plain icon so we'll add "plain" to the aliases below
+                  "original", // original is simple enough to be used as plain
                   "plain-wordmark",
                   // note that the alias "plain" is not listed here. It must be listed in the `aliases` attribute
                 ]
@@ -191,23 +163,50 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
               "color": "#F7A80D", // note the '#' character
               "aliases": [
                 {
-                    "base": "original", // here is the base version that we will upload to Icomoon
-                    "alias": "plain" // this is its alias. Our script will create a reference so users can search using "original" or "plain" for this icon
-                    // note that you don't provide aliases for the svg version. If "original" is not a font version (i.e can't be made into a font), there's no need to provide it with a plain alias
+                    "base": "original", // here is the base version aka the one that we will upload to Icomoon
+                    "alias": "plain" // this is its alias. Our script will create a reference so we can search using "original" or "plain"
                 }
               ]
             }
           </code>
         </pre>
       </li>
+      <li>For the <code>redhat</code>, you would do this 
+        <pre>
+          <code>
+            {
+              "name": "redhat",
+              "tags": [
+                "server",
+                "linux"
+              ],
+              "versions": {
+                "svg": [
+                  "original",
+                  "original-wordmark",
+                  "plain",
+                  "plain-wordmark"
+                ],
+                "font": [
+                  "plain",
+                  "plain-wordmark"
+                ]
+              },
+              "color": "#e93442",
+              "aliases": [] // no aliases
+            },
+          </code>
+        </pre>
+      </li>
       <li><b>Note</b>: again, don't do this in the same commits. We want to have each logo in its own PR so don't create two folders in the same commit</li>
     </ul>
   </li>
-  <li>Create a separate pull request (PR) for each icon (no matter how many variations).
+  <li>Create a separated pull request (PR) for each icon (no matter how many variations).
     <ul>
       <li>This means you would have to create two PRs</li>
       <li>For Amazon Web Services, the branch name would be icons/amazonwebservices. </li>
       <li>For Redhat, the branch name would be icons/redhat. </li>
+      <li> </li>
     </ul>
   </li>
   <li>
