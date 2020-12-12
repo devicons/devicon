@@ -1,2978 +1,2977 @@
+
 [
-  {
-      "name": "aftereffects",
-      "tags": [
-          "video",
-          "editor"
-      ],
-      "versions": {
+    {
+        "name": "aftereffects",
+        "tags": [
+            "video",
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1F0740",
+        "aliases": []
+    },
+    {
+        "name": "amazonwebservices",
+        "tags": [
+            "cloud",
+            "hosting",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F7A80D",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "android",
+        "tags": [
+            "os",
+            "mobile"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#A4C439",
+        "aliases": []
+    },
+    {
+        "name": "angularjs",
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#c4473a",
+        "aliases": []
+    },
+    {
+        "name": "apache",
+        "tags": [
+            "php"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#303284",
+        "aliases": []
+    },
+    {
+        "name": "appcelerator",
+        "tags": [
+            "app",
+            "mobile"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ac162c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "apple",
+        "tags": [
+            "brand",
+            "mobile"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "appwrite",
+        "tags": ["cloud", "platform", "server"],
+        "versions": {
           "svg": [
-              "original",
-              "plain"
+            "original",
+            "original-wordmark",
+            "plain",
+            "plain-wordmark"
           ],
           "font": [
-              "plain"
+            "original",
+            "original-wordmark",
+            "plain",
+            "plain-wordmark"
           ]
-      },
-      "color": "#1F0740",
-      "aliases": []
-  },
-  {
-      "name": "amazonwebservices",
-      "tags": [
-          "cloud",
-          "hosting",
-          "server"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain-wordmark"
-          ],
-          "font": [
-              "original",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#F7A80D",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-      "name": "android",
-      "tags": [
-          "os",
-          "mobile"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#A4C439",
-      "aliases": []
-  },
-  {
-      "name": "angularjs",
-      "tags": [
-          "framework",
-          "javascript"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#c4473a",
-      "aliases": []
-  },
-  {
-      "name": "apache",
-      "tags": [
-          "php"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#303284",
-      "aliases": []
-  },
-  {
-      "name": "appcelerator",
-      "tags": [
-          "app",
-          "mobile"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain-wordmark"
-          ],
-          "font": [
-              "original",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#ac162c",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-      "name": "apple",
-      "tags": [
-          "brand",
-          "mobile"
-      ],
-      "versions": {
-          "svg": [
-              "original"
-          ],
-          "font": [
-              "original"
-          ]
-      },
-      "color": "#000000",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-    "name": "appwrite",
-    "tags": ["cloud", "platform", "server"],
-    "versions": {
-      "svg": [
-        "original",
-        "original-wordmark",
-        "plain",
-        "plain-wordmark"
-      ],
-      "font": [
-        "original",
-        "original-wordmark",
-        "plain",
-        "plain-wordmark"
-      ]
+        }
+    },
+    {
+        "name": "atom",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#67595D",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "babel",
+        "tags": [
+            "javascript",
+            "transpiler"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f9dc3e",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            }
+        ]
+    },
+    {
+        "name": "backbonejs",
+        "tags": [
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#002A41",
+        "aliases": []
+    },
+    {
+        "name": "behance",
+        "tags": [
+            "social",
+            "website"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0071e0",
+        "aliases": []
+    },
+    {
+        "name": "bitbucket",
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#205081",
+        "aliases": []
+    },
+    {
+        "name": "bootstrap",
+        "tags": [
+            "css",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#59407f",
+        "aliases": []
+    },
+    {
+        "name": "bower",
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#ef5734",
+        "aliases": []
+    },
+    {
+        "name": "c",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#03599c",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "cakephp",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#D43D44",
+        "aliases": []
+    },
+    {
+        "name": "ceylon",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#AB710A",
+        "aliases": []
+    },
+    {
+        "name": "chrome",
+        "tags": [
+            "browser"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ce4e4e",
+        "aliases": []
+    },
+    {
+        "name": "clojure",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ]
+        },
+        "color": "#5881d8",
+        "aliases": [
+            {
+                "base": "line",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "clojurescript",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#96ca4b",
+        "aliases": []
+    },
+    {
+        "name": "codeigniter",
+        "tags": [
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ee4323",
+        "aliases": []
+    },
+    {
+        "name": "codepen",
+        "tags": [
+            "social",
+            "website",
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#231F20",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            }
+        ]
+    },
+    {
+        "name": "coffeescript",
+        "tags": [
+            "javascript",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#28334c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "composer",
+        "tags": [
+            "package",
+            "manager",
+            "php"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "line",
+                "alias": "plain"
+            },
+            {
+                "base": "line-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "confluence",
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#205081",
+        "aliases": []
+    },
+    {
+        "name": "couchdb",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e42528",
+        "aliases": []
+    },
+    {
+        "name": "cplusplus",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#9c033a",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "csharp",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#68217a",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "css3",
+        "tags": [
+            "language",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3d8fc6",
+        "aliases": []
+    },
+    {
+        "name": "cucumber",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00a818",
+        "aliases": []
+    },
+    {
+        "name": "d3js",
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f7974e",
+        "aliases": []
+    },
+    {
+        "name": "debian",
+        "tags": [
+            "os",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#A80030",
+        "aliases": []
+    },
+    {
+        "name": "devicon",
+        "tags": [
+            "iconset"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#60BE86",
+        "aliases": []
+    },
+    {
+        "name": "django",
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#003A2B",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "docker",
+        "tags": [
+            "platform",
+            "deploy"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#019bc6",
+        "aliases": []
+    },
+    {
+        "name": "doctrine",
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#f56d39",
+        "aliases": []
+    },
+    {
+        "name": "dot-net",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1384c8",
+        "aliases": []
+    },
+    {
+        "name": "drupal",
+        "tags": [
+            "cms"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0073BA",
+        "aliases": []
+    },
+    {
+        "name": "electron",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#47848f",
+        "aliases": []
+    },
+    {
+        "name": "elm",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#34495E",
+        "aliases": []
+    },
+    {
+        "name": "ember",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": [
+                "original-wordmark"
+            ]
+        },
+        "color": "#dd3f24",
+        "aliases": []
+    },
+    {
+        "name": "erlang",
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#a90533",
+        "aliases": []
+    },
+    {
+        "name": "express",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#444",
+        "aliases": []
+    },
+    {
+        "name": "facebook",
+        "tags": [
+            "auth"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#3d5a98",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            }
+        ]
+    },
+    {
+        "name": "firefox",
+        "tags": [
+            "browser"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#DD732A",
+        "aliases": []
+    },
+    {
+        "name": "flutter",
+        "tags": [
+            "framework",
+            "sdk"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#3FB6D3",
+        "aliases": []
+    },
+    {
+        "name": "foundation",
+        "tags": [
+            "framework",
+            "css"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#008cba",
+        "aliases": []
+    },
+    {
+        "name": "gatling",
+        "tags": [
+            "framework",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#E77500",
+        "aliases": []
+    },
+    {
+        "name": "gatsby",
+        "tags": [
+            "reactjs",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#64328B",
+        "aliases": []
+    },
+    {
+        "name": "gimp",
+        "tags": [
+            "graphic"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#716955",
+        "aliases": []
+    },
+    {
+        "name": "git",
+        "tags": [
+            "version-control"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f34f29",
+        "aliases": []
+    },
+    {
+        "name": "github",
+        "tags": [
+            "version-control"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#181616",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "gitlab",
+        "tags": [
+            "version-control"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#E24329",
+        "aliases": []
+    },
+    {
+        "name": "go",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "google",
+        "tags": [
+            "auth"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#587dbd",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "original-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "gradle",
+        "tags": [
+            "task-runner"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#02303a",
+        "aliases": []
+    },
+    {
+        "name": "grails",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#feb672",
+        "aliases": []
+    },
+    {
+        "name": "groovy",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#619cbc",
+        "aliases": []
+    },
+    {
+        "name": "grunt",
+        "tags": [
+            "task-runner",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fcaa1a",
+        "aliases": []
+    },
+    {
+        "name": "gulp",
+        "tags": [
+            "task-runner",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#eb4a4b",
+        "aliases": []
+    },
+    {
+        "name": "haskell",
+        "tags": [
+            "language",
+            "functional"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#5E5185",
+        "aliases": []
+    },
+    {
+        "name": "handlebars",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "haxe",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#EA8220",
+        "aliases": []
+    },
+    {
+        "name": "heroku",
+        "tags": [
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#6762a6",
+        "aliases": [
+            {
+                "base": "line",
+                "alias": "original"
+            },
+            {
+                "base": "line-wordmark",
+                "alias": "original-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "html5",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e54d26",
+        "aliases": []
+    },
+    {
+        "name": "ie10",
+        "tags": [
+            "browser"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#1EBBEE",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "illustrator",
+        "tags": [
+            "editor",
+            "vector"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#faa625",
+        "aliases": []
+    },
+    {
+        "name": "inkscape",
+        "tags": [
+            "editor",
+            "vector"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "intellij",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#136BA2",
+        "aliases": []
+    },
+    {
+        "name": "ionic",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4e8ef7",
+        "aliases": []
+    },
+    {
+        "name": "jasmine",
+        "tags": [
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#8a4182",
+        "aliases": []
+    },
+    {
+        "name": "java",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#EA2D2E",
+        "aliases": []
+    },
+    {
+        "name": "javascript",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f0db4f",
+        "aliases": []
+    },
+    {
+        "name": "jeet",
+        "tags": [
+            "framework",
+            "css"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FF664A",
+        "aliases": []
+    },
+    {
+        "name": "jenkins",
+        "tags": [
+            "platform",
+            "integration",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "line",
+                "original",
+                "plain"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ]
+        },
+        "color": "#F0D6B7",
+        "aliases": []
+    },
+    {
+        "name": "jetbrains",
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#F68B1F",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "line"
+            },
+            {
+                "base": "plain",
+                "alias": "line-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "jquery",
+        "tags": [
+            "library",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0769ad",
+        "aliases": []
+    },
+    {
+        "name": "kotlin",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#7C6DB2",
+        "aliases": []
+    },
+    {
+        "name": "krakenjs",
+        "tags": [
+            "nodejs",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0081C2",
+        "aliases": []
+    },
+    {
+        "name": "laravel",
+        "tags": [
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fd4f31",
+        "aliases": []
+    },
+    {
+        "name": "less",
+        "tags": [
+            "css",
+            "pre-processor"
+        ],
+        "versions": {
+            "svg": [
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2a4d80",
+        "aliases": []
+    },
+    {
+        "name": "linkedin",
+        "tags": [
+            "social",
+            "auth"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0076b2",
+        "aliases": []
+    },
+    {
+        "name": "linux",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "materialui",
+        "tags": [
+            "framework",
+            "design",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1FA6CA",
+        "aliases": []
+    },
+    {
+        "name": "meteor",
+        "tags": [
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#df5052",
+        "aliases": []
+    },
+    {
+        "name": "mocha",
+        "tags": [
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#8d6748",
+        "aliases": []
+    },
+    {
+        "name": "mongodb",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4FAA41",
+        "aliases": []
+    },
+    {
+        "name": "moodle",
+        "tags": [
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F7931E",
+        "aliases": []
+    },
+    {
+        "name": "mysql",
+        "tags": [
+            "database",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00618a",
+        "aliases": []
+    },
+    {
+        "name": "nestjs",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#DF234F",
+        "aliases": []
+    },
+    {
+        "name": "nginx",
+        "tags": [
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#090",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "nodejs",
+        "tags": [
+            "javascript",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#83CD29",
+        "aliases": []
+    },
+    {
+        "name": "nodewebkit",
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#3d3b47",
+        "aliases": []
+    },
+    {
+        "name": "npm",
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": [
+                "original-wordmark"
+            ]
+        },
+        "color": "#cb3837",
+        "aliases": []
+    },
+    {
+        "name": "oracle",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#EA1B22",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "photoshop",
+        "tags": [
+            "editor",
+            "graphic"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#80b5e2",
+        "aliases": []
+    },
+    {
+        "name": "php",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#6181b6",
+        "aliases": []
+    },
+    {
+        "name": "phpstorm",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#5058A6",
+        "aliases": []
+    },
+    {
+        "name": "postgresql",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#336791",
+        "aliases": []
+    },
+    {
+        "name": "premierepro",
+        "tags": [
+            "editor",
+            "video"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2A0634",
+        "aliases": []
+    },
+    {
+        "name": "protractor",
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#b7111d",
+        "aliases": []
+    },
+    {
+        "name": "pycharm",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4D8548",
+        "aliases": []
+    },
+    {
+        "name": "python",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffd845",
+        "aliases": []
+    },
+    {
+        "name": "rails",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#a62c46",
+        "aliases": []
+    },
+    {
+        "name": "react",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#61dafb",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "redhat",
+        "tags": [
+            "server",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e93442",
+        "aliases": []
+    },
+    {
+        "name": "redis",
+        "tags": [
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#d82c20",
+        "aliases": []
+    },
+    {
+        "name": "redux",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#764abc",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "ruby",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#d91404",
+        "aliases": []
+    },
+    {
+        "name": "rubymine",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#C12C4C",
+        "aliases": []
+    },
+    {
+        "name": "rust",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "safari",
+        "tags": [
+            "browser"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line-wordmark",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line-wordmark",
+                "line"
+            ]
+        },
+        "color": "#1B88CA",
+        "aliases": []
+    },
+    {
+        "name": "sass",
+        "tags": [
+            "pre-processor",
+            "css"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#cc6699",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "scala",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#de3423",
+        "aliases": []
+    },
+    {
+        "name": "sequelize",
+        "tags": [
+            "database",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3b4b72",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "plain"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "sketch",
+        "tags": [
+            "application"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fdad00",
+        "aliases": []
+    },
+    {
+        "name": "slack",
+        "tags": [
+            "chat"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2D333A",
+        "aliases": []
+    },
+    {
+        "name": "sourcetree",
+        "tags": [
+            "version-control"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#205081",
+        "aliases": []
+    },
+    {
+        "name": "ssh",
+        "tags": [
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#231F20",
+        "aliases": []
+    },
+    {
+        "name": "stylus",
+        "tags": [
+            "css",
+            "pre-processor"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#333333",
+        "aliases": []
+    },
+    {
+        "name": "swift",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F05138",
+        "aliases": []
+    },
+    {
+        "name": "symfony",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#1A171B",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "tomcat",
+        "tags": [
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#D1A41A",
+        "aliases": []
+    },
+    {
+        "name": "travis",
+        "tags": [
+            "platform",
+            "integration"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#bb2031",
+        "aliases": []
+    },
+    {
+        "name": "trello",
+        "tags": [
+            "platform",
+            "organize"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#23719f",
+        "aliases": []
+    },
+    {
+        "name": "twitter",
+        "tags": [
+            "auth"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1da1f2",
+        "aliases": []
+    },
+    {
+        "name": "typescript",
+        "tags": [
+            "programming",
+            "transpiler"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#007acc",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            }
+        ]
+    },
+    {
+        "name": "typo3",
+        "tags": [
+            "cms",
+            "php"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f49700",
+        "aliases": []
+    },
+    {
+        "name": "ubuntu",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#dd4814",
+        "aliases": []
+    },
+    {
+        "name": "vagrant",
+        "tags": [
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#127eff",
+        "aliases": []
+    },
+    {
+        "name": "vim",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#179a33",
+        "aliases": []
+    },
+    {
+        "name": "visualstudio",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#68217A",
+        "aliases": []
+    },
+    {
+        "name": "vuejs",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#41B883",
+        "aliases": []
+    },
+    {
+        "name": "webpack",
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1C78C0",
+        "aliases": []
+    },
+    {
+        "name": "webstorm",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2788B5",
+        "aliases": []
+    },
+    {
+        "name": "windows8",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#00adef",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "woocommerce",
+        "tags": [
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#7f54b3",
+        "aliases": []
+    },
+    {
+        "name": "wordpress",
+        "tags": [
+            "cms"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#494949",
+        "aliases": []
+    },
+    {
+        "name": "yarn",
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2c8ebb",
+        "aliases": []
+    },
+    {
+        "name": "yii",
+        "tags": [
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0073bb",
+        "aliases": []
+    },
+    {
+        "name": "yunohost",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
+        "name": "zend",
+        "tags": [
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#68b604",
+        "aliases": []
     }
-  },
-  {
-      "name": "atom",
-      "tags": [
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#67595D",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "babel",
-      "tags": [
-          "javascript",
-          "transpiler"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#f9dc3e",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "original"
-          }
-      ]
-  },
-  {
-      "name": "backbonejs",
-      "tags": [
-          "javascript",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#002A41",
-      "aliases": []
-  },
-  {
-      "name": "behance",
-      "tags": [
-          "social",
-          "website"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#0071e0",
-      "aliases": []
-  },
-  {
-      "name": "bitbucket",
-      "tags": [],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#205081",
-      "aliases": []
-  },
-  {
-      "name": "bootstrap",
-      "tags": [
-          "css",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#59407f",
-      "aliases": []
-  },
-  {
-      "name": "bower",
-      "tags": [
-          "package",
-          "manager"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#ef5734",
-      "aliases": []
-  },
-  {
-      "name": "c",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain",
-              "line"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#03599c",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "plain-wordmark"
-          },
-          {
-              "base": "line",
-              "alias": "line-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "cakephp",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#D43D44",
-      "aliases": []
-  },
-  {
-      "name": "ceylon",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#AB710A",
-      "aliases": []
-  },
-  {
-      "name": "chrome",
-      "tags": [
-          "browser"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#ce4e4e",
-      "aliases": []
-  },
-  {
-      "name": "clojure",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "line"
-          ],
-          "font": [
-              "line",
-              "plain"
-          ]
-      },
-      "color": "#5881d8",
-      "aliases": [
-          {
-              "base": "line",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-      "name": "clojurescript",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#96ca4b",
-      "aliases": []
-  },
-  {
-      "name": "codeigniter",
-      "tags": [
-          "php",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#ee4323",
-      "aliases": []
-  },
-  {
-      "name": "codepen",
-      "tags": [
-          "social",
-          "website",
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "original-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#231F20",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "original"
-          }
-      ]
-  },
-  {
-      "name": "coffeescript",
-      "tags": [
-          "javascript",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#28334c",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "composer",
-      "tags": [
-          "package",
-          "manager",
-          "php"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "line"
-          ]
-      },
-      "color": "#000000",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "original-wordmark"
-          },
-          {
-              "base": "line",
-              "alias": "plain"
-          },
-          {
-              "base": "line-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "confluence",
-      "tags": [],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#205081",
-      "aliases": []
-  },
-  {
-      "name": "couchdb",
-      "tags": [
-          "database"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#e42528",
-      "aliases": []
-  },
-  {
-      "name": "cplusplus",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain",
-              "line"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#9c033a",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "plain-wordmark"
-          },
-          {
-              "base": "line",
-              "alias": "line-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "csharp",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain",
-              "line"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#68217a",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "plain-wordmark"
-          },
-          {
-              "base": "line",
-              "alias": "line-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "css3",
-      "tags": [
-          "language",
-          "programming"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#3d8fc6",
-      "aliases": []
-  },
-  {
-      "name": "cucumber",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#00a818",
-      "aliases": []
-  },
-  {
-      "name": "d3js",
-      "tags": [],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#f7974e",
-      "aliases": []
-  },
-  {
-      "name": "debian",
-      "tags": [
-          "os",
-          "server"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#A80030",
-      "aliases": []
-  },
-  {
-      "name": "devicon",
-      "tags": [
-          "iconset"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#60BE86",
-      "aliases": []
-  },
-  {
-      "name": "django",
-      "tags": [],
-      "versions": {
-          "svg": [
-              "original",
-              "plain",
-              "line"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#003A2B",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "plain-wordmark"
-          },
-          {
-              "base": "line",
-              "alias": "line-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "docker",
-      "tags": [
-          "platform",
-          "deploy"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#019bc6",
-      "aliases": []
-  },
-  {
-      "name": "doctrine",
-      "tags": [],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#f56d39",
-      "aliases": []
-  },
-  {
-      "name": "dot-net",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#1384c8",
-      "aliases": []
-  },
-  {
-      "name": "drupal",
-      "tags": [
-          "cms"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#0073BA",
-      "aliases": []
-  },
-  {
-      "name": "electron",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#47848f",
-      "aliases": []
-  },
-  {
-      "name": "elm",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#34495E",
-      "aliases": []
-  },
-  {
-      "name": "ember",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original-wordmark"
-          ],
-          "font": [
-              "original-wordmark"
-          ]
-      },
-      "color": "#dd3f24",
-      "aliases": []
-  },
-  {
-      "name": "erlang",
-      "tags": [],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#a90533",
-      "aliases": []
-  },
-  {
-      "name": "express",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#444",
-      "aliases": []
-  },
-  {
-      "name": "facebook",
-      "tags": [
-          "auth"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#3d5a98",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "original"
-          }
-      ]
-  },
-  {
-      "name": "firefox",
-      "tags": [
-          "browser"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#DD732A",
-      "aliases": []
-  },
-  {
-      "name": "flutter",
-      "tags": [
-          "framework",
-          "sdk"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#3FB6D3",
-      "aliases": []
-  },
-  {
-      "name": "foundation",
-      "tags": [
-          "framework",
-          "css"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#008cba",
-      "aliases": []
-  },
-  {
-      "name": "gatling",
-      "tags": [
-          "framework",
-          "testing"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#E77500",
-      "aliases": []
-  },
-  {
-      "name": "gatsby",
-      "tags": [
-          "reactjs",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "original",
-              "original-wordmark",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#64328B",
-      "aliases": []
-  },
-  {
-      "name": "gimp",
-      "tags": [
-          "graphic"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#716955",
-      "aliases": []
-  },
-  {
-      "name": "git",
-      "tags": [
-          "version-control"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#f34f29",
-      "aliases": []
-  },
-  {
-      "name": "github",
-      "tags": [
-          "version-control"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#181616",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-      "name": "gitlab",
-      "tags": [
-          "version-control"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#E24329",
-      "aliases": []
-  },
-  {
-      "name": "go",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain",
-              "line"
-          ],
-          "font": [
-              "plain",
-              "line"
-          ]
-      },
-      "color": "#000000",
-      "aliases": []
-  },
-  {
-      "name": "google",
-      "tags": [
-          "auth"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#587dbd",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "original"
-          },
-          {
-              "base": "plain-wordmark",
-              "alias": "original-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "gradle",
-      "tags": [
-          "task-runner"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#02303a",
-      "aliases": []
-  },
-  {
-      "name": "grails",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#feb672",
-      "aliases": []
-  },
-  {
-      "name": "groovy",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#619cbc",
-      "aliases": []
-  },
-  {
-      "name": "grunt",
-      "tags": [
-          "task-runner",
-          "nodejs"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#fcaa1a",
-      "aliases": []
-  },
-  {
-      "name": "gulp",
-      "tags": [
-          "task-runner",
-          "nodejs"
-      ],
-      "versions": {
-          "svg": [
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#eb4a4b",
-      "aliases": []
-  },
-  {
-      "name": "haskell",
-      "tags": [
-          "language",
-          "functional"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#5E5185",
-      "aliases": []
-  },
-  {
-      "name": "handlebars",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#000000",
-      "aliases": []
-  },
-  {
-      "name": "haxe",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#EA8220",
-      "aliases": []
-  },
-  {
-      "name": "heroku",
-      "tags": [
-          "cloud"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#6762a6",
-      "aliases": [
-          {
-              "base": "line",
-              "alias": "original"
-          },
-          {
-              "base": "line-wordmark",
-              "alias": "original-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "html5",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#e54d26",
-      "aliases": []
-  },
-  {
-      "name": "ie10",
-      "tags": [
-          "browser"
-      ],
-      "versions": {
-          "svg": [
-              "original"
-          ],
-          "font": [
-              "original"
-          ]
-      },
-      "color": "#1EBBEE",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-      "name": "illustrator",
-      "tags": [
-          "editor",
-          "vector"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "line"
-          ],
-          "font": [
-              "plain",
-              "line"
-          ]
-      },
-      "color": "#faa625",
-      "aliases": []
-  },
-  {
-      "name": "inkscape",
-      "tags": [
-          "editor",
-          "vector"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#000000",
-      "aliases": []
-  },
-  {
-      "name": "intellij",
-      "tags": [
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#136BA2",
-      "aliases": []
-  },
-  {
-      "name": "ionic",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#4e8ef7",
-      "aliases": []
-  },
-  {
-      "name": "jasmine",
-      "tags": [
-          "testing"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#8a4182",
-      "aliases": []
-  },
-  {
-      "name": "java",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#EA2D2E",
-      "aliases": []
-  },
-  {
-      "name": "javascript",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#f0db4f",
-      "aliases": []
-  },
-  {
-      "name": "jeet",
-      "tags": [
-          "framework",
-          "css"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#FF664A",
-      "aliases": []
-  },
-  {
-      "name": "jenkins",
-      "tags": [
-          "platform",
-          "integration",
-          "server"
-      ],
-      "versions": {
-          "svg": [
-              "line",
-              "original",
-              "plain"
-          ],
-          "font": [
-              "line",
-              "plain"
-          ]
-      },
-      "color": "#F0D6B7",
-      "aliases": []
-  },
-  {
-      "name": "jetbrains",
-      "tags": [],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#F68B1F",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "line"
-          },
-          {
-              "base": "plain",
-              "alias": "line-wordmark"
-          },
-          {
-              "base": "plain",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "jquery",
-      "tags": [
-          "library",
-          "javascript"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#0769ad",
-      "aliases": []
-  },
-  {
-      "name": "kotlin",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#7C6DB2",
-      "aliases": []
-  },
-  {
-      "name": "krakenjs",
-      "tags": [
-          "nodejs",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#0081C2",
-      "aliases": []
-  },
-  {
-      "name": "laravel",
-      "tags": [
-          "php",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#fd4f31",
-      "aliases": []
-  },
-  {
-      "name": "less",
-      "tags": [
-          "css",
-          "pre-processor"
-      ],
-      "versions": {
-          "svg": [
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain-wordmark"
-          ]
-      },
-      "color": "#2a4d80",
-      "aliases": []
-  },
-  {
-      "name": "linkedin",
-      "tags": [
-          "social",
-          "auth"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#0076b2",
-      "aliases": []
-  },
-  {
-      "name": "linux",
-      "tags": [
-          "os"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#000000",
-      "aliases": []
-  },
-  {
-      "name": "materialui",
-      "tags": [
-          "framework",
-          "design",
-          "ui"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#1FA6CA",
-      "aliases": []
-  },
-  {
-      "name": "meteor",
-      "tags": [
-          "javascript"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#df5052",
-      "aliases": []
-  },
-  {
-      "name": "mocha",
-      "tags": [
-          "testing"
-      ],
-      "versions": {
-          "svg": [
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#8d6748",
-      "aliases": []
-  },
-  {
-      "name": "mongodb",
-      "tags": [
-          "database"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#4FAA41",
-      "aliases": []
-  },
-  {
-      "name": "moodle",
-      "tags": [
-          "platform"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#F7931E",
-      "aliases": []
-  },
-  {
-      "name": "mysql",
-      "tags": [
-          "database",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#00618a",
-      "aliases": []
-  },
-  {
-      "name": "nestjs",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#DF234F",
-      "aliases": []
-  },
-  {
-      "name": "nginx",
-      "tags": [
-          "server"
-      ],
-      "versions": {
-          "svg": [
-              "original"
-          ],
-          "font": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#090",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "original-wordmark"
-          },
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "nodejs",
-      "tags": [
-          "javascript",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#83CD29",
-      "aliases": []
-  },
-  {
-      "name": "nodewebkit",
-      "tags": [],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#3d3b47",
-      "aliases": []
-  },
-  {
-      "name": "npm",
-      "tags": [
-          "package",
-          "manager"
-      ],
-      "versions": {
-          "svg": [
-              "original-wordmark"
-          ],
-          "font": [
-              "original-wordmark"
-          ]
-      },
-      "color": "#cb3837",
-      "aliases": []
-  },
-  {
-      "name": "oracle",
-      "tags": [
-          "database"
-      ],
-      "versions": {
-          "svg": [
-              "original"
-          ],
-          "font": [
-              "original"
-          ]
-      },
-      "color": "#EA1B22",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-      "name": "photoshop",
-      "tags": [
-          "editor",
-          "graphic"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "line"
-          ],
-          "font": [
-              "plain",
-              "line"
-          ]
-      },
-      "color": "#80b5e2",
-      "aliases": []
-  },
-  {
-      "name": "php",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#6181b6",
-      "aliases": []
-  },
-  {
-      "name": "phpstorm",
-      "tags": [
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#5058A6",
-      "aliases": []
-  },
-  {
-      "name": "postgresql",
-      "tags": [
-          "database"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#336791",
-      "aliases": []
-  },
-  {
-      "name": "premierepro",
-      "tags": [
-          "editor",
-          "video"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "original"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#2A0634",
-      "aliases": []
-  },
-  {
-      "name": "protractor",
-      "tags": [
-          "framework",
-          "javascript"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#b7111d",
-      "aliases": []
-  },
-  {
-      "name": "pycharm",
-      "tags": [
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#4D8548",
-      "aliases": []
-  },
-  {
-      "name": "python",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#ffd845",
-      "aliases": []
-  },
-  {
-      "name": "rails",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#a62c46",
-      "aliases": []
-  },
-  {
-      "name": "react",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#61dafb",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "redhat",
-      "tags": [
-          "server",
-          "linux"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#e93442",
-      "aliases": []
-  },
-  {
-      "name": "redis",
-      "tags": [
-          "server"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#d82c20",
-      "aliases": []
-  },
-  {
-      "name": "redux",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original"
-          ],
-          "font": [
-              "original"
-          ]
-      },
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-      "name": "ruby",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#d91404",
-      "aliases": []
-  },
-  {
-      "name": "rubymine",
-      "tags": [
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#C12C4C",
-      "aliases": []
-  },
-  {
-      "name": "rust",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#000000",
-      "aliases": []
-  },
-  {
-      "name": "safari",
-      "tags": [
-          "browser"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark",
-              "line-wordmark",
-              "line"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line-wordmark",
-              "line"
-          ]
-      },
-      "color": "#1B88CA",
-      "aliases": []
-  },
-  {
-      "name": "sass",
-      "tags": [
-          "pre-processor",
-          "css"
-      ],
-      "versions": {
-          "svg": [
-              "original"
-          ],
-          "font": [
-              "original"
-          ]
-      },
-      "color": "#cc6699",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          }
-      ]
-  },
-  {
-      "name": "scala",
-      "tags": [
-          "programming",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#de3423",
-      "aliases": []
-  },
-  {
-      "name": "sequelize",
-      "tags": [
-          "database",
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#3b4b72",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "plain"
-          },
-          {
-              "base": "plain-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "sketch",
-      "tags": [
-          "application"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#fdad00",
-      "aliases": []
-  },
-  {
-      "name": "slack",
-      "tags": [
-          "chat"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#2D333A",
-      "aliases": []
-  },
-  {
-      "name": "sourcetree",
-      "tags": [
-          "version-control"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#205081",
-      "aliases": []
-  },
-  {
-      "name": "ssh",
-      "tags": [
-          "security"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#231F20",
-      "aliases": []
-  },
-  {
-      "name": "stylus",
-      "tags": [
-          "css",
-          "pre-processor"
-      ],
-      "versions": {
-          "svg": [
-              "original"
-          ],
-          "font": [
-              "original"
-          ]
-      },
-      "color": "#333333",
-      "aliases": []
-  },
-  {
-      "name": "swift",
-      "tags": [
-          "language"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#F05138",
-      "aliases": []
-  },
-  {
-      "name": "symfony",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#1A171B",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "tomcat",
-      "tags": [
-          "server"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#D1A41A",
-      "aliases": []
-  },
-  {
-      "name": "travis",
-      "tags": [
-          "platform",
-          "integration"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#bb2031",
-      "aliases": []
-  },
-  {
-      "name": "trello",
-      "tags": [
-          "platform",
-          "organize"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#23719f",
-      "aliases": []
-  },
-  {
-      "name": "twitter",
-      "tags": [
-          "auth"
-      ],
-      "versions": {
-          "svg": [
-              "original"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#1da1f2",
-      "aliases": []
-  },
-  {
-      "name": "typescript",
-      "tags": [
-          "programming",
-          "transpiler"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#007acc",
-      "aliases": [
-          {
-              "base": "plain",
-              "alias": "original"
-          }
-      ]
-  },
-  {
-      "name": "typo3",
-      "tags": [
-          "cms",
-          "php"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#f49700",
-      "aliases": []
-  },
-  {
-      "name": "ubuntu",
-      "tags": [
-          "os"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#dd4814",
-      "aliases": []
-  },
-  {
-      "name": "vagrant",
-      "tags": [
-          "platform"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#127eff",
-      "aliases": []
-  },
-  {
-      "name": "vim",
-      "tags": [
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#179a33",
-      "aliases": []
-  },
-  {
-      "name": "visualstudio",
-      "tags": [
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#68217A",
-      "aliases": []
-  },
-  {
-      "name": "vuejs",
-      "tags": [
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark",
-              "line",
-              "line-wordmark"
-          ]
-      },
-      "color": "#41B883",
-      "aliases": []
-  },
-  {
-      "name": "webpack",
-      "tags": [
-          "package",
-          "manager"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#1C78C0",
-      "aliases": []
-  },
-  {
-      "name": "webstorm",
-      "tags": [
-          "editor"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#2788B5",
-      "aliases": []
-  },
-  {
-      "name": "windows8",
-      "tags": [
-          "os"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#00adef",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
-  },
-  {
-      "name": "woocommerce",
-      "tags": [
-          "ecommerce"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain",
-              "original-wordmark",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#7f54b3",
-      "aliases": []
-  },
-  {
-      "name": "wordpress",
-      "tags": [
-          "cms"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#494949",
-      "aliases": []
-  },
-  {
-      "name": "yarn",
-      "tags": [
-          "package",
-          "manager"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#2c8ebb",
-      "aliases": []
-  },
-  {
-      "name": "yii",
-      "tags": [
-          "php",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#0073bb",
-      "aliases": []
-  },
-  {
-      "name": "yunohost",
-      "tags": [
-          "os"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-      },
-      "color": "#ffffff",
-      "aliases": []
-  },
-  {
-      "name": "zend",
-      "tags": [
-          "php",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
-      },
-      "color": "#68b604",
-      "aliases": []
-  }
 ]
