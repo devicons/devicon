@@ -18,11 +18,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
           npm install
-      - name: Run icomoon_upload.py
-        run: >
-          python ./.github/scripts/icomoon_upload.py 
-          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe
-          ./icomoon.json ./devicon.json ./icons ./ --headless
+      - name: Executing build and create fonts via icomoon
+        run: npm run build
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
         if: ${{failure()}}
@@ -35,7 +32,7 @@ jobs:
         with:
           name: new_icons
           path: ./new_icons.png
-      - name: Running npm task for building devicon.min.css
+      - name: Build devicon.min.css
         if: ${{ success() }}
         run: npm run build-css
       - name: Create Pull Request

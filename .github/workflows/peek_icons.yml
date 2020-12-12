@@ -16,16 +16,12 @@ jobs:
         uses: actions/setup-python@v2
         with: 
           python-version: 3.8
-      - name: Install dependencies (python, pip, npm)
+      - name: Install dependencies (python, pip)
         run: |
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
-          npm install
       - name: Run icomoon_peek.py
-        run: >
-          python ./.github/scripts/icomoon_peek.py 
-          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe
-          ./icomoon.json ./devicon.json ./icons ./ --headless
+        run: npm run peek
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
         if: ${{failure()}}
