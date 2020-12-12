@@ -523,12 +523,15 @@
                 "line-wordmark"
             ],
             "font": [
-                "line",
-                "line-wordmark"
+                "line"
             ]
         },
         "color": "#000000",
         "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
             {
                 "base": "line",
                 "alias": "plain"
@@ -2254,7 +2257,6 @@
                 "original"
             ]
         },
-        "color": "#764abc",
         "aliases": [
             {
                 "base": "original",
