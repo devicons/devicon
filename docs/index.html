@@ -12,7 +12,7 @@
   <title>DEVICON | All programming languages and development tools related icons font</title>
   <meta name="description" content="devicon aims to gather all logos representing development languages and tools in one font.">
   <!-- <meta name="viewport" content="width=device-width"> -->
-  <link rel="icon" type="image/x-icon" href="logos/favicon.ico" sizes="196x196">
+  <link rel="icon" type="image/x-icon" href="./logos/favicon.ico" sizes="196x196">
 
   <link rel="apple-touch-icon" sizes="57x57" href="./logos/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./logos/apple-touch-icon-60x60.png">
@@ -27,14 +27,14 @@
   <link rel="icon" type="image/png" href="./logos/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="./logos/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="./logos/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="./manifest.json">
   <link rel="mask-icon" href="./logos/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="./logos/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="devicon.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../devicon.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body ng-app="devicon" ng-controller="IconListCtrl">
@@ -75,7 +75,7 @@
           <h4>SVG versions</h4>
           <ul class="icons-list">
             <li ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}">
-              <img ng-src="icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
+              <img ng-src="../icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
           <div class="cde">
