@@ -40,7 +40,9 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
           "plain",
           "line",
           "original",
-          "plain-wordmark"
+          "plain-wordmark",
+          "line-wordmark",
+          "original-wordmark",
         ];
 
         // Loop through mainVersionsArray
