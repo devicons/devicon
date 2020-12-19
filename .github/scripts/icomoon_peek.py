@@ -9,9 +9,9 @@ from build_assets import filehandler, util
 def main():
     args = util.get_commandline_args()
     new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
-    if len(new_icons) == 0:
-        print("No files need to be uploaded. Ending script...")
-        return
+    # if len(new_icons) == 0:
+    #     print("No files need to be uploaded. Ending script...")
+    #     return
 
     # print list of new icons
     print("List of new icons:", *new_icons, sep = "\n")

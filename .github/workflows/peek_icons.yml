@@ -29,11 +29,11 @@ jobs:
           name: geckodriver-log
           path: ./geckodriver.log
       - name: Upload screenshot of the newly made icons
-        uses: actions/upload-artifact@v2
+        uses: Thomas-Boi/public-upload-to-imgur@v1
         if: ${{success()}}
         with:
-          name: new_icons
-          path: ./new_icons.png
+          img_path: ./new_icons.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
       # - name: Comment on the PR about the result
       #   uses: github-actions-up-and-running/pr-comment@v1.0.1
       #   with:
