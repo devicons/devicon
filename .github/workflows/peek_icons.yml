@@ -40,15 +40,19 @@ jobs:
         env:
           IMG_URL: ${{ steps.imgur_step.outputs.imgur_url }}
           MESSAGE: >
-            Hi! I'm Devicons' Peek Bot!
-            
-            I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
+            Hi!
+
+
+            I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
 
             Here is the result below:
 
+
             ![Peeked Icons (top left)]({0})
 
+
             Note: If the image doesn't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
+
 
             Here is [the url]({1}). 
             
