@@ -8,9 +8,9 @@ var devicon = angular.module('devicon', ['ngSanitize', 'ngAnimate']);
 
 devicon.controller('IconListCtrl', function($scope, $http, $compile) {
 
-  var baseUrl = window.location.origin;
+  var baseUrl = window.location.origin + '/dist';
 
-  // Get devicon.json 
+  // Get devicon.json
   $http.get(baseUrl + '/devicon.json').success(function(data) {
 
     /*

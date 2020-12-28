@@ -33,7 +33,7 @@
   <meta name="msapplication-TileImage" content="./logos/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="../devicon.min.css">
+  <link rel="stylesheet" href="./dist/devicon.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -75,7 +75,7 @@
           <h4>SVG versions</h4>
           <ul class="icons-list">
             <li ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}">
-              <img ng-src="../icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
+              <img ng-src="./dist/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
           <div class="cde">
