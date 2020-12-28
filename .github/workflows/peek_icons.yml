@@ -30,7 +30,7 @@ jobs:
           path: ./geckodriver.log
       - name: Upload screenshot of the newly made icons
         id: imgur_step
-        uses: Thomas-Boi/public-upload-to-imgur@v1
+        uses: devicons/public-upload-to-imgur@v1
         if: ${{success()}}
         with:
           img_path: ./new_icons.png
@@ -39,23 +39,15 @@ jobs:
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
           IMG_URL: ${{ steps.imgur_step.outputs.imgur_url }}
-          MESSAGE: >
+          MESSAGE: |
             Hi!
 
-
             I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
-
             Here is the result below:
-
 
             ![Peeked Icons (top left)]({0})
 
-
             Note: If the image doesn't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
-
-
-            Here is [the url]({1}). 
-            
 
             The maintainers will now take a look at it and decide whether to merge your PR.
 
