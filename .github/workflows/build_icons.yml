@@ -19,7 +19,10 @@ jobs:
           pip install -r ./.github/scripts/requirements.txt
           npm install
       - name: Executing build and create fonts via icomoon
-        run: npm run build
+        run: >
+          python ./.github/scripts/icomoon_build.py 
+          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
+          ./devicon.json ./icons ./ --headless
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
         if: ${{failure()}}
