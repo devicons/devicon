@@ -118,10 +118,13 @@ class SeleniumRunner:
 
         print("JSON file uploaded.")
 
-    def upload_svgs(self, svgs: List[str]):
+    def upload_svgs(self, svgs: List[str], screenshot_folder: str=""):
         """
         Upload the SVGs provided in folder_info
         :param svgs: a list of svg Paths that we'll upload to icomoon.
+        :param screenshot_folder: the name of the screenshot_folder. If
+        the value is provided, it means the user want to take a screenshot
+        of each icon.
         """
         try:
             print("Uploading SVGs...")
@@ -133,17 +136,20 @@ class SeleniumRunner:
 
             self.click_hamburger_input()
 
-            for svg in svgs:
+            for i in range(len(svgs)):
                 import_btn = self.driver.find_element_by_css_selector(
                     "li.file input[type=file]"
                 )
-                import_btn.send_keys(svg)
-                print(f"Uploaded {svg}")
+                import_btn.send_keys(svgs[i])
+                print(f"Uploaded {svgs[i]}")
                 self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Dismiss")
-                self.remove_color_from_icon()
+                self.remove_color_from_icon(screenshot_folder, i)
 
             # take a screenshot of the icons that were just added
-            self.driver.save_screenshot("new_icons.png");
+            new_icons_path = str(Path(screenshot_folder, "new_icons.png").resolve())
+            self.driver.save_screenshot(new_icons_path);
+
+            # select all the svgs so that the newly added svg are part of the collection
             self.click_hamburger_input()
             select_all_button = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
                 ec.element_to_be_clickable((By.XPATH, "//button[text()='Select All']"))
@@ -191,11 +197,15 @@ class SeleniumRunner:
             )
             dismiss_btn.click()
         except SeleniumTimeoutException:
-            pass
+            pass  # nothing found => everything is good
 
-    def remove_color_from_icon(self):
+    def remove_color_from_icon(self, screenshot_folder: str, index: int):
         """
         Remove the color from the most recent uploaded icon.
+        :param screenshot_folder: the name of the screenshot_folder. If
+        the value is provided, it means the user want to take a screenshot
+        of each icon.
+        :param index, index of the icon being uploaded. Used for naming the screenshot.
         :return: None.
         """
         try:
@@ -216,8 +226,11 @@ class SeleniumRunner:
             remove_color_btn = self.driver \
                 .find_element_by_css_selector("div.overlayWindow i.icon-droplet-cross")
             remove_color_btn.click()
-        except SeleniumTimeoutException:
-            pass
+
+            # take a screenshot before closing the pop up
+            if screenshot_folder:
+                screenshot_path = str(Path(screenshot_folder, f"screenshot_{index}.png").resolve())
+                self.driver.save_screenshot(screenshot_path)
         except Exception as e:
             self.close()
             raise e

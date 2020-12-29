@@ -21,7 +21,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
       - name: Run icomoon_peek.py
-        run: npm run peek
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: >
+          python ./.github/scripts/icomoon_peek.py 
+          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
+          ./devicon.json ./icons ./ --headless --pr_title $PR_TITLE
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
         if: ${{failure()}}
@@ -29,16 +34,28 @@ jobs:
           name: geckodriver-log
           path: ./geckodriver.log
       - name: Upload screenshot of the newly made icons
-        id: imgur_step
-        uses: devicons/public-upload-to-imgur@v1
+        id: new_icons_overview_step
+        uses: devicons/public-upload-to-imgur@v1.1
         if: ${{success()}}
         with:
-          img_path: ./new_icons.png
+          img_path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
+      - name: Upload zoomed in screenshot of the newly made icons
+        id: new_icons_detailed_step
+        uses: devicons/public-upload-to-imgur@v1.1
+        if: ${{success()}}
+        with:
+          img_path: ./screenshots/screenshot_*.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+      - name: Generate the markdowns for the screenshot
+        run: |
+          echo "DETAILED_IMGS_MARKDOWN<<EOF" >> $GITHUB_ENV
+          python ./.github/scripts/generate_screenshot_markdown.py >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
       - name: Comment on the PR about the result
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
-          IMG_URL: ${{ steps.imgur_step.outputs.imgur_url }}
+          OVERVIEW_IMG_URL: ${{ steps.imgur_step.outputs.imgur_url }}
           MESSAGE: |
             Hi!
 
@@ -47,7 +64,10 @@ jobs:
 
             ![Peeked Icons (top left)]({0})
 
-            Note: If the image doesn't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
+            Here are the zoomed-in screenshots of the added icons:
+            {1}
+
+            Note: If the images doesn't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
 
             The maintainers will now take a look at it and decide whether to merge your PR.
 
@@ -56,4 +76,4 @@ jobs:
             Peek Bot
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: ${{format(env.MESSAGE, env.IMG_URL, env.IMG_URL)}}
+          message: ${{format(env.MESSAGE, env.IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}

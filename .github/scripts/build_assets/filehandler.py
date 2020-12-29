@@ -145,3 +145,18 @@ def rename_extracted_files(extract_path: str):
         os.replace(dict_["old"], dict_["new"])
 
     print("Files renamed")
+
+
+def create_screenshot_folder(dir, screenshot_name: str="screenshots"):
+    """
+    Create a screenshots folder in the dir.
+    :param dir, the dir where we want to create the folder.
+    :param screenshot_name, the name of the screenshot folder.
+    :raise Exception if the dir provided is not a directory.
+    :return the string name of the screenshot folder.
+    """
+    folder = Path(dir).resolve()
+    if not folder.is_dir():
+        raise Exception(f"This is not a dir: {str(folder)}. \ndir must be a valid directory")
+    folder.mkdir(screenshot_name, exist_ok=True)
+    return str(folder)
