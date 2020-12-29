@@ -143,7 +143,7 @@ class SeleniumRunner:
                 import_btn.send_keys(svgs[i])
                 print(f"Uploaded {svgs[i]}")
                 self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Dismiss")
-                self.remove_color_from_icon(screenshot_folder, i)
+                self.click_on_just_added_icon(screenshot_folder, i)
 
             # take a screenshot of the icons that were just added
             new_icons_path = str(Path(screenshot_folder, "new_icons.png").resolve())
@@ -199,49 +199,43 @@ class SeleniumRunner:
         except SeleniumTimeoutException:
             pass  # nothing found => everything is good
 
-    def remove_color_from_icon(self, screenshot_folder: str, index: int):
+    def click_on_just_added_icon(self, screenshot_folder: str, index: int):
         """
-        Remove the color from the most recent uploaded icon.
-        :param screenshot_folder: the name of the screenshot_folder. If
-        the value is provided, it means the user want to take a screenshot
-        of each icon.
-        :param index, index of the icon being uploaded. Used for naming the screenshot.
-        :return: None.
+        Click on the most recently added icon so we can remove the colors
+        and take a snapshot if needed.
         """
         try:
             recently_uploaded_icon = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
                 ec.element_to_be_clickable((By.XPATH, "//div[@id='set0']//mi-box[1]//div"))
             )
             recently_uploaded_icon.click()
-        except Exception as e:
-            self.close()
-            raise e
 
-        try:
-            color_tab = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC).until(
-                ec.element_to_be_clickable((By.CSS_SELECTOR, "div.overlayWindow i.icon-droplet"))
-            )
-            color_tab.click()
+            self.remove_color_from_icon()
 
-            remove_color_btn = self.driver \
-                .find_element_by_css_selector("div.overlayWindow i.icon-droplet-cross")
-            remove_color_btn.click()
-
-            # take a screenshot before closing the pop up
             if screenshot_folder:
                 screenshot_path = str(Path(screenshot_folder, f"screenshot_{index}.png").resolve())
                 self.driver.save_screenshot(screenshot_path)
-        except Exception as e:
-            self.close()
-            raise e
+                print("Took screenshot and saved it at " + screenshot_path)
 
-        try:
             close_btn = self.driver \
                 .find_element_by_css_selector("div.overlayWindow i.icon-close")
             close_btn.click()
         except Exception as e:
             self.close()
             raise e
+
+    def remove_color_from_icon(self):
+        """
+        Remove the color from the most recent uploaded icon.
+        """
+        color_tab = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC).until(
+            ec.element_to_be_clickable((By.CSS_SELECTOR, "div.overlayWindow i.icon-droplet"))
+        )
+        color_tab.click()
+
+        remove_color_btn = self.driver \
+            .find_element_by_css_selector("div.overlayWindow i.icon-droplet-cross")
+        remove_color_btn.click()
 
     def download_icomoon_fonts(self, zip_path: Path):
         """
