@@ -1,5 +1,7 @@
 from typing import List
 
+from build_assets import arg_getters
+
 
 def generate_screenshot_markdown(img_urls: List[str]):
     """
@@ -12,5 +14,6 @@ def generate_screenshot_markdown(img_urls: List[str]):
 
 
 if __name__ == "__main__":
-    markdown = generate_screenshot_markdown()
+    args = arg_getters.get_generate_markdown_args()
+    markdown = generate_screenshot_markdown(args.img_urls)
     print("\n\n".join(markdown))  # format it before printing

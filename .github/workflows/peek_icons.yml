@@ -49,10 +49,13 @@ jobs:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Generate the markdowns for the screenshot and put it in the DETAILED_IMGS_MARKDOWN env var
+        env:
+          IMG_URLS: ${{ steps.new_icons_detailed_step.outputs.img_url }}
         run: |   
-          echo "DETAILED_IMGS_MARKDOWN<<EOF" >> $GITHUB_ENV
-          python ./.github/scripts/generate_screenshot_markdown.py >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo DETAILED_IMGS_MARKDOWN<<EOF >> $GITHUB_ENV
+          python ./.github/scripts/generate_screenshot_markdown.py "%IMG_URLS%" >> $GITHUB_ENV
+          echo EOF >> $GITHUB_ENV
+        shell: cmd
       - name: Comment on the PR about the result
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:

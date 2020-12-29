@@ -1,4 +1,3 @@
-from os import sep
 from typing import List
 import re
 from selenium.common.exceptions import TimeoutException
@@ -6,11 +5,11 @@ from selenium.common.exceptions import TimeoutException
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
 from build_assets.SeleniumRunner import SeleniumRunner
-from build_assets import filehandler, util
+from build_assets import filehandler, arg_getters
 
 
 def main():
-    args = util.get_commandline_args(True)
+    args = arg_getters.get_selenium_runner_args(True)
     new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
 
     # get only the icon object that has the name matching the pr title
