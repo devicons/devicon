@@ -34,10 +34,10 @@ jobs:
         run: npm run build-css
       - name: Upload screenshot of the newly made icons
         id: imgur_step
-        uses: devicons/public-upload-to-imgur@v1
+        uses: devicons/public-upload-to-imgur@v1.1.1
         if: ${{success()}}
         with:
-          img_path: ./new_icons.png
+          path: ./new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Create Pull Request
         if: ${{ success() }}

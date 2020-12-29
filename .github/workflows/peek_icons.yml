@@ -40,14 +40,14 @@ jobs:
         uses: devicons/public-upload-to-imgur@v1.1.1
         if: ${{success()}}
         with:
-          img_path: ./screenshots/new_icons.png
+          path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Upload zoomed in screenshot of the newly made icons
         id: new_icons_detailed_step
         uses: devicons/public-upload-to-imgur@v1.1.1
         if: ${{success()}}
         with:
-          img_path: ./screenshots/screenshot_*.png
+          path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Generate the markdowns for the screenshot
         run: |
