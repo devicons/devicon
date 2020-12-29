@@ -147,7 +147,7 @@ def rename_extracted_files(extract_path: str):
     print("Files renamed")
 
 
-def create_screenshot_folder(dir, screenshot_name: str="screenshots"):
+def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
     """
     Create a screenshots folder in the dir.
     :param dir, the dir where we want to create the folder.
@@ -158,5 +158,11 @@ def create_screenshot_folder(dir, screenshot_name: str="screenshots"):
     folder = Path(dir).resolve()
     if not folder.is_dir():
         raise Exception(f"This is not a dir: {str(folder)}. \ndir must be a valid directory")
-    folder.mkdir(screenshot_name, exist_ok=True)
-    return str(folder)
+
+    screenshot_folder = Path(folder, screenshot_name)
+    try:
+        os.mkdir(screenshot_folder)
+    except FileExistsError:
+        print(f"{screenshot_folder} already exist. Script will do nothing.")
+    finally:
+        return str(screenshot_folder)

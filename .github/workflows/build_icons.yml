@@ -25,22 +25,22 @@ jobs:
           ./devicon.json ./icons ./ --headless
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
-        if: ${{failure()}}
+        if: failure()
         with:
           name: geckodriver-log
           path: ./geckodriver.log
       - name: Build devicon.min.css
-        if: ${{ success() }}
+        if: success() 
         run: npm run build-css
       - name: Upload screenshot of the newly made icons
         id: imgur_step
-        uses: devicons/public-upload-to-imgur@v1
-        if: ${{success()}}
+        uses: devicons/public-upload-to-imgur@v1.1.2
+        if: success()
         with:
-          img_path: ./new_icons.png
+          path: ./new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Create Pull Request
-        if: ${{ success() }}
+        if: success() 
         uses: peter-evans/create-pull-request@v3
         env:
           MESSAGE: |
