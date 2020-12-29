@@ -23,10 +23,12 @@ jobs:
       - name: Run icomoon_peek.py
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
+          NAME: Thomas
+        shell: cmd
         run: >
           python ./.github/scripts/icomoon_peek.py 
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
-          ./devicon.json ./icons ./ --headless --pr_title $PR_TITLE
+          ./devicon.json ./icons ./ --headless --pr_title %PR_TITLE%
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
         if: ${{failure()}}
