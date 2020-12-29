@@ -1,4 +1,3 @@
-from os import sep
 from typing import List
 import re
 from selenium.common.exceptions import TimeoutException
@@ -6,15 +5,12 @@ from selenium.common.exceptions import TimeoutException
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
 from build_assets.SeleniumRunner import SeleniumRunner
-from build_assets import filehandler, util
+from build_assets import filehandler, arg_getters
 
 
 def main():
-    args = util.get_commandline_args(True)
+    args = arg_getters.get_selenium_runner_args(True)
     new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
-    if len(new_icons) == 0:
-        print("No files need to be uploaded. Ending script...")
-        return
 
     # get only the icon object that has the name matching the pr title
     filtered_icons = find_object_added_in_this_pr(new_icons, args.pr_title)
@@ -23,11 +19,19 @@ def main():
     print("List of new icons:", *new_icons, sep = "\n")
     print("Icons being uploaded:", *filtered_icons, sep = "\n")
 
+    if len(new_icons) == 0:
+        print("No files need to be uploaded. Ending script...")
+        return
+
+    screenshot_folder = filehandler.create_screenshot_folder("./") 
+    if len(filtered_icons) == 0:
+        print("No icons found matching the icon name in the PR's title. Fallback to uploading all new icons found.")
+        screenshot_folder = ""
+
     runner = None
     try:
         runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
         svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path)
-        screenshot_folder = filehandler.create_screenshot_folder("./") 
         runner.upload_svgs(svgs, screenshot_folder)
         print("Task completed.")
     except TimeoutException as e:
