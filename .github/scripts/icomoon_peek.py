@@ -16,19 +16,19 @@ def main():
     # get only the icon object that has the name matching the pr title
     filtered_icons = find_object_added_in_this_pr(new_icons, args.pr_title)
 
-    # print list of new icons
-    print("List of new icons:", *new_icons, sep = "\n")
-    print("Icons being uploaded:", *filtered_icons, sep = "\n")
-
     if len(new_icons) == 0:
         sys.exit("No files need to be uploaded. Ending script...")
 
     if len(filtered_icons) == 0:
-        sys.exit("No icons found matching the icon name in the PR's title.",
-        "Ensure that the PR title matches the convention here: ",
-        "https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview.",
-        "Ending script...",
-        sep='\n')
+        message = "No icons found matching the icon name in the PR's title.\n" \
+        "Ensure that the PR title matches the convention here: \n" \
+        "https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview.\n" \
+        "Ending script...\n"
+        sys.exit(message)
+
+    # print list of new icons
+    print("List of new icons:", *new_icons, sep = "\n")
+    print("Icons being uploaded:", *filtered_icons, sep = "\n", end='\n\n')
 
     runner = None
     try:
