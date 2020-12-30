@@ -5,6 +5,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
 <h2>Table of Content</h2>
 <ul>
+  <li><a href="#terms">Terms</a></li>
   <li><a href="#overview">Overview on Submitting Icon</a></li>
   <li><a href="#versionNaming">Naming Conventions</a></li>
   <li><a href="#svgStandards">SVG Standards</a></li>
@@ -16,62 +17,83 @@ First of all, thanks for taking the time to contribute! This project can only gr
 </ul>
 
 <hr>
-<h2 id="overview">Overview on Submitting Icon</h2>
+<h2 id="terms">Terms</h2>
+<p>Here are some terms that we will use in this repo: </p>
+<ol>
+  <li>"Icon" refers to the set of svgs/icons of a technology/tool. Ex: We might refer to the React svgs and React icons as the React Icon</li>
+  <li>"SVG/<code>.svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
+  <li>"icons" refers to the icon versions of the Icons.</li>
+</ol>
+
+<hr>
+<h2 id="overview">Overview on Submitting Icons</h2>
 <p>Here is an overview of what you have to do to submit your icons to the repo.</p>
 <ol>
-  <li>Create the svgs for each logo versions that you have </li>
-  <li>Put the svgs for each logo into its own folders in <code>/icons</code> </li>
-  <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new icon</a> </li>
-  <li>Create a separated pull request (PR) for each icon (no matter how many versions). </li>
-  <li>Include the name of the icon in the pull request title. Follow this format: <code>new icon: {{logoName}} ({{versions}})</code> </li>
-  <li><i>Optional</i>: Add images of the new icon(s) to the description of the pull request. This would help speed up the review process </li>
+  <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have</li>
+  <li>Put the svgs of each Icon into its own folders in <code>/icons</code> </li>
+  <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
+  <li>Create a separated pull request (PR) for each Icon. </li>
+  <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
+  <li><i>Optional</i>: Add images of the new svg(s) to the description of the pull request. This would help speed up the review process </li>
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
-  <li>Wait for a repo maintainer to review your changes. They will run a script to check your icons. </li>
+  <li>Wait for a maintainer to review your changes. They will run a script to check your icons.</li>
   <li>If there are no issue, they will accept your PR into the repo. Else, they will let you know and give you a chance to fix it.</li>
 </ol>
 
 <hr>
 <h2 id='versionNaming'>Versions and Naming Conventions</h2>
-<p>Each icon can come in different versions. So far, we have:</p>
+<p>Each icon/svg can come in different versions. So far, we have:</p>
 <ul>
-  <li><b>original</b>: the original logo. Can contains multiple colors. <a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original.svg"> Example </a> </li>
+  <li><b>original</b>: the original logo. Can contain multiple colors. <a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original.svg"> Example </a> </li>
   <li><b>original-wordmark</b>: similar to the above but must contain the name of the technology.<a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"> Example </a></li>
   <li><b>plain</b>: a one-color version of the original logo.<a href="https://github.com/devicons/devicon/blob/master/icons/android/android-plain.svg"> Example </a></li>
   <li><b>plain-wordmark</b>: a one-color version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/android/android-plain-wordmark.svg"> Example </a></li>
   <li><b>line</b>: a one-color, line version of the original logo.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line.svg"> Example </a></li>
   <li><b>line-wordmark</b>: a one-color, line version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line-wordmark.svg"> Example </a></li>
 </ul>
-<p>
-It is not mandatory to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
-</p>
-<p>
-The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font.
-</p>
-<p>
-The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
-</p>
-<p>
-Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note that this only applies to font icon versions only, not the SVG versions. SVG versions don't need aliases.
-</p>
+<p> Notes <p>
+<ol>  
+  <li>
+    It is not mandatory to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
+  </li>
+  <li>
+    The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font.
+  </li>
+  <li>
+    The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
+  </li>
+  <li>
+  </li>
+  <li>
+    Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. 
+    
+    <ol>
+      <li>
+        This only applies to font icon versions only, not the SVG versions. SVG versions don't need aliases.
+      </li>
+    </ol>
+  </li>
+</ol>
 
 <hr>
 <h2 id='svgStandards'>SVG Standards</h2>
 <p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
 <ul>
   <li>The background must be transparent.</li>
-  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united before exporting to svg. 
+  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united before exporting to svg. We will strip the color when turning it into icons.
   </li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
-  <li>The icon's strokes and texts must be fills. We use Icomoon to make our icon, which has its<a href="https://icomoon.io/#docs/stroke-to-fill"> requirements.</a></li>
+  <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
   <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox.</li>
-  <li>The naming convention for the svg file is the following: <code>(icon name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
+  <li>The naming convention for the svg file is the following: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
 </ul>
 
 <hr>
 <h2 id='orgGuidelines'>Organizational Guidelines</h2>
 <ul>
-  <li>Each icon has its own folder located in the <code>icons</code> folder</li>
-  <li>Each icon folder contains one <code>.eps</code> file and as many <code>.svg</code> files as versions available</li>
+  <li>Each Icon has its own folder located in the <code>icons</code> folder</li>
+  <li>Each Icon folder must contain one <code>.eps</code> file and as many <code>.svg</code> files as versions available (at the minimum one <code>.svg</code> file)</li>
   <li>The <code>.eps</code> file contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
 </ul>
 
@@ -81,7 +103,7 @@ Some icons are really simple (like the Apple one), so the original version can b
   Before you open a PR into Devicon, you'd have to update the <code>devicon.json</code>. This is essential for our build script to work and to document your work.
 </p>
 <p>
-  Here is the object that each of your logo must have:
+  Here is the object that each of your Icon must have:
 </p>
 
 <pre>
@@ -103,7 +125,7 @@ Some icons are really simple (like the Apple one), so the original version can b
   Here is what VersionString means:
 </p>
 <ol>
-  <li> It's the version part of an `svg` file's name</li>
+  <li> It's the version part of an <code>svg</code> file's name</li>
   <li> If you have "html5-original", the version string would be "original" </li>
   <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
   <li> See <a href="#versionNaming">naming conventions section</a> for more details </li>
@@ -127,19 +149,19 @@ Some icons are really simple (like the Apple one), so the original version can b
 As an example, let's assume you have created the svgs for Redhat and Amazon Web Services logos.
 </p>
 <p>For the Redhat svg, you have the "original", "original-wordmark", "plain", and "plain-wordmark" versions. </p>
-<p>For the Amazon Web Services svgs, you have the following versions: "original", "original-wordmark", "plain-wordmark". The "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
+<p>For the Amazon Web Services svgs, you have the "original", "original-wordmark", "plain-wordmark" versions. The "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
 <ol>
   <li>
     Put the svgs for each logo that you have into its own folders in <code>/icons</code>
     <ul>
       <li>This means you would create two folders: one for <code>amazonwebservices</code> and one for <code>redhat</code></li>
-      <li><b>Note</b>: don't do this in the same commits. We want to have each logo in its own PR so don't create these two folders in the same commit</li>
+      <li><b>Note</b>: don't do this in the same commits; we want to have each Icon in its own PR.</li>
     </ul>
   </li>
   <li>
-    <a href="#updateDevicon">Update the <code>devicon.json</code> to include the icon (or variations)</a>
+    <a href="#updateDevicon">Update the <code>devicon.json</code></a>
     <ul>
-      <li>For the <code>redhat</code>, you would do this 
+      <li>For <code>redhat</code>, you would do this 
         <pre>
           <code>
             {
@@ -200,10 +222,9 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
           </code>
         </pre>
       </li>
-      <li><b>Note</b>: again, don't do this in the same commits. We want to have each logo in its own PR so don't create two folders in the same commit</li>
     </ul>
   </li>
-  <li>Create a separate pull request (PR) for each icon (no matter how many variations).
+  <li>Create a separate pull request (PR) for each Icon.
     <ul>
       <li>This means you would have to create two PRs</li>
       <li>For Amazon Web Services, the branch name would be icons/amazonwebservices. </li>
@@ -211,7 +232,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
     </ul>
   </li>
   <li>
-    Include the name of the icon in the pull request. Follow this format: "new icon: {{logoName}} ({{versions}})"
+    Include the name of the icon in the pull request. Follow this format: "new icon: <i>Icon name</i> (<i>versions</i>}})"
     <ul>
       <li>For Amazon Web Services, your PR title should be "new icon: amazonwebservices (original, original-wordmark, plain-wordmark)"</li>
       <li>For Redhat, your PR title should be "new icon: redhat (original, original-wordmark, plain, plain-wordmark)"</li>
@@ -222,7 +243,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 
 <hr>
 <h2 id='requestingIcon'>Requesting an Icon</h2>
-<p>When you want to request a new icon please feel free to create a issue following some simple guidelines:</p>
+<p>To request an icon, you can create an issue in the repo. Please follow these simple guidelines:</p>
 <ul>
   <li>Search for other issues already requesting the icon</li>
   <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
@@ -241,5 +262,6 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 <p>There are also other tasks that we are automating, such as:</p>
 <ul>
   <li>Ensure code quality is up to standard</li>
-  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and take a screenshot for check.
+  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and take a screenshot to check that it looks good.
+  <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
 </ul>
