@@ -16,6 +16,7 @@ def generate_screenshot_markdown(img_urls: List[str]):
 
 if __name__ == "__main__":
     args = arg_getters.get_generate_markdown_args()
+    print(args.img_urls)
     img_urls_list = json.loads(args.img_urls)
     markdown = generate_screenshot_markdown(img_urls_list)
     print("\n\n".join(markdown))  # format it before printing

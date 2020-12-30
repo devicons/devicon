@@ -36,21 +36,21 @@ jobs:
           path: ./geckodriver.log
       - name: Upload screenshot of the newly made icons
         id: icons_overview_img_step
-        uses: devicons/public-upload-to-imgur@main
+        uses: devicons/public-upload-to-imgur@develop
         if: success()
         with:
           path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Upload zoomed in screenshot of the newly made icons
         id: icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@main
+        uses: devicons/public-upload-to-imgur@develop
         if: success()
         with:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Generate the markdowns for the screenshot and put it in the DETAILED_IMGS_MARKDOWN env var
         env:
-          IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_url }}
+          IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
         run: |   
           echo "DETAILED_IMGS_MARKDOWN<<EOF" >> $GITHUB_ENV
           python ./.github/scripts/generate_screenshot_markdown.py "%IMG_URLS%" >> $GITHUB_ENV
@@ -61,7 +61,7 @@ jobs:
       - name: Comment on the PR about the result
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
-          OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.imgur_url)[0] }}
+          OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.imgur_urls)[0] }}
           MESSAGE: |
             Hi!
 
