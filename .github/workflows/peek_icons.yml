@@ -1,8 +1,7 @@
 name: Peek Icons
-# on:
-#   pull_request:
-#       types: [labeled]
-on: pull_request
+on:
+  pull_request:
+      types: [labeled]
 jobs:
   build:
     name: Get Fonts From Icomoon
@@ -17,78 +16,69 @@ jobs:
         uses: actions/setup-python@v2
         with: 
           python-version: 3.8
-      # - name: Install dependencies 
-      #   run: |
-      #     python -m pip install --upgrade pip
-      #     pip install -r ./.github/scripts/requirements.txt
-      # - name: Run icomoon_peek.py
-      #   env:
-      #     PR_TITLE: ${{ github.event.pull_request.title }}
-      #   shell: cmd
-      #   run: >
-      #     python ./.github/scripts/icomoon_peek.py 
-      #     ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
-      #     ./devicon.json ./icons ./ --headless --pr_title "%PR_TITLE%"
-      # - name: Upload geckodriver.log for debugging purposes
-      #   uses: actions/upload-artifact@v2
-      #   if: failure()
-      #   with:
-      #     name: geckodriver-log
-      #     path: ./geckodriver.log
-      # - name: Upload screenshot of the newly made icons
-      #   id: icons_overview_img_step
-      #   uses: devicons/public-upload-to-imgur@develop
-      #   if: success()
-      #   with:
-      #     path: ./screenshots/new_icons.png
-      #     client_id: ${{secrets.IMGUR_CLIENT_ID}}
-      # - name: Upload zoomed in screenshot of the newly made icons
-      #   id: icons_detailed_img_step
-      #   uses: devicons/public-upload-to-imgur@develop
-      #   if: success()
-      #   with:
-      #     path: ./screenshots/screenshot_*.png
-      #     client_id: ${{secrets.IMGUR_CLIENT_ID}}
-      # - name: Generate the markdowns for the screenshot and put it in the DETAILED_IMGS_MARKDOWN env var
-      #   if: success()
-      #   env:
-      #     IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
-        # run: |   
-        #   echo 'DETAILED_IMGS_MARKDOWN<<EOF' >> $GITHUB_ENV
-        #   python ./.github/scripts/generate_screenshot_markdown.py >> $GITHUB_ENV
-        #   echo 'EOF' >> $GITHUB_ENV
-      - name: Generate the markdowns for the screenshot and put it in the DETAILED_IMGS_MARKDOWN env var
+      - name: Install dependencies 
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ./.github/scripts/requirements.txt
+      - name: Run icomoon_peek.py
         env:
-          IMG_URLS: ${{ '["1", "2"]'}}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        shell: cmd
+        run: >
+          python ./.github/scripts/icomoon_peek.py 
+          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
+          ./devicon.json ./icons ./ --headless --pr_title "%PR_TITLE%"
+      - name: Upload geckodriver.log for debugging purposes
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: geckodriver-log
+          path: ./geckodriver.log
+      - name: Upload screenshot of the newly made icons
+        id: icons_overview_img_step
+        uses: devicons/public-upload-to-imgur@develop
+        if: success()
+        with:
+          path: ./screenshots/new_icons.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+      - name: Upload zoomed in screenshot of the newly made icons
+        id: icons_detailed_img_step
+        uses: devicons/public-upload-to-imgur@develop
+        if: success()
+        with:
+          path: ./screenshots/screenshot_*.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+      - name: Generate the markdowns for the screenshot and put it in the DETAILED_IMGS_MARKDOWN env var
+        if: success()
+        env:
+          IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
         run: |   
           echo 'DETAILED_IMGS_MARKDOWN<<EOF' >> $GITHUB_ENV
           python ./.github/scripts/generate_screenshot_markdown.py >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
         shell: bash
-      - run: echo "value is $DETAILED_IMGS_MARKDOWN"
-        shell: bash
-      # - name: Comment on the PR about the result
-      #   uses: github-actions-up-and-running/pr-comment@v1.0.1
-      #   env:
-      #     OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.imgur_urls)[0] }}
-      #     MESSAGE: |
-      #       Hi!
+      - name: Comment on the PR about the result
+        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        env:
+          OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.imgur_urls)[0] }}
+          MESSAGE: |
+            Hi!
 
-      #       I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
-      #       Here is the result below:
+            I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
+            Here is the result below:
 
-      #       ![Peeked Icons (top left)]({0})
+            ![Peeked Icons (top left)]({0})
 
-      #       Here are the zoomed-in screenshots of the added icons:
-      #       {1}
+            Here are the zoomed-in screenshots of the added icons:
+            {1}
 
-      #       Note: If the images doesn't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
+            Note: If the images doesn't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
 
-      #       The maintainers will now take a look at it and decide whether to merge your PR.
+            The maintainers will now take a look at it and decide whether to merge your PR.
 
-      #       Cheers :),
+            Cheers :),
       
-      #       Peek Bot
-      #   with:
-      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
-      #     message: ${{format(env.MESSAGE, env.OVERVIEW_IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}
+            Peek Bot
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: ${{format(env.MESSAGE, env.OVERVIEW_IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}
