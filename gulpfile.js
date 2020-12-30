@@ -9,24 +9,7 @@ const deviconJSONName = "devicon.json";
 const aliasSCSSName = "devicon-alias.scss";
 const colorsCSSName = "devicon-colors.css";
 const finalMinSCSSName = "devicon.min.scss";
-const publishDirectory = "docs/dist/";
 
-/**
- * Copy resulting devicon.json, *.min.css and
- * all related raw icons to the public folder (typical /docs/dist)
- * so we are able to use the resulting files in Github page
- *
- * @returns {Promise<void>}
- */
-async function publishDocs() {
-    return gulp.src([
-            path.join(__dirname, 'devicon.min.css'),
-            path.join(__dirname, 'devicon.css'),
-            path.join(__dirname, 'devicon.json'),
-            path.join(__dirname, 'fonts/**/*'),
-            path.join(__dirname, 'icons/**/*'),
-        ], { base: '.'}).pipe(gulp.dest(publishDirectory));
-}
 
 /**
  * Create the devicon.min.css by creating needed
@@ -166,5 +149,4 @@ function cleanUp() {
 
 
 exports.updateCss = createDeviconMinCSS;
-exports.publishDocs = publishDocs;
 exports.clean = cleanUp;
