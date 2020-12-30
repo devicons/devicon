@@ -8,9 +8,25 @@ var devicon = angular.module('devicon', ['ngSanitize', 'ngAnimate']);
 
 devicon.controller('IconListCtrl', function($scope, $http, $compile) {
 
-  var baseUrl = window.location.origin;
+  // Determination of the latest release tagging
+  // which is used for showing in the header of the page
+  // as well as for CDN links
+  var gitHubPath = 'devicons/devicon';
+  var url = 'https://api.github.com/repos/' + gitHubPath + '/tags';
 
-  // Get devicon.json 
+  $scope.latestReleaseTagging = 'master';
+  $http.get(url).success(function (data) {
+    if(data.length > 0) {
+      $scope.latestReleaseTagging = data[0].name;
+    }
+  }).error(function () {
+    console.log('Unable to determine latest release version, fallback to master.')
+  });
+
+
+  var baseUrl = 'https://raw.githubusercontent.com/' + gitHubPath + '/master/'
+
+  // Get devicon.json
   $http.get(baseUrl + '/devicon.json').success(function(data) {
 
     /*
@@ -68,7 +84,6 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
 
     /*------ End of "Re-format devicon.json" ------*/
   });
-
 
   /*
   | Change selected icon
