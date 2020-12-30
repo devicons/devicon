@@ -56,6 +56,8 @@ jobs:
           python ./.github/scripts/generate_screenshot_markdown.py "%IMG_URLS%" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
         shell: cmd
+      - run: echo %DETAILED_IMGS_MARKDOWN%
+        shell: cmd
       - name: Comment on the PR about the result
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
@@ -80,4 +82,4 @@ jobs:
             Peek Bot
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: ${{format(env.MESSAGE, env.IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}
+          message: ${{format(env.MESSAGE, env.OVERVIEW_IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}
