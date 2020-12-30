@@ -34,7 +34,7 @@ jobs:
         run: npm run build-css
       - name: Upload screenshot of the newly made icons
         id: imgur_step
-        uses: devicons/public-upload-to-imgur@v1.1.2
+        uses: devicons/public-upload-to-imgur@v2
         if: success()
         with:
           path: ./new_icons.png

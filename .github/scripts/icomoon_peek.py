@@ -1,5 +1,6 @@
 from typing import List
 import re
+import sys
 from selenium.common.exceptions import TimeoutException
 
 # pycharm complains that build_assets is an unresolved ref
@@ -20,18 +21,20 @@ def main():
     print("Icons being uploaded:", *filtered_icons, sep = "\n")
 
     if len(new_icons) == 0:
-        print("No files need to be uploaded. Ending script...")
-        return
+        sys.exit("No files need to be uploaded. Ending script...")
 
-    screenshot_folder = filehandler.create_screenshot_folder("./") 
     if len(filtered_icons) == 0:
-        print("No icons found matching the icon name in the PR's title. Fallback to uploading all new icons found.")
-        screenshot_folder = ""
+        sys.exit("No icons found matching the icon name in the PR's title.",
+        "Ensure that the PR title matches the convention here: ",
+        "https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview.",
+        "Ending script...",
+        sep='\n')
 
     runner = None
     try:
         runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
         svgs = filehandler.get_svgs_paths(filtered_icons, args.icons_folder_path)
+        screenshot_folder = filehandler.create_screenshot_folder("./") 
         runner.upload_svgs(svgs, screenshot_folder)
         print("Task completed.")
     except TimeoutException as e:
