@@ -19,25 +19,28 @@ jobs:
           pip install -r ./.github/scripts/requirements.txt
           npm install
       - name: Executing build and create fonts via icomoon
-        run: npm run build
+        run: >
+          python ./.github/scripts/icomoon_build.py 
+          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
+          ./devicon.json ./icons ./ --headless
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
-        if: ${{failure()}}
+        if: failure()
         with:
           name: geckodriver-log
           path: ./geckodriver.log
       - name: Build devicon.min.css
-        if: ${{ success() }}
+        if: success() 
         run: npm run build-css
       - name: Upload screenshot of the newly made icons
         id: imgur_step
-        uses: devicons/public-upload-to-imgur@v1
-        if: ${{success()}}
+        uses: devicons/public-upload-to-imgur@v2
+        if: success()
         with:
-          img_path: ./new_icons.png
+          path: ./new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Create Pull Request
-        if: ${{ success() }}
+        if: success() 
         uses: peter-evans/create-pull-request@v3
         env:
           MESSAGE: |
@@ -53,5 +56,5 @@ jobs:
           base: 'master'
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
-          body: ${{ format(env.MESSAGE, steps.imgur_step.outputs.imgur_url ) }}
+          body: ${{ format(env.MESSAGE, fromJSON(steps.imgur_step.outputs.imgur_url)[0] ) }}
           delete-branch: true
