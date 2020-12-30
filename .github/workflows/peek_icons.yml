@@ -35,31 +35,32 @@ jobs:
           name: geckodriver-log
           path: ./geckodriver.log
       - name: Upload screenshot of the newly made icons
-        id: new_icons_overview_step
-        uses: devicons/public-upload-to-imgur@main
+        id: icons_overview_img_step
+        uses: devicons/public-upload-to-imgur@v2
         if: success()
         with:
           path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Upload zoomed in screenshot of the newly made icons
-        id: new_icons_detailed_step
-        uses: devicons/public-upload-to-imgur@main
+        id: icons_detailed_img_step
+        uses: devicons/public-upload-to-imgur@v2
         if: success()
         with:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Generate the markdowns for the screenshot and put it in the DETAILED_IMGS_MARKDOWN env var
+        if: success()
         env:
-          IMG_URLS: ${{ steps.new_icons_detailed_step.outputs.img_url }}
+          IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
         run: |   
-          echo "DETAILED_IMGS_MARKDOWN<<EOF" >> $GITHUB_ENV
-          python ./.github/scripts/generate_screenshot_markdown.py "%IMG_URLS%" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-        shell: cmd
+          echo 'DETAILED_IMGS_MARKDOWN<<EOF' >> $GITHUB_ENV
+          python ./.github/scripts/generate_screenshot_markdown.py >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+        shell: bash
       - name: Comment on the PR about the result
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
-          OVERVIEW_IMG_URL: ${{ steps.imgur_step.outputs.imgur_url }}
+          OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.imgur_urls)[0] }}
           MESSAGE: |
             Hi!
 
@@ -80,4 +81,4 @@ jobs:
             Peek Bot
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: ${{format(env.MESSAGE, env.IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}
+          message: ${{format(env.MESSAGE, env.OVERVIEW_IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}
