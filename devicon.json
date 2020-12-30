@@ -238,7 +238,9 @@
                 "original",
                 "plain"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
         "color": "#293138",
         "aliases": []
