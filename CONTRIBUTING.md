@@ -52,9 +52,15 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><b>line-wordmark</b>: a one-color, line version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line-wordmark.svg"> Example </a></li>
 </ul>
 <p> Notes <p>
+<<<<<<< HEAD
 <ol>  
   <li>
     It is not mandatory to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
+=======
+<ul>  
+  <li>
+    You don't need to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
+>>>>>>> 09c3b64... Updated CONTRIBUTING
   </li>
   <li>
     The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font.
@@ -63,17 +69,10 @@ First of all, thanks for taking the time to contribute! This project can only gr
     The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
   </li>
   <li>
-  </li>
-  <li>
-    Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. 
+    Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note: this only applies to font icon versions only, not the SVG versions.
     
-    <ol>
-      <li>
-        This only applies to font icon versions only, not the SVG versions. SVG versions don't need aliases.
-      </li>
-    </ol>
   </li>
-</ol>
+</ul>
 
 <hr>
 <h2 id='svgStandards'>SVG Standards</h2>
@@ -247,8 +246,8 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 <ul>
   <li>Search for other issues already requesting the icon</li>
   <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
-  <li>Please create separated issues for each icon</li>
-  <li>optional: Include links where the icon can be found</li>
+  <li>Please create a separate issues for each icon</li>
+  <li>Optional: include links where the icon can be found</li>
 </ul>
 
 <hr>
