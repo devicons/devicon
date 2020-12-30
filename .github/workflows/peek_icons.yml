@@ -1,7 +1,8 @@
 name: Peek Icons
-on:
-  pull_request:
-      types: [labeled]
+# on:
+#   pull_request:
+#       types: [labeled]
+on: pull_request
 jobs:
   build:
     name: Get Fonts From Icomoon
@@ -48,7 +49,13 @@ jobs:
         with:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
+      - run: echo %IMG_URLS% %IMG_URL% urls
+        env:
+          IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
+          IMG_URL: ${{ steps.icons_overview_img_step.outputs.imgur_urls }}
+        shell: cmd
       - name: Generate the markdowns for the screenshot and put it in the DETAILED_IMGS_MARKDOWN env var
+        if: success()
         env:
           IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
         run: |   
