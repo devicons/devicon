@@ -61,7 +61,7 @@ jobs:
       - name: Comment on the PR about the result
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
-          OVERVIEW_IMG_URL: ${{ steps.icons_overview_img_step.outputs.imgur_url }}
+          OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.imgur_url)[0] }}
           MESSAGE: |
             Hi!
 
