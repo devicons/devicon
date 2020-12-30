@@ -4,7 +4,7 @@
   "description": "Programming related icons collection",
   "main": "devicon.min.css",
   "scripts": {
-    "build-css": "gulp updateCss && gulp publishDocs && gulp clean",
+    "build-css": "gulp updateCss && gulp clean",
     "build": "python ./.github/scripts/icomoon_build.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./ --headless",
     "peek": "python ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./ --headless"
   },
