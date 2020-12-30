@@ -13,6 +13,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   // as well as for CDN links
   var gitHubPath = 'devicons/devicon';
   var url = 'https://api.github.com/repos/' + gitHubPath + '/tags';
+
   $scope.latestReleaseTagging = 'master';
   $http.get(url).success(function (data) {
     if(data.length > 0) {
@@ -23,7 +24,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   });
 
 
-  var baseUrl = window.location.origin + '/dist';
+  var baseUrl = 'https://raw.githubusercontent.com/' + gitHubPath + '/master/'
 
   // Get devicon.json
   $http.get(baseUrl + '/devicon.json').success(function(data) {
