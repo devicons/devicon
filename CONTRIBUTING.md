@@ -22,7 +22,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <ol>
   <li>"Icon" refers to the set of svgs/icons of a technology/tool. Ex: We might refer to the React svgs and React icons as the React Icon</li>
   <li>"SVG/<code>.svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
-  <li>"icons" refers to the icon versions of the Icons.</li>
+  <li>"icons" (lowercase) refers to the font icon versions of the Icons.</li>
 </ol>
 
 <hr>
@@ -69,7 +69,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
     The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
   </li>
   <li>
-    Some icons are really simple (like the Apple one), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make only one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note: this only applies to font icon versions only, not the SVG versions.
+    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note: this only applies to font icon versions only, not the SVG versions.
     
   </li>
 </ul>
@@ -91,15 +91,16 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <hr>
 <h2 id='orgGuidelines'>Organizational Guidelines</h2>
 <ul>
-  <li>Each Icon has its own folder located in the <code>icons</code> folder</li>
-  <li>Each Icon folder must contain one <code>.eps</code> file and as many <code>.svg</code> files as versions available (at the minimum one <code>.svg</code> file)</li>
-  <li>The <code>.eps</code> file contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
+  <li>Each icon has its own folder located in the <code>icons</code> folder</li>
+  <li>Each folder <i>may</i> contain one <code>.eps</code> file</li> (optional)
+  <li>The <code>.eps</code> file should contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
+  <li>Each folder must contain all the <code>.svg</code> files for the Icon</li>
 </ul>
 
 <hr>
 <h2 id='updateDevicon'> Updating the <code>devicon.json</code> </h2>
 <p>
-  Before you open a PR into Devicon, you'd have to update the <code>devicon.json</code>. This is essential for our build script to work and to document your work.
+  Before you open a PR into Devicon, you must update the <code>devicon.json</code>. This is essential for our build script to work and to document your work.
 </p>
 <p>
   Here is the object that each of your Icon must have:
@@ -214,7 +215,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                 {
                     "base": "original", // here is the base version that we will upload to Icomoon
                     "alias": "plain" // this is its alias. Our script will create a reference so users can search using "original" or "plain" for this icon
-                    // note that you don't provide aliases for the svg version. If "original" is not a font version (i.e can't be made into a font), there's no need to provide it with a plain alias
+                    // note that you don't provide aliases for the svg version. If "original" can't be made into a font, there's no need to provide it with a plain alias
                 }
               ]
             }
