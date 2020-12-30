@@ -53,7 +53,10 @@ jobs:
         if: success()
         env:
           IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
-        run: python ./.github/scripts/generate_screenshot_markdown.py
+        run: |   
+          echo "DETAILED_IMGS_MARKDOWN<<EOF" >> $GITHUB_ENV
+          python ./.github/scripts/generate_screenshot_markdown.py >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
         shell: cmd
       - run: echo %DETAILED_IMGS_MARKDOWN%
         shell: cmd
