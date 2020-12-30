@@ -89,7 +89,6 @@ jobs:
         if: failure()
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
-          OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.imgur_urls)[0] }}
           MESSAGE: |
             Hi!
 
@@ -103,11 +102,11 @@ jobs:
 
             Once everything is fixed, the maintainers will try again. If I still fail, the maintainers will investigate what cause this problem. 
 
-            Thank you for your help :smile
+            Thank you for your help :smile:
 
             Cheers :),
       
             Peek Bot
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: ${{format(env.MESSAGE, env.OVERVIEW_IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}
+          message: ${{env.MESSAGE}}
