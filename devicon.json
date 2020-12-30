@@ -860,6 +860,16 @@
         "aliases": []
     },
     {
+      "name": "eleventy",
+      "tags": ["ssg", "static site generator"],
+      "versions": {
+        "svg": ["original", "plain"],
+        "font": ["plain"]
+      },
+      "color": "#1f1f1f",
+      "aliases": []
+    },
+    {
         "name": "elm",
         "tags": [
             "framework"
