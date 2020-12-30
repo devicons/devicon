@@ -49,19 +49,11 @@ jobs:
         with:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
-      - run: echo %IMG_URLS% %IMG_URL% urls
-        env:
-          IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
-          IMG_URL: ${{ steps.icons_overview_img_step.outputs.imgur_urls }}
-        shell: cmd
       - name: Generate the markdowns for the screenshot and put it in the DETAILED_IMGS_MARKDOWN env var
         if: success()
         env:
           IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
-        run: |   
-          echo "DETAILED_IMGS_MARKDOWN<<EOF" >> $GITHUB_ENV
-          python ./.github/scripts/generate_screenshot_markdown.py "%IMG_URLS%" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+        run: python ./.github/scripts/generate_screenshot_markdown.py
         shell: cmd
       - run: echo %DETAILED_IMGS_MARKDOWN%
         shell: cmd

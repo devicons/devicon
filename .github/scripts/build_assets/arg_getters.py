@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 from build_assets.PathResolverAction import PathResolverAction
 
+
 def get_selenium_runner_args(peek_mode=False):
     parser = ArgumentParser(description="Upload svgs to Icomoon to create icon files.")
 
@@ -31,14 +32,5 @@ def get_selenium_runner_args(peek_mode=False):
     if peek_mode:
         parser.add_argument("--pr_title",
                             help="The title of the PR that we are peeking at")
-
-    return parser.parse_args()
-
-
-def get_generate_markdown_args():
-    parser = ArgumentParser(description="Generate markdown for the image urls passed in.")
-
-    parser.add_argument("img_urls",
-                        help="The urls of the images. Must be the string/JSON form of an array. Ex: '[1,2,3]'")
 
     return parser.parse_args()
