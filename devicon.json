@@ -228,6 +228,22 @@
         "aliases": []
     },
     {
+        "name": "bash",
+        "tags": [
+            "shell",
+            "command"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": []
+        },
+        "color": "#293138",
+        "aliases": []
+    },
+    {
         "name": "behance",
         "tags": [
             "social",
