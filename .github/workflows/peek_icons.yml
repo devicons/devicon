@@ -33,14 +33,14 @@ jobs:
           path: ./geckodriver.log
       - name: Upload screenshot of the newly made icons
         id: icons_overview_img_step
-        uses: devicons/public-upload-to-imgur@v2
+        uses: devicons/public-upload-to-imgur@v2.1
         if: success()
         with:
           path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Upload zoomed in screenshot of the newly made icons
         id: icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2
+        uses: devicons/public-upload-to-imgur@v2.1
         if: success()
         with:
           path: ./screenshots/screenshot_*.png
