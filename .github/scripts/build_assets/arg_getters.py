@@ -1,8 +1,8 @@
-from pathlib import Path
 from argparse import ArgumentParser
 from build_assets.PathResolverAction import PathResolverAction
 
-def get_commandline_args():
+
+def get_selenium_runner_args(peek_mode=False):
     parser = ArgumentParser(description="Upload svgs to Icomoon to create icon files.")
 
     parser.add_argument("--headless",
@@ -26,8 +26,11 @@ def get_commandline_args():
                         action=PathResolverAction)
 
     parser.add_argument("download_path",
-                        help="The path where you'd like to download the Icomoon files to",
+                        help="The download destination of the Icomoon files",
                         action=PathResolverAction)
 
+    if peek_mode:
+        parser.add_argument("--pr_title",
+                            help="The title of the PR that we are peeking at")
 
     return parser.parse_args()
