@@ -227,6 +227,10 @@ class SeleniumRunner:
     def remove_color_from_icon(self):
         """
         Remove the color from the most recent uploaded icon.
+        This is because some SVG have colors in them and we don't want to
+        force contributors to remove them in case people want the colored SVGs.
+        The color removal is also necessary so that the Icomoon-generated
+        icons fit within one font symbol/ligiature.
         """
         color_tab = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC).until(
             ec.element_to_be_clickable((By.CSS_SELECTOR, "div.overlayWindow i.icon-droplet"))
