@@ -6,6 +6,9 @@ on:
       - completed
 jobs: 
   post_screenshots_in_comment:
+    name: Post the screenshot
+    runs-on: ubuntu-18.04
+    steps:
     - run: echo $EVENT_OBJ
       shell: bash
       env:
