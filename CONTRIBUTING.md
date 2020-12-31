@@ -52,15 +52,9 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><b>line-wordmark</b>: a one-color, line version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line-wordmark.svg"> Example </a></li>
 </ul>
 <p> Notes <p>
-<<<<<<< HEAD
-<ol>  
-  <li>
-    It is not mandatory to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
-=======
 <ul>  
   <li>
     You don't need to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
->>>>>>> 09c3b64... Updated CONTRIBUTING
   </li>
   <li>
     The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font.
