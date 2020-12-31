@@ -4,11 +4,11 @@ from selenium.common.exceptions import TimeoutException
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
 from build_assets.SeleniumRunner import SeleniumRunner
-from build_assets import filehandler, util
+from build_assets import filehandler, arg_getters
 
 
 def main():
-    args = util.get_commandline_args()
+    args = arg_getters.get_selenium_runner_args()
     new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
     if len(new_icons) == 0:
         print("No files need to be uploaded. Ending script...")
