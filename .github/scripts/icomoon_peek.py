@@ -38,9 +38,9 @@ def main():
         runner.upload_svgs(svgs, screenshot_folder)
         print("Task completed.")
     except TimeoutException as e:
-        print("Selenium Time Out Error: ", e.stacktrace, sep='\n')
+        sys.exit("Selenium Time Out Error: \n" + e)
     except Exception as e:
-        print(e)
+        sys.exit(e)
     finally:
         runner.close()
 
