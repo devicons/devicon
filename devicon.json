@@ -1025,6 +1025,28 @@
         "aliases": []
     },
     {
+        "name": "flask",
+        "tags": [
+            "python",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+          {
+            "base": "plain",
+            "alias": "original"
+          }
+        ]
+    },
+    {
         "name": "flutter",
         "tags": [
             "framework",
