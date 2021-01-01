@@ -2476,6 +2476,24 @@
         "aliases": []
     },
     {
+        "name": "sqlserver",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "ssh",
         "tags": [
             "security"
