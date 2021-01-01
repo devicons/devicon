@@ -2476,6 +2476,27 @@
         "aliases": []
     },
     {
+        "name": "sqlalchemy",
+        "tags": [
+            "python",
+            "orm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#333333",
+        "aliases": []
+    },
+    {
         "name": "ssh",
         "tags": [
             "security"
