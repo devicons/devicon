@@ -2859,6 +2859,24 @@
         "aliases": []
     },
     {
+        "name": "uwsgi",
+        "tags": [
+            "hosting"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#bad05e",
+        "aliases": []
+    },
+    {
         "name": "vagrant",
         "tags": [
             "platform"
