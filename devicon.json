@@ -2000,6 +2000,28 @@
         ]
     },
     {
+        "name": "pandas",
+        "tags": [
+            "python",
+            "data",
+            "analysis"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2278B5",
+        "aliases": []
+    },
+    {
         "name": "photoshop",
         "tags": [
             "editor",
