@@ -89,20 +89,11 @@ class SeleniumRunner:
         :raises TimeoutException: happens when elements are not found.
         """
         print("Uploading icomoon.json file...")
-        try:
-            self.click_hamburger_input()
-            
-            # find the file input and enter the file path
-            import_btn = self.driver.find_element(By.XPATH, "(//li[@class='file'])[1]//input")
-            import_btn.send_keys(icomoon_json_path)
-        except SeleniumTimeoutException as e:
-            print(e.stacktrace)
-            print("Selenium timed out. Couldn't find import button.")
-            self.close()
-            raise e
-        except Exception as e:
-            self.close()
-            raise e
+        self.click_hamburger_input()
+        
+        # find the file input and enter the file path
+        import_btn = self.driver.find_element(By.XPATH, "(//li[@class='file'])[1]//input")
+        import_btn.send_keys(icomoon_json_path)
 
         try:
             confirm_btn = WebDriverWait(self.driver, SeleniumRunner.MED_WAIT_IN_SEC).until(
@@ -110,49 +101,42 @@ class SeleniumRunner:
             )
             confirm_btn.click()
         except SeleniumTimeoutException as e:
-            print(e.stacktrace)
-            print("Cannot find the confirm button when uploading the icomoon.json",
-                  "Ensure that the icomoon.json is in the correct format for Icomoon.io",
-                  sep='\n')
-            self.close()
+            raise Exception("Cannot find the confirm button when uploading the icomoon.json" \
+                  "Ensure that the icomoon.json is in the correct format for Icomoon.io")
 
         print("JSON file uploaded.")
 
-    def upload_svgs(self, svgs: List[str]):
+    def upload_svgs(self, svgs: List[str], screenshot_folder: str=""):
         """
         Upload the SVGs provided in folder_info
         :param svgs: a list of svg Paths that we'll upload to icomoon.
+        :param screenshot_folder: the name of the screenshot_folder. If
+        the value is provided, it means the user want to take a screenshot
+        of each icon.
         """
-        try:
-            print("Uploading SVGs...")
+        print("Uploading SVGs...")
 
-            edit_mode_btn = self.driver.find_element_by_css_selector(
-                "div.btnBar button i.icon-edit"
+        edit_mode_btn = self.driver.find_element_by_css_selector(
+            "div.btnBar button i.icon-edit"
+        )
+        edit_mode_btn.click()
+
+        self.click_hamburger_input()
+
+        for i in range(len(svgs)):
+            import_btn = self.driver.find_element_by_css_selector(
+                "li.file input[type=file]"
             )
-            edit_mode_btn.click()
+            import_btn.send_keys(svgs[i])
+            print(f"Uploaded {svgs[i]}")
+            self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Dismiss")
+            self.click_on_just_added_icon(screenshot_folder, i)
 
-            self.click_hamburger_input()
+        # take a screenshot of the icons that were just added
+        new_icons_path = str(Path(screenshot_folder, "new_icons.png").resolve())
+        self.driver.save_screenshot(new_icons_path);
 
-            for svg in svgs:
-                import_btn = self.driver.find_element_by_css_selector(
-                    "li.file input[type=file]"
-                )
-                import_btn.send_keys(svg)
-                print(f"Uploaded {svg}")
-                self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Dismiss")
-                self.remove_color_from_icon()
-
-            # take a screenshot of the icons that were just added
-            self.driver.save_screenshot("new_icons.png");
-            self.click_hamburger_input()
-            select_all_button = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
-                ec.element_to_be_clickable((By.XPATH, "//button[text()='Select All']"))
-            )
-            select_all_button.click()
-            print("Finished uploading the svgs...")
-        except Exception as e:
-            self.close()
-            raise e
+        print("Finished uploading the svgs...")
 
     def click_hamburger_input(self):
         """
@@ -161,20 +145,16 @@ class SeleniumRunner:
         input two times before the menu appears.
         :return: None.
         """
-        try:
-            hamburger_input = self.driver.find_element_by_xpath(
-                "(//i[@class='icon-menu'])[2]"
-            )
+        hamburger_input = self.driver.find_element_by_xpath(
+            "(//i[@class='icon-menu'])[2]"
+        )
 
-            menu_appear_callback = ec.element_to_be_clickable(
-                (By.CSS_SELECTOR, "h1 ul.menuList2")
-            )
+        menu_appear_callback = ec.element_to_be_clickable(
+            (By.CSS_SELECTOR, "h1 ul.menuList2")
+        )
 
-            while not menu_appear_callback(self.driver):
-                hamburger_input.click()
-        except Exception as e:
-            self.close()
-            raise e
+        while not menu_appear_callback(self.driver):
+            hamburger_input.click()
 
     def test_for_possible_alert(self, wait_period: float, btn_text: str):
         """
@@ -191,22 +171,37 @@ class SeleniumRunner:
             )
             dismiss_btn.click()
         except SeleniumTimeoutException:
-            pass
+            pass  # nothing found => everything is good
+
+    def click_on_just_added_icon(self, screenshot_folder: str, index: int):
+        """
+        Click on the most recently added icon so we can remove the colors
+        and take a snapshot if needed.
+        """
+        recently_uploaded_icon = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
+            ec.element_to_be_clickable((By.XPATH, "//div[@id='set0']//mi-box[1]//div"))
+        )
+        recently_uploaded_icon.click()
+
+        self.remove_color_from_icon()
+
+        if screenshot_folder:
+            screenshot_path = str(Path(screenshot_folder, f"screenshot_{index}.png").resolve())
+            self.driver.save_screenshot(screenshot_path)
+            print("Took screenshot and saved it at " + screenshot_path)
+
+        close_btn = self.driver \
+            .find_element_by_css_selector("div.overlayWindow i.icon-close")
+        close_btn.click()
 
     def remove_color_from_icon(self):
         """
         Remove the color from the most recent uploaded icon.
-        :return: None.
+        This is because some SVG have colors in them and we don't want to
+        force contributors to remove them in case people want the colored SVGs.
+        The color removal is also necessary so that the Icomoon-generated
+        icons fit within one font symbol/ligiature.
         """
-        try:
-            recently_uploaded_icon = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
-                ec.element_to_be_clickable((By.XPATH, "//div[@id='set0']//mi-box[1]//div"))
-            )
-            recently_uploaded_icon.click()
-        except Exception as e:
-            self.close()
-            raise e
-
         try:
             color_tab = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC).until(
                 ec.element_to_be_clickable((By.CSS_SELECTOR, "div.overlayWindow i.icon-droplet"))
@@ -217,42 +212,35 @@ class SeleniumRunner:
                 .find_element_by_css_selector("div.overlayWindow i.icon-droplet-cross")
             remove_color_btn.click()
         except SeleniumTimeoutException:
-            pass
-        except Exception as e:
-            self.close()
-            raise e
-
-        try:
-            close_btn = self.driver \
-                .find_element_by_css_selector("div.overlayWindow i.icon-close")
-            close_btn.click()
-        except Exception as e:
-            self.close()
-            raise e
+            pass # do nothing cause sometimes, the color tab doesn't appear in the site
 
     def download_icomoon_fonts(self, zip_path: Path):
         """
         Download the icomoon.zip from icomoon.io.
         :param zip_path: the path to the zip file after it's downloaded.
         """
-        try:
-            print("Downloading Font files...")
-            self.driver.find_element_by_css_selector(
-                "a[href='#/select/font']"
-            ).click()
+        # select all the svgs so that the newly added svg are part of the collection
+        self.click_hamburger_input()
+        select_all_button = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
+            ec.element_to_be_clickable((By.XPATH, "//button[text()='Select All']"))
+        )
+        select_all_button.click()
 
-            self.test_for_possible_alert(self.MED_WAIT_IN_SEC, "Continue")
-            download_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
-                ec.presence_of_element_located((By.CSS_SELECTOR, "button.btn4 span"))
-            )
-            download_btn.click()
-            if self.wait_for_zip(zip_path):
-                print("Font files downloaded.")
-            else:
-                raise TimeoutError(f"Couldn't find {zip_path} after download button was clicked.")
-        except Exception as e:
-            self.close()
-            raise e
+        print("Downloading Font files...")
+        font_tab = self.driver.find_element_by_css_selector(
+            "a[href='#/select/font']"
+        )
+        font_tab.click()
+
+        self.test_for_possible_alert(self.MED_WAIT_IN_SEC, "Continue")
+        download_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
+            ec.presence_of_element_located((By.CSS_SELECTOR, "button.btn4 span"))
+        )
+        download_btn.click()
+        if self.wait_for_zip(zip_path):
+            print("Font files downloaded.")
+        else:
+            raise TimeoutError(f"Couldn't find {zip_path} after download button was clicked.")
 
     def wait_for_zip(self, zip_path: Path) -> bool:
         """
