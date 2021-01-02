@@ -2,7 +2,7 @@
 name: Icon request
 about: Requesting a new icon or changes to an existing icon
 title: 'Icon request: [NAME]'
-labels: 'request: icon'
+labels: 'request:icon'
 assignees: ''
 
 ---
