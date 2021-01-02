@@ -1679,6 +1679,25 @@
         "aliases": []
     },
     {
+        "name": "kubernetes",
+        "tags": [
+            "container",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#486bb3",
+        "aliases": []
+    },
+    {
         "name": "laravel",
         "tags": [
             "php",
