@@ -5,8 +5,9 @@
   "main": "devicon.min.css",
   "scripts": {
     "build-css": "gulp updateCss && gulp clean",
-    "build": "python ./.github/scripts/icomoon_build.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./ --headless",
-    "peek": "python ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./ --headless"
+    "peek-test": "python ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./  --pr_title \"%PR_TITLE%\"",
+    "build-test": "python ./.github/scripts/icomoon_build.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./"
+          
   },
   "repository": {
     "type": "git",

@@ -141,7 +141,6 @@ function cleanUp() {
                 let filePath = path.join(__dirname, name);
                 return fsPromise.unlink(filePath);
             } catch(e) {
-                console.log("err was catch here");
                 console.log(e);
             }
         })
