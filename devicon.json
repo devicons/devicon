@@ -228,6 +228,24 @@
         "aliases": []
     },
     {
+        "name": "bash",
+        "tags": [
+            "shell",
+            "command"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#293138",
+        "aliases": []
+    },
+    {
         "name": "behance",
         "tags": [
             "social",
@@ -257,12 +275,21 @@
                 "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#205081",
-        "aliases": []
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          },
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
     },
     {
         "name": "bootstrap",
@@ -548,12 +575,21 @@
                 "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#205081",
-        "aliases": []
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          },
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
     },
     {
         "name": "couchdb",
@@ -893,7 +929,12 @@
             ]
         },
         "color": "#dd3f24",
-        "aliases": []
+        "aliases": [
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
     },
     {
         "name": "erlang",
@@ -2468,12 +2509,21 @@
                 "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#205081",
-        "aliases": []
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          },
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
     },
     {
         "name": "sqlalchemy",
@@ -2507,12 +2557,21 @@
                 "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#231F20",
-        "aliases": []
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          },
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
     },
     {
         "name": "stylus",
@@ -2646,11 +2705,16 @@
                 "original"
             ],
             "font": [
-                "plain"
+                "original"
             ]
         },
         "color": "#1da1f2",
-        "aliases": []
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          }
+        ]
     },
     {
         "name": "typescript",
