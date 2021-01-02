@@ -1979,6 +1979,23 @@
         "aliases": []
     },
     {
+        "name": "objectivec",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0b5a9d",
+        "aliases": []
+    },
+    {
         "name": "oracle",
         "tags": [
             "database"
