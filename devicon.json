@@ -1183,6 +1183,27 @@
         ]
     },
     {
+        "name": "googlecloud",
+        "tags": [
+            "google",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#557ebf",
+        "aliases": []
+    },
+    {
         "name": "gradle",
         "tags": [
             "task-runner"
