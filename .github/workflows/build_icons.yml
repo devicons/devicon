@@ -34,7 +34,7 @@ jobs:
         run: npm run build-css
       - name: Upload screenshot of the newly made icons
         id: imgur_step
-        uses: devicons/public-upload-to-imgur@v2
+        uses: devicons/public-upload-to-imgur@v2.1.1
         if: success()
         with:
           path: ./new_icons.png
@@ -56,5 +56,5 @@ jobs:
           base: 'master'
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
-          body: ${{ format(env.MESSAGE, fromJSON(steps.imgur_step.outputs.imgur_url)[0] ) }}
+          body: ${{ format(env.MESSAGE, fromJSON(steps.imgur_step.outputs.imgur_urls)[0] ) }}
           delete-branch: true
