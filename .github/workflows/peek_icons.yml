@@ -1,7 +1,7 @@
 name: Peek Icons
 on:
   pull_request:
-      types: [labeled]
+    types: [labeled]
 jobs:
   build:
     name: Get Fonts From Icomoon
@@ -11,9 +11,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup Python v3.8
         uses: actions/setup-python@v2
-        with: 
+        with:
           python-version: 3.8
-      - name: Install dependencies 
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
@@ -31,16 +31,16 @@ jobs:
         with:
           name: geckodriver-log
           path: ./geckodriver.log
-      - name: Upload screenshot of the newly made icons
+      - name: Upload overview screenshot of the newly made icons
         id: icons_overview_img_step
-        uses: devicons/public-upload-to-imgur@v2.1
+        uses: devicons/public-upload-to-imgur@v2.1.1
         if: success()
         with:
           path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
       - name: Upload zoomed in screenshot of the newly made icons
         id: icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.1
+        uses: devicons/public-upload-to-imgur@v2.1.1
         if: success()
         with:
           path: ./screenshots/screenshot_*.png
@@ -49,12 +49,12 @@ jobs:
         if: success()
         env:
           IMG_URLS: ${{ steps.icons_detailed_img_step.outputs.imgur_urls }}
-        run: |   
+        run: |
           echo 'DETAILED_IMGS_MARKDOWN<<EOF' >> $GITHUB_ENV
           python ./.github/scripts/generate_screenshot_markdown.py >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
         shell: bash
-      - name: Comment on the PR about the result
+      - name: Comment on the PR about the result including screenshots
         if: success()
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
@@ -77,12 +77,12 @@ jobs:
             Thank you for contributing to Devicon! I hope everything works out and your icons are accepted into the repo.
 
             Cheers :),
-      
+
             Peek Bot
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: ${{format(env.MESSAGE, env.OVERVIEW_IMG_URL, env.DETAILED_IMGS_MARKDOWN)}}
-      - name: Comment on the PR about the result
+      - name: Comment on the PR about the result of failed action
         if: failure()
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
@@ -102,7 +102,7 @@ jobs:
             Thank you for your help :smile:
 
             Cheers :),
-      
+
             Peek Bot
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
