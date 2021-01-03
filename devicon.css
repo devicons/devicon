@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devicon';
-  src:  url('fonts/devicon.eot?flyg0o');
-  src:  url('fonts/devicon.eot?flyg0o#iefix') format('embedded-opentype'),
-    url('fonts/devicon.ttf?flyg0o') format('truetype'),
-    url('fonts/devicon.woff?flyg0o') format('woff'),
-    url('fonts/devicon.svg?flyg0o#devicon') format('svg');
+  src:  url('fonts/devicon.eot?r4n05t');
+  src:  url('fonts/devicon.eot?r4n05t#iefix') format('embedded-opentype'),
+    url('fonts/devicon.ttf?r4n05t') format('truetype'),
+    url('fonts/devicon.woff?r4n05t') format('woff'),
+    url('fonts/devicon.svg?r4n05t#devicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-bash-plain:before {
+  content: "\e979";
+}
 .devicon-woocommerce-plain-wordmark:before {
   content: "\e966";
 }
