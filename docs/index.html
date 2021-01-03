@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>DEVICON | All programming languages and development tools related icons font</title>
+  <meta name="description" content="devicon aims to gather all logos representing development languages and tools in one font.">
+  <!-- <meta name="viewport" content="width=device-width"> -->
+  <link rel="icon" type="image/x-icon" href="./logos/favicon.ico" sizes="196x196">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="./logos/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./logos/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./logos/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./logos/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./logos/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./logos/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./logos/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./logos/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./logos/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="./logos/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./logos/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="./logos/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="./logos/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="mask-icon" href="./logos/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="./logos/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/devicons/devicon/master/devicon.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body ng-app="devicon" ng-controller="IconListCtrl">
+  <link rel="stylesheet" ng-if="latestReleaseTagging" ng-href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css">
+
+  <!--[if lt IE 7]>
+  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="borders"></div>
+
+  <div class="container">
+    <header class="clearfix">
+      <h1>Devicon <span><a href="https://github.com/devicons/devicon/releases">{{ latestReleaseTagging }}</a></span></h1>
+      <h2>Devicon is a set of icons representing programming languages, designing & development tools. You can use it as a font or directly copy/paste the svg code into your project.</h2>
+      <h3>(Super) Quick Setup</h3>
+      <h5>First select an icon on the right, then select the version below and copy/paste the code into your project.</h5>
+      <ul>
+        <li>
+          <h4>Font versions</h4>
+          <ul class="icons-list">
+            <div ng-repeat="fontVersion in selectedIcon.font">
+              <li ng-click="selectFont(fontVersion, false, $index)" ng-class="{'selected-version' : ($index == selectedFontIndex && !colored)}">
+                <i class="devicon-{{selectedIcon.name}}-{{fontVersion}}"></i>
+              </li>
+              <li ng-click="selectFont(fontVersion, true, $index)" ng-class="{'selected-version' : ($index == selectedFontIndex && colored)}">
+                <i class="devicon-{{selectedIcon.name}}-{{fontVersion}} colored"></i>
+              </li>
+            </div>
+          </ul>
+          <div class="cde">
+            <div class="cde-com">&lt;!-- in your header --&gt;</div>
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css"&gt;<br />
+            <br />
+            <div class="cde-com">&lt;!-- in your body --&gt;</div>
+            &lt;i class="devicon-{{selectedIcon.name}}-{{selectedFontIcon}}<span ng-if="colored"> colored</span>"&gt;&lt;/i&gt;<br />
+          </div>
+        </li>
+        <li>
+          <h4>SVG versions</h4>
+          <ul class="icons-list">
+            <li ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}">
+              <img ng-src="https://raw.githubusercontent.com/devicons/devicon/master/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
+            </li>
+          </ul>
+          <div class="cde">
+          &lt;svg viewBox="0 0 128 128"&gt;<br />
+          <div class="cde-ind">{{selectedSvgIcon}}</div>
+          &lt;/svg&gt;
+          </div>
+        </li>
+      </ul>
+
+      <h3>Github Repo</h3>
+      <h5>If you prefer a local install, you can download all the files on the github repo.</h5>
+      <p class="download">
+        <a href="https://github.com/devicons/devicon/archive/master.zip"><i class="devicon-github-original"></i>DOWNLOAD</a>
+      </p>
+      <p class="download">
+        <a href="https://github.com/devicons/devicon/" target="blank"><i class="devicon-github-original"></i>GO TO REPO</a>
+      </p>
+      <p class="download">
+        <a href="https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md" target="blank"><i class="devicon-github-original"></i>CONTRIBUTE</a>
+      </p>
+
+      <p class="footer">
+        Originally created by <a href="https://github.com/konpa">Konpa</a> (under <a href="https://github.com/devicons/devicon/blob/master/LICENSE">MIT License</a>) and <br />
+        supported by various <a href="https://github.com/devicons/devicon/graphs/contributors">contributors</a>.<br />
+        Copyright &copy; 2015 <a href="https://github.com/konpa">Konpa</a><br />
+        <br />
+        Final font build with <a href="https://icomoon.io/">Icomoon app</a><br />
+        <br />
+        <i>All product names, logos, and brandsare property of their respective owners.  All company, product and service names used in this website are for identification purposes only.  Use of these names, logos, and brands does not imply endorsement.</i>
+      </p>
+    </header>
+
+    <div class="main">
+
+      <div class="search">
+        <input type="text" placeholder="Search for icons" ng-model="search">
+      </div>
+
+      <ul class="cbp-ig-grid">
+        <li ng-repeat="icon in icons | filter:search">
+          <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+            <i class="cbp-ig-icon devicon-{{icon.main}}"></i>
+            <h3 class="cbp-ig-title">{{icon.name}}</h3>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-sanitize.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-animate.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-45588276-4', 'devicon.fr');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>
