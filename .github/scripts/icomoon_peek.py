@@ -2,6 +2,7 @@ from typing import List
 import re
 import sys
 from selenium.common.exceptions import TimeoutException
+import xml.etree.ElementTree as et
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
@@ -32,8 +33,13 @@ def main():
 
     runner = None
     try:
-        runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
+        # check the svgs
         svgs = filehandler.get_svgs_paths(filtered_icons, args.icons_folder_path)
+        check_svgs(svgs)
+
+        # check icon
+        runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
+        svgs = filehandler.get_svgs_paths(filtered_icons, args.icons_folder_path, True)
         screenshot_folder = filehandler.create_screenshot_folder("./") 
         runner.upload_svgs(svgs, screenshot_folder)
         print("Task completed.")
@@ -60,6 +66,35 @@ def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
         return [icon for icon in icons if icon["name"] == icon_name]
     except IndexError:  # there are no match in the findall()
         return []  
+
+
+def check_svgs(svg_file_paths: List[str]):
+    """
+    Check the viewBox and style of each svgs passed in.
+    The viewBox must be '0 0 128 128'.
+    The style must not contain any 'fill' declarations.
+    If any error is found, they will be thrown.
+    :param: svg_file_paths, the file paths to the svg to check for.
+    """
+    # batch err messages together so user can fix everything at once
+    err_msgs = []
+    for svg_path in svg_file_paths:
+        tree = et.parse(svg_path)
+        root = tree.getroot()
+        namespace = "{http://www.w3.org/2000/svg}"
+
+        if root.tag != f"{namespace}svg":
+            err_msgs.append(f"Root is '{root.tag}'. Root must be an 'svg' element: {svg_path}")
+
+        if root.attrib["viewBox"] != "0 0 128 128":
+            err_msgs.append("SVG 'viewBox' is not '0 0 128 128': " + svg_path)
+
+        style = root.findtext(f".//{namespace}style")
+        if style != None and "fill" in style:
+            err_msgs.append("Found 'fill' in <style>. Use the 'fill' attribute instead: " + svg_path)
+
+    if len(err_msgs) > 0:
+        raise Exception("\n" + "\n".join(err_msgs))
 
 
 if __name__ == "__main__":
