@@ -118,11 +118,30 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
 
     $http.get(baseUrl + '/icons/' + $scope.selectedIcon.name + '/' + $scope.selectedIcon.name + '-' + svgVersion + '.svg').success(function(data){
 
-      var svg = angular.element(data);
-      var innerSVG = (svg[0].innerHTML);
+      var svgElement = angular.element(data);
+      var innerSvgElement = null;
 
-      $scope.selectedSvgIcon = innerSVG;
-      $scope.selectedSvgIndex = index;
+      /**
+       * Loop trough svg image to find
+       * the actual svg content (not any comments or stuff
+       * we don't care for).
+       * See https://github.com/devicons/devicon/issues/444#issuecomment-753699913
+       */
+      for (const [key, value] of Object.entries(svgElement)) {
+        /** [object SVGSVGElement] ensures we have the actual svg content */
+        if(value.toString() == '[object SVGSVGElement]') {
+          innerSvgElement = value;
+          break;
+        }
+      }
+
+      if(innerSvgElement === null) {
+        console.error('Could not find content of given SVG.')
+      } else {
+        var innerSVG            = (innerSvgElement.innerHTML);
+        $scope.selectedSvgIcon  = innerSVG;
+        $scope.selectedSvgIndex = index;
+      }
     });
   }
   /*---- End of "Change selected svg icon" ----*/
