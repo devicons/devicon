@@ -25,7 +25,7 @@ jobs:
           python ./.github/scripts/icomoon_peek.py 
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
           ./devicon.json ./icons ./ --headless --pr_title "%PR_TITLE%"
-      - name: 
+      - name: Upload screenshots for comments
         uses: actions/upload-artifact@v2
         if: success()
         with:
