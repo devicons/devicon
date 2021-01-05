@@ -2538,13 +2538,17 @@
                 "plain"
             ],
             "font": [
-                "original",
-                "original-wordmark",
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#333333",
-        "aliases": []
+        "aliases": [
+          {
+            "base": "plain",
+            "alias": "original"
+          }
+        ]
     },
     {
         "name": "ssh",
