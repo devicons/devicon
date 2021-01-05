@@ -2536,6 +2536,24 @@
         ]
     },
     {
+        "name": "microsoftsqlserver",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#909DAA",
+        "aliases": []
+    },
+    {
         "name": "ssh",
         "tags": [
             "security"
