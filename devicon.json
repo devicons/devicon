@@ -2333,6 +2333,22 @@
         ]
     },
     {
+        "name": "rocksdb",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f5be17",
+        "aliases": []
+    },
+    {
         "name": "ruby",
         "tags": [
             "programming",
