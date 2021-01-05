@@ -2526,7 +2526,7 @@
         ]
     },
     {
-        "name": "sqlserver",
+        "name": "microsoftsqlserver",
         "tags": [
             "database"
         ],
