@@ -3045,6 +3045,16 @@
         "aliases": []
     },
     {
+        "name": "xd",
+        "tags": ["design", "editor", "ui"],
+        "versions": {
+            "svg": ["plain", "line"],
+            "font": ["plain", "line"]
+        },
+        "color": "#DD80BC",
+        "aliases": []
+    },
+    {
         "name": "yarn",
         "tags": [
             "package",
