@@ -272,6 +272,14 @@
     }
   },
   {
+    "name": "elixir",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": []
+    }
+  },
+  {
     "name": "elm",
     "tags": ["framework"],
     "versions": {
