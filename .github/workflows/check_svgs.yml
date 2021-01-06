@@ -1,0 +1,19 @@
+name: Check SVGs
+on: 
+  pull_request:
+    types: [opened]
+jobs:
+  check:
+    name: Check the SVGs' quality
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python v3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+      - name: Install dependencies 
+        run: python -m pip install --upgrade pip
+      - name: Run the check_svg script
+        run: >
+          python ./.github/scripts/check_svgs.py ./icomoon.json ./devicon.json ./icons

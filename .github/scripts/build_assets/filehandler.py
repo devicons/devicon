@@ -77,10 +77,7 @@ def get_icon_svgs_paths(folder_path: Path, icon_info: dict, file_paths: List[str
     :param: icon_info, an icon object in the devicon.json.
     :param: file_paths, an array containing all the file paths found.
     """
-    try:
-        aliases = icon_info["aliases"]
-    except KeyError:
-        aliases = [] # create empty list of aliases if not provided in devicon.json
+    aliases = icon_info["aliases"]
 
     for font_version in icon_info["versions"]["font"]:
         # if it's an alias, we don't want to make it into an icon
