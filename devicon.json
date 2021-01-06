@@ -1005,6 +1005,27 @@
         ]
     },
     {
+        "name": "firebase",
+        "tags": [
+            "auth",
+            "hosting",
+            "storage",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f58220",
+        "aliases": []
+    },
+    {
         "name": "firefox",
         "tags": [
             "browser"
