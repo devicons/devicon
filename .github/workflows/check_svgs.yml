@@ -15,28 +15,38 @@ jobs:
       - name: Run the check_svg script
         run: >
           python ./.github/scripts/check_svgs.py ./icomoon.json ./devicon.json ./icons
-      - name: Comment on the PR about the result
+      - name: Comment on the PR about the result - Success
+        if: success()
+        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        env:
+          MESSAGE: |
+            Hi!
+            I'm Devicons' SVG-Checker Bot. All of your svgs seem fine.
+
+            Thanks for your help,
+      
+            SVG-Checker Bot :smile:
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: ${{ env.MESSAGE }}
+
+      - name: Comment on the PR about the result - Failed
         if: failure()
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
           MESSAGE: |
             Hi!
 
-            I'm Devicons' Peek Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
+            I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
 
-            Please double check and fix the possible issues below:
+            Here is what went wrong:
+            {0}
 
-            - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
-            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
-            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
+            Please address these issues. When you update this PR, I will check your SVGs again.
 
-            Once everything is fixed, the maintainers will try again. If I still fail, the maintainers will investigate what cause this problem. 
-
-            Thank you for your help :smile:
-
-            Cheers :),
+            Thanks for your help,
       
-            Peek Bot
+            SVG-Checker Bot :smile:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: ${{env.MESSAGE}}
+          message: ${{ format(env.MESSAGE, env.ERR_MSGS)}}

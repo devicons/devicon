@@ -7,6 +7,7 @@ import time
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
 from build_assets import filehandler, arg_getters
+from build_assets import github_env
 
 
 def main():
@@ -26,6 +27,7 @@ def main():
         check_svgs(svgs)
         print("All SVGs found were good.\nTask completed.")
     except Exception as e:
+        github_env.set_env_var("ERR_MSGS", str(e))
         sys.exit(str(e))
 
 
