@@ -2658,6 +2658,30 @@
         ]
     },
     {
+        "name": "sqlalchemy",
+        "tags": [
+            "python",
+            "orm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark",
+          }
+        ]
+    },
+    {
         "name": "microsoftsqlserver",
         "tags": [
             "database"
