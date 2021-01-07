@@ -2157,6 +2157,15 @@
         ]
     },
     {
+        "name": "phoenix",
+        "tags": ["framework", "elixir"],
+        "versions": {
+            "svg": ["original", "plain"]
+        },
+        "color": "#f0531e",
+        "aliases": []
+    },
+    {
         "name": "photoshop",
         "tags": [
             "editor",
