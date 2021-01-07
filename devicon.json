@@ -2670,14 +2670,15 @@
                 "plain"
             ],
             "font": [
-                "plain"
+                "plain",
+                "original-wordmark"
             ]
         },
         "color": "#333333",
         "aliases": [
           {
             "base": "original-wordmark",
-            "alias": "plain-wordmark",
+            "alias": "plain-wordmark"
           }
         ]
     },
