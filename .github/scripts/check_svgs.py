@@ -11,6 +11,11 @@ from build_assets import github_env
 
 
 def main():
+    """
+    Check the quality of the svgs.
+    If any error is found, set an environmental variable called ERR_MSGS
+    that will contains the error messages.
+    """
     args = arg_getters.get_check_svgs_args()
     new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
 
