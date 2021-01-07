@@ -17,3 +17,28 @@ jobs:
       - name: Run the check_svg script
         run: >
           python ./.github/scripts/check_svgs.py ./icomoon.json ./devicon.json ./icons
+      - name: Comment on the PR about the result
+        if: failure()
+        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        env:
+          MESSAGE: |
+            Hi!
+
+            I'm Devicons' Peek Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
+
+            Please double check and fix the possible issues below:
+
+            - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
+            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
+            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
+
+            Once everything is fixed, the maintainers will try again. If I still fail, the maintainers will investigate what cause this problem. 
+
+            Thank you for your help :smile:
+
+            Cheers :),
+      
+            Peek Bot
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: ${{env.MESSAGE}}

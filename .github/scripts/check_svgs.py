@@ -24,7 +24,7 @@ def main():
         check_svgs(svgs)
         print("All SVGs found were good.\nTask completed.")
     except Exception as e:
-        sys.exit(e)
+        sys.exit(str(e))
 
 
 def check_svgs(svg_file_paths: List[str]):
