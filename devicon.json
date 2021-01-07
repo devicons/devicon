@@ -2908,6 +2908,23 @@
         "aliases": []
     },
     {
+        "name": "uwsgi",
+        "tags": [
+            "hosting"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#bad05e",
+        "aliases": []
+    },
+    {
         "name": "vagrant",
         "tags": [
             "platform"
