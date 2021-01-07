@@ -1,6 +1,7 @@
 from typing import List
 import sys
 import xml.etree.ElementTree as et
+import time
 
 
 # pycharm complains that build_assets is an unresolved ref
@@ -18,6 +19,7 @@ def main():
     # print list of new icons
     print("SVGs being checked:", *new_icons, sep = "\n", end='\n\n')
 
+    time.sleep(1)  # do this so the logs stay clean
     try:
         # check the svgs
         svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path)
