@@ -2548,15 +2548,14 @@
                 "plain"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "plain"
             ]
         },
         "color": "#333333",
         "aliases": [
           {
-            "base": "plain",
-            "alias": "original"
+            "base": "original-wordmark",
+            "alias": "plain-wordmark",
           }
         ]
     },
