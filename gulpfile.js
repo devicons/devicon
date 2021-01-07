@@ -6,6 +6,7 @@ const path = require("path");
 
 // global const
 const deviconJSONName = "devicon.json";
+const defaultIconCSSName = "default-icon.css"
 const aliasSCSSName = "devicon-alias.scss";
 const colorsCSSName = "devicon-colors.css";
 const finalMinSCSSName = "devicon.min.scss";
@@ -16,12 +17,12 @@ const finalMinSCSSName = "devicon.min.scss";
  * css files and compiling them together using Sass.
  */
 async function createDeviconMinCSS() {
-    await createCSSFiles();
+    await createDependenciesCSS();
 
     let deviconMinPath = path.join(__dirname, finalMinSCSSName);
     // recall that devicon-alias.scss imported the devicon.css => don't need
     // to reimport that file.
-    const fileContent = `@use "${aliasSCSSName}";@use "${colorsCSSName}";`;
+    const fileContent = `@use "${defaultIconCSSName}";@use "${aliasSCSSName}";@use "${colorsCSSName}";`;
     await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
 
     return gulp.src(finalMinSCSSName)
@@ -33,7 +34,7 @@ async function createDeviconMinCSS() {
  * Create the devicon-alias.scss and the
  * devicon-colors.css from the devicon.json.
  */
-async function createCSSFiles() {
+async function createDependenciesCSS() {
     const deviconJson = JSON.parse(
         await fsPromise.readFile(
             path.join(__dirname, deviconJSONName), "utf8"
@@ -41,9 +42,28 @@ async function createCSSFiles() {
     );
 
     await Promise.all([
+        createDefaultIconRuleCSS(),
         createAliasSCSS(deviconJson),
         createColorsCSS(deviconJson)
     ])
+}
+
+/**
+ * Create a CSS file that contains the declaration
+ * for the default icon. This would create a fallback
+ * icon for when a technology name does not exist.
+ */
+function createDefaultIconRuleCSS() {
+    // declare the default icon rule and put it in before the 
+    // content is an icon content found in the devicon.css
+    const defaultIconRule = `
+      [class^="devicon-"]::before, 
+      [class*=" devicon-"]::before {
+        content: "\\e93a";
+      }
+    `
+    let cssPath = path.join(__dirname, defaultIconCSSName);
+    return fsPromise.writeFile(cssPath, defaultIconRule, "utf8")
 }
 
 /**
@@ -125,11 +145,12 @@ function createColorsCSS(deviconJson) {
 }
 
 /**
- * Remove the devicon-alias.scss, devicon-colors.css, 
- * and the devicon.min.scss.
+ * Remove the default-icon.css, devicon-alias.scss, 
+ * devicon-colors.css, and the devicon.min.scss.
  */
 function cleanUp() {
     let fileNames = [
+        defaultIconCSSName,
         aliasSCSSName,
         colorsCSSName,
         finalMinSCSSName,
