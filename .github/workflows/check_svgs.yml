@@ -2,6 +2,7 @@ name: Check SVGs
 on: 
   pull_request:
     types: [opened]
+  push:
 jobs:
   check:
     name: Check the SVGs' quality
