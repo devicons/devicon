@@ -17,8 +17,10 @@ def main():
     args = arg_getters.get_check_svgs_on_pr_args()
     try:
         # check the svgs
-        svgs = filehandler.get_added_modified_svgs(args.files_changed_json_path)
+        svgs = filehandler.get_added_modified_svgs(args.files_added_json_path,
+            args.files_modified_json_path)
         print("SVGs to check: ", *svgs, sep='\n')
+
         util.check_svgs(svgs)
         print("All SVGs found were good. Task completed.")
     except Exception as e:

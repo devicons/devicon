@@ -207,23 +207,26 @@ def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
     finally:
         return str(screenshot_folder)
 
-def get_added_modified_svgs(files_changed_json_path: str):
+def get_added_modified_svgs(files_added_json_path: str,
+    files_modified_json_path: str):
     """
     Get the svgs added and modified from the files_changed_json_path.
-    :param: the path to the files.json created by the gh-action-get-changed-files@2.1.4
-    :return: a list of the svg file paths that were added/modified in this pr.
+    :param: files_added_json_path, the path to the files_added.json created by the gh-action-get-changed-files@2.1.4
+    :param: files_modified_json_path, the path to the files_modified.json created by the gh-action-get-changed-files@2.1.4
+    :return: a list of the svg file paths that were added/modified in this pr as Path.
     """
-    files_dict = get_json_file_content(files_changed_json_path)
-    print(files_dict)
-    svgs = []
-    for file in files_dict["added"]:
-        path = Path(file)
-        if path.suffix.lower() == ".svg":
-            svgs.append(file)
+    files_added = get_json_file_content(files_added_json_path)
+    files_modified = get_json_file_content(files_modified_json_path)
 
-    for file in files_dict["modified"]:
+    svgs = []
+    for file in files_added:
         path = Path(file)
         if path.suffix.lower() == ".svg":
-            svgs.append(file)
+            svgs.append(path)
+
+    for file in files_modified:
+        path = Path(file)
+        if path.suffix.lower() == ".svg":
+            svgs.append(path)
     
     return svgs
