@@ -5,7 +5,7 @@ import time
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
 from build_assets import filehandler, arg_getters
-from build_assets import github_env, svg_checker
+from build_assets import util
 
 
 def main():
@@ -19,11 +19,11 @@ def main():
         # check the svgs
         svgs = filehandler.get_added_modified_svgs(args.files_changed_json_path)
         print("SVGs to check: ", *svgs, sep='\n')
-        svg_checker.check_svgs(svgs)
+        util.check_svgs(svgs)
         print("All SVGs found were good. Task completed.")
     except Exception as e:
-        github_env.set_env_var("SVG_ERR_MSGS", str(e))
-        sys.exit(str(e))
+        util.set_env_var("SVG_ERR_MSGS", str(e))
+        util.exit_with_err(e)
 
 
 if __name__ == "__main__":

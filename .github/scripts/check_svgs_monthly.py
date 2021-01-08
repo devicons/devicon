@@ -1,11 +1,10 @@
-from pathlib import Path
-import json
+import traceback
 import sys
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
 from build_assets import filehandler, arg_getters
-from build_assets import svg_checker
+from build_assets import util
 
 
 def main():
@@ -17,10 +16,11 @@ def main():
     try:
         devicon_json = filehandler.get_json_file_content(args.devicon_json_path)
         svgs = filehandler.get_svgs_paths(devicon_json, args.icons_folder_path)
-        svg_checker.check_svgs(svgs)
+        util.check_svgs(svgs)
         print("All SVGs found were good. Task completed.")
     except Exception as e:
-        sys.exit(str(e))
+        util.exit_with_err(e)
+
 
 
 if __name__ == "__main__":
