@@ -45,7 +45,7 @@ def is_not_in_icomoon_json(icon, icomoon_json) -> bool:
 
 
 def get_svgs_paths(new_icons: List[dict], icons_folder_path: str, 
-    icon_versions_only: bool=False) -> List[str]:
+    icon_versions_only: bool=False, as_str: bool=True) -> List[str] or List[Path]:
     """
     Get all the suitable svgs file path listed in the devicon.json.
     :param new_icons, a list containing the info on the new icons.
@@ -53,6 +53,7 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str,
     listed folders.
     :param icon_versions_only, whether to only get the svgs that can be 
     made into an icon. 
+    :param: as_str, whether to add the path as a string or as a Path.
     :return: a list of svg file paths that can be uploaded to Icomoon.
     """
     file_paths = []
@@ -63,19 +64,20 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str,
             raise ValueError(f"Invalid path. This is not a directory: {folder_path}.")
 
         if icon_versions_only:
-            get_icon_svgs_paths(folder_path, icon_info, file_paths)
+            get_icon_svgs_paths(folder_path, icon_info, file_paths, as_str)
         else:
-            get_all_svgs_paths(folder_path, icon_info, file_paths)
+            get_all_svgs_paths(folder_path, icon_info, file_paths, as_str)
     return file_paths
 
 
-
-def get_icon_svgs_paths(folder_path: Path, icon_info: dict, file_paths: List[str]):
+def get_icon_svgs_paths(folder_path: Path, icon_info: dict,
+    file_paths: List[str], as_str: bool):
     """
     Get only the svg file paths that can be made into an icon from the icon_info.
     :param: folder_path, the folder where we can find the icons.
     :param: icon_info, an icon object in the devicon.json.
     :param: file_paths, an array containing all the file paths found.
+    :param: as_str, whether to add the path as a string or as a Path.
     """
     aliases = icon_info["aliases"]
 
@@ -89,24 +91,26 @@ def get_icon_svgs_paths(folder_path: Path, icon_info: dict, file_paths: List[str
         path = Path(folder_path, file_name)
 
         if path.exists():
-            file_paths.append(str(path))
+            file_paths.append(str(path) if as_str else path)
         else:
             raise ValueError(f"This path doesn't exist: {path}")
 
 
-def get_all_svgs_paths(folder_path: Path, icon_info: dict, file_paths: List[str]):
+def get_all_svgs_paths(folder_path: Path, icon_info: dict,
+    file_paths: List[str], as_str: bool):
     """
     Get all the svg file paths of an icon.
     :param: folder_path, the folder where we can find the icons.
     :param: icon_info, an icon object in the devicon.json.
     :param: file_paths, an array containing all the file paths found.
+    :param: as_str, whether to add the path as a string or as a Path.
     """
     for font_version in icon_info["versions"]["svg"]:
         file_name = f"{icon_info['name']}-{font_version}.svg"
         path = Path(folder_path, file_name)
 
         if path.exists():
-            file_paths.append(str(path))
+            file_paths.append(str(path) if as_str else path)
         else:
             raise ValueError(f"This path doesn't exist: {path}")
 

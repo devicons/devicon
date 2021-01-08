@@ -40,7 +40,9 @@ jobs:
             I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
 
             Here is what went wrong:
+            ```
             {0}
+            ```
 
             Please address these issues. When you update this PR, I will check your SVGs again.
 
