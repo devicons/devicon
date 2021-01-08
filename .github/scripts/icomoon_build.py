@@ -6,6 +6,7 @@ from selenium.common.exceptions import TimeoutException
 # don't worry about it, the script still runs
 from build_assets.SeleniumRunner import SeleniumRunner
 from build_assets import filehandler, arg_getters
+from build_assets import util
 
 
 def main():
@@ -32,9 +33,9 @@ def main():
         filehandler.rename_extracted_files(args.download_path)
         print("Task completed.")
     except TimeoutException as e:
-        sys.exit("Selenium Time Out Error: \n" + str(e))
+        util.exit_with_err("Selenium Time Out Error: \n" + str(e))
     except Exception as e:
-        sys.exit(str(e))
+        util.exit_with_err(e)
     finally:
         runner.close() 
 

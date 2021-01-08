@@ -1,6 +1,19 @@
 from typing import List
 import xml.etree.ElementTree as et
 from pathlib import Path
+import os
+import platform
+import sys
+import traceback
+
+
+def exit_with_err(err: Exception):
+    """
+    Exit the current step and display the err.
+    :param: err, the error/exception encountered.
+    """
+    traceback.print_exc()
+    sys.exit(str(err))
 
 
 def check_svgs(svg_file_paths: List[Path]):
@@ -51,3 +64,34 @@ def check_svgs(svg_file_paths: List[Path]):
 
     if len(err_msgs) > 0:
         raise Exception("Errors found in these files:\n" + "\n\n".join(err_msgs))
+
+
+def set_env_var(key: str, value: str, delimiter: str='~'):
+    """
+    Set the GitHub env variable of 'key' to 'value' using
+    the method specified here:
+    https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
+    Support both Windows and Ubuntu machines provided by GitHub Actions.
+
+    :param: key, the name of the env variable.
+    :param: value, the value of the env variable.
+    :param: delimiter, the delimiter that you want to use
+    to write to the file. Only applicable if the 'value' contains
+    '\n' character aka a multiline string.
+    """
+    if platform.system() == "Windows":
+        if "\n" in value:
+            os.system(f'echo "{key}<<{delimiter}" >> %GITHUB_ENV%')
+            os.system(f'echo "{value}" >> %GITHUB_ENV%')
+            os.system(f'echo "{delimiter}" >> %GITHUB_ENV%')
+        else:
+            os.system(f'echo "{key}={value}" >> %GITHUB_ENV%')
+    elif platform.system() == "Linux":
+        if "\n" in value:
+            os.system(f'echo "{key}<<{delimiter}" >> $GITHUB_ENV')
+            os.system(f'echo "{value}" >> $GITHUB_ENV')
+            os.system(f'echo "{delimiter}" >> $GITHUB_ENV')
+        else:
+            os.system(f'echo "{key}={value}" >> $GITHUB_ENV')
+    else:
+        raise Exception("This function doesn't support this platform: " + platform.system())
