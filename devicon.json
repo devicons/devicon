@@ -157,6 +157,28 @@
         ]
     },
     {
+        "name": "arduino",
+        "tags": [
+            "microcontroller"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00979d",
+        "aliases": []
+    },
+    {
         "name": "atom",
         "tags": [
             "editor"
