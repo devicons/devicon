@@ -214,6 +214,7 @@ def get_added_modified_svgs(files_changed_json_path: str):
     :return: a list of the svg file paths that were added/modified in this pr.
     """
     files_dict = get_json_file_content(files_changed_json_path)
+    print(files_dict)
     svgs = []
     for file in files_dict["added"]:
         path = Path(file)

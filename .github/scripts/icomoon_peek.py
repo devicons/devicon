@@ -8,6 +8,7 @@ import xml.etree.ElementTree as et
 # don't worry about it, the script still runs
 from build_assets.SeleniumRunner import SeleniumRunner
 from build_assets import filehandler, arg_getters
+from build_assets import util
 
 
 def main():
@@ -39,9 +40,9 @@ def main():
         runner.upload_svgs(svgs, screenshot_folder)
         print("Task completed.")
     except TimeoutException as e:
-        sys.exit("Selenium Time Out Error: \n" + str(e))
+        util.exit_with_err("Selenium Time Out Error: \n" + str(e))
     except Exception as e:
-        sys.exit(str(e))
+        util.exit_with_err(e)
     finally:
         runner.close() 
 
