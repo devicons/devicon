@@ -45,8 +45,12 @@ def get_check_svgs_on_pr_args():
     Get the commandline arguments for the check_svgs_on_pr.py.
     """
     parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run whenever a PR is opened")
-    parser.add_argument("files_changed_json_path",
-                        help="The path to the files.json created by the gh-action-get-changed-files@2.1.4",
+    parser.add_argument("files_added_json_path",
+                        help="The path to the files_added.json created by the gh-action-get-changed-files@2.1.4",
+                        action=PathResolverAction)
+
+    parser.add_argument("files_modified_json_path",
+                        help="The path to the files_modified.json created by the gh-action-get-changed-files@2.1.4",
                         action=PathResolverAction)
     return parser.parse_args()
 
