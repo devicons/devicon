@@ -13,7 +13,7 @@ def exit_with_err(err: Exception):
     :param: err, the error/exception encountered.
     """
     traceback.print_exc()
-    sys.exit(str(err))
+    sys.exit(1)
 
 
 def check_svgs(svg_file_paths: List[Path]):
