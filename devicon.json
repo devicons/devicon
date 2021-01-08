@@ -2315,8 +2315,8 @@
         "name": "raspberrypi",
         "tags": ["arm", "computer"],
         "versions": {
-            "svg": ["original", "original-wordmark"],
-            "font": []
+            "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+            "font": ["original", "original-wordmark", "plain", "plain-wordmark"]
         },
         "color": "#ea2480",
         "aliases": []
