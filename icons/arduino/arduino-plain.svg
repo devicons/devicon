@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.197916mm"
+   height="8.3892174mm"
+   viewBox="0 0 17.197916 8.3892172"
+   version="1.1"
+   id="svg221"
+   inkscape:version="1.0.1 (1.0.1+r74)"
+   sodipodi:docname="arduino-original.svg">
+  <defs
+     id="defs215">
+    <clipPath
+       id="clip1">
+      <rect
+         width="65"
+         height="46.388199"
+         fill="#ffffff"
+         transform="translate(117)"
+         id="rect178"
+         x="0"
+         y="0" />
+    </clipPath>
+    <clipPath
+       id="clip2">
+      <rect
+         width="65"
+         height="31.7073"
+         fill="#ffffff"
+         transform="translate(212,7.34042)"
+         id="rect181"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="49.41308"
+     inkscape:cy="21.552446"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1514"
+     inkscape:window-height="1199"
+     inkscape:window-x="244"
+     inkscape:window-y="104"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata218">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-81.518074,-126.22415)">
+    <g
+       clip-path="url(#clip2)"
+       id="g153"
+       transform="matrix(0.26458333,0,0,0.26458333,25.426408,124.282)">
+      <path
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="m 277,23.1941 c 0,-8.7485 -7.195,-15.85368 -16.013,-15.85368 -0.812,0 -1.647,0.04629 -2.459,0.18516 -6.856,0.99519 -11.457,6.06372 -14.028,9.95192 -2.571,-3.8882 -7.172,-8.95673 -14.028,-9.95192 -0.812,-0.11572 -1.647,-0.18516 -2.459,-0.18516 -8.841,0 -16.013,7.10518 -16.013,15.85368 0,8.7484 7.195,15.8536 16.013,15.8536 0.812,0 1.647,-0.0462 2.481,-0.1851 6.856,-1.0183 11.457,-6.0869 14.029,-9.9751 2.571,3.8882 7.172,8.9568 14.028,9.9751 0.812,0.1157 1.646,0.1851 2.481,0.1851 8.773,0 15.968,-7.1052 15.968,-15.8536 z M 229.682,33.308 c -0.564,0.0926 -1.128,0.1157 -1.691,0.1157 -5.819,0 -10.533,-4.6056 -10.533,-10.2296 0,-5.6472 4.736,-10.2297 10.555,-10.2297 0.564,0 1.128,0.0463 1.692,0.1157 6.473,0.9489 10.419,7.4987 11.773,10.114 -1.376,2.6384 -5.346,9.165 -11.796,10.1139 z m 29.613,-20.2279 c -6.473,0.9489 -10.442,7.4987 -11.773,10.114 1.331,2.6152 5.3,9.165 11.773,10.1139 0.564,0.0694 1.128,0.1157 1.692,0.1157 5.796,0 10.532,-4.5825 10.532,-10.2296 0,-5.624 -4.713,-10.2297 -10.532,-10.2297 -0.564,0 -1.128,0.0463 -1.692,0.1157 z m -35.799,8.4157 h 9.685 v 3.048 h -9.685 z m 41.96,3.0702 h -3.266 v 3.2037 h -3.13 V 24.566 h -3.266 v -3.0702 h 3.266 v -3.2037 h 3.13 v 3.2037 h 3.266 z m 7.422,-15.46751 c 0,-0.96144 0.784,-1.75807 1.736,-1.75807 0.98,0 1.765,0.79663 1.765,1.75807 0,1.01641 -0.785,1.75801 -1.765,1.75801 -0.952,0 -1.736,-0.7966 -1.736,-1.75801 z m 1.761,-1.09894 h -0.868 v 2.19755 h 0.56 V 9.45544 h 0.308 l 0.308,0.74166 h 0.616 l -0.42,-0.82407 c 0.28,-0.10988 0.42,-0.32963 0.42,-0.6318 0,-0.46699 -0.252,-0.74168 -0.924,-0.74168 z m 1.429,1.09874 c 0,-0.79662 -0.616,-1.48336 -1.456,-1.48336 -0.84,0 -1.428,0.60433 -1.428,1.48336 0,0.90651 0.672,1.48341 1.428,1.48341 0.84,0 1.456,-0.5769 1.456,-1.48341 z m -1.093,-0.3845 c 0,0.2747 -0.14,0.35711 -0.392,0.35711 l -0.28,0.02747 V 8.38416 h 0.28 c 0.308,0 0.392,0.08241 0.392,0.32963 z"
+         fill="#00979d"
+         id="path151" />
+    </g>
+  </g>
+</svg>
