@@ -1,40 +1,6 @@
 from typing import List
-import sys
 import xml.etree.ElementTree as et
-import time
 from pathlib import Path
-
-
-# pycharm complains that build_assets is an unresolved ref
-# don't worry about it, the script still runs
-from build_assets import filehandler, arg_getters
-from build_assets import github_env
-
-
-def main():
-    """
-    Check the quality of the svgs.
-    If any error is found, set an environmental variable called ERR_MSGS
-    that will contains the error messages.
-    """
-    args = arg_getters.get_check_svgs_args()
-    new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
-
-    if len(new_icons) == 0:
-        sys.exit("No files need to be uploaded. Ending script...")
-
-    # print list of new icons
-    print("SVGs being checked:", *new_icons, sep = "\n", end='\n\n')
-
-    time.sleep(1)  # do this so the logs stay clean
-    try:
-        # check the svgs
-        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path, as_str=False)
-        check_svgs(svgs)
-        print("All SVGs found were good.\nTask completed.")
-    except Exception as e:
-        github_env.set_env_var("ERR_MSGS", str(e))
-        sys.exit(str(e))
 
 
 def check_svgs(svg_file_paths: List[Path]):
@@ -85,7 +51,3 @@ def check_svgs(svg_file_paths: List[Path]):
 
     if len(err_msgs) > 0:
         raise Exception("Errors found in these files:\n" + "\n\n".join(err_msgs))
-
-
-if __name__ == "__main__":
-    main()
