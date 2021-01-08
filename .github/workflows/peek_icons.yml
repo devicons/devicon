@@ -44,7 +44,7 @@ jobs:
           MESSAGE: |
             Hi!
 
-            I'm Devicons' Peek Bot and it seems we've ran into a problem. I'm supposed to check your icons but I couldn't do my task due to an issue.
+            I'm Devicons' Peek Bot and it seems we've ran into a problem.
 
             Please double check and fix the possible issues below:
 
@@ -52,13 +52,11 @@ jobs:
             - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
             - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
 
-            Once everything is fixed, the maintainers will try again. If I still fail, the maintainers will investigate what cause this problem. 
+            Once everything is fixed, the maintainers will try peeking again. If I still fail, the maintainers will investigate further. 
 
-            Thank you for your help :smile:
-
-            Cheers :),
+            Thank you for your help,
       
-            Peek Bot
+            Peek Bot :smile:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: ${{env.MESSAGE}}
