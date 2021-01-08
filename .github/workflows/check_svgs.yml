@@ -23,11 +23,12 @@ jobs:
         env:
           MESSAGE: |
             Hi!
-            I'm Devicons' SVG-Checker Bot. All of your svgs seem fine.
+            I'm Devicons' SVG-Checker Bot and I just checked all the SVGs in this branch. 
 
-            Thanks for your help,
-      
-            SVG-Checker Bot :smile:
+            Everything looks great. Good job!
+
+            Have a nice day, 
+            SVG-Checker Bot :grin:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: ${{ env.MESSAGE }}
@@ -44,12 +45,16 @@ jobs:
             Here is what went wrong:
             ```
             {0}
+            ```
+
+            For more reference, check out our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards)
 
             Please address these issues. When you update this PR, I will check your SVGs again.
 
             Thanks for your help,
-      
             SVG-Checker Bot :smile:
+              
+            PS. One day, I will be smart enough to fix these errors for you :persevere:. Until then, I can only point them out.
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: ${{ format(env.MESSAGE, env.ERR_MSGS)}}

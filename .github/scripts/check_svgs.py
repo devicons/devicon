@@ -58,33 +58,33 @@ def check_svgs(svg_file_paths: List[Path]):
             err_msg.append(f"-root is '{root.tag}'. Root must be an 'svg' element")
 
         if root.get("viewBox") != "0 0 128 128":
-            err_msg.append("-'viewBox' is not '0 0 128 128'")
+            err_msg.append("-'viewBox' is not '0 0 128 128' -> Set it or scale it using https://www.iloveimg.com/resize-image/resize-svg")
 
         acceptable_size = [None, "128px", "128"]
         if root.get("height") not in acceptable_size:
-            err_msg.append("-'height' is present but is not '128' or '128px'")
+            err_msg.append("-'height' is present but is not '128' or '128px' -> Remove 'height' or set it to '128' or '128px'")
 
         if root.get("width") not in acceptable_size:
-            err_msg.append("-'width' is present but is not '128' or '128px'")
+            err_msg.append("-'width' is present but is not '128' or '128px' -> Remove 'width' or set it to '128' or '128px'")
 
         if root.get("style") is not None and "enable-background" in root.get("style"):
-            err_msg.append("-uses 'enable-background' in its style. This is deprecated")
+            err_msg.append("-deprecated 'enable-background' in style attribute -> Remove it")
 
         if root.get("x") is not None:
-            err_msg.append("-has an 'x' attribute, this is not needed")
+            err_msg.append("-unneccessary 'x' attribute -> Remove it")
 
         if root.get("y") is not None:
-            err_msg.append("-has an 'y' attribute, this is not needed")
+            err_msg.append("-unneccessary 'y' attribute -> Remove it")
 
         style = root.findtext(f".//{namespace}style")
         if style != None and "fill" in style:
-            err_msg.append("-'fill' in style element. Use the 'fill' attribute instead")
+            err_msg.append("-contains style declaration using 'fill' -> Replace classes with the 'fill' attribute instead")
 
         if len(err_msg) > 1:
             err_msgs.append("\n".join(err_msg))
 
     if len(err_msgs) > 0:
-        raise Exception("\n\n".join(err_msgs))
+        raise Exception("Errors found in these files:\n" + "\n\n".join(err_msgs))
 
 
 if __name__ == "__main__":

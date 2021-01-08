@@ -4,7 +4,7 @@ on:
       types: [labeled]
 jobs:
   build:
-    name: Get Fonts From Icomoon
+    name: Peek Icons
     if: contains(github.event.pull_request.labels.*.name, 'bot:peek')
     runs-on: windows-2019
     steps:
@@ -44,9 +44,9 @@ jobs:
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
           MESSAGE: |
-            Hi!
+            ~Hi
 
-            I'm Devicons' Peek Bot and it seems we've ran into a problem.
+            I'm Devicons' Peek Bot and it seems we've ran into a problem (sorry!).
 
             Please double check and fix the possible issues below:
 
@@ -54,11 +54,10 @@ jobs:
             - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
             - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
 
-            Once everything is fixed, the maintainers will try peeking again. If I still fail, the maintainers will investigate further. 
+            Once everything is fixed, I will try. If I still fail (sorry!), the maintainers will investigate further. 
 
-            Thank you for your help,
-      
-            Peek Bot :smile:
+            Best of luck, 
+            Peek Bot :relaxed:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: ${{env.MESSAGE}}
