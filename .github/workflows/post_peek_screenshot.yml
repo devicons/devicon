@@ -12,6 +12,6 @@ jobs:
       - name: My first action
         run: echo $EVENT_OBJ
         env:
-          FIRST_NAME: Mona
+          FIRST_NAME: Monawefawef
           LAST_NAME: Octocat
           EVENT_OBJ: ${{ toJson(github.event.workflow_run) }}
