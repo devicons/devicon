@@ -6,9 +6,6 @@ jobs:
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name}}
       - name: Setup Python v3.8
         uses: actions/setup-python@v2
         with: 
@@ -44,13 +41,24 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         env:
           MESSAGE: |
-            Automated font-building task ran by GitHub Actions bot. This PR built new font files and devicon.css file.
+            What's up!
 
-            Here are all the files that were built:
+            I'm Devicon's Build Bot and I just built some new font files and devicon.min.css file.
+
+            Here are all the files that were built into icons:
 
             ![Files Built]({0})
 
+            The devicon.min.css file contains:
+            -The icon content
+            -The aliases
+            -The colored classes
+            -The default fallback font
+
             More information can be found in the GitHub Action logs for this workflow.
+
+            Adios, 
+            Build Bot :sunglasses:
         with:
           branch: 'master-build-result'
           base: 'master'
