@@ -8,11 +8,7 @@ jobs:
     name: Check the SVGs' quality
     runs-on: ubuntu-18.04
     steps:
-<<<<<<< HEAD:.github/workflows/check_svgs.yml
-      - uses: actions/checkout@v2
-=======
       - uses: actions/checkout@v2 # check out the merge branch of the PR and base
->>>>>>> 132dff5... Create a monthly script that checks all svgs:.github/workflows/check_svgs_on_pr.yml
       - name: Setup Python v3.8
         uses: actions/setup-python@v2
         with: 

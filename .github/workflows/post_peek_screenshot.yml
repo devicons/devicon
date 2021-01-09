@@ -1,0 +1,12 @@
+name: Post the screenshots into a comment from Peek Icons workflow
+on:
+  workflow_run:
+    workflows: ["Peek Icons"]
+    types: 
+      - completed
+jobs: 
+  post_screenshots_in_comment:
+    - run: echo $EVENT_OBJ
+      shell: bash
+      env:
+        EVENT_OBJ: ${{ github.event }}
