@@ -8,11 +8,7 @@ jobs:
     name: Check the SVGs' quality
     runs-on: ubuntu-18.04
     steps:
-<<<<<<< HEAD:.github/workflows/check_svgs.yml
-      - uses: actions/checkout@v2
-=======
       - uses: actions/checkout@v2 # check out the merge branch of the PR and base
->>>>>>> 132dff5... Create a monthly script that checks all svgs:.github/workflows/check_svgs_on_pr.yml
       - name: Setup Python v3.8
         uses: actions/setup-python@v2
         with: 
@@ -29,7 +25,7 @@ jobs:
           python ./.github/scripts/check_svgs_on_pr.py $HOME/files_added.json $HOME/files_modified.json
       - name: Comment on the PR about the result - Success
         if: success()
-        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        uses: NejcZdovc/comment-pr@v1.1.1
         env:
           MESSAGE: |
             Hi!
@@ -40,11 +36,11 @@ jobs:
             Have a nice day, 
             SVG-Checker Bot :grin:
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           message: ${{ env.MESSAGE }}
       - name: Comment on the PR about the result - Failed
         if: failure()
-        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        uses: NejcZdovc/comment-pr@v1.1.1
         env:
           MESSAGE: |
             Hi!
@@ -65,5 +61,5 @@ jobs:
               
             PS. One day, I will be smart enough to fix these errors for you :persevere:. Until then, I can only point them out.
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           message: ${{ format(env.MESSAGE, env.SVG_ERR_MSGS)}}
