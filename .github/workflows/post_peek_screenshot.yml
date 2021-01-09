@@ -10,5 +10,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - run: echo $GITHUB_WORKFLOW
-        # env:
-        #   EVENT_OBJ: ${{ github.event }}
+      - run: echo $EVENT_OBJ
+        env:
+          EVENT_OBJ: ${{ github.event }}
