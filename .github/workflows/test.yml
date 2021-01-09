@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Hi
-        run: echo Hi
+        run: echo $EVENT_OBJ
+        env:
+          EVENT_OBJ: ${{ toJson(github.event.pull_request) }}
