@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: My first action
-        run: echo $GITHUB_TOKEN
+        run: echo $EVENT_OBJ
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FIRST_NAME: Mona
           LAST_NAME: Octocat
-          EVENT_OBJ: ${{ github.event }}
+          EVENT_OBJ: ${{ toJson(github.event.workflow_run) }}
