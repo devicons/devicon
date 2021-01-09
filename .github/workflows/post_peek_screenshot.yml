@@ -15,3 +15,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FIRST_NAME: Mona
           LAST_NAME: Octocat
+          EVENT_OBJ: ${{ github.event }}
