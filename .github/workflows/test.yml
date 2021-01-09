@@ -5,4 +5,5 @@ jobs:
     name: Test
     runs-on: ubuntu-18.04
     steps:
-    - run: echo Hi
+      - name: Hi
+        run: echo Hi
