@@ -42,7 +42,7 @@ jobs:
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         env:
           MESSAGE: |
-            ~Hi
+            ~Hi~
 
             I'm Devicons' Peek Bot and it seems we've ran into a problem (sorry!).
 
