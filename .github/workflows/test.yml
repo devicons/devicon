@@ -8,4 +8,4 @@ jobs:
       - name: Hi
         run: echo $EVENT_OBJ
         env:
-          EVENT_OBJ: ${{ toJson(github.event.pull_request) }}
+          EVENT_OBJ: ${{ github.run_id }}
