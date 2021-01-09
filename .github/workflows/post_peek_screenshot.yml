@@ -9,7 +9,9 @@ jobs:
     name: Post the screenshot
     runs-on: ubuntu-18.04
     steps:
-      - run: echo $GITHUB_WORKFLOW
-      - run: echo $EVENT_OBJ
+      - name: My first action
         env:
-          EVENT_OBJ: ${{ github.event }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FIRST_NAME: Mona
+          LAST_NAME: Octocat
+
