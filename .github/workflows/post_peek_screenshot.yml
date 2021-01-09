@@ -1,7 +1,7 @@
 name: Post the screenshots into a comment from Peek Icons workflow
 on:
   workflow_run:
-    workflows: ["Peek Icons"]
+    workflows: ["Peek Icons", "Test"]
     types: 
       - completed
 jobs: 
@@ -9,7 +9,7 @@ jobs:
     name: Post the screenshot
     runs-on: ubuntu-18.04
     steps:
-    - run: echo $EVENT_OBJ
-      shell: bash
-      env:
-        EVENT_OBJ: ${{ github.event }}
+      - run: echo $EVENT_OBJ
+        env:
+          EVENT_OBJ: ${{ github.event }}
+        shell: bash

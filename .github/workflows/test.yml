@@ -1,0 +1,8 @@
+name: Test
+on: pull_request
+jobs: 
+  test:
+    name: Test
+    runs-on: ubuntu-18.04
+    steps:
+    - run: echo Hi
