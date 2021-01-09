@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: My first action
+        run: echo $GITHUB_TOKEN
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FIRST_NAME: Mona
           LAST_NAME: Octocat
-
