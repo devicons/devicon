@@ -32,12 +32,12 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have</li>
   <li>Put the svgs of each Icon into its own folders in <code>/icons</code> </li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
-  <li>Create a separated pull request (PR) for each Icon. </li>
+  <li>Create a separated pull request (PR) towards the <code>develop</code> branch for each Icon.</li>
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
   <li><i>Optional</i>: Add images of the new svg(s) to the description of the pull request. This would help speed up the review process </li>
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
   <li>Wait for a maintainer to review your changes. They will run a script to check your icons.</li>
-  <li>If there are no issue, they will accept your PR into the repo. Else, they will let you know and give you a chance to fix it.</li>
+  <li>If there are no issues, they will accept your pull request and merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
 </ol>
 
 <hr>
