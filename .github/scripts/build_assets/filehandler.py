@@ -6,7 +6,7 @@ import os
 import re
 
 
-def find_new_icons(devicon_json_path: str, icomoon_json_path: str) -> List[dict]:
+def find_new_icons(devicon_json_path: str, icomoon_json_path: str):
     """
     Find the newly added icons by finding the difference between
     the devicon.json and the icomoon.json.
@@ -14,11 +14,8 @@ def find_new_icons(devicon_json_path: str, icomoon_json_path: str) -> List[dict]
     :param icomoon_json_path: a path to the iconmoon.json.
     :return: a list of the new icons as JSON objects.
     """
-    with open(devicon_json_path) as json_file:
-        devicon_json = json.load(json_file)
-
-    with open(icomoon_json_path) as json_file:
-        icomoon_json = json.load(json_file)
+    devicon_json = get_json_file_content(devicon_json_path)
+    icomoon_json = get_json_file_content(icomoon_json_path)
 
     new_icons = []
     for icon in devicon_json:
@@ -28,7 +25,17 @@ def find_new_icons(devicon_json_path: str, icomoon_json_path: str) -> List[dict]
     return new_icons
 
 
-def is_not_in_icomoon_json(icon, icomoon_json) -> bool:
+def get_json_file_content(json_path: str):
+    """
+    Get the json content of the json_path.
+    :param: json_path, the path to the json file.
+    :return: a dict representing the file content.
+    """
+    with open(json_path) as json_file:
+        return json.load(json_file)
+
+
+def is_not_in_icomoon_json(icon, icomoon_json):
     """
     Checks whether the icon's name is not in the icomoon_json.
     :param icon: the icon object we are searching for.
@@ -45,7 +52,7 @@ def is_not_in_icomoon_json(icon, icomoon_json) -> bool:
 
 
 def get_svgs_paths(new_icons: List[dict], icons_folder_path: str, 
-    icon_versions_only: bool=False, as_str: bool=True) -> List[str] or List[Path]:
+    icon_versions_only: bool=False, as_str: bool=True):
     """
     Get all the suitable svgs file path listed in the devicon.json.
     :param new_icons, a list containing the info on the new icons.
@@ -199,3 +206,27 @@ def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
         print(f"{screenshot_folder} already exist. Script will do nothing.")
     finally:
         return str(screenshot_folder)
+
+def get_added_modified_svgs(files_added_json_path: str,
+    files_modified_json_path: str):
+    """
+    Get the svgs added and modified from the files_changed_json_path.
+    :param: files_added_json_path, the path to the files_added.json created by the gh-action-get-changed-files@2.1.4
+    :param: files_modified_json_path, the path to the files_modified.json created by the gh-action-get-changed-files@2.1.4
+    :return: a list of the svg file paths that were added/modified in this pr as Path.
+    """
+    files_added = get_json_file_content(files_added_json_path)
+    files_modified = get_json_file_content(files_modified_json_path)
+
+    svgs = []
+    for file in files_added:
+        path = Path(file)
+        if path.suffix.lower() == ".svg":
+            svgs.append(path)
+
+    for file in files_modified:
+        path = Path(file)
+        if path.suffix.lower() == ".svg":
+            svgs.append(path)
+    
+    return svgs

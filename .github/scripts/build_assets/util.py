@@ -1,40 +1,19 @@
 from typing import List
-import sys
 import xml.etree.ElementTree as et
-import time
 from pathlib import Path
+import os
+import platform
+import sys
+import traceback
 
 
-# pycharm complains that build_assets is an unresolved ref
-# don't worry about it, the script still runs
-from build_assets import filehandler, arg_getters
-from build_assets import github_env
-
-
-def main():
+def exit_with_err(err: Exception):
     """
-    Check the quality of the svgs.
-    If any error is found, set an environmental variable called ERR_MSGS
-    that will contains the error messages.
+    Exit the current step and display the err.
+    :param: err, the error/exception encountered.
     """
-    args = arg_getters.get_check_svgs_args()
-    new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
-
-    if len(new_icons) == 0:
-        sys.exit("No files need to be uploaded. Ending script...")
-
-    # print list of new icons
-    print("SVGs being checked:", *new_icons, sep = "\n", end='\n\n')
-
-    time.sleep(1)  # do this so the logs stay clean
-    try:
-        # check the svgs
-        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path, as_str=False)
-        check_svgs(svgs)
-        print("All SVGs found were good.\nTask completed.")
-    except Exception as e:
-        github_env.set_env_var("ERR_MSGS", str(e))
-        sys.exit(str(e))
+    traceback.print_exc()
+    sys.exit(1)
 
 
 def check_svgs(svg_file_paths: List[Path]):
@@ -87,5 +66,32 @@ def check_svgs(svg_file_paths: List[Path]):
         raise Exception("Errors found in these files:\n" + "\n\n".join(err_msgs))
 
 
-if __name__ == "__main__":
-    main()
+def set_env_var(key: str, value: str, delimiter: str='~'):
+    """
+    Set the GitHub env variable of 'key' to 'value' using
+    the method specified here:
+    https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
+    Support both Windows and Ubuntu machines provided by GitHub Actions.
+
+    :param: key, the name of the env variable.
+    :param: value, the value of the env variable.
+    :param: delimiter, the delimiter that you want to use
+    to write to the file. Only applicable if the 'value' contains
+    '\n' character aka a multiline string.
+    """
+    if platform.system() == "Windows":
+        if "\n" in value:
+            os.system(f'echo "{key}<<{delimiter}" >> %GITHUB_ENV%')
+            os.system(f'echo "{value}" >> %GITHUB_ENV%')
+            os.system(f'echo "{delimiter}" >> %GITHUB_ENV%')
+        else:
+            os.system(f'echo "{key}={value}" >> %GITHUB_ENV%')
+    elif platform.system() == "Linux":
+        if "\n" in value:
+            os.system(f'echo "{key}<<{delimiter}" >> $GITHUB_ENV')
+            os.system(f'echo "{value}" >> $GITHUB_ENV')
+            os.system(f'echo "{delimiter}" >> $GITHUB_ENV')
+        else:
+            os.system(f'echo "{key}={value}" >> $GITHUB_ENV')
+    else:
+        raise Exception("This function doesn't support this platform: " + platform.system())
