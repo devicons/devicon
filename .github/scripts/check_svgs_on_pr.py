@@ -23,8 +23,10 @@ def main():
 
         util.check_svgs(svgs)
         print("All SVGs found were good. Task completed.")
-    except Exception as e:
+        util.set_env_var("SVG_ERR_MSGS", "None")
+    except ValueError as e:
         util.set_env_var("SVG_ERR_MSGS", str(e))
+    except Exception as e:
         util.exit_with_err(e)
 
 

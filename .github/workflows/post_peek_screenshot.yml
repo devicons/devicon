@@ -41,14 +41,6 @@ jobs:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
-      - name: confirm imgur
-        env:
-          OVERVIEW_IMG_MARKDOWN: ${{ toJson(steps.icons_overview_img_step.outputs) }}
-          DETAILED_IMGS_MARKDOWN: ${{ toJson(steps.icons_detailed_img_step.outputs) }}
-        run: |
-          echo $OVERVIEW_IMG_MARKDOWN
-          echo $DETAILED_IMGS_MARKDOWN
-
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         if: success()
