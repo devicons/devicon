@@ -35,16 +35,6 @@ jobs:
           cat ./svg_err_messages/svg_err_messages.txt >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
 
-      - name: confirm
-        env: 
-          JSON: env.SVG_ERR_MSGS
-          STR: fromJSON(env.SVG_ERR_MSGS)[0]
-          FORMATTED_MSGS: ${{ join(fromJSON(env.SVG_ERR_MSGS), '\n\n') }}
-        run: |
-          echo $JSON
-          echo $STR
-          echo $FORMATTED_MSGS
-
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         if: success() && env.SVG_ERR_MSGS == 'None'

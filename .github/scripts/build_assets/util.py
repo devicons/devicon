@@ -67,7 +67,7 @@ def check_svgs(svg_file_paths: List[Path]):
 
     if len(err_msgs) > 0:
         return json.dumps(err_msgs)
-    return None
+    return 'None'
 
 
 def set_env_var(key: str, value: str, delimiter: str='~'):

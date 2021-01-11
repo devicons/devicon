@@ -26,7 +26,7 @@ def main():
             return
 
         err_messages = util.check_svgs(svgs)
-        util.set_env_var("SVG_ERR_MSGS", str(err_messages))
+        util.set_env_var("SVG_ERR_MSGS", err_messages)
         print("Task completed.")
     except Exception as e:
         util.exit_with_err(e)
