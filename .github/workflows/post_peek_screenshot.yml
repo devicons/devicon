@@ -8,11 +8,8 @@ jobs:
   post_screenshots_in_comment:
     name: Post the screenshot
     runs-on: ubuntu-18.04
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Fail the workflow if trigger failed so we can still comment on PR
-        if: ${{ github.event.workflow_run.conclusion != 'success' }}
-        run: echo "::error ::Peek Icons workflow failed. Failing script"
-
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.11.0
         with:
@@ -43,6 +40,7 @@ jobs:
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: success()
         env:
           OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
           DETAILED_IMGS_URL: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '\n') }}
@@ -72,7 +70,7 @@ jobs:
           body: ${{format(env.MESSAGE, env.OVERVIEW_IMG_MARKDOWN, env.DETAILED_IMGS_MARKDOWN)}}
 
       - name: Comment on the PR about the result - Failure
-        if: failure()
+        if: failure()  || cancelled()
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         env:
           MESSAGE: |

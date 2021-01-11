@@ -1,4 +1,4 @@
-name: Post the screenshots into a comment from Peek Icons workflow
+name: Post the result of a SVG Check into its PR.
 on:
   workflow_run:
     workflows: ["Check SVGs On PR"]
@@ -34,7 +34,7 @@ jobs:
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        id: create
+        if: success()
         env:
           MESSAGE: |
             Hi!
@@ -52,6 +52,7 @@ jobs:
 
       - name: Comment on the PR about the result - Failure
         uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: failure()
         env:
           MESSAGE: |
             Hi!
