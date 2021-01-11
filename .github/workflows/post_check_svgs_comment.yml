@@ -36,7 +36,7 @@ jobs:
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success() && steps.message_reader.outputs.content == 'None'
+        if: success() && steps.err_message_reader.outputs.content == 'None'
         env:
           MESSAGE: |
             Hi!
@@ -54,7 +54,7 @@ jobs:
 
       - name: Comment on the PR about the result - SVG Error
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success() && steps.message_reader.outputs.content != 'None'
+        if: success() && steps.err_message_reader.outputs.content != 'None'
         env:
           MESSAGE: |
             Hi!
@@ -78,7 +78,7 @@ jobs:
           type: create
           issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, steps.message_reader.outputs.content) }}
+          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
 
       - name: Comment on the PR about the result - Failure
         uses: jungwinter/comment@v1 # let us comment on a specific PR
