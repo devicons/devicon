@@ -21,6 +21,10 @@ def main():
             args.files_modified_json_path)
         print("SVGs to check: ", *svgs, sep='\n')
 
+        if len(svgs) == 0:
+            print("No SVGs to check, ending script.")
+            return
+
         err_messages = util.check_svgs(svgs)
         util.set_env_var("SVG_ERR_MSGS", str(err_messages))
         print("Task completed.")
