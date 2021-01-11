@@ -20,11 +20,12 @@ jobs:
           workflow: peek_icons.yml
           run_id: ${{ github.event.workflow_run.id }}
 
-      - name: Get the PR number and save it in $PR_NUM
-        run: |
-          echo 'PR_NUM<<EOF' >> $GITHUB_ENV
-          cat ./pr_num/pr_num.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+      - name: Read the pr_num file
+        if: success()
+        id: pr_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./pr_num/pr_num.txt
 
       - name: Upload screenshot of the newly made icons gotten from the artifacts
         id: icons_overview_img_step
@@ -68,7 +69,7 @@ jobs:
             Peek Bot :blush:
         with:
           type: create
-          issue_number: ${{ env.PR_NUM }}
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{format(env.MESSAGE, env.OVERVIEW_IMG_MARKDOWN, env.DETAILED_IMGS_MARKDOWN)}}
 
@@ -93,6 +94,6 @@ jobs:
             Peek Bot :relaxed:
         with:
           type: create
-          issue_number: ${{ env.PR_NUM }}
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ env.MESSAGE }}
