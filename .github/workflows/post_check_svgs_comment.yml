@@ -28,16 +28,14 @@ jobs:
           cat ./pr_num/pr_num.txt >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
 
-      - name: Get the error messages and save it in $SVG_ERR_MSGS
+      - name: Read the message file
         if: success()
-        run: |
-          echo 'SVG_ERR_MSGS<<EOF' >> $GITHUB_ENV
-          cat ./svg_err_messages/svg_err_messages.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+        id: message_reader
+        uses: juliangruber/read-file-action@v1.0.0
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success() && env.SVG_ERR_MSGS == 'None'
+        if: success() && steps.message_reader.outputs.content == 'None'
         env:
           MESSAGE: |
             Hi!
@@ -53,13 +51,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ env.MESSAGE }}
 
-      - run: echo $SVG_ERR_MSGS
-      
       - name: Comment on the PR about the result - SVG Error
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success() && env.SVG_ERR_MSGS != 'None'
+        if: success() && steps.message_reader.outputs.content != 'None'
         env:
-          FORMATTED_MSGS: ${{ join(fromJSON(env.SVG_ERR_MSGS), '\n\n') }}
           MESSAGE: |
             Hi!
 
@@ -82,7 +77,7 @@ jobs:
           type: create
           issue_number: ${{ env.PR_NUM }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, env.FORMATTED_MSGS) }}
+          body: ${{ format(env.MESSAGE, steps.message_reader.outputs.content) }}
 
       - name: Comment on the PR about the result - Failure
         uses: jungwinter/comment@v1 # let us comment on a specific PR
