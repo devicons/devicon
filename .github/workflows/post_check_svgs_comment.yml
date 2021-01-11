@@ -1,7 +1,7 @@
-name: Post the screenshots into a comment from Peek Icons workflow
+name: Post the result of a SVG Check into its PR.
 on:
   workflow_run:
-    workflows: ["Check SVGs On PR"]
+    workflows: ['Check SVGs On PR']
     types: 
       - completed
 jobs: 
@@ -9,9 +9,10 @@ jobs:
     name: Post the screenshot
     runs-on: ubuntu-18.04
     steps:
-      - name: Fail the workflow if trigger failed so we can still comment on PR
-        if: ${{ github.event.workflow_run.conclusion != 'success' }}
-        run: echo "::error ::Check SVGs On PR workflow failed. Failing script"
+      - name: Check if the trigger run worked. If it failed, fail the current run.
+        # this is done cause this script should only post the err message if trigger run failed
+        if: success() && github.event.workflow_run.conclusion != 'success' 
+        uses: cutenode/action-always-fail@v1.0.1
 
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.11.0
@@ -21,20 +22,22 @@ jobs:
           run_id: ${{ github.event.workflow_run.id }}
 
       - name: Get the PR number and save it in $PR_NUM
+        if: success()
         run: |
           echo 'PR_NUM<<EOF' >> $GITHUB_ENV
           cat ./pr_num/pr_num.txt >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
 
-      - name: Get the error messages and save it in $SVG_ERR_MSGS
-        run: |
-          echo 'SVG_ERR_MSGS<<EOF' >> $GITHUB_ENV
-          cat ./err_messages/err_messages.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+      - name: Read the message file
+        if: success()
+        id: message_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./svg_err_messages/svg_err_messages.txt
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        id: create
+        if: success() && steps.message_reader.outputs.content == 'None'
         env:
           MESSAGE: |
             Hi!
@@ -50,20 +53,21 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ env.MESSAGE }}
 
-      - name: Comment on the PR about the result - Failure
+      - name: Comment on the PR about the result - SVG Error
         uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: success() && steps.message_reader.outputs.content != 'None'
         env:
           MESSAGE: |
             Hi!
 
-            I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
+            I'm Devicons' SVG-Checker Bot and it seems we have some issues with your SVGs.
 
             Here is what went wrong:
             ```
             {0}
             ```
 
-            For more reference, check out our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards)
+            For more reference on why these are errors, check out our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards)
 
             Please address these issues. When you update this PR, I will check your SVGs again.
 
@@ -71,6 +75,25 @@ jobs:
             SVG-Checker Bot :smile:
               
             PS. One day, I will be smart enough to fix these errors for you :persevere:. Until then, I can only point them out.
+        with:
+          type: create
+          issue_number: ${{ env.PR_NUM }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ format(env.MESSAGE, steps.message_reader.outputs.content) }}
+
+      - name: Comment on the PR about the result - Failure
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: failure() || cancelled()
+        env:
+          MESSAGE: |
+            Hi!
+
+            I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
+
+            Please let my maintainers know of the issues. They will take a look at my work and try to resolve the problem. Until then, please hang tight and sorry for the inconvenience.
+
+            Cheers,
+            SVG-Checker Bot :smile:
         with:
           type: create
           issue_number: ${{ env.PR_NUM }}

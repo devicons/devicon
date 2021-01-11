@@ -6,34 +6,40 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Python v3.8
-        uses: actions/setup-python@v2
+      
+      - uses: actions/setup-python@v2
         with: 
           python-version: 3.8
+
       - name: Install dependencies 
         run: python -m pip install --upgrade pip
+
+      - name: Get Changed Files and generate files_added.json & files_modified.json
+        uses: lots0logs/gh-action-get-changed-files@2.1.4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Run the check_svg script
         run: >
-          python ./.github/scripts/check_svgs.py ./icomoon.json ./devicon.json ./icons
-
-      - name: Save the error messages in an artifact
-        shell: bash
-        run: echo $SVG_ERR_MSGS > err_messages.txt  # the $SVG_ERR_MSGS is set by the python script above
+          python ./.github/scripts/check_svgs_on_pr.py $HOME/files_added.json $HOME/files_modified.json
 
       - name: Upload the err messages
         uses: actions/upload-artifact@v2
+        if: success()
         with:
-          name: err_messages
-          path: ./err_messages.txt
+          name: svg_err_messages
+          path: ./svg_err_messages.txt
 
       - name: Save the pr num in an artifact
         shell: bash
+        if: success()
         env:
           PR_NUM: ${{ github.event.number }}
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the pr num
         uses: actions/upload-artifact@v2
+        if: success()
         with:
           name: pr_num
           path: ./pr_num.txt
