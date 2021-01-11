@@ -11,8 +11,8 @@ from build_assets import util
 def main():
     """
     Check the quality of the svgs.
-    If any error is found, set an environmental variable called SVG_ERR_MSGS
-    that will contains the error messages.
+    If any svg error is found, create a json file called 'svg_err_messages.json'
+    in the root folder that will contains the error messages.
     """
     args = arg_getters.get_check_svgs_on_pr_args()
     try:
@@ -26,7 +26,7 @@ def main():
             return
 
         err_messages = util.check_svgs(svgs)
-        util.set_env_var("SVG_ERR_MSGS", err_messages)
+        filehandler.write_to_json("./svg_err_messages.json")
         print("Task completed.")
     except Exception as e:
         util.exit_with_err(e)

@@ -23,11 +23,6 @@ jobs:
         run: >
           python ./.github/scripts/check_svgs_on_pr.py $HOME/files_added.json $HOME/files_modified.json
 
-      - name: Save the error messages in an artifact
-        if: success()
-        shell: bash
-        run: echo $SVG_ERR_MSGS > svg_err_messages.json  # the $SVG_ERR_MSGS is set by the python script above
-
       - name: Upload the err messages
         uses: actions/upload-artifact@v2
         if: success()
