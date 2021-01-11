@@ -57,7 +57,7 @@ jobs:
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         if: success() && env.SVG_ERR_MSGS != 'None'
         env:
-          FORMATTED_MSGS: ${{ join(env.SVG_ERR_MSGS, '\n\n') }}
+          FORMATTED_MSGS: ${{ join(fromJSON(env.SVG_ERR_MSGS), '\n\n') }}
           MESSAGE: |
             Hi!
 
