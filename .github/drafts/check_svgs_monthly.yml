@@ -39,4 +39,4 @@ jobs:
 
       - name: Run the check_svg script
         run: >
-          python ./.github/scripts/check_svgs.py ./icomoon.json ./devicon.json ./icons
+          python ./.github/scripts/check_svgs_monthly.py ./icomoon.json ./devicon.json ./icons
