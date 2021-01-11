@@ -896,6 +896,16 @@
         "aliases": []
     },
     {
+      "name": "eleventy",
+      "tags": ["ssg", "static site generator"],
+      "versions": {
+        "svg": ["original", "plain"],
+        "font": ["plain"]
+      },
+      "color": "#1f1f1f",
+      "aliases": []
+    },
+    {
         "name": "elm",
         "tags": [
             "framework"
@@ -995,6 +1005,27 @@
         ]
     },
     {
+        "name": "firebase",
+        "tags": [
+            "auth",
+            "hosting",
+            "storage",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f58220",
+        "aliases": []
+    },
+    {
         "name": "firefox",
         "tags": [
             "browser"
@@ -1013,6 +1044,34 @@
         },
         "color": "#DD732A",
         "aliases": []
+    },
+    {
+        "name": "flask",
+        "tags": [
+            "python",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          },
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
     },
     {
         "name": "flutter",
@@ -1222,6 +1281,27 @@
                 "alias": "original-wordmark"
             }
         ]
+    },
+    {
+        "name": "googlecloud",
+        "tags": [
+            "google",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#557ebf",
+        "aliases": []
     },
     {
         "name": "gradle",
@@ -1720,6 +1800,25 @@
         "aliases": []
     },
     {
+        "name": "kubernetes",
+        "tags": [
+            "container",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#486bb3",
+        "aliases": []
+    },
+    {
         "name": "laravel",
         "tags": [
             "php",
@@ -2020,6 +2119,23 @@
         "aliases": []
     },
     {
+        "name": "objectivec",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0b5a9d",
+        "aliases": []
+    },
+    {
         "name": "oracle",
         "tags": [
             "database"
@@ -2304,6 +2420,22 @@
         ]
     },
     {
+        "name": "rocksdb",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f5be17",
+        "aliases": []
+    },
+    {
         "name": "ruby",
         "tags": [
             "programming",
@@ -2524,6 +2656,49 @@
             "alias": "plain-wordmark"
           }
         ]
+    },
+    {
+        "name": "sqlalchemy",
+        "tags": [
+            "python",
+            "orm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
+    },
+    {
+        "name": "microsoftsqlserver",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#909DAA",
+        "aliases": []
     },
     {
         "name": "ssh",
@@ -2755,6 +2930,23 @@
             ]
         },
         "color": "#dd4814",
+        "aliases": []
+    },
+    {
+        "name": "uwsgi",
+        "tags": [
+            "hosting"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#bad05e",
         "aliases": []
     },
     {
