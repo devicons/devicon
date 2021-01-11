@@ -236,5 +236,5 @@ def write_to_file(path: str, value: any):
     """
     Write the value to a JSON file.
     """
-    with open(path) as file:
+    with open(path, "w") as file:
         file.write(value)
