@@ -1,7 +1,7 @@
 name: Post the screenshots into a comment from Peek Icons workflow
 on:
   workflow_run:
-    workflows: ["Peek Icons"]
+    workflows: ['Peek Icons']
     types: 
       - completed
 jobs: 
