@@ -79,7 +79,7 @@ jobs:
           type: create
           issue_number: ${{ env.PR_NUM }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ env.MESSAGE }}
+          body: ${{ format(env.MESSAGE, env.SVG_ERR_MSGS) }}
 
       - name: Comment on the PR about the result - Failure
         uses: jungwinter/comment@v1 # let us comment on a specific PR
