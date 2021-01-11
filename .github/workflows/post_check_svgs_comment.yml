@@ -9,10 +9,6 @@ jobs:
     name: Post the screenshot
     runs-on: ubuntu-18.04
     steps:
-      - name: Fail the workflow if trigger failed so we can still comment on PR
-        if: ${{ github.event.workflow_run.conclusion != 'success' }}
-        run: echo "::error ::Check SVGs On PR workflow failed. Failing script"
-
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.11.0
         with:
@@ -31,6 +27,11 @@ jobs:
           echo 'SVG_ERR_MSGS<<EOF' >> $GITHUB_ENV
           cat ./err_messages/err_messages.txt >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
+
+      - name: Check if the trigger run worked. If it failed, fail the current run.
+        # this is done cause this script should only post the err message if trigger run failed
+        if: success() && github.event.workflow_run.conclusion != 'success' 
+        uses: cutenode/action-always-fail@v1.0.1
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
@@ -52,7 +53,7 @@ jobs:
 
       - name: Comment on the PR about the result - Failure
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: failure()
+        if: failure() || cancelled()
         env:
           MESSAGE: |
             Hi!
