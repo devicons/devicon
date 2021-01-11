@@ -1,0 +1,79 @@
+name: Post the result of a SVG Check into its PR.
+on:
+  workflow_run:
+    workflows: ["Check SVGs On PR"]
+    types: 
+      - completed
+jobs: 
+  post_screenshots_in_comment:
+    name: Post the screenshot
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Fail the workflow if trigger failed so we can still comment on PR
+        if: ${{ github.event.workflow_run.conclusion != 'success' }}
+        run: echo "::error ::Check SVGs On PR workflow failed. Failing script"
+
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.11.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: peek_icons.yml
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Get the PR number and save it in $PR_NUM
+        run: |
+          echo 'PR_NUM<<EOF' >> $GITHUB_ENV
+          cat ./pr_num/pr_num.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+
+      - name: Get the error messages and save it in $SVG_ERR_MSGS
+        run: |
+          echo 'SVG_ERR_MSGS<<EOF' >> $GITHUB_ENV
+          cat ./err_messages/err_messages.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+
+      - name: Comment on the PR about the result - Success
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: success()
+        env:
+          MESSAGE: |
+            Hi!
+            I'm Devicons' SVG-Checker Bot and I just checked all the SVGs in this branch. 
+
+            Everything looks great. Good job!
+
+            Have a nice day, 
+            SVG-Checker Bot :grin:
+        with:
+          type: create
+          issue_number: ${{ env.PR_NUM }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ env.MESSAGE }}
+
+      - name: Comment on the PR about the result - Failure
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: failure()
+        env:
+          MESSAGE: |
+            Hi!
+
+            I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
+
+            Here is what went wrong:
+            ```
+            {0}
+            ```
+
+            For more reference, check out our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards)
+
+            Please address these issues. When you update this PR, I will check your SVGs again.
+
+            Thanks for your help,
+            SVG-Checker Bot :smile:
+              
+            PS. One day, I will be smart enough to fix these errors for you :persevere:. Until then, I can only point them out.
+        with:
+          type: create
+          issue_number: ${{ env.PR_NUM }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ format(env.MESSAGE, env.SVG_ERR_MSGS)}}

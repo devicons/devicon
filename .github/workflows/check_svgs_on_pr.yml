@@ -1,0 +1,39 @@
+name: Check SVGs On PR
+on: pull_request
+jobs:
+  check:
+    name: Check the SVGs' quality
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python v3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+      - name: Install dependencies 
+        run: python -m pip install --upgrade pip
+      - name: Run the check_svg script
+        run: >
+          python ./.github/scripts/check_svgs_on_pr.py ./icomoon.json ./devicon.json ./icons
+
+      - name: Save the error messages in an artifact
+        shell: bash
+        run: echo $SVG_ERR_MSGS > err_messages.txt  # the $SVG_ERR_MSGS is set by the python script above
+
+      - name: Upload the err messages
+        uses: actions/upload-artifact@v2
+        with:
+          name: err_messages
+          path: ./err_messages.txt
+
+      - name: Save the pr num in an artifact
+        shell: bash
+        env:
+          PR_NUM: ${{ github.event.number }}
+        run: echo $PR_NUM > pr_num.txt
+
+      - name: Upload the pr num
+        uses: actions/upload-artifact@v2
+        with:
+          name: pr_num
+          path: ./pr_num.txt

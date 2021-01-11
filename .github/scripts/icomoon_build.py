@@ -6,6 +6,7 @@ from selenium.common.exceptions import TimeoutException
 # don't worry about it, the script still runs
 from build_assets.SeleniumRunner import SeleniumRunner
 from build_assets import filehandler, arg_getters
+from build_assets import util
 
 
 def main():
@@ -22,7 +23,7 @@ def main():
         runner = SeleniumRunner(args.download_path,
                                 args.geckodriver_path, args.headless)
         runner.upload_icomoon(args.icomoon_json_path)
-        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path)
+        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path, True)
         runner.upload_svgs(svgs)
 
         zip_name = "devicon-v1.0.zip"
@@ -32,9 +33,9 @@ def main():
         filehandler.rename_extracted_files(args.download_path)
         print("Task completed.")
     except TimeoutException as e:
-        sys.exit("Selenium Time Out Error: \n" + str(e))
+        util.exit_with_err("Selenium Time Out Error: \n" + str(e))
     except Exception as e:
-        sys.exit(e)
+        util.exit_with_err(e)
     finally:
         runner.close() 
 
