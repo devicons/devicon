@@ -230,3 +230,11 @@ def get_added_modified_svgs(files_added_json_path: str,
             svgs.append(path)
     
     return svgs
+
+
+def write_to_file(path: str, value: any):
+    """
+    Write the value to a JSON file.
+    """
+    with open(path, "w") as file:
+        file.write(value)

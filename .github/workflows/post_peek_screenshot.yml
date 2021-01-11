@@ -1,7 +1,7 @@
 name: Post the screenshots into a comment from Peek Icons workflow
 on:
   workflow_run:
-    workflows: ["Peek Icons"]
+    workflows: ['Peek Icons']
     types: 
       - completed
 jobs: 
@@ -9,9 +9,9 @@ jobs:
     name: Post the screenshot
     runs-on: ubuntu-18.04
     steps:
-      - name: Fail the workflow if trigger failed so we can still comment on PR
-        if: ${{ github.event.workflow_run.conclusion != 'success' }}
-        run: echo "::error ::Peek Icons workflow failed. Failing script"
+      - name: Check if the trigger run worked. If not, fail the current run.
+        if: github.event.workflow_run.conclusion != 'success'
+        uses: cutenode/action-always-fail@v1.0.1
 
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.11.0
@@ -28,14 +28,14 @@ jobs:
 
       - name: Upload screenshot of the newly made icons gotten from the artifacts
         id: icons_overview_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.0
+        uses: devicons/public-upload-to-imgur@v2.2.1
         with:
           path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
         id: icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.0
+        uses: devicons/public-upload-to-imgur@v2.2.1
         if: success()
         with:
           path: ./screenshots/screenshot_*.png
@@ -43,9 +43,10 @@ jobs:
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: success()
         env:
-          OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
-          DETAILED_IMGS_URL: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '\n') }}
+          OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
+          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '\n') }}
           MESSAGE: |
             Hi there,
 
@@ -72,7 +73,7 @@ jobs:
           body: ${{format(env.MESSAGE, env.OVERVIEW_IMG_MARKDOWN, env.DETAILED_IMGS_MARKDOWN)}}
 
       - name: Comment on the PR about the result - Failure
-        if: failure()
+        if: failure()  || cancelled()
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         env:
           MESSAGE: |
