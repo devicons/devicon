@@ -83,6 +83,7 @@ def set_env_var(key: str, value: str, delimiter: str='~'):
     to write to the file. Only applicable if the 'value' contains
     '\n' character aka a multiline string.
     """
+    print(value)
     if platform.system() == "Windows":
         if "\n" in value:
             os.system(f'echo "{key}<<{delimiter}" >> %GITHUB_ENV%')
