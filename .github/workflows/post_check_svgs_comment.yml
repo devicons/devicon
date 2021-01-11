@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Check if the trigger run worked. If it failed, fail the current run.
-        # this is done cause this script should only post the err message if trigger run failed
         if: success() && github.event.workflow_run.conclusion != 'success' 
         uses: cutenode/action-always-fail@v1.0.1
 
@@ -21,16 +20,16 @@ jobs:
           workflow: peek_icons.yml
           run_id: ${{ github.event.workflow_run.id }}
 
-      - name: Get the PR number and save it in $PR_NUM
+      - name: Read the pr_num file
         if: success()
-        run: |
-          echo 'PR_NUM<<EOF' >> $GITHUB_ENV
-          cat ./pr_num/pr_num.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+        id: pr_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./pr_num/pr_num.txt
 
-      - name: Read the message file
+      - name: Read the err message file
         if: success()
-        id: message_reader
+        id: err_message_reader
         uses: juliangruber/read-file-action@v1.0.0
         with:
           path: ./svg_err_messages/svg_err_messages.txt
@@ -49,7 +48,7 @@ jobs:
             SVG-Checker Bot :grin:
         with:
           type: create
-          issue_number: ${{ env.PR_NUM }}
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ env.MESSAGE }}
 
@@ -77,7 +76,7 @@ jobs:
             PS. One day, I will be smart enough to fix these errors for you :persevere:. Until then, I can only point them out.
         with:
           type: create
-          issue_number: ${{ env.PR_NUM }}
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ format(env.MESSAGE, steps.message_reader.outputs.content) }}
 
@@ -96,6 +95,6 @@ jobs:
             SVG-Checker Bot :smile:
         with:
           type: create
-          issue_number: ${{ env.PR_NUM }}
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, env.SVG_ERR_MSGS)}}
+          body: ${{ env.MESSAGE }}
