@@ -57,6 +57,7 @@ jobs:
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         if: success() && env.SVG_ERR_MSGS != 'None'
         env:
+          FORMATTED_MSGS: ${{ join(env.SVG_ERR_MSG, "\n\n") }}
           MESSAGE: |
             Hi!
 
@@ -67,7 +68,7 @@ jobs:
             {0}
             ```
 
-            For more reference, check out our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards)
+            For more reference on why these are errors, check out our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards)
 
             Please address these issues. When you update this PR, I will check your SVGs again.
 
@@ -79,7 +80,7 @@ jobs:
           type: create
           issue_number: ${{ env.PR_NUM }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, env.SVG_ERR_MSGS) }}
+          body: ${{ format(env.MESSAGE, env.FORMATTED_MSGS) }}
 
       - name: Comment on the PR about the result - Failure
         uses: jungwinter/comment@v1 # let us comment on a specific PR
