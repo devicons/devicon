@@ -38,12 +38,20 @@ jobs:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
+      - name: confirm imgur
+        env:
+          OVERVIEW_IMG_MARKDOWN: ${{ steps.icons_overview_img_step.outputs.markdown_urls }}
+          DETAILED_IMGS_MARKDOWN: ${{ steps.icons_detailed_img_step.outputs.markdown_urls }}
+        run: |
+          echo $OVERVIEW_IMG_MARKDOWN
+          echo $DETAILED_IMGS_MARKDOWN
+
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         if: success()
         env:
-          OVERVIEW_IMG_URL: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
-          DETAILED_IMGS_URL: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '\n') }}
+          OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
+          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '\n') }}
           MESSAGE: |
             Hi there,
 
