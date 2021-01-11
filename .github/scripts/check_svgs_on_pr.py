@@ -21,11 +21,13 @@ def main():
             args.files_modified_json_path)
         print("SVGs to check: ", *svgs, sep='\n')
 
-        util.check_svgs(svgs)
-        print("All SVGs found were good. Task completed.")
-        util.set_env_var("SVG_ERR_MSGS", "None")
-    except ValueError as e:
-        util.set_env_var("SVG_ERR_MSGS", str(e))
+        if len(svgs) == 0:
+            print("No SVGs to check, ending script.")
+            return
+
+        err_messages = util.check_svgs(svgs)
+        util.set_env_var("SVG_ERR_MSGS", str(err_messages))
+        print("Task completed.")
     except Exception as e:
         util.exit_with_err(e)
 
