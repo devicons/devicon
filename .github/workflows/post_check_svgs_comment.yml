@@ -32,7 +32,7 @@ jobs:
         if: success()
         run: |
           echo 'SVG_ERR_MSGS<<EOF' >> $GITHUB_ENV
-          cat ./svg_err_messages/svg_err_messages.json >> $GITHUB_ENV
+          cat ./svg_err_messages/svg_err_messages.txt >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
 
       - name: Comment on the PR about the result - Success

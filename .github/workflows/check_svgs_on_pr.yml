@@ -28,7 +28,7 @@ jobs:
         if: success()
         with:
           name: svg_err_messages
-          path: ./svg_err_messages.json
+          path: ./svg_err_messages.txt
 
       - name: Save the pr num in an artifact
         shell: bash

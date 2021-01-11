@@ -26,7 +26,7 @@ def main():
             return
 
         err_messages = util.check_svgs(svgs)
-        filehandler.write_to_json("./svg_err_messages.json")
+        filehandler.write_to_file("./svg_err_messages.txt", err_messages)
         print("Task completed.")
     except Exception as e:
         util.exit_with_err(e)
