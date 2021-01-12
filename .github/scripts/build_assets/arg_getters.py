@@ -40,15 +40,26 @@ def get_selenium_runner_args(peek_mode=False):
     return parser.parse_args()
 
 
-def get_check_svgs_args():
+def get_check_svgs_on_pr_args():
     """
-    Get the commandline arguments for the chec_svgs.py.
+    Get the commandline arguments for the check_svgs_on_pr.py.
     """
-    parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct.")
-    parser.add_argument("icomoon_json_path",
-                        help="The path to the icomoon.json aka the selection.json created by Icomoon",
+    parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run whenever a PR is opened")
+    parser.add_argument("files_added_json_path",
+                        help="The path to the files_added.json created by the gh-action-get-changed-files@2.1.4",
                         action=PathResolverAction)
 
+    parser.add_argument("files_modified_json_path",
+                        help="The path to the files_modified.json created by the gh-action-get-changed-files@2.1.4",
+                        action=PathResolverAction)
+    return parser.parse_args()
+
+
+def get_check_svgs_monthly_args():
+    """
+    Get the commandline arguments for the check_svgs_monthly.py.
+    """
+    parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run monthly.")
     parser.add_argument("devicon_json_path",
                         help="The path to the devicon.json",
                         action=PathResolverAction)
