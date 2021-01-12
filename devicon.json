@@ -1005,6 +1005,27 @@
         ]
     },
     {
+        "name": "firebase",
+        "tags": [
+            "auth",
+            "hosting",
+            "storage",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f58220",
+        "aliases": []
+    },
+    {
         "name": "firefox",
         "tags": [
             "browser"
@@ -1023,6 +1044,34 @@
         },
         "color": "#DD732A",
         "aliases": []
+    },
+    {
+        "name": "flask",
+        "tags": [
+            "python",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          },
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
     },
     {
         "name": "flutter",
@@ -2609,6 +2658,31 @@
         ]
     },
     {
+        "name": "sqlalchemy",
+        "tags": [
+            "python",
+            "orm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
+    },
+    {
         "name": "microsoftsqlserver",
         "tags": [
             "database"
@@ -2859,6 +2933,23 @@
         "aliases": []
     },
     {
+        "name": "uwsgi",
+        "tags": [
+            "hosting"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#bad05e",
+        "aliases": []
+    },
+    {
         "name": "vagrant",
         "tags": [
             "platform"
@@ -3042,6 +3133,16 @@
             ]
         },
         "color": "#494949",
+        "aliases": []
+    },
+    {
+        "name": "xd",
+        "tags": ["design", "editor", "ui"],
+        "versions": {
+            "svg": ["plain", "line"],
+            "font": ["plain", "line"]
+        },
+        "color": "#DD80BC",
         "aliases": []
     },
     {

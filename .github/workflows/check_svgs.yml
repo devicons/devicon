@@ -1,0 +1,58 @@
+name: Check SVGs
+on: pull_request
+jobs:
+  check:
+    name: Check the SVGs' quality
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python v3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+      - name: Install dependencies 
+        run: python -m pip install --upgrade pip
+      - name: Run the check_svg script
+        run: >
+          python ./.github/scripts/check_svgs.py ./icomoon.json ./devicon.json ./icons
+      - name: Comment on the PR about the result - Success
+        if: success()
+        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        env:
+          MESSAGE: |
+            Hi!
+            I'm Devicons' SVG-Checker Bot and I just checked all the SVGs in this branch. 
+
+            Everything looks great. Good job!
+
+            Have a nice day, 
+            SVG-Checker Bot :grin:
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: ${{ env.MESSAGE }}
+
+      - name: Comment on the PR about the result - Failed
+        if: failure()
+        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        env:
+          MESSAGE: |
+            Hi!
+
+            I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
+
+            Here is what went wrong:
+            ```
+            {0}
+            ```
+
+            For more reference, check out our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards)
+
+            Please address these issues. When you update this PR, I will check your SVGs again.
+
+            Thanks for your help,
+            SVG-Checker Bot :smile:
+              
+            PS. One day, I will be smart enough to fix these errors for you :persevere:. Until then, I can only point them out.
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: ${{ format(env.MESSAGE, env.ERR_MSGS)}}
