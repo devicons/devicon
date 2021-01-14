@@ -170,7 +170,18 @@
             "plain",
             "plain-wordmark"
           ]
-        }
+        },
+        "color": "#f02e65",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "original-wordmark"
+            }
+        ]
     },
     {
         "name": "atom",
