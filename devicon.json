@@ -157,6 +157,33 @@
         ]
     },
     {
+        "name": "appwrite",
+        "tags": ["cloud", "platform", "server"],
+        "versions": {
+          "svg": [
+            "original",
+            "original-wordmark",
+            "plain",
+            "plain-wordmark"
+          ],
+          "font": [
+            "plain",
+            "plain-wordmark"
+          ]
+        },
+        "color": "#f02e65",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "original-wordmark"
+            }
+        ]
+    },
+    {
         "name": "atom",
         "tags": [
             "editor"
