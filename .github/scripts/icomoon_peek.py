@@ -2,11 +2,13 @@ from typing import List
 import re
 import sys
 from selenium.common.exceptions import TimeoutException
+import xml.etree.ElementTree as et
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
 from build_assets.SeleniumRunner import SeleniumRunner
 from build_assets import filehandler, arg_getters
+from build_assets import util
 
 
 def main():
@@ -21,7 +23,7 @@ def main():
 
     if len(filtered_icons) == 0:
         message = "No icons found matching the icon name in the PR's title.\n" \
-        "Ensure that the PR title matches the convention here: \n" \
+        "Ensure that a new icon entry is added in the devicon.json and the PR title matches the convention here: \n" \
         "https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview.\n" \
         "Ending script...\n"
         sys.exit(message)
@@ -33,14 +35,14 @@ def main():
     runner = None
     try:
         runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
-        svgs = filehandler.get_svgs_paths(filtered_icons, args.icons_folder_path)
+        svgs = filehandler.get_svgs_paths(filtered_icons, args.icons_folder_path, True)
         screenshot_folder = filehandler.create_screenshot_folder("./") 
         runner.upload_svgs(svgs, screenshot_folder)
         print("Task completed.")
     except TimeoutException as e:
-        sys.exit("Selenium Time Out Error: \n" + str(e))
+        util.exit_with_err("Selenium Time Out Error: \n" + str(e))
     except Exception as e:
-        sys.exit(e)
+        util.exit_with_err(e)
     finally:
         runner.close() 
 
@@ -60,6 +62,8 @@ def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
         return [icon for icon in icons if icon["name"] == icon_name]
     except IndexError:  # there are no match in the findall()
         return []  
+
+
 
 
 if __name__ == "__main__":

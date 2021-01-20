@@ -32,12 +32,12 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have</li>
   <li>Put the svgs of each Icon into its own folders in <code>/icons</code> </li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
-  <li>Create a separated pull request (PR) for each Icon. </li>
+  <li>Create a separated pull request (PR) towards the <code>develop</code> branch for each Icon.</li>
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
   <li><i>Optional</i>: Add images of the new svg(s) to the description of the pull request. This would help speed up the review process </li>
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
   <li>Wait for a maintainer to review your changes. They will run a script to check your icons.</li>
-  <li>If there are no issue, they will accept your PR into the repo. Else, they will let you know and give you a chance to fix it.</li>
+  <li>If there are no issues, they will accept your pull request and merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
 </ol>
 
 <hr>
@@ -73,13 +73,14 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
 <ul>
   <li>The background must be transparent.</li>
-  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united before exporting to svg. We will strip the color when turning it into icons.
+  <li>The svg name follows this convention: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. We will strip the color when turning it into icons so they can have any color.
   </li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
   <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
-  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox.</li>
+  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the svg.</li>
+  <li>The <code>svg</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
   <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
-  <li>The naming convention for the svg file is the following: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
 </ul>
 
 <hr>
