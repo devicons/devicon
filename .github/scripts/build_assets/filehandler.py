@@ -6,7 +6,7 @@ import os
 import re
 
 
-def find_new_icons(devicon_json_path: str, icomoon_json_path: str) -> List[dict]:
+def find_new_icons(devicon_json_path: str, icomoon_json_path: str):
     """
     Find the newly added icons by finding the difference between
     the devicon.json and the icomoon.json.
@@ -14,11 +14,8 @@ def find_new_icons(devicon_json_path: str, icomoon_json_path: str) -> List[dict]
     :param icomoon_json_path: a path to the iconmoon.json.
     :return: a list of the new icons as JSON objects.
     """
-    with open(devicon_json_path) as json_file:
-        devicon_json = json.load(json_file)
-
-    with open(icomoon_json_path) as json_file:
-        icomoon_json = json.load(json_file)
+    devicon_json = get_json_file_content(devicon_json_path)
+    icomoon_json = get_json_file_content(icomoon_json_path)
 
     new_icons = []
     for icon in devicon_json:
@@ -28,7 +25,17 @@ def find_new_icons(devicon_json_path: str, icomoon_json_path: str) -> List[dict]
     return new_icons
 
 
-def is_not_in_icomoon_json(icon, icomoon_json) -> bool:
+def get_json_file_content(json_path: str):
+    """
+    Get the json content of the json_path.
+    :param: json_path, the path to the json file.
+    :return: a dict representing the file content.
+    """
+    with open(json_path) as json_file:
+        return json.load(json_file)
+
+
+def is_not_in_icomoon_json(icon, icomoon_json):
     """
     Checks whether the icon's name is not in the icomoon_json.
     :param icon: the icon object we are searching for.
@@ -44,12 +51,16 @@ def is_not_in_icomoon_json(icon, icomoon_json) -> bool:
     return True
 
 
-def get_svgs_paths(new_icons: List[dict], icons_folder_path: str) -> List[str]:
+def get_svgs_paths(new_icons: List[dict], icons_folder_path: str, 
+    icon_versions_only: bool=False, as_str: bool=True):
     """
     Get all the suitable svgs file path listed in the devicon.json.
     :param new_icons, a list containing the info on the new icons.
     :param icons_folder_path, the path where the function can find the
     listed folders.
+    :param icon_versions_only, whether to only get the svgs that can be 
+    made into an icon. 
+    :param: as_str, whether to add the path as a string or as a Path.
     :return: a list of svg file paths that can be uploaded to Icomoon.
     """
     file_paths = []
@@ -59,27 +70,56 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str) -> List[str]:
         if not folder_path.is_dir():
             raise ValueError(f"Invalid path. This is not a directory: {folder_path}.")
 
-        # TODO: remove the try-except when the devicon.json is upgraded
-        try:
-            aliases = icon_info["aliases"]
-        except KeyError:
-            aliases = [] # create empty list of aliases if not provided in devicon.json
-
-        for font_version in icon_info["versions"]["font"]:
-            # if it's an alias, we don't want to make it into an icon
-            if is_alias(font_version, aliases):
-                print(f"Not exist {icon_info['name']}-{font_version}.svg")
-                continue
-
-            file_name = f"{icon_info['name']}-{font_version}.svg"
-            path = Path(folder_path, file_name)
-
-            if path.exists():
-                file_paths.append(str(path))
-            else:
-                raise ValueError(f"This path doesn't exist: {path}")
-
+        if icon_versions_only:
+            get_icon_svgs_paths(folder_path, icon_info, file_paths, as_str)
+        else:
+            get_all_svgs_paths(folder_path, icon_info, file_paths, as_str)
     return file_paths
+
+
+def get_icon_svgs_paths(folder_path: Path, icon_info: dict,
+    file_paths: List[str], as_str: bool):
+    """
+    Get only the svg file paths that can be made into an icon from the icon_info.
+    :param: folder_path, the folder where we can find the icons.
+    :param: icon_info, an icon object in the devicon.json.
+    :param: file_paths, an array containing all the file paths found.
+    :param: as_str, whether to add the path as a string or as a Path.
+    """
+    aliases = icon_info["aliases"]
+
+    for font_version in icon_info["versions"]["font"]:
+        # if it's an alias, we don't want to make it into an icon
+        if is_alias(font_version, aliases):
+            print(f"Skipping this font since it's an alias: {icon_info['name']}-{font_version}.svg")
+            continue
+
+        file_name = f"{icon_info['name']}-{font_version}.svg"
+        path = Path(folder_path, file_name)
+
+        if path.exists():
+            file_paths.append(str(path) if as_str else path)
+        else:
+            raise ValueError(f"This path doesn't exist: {path}")
+
+
+def get_all_svgs_paths(folder_path: Path, icon_info: dict,
+    file_paths: List[str], as_str: bool):
+    """
+    Get all the svg file paths of an icon.
+    :param: folder_path, the folder where we can find the icons.
+    :param: icon_info, an icon object in the devicon.json.
+    :param: file_paths, an array containing all the file paths found.
+    :param: as_str, whether to add the path as a string or as a Path.
+    """
+    for font_version in icon_info["versions"]["svg"]:
+        file_name = f"{icon_info['name']}-{font_version}.svg"
+        path = Path(folder_path, file_name)
+
+        if path.exists():
+            file_paths.append(str(path) if as_str else path)
+        else:
+            raise ValueError(f"This path doesn't exist: {path}")
 
 
 def is_alias(font_version: str, aliases: List[dict]):
@@ -166,3 +206,35 @@ def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
         print(f"{screenshot_folder} already exist. Script will do nothing.")
     finally:
         return str(screenshot_folder)
+
+def get_added_modified_svgs(files_added_json_path: str,
+    files_modified_json_path: str):
+    """
+    Get the svgs added and modified from the files_changed_json_path.
+    :param: files_added_json_path, the path to the files_added.json created by the gh-action-get-changed-files@2.1.4
+    :param: files_modified_json_path, the path to the files_modified.json created by the gh-action-get-changed-files@2.1.4
+    :return: a list of the svg file paths that were added/modified in this pr as Path.
+    """
+    files_added = get_json_file_content(files_added_json_path)
+    files_modified = get_json_file_content(files_modified_json_path)
+
+    svgs = []
+    for file in files_added:
+        path = Path(file)
+        if path.suffix.lower() == ".svg":
+            svgs.append(path)
+
+    for file in files_modified:
+        path = Path(file)
+        if path.suffix.lower() == ".svg":
+            svgs.append(path)
+    
+    return svgs
+
+
+def write_to_file(path: str, value: any):
+    """
+    Write the value to a JSON file.
+    """
+    with open(path, "w") as file:
+        file.write(value)
