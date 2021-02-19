@@ -2484,6 +2484,21 @@
         "aliases": []
     },
     {
+        "name": "r",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#d91404",
+        "aliases": []
+    },
+    {
         "name": "rubymine",
         "tags": [
             "editor"
