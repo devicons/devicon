@@ -2339,6 +2339,25 @@
         "aliases": []
     },
     {
+        "name": "r",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#2369bc",
+        "aliases": []
+    },
+    {
         "name": "rails",
         "tags": [
             "framework"
