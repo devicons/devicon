@@ -1140,6 +1140,27 @@
         "aliases": []
     },
     {
+        "name": "fsharp",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#378BBA",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "gatling",
         "tags": [
             "framework",
