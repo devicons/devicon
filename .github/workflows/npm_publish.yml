@@ -3,15 +3,24 @@ on:
     types: [released]
 jobs:
   publish:
-    name: 'npm publish'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
         with:
-          node-version: 10
-      - run: npm install
-      - run: npm test
-      - uses: JS-DevTools/npm-publish@v1
+          # "ref" specifies the branch to check out.
+          # "github.event.release.target_commitish" is a global variable and specifies the branch the release targeted
+          ref: ${{ github.event.release.target_commitish }}
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
         with:
-          token: '${{ secrets.NPM_AUTOMATION_TOKEN }}'
+          node-version: 12
+          registry-url: https://registry.npmjs.org/ # Specifies the registry, this field is required!
+      - run: npm ci
+      - run: npm version ${{ github.event.release.tag_name }} --allow-same-version -m "npm publish to %s"
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
+      - run: git push
+        env:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
