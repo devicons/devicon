@@ -2184,6 +2184,29 @@
         ]
     },
     {
+        "name": "ocaml",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F18803",
+        "aliases": []
+    },
+    {
         "name": "photoshop",
         "tags": [
             "editor",
