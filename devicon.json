@@ -933,6 +933,16 @@
       "aliases": []
     },
     {
+        "name": "elixir",
+        "tags": "language",
+        "versions": {
+            "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+            "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#380A4D",
+        "aliases": []
+    },
+    {
         "name": "elm",
         "tags": [
             "framework"
@@ -1137,6 +1147,23 @@
             ]
         },
         "color": "#008cba",
+        "aliases": []
+    },
+    {
+        "name": "fsharp",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#378BBA",
         "aliases": []
     },
     {
@@ -2035,6 +2062,24 @@
         "color": "#00618a",
         "aliases": []
     },
+    {
+        "name": "matlab",
+        "tags": [
+          "programming",
+          "language"
+        ],
+        "versions": {
+          "svg": [
+            "original",
+            "plain"
+          ],
+          "font": [
+            "plain"
+          ]
+        },
+        "color": "#6dd0c7",
+        "aliases": []
+      },
     {
         "name": "nestjs",
         "tags": [
