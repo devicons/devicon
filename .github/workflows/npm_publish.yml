@@ -16,11 +16,6 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/ # Specifies the registry, this field is required!
       - run: npm ci
-      - run: npm version ${{ github.event.release.tag_name }} --allow-same-version -m "npm publish to %s"
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
-      - run: git push
-        env:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
