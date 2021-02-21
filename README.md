@@ -80,12 +80,12 @@
 
 <h4 id="getting-started-font">Use the <code>devicon</code> font (recommended)</h4>
 <p>
-    You can install devicon as a dependency to your project either with NPM or Bower:
+    You can install devicon as a dependency to your project either with <code>npm</code> or <code>yarn</code>:
 </p>
 
 ```bash
 npm install --save devicon
-bower install --save devicon
+yarn add devicon
 ```
 
 <p>
