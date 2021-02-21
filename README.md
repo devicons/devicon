@@ -1,26 +1,129 @@
-# Devicon v2
+<p align="center">
+    <a href="https://github.com/devicons/devicon/releases">
+        <img alt="GitHub release (latest by semver)" src="https://img.shields.io/github/v/release/devicons/devicon?color=%2360be86&label=Latest%20release&style=for-the-badge&sort=semver">
+    </a>
+    <a href="/LICENSE">
+        <img alt="GitHub" src="https://img.shields.io/github/license/devicons/devicon?color=%2360be86&style=for-the-badge">
+    </a>
+    <a href="https://github.com/devicons/devicon/graphs/contributors">
+        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/devicons/devicon?color=%2360be86&style=for-the-badge">
+    </a>
+    <a href="https://github.com/devicons/devicon/actions">
+        <img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/devicons/devicon/master?color=%2360be86&style=for-the-badge">
+    </a>
+    <a href="https://github.com/devicons/devicon/issues?q=is%3Aopen+is%3Aissue+label%3Arequest%3Aicon">
+        <img alt="GitHub issues by-label" src="https://img.shields.io/github/issues/devicons/devicon/request:icon?color=%2360be86&label=icon%20requests&style=for-the-badge">
+    </a>
+    <a href="https://github.com/devicons/devicon/stargazers">
+        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/devicons/devicon?color=%2360be86&label=github%20stars&style=for-the-badge">
+    </a>
+</p>
+<br />
+<div align="center">
+    <a href="https://github.com/devicons/devicon">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original-wordmark.svg" alt="Devicon Logo" height="140" />
+    </a>
+    <h5 align="center">
+        devicon aims to gather all logos representing development languages and tools.
+    </h5>
+    <p align="center">
+        <a target="_blank" href="https://devicon.dev">Demo</a>
+        &middot;
+        <a target="_blank" href="https://github.com/devicons/devicon/issues/new?assignees=&labels=request%3Aicon&template=icon-request.md&title=Icon+request%3A+%5BNAME%5D">Request Icon</a>
+        &middot;
+        <a href="#contribute">Contribute</a>
+    </p>
+</div>
 
-[https://devicons.github.io/devicon/](https://devicons.github.io/devicon/)
+<h2>TL;DR;</h2>
 
-Devicon aims to gather all logos representing development languages and tools.
-Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
+```html
+<!-- in your header -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-Devicon has 80+ icons and 200+ versions. And it's growing!
+<!-- in your body -->
+<i class="devicon-devicon-plain"></i>
+```
 
-See all available icons on the [new website](https://devicons.github.io/devicon/).
+<h2>Table of Contents</h2>
+<ol>
+    <li><a href="#about">About the project</a></li>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#request-icon">Requesting icon</a></li>
+    <li><a href="#contribute">Contributing</a></li>
+    <li><a href="#build-yourself">Go build yourself</a></li>
+</ol>
 
-## Icon requests
-When you want to request a icon please feel feel to create a issue. See our [contribution guidelines](https://github.com/konpa/devicon/blob/master/CONTRIBUTING.md) for more information.
+<h2 id="about">About the project</h2>
+<p>
+    Devicon aims to gather all logos representing development languages and tools.
+    Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
+    Devicon has 150+ icons. And it's growing!<br />
+</p>
+<p>
+    See the <a href="/devicon.json">devicon.json</a> or <a href="https://devicon.dev">our website</a> for complete and up to date reference of 
+    all available icons.
+</p>
+<sub>
+    All product names, logos, and brands are property of their respective owners. All company, product and service 
+    names used in this website are for identification purposes only. Use of these names, logos, and brands does not 
+    imply endorsement.
+</sub>
 
-## How to use
 
-For a super fast setup go check [https://devicons.github.io/devicon/](https://devicons.github.io/devicon/)
+<h2 id="getting-started">Getting started</h2>
+<p>
+    For a super fast setup go check <a href="https://devicon.dev">devicon.dev</a>.<br />
+    You can either <a href="#getting-started-svg">use the raw svg</a> icons or our <a href="#getting-started-font">devicon font</a> (which is 
+    also available via CDN).
+</p>
 
-_2 ways of using devicon:_
+<h4 id="getting-started-font">Use the <code>devicon</code> font (recommended)</h4>
+<p>
+    You can install devicon as a dependency to your project either with <code>npm</code> or <code>yarn</code>:
+</p>
 
-#### SVG icons
+```bash
+npm install --save devicon
+yarn add devicon
+```
 
-- Copy/paste svg code (from the [svg folder](https://github.com/devicons/devicon/tree/master/icons) or the [project page](https://github.com/devicons/devicon) using your dev tool)
+<p>
+    If you don't want to use a package manager you can also download
+    and include <a href="/devicon.min.css">devicon.min.css</a> next to the <a href="/fonts">font files</a> to your project.
+    See <a href="https://devicon.dev">devicon.dev</a> for details about how to add devicon to your project via
+    a CDN.
+</p>
+<p>
+    After setting up you just have to include the stylesheet in your header
+    to get started:
+</p>
+
+```html
+<link rel="stylesheet" href="devicon.min.css">
+```
+
+<p>Start using icons with <code>&lt;i&gt;</code>-tag</p>
+
+```html
+<!--  for git plain version -->
+<i class="devicon-git-plain"></i>
+
+<!--  for git plain version with wordmark -->
+<i class="devicon-git-plain-wordmark"></i>
+
+<!--  for git plain version colored with git main color (devicon-color.css or devicon.min.css required) -->
+<i class="devicon-git-plain colored"></i>
+
+<!--  for git plain version with wordmark colored with git main color (devicon-color.css or devicon.min.css required) -->
+<i class="devicon-git-plain-wordmark colored"></i>
+```
+
+<p>
+    An alternate way to use <code>devicon</code> is by copy/paste the raw svg code
+    to your project.
+</p>
+<h4 id="getting-started-svg">Copy/paste svg code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">svg folder</a> or the <a href="https://devicon.dev">project page</a></h4>
 
 ```html
 <!--  for git plain version -->
@@ -29,7 +132,7 @@ _2 ways of using devicon:_
 </svg>
 ```
 
-- Add css rules in your stylesheet
+Add css rules in your stylesheet
 ```css
 .devicon-git-plain {
   max-width: 2em;
@@ -41,71 +144,48 @@ _2 ways of using devicon:_
 }
 ```
 
-#### Icons font
+<h2 id="request-icon">Requesting icon</h2>
+<p>
+    When you want to request a icon please feel feel to create a issue. See our <a href="/CONTRIBUTING.md#requestingIcon">contribution guidelines</a> for more information.
+</p>
 
-- Upload devicon.min.css and font files to your project
-- Note: the `devicon.css` file is not the same as the `devicon.min.css`. It doesn't contain any colors or aliases.
+<h2 id="contribute">Contributing</h2>
+<p>
+    We are happy for every contribution. Please have a look at our <a href="CONTRIBUTING.md#overview-on-submitting-icons">contribution guidelines</a>
+    to see how you can contribute to this project.
+</p>
 
-```html
-  <link rel="stylesheet" href="devicon.min.css">
-```
+<h2 id="build-yourself">Go build yourself</h2>
+<p>
+    Feel free to follow those steps when you want to build the font
+    by yourself.
+</p>
+<h5>Prerequisites</h5>
+<p>Install gulp (and gulp plugins)</p>
 
-- Add icon using `<i>` tag
-
-```html
-  <!--  for git plain version -->
-  <i class="devicon-git-plain"></i>
-
-  <!--  for git plain version with wordmark -->
-  <i class="devicon-git-plain-wordmark"></i>
-
-  <!--  for git plain version colored with git main color (devicon-color.css or devicon.min.css required) -->
-  <i class="devicon-git-plain colored"></i>
-
-  <!--  for git plain version with wordmark colored with git main color (devicon-color.css or devicon.min.css required) -->
-  <i class="devicon-git-plain-wordmark colored"></i>
-```
-
-##### NPM and Bower packages
-
-You can install devicon as a dependency to your project either with NPM or Bower
-
-```
-  // NPM
-  npm install --save devicon
-  
-  // Bower
-  bower install --save devicon
-```
-
-<sub>Final font is build with [Icomoon app](https://icomoon.io/)</sub>
-
-##### See the [devicon.json file](https://github.com/devicons/devicon/blob/master/devicon.json) or [devicon website](https://devicons.github.io/devicon/) for complete and up to date reference of icon's available versions.
-
-## Contribute
-
-Please have a look at the [CONTRIBUTING.md](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md) file
-
-Under [MIT Licence](https://github.com/devicons/devicon/blob/master/LICENSE)
-
-<sub>All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.</sub>
-
-## Go build yourself
-### Prerequisites
-Install gulp (and gulp plugins)
 ```bash
 npm install
 ```
-### Build the font and export stylesheet
-Open [icomoon app](https://icomoon.io/app/#/select) and import [icomoon.json](icomoon.json). Choose _yes_ when beeing asked
+
+<h5>Build the font and export stylesheet</h5>
+Open <a href="https://icomoon.io/app/#/select">icomoon.io</a> and import <a href="/icomoon.json">icomoon.json</a>. Choose <i>yes</i> when beeing asked
 if you like to restore the settings stored in the configuration file.
 
-The next step is to click on **Generate font** and download the resulting archive. Extract it
-contents and you will find a [fonts](./fonts) directory next to a `style.css`. Replace the content of the `fonts` folder,
-rename the `style.css` to [devicon.css](./devicon.css) and follow the next step to build the final stylesheet.
+The next step is to click on <b>Generate font</b> and download the resulting archive. Extract it
+contents and you will find a <a href="/fonts">fonts</a> directory next to a <code>style.css</code>. Replace the content of the <code>fonts</code> folder,
+rename the <code>style.css</code> to <a href="/devicon.css">devicon.css</a> and follow the next step to build the final stylesheet.
 
-### Build and minify stylesheet
-Run the following command to build the resulting file `devicon.min.css`
+<h5>Build and minify stylesheet</h5>
+<p>
+    Run the following command to build the resulting file <code>devicon.min.css</code>
+</p>
+
 ```bash
 npm run build-css
 ```
+
+<br />
+<div align="center">
+    <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+    <img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
+</div>
