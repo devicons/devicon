@@ -183,3 +183,9 @@ rename the <code>style.css</code> to <a href="/devicon.css">devicon.css</a> and 
 ```bash
 npm run build-css
 ```
+
+<br />
+<div align="center">
+    <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+    <img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
+</div>
