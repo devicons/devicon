@@ -1140,6 +1140,23 @@
         "aliases": []
     },
     {
+        "name": "fsharp",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#378BBA",
+        "aliases": []
+    },
+    {
         "name": "gatling",
         "tags": [
             "framework",
@@ -2354,6 +2371,25 @@
             ]
         },
         "color": "#ffd845",
+        "aliases": []
+    },
+    {
+        "name": "r",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#2369bc",
         "aliases": []
     },
     {
