@@ -1786,6 +1786,24 @@
         "aliases": []
     },
     {
+        "name": "jupyter",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#EA2D2E",
+        "aliases": []
+    },
+    {
         "name": "kotlin",
         "tags": [
             "language"
