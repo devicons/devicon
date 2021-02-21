@@ -259,4 +259,5 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>Ensure code quality is up to standard</li>
   <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and take a screenshot to check that it looks good.
   <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
+  <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
 </ul>
