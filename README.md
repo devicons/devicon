@@ -1,10 +1,22 @@
 <p align="center">
-    <img alt="GitHub release (latest by semver)" src="https://img.shields.io/github/v/release/devicons/devicon?color=%2360be86&label=Latest%20release&style=for-the-badge&sort=semver">
-    <img alt="GitHub" src="https://img.shields.io/github/license/devicons/devicon?color=%2360be86&style=for-the-badge">
-    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/devicons/devicon?color=%2360be86&style=for-the-badge">
-    <img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/devicons/devicon/master?color=%2360be86&style=for-the-badge">
-    <img alt="GitHub issues by-label" src="https://img.shields.io/github/issues/devicons/devicon/request:icon?color=%2360be86&label=icon%20requests&style=for-the-badge">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/devicons/devicon?color=%2360be86&label=github%20stars&style=for-the-badge">
+    <a href="https://github.com/devicons/devicon/releases">
+        <img alt="GitHub release (latest by semver)" src="https://img.shields.io/github/v/release/devicons/devicon?color=%2360be86&label=Latest%20release&style=for-the-badge&sort=semver">
+    </a>
+    <a href="/LICENSE">
+        <img alt="GitHub" src="https://img.shields.io/github/license/devicons/devicon?color=%2360be86&style=for-the-badge">
+    </a>
+    <a href="https://github.com/devicons/devicon/graphs/contributors">
+        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/devicons/devicon?color=%2360be86&style=for-the-badge">
+    </a>
+    <a href="https://github.com/devicons/devicon/actions">
+        <img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/devicons/devicon/master?color=%2360be86&style=for-the-badge">
+    </a>
+    <a href="https://github.com/devicons/devicon/issues?q=is%3Aopen+is%3Aissue+label%3Arequest%3Aicon">
+        <img alt="GitHub issues by-label" src="https://img.shields.io/github/issues/devicons/devicon/request:icon?color=%2360be86&label=icon%20requests&style=for-the-badge">
+    </a>
+    <a href="https://github.com/devicons/devicon/stargazers">
+        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/devicons/devicon?color=%2360be86&label=github%20stars&style=for-the-badge">
+    </a>
 </p>
 <br />
 <div align="center">
@@ -15,9 +27,9 @@
         devicon aims to gather all logos representing development languages and tools.
     </h5>
     <p align="center">
-        <a href="https://devicon.dev">Demo</a>
+        <a target="_blank" href="https://devicon.dev">Demo</a>
         &middot;
-        <a href="https://github.com/devicons/devicon/issues/new?assignees=&labels=request%3Aicon&template=icon-request.md&title=Icon+request%3A+%5BNAME%5D">Request Icon</a>
+        <a target="_blank" href="https://github.com/devicons/devicon/issues/new?assignees=&labels=request%3Aicon&template=icon-request.md&title=Icon+request%3A+%5BNAME%5D">Request Icon</a>
         &middot;
         <a href="#contribute">Contribute</a>
     </p>
@@ -34,13 +46,12 @@
 ```
 
 <h2>Table of Contents</h2>
-  <ol>
+<ol>
     <li><a href="#about">About the project</a></li>
     <li><a href="#getting-started">Getting started</a></li>
     <li><a href="#request-icon">Requesting icon</a></li>
     <li><a href="#contribute">Contributing</a></li>
     <li><a href="#build-yourself">Go build yourself</a></li>
-    <li><a href="#contribute">Contributing</a></li>
 </ol>
 
 <h2 id="about">About the project</h2>
