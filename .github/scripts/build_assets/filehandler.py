@@ -221,13 +221,13 @@ def get_added_modified_svgs(files_added_json_path: str,
     svgs = []
     for file in files_added:
         path = Path(file)
-        print("SVGs to check: ", path.parents, sep='\n')
+        print("paths: ", path.parents, sep='\n')
         if path.suffix.lower() == ".svg" and "icons/" in path.parents:
             svgs.append(path)
 
     for file in files_modified:
-        print("SVGs to check: ", path.parents, sep='\n')
-        print(path.parents)
+        path = Path(file)
+        print("paths: ", path.parents, sep='\n')
         if path.suffix.lower() == ".svg" and "icons/" in path.parents:
             svgs.append(path)
     
