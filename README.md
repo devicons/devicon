@@ -35,7 +35,7 @@
     </p>
 </div>
 
-<h2>TL;TR;</h2>
+<h2>TL;DR;</h2>
 
 ```html
 <!-- in your header -->
