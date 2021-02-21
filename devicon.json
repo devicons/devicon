@@ -1833,6 +1833,27 @@
         "aliases": []
     },
     {
+        "name": "jupyter",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F37726",
+        "aliases": []
+    },
+    {
         "name": "kotlin",
         "tags": [
             "language"
@@ -2099,7 +2120,7 @@
         },
         "color": "#6dd0c7",
         "aliases": []
-      },
+    },
     {
         "name": "nestjs",
         "tags": [
@@ -2247,6 +2268,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "ocaml",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F18803",
+        "aliases": []
     },
     {
         "name": "photoshop",
