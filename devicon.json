@@ -1813,6 +1813,27 @@
         "aliases": []
     },
     {
+        "name": "jupyter",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F37726",
+        "aliases": []
+    },
+    {
         "name": "kotlin",
         "tags": [
             "language"
