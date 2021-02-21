@@ -2063,6 +2063,24 @@
         "aliases": []
     },
     {
+        "name": "matlab",
+        "tags": [
+          "programming",
+          "language"
+        ],
+        "versions": {
+          "svg": [
+            "original",
+            "plain"
+          ],
+          "font": [
+            "plain"
+          ]
+        },
+        "color": "#6dd0c7",
+        "aliases": []
+      },
+    {
         "name": "nestjs",
         "tags": [
             "framework"
