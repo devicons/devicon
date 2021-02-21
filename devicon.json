@@ -933,6 +933,16 @@
       "aliases": []
     },
     {
+        "name": "elixir",
+        "tags": "language",
+        "versions": {
+            "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+            "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#380A4D",
+        "aliases": []
+    },
+    {
         "name": "elm",
         "tags": [
             "framework"
