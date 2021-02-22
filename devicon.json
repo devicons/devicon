@@ -65,6 +65,26 @@
         "aliases": []
     },
     {
+        "name": "aarch64",
+        "tags": [
+            "architecture",
+            "programming",
+            "language",
+            "ARM"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#16358C",
+        "aliases": []
+    },
+    {
         "name": "angularjs",
         "tags": [
             "framework",
