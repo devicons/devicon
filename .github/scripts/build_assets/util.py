@@ -34,7 +34,7 @@ def check_svgs(svg_file_paths: List[Path]):
         tree = et.parse(svg_path)
         root = tree.getroot()
         namespace = "{http://www.w3.org/2000/svg}"
-        err_msg = [f"{svg_path.name}:"]
+        err_msg = [f"{svg_path}:"]
 
         if root.tag != f"{namespace}svg":
             err_msg.append(f"-root is '{root.tag}'. Root must be an 'svg' element")
