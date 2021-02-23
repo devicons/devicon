@@ -47,14 +47,14 @@ jobs:
         if: success()
         env:
           OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
-          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '\n') }}
+          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '') }}
           MESSAGE: |
             Hi there,
 
             I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
             Here is the result below:
 
-            ![Peeked Icons (top left)]({0})
+            {0}
 
             Here are the zoomed-in screenshots of the added icons:
             {1}
