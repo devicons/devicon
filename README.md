@@ -151,7 +151,7 @@ Add css rules in your stylesheet
 
 <h2 id="contribute">Contributing</h2>
 <p>
-    We are happy for every contribution. Please have a look at our <a href="CONTRIBUTING.md#overview-on-submitting-icons">contribution guidelines</a>
+    We are happy for every contribution. Please have a look at our <a href="CONTRIBUTING.md">contribution guidelines</a>
     to see how you can contribute to this project.
 </p>
 
