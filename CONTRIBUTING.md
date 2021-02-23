@@ -13,6 +13,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#updateDevicon">Updating the <code>devicon.json</code></a></li>
   <li><a href="#example">Example</a></li>
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
+  <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
   <li><a href="#buildScript">Regarding the Build Script</a></li>
 </ul>
 
@@ -246,6 +247,41 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>Please create a separate issues for each icon</li>
   <li>Optional: include links where the icon can be found</li>
 </ul>
+
+<hr>
+<h2 id='teams'>Maintainer/Reviewer/Teams</h2>
+<p>
+    Devicon is living by it's contributors and <a href="https://github.com/orgs/devicons/people">maintainers</a>. Everyone can and is asked to contribute to this project. 
+    You <b>don't</b> have to be in a team to contribute!
+</p>
+<p>
+    The branches <code>master</code> and <code>develop</code> are protected branches and only members
+    with corresponding permissions (see teams below) are able to push changes to them.
+    Additional branches <b>must</b> follow the pattern <code><i>username</i>/feature/<i>description</i></code>.
+    The <code>/feature/</code> indicates that a change is made to existing code (regardless
+    if it's a fix, refactor or actual feature). The naming convention is based on the <i>gitflow</i>-workflow.
+</p>
+<p>For organisational purposes we introduced <a href="https://github.com/orgs/devicons/teams">teams</a> with permissions and responsibilities:</p>
+<dl>
+    <dt>Supporter (@devicons/supporter)</dt>
+    <dd>
+        Members of this team are responsible for reviewing pull request (auto assigned), managing issues and preparing the upcoming release.<br />
+        Supporters have <code>Write</code> access to the repository (allowing them to create own branches) 
+        and are allowed to push changes to the <code>develop</code> branch (pull request and status checks required).
+    </dd>
+    <dt>Maintainer (@devicons/maintainer)</dt>
+    <dd>
+        Maintainer role inherits from the 'Supporter' role and adds <code>Maintainer</code> permission
+        to the repository.
+        Members of this team are allowed to publish a new release (push <code>master</code> branch after pull
+        request and status checks).
+    </dd>
+</dl>
+<p>
+    Wanna join the team? Write us a message at <a href="mailto:info@devicon.dev">info@devicon.dev</a>.
+    New member requests have to be approved by all active members of the team <b>Maintainer</b>. Every member 
+    of this team has a veto permission to reject a new member.<br />
+</p>
 
 <hr>
 <h2 id='buildScript'>Regarding The Build Script</h2>
