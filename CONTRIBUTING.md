@@ -278,7 +278,8 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
     </dd>
 </dl>
 <p>
-    Wanna join the team? Write us a message at <a href="mailto:info@devicon.dev">info@devicon.dev</a>.
+    Wanna join the team? Please <a href="https://github.com/devicons/devicon/discussions/new">open a public discussion</a> where
+    you introduce yourself.<br />
     New member requests have to be approved by all active members of the team <b>Maintainer</b>. Every member 
     of this team has a veto permission to reject a new member.<br />
 </p>
