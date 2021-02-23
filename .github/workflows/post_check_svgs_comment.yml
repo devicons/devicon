@@ -53,7 +53,7 @@ jobs:
 
       - name: Comment on the PR about the result - SVG Error
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success() && (steps.err_message_reader.outputs.content != '0' || steps.err_message_reader.outputs.content != '1')
+        if: success() && (steps.err_message_reader.outputs.content != '0' && steps.err_message_reader.outputs.content != '1')
         env:
           MESSAGE: |
             Hi!
