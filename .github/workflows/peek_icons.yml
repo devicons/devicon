@@ -3,7 +3,10 @@ on:
   pull_request:
       types: [labeled]
 jobs:
-  build:
+  peek:
+    # four outcomes: successful check and upload,
+    # unsuccessful check (fail due to user),
+    # fail due to system, skipped
     name: Peek Icons
     if: github.event.label.name == 'bot:peek'
     runs-on: windows-2019

@@ -48,7 +48,7 @@ jobs:
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success() && env.PEEK_STATUS == 'success'
+        if: env.PEEK_STATUS == 'success' && success()
         env:
           OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
           DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '') }}
@@ -92,7 +92,7 @@ jobs:
             - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
             - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
 
-            Once everything is fixed, I will try. If I still fail (sorry!), the maintainers will investigate further. 
+            I will retry once everything is fixed. If I still fail (sorry!) or there are other erros, the maintainers will investigate. 
 
             Best of luck, 
             Peek Bot :relaxed:
