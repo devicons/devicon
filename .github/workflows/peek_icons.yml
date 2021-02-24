@@ -20,6 +20,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
 
+      - name: Save the pr num in an artifact
+        shell: bash
+        env:
+          PR_NUM: ${{ github.event.number }}
+        run: echo $PR_NUM > pr_num.txt
+
+      - name: Upload the pr num
+        uses: actions/upload-artifact@v2
+        with:
+          name: pr_num
+          path: ./pr_num.txt
+
       - name: Run icomoon_peek.py
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
@@ -35,18 +47,6 @@ jobs:
         with:
           name: screenshots
           path: ./screenshots/*.png
-
-      - name: Save the pr num in an artifact
-        shell: bash
-        env:
-          PR_NUM: ${{ github.event.number }}
-        run: echo $PR_NUM > pr_num.txt
-
-      - name: Upload the pr num
-        uses: actions/upload-artifact@v2
-        with:
-          name: pr_num
-          path: ./pr_num.txt
 
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2

@@ -8,93 +8,96 @@ jobs:
   post_screenshots_in_comment:
     name: Post the screenshot
     runs-on: ubuntu-18.04
-    if: github.event.action == 'completed'
+    if: github.event.action == 'completed' && env.PEEK_STATUS != "skipped"
+    env: 
+      # three possible values: "skipped", "success", "failure"
+      # have to print github.event to console to see these values
+      PEEK_STATUS: ${{ github.event.workflow_run.conclusion }}
     steps:
-      - env:
-          VALUE: ${{ toJSON(github.event) }}
-        run: echo $VALUE
+      - name: Check state of last run
+        run: echo $PEEK_STATUS
 
-      # - name: Download workflow artifact
-      #   uses: dawidd6/action-download-artifact@v2.11.0
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     workflow: peek_icons.yml
-      #     run_id: ${{ github.event.workflow_run.id }}
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.11.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: peek_icons.yml
+          run_id: ${{ github.event.workflow_run.id }}
 
-      # - name: Read the pr_num file
-      #   id: pr_num_reader
-      #   uses: juliangruber/read-file-action@v1.0.0
-      #   with:
-      #     path: ./pr_num/pr_num.txt
+      - name: Read the pr_num file
+        id: pr_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./pr_num/pr_num.txt
 
-      # - name: Upload screenshot of the newly made icons gotten from the artifacts
-      #   id: icons_overview_img_step
-      #   if: env.STATUS_SUCCEED
-      #   uses: devicons/public-upload-to-imgur@v2.2.1
-      #   with:
-      #     path: ./screenshots/new_icons.png
-      #     client_id: ${{secrets.IMGUR_CLIENT_ID}}
+      - name: Upload screenshot of the newly made icons gotten from the artifacts
+        id: icons_overview_img_step
+        if: env.PEEK_STATUS == "success"
+        uses: devicons/public-upload-to-imgur@v2.2.1
+        with:
+          path: ./screenshots/new_icons.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
-      # - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
-      #   id: icons_detailed_img_step
-      #   uses: devicons/public-upload-to-imgur@v2.2.1
-      #   if: env.STATUS_SUCCEED
-      #   with:
-      #     path: ./screenshots/screenshot_*.png
-      #     client_id: ${{secrets.IMGUR_CLIENT_ID}}
+      - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
+        id: icons_detailed_img_step
+        uses: devicons/public-upload-to-imgur@v2.2.1
+        if: env.PEEK_STATUS == "success"
+        with:
+          path: ./screenshots/screenshot_*.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
-      # - name: Comment on the PR about the result - Success
-      #   uses: jungwinter/comment@v1 # let us comment on a specific PR
-      #   if: success() && env.STATUS_SUCCEED
-      #   env:
-      #     OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
-      #     DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '') }}
-      #     MESSAGE: |
-      #       Hi there,
+      - name: Comment on the PR about the result - Success
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: success() && env.PEEK_STATUS == "success"
+        env:
+          OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
+          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '') }}
+          MESSAGE: |
+            Hi there,
 
-      #       I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
-      #       Here is the result below:
+            I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
+            Here is the result below:
 
-      #       {0}
+            {0}
 
-      #       Here are the zoomed-in screenshots of the added icons:
-      #       {1}
+            Here are the zoomed-in screenshots of the added icons:
+            {1}
 
-      #       Note: If the images don't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
+            Note: If the images don't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
 
-      #       **The maintainers will now take a look at it and decide whether to merge your PR.**
+            **The maintainers will now take a look at it and decide whether to merge your PR.**
 
-      #       Thank you for contributing to Devicon! I hope everything works out and your icons are accepted into the repo.
+            Thank you for contributing to Devicon! I hope everything works out and your icons are accepted into the repo.
 
-      #       Cheers, 
-      #       Peek Bot :blush:
-      #   with:
-      #     type: create
-      #     issue_number: ${{ steps.pr_num_reader.outputs.content }}
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     body: ${{format(env.MESSAGE, env.OVERVIEW_IMG_MARKDOWN, env.DETAILED_IMGS_MARKDOWN)}}
+            Cheers, 
+            Peek Bot :blush:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{format(env.MESSAGE, env.OVERVIEW_IMG_MARKDOWN, env.DETAILED_IMGS_MARKDOWN)}}
 
-      # - name: Comment on the PR about the result - Failure
-      #   if: failure() || !env.STATUS_SUCCEED
-      #   uses: jungwinter/comment@v1 # let us comment on a specific PR
-      #   env:
-      #     MESSAGE: |
-      #       Hi there,
+      - name: Comment on the PR about the result - Failure
+        if: failure() || env.PEEK_STATUS == "failure"
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        env:
+          MESSAGE: |
+            Hi there,
 
-      #       I'm Devicons' Peek Bot and it seems we've ran into a problem (sorry!).
+            I'm Devicons' Peek Bot and it seems we've ran into a problem (sorry!).
 
-      #       Please double check and fix the possible issues below:
+            Please double check and fix the possible issues below:
 
-      #       - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
-      #       - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
-      #       - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
+            - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
+            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
+            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
 
-      #       Once everything is fixed, I will try. If I still fail (sorry!), the maintainers will investigate further. 
+            Once everything is fixed, I will try. If I still fail (sorry!), the maintainers will investigate further. 
 
-      #       Best of luck, 
-      #       Peek Bot :relaxed:
-      #   with:
-      #     type: create
-      #     issue_number: ${{ steps.pr_num_reader.outputs.content }}
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     body: ${{ env.MESSAGE }}
+            Best of luck, 
+            Peek Bot :relaxed:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ env.MESSAGE }}
