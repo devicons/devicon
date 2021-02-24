@@ -8,11 +8,10 @@ jobs:
   post_screenshots_in_comment:
     name: Post the screenshot
     runs-on: ubuntu-18.04
+    if: github.event.action == 'completed'
+    env:
+      STATUS_SUCCEED: github.event.workflow_run.conclusion == 'success' 
     steps:
-      - name: Check if the trigger run worked. If not, fail the current run.
-        if: github.event.workflow_run.conclusion != 'success'
-        uses: cutenode/action-always-fail@v1.0.1
-
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.11.0
         with:
@@ -20,14 +19,15 @@ jobs:
           workflow: peek_icons.yml
           run_id: ${{ github.event.workflow_run.id }}
 
-      - name: Get the PR number and save it in $PR_NUM
-        run: |
-          echo 'PR_NUM<<EOF' >> $GITHUB_ENV
-          cat ./pr_num/pr_num.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+      - name: Read the pr_num file
+        id: pr_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./pr_num/pr_num.txt
 
       - name: Upload screenshot of the newly made icons gotten from the artifacts
         id: icons_overview_img_step
+        if: env.STATUS_SUCCEED
         uses: devicons/public-upload-to-imgur@v2.2.1
         with:
           path: ./screenshots/new_icons.png
@@ -36,24 +36,24 @@ jobs:
       - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
         id: icons_detailed_img_step
         uses: devicons/public-upload-to-imgur@v2.2.1
-        if: success()
+        if: env.STATUS_SUCCEED
         with:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success()
+        if: success() && env.STATUS_SUCCEED
         env:
           OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
-          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '\n') }}
+          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '') }}
           MESSAGE: |
             Hi there,
 
             I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
             Here is the result below:
 
-            ![Peeked Icons (top left)]({0})
+            {0}
 
             Here are the zoomed-in screenshots of the added icons:
             {1}
@@ -68,12 +68,12 @@ jobs:
             Peek Bot :blush:
         with:
           type: create
-          issue_number: ${{ env.PR_NUM }}
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{format(env.MESSAGE, env.OVERVIEW_IMG_MARKDOWN, env.DETAILED_IMGS_MARKDOWN)}}
 
       - name: Comment on the PR about the result - Failure
-        if: failure()  || cancelled()
+        if: failure() || !env.STATUS_SUCCEED
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         env:
           MESSAGE: |
@@ -93,6 +93,6 @@ jobs:
             Peek Bot :relaxed:
         with:
           type: create
-          issue_number: ${{ env.PR_NUM }}
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ env.MESSAGE }}
