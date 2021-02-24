@@ -12,6 +12,11 @@ jobs:
     env:
       STATUS_SUCCEED: github.event.workflow_run.conclusion == 'success' 
     steps:
+      - run: $STATUS_SUCCEED
+      - env:
+          VALUE: github.event
+        run: echo $VALUE
+
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.11.0
         with:
