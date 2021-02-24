@@ -11,7 +11,7 @@ jobs:
     if: github.event.action == 'completed'
     steps:
       - env:
-          VALUE: ${{ github.event }}
+          VALUE: ${{ toJSON(github.event) }}
         run: echo $VALUE
 
       # - name: Download workflow artifact
