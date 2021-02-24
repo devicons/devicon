@@ -8,9 +8,9 @@ jobs:
   post_screenshots_in_comment:
     name: Post the screenshot
     runs-on: ubuntu-18.04
-    if: github.event.action == 'completed' && github.event.workflow_run.conclusion != "skipped"
+    if: github.event.action == 'completed' && github.event.workflow_run.conclusion != 'skipped'
     env: 
-      # three possible values: "skipped", 'success', "failure"
+      # three possible values: 'skipped', 'success', 'failure'
       # have to print github.event to console to see these values
       PEEK_STATUS: ${{ github.event.workflow_run.conclusion }}
     steps:
