@@ -23,13 +23,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
 
-      - name: Save the pr num in an artifact
+      - name: Save the PR number in an artifact
         shell: bash
         env:
           PR_NUM: ${{ github.event.number }}
         run: echo $PR_NUM > pr_num.txt
 
-      - name: Upload the pr num
+      - name: Upload the PR number
         uses: actions/upload-artifact@v2
         with:
           name: pr_num
