@@ -2984,6 +2984,27 @@
         "aliases": []
     },
     {
+        "name": "thealgorithms",
+        "tags": [
+            "organization",
+            "algorithms"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00BCB4",
+        "aliases": []
+    },
+    {
         "name": "trello",
         "tags": [
             "platform",
