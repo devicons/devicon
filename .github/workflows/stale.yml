@@ -1,0 +1,25 @@
+name: 'Stale'
+on:
+  schedule:
+    - cron: '30 1 * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@main
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-pr-message: 'Hello there,
+          We notice that this PR has been inactive for awhile now. It would be a waste of your time and effort if we just close this PR and
+          throw away the SVGs in here. Thus, 1 month from now, if this PR remains inactive/stale, we will fork your repo, fix any issues,
+          and merge your icons ourselves.
+
+          Since GitHub tracks contributions by commits, you will still be credited.
+          We also hope that you will help us merge this PR before the deadline comes.
+
+          Cheers,
+          Devicon Team'
+        stale-pr-label: 'stale'
+        days-before-pr-stale: 30
+        days-before-pr-close: -1
