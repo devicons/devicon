@@ -156,9 +156,10 @@ Add css rules in your stylesheet
     to see how you can contribute to this project.
 </p>
 
-## Stale pull requests
-
+<h2 id="stale-prs">Stale pull requests</h2>
+<p>
 After a pull request has been open for over 30 days with no activity or response from the author, it'll be automatically marked as stale. We might fork your changes and merge the changes ourselves. Since GitHub tracks contributions by commits, you will be credited.
+</p>
 
 <h2 id="build-yourself">Go build yourself</h2>
 <p>
