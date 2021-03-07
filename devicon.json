@@ -3428,6 +3428,10 @@
                 "original",
                 "plain",
                 "line"
+            ],
+            "font": [
+                "plain",
+                "original"
             ]
         },
         "color": "#C21325",
