@@ -3415,5 +3415,22 @@
         },
         "color": "#68b604",
         "aliases": []
+    },
+    {
+        "name": "jest",
+        "tags": [
+            "testing",
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#C21325",
+        "aliases": []
     }
 ]
