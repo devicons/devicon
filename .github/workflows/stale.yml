@@ -11,15 +11,14 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           stale-pr-message: 'Hello there,
+          We notice that this PR has been inactive for awhile now. If there are any changes that is suitable for our repository,
+          we would love to have it. It would be great if you can continue with this PR, but if you cannot, we might fork your changes and merge the changes ourselves,
 
-                            We notice that this PR has been inactive for awhile now. If there are any changes that's suitable for our repo, we would love to have it.
-                            It would be great if you can continue with this PR; but if you can't, we might fork your changes and merge the changes ourselves.
+          Since GitHub tracks contributions by commits, you will still be credited.
+          Let us know what you think. 😃
 
-                            Since GitHub tracks contributions by commits, you will still be credited.
-                            Let us know what you think. 😃
-
-                            Cheers,
-                            Devicon Team.'
+          Cheers,
+          Devicon Team'
         stale-pr-label: 'stale'
         days-before-pr-stale: 30
         days-before-pr-close: -1
