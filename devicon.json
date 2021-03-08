@@ -3417,7 +3417,7 @@
         "aliases": []
     },
     {
-        "name": "jest",
+        "name": "jestjs",
         "tags": [
             "testing",
             "javascript",
@@ -3426,8 +3426,7 @@
         "versions": {
             "svg": [
                 "original",
-                "plain",
-                "line"
+                "plain"
             ],
             "font": [
                 "plain",
