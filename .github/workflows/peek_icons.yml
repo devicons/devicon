@@ -5,18 +5,21 @@ on:
 jobs:
   build:
     name: Peek Icons
-    if: contains(github.event.pull_request.labels.*.name, 'bot:peek')
+    if: github.event.label.name == 'bot:peek'
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
+
       - name: Setup Python v3.8
         uses: actions/setup-python@v2
         with: 
           python-version: 3.8
+
       - name: Install dependencies 
         run: |
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
+
       - name: Run icomoon_peek.py
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
@@ -25,37 +28,29 @@ jobs:
           python ./.github/scripts/icomoon_peek.py 
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
           ./devicon.json ./icons ./ --headless --pr_title "%PR_TITLE%"
+
       - name: Upload screenshots for comments
         uses: actions/upload-artifact@v2
         if: success()
         with:
           name: screenshots
           path: ./screenshots/*.png
+
+      - name: Save the pr num in an artifact
+        shell: bash
+        env:
+          PR_NUM: ${{ github.event.number }}
+        run: echo $PR_NUM > pr_num.txt
+
+      - name: Upload the pr num
+        uses: actions/upload-artifact@v2
+        with:
+          name: pr_num
+          path: ./pr_num.txt
+
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: geckodriver-log
           path: ./geckodriver.log
-      - name: Comment on the PR about the result
-        if: failure()
-        uses: github-actions-up-and-running/pr-comment@v1.0.1
-        env:
-          MESSAGE: |
-            ~Hi
-
-            I'm Devicons' Peek Bot and it seems we've ran into a problem (sorry!).
-
-            Please double check and fix the possible issues below:
-
-            - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
-            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
-            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
-
-            Once everything is fixed, I will try. If I still fail (sorry!), the maintainers will investigate further. 
-
-            Best of luck, 
-            Peek Bot :relaxed:
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: ${{env.MESSAGE}}

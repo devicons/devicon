@@ -1,0 +1,42 @@
+name: Check SVGs Monthly
+on: workflow_dispatch
+  # schedule:
+  #   - cron: '0 0 1 * *'
+jobs:
+  check_develop:
+    name: Check the SVGs' quality in the `develop` branch
+    runs-on: ubuntu-18.04
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          ref: develop
+
+      - uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
+      - name: Install dependencies 
+        run: python -m pip install --upgrade pip
+
+      - name: Run the check_svg script
+        run: >
+          python ./.github/scripts/check_svgs_monthly.py ./devicon.json ./icons
+
+  check_master:
+    name: Check the SVGs' quality in the `master` branch
+    runs-on: ubuntu-18.04
+    steps:
+
+      - uses: actions/checkout@v2  # check out default branch, which is master
+
+      - uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
+      - name: Install dependencies 
+        run: python -m pip install --upgrade pip
+
+      - name: Run the check_svg script
+        run: >
+          python ./.github/scripts/check_svgs_monthly.py ./icomoon.json ./devicon.json ./icons
