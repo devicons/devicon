@@ -13,6 +13,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#updateDevicon">Updating the <code>devicon.json</code></a></li>
   <li><a href="#example">Example</a></li>
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
+  <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
   <li><a href="#buildScript">Regarding the Build Script</a></li>
 </ul>
 
@@ -81,6 +82,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the svg.</li>
   <li>The <code>svg</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
   <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
+  <li>The naming convention for the svg file is the following: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
 </ul>
 
 <hr>
@@ -247,6 +249,42 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 </ul>
 
 <hr>
+<h2 id='teams'>Maintainer/Reviewer/Teams</h2>
+<p>
+    Devicon is living by it's contributors and <a href="https://github.com/orgs/devicons/people">maintainers</a>. Everyone can and is asked to contribute to this project. 
+    You <b>don't</b> have to be in a team to contribute!
+</p>
+<p>
+    The branches <code>master</code> and <code>develop</code> are protected branches and only members
+    with corresponding permissions (see teams below) are able to push changes to them.
+    Additional branches <b>must</b> follow the pattern <code><i>username</i>/feature/<i>description</i></code>.
+    The <code>/feature/</code> indicates that a change is made to existing code (regardless
+    if it's a fix, refactor or actual feature). The naming convention is based on the <i>gitflow</i>-workflow.
+</p>
+<p>For organisational purposes we introduced <a href="https://github.com/orgs/devicons/teams">teams</a> with permissions and responsibilities:</p>
+<dl>
+    <dt>Supporter (@devicons/supporter)</dt>
+    <dd>
+        Members of this team are responsible for reviewing pull request (auto assigned), managing issues and preparing the upcoming release.<br />
+        Supporters have <code>Write</code> access to the repository (allowing them to create own branches) 
+        and are allowed to push changes to the <code>develop</code> branch (pull request and status checks required).
+    </dd>
+    <dt>Maintainer (@devicons/maintainer)</dt>
+    <dd>
+        Maintainer role inherits from the 'Supporter' role and adds <code>Maintainer</code> permission
+        to the repository.
+        Members of this team are allowed to publish a new release (push <code>master</code> branch after pull
+        request and status checks).
+    </dd>
+</dl>
+<p>
+    Wanna join the team? Please <a href="https://github.com/devicons/devicon/discussions/new">open a public discussion</a> where
+    you introduce yourself.<br />
+    New member requests have to be approved by all active members of the team <b>Maintainer</b>. Every member 
+    of this team has a veto permission to reject a new member.<br />
+</p>
+
+<hr>
 <h2 id='buildScript'>Regarding The Build Script</h2>
 <p>To make adding icons easier for repo maintainers, we rely on GitHub Actions, Python, Selenium, and Gulp to automate our tasks.</p>
 <p>So far, the tasks in the build script are:</p>
@@ -259,4 +297,5 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>Ensure code quality is up to standard</li>
   <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and take a screenshot to check that it looks good.
   <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
+  <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
 </ul>

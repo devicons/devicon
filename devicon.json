@@ -65,6 +65,26 @@
         "aliases": []
     },
     {
+        "name": "aarch64",
+        "tags": [
+            "architecture",
+            "programming",
+            "language",
+            "ARM"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#16358C",
+        "aliases": []
+    },
+    {
         "name": "angularjs",
         "tags": [
             "framework",
@@ -153,6 +173,33 @@
             {
                 "base": "original",
                 "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "appwrite",
+        "tags": ["cloud", "platform", "server"],
+        "versions": {
+          "svg": [
+            "original",
+            "original-wordmark",
+            "plain",
+            "plain-wordmark"
+          ],
+          "font": [
+            "plain",
+            "plain-wordmark"
+          ]
+        },
+        "color": "#f02e65",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "original-wordmark"
             }
         ]
     },
@@ -906,6 +953,16 @@
       "aliases": []
     },
     {
+        "name": "elixir",
+        "tags": "language",
+        "versions": {
+            "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+            "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#380A4D",
+        "aliases": []
+    },
+    {
         "name": "elm",
         "tags": [
             "framework"
@@ -1110,6 +1167,23 @@
             ]
         },
         "color": "#008cba",
+        "aliases": []
+    },
+    {
+        "name": "fsharp",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#378BBA",
         "aliases": []
     },
     {
@@ -1759,6 +1833,27 @@
         "aliases": []
     },
     {
+        "name": "jupyter",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F37726",
+        "aliases": []
+    },
+    {
         "name": "kotlin",
         "tags": [
             "language"
@@ -2009,6 +2104,24 @@
         "aliases": []
     },
     {
+        "name": "matlab",
+        "tags": [
+          "programming",
+          "language"
+        ],
+        "versions": {
+          "svg": [
+            "original",
+            "plain"
+          ],
+          "font": [
+            "plain"
+          ]
+        },
+        "color": "#6dd0c7",
+        "aliases": []
+    },
+    {
         "name": "nestjs",
         "tags": [
             "framework"
@@ -2155,6 +2268,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "ocaml",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F18803",
+        "aliases": []
     },
     {
         "name": "photoshop",
@@ -2309,6 +2443,25 @@
             ]
         },
         "color": "#ffd845",
+        "aliases": []
+    },
+    {
+        "name": "r",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#2369bc",
         "aliases": []
     },
     {

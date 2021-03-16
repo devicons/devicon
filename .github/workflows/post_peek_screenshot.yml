@@ -1,0 +1,99 @@
+name: Post the screenshots into a comment from Peek Icons workflow
+on:
+  workflow_run:
+    workflows: ['Peek Icons']
+    types: 
+      - completed
+jobs: 
+  post_screenshots_in_comment:
+    name: Post the screenshot
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check if the trigger run worked. If not, fail the current run.
+        if: github.event.workflow_run.conclusion != 'success'
+        uses: cutenode/action-always-fail@v1.0.1
+
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.11.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: peek_icons.yml
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Read the pr_num file
+        if: success()
+        id: pr_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./pr_num/pr_num.txt
+
+      - name: Upload screenshot of the newly made icons gotten from the artifacts
+        id: icons_overview_img_step
+        uses: devicons/public-upload-to-imgur@v2.2.1
+        with:
+          path: ./screenshots/new_icons.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+
+      - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
+        id: icons_detailed_img_step
+        uses: devicons/public-upload-to-imgur@v2.2.1
+        if: success()
+        with:
+          path: ./screenshots/screenshot_*.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+
+      - name: Comment on the PR about the result - Success
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: success()
+        env:
+          OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
+          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '') }}
+          MESSAGE: |
+            Hi there,
+
+            I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
+            Here is the result below:
+
+            {0}
+
+            Here are the zoomed-in screenshots of the added icons:
+            {1}
+
+            Note: If the images don't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
+
+            **The maintainers will now take a look at it and decide whether to merge your PR.**
+
+            Thank you for contributing to Devicon! I hope everything works out and your icons are accepted into the repo.
+
+            Cheers, 
+            Peek Bot :blush:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{format(env.MESSAGE, env.OVERVIEW_IMG_MARKDOWN, env.DETAILED_IMGS_MARKDOWN)}}
+
+      - name: Comment on the PR about the result - Failure
+        if: failure()  || cancelled()
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        env:
+          MESSAGE: |
+            Hi there,
+
+            I'm Devicons' Peek Bot and it seems we've ran into a problem (sorry!).
+
+            Please double check and fix the possible issues below:
+
+            - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
+            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
+            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
+
+            Once everything is fixed, I will try. If I still fail (sorry!), the maintainers will investigate further. 
+
+            Best of luck, 
+            Peek Bot :relaxed:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ env.MESSAGE }}

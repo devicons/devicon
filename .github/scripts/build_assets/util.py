@@ -1,5 +1,16 @@
 import os
 import platform
+import sys
+import traceback
+
+
+def exit_with_err(err: Exception):
+    """
+    Exit the current step and display the err.
+    :param: err, the error/exception encountered.
+    """
+    traceback.print_exc()
+    sys.exit(1)
 
 
 def set_env_var(key: str, value: str, delimiter: str='~'):

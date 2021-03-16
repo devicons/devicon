@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devicon';
-  src:  url('fonts/devicon.eot?r4n05t');
-  src:  url('fonts/devicon.eot?r4n05t#iefix') format('embedded-opentype'),
-    url('fonts/devicon.ttf?r4n05t') format('truetype'),
-    url('fonts/devicon.woff?r4n05t') format('woff'),
-    url('fonts/devicon.svg?r4n05t#devicon') format('svg');
+  src:  url('fonts/devicon.eot?e4qd2c');
+  src:  url('fonts/devicon.eot?e4qd2c#iefix') format('embedded-opentype'),
+    url('fonts/devicon.ttf?e4qd2c') format('truetype'),
+    url('fonts/devicon.woff?e4qd2c') format('woff'),
+    url('fonts/devicon.svg?e4qd2c#devicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,99 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-r-plain:before {
+  content: "\e98e";
+}
+.devicon-r-original:before {
+  content: "\e98f";
+}
+.devicon-ocaml-plain-wordmark:before {
+  content: "\e990";
+}
+.devicon-ocaml-plain:before {
+  content: "\e991";
+}
+.devicon-matlab-plain:before {
+  content: "\e992";
+}
+.devicon-jupyter-plain-wordmark:before {
+  content: "\e993";
+}
+.devicon-jupyter-plain:before {
+  content: "\e994";
+}
+.devicon-fsharp-plain:before {
+  content: "\e995";
+}
+.devicon-elixir-plain-wordmark:before {
+  content: "\e996";
+}
+.devicon-elixir-plain:before {
+  content: "\e997";
+}
+.devicon-aarch64-plain:before {
+  content: "\e998";
+}
+.devicon-xd-line:before {
+  content: "\e97a";
+}
+.devicon-xd-plain:before {
+  content: "\e97b";
+}
+.devicon-uwsgi-plain:before {
+  content: "\e97c";
+}
+.devicon-microsoftsqlserver-plain-wordmark:before {
+  content: "\e97d";
+}
+.devicon-microsoftsqlserver-plain:before {
+  content: "\e97e";
+}
+.devicon-sqlalchemy-original-wordmark:before {
+  content: "\e97f";
+}
+.devicon-sqlalchemy-plain:before {
+  content: "\e980";
+}
+.devicon-rocksdb-plain:before {
+  content: "\e981";
+}
+.devicon-objectivec-plain:before {
+  content: "\e982";
+}
+.devicon-kubernetes-plain-wordmark:before {
+  content: "\e983";
+}
+.devicon-kubernetes-plain:before {
+  content: "\e984";
+}
+.devicon-googlecloud-plain-wordmark:before {
+  content: "\e985";
+}
+.devicon-googlecloud-plain:before {
+  content: "\e986";
+}
+.devicon-flask-original-wordmark:before {
+  content: "\e987";
+}
+.devicon-flask-original:before {
+  content: "\e988";
+}
+.devicon-firebase-plain-wordmark:before {
+  content: "\e989";
+}
+.devicon-firebase-plain:before {
+  content: "\e98a";
+}
+.devicon-eleventy-plain:before {
+  content: "\e98b";
+}
+.devicon-appwrite-plain-wordmark:before {
+  content: "\e98c";
+}
+.devicon-appwrite-plain:before {
+  content: "\e98d";
+}
 .devicon-bash-plain:before {
   content: "\e979";
 }

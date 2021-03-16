@@ -1,40 +1,46 @@
+from enum import Enum
 from typing import List
-import sys
 import xml.etree.ElementTree as et
-import time
 from pathlib import Path
 
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
 from build_assets import filehandler, arg_getters
-from build_assets import github_env
+from build_assets import util
+
+
+class SVG_STATUS_CODE(Enum):
+    """
+    The status codes to check for in post_check_svgs_comment.yml
+    """
+    NO_SVG = 0  # action: do nothing
+    SVG_OK = 1  # action: let user know their svgs are fine
 
 
 def main():
     """
     Check the quality of the svgs.
-    If any error is found, set an environmental variable called ERR_MSGS
-    that will contains the error messages.
+    If any svg error is found, create a json file called 'svg_err_messages.json'
+    in the root folder that will contains the error messages.
     """
-    args = arg_getters.get_check_svgs_args()
-    new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
-
-    if len(new_icons) == 0:
-        sys.exit("No files need to be uploaded. Ending script...")
-
-    # print list of new icons
-    print("SVGs being checked:", *new_icons, sep = "\n", end='\n\n')
-
-    time.sleep(1)  # do this so the logs stay clean
+    args = arg_getters.get_check_svgs_on_pr_args()
     try:
         # check the svgs
-        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path, as_str=False)
-        check_svgs(svgs)
-        print("All SVGs found were good.\nTask completed.")
+        svgs = filehandler.get_added_modified_svgs(args.files_added_json_path,
+            args.files_modified_json_path)
+        print("SVGs to check: ", *svgs, sep='\n')
+
+        if len(svgs) == 0:
+            print("No SVGs to check, ending script.")
+            err_messages = SVG_STATUS_CODE.NO_SVG.value
+        else:
+            err_messages = check_svgs(svgs)
+
+        filehandler.write_to_file("./svg_err_messages.txt", str(err_messages))
+        print("Task completed.")
     except Exception as e:
-        github_env.set_env_var("ERR_MSGS", str(e))
-        sys.exit(str(e))
+        util.exit_with_err(e)
 
 
 def check_svgs(svg_file_paths: List[Path]):
@@ -45,6 +51,8 @@ def check_svgs(svg_file_paths: List[Path]):
     The style must not contain any 'fill' declarations.
     If any error is found, they will be thrown.
     :param: svg_file_paths, the file paths to the svg to check for.
+    :return: None if there no errors. If there is, return a JSON.stringified
+    list with the error messages in it.
     """
     # batch err messages together so user can fix everything at once
     err_msgs = []
@@ -52,7 +60,7 @@ def check_svgs(svg_file_paths: List[Path]):
         tree = et.parse(svg_path)
         root = tree.getroot()
         namespace = "{http://www.w3.org/2000/svg}"
-        err_msg = [f"{svg_path.name}:"]
+        err_msg = [f"{svg_path}:"]
 
         if root.tag != f"{namespace}svg":
             err_msg.append(f"-root is '{root.tag}'. Root must be an 'svg' element")
@@ -84,7 +92,8 @@ def check_svgs(svg_file_paths: List[Path]):
             err_msgs.append("\n".join(err_msg))
 
     if len(err_msgs) > 0:
-        raise Exception("Errors found in these files:\n" + "\n\n".join(err_msgs))
+        return "\n\n".join(err_msgs)
+    return SVG_STATUS_CODE.SVG_OK.value
 
 
 if __name__ == "__main__":

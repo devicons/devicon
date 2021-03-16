@@ -6,29 +6,34 @@ jobs:
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Python v3.8
-        uses: actions/setup-python@v2
+
+      - uses: actions/setup-python@v2
         with: 
           python-version: 3.8
+
       - name: Install dependencies (python, pip, npm)
         run: |
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
           npm install
+
       - name: Executing build and create fonts via icomoon
         run: >
           python ./.github/scripts/icomoon_build.py 
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
           ./devicon.json ./icons ./ --headless
+
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: geckodriver-log
           path: ./geckodriver.log
+
       - name: Build devicon.min.css
         if: success() 
         run: npm run build-css
+
       - name: Upload screenshot of the newly made icons
         id: imgur_step
         uses: devicons/public-upload-to-imgur@v2.1.1
@@ -36,6 +41,7 @@ jobs:
         with:
           path: ./new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
+
       - name: Create Pull Request
         if: success() 
         uses: peter-evans/create-pull-request@v3
@@ -53,7 +59,6 @@ jobs:
             -The icon content
             -The aliases
             -The colored classes
-            -The default fallback font
 
             More information can be found in the GitHub Action logs for this workflow.
 
