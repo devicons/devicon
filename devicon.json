@@ -1083,6 +1083,23 @@
         ]
     },
     {
+        "name": "figma",
+        "tags": [
+            "design"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f24e1e",
+        "aliases": []
+    },
+    {
         "name": "firebase",
         "tags": [
             "auth",
