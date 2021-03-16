@@ -1434,6 +1434,26 @@
         "aliases": []
     },
     {
+        "name": "graphql",
+        "tags": [
+            "language",
+            "data",
+            "query"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e434aa",
+        "aliases": []
+    },
+    {
         "name": "groovy",
         "tags": [
             "programming",
