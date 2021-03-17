@@ -905,6 +905,22 @@
         "aliases": []
     },
     {
+        "name": "dot-net-core",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#623697",
+        "aliases": []
+    },
+    {
         "name": "drupal",
         "tags": [
             "cms"
