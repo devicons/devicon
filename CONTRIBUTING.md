@@ -1,6 +1,6 @@
 <h1>Contributing to Devicon</h1>
 <p>
-First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintable we developed some guidelines for contributions. 
+First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintainable, we have developed some guidelines for our contributors.
 </p>
 
 <h2>Table of Content</h2>
@@ -15,6 +15,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
   <li><a href="#buildScript">Regarding the Build Script</a></li>
+  <li><a href="#discordServer">Discord server</a></li>
 </ul>
 
 <hr>
@@ -299,3 +300,8 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
   <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
 </ul>
+
+<h2 id="discordServer">Discord server</h2>
+<p>
+We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ. If you don't have a GitHub account but want to suggest ideas or new icons, you can do that here in our Discord channel.
+</p>
