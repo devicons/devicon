@@ -304,4 +304,5 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 <h2 id="discordServer">Discord server</h2>
 <p>
 We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ. If you don't have a GitHub account but want to suggest ideas or new icons, you can do that here in our Discord channel.
+<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.<b>
 </p>
