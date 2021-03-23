@@ -2146,12 +2146,15 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "line",
+                "original-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark",
                 "plain",
+                "line",
+                "original-wordmark",
                 "plain-wordmark"
             ]
         },
@@ -2159,14 +2162,10 @@
         "aliases": [
             {
                 "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "original",
                 "alias": "plain"
             },
             {
-                "base": "original",
+                "base": "original-wordmark",
                 "alias": "plain-wordmark"
             }
         ]
