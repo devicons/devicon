@@ -950,6 +950,23 @@
         "aliases": []
     },
     {
+        "name": "dotnetcore",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#623697",
+        "aliases": []
+    },
+    {
         "name": "drupal",
         "tags": [
             "cms"

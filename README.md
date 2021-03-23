@@ -161,6 +161,12 @@ Add css rules in your stylesheet
 After a pull request has been open for over 30 days with no activity or response from the author, it'll be automatically marked as stale. We might fork your changes and merge the changes ourselves. Since GitHub tracks contributions by commits, you will be credited.
 </p>
 
+<h2 id="discord-server">Discord server</h2>
+<p>
+We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ.
+<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.<b>
+</p>
+
 <h2 id="build-yourself">Go build yourself</h2>
 <p>
     Feel free to follow those steps when you want to build the font
