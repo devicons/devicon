@@ -773,6 +773,27 @@
         "aliases": []
     },
     {
+        "name": "dart",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00A8E1",
+        "aliases": []
+    },
+    {
         "name": "debian",
         "tags": [
             "os",
@@ -902,6 +923,23 @@
             ]
         },
         "color": "#1384c8",
+        "aliases": []
+    },
+    {
+        "name": "dotnetcore",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#623697",
         "aliases": []
     },
     {
@@ -1060,6 +1098,23 @@
                 "alias": "original"
             }
         ]
+    },
+    {
+        "name": "figma",
+        "tags": [
+            "design"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f24e1e",
+        "aliases": []
     },
     {
         "name": "firebase",
@@ -1410,6 +1465,26 @@
             ]
         },
         "color": "#feb672",
+        "aliases": []
+    },
+    {
+        "name": "graphql",
+        "tags": [
+            "language",
+            "data",
+            "query"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e434aa",
         "aliases": []
     },
     {
@@ -3013,6 +3088,27 @@
             ]
         },
         "color": "#bb2031",
+        "aliases": []
+    },
+    {
+        "name": "thealgorithms",
+        "tags": [
+            "organization",
+            "algorithms"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00BCB4",
         "aliases": []
     },
     {
