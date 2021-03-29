@@ -29,7 +29,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
 <hr>
 <h2 id="overview">Overview on Submitting Icons</h2>
-<p>Here is an overview of what you have to do to submit your icons to the repo.</p>
+<p>Here is what you have to do to submit your icons to the repo.</p>
 <ol>
   <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have</li>
   <li>Put the svgs of each Icon into its own folders in <code>/icons</code> </li>
@@ -44,6 +44,15 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
 <hr>
 <h2 id='versionNaming'>Versions and Naming Conventions</h2>
+<p>For the technology name, make the file and folder name lowercase and concatenate them. For example:</p>
+<ul>
+  <li>AngularJS becomes <code>angularjs</code> or just <code>angular</code></li>
+  <li>Amazon Web Services becomes <code>amazonwebservices</code></li>
+  <li>Microsoft SQL Server becomes <code>microsoftsqlserver</code></li>
+  <li><i>Note:</i>For JS libraries, you can also remove the "js" part if it's still recognizable.</li>
+</ul>
+<br>
+
 <p>Each icon/svg can come in different versions. So far, we have:</p>
 <ul>
   <li><b>original</b>: the original logo. Can contain multiple colors. <a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original.svg"> Example </a> </li>
