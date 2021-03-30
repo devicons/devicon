@@ -3182,6 +3182,23 @@
         "aliases": []
     },
     {
+        "name": "weblate",
+        "tags": [
+            "localization"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2eccaa",
+        "aliases": []
+    },
+    {
         "name": "webpack",
         "tags": [
             "package",
