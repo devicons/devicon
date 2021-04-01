@@ -2239,6 +2239,37 @@
         "aliases": []
     },
     {
+        "name": "nextjs",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain",
+                "line",
+                "original-wordmark",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "nginx",
         "tags": [
             "server"
@@ -3299,6 +3330,26 @@
             ]
         },
         "color": "#41B883",
+        "aliases": []
+    },
+    {
+        "name": "weblate",
+        "tags": [
+            "localization"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2eccaa",
         "aliases": []
     },
     {
