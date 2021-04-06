@@ -963,6 +963,29 @@
         "aliases": []
     },
     {
+        "name": "digitalocean",
+        "tags": [
+            "cloud",
+            "hosting",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0080FF",
+        "aliases": []
+    },
+    {
         "name": "electron",
         "tags": [
             "framework"
