@@ -2069,6 +2069,32 @@
         "aliases": []
     },
     {
+        "name": "lua",
+        "tags": [
+            "programming",
+            "language",
+            "object-oriented",
+            "scripting",
+            "procedural",
+            "prototype-based",
+            "functional"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000080",
+        "aliases": []
+    },
+    {
         "name": "linux",
         "tags": [
             "os"
