@@ -2991,6 +2991,26 @@
         ]
     },
     {
+        "name": "spring",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#5FB832",
+        "aliases": []
+    },
+    {
         "name": "microsoftsqlserver",
         "tags": [
             "database"
