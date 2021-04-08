@@ -8,6 +8,14 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+.discord-logo:before {
+    content: "";
+    background-image: url("discord-logo.svg");
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-size: cover;
+}
 
 .icon-brush:before {
   content: "\e600"; }

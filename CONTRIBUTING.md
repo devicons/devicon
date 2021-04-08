@@ -1,6 +1,6 @@
 <h1>Contributing to Devicon</h1>
 <p>
-First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintable we developed some guidelines for contributions. 
+First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintainable, we have developed some guidelines for our contributors.
 </p>
 
 <h2>Table of Content</h2>
@@ -15,20 +15,22 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
   <li><a href="#buildScript">Regarding the Build Script</a></li>
+  <li><a href="#discordServer">Discord server</a></li>
 </ul>
 
 <hr>
 <h2 id="terms">Terms</h2>
 <p>Here are some terms that we will use in this repo: </p>
 <ol>
-  <li>"Icon" refers to the set of svgs/icons of a technology/tool. Ex: We might refer to the React svgs and React icons as the React Icon</li>
-  <li>"SVG/<code>.svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
-  <li>"icons" (lowercase) refers to the font icon versions of the Icons.</li>
+  <li>"Technology" is used to describe a software, libraries, tool, etc...</li>
+  <li>"Icon" refers to the svgs and icons version of a technology as a whole.</i>
+  <li>"SVG/<code>svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
+  <li>"icon" (lowercase) refers specficially to the font icon versions of the Icons.</li>
 </ol>
 
 <hr>
 <h2 id="overview">Overview on Submitting Icons</h2>
-<p>Here is an overview of what you have to do to submit your icons to the repo.</p>
+<p>Here is what you have to do to submit your icons to the repo.</p>
 <ol>
   <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have</li>
   <li>Put the svgs of each Icon into its own folders in <code>/icons</code> </li>
@@ -43,6 +45,13 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
 <hr>
 <h2 id='versionNaming'>Versions and Naming Conventions</h2>
+<p>For the technology name, make the file and folder name lowercase and concatenate them. For example:</p>
+<ul>
+  <li>AngularJS becomes <code>angularjs</code> or just <code>angular</code></li>
+  <li>Amazon Web Services becomes <code>amazonwebservices</code></li>
+  <li>Microsoft SQL Server becomes <code>microsoftsqlserver</code></li>
+</ul>
+
 <p>Each icon/svg can come in different versions. So far, we have:</p>
 <ul>
   <li><b>original</b>: the original logo. Can contain multiple colors. <a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original.svg"> Example </a> </li>
@@ -65,7 +74,6 @@ First of all, thanks for taking the time to contribute! This project can only gr
   </li>
   <li>
     Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note: this only applies to font icon versions only, not the SVG versions.
-    
   </li>
 </ul>
 
@@ -74,7 +82,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
 <ul>
   <li>The background must be transparent.</li>
-  <li>The svg name follows this convention: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>The svg name follows this convention: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
   <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. We will strip the color when turning it into icons so they can have any color.
   </li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
@@ -82,7 +90,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the svg.</li>
   <li>The <code>svg</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
   <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
-  <li>The naming convention for the svg file is the following: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>The naming convention for the svg file is the following: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
 </ul>
 
 <hr>
@@ -299,3 +307,9 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
   <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
 </ul>
+
+<h2 id="discordServer">Discord server</h2>
+<p>
+We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ. If you don't have a GitHub account but want to suggest ideas or new icons, you can do that here in our Discord channel.
+<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.<b>
+</p>
