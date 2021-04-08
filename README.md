@@ -45,16 +45,6 @@
 <i class="devicon-devicon-plain"></i>
 ```
 
-<h2>Table of Contents</h2>
-<ol>
-    <li><a href="#about">About the project</a></li>
-    <li><a href="#getting-started">Getting started</a></li>
-    <li><a href="#request-icon">Requesting icon</a></li>
-    <li><a href="#contribute">Contributing</a></li>
-    <li><a href="#stale-prs">Stale pull requests</a></li>
-    <li><a href="#build-yourself">Go build yourself</a></li>
-</ol>
-
 <h2 id="about">About the project</h2>
 <p>
     Devicon aims to gather all logos representing development languages and tools.
