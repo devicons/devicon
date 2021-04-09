@@ -51,6 +51,7 @@
     <li><a href="#getting-started">Getting started</a></li>
     <li><a href="#request-icon">Requesting icon</a></li>
     <li><a href="#contribute">Contributing</a></li>
+    <li><a href="#stale-prs">Stale pull requests</a></li>
     <li><a href="#build-yourself">Go build yourself</a></li>
 </ol>
 
@@ -153,6 +154,17 @@ Add css rules in your stylesheet
 <p>
     We are happy for every contribution. Please have a look at our <a href="CONTRIBUTING.md">contribution guidelines</a>
     to see how you can contribute to this project.
+</p>
+
+<h2 id="stale-prs">Stale pull requests</h2>
+<p>
+After a pull request has been open for over 30 days with no activity or response from the author, it'll be automatically marked as stale. We might fork your changes and merge the changes ourselves. Since GitHub tracks contributions by commits, you will be credited.
+</p>
+
+<h2 id="discord-server">Discord server</h2>
+<p>
+We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ.
+<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.<b>
 </p>
 
 <h2 id="build-yourself">Go build yourself</h2>
