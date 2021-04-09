@@ -24,7 +24,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Here are some terms that we will use in this repo: </p>
 <ol>
   <li>"Technology" is used to describe a software, libraries, tool, etc...</li>
-  <li>"Icon" refers to the svgs and icons version of a technology as a whole.</i>
+  <li>"Icon" refers to the svgs and icons version of a technology as a whole.</li>
   <li>"SVG/<code>svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
   <li>"icon" (lowercase) refers specficially to the font icon versions of the Icons.</li>
 </ol>
@@ -312,7 +312,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 <h2 id="discordServer">Discord server</h2>
 <p>
 We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ. If you don't have a GitHub account but want to suggest ideas or new icons, you can do that here in our Discord channel.
-<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.<b>
+<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
 </p>
 
 <h2 id='release'>Release strategy, conventions, preparation and execution</h2>
@@ -335,7 +335,7 @@ We are running a Discord server. You can go here to talk, discuss, and more with
     <li>Push the branch <code>draft-release</code></li>
     <li>Manually trigger the workflow <code><a href="https://github.com/devicons/devicon/actions/workflows/build_icons.yml">build_icons.yml</a></code> (which has a <code>workflow_dispatch</code> event trigger) and select the branch <code>draft-release</code> as target branch. This will build a font version of all icons using icomoon and automatically creates a pull request to merge the build result back into <code>draft-release</code></li>
     <li>Review and approve the auto-create pull request created by the action of the step above</li>
-    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title and add information about all new icons, fixes, features and enhancements in the description of the pull request. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).</li>
+    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title and add information about all new icons, fixes, features and enhancements in the description of the pull request. Take the commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).</li>
     <li>Wait for review and approval of the pull request (<b>DON'T</b> perform a squash-merge)</li>
     <li>Once merged create a pull request with BASE <code>master</code> and HEAD <code>development</code>. Copy the description of the earlier pull request.</li>
     <li>Since it was already approved in the 'development' stage a maintainer is allowed to merge it (<b>DON'T</b> perform a squash-merge).</li>
