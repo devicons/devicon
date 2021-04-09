@@ -1387,6 +1387,25 @@
         "aliases": []
     },
     {
+        "name": "gitter",
+        "tags": [
+            "social",
+            "chat"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "go",
         "tags": [
             "language"
