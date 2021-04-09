@@ -2620,6 +2620,26 @@
         "aliases": []
     },
     {
+        "name": "phoenix",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F15524",
+        "aliases": []
+    },
+    {
         "name": "r",
         "tags": [
             "programming",
