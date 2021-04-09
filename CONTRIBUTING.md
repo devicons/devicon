@@ -16,6 +16,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
   <li><a href="#buildScript">Regarding the Build Script</a></li>
   <li><a href="#discordServer">Discord server</a></li>
+  <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
 </ul>
 
 <hr>
@@ -23,7 +24,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Here are some terms that we will use in this repo: </p>
 <ol>
   <li>"Technology" is used to describe a software, libraries, tool, etc...</li>
-  <li>"Icon" refers to the svgs and icons version of a technology as a whole.</i>
+  <li>"Icon" refers to the svgs and icons version of a technology as a whole.</li>
   <li>"SVG/<code>svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
   <li>"icon" (lowercase) refers specficially to the font icon versions of the Icons.</li>
 </ol>
@@ -311,5 +312,33 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 <h2 id="discordServer">Discord server</h2>
 <p>
 We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ. If you don't have a GitHub account but want to suggest ideas or new icons, you can do that here in our Discord channel.
-<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.<b>
+<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
 </p>
+
+<h2 id='release'>Release strategy, conventions, preparation and execution</h2>
+<h5>Release strategy</h5>
+<p>Devicon does not follow a strict release plan. A new release is depended on current amount of contributions, required bugfixes/patches and will be discussed by the team of maintainers.</p>
+<p>Generally speaking: A new release will be published when new icons are added or a bug was fixed. When it's predictable that multiple icons are added in a foreseeable amount of time they are usually wrapped together.</p>
+<h5>Conventions</h5>
+<p>The version naming follows the rules of <a href="https://semver.org/">Semantic Versioning</a>. Given a version number MAJOR.MINOR.PATCH, increment the:</p>
+<ul>
+    <li>MAJOR version when you make incompatible API changes,</li>
+    <li>MINOR version when you add functionality <b>(like a new icon)</b> in a backwards compatible manner, and</li>
+    <li>PATCH version when you make backwards compatible bug fixes.</li>
+</ul>
+
+<h5>Release preparation and execution</h5>
+<ol>
+    <li>Define the next release version number based on the conventions</li>
+    <li>Checkout <code>development</code> as <code>draft-release</code> branch</li>
+    <li>Bump the package version using <code>npm version v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i> -m "bump npm version to v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>"</code>  (see <code><a href="https://github.com/devicons/devicon/pull/497">#487</a></code>)</li>
+    <li>Push the branch <code>draft-release</code></li>
+    <li>Manually trigger the workflow <code><a href="https://github.com/devicons/devicon/actions/workflows/build_icons.yml">build_icons.yml</a></code> (which has a <code>workflow_dispatch</code> event trigger) and select the branch <code>draft-release</code> as target branch. This will build a font version of all icons using icomoon and automatically creates a pull request to merge the build result back into <code>draft-release</code></li>
+    <li>Review and approve the auto-create pull request created by the action of the step above</li>
+    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title and add information about all new icons, fixes, features and enhancements in the description of the pull request. Take the commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).</li>
+    <li>Wait for review and approval of the pull request (<b>DON'T</b> perform a squash-merge)</li>
+    <li>Once merged create a pull request with BASE <code>master</code> and HEAD <code>development</code>. Copy the description of the earlier pull request.</li>
+    <li>Since it was already approved in the 'development' stage a maintainer is allowed to merge it (<b>DON'T</b> perform a squash-merge).</li>
+    <li>Create a <a href="https://github.com/devicons/devicon/releases/new">new release</a> using v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i> as tag and release title. Use the earlier created description as description of the release.</li>
+    <li>Publishing the release will trigger the <a href="/.github/workflows/npm_publish.yml">npm_publish.yml</a> workflow which will execute a <code>npm publish</code> leading to a updated <a href="https://www.npmjs.com/package/devicon">npm package</a> (v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).</li>
+</ol>
