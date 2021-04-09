@@ -24,7 +24,7 @@ def main():
     if len(filtered_icons) == 0:
         message = "No icons found matching the icon name in the PR's title.\n" \
         "Ensure that a new icon entry is added in the devicon.json and the PR title matches the convention here: \n" \
-        "https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview.\n" \
+        "https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview\n" \
         "Ending script...\n"
         sys.exit(message)
 

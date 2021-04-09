@@ -987,6 +987,29 @@
         "aliases": []
     },
     {
+        "name": "digitalocean",
+        "tags": [
+            "cloud",
+            "hosting",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0080FF",
+        "aliases": []
+    },
+    {
         "name": "electron",
         "tags": [
             "framework"
@@ -1385,6 +1408,25 @@
             ]
         },
         "color": "#E24329",
+        "aliases": []
+    },
+    {
+        "name": "gitter",
+        "tags": [
+            "social",
+            "chat"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -2070,6 +2112,32 @@
         "aliases": []
     },
     {
+        "name": "lua",
+        "tags": [
+            "programming",
+            "language",
+            "object-oriented",
+            "scripting",
+            "procedural",
+            "prototype-based",
+            "functional"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000080",
+        "aliases": []
+    },
+    {
         "name": "linux",
         "tags": [
             "os"
@@ -2576,6 +2644,26 @@
         "aliases": []
     },
     {
+        "name": "phoenix",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F15524",
+        "aliases": []
+    },
+    {
         "name": "r",
         "tags": [
             "programming",
@@ -2610,7 +2698,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#a62c46",
+        "color": "#CC0000",
         "aliases": []
     },
     {
@@ -2964,6 +3052,26 @@
             "alias": "plain-wordmark"
           }
         ]
+    },
+    {
+        "name": "spring",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#5FB832",
+        "aliases": []
     },
     {
         "name": "microsoftsqlserver",
