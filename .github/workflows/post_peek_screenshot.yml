@@ -8,10 +8,16 @@ jobs:
   post_screenshots_in_comment:
     name: Post the screenshot
     runs-on: ubuntu-18.04
+    if: github.event.action == 'completed' && github.event.workflow_run.conclusion != 'skipped'
+    env: 
+      # three possible values: 'skipped', 'success', 'failure'
+      # have to print github.event to console to see these values
+      # note: can't use this env variable up in the if statement above for some reason.
+      # I don't think it's an ordering issue cause it seems 'if' is auto evaluate first
+      PEEK_STATUS: ${{ github.event.workflow_run.conclusion }}
     steps:
-      - name: Check if the trigger run worked. If not, fail the current run.
-        if: github.event.workflow_run.conclusion != 'success'
-        uses: cutenode/action-always-fail@v1.0.1
+      - name: Check state of last run
+        run: echo $PEEK_STATUS
 
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.11.0
@@ -21,7 +27,6 @@ jobs:
           run_id: ${{ github.event.workflow_run.id }}
 
       - name: Read the pr_num file
-        if: success()
         id: pr_num_reader
         uses: juliangruber/read-file-action@v1.0.0
         with:
@@ -29,6 +34,7 @@ jobs:
 
       - name: Upload screenshot of the newly made icons gotten from the artifacts
         id: icons_overview_img_step
+        if: env.PEEK_STATUS == 'success' && success()
         uses: devicons/public-upload-to-imgur@v2.2.1
         with:
           path: ./screenshots/new_icons.png
@@ -37,22 +43,20 @@ jobs:
       - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
         id: icons_detailed_img_step
         uses: devicons/public-upload-to-imgur@v2.2.1
-        if: success()
+        if: env.PEEK_STATUS == 'success' && success()
         with:
           path: ./screenshots/screenshot_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Comment on the PR about the result - Success
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success()
+        if: env.PEEK_STATUS == 'success' && success()
         env:
-          OVERVIEW_IMG_MARKDOWN: ${{ fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0] }}
-          DETAILED_IMGS_MARKDOWN: ${{ join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '') }}
           MESSAGE: |
             Hi there,
 
             I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
-            Here is the result below:
+            Here is the result below (top right):
 
             {0}
 
@@ -71,10 +75,13 @@ jobs:
           type: create
           issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{format(env.MESSAGE, env.OVERVIEW_IMG_MARKDOWN, env.DETAILED_IMGS_MARKDOWN)}}
+          body: >
+            ${{ format(env.MESSAGE, 
+            fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0],
+            join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '')) }}
 
       - name: Comment on the PR about the result - Failure
-        if: failure()  || cancelled()
+        if: failure() || env.PEEK_STATUS == 'failure'
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         env:
           MESSAGE: |
@@ -88,7 +95,7 @@ jobs:
             - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
             - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
 
-            Once everything is fixed, I will try. If I still fail (sorry!), the maintainers will investigate further. 
+            I will retry once everything is fixed. If I still fail (sorry!) or there are other erros, the maintainers will investigate. 
 
             Best of luck, 
             Peek Bot :relaxed:

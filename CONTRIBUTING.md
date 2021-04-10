@@ -1,6 +1,6 @@
 <h1>Contributing to Devicon</h1>
 <p>
-First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintable we developed some guidelines for contributions. 
+First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintainable, we have developed some guidelines for our contributors.
 </p>
 
 <h2>Table of Content</h2>
@@ -15,20 +15,23 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
   <li><a href="#buildScript">Regarding the Build Script</a></li>
+  <li><a href="#discordServer">Discord server</a></li>
+  <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
 </ul>
 
 <hr>
 <h2 id="terms">Terms</h2>
 <p>Here are some terms that we will use in this repo: </p>
 <ol>
-  <li>"Icon" refers to the set of svgs/icons of a technology/tool. Ex: We might refer to the React svgs and React icons as the React Icon</li>
-  <li>"SVG/<code>.svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
-  <li>"icons" (lowercase) refers to the font icon versions of the Icons.</li>
+  <li>"Technology" is used to describe a software, libraries, tool, etc...</li>
+  <li>"Icon" refers to the svgs and icons version of a technology as a whole.</li>
+  <li>"SVG/<code>svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
+  <li>"icon" (lowercase) refers specficially to the font icon versions of the Icons.</li>
 </ol>
 
 <hr>
 <h2 id="overview">Overview on Submitting Icons</h2>
-<p>Here is an overview of what you have to do to submit your icons to the repo.</p>
+<p>Here is what you have to do to submit your icons to the repo.</p>
 <ol>
   <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have</li>
   <li>Put the svgs of each Icon into its own folders in <code>/icons</code> </li>
@@ -43,6 +46,13 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
 <hr>
 <h2 id='versionNaming'>Versions and Naming Conventions</h2>
+<p>For the technology name, make the file and folder name lowercase and concatenate them. For example:</p>
+<ul>
+  <li>AngularJS becomes <code>angularjs</code> or just <code>angular</code></li>
+  <li>Amazon Web Services becomes <code>amazonwebservices</code></li>
+  <li>Microsoft SQL Server becomes <code>microsoftsqlserver</code></li>
+</ul>
+
 <p>Each icon/svg can come in different versions. So far, we have:</p>
 <ul>
   <li><b>original</b>: the original logo. Can contain multiple colors. <a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original.svg"> Example </a> </li>
@@ -65,7 +75,6 @@ First of all, thanks for taking the time to contribute! This project can only gr
   </li>
   <li>
     Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note: this only applies to font icon versions only, not the SVG versions.
-    
   </li>
 </ul>
 
@@ -74,7 +83,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
 <ul>
   <li>The background must be transparent.</li>
-  <li>The svg name follows this convention: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>The svg name follows this convention: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
   <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. We will strip the color when turning it into icons so they can have any color.
   </li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
@@ -82,7 +91,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the svg.</li>
   <li>The <code>svg</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
   <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
-  <li>The naming convention for the svg file is the following: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>The naming convention for the svg file is the following: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
 </ul>
 
 <hr>
@@ -299,3 +308,37 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
   <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
 </ul>
+
+<h2 id="discordServer">Discord server</h2>
+<p>
+We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ. If you don't have a GitHub account but want to suggest ideas or new icons, you can do that here in our Discord channel.
+<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
+</p>
+
+<h2 id='release'>Release strategy, conventions, preparation and execution</h2>
+<h5>Release strategy</h5>
+<p>Devicon does not follow a strict release plan. A new release is depended on current amount of contributions, required bugfixes/patches and will be discussed by the team of maintainers.</p>
+<p>Generally speaking: A new release will be published when new icons are added or a bug was fixed. When it's predictable that multiple icons are added in a foreseeable amount of time they are usually wrapped together.</p>
+<h5>Conventions</h5>
+<p>The version naming follows the rules of <a href="https://semver.org/">Semantic Versioning</a>. Given a version number MAJOR.MINOR.PATCH, increment the:</p>
+<ul>
+    <li>MAJOR version when you make incompatible API changes,</li>
+    <li>MINOR version when you add functionality <b>(like a new icon)</b> in a backwards compatible manner, and</li>
+    <li>PATCH version when you make backwards compatible bug fixes.</li>
+</ul>
+
+<h5>Release preparation and execution</h5>
+<ol>
+    <li>Define the next release version number based on the conventions</li>
+    <li>Checkout <code>development</code> as <code>draft-release</code> branch</li>
+    <li>Bump the package version using <code>npm version v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i> -m "bump npm version to v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>"</code>  (see <code><a href="https://github.com/devicons/devicon/pull/497">#487</a></code>)</li>
+    <li>Push the branch <code>draft-release</code></li>
+    <li>Manually trigger the workflow <code><a href="https://github.com/devicons/devicon/actions/workflows/build_icons.yml">build_icons.yml</a></code> (which has a <code>workflow_dispatch</code> event trigger) and select the branch <code>draft-release</code> as target branch. This will build a font version of all icons using icomoon and automatically creates a pull request to merge the build result back into <code>draft-release</code></li>
+    <li>Review and approve the auto-create pull request created by the action of the step above</li>
+    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title and add information about all new icons, fixes, features and enhancements in the description of the pull request. Take the commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).</li>
+    <li>Wait for review and approval of the pull request (<b>DON'T</b> perform a squash-merge)</li>
+    <li>Once merged create a pull request with BASE <code>master</code> and HEAD <code>development</code>. Copy the description of the earlier pull request.</li>
+    <li>Since it was already approved in the 'development' stage a maintainer is allowed to merge it (<b>DON'T</b> perform a squash-merge).</li>
+    <li>Create a <a href="https://github.com/devicons/devicon/releases/new">new release</a> using v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i> as tag and release title. Use the earlier created description as description of the release.</li>
+    <li>Publishing the release will trigger the <a href="/.github/workflows/npm_publish.yml">npm_publish.yml</a> workflow which will execute a <code>npm publish</code> leading to a updated <a href="https://www.npmjs.com/package/devicon">npm package</a> (v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).</li>
+</ol>
