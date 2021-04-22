@@ -2476,13 +2476,7 @@
                 "plain"
             ]
         },
-        "color": "#212177",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "color": "#212177"
     },
     {
         "name": "photoshop",
