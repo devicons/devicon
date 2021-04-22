@@ -2465,6 +2465,26 @@
         "aliases": []
     },
     {
+        "name": "perl",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#212177",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "photoshop",
         "tags": [
             "editor",
