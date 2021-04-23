@@ -2494,6 +2494,9 @@
             "svg": [
                 "original",
                 "plain"
+            ],
+            "font": [
+                "plain",
             ]
         },
         "color": "#212177",
