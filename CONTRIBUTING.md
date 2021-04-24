@@ -310,19 +310,19 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 
 <hr>
 <h2 id='buildScript'>The Build Script: how it works and its quirks</h2>
-<p>To make adding icons easier for repo maintainers, we rely on GitHub Actions, Python, Selenium, and Gulp to automate our tasks.</p>
+<p>We rely on GitHub Actions, Python, Selenium, Imgur, and Gulp to automate our tasks. Please feel free to take a look at the workflow files. The codes should be clear enough to follow along.</p>
 <p>So far, the tasks in the build script are:</p>
 <ul>
-  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a></li>
-  <li>Preview what an svg would look like as an icon using the upload svgs script (see <a href="https://github.com/devicons/devicon/pull/412">this</a></li>
-  <li>Build, combine, and minify CSS files. For details, see <a href="https://github.com/devicons/devicon/pull/290">this</a></li>
-  <li>Send screenshots to Imgur and upload it to a PR. See <a href="https://github.com/devicons/devicon/pull/398">the PR for the Imgur action</a> and <a href="https://github.com/devicons/devicon/pull/481"> the PR for uploading the pictures to a PR</a>
+  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a> Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
+  <li>Preview what an svg would look like as an icon using the upload svgs script (see <a href="https://github.com/devicons/devicon/pull/412">this</a>). Used by <b>peek-bot</b>.</li>
+  <li>Build, combine, and minify CSS files. For details, see <a href="https://github.com/devicons/devicon/pull/290">this</a>. Used by <b>build-bot</b>.</li>
+  <li>Send screenshots to Imgur and upload it to a PR. See <a href="https://github.com/devicons/devicon/pull/398">the PR for the Imgur action</a> and <a href="https://github.com/devicons/devicon/pull/481"> the PR for uploading the pictures to a PR. Used by <b>peek-bot</b> and <b>build-bot</b>.</a>
   <li>Ensure code quality is up to standard</li>
-  <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
+  <li>Comment on the PR so maintainers don't have to manually upload icon result. Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
   <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
 </ul>
 
-<p>There are some quirks and bugs that the build scripts might run into. Listed below are the common ones and their solution</p>
+<p>There are some quirks and bugs that the build scripts might run into. Listed below are the common ones and their solutions</p>
 <ol>
   <li><b>No connection could be made because the target machine actively refused it. (os error 10061)</b>
     <ul>
