@@ -11,44 +11,45 @@ from build_assets import util
 
 
 def main():
-    args = arg_getters.get_selenium_runner_args(True)
-    new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
-
-    if len(new_icons) == 0:
-        sys.exit("No files need to be uploaded. Ending script...")
-
-    # get only the icon object that has the name matching the pr title
-    filtered_icon = find_object_added_in_this_pr(new_icons, args.pr_title)
-
-    if filtered_icon == None:
-        message = "No proper icon found matching the icon name in the PR's title.\n" \
-        "Ensure that a new icon entry is properly added in the devicon.json and the PR title matches the convention here: \n" \
-        "https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview\n" \
-        "Ending script...\n"
-        sys.exit(message)
-
-    print("Icon being checked:", filtered_icon, sep = "\n", end='\n\n')
-
     runner = None
     try:
+        args = arg_getters.get_selenium_runner_args(True)
+        new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
+
+        if len(new_icons) == 0:
+            raise Exception("No files need to be uploaded. Ending script...")
+
+        # get only the icon object that has the name matching the pr title
+        err_messages = []
+        filtered_icon = find_object_added_in_this_pr(new_icons, args.pr_title, err_messages)
+
+        if filtered_icon is None:
+            # should have 1 error message if filtered_icon is None
+            raise Exception(err_messages[0])
+
+        print("Icon being checked:", filtered_icon, sep = "\n", end='\n\n')
+
         runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
         svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, True)
         screenshot_folder = filehandler.create_screenshot_folder("./") 
         runner.upload_svgs(svgs, screenshot_folder)
         print("Task completed.")
-    except TimeoutException as e:
-        util.exit_with_err("Selenium Time Out Error: \n" + str(e))
+
+        # no errors, do this so upload-artifact won't fail
+        filehandler.write_to_file("./err_messages.txt", "0")
     except Exception as e:
+        filehandler.write_to_file("./err_messages.txt", str(e))
         util.exit_with_err(e)
     finally:
         runner.close() 
 
 
-def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
+def find_object_added_in_this_pr(icons: List[dict], pr_title: str, err_messages: List[str]):
     """
     Find the icon name from the PR title. 
     :param icons, a list of the font objects found in the devicon.json.
     :pr_title, the title of the PR that this workflow was called on.
+    :param err_messages, the error messages that will be displayed
     :return a dictionary with the "name"
     entry's value matching the name in the pr_title.
     If none can be found, return None.
@@ -60,9 +61,10 @@ def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
         check_devicon_object(icon, icon_name)
         return icon
     except IndexError:  # there are no match in the findall()
+        err_messages.append("Couldn't find an icon matching the name in the PR title.")
         return None  
     except ValueError as e:
-        print(e)
+        err_messages.append(str(e))
         return None
 
 
@@ -118,7 +120,7 @@ def check_devicon_object(icon: dict, icon_name: str):
         err_msgs.append("Missing key: 'aliases'.")
     
     if len(err_msgs) > 0:
-        message = f"Error found in 'devicon.json' for '{icon_name}' entry: \n" + "\n".join(err_msgs) + "\n"
+        message = "Error found in 'devicon.json' for '{}' entry: \n{}\n".format(icon_name, "\n".join(err_msgs))
         raise ValueError(message)
     return ""
 
