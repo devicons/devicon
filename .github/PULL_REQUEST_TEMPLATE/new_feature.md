@@ -1,6 +1,6 @@
 ## This PR adds...
 
-*List your features here and their reasons for creation*
+*List your features here and their reasons for creation.*
 
 ## Notes
 
