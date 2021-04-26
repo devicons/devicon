@@ -40,6 +40,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
   <li><i>Optional</i>: Add images of the new svg(s) to the description of the pull request. This would help speed up the review process </li>
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
+  <li>A bot will check your SVGs. If there are any errors, please fix them as instructed.</li>
   <li>Wait for a maintainer to review your changes. They will run a script to check your icons.</li>
   <li>If there are no issues, they will accept your pull request and merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
 </ol>

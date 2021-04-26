@@ -10,6 +10,7 @@ const aliasSCSSName = "devicon-alias.scss";
 const colorsCSSName = "devicon-colors.css";
 const finalMinSCSSName = "devicon.min.scss";
 
+//////// CSS Tasks ////////
 
 /**
  * Create the devicon.min.css by creating needed

@@ -1,0 +1,114 @@
+
+> devicon@2.11.0 release-message C:\Users\Admin_Think541\Documents\JavaScriptProjects\devicon
+> gulp getReleaseMessage
+
+[[90m23:36:30[39m] Using gulpfile ~\Documents\JavaScriptProjects\devicon\gulpfile.js
+[[90m23:36:30[39m] Starting 'getReleaseMessage'...
+Please wait a few seconds...
+[[90m23:36:30[39m] Finished 'getReleaseMessage' after 28 ms
+--------------Here is the build message--------------
+ A huge thanks to all our maintainers and contributors for making this release possible!
+
+ **32 New Icons**
+- [new icon: perl (original, plain)](https://github.com/devicons/devicon/pull/569) by @Thomas-Boi, @mattkoskela, @Panquesito7.
+- [new icon: nixos (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/564) by @jeovazero.
+- [new icon: gitter (plain, plain-wordmark)](https://github.com/devicons/devicon/pull/556) by @maltejur, @Panquesito7.
+- [new icon: rails (plain, plain-wordmark)](https://github.com/devicons/devicon/pull/554) by @maltejur, @Panquesito7.
+- [new icon: phoenix (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/551) by @Panquesito7.
+- [new icon: spring (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/550) by @Panquesito7.
+- [new icon: lua (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/548) by @Panquesito7.
+- [new icon: digitalocean (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/547) by @Panquesito7.
+- [new icon: weblate (original, plain, original-wordmark, plain-wordmark)](https://github.com/devicons/devicon/pull/544) by @maltejur, @Panquesito7.
+- [new icon: nextjs (original)](https://github.com/devicons/devicon/pull/541) by @maltejur, @Panquesito7.
+- [New icon: dotnetcore (original)](https://github.com/devicons/devicon/pull/533) by @kirinnee, @EnisMulic, @Panquesito7.
+- [new icon: figma (original, plain)](https://github.com/devicons/devicon/pull/531) by @EnisMulic, @AanchalCh, @Panquesito7.
+- [new icon: jest (original, plain, line)](https://github.com/devicons/devicon/pull/527) by @wsameer, @Panquesito7.
+- [new icon: dart (original, plain, original-wordmark, plain-wordmark)](https://github.com/devicons/devicon/pull/522) by @maltejur, @Panquesito7.
+- [new icon: TheAlgorithms (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/521) by @Panquesito7.
+- [new icon: AArch64 (original, plain)](https://github.com/devicons/devicon/pull/507) by @Panquesito7, @amacado.
+- [new icon: OCaml (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/502) by @Panquesito7, @amacado.
+- [new icon: Jupyter (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/501) by @Panquesito7, @amacado.
+- [new icon: elixir (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/500) by @maltejur.
+- [new icon: fsharp (original,plain)](https://github.com/devicons/devicon/pull/495) by @maltejur.
+- [new icon: matlab (original, plain)](https://github.com/devicons/devicon/pull/492) by @amacado, @Panquesito7.
+- [new icon: r (original, plain)](https://github.com/devicons/devicon/pull/491) by @jakob-r.
+- [new icon: flask (original, original-wordmark)](https://github.com/devicons/devicon/pull/463) by @EnisMulic, @moghya.
+- [new icon: firebase (plain, plain-wordmark)](https://github.com/devicons/devicon/pull/461) by @EnisMulic.
+- [new icon: googlecloud (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/428) by @EnisMulic.
+- [new icon: microsoftsqlserver (plain, plain-wordmark)](https://github.com/devicons/devicon/pull/427) by @EnisMulic.
+- [new icon: sqlalchemy (original, original-wordmark, plain)](https://github.com/devicons/devicon/pull/426) by @EnisMulic.
+- [new icon: objectivec (plain)](https://github.com/devicons/devicon/pull/425) by @EnisMulic.
+- [new icon: kubernetes (plain, plain-wordmark)](https://github.com/devicons/devicon/pull/424) by @EnisMulic.
+- [new icon: rocksdb (plain)](https://github.com/devicons/devicon/pull/423) by @EnisMulic.
+- [new icon: pandas (plain, plain-wordmark, original, original-wordmark)](https://github.com/devicons/devicon/pull/422) by @EnisMulic.
+- [new icon: Bash (original, plain)](https://github.com/devicons/devicon/pull/415) by @EnisMulic.
+
+ **68 Features**
+- [Added a section for common bugs in the CONTRIBUTING](https://github.com/devicons/devicon/pull/563) by @Thomas-Boi.
+- [Bump ini from 1.3.5 to 1.3.8](https://github.com/devicons/devicon/pull/562) by @Thomas-Boi, @dependabot[bot], @amacado.
+- [enhance guidelines for drafting a new release](https://github.com/devicons/devicon/pull/561) by @amacado.
+- [Release v2.11.0](https://github.com/devicons/devicon/pull/560) by @amacado, @Thomas-Boi, @Panquesito7, @maltejur, @EnisMulic, @dependabot[bot].
+- [Build preparation for Release v2.11.0](https://github.com/devicons/devicon/pull/559) by @Thomas-Boi.
+- [bot:build new icons, icomoon.json and devicon.css](https://github.com/devicons/devicon/pull/558) by @Thomas-Boi.
+- [Fix link reference in `.github/scripts/icomoon_peek.py`](https://github.com/devicons/devicon/pull/557) by @Panquesito7.
+- [add paragraph about release strategy](https://github.com/devicons/devicon/pull/555) by @amacado.
+- [Update `package.json` for the new release](https://github.com/devicons/devicon/pull/553) by @Panquesito7.
+- [The table of contents was removed.](https://github.com/devicons/devicon/pull/552) by @NaveedAhmadHematmal.
+- [Bump y18n from 3.2.1 to 3.2.2](https://github.com/devicons/devicon/pull/545) by @dependabot[bot], @Panquesito7.
+- [Updated the svg checker so it doesn't post confirmation messages and updated CONTRIBUTING.md](https://github.com/devicons/devicon/pull/542) by @Thomas-Boi, @amacado.
+- [Add Discord invitation on the website, `README.md`, and `CONTRIBUTING.md`](https://github.com/devicons/devicon/pull/538) by @Panquesito7.
+- [New icon: graphql (plain, plain-wordmark)](https://github.com/devicons/devicon/pull/530) by @EnisMulic, @amacado.
+- [fix: Alerts reported by Dependabot](https://github.com/devicons/devicon/pull/528) by @Panquesito7.
+- [feat: Setup Stale workflow](https://github.com/devicons/devicon/pull/524) by @Panquesito7.
+- [feat: Add labeler workflow](https://github.com/devicons/devicon/pull/523) by @Panquesito7.
+- [Fix issue with "post_peek_screenshot" action failing when it's not supposed to](https://github.com/devicons/devicon/pull/520) by @Thomas-Boi, @Panquesito7.
+- [fix: Merge branch `master` into `develop`](https://github.com/devicons/devicon/pull/519) by @amacado.
+- [Release v2.10.1](https://github.com/devicons/devicon/pull/518) by @amacado, @Thomas-Boi.
+- [introducing teams and guidelines for supporters](https://github.com/devicons/devicon/pull/516) by @amacado.
+- [Fix the issue with "Post Check SVG" posting the wrong message](https://github.com/devicons/devicon/pull/515) by @Thomas-Boi.
+- [add environment for npm publish workflow](https://github.com/devicons/devicon/pull/513) by @amacado.
+- [bot:build new icons, icomoon.json and devicon.css](https://github.com/devicons/devicon/pull/512) by @amacado.
+- [Remove \n from script](https://github.com/devicons/devicon/pull/511) by @Thomas-Boi.
+- [Updated the logging of the actions](https://github.com/devicons/devicon/pull/509) by @Thomas-Boi, @amacado.
+- [fix check svg icons workflow](https://github.com/devicons/devicon/pull/508) by @amacado.
+- [fix bug regarding workflow check](https://github.com/devicons/devicon/pull/506) by @amacado.
+- [Release v2.10.0](https://github.com/devicons/devicon/pull/504) by @tylensthilaire, @EnisMulic, @Thomas-Boi, @Th1nkK1D.
+- [merge master < develop](https://github.com/devicons/devicon/pull/503) by @amacado.
+- [new icon: ocaml (original, original-wordmark, plain, plain-wordmark)](https://github.com/devicons/devicon/pull/499) by @Panquesito7.
+- [new icon: Jupyter (original, plain)](https://github.com/devicons/devicon/pull/498) by @amacado, @Panquesito7.
+- [automate workflow for npm publish](https://github.com/devicons/devicon/pull/497) by @amacado.
+- [redesign readme.md](https://github.com/devicons/devicon/pull/496) by @amacado.
+- [new icon: R (original)](https://github.com/devicons/devicon/pull/493) by @Panquesito7.
+- [Removed 'default fall back icon' from build_icons.yml](https://github.com/devicons/devicon/pull/487) by @Thomas-Boi.
+- [bot:build new icons, icomoon.json and devicon.css](https://github.com/devicons/devicon/pull/486) by @amacado.
+- [Release 2.9.0](https://github.com/devicons/devicon/pull/485) by @tylensthilaire, @EnisMulic, @Thomas-Boi, @Th1nkK1D.
+- [Added working workflows that has commenting on forked repo's PR.](https://github.com/devicons/devicon/pull/481) by @Thomas-Boi.
+- [Add guideline about squash merging](https://github.com/devicons/devicon/pull/480) by @amacado.
+- [Check svg upgrades](https://github.com/devicons/devicon/pull/479) by @Thomas-Boi.
+- [new icon: testingicon (original, plain) [TESTING DO NOT MERGE]](https://github.com/devicons/devicon/pull/477) by @Thomas-Boi.
+- [new icon: testingicon (original, plain) [TESTING DO NOT MERGE]](https://github.com/devicons/devicon/pull/476) by @Thomas-Boi.
+- [Check whether the new check_svgs scripts work [TEST DO NOT MERGE]](https://github.com/devicons/devicon/pull/475) by @Thomas-Boi.
+- [new icon: testingicon (original, plain) [TESTING DO NOT MERGE]](https://github.com/devicons/devicon/pull/474) by @Thomas-Boi.
+- [new icon: testingicon (original, plain) [TESTING DO NOT MERGE]](https://github.com/devicons/devicon/pull/473) by @Thomas-Boi.
+- [Fix the ref issue of the checkout action and sqlalchemy ](https://github.com/devicons/devicon/pull/472) by @Thomas-Boi.
+- [Added a script that will create a default icon fall back for all devicon classes](https://github.com/devicons/devicon/pull/469) by @Thomas-Boi.
+- [Fixed an error with devicon.json](https://github.com/devicons/devicon/pull/468) by @Thomas-Boi.
+- [new icon: uwsgi (original, plain)](https://github.com/devicons/devicon/pull/462) by @EnisMulic.
+- [Added check script for the icons and fix icons with fill or viewBox issues](https://github.com/devicons/devicon/pull/460) by @Thomas-Boi.
+- [Release v2.8.2](https://github.com/devicons/devicon/pull/457) by @amacado, @Thomas-Boi, @EnisMulic.
+- [fix displaying svg code in devicon.dev](https://github.com/devicons/devicon/pull/455) by @amacado.
+- [Change the peek workflow to use upload artifacts](https://github.com/devicons/devicon/pull/454) by @Thomas-Boi.
+- [Release v2.8.1](https://github.com/devicons/devicon/pull/453) by @amacado, @EnisMulic.
+- [new icon: testingicon (original, plain) [DO NOT MERGE]](https://github.com/devicons/devicon/pull/452) by @Thomas-Boi.
+- [fix icon: bash (plain)](https://github.com/devicons/devicon/pull/451) by @EnisMulic.
+- [fix icon: bash (plain), remove extra content](https://github.com/devicons/devicon/pull/450) by @EnisMulic.
+- [new icon: testingicon (original, plain) [DO NOT MERGE] testing workflow from fork](https://github.com/devicons/devicon/pull/446) by @Thomas-Boi, @amacado.
+- [new icon: testingicon (original, plain) [DO NOT MERGE] Testing Workflow: Amacado/feature/test bot peek](https://github.com/devicons/devicon/pull/445) by @Thomas-Boi, @amacado.
+- [merge master back into development (after build)](https://github.com/devicons/devicon/pull/443) by @amacado.
+- [bot:build new icons, icomoon.json and devicon.css](https://github.com/devicons/devicon/pull/442) by @amacado.
+- [fix typo in github workflow](https://github.com/devicons/devicon/pull/441) by @amacado.
+- [fix typo in imgur output](https://github.com/devicons/devicon/pull/440) by @amacado.
+- [new icon: testingicon (original, plain) - TEST - DO NOT MERGE ](https://github.com/devicons/devicon/pull/421) by @dependabot[bot], @Thomas-Boi, @amacado, @rawdanowiczdev, @EnisMulic.
+- [new icon: testingicon (original, plain) - TEST - DO NOT MERGE](https://github.com/devicons/devicon/pull/420) by @dependabot[bot], @Thomas-Boi, @amacado, @rawdanowiczdev, @EnisMulic.
+- [new icon: testingicon (original, plain) - TEST](https://github.com/devicons/devicon/pull/419) by @dependabot[bot], @Thomas-Boi.
+- [Updated CONTRIBUTING](https://github.com/devicons/devicon/pull/416) by @Thomas-Boi.
