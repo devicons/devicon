@@ -379,7 +379,19 @@ We are running a Discord server. You can go here to talk, discuss, and more with
     <li>Push the branch <code>draft-release</code></li>
     <li>Manually trigger the workflow <code><a href="https://github.com/devicons/devicon/actions/workflows/build_icons.yml">build_icons.yml</a></code> (which has a <code>workflow_dispatch</code> event trigger) and select the branch <code>draft-release</code> as target branch. This will build a font version of all icons using icomoon and automatically creates a pull request to merge the build result back into <code>draft-release</code></li>
     <li>Review and approve the auto-create pull request created by the action of the step above</li>
-    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title (like "Build preparation for release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>) and add information about all new icons, fixes, features and enhancements in the description of the pull request. Take the commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).</li>
+    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title (like "Build preparation for release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).
+      <ul> 
+        <li>
+        Add information about all new icons, fixes, features and enhancements in the description of the pull request. 
+        </li>
+        <li>
+        Take the PRs/commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).
+        </li>
+        <li>
+        Rather than doing it manually, you can instead run <code>python ./.github/scripts/get_release_message.py $GITHUB_TOKEN</code> locally. Pass in your GitHub Personal Access Token for <code>$GITHUB_TOKEN</code> and you should see the messages. Next release, you can trigger this script in the GitHub Actions tab.
+        </li>
+      </ul>
+    </li>
     <li>Wait for review and approval of the pull request (you can perform a squash-merge)</li>
     <li>Once merged create a pull request with BASE <code>master</code> and HEAD <code>development</code>. Copy the description of the earlier pull request.</li>
     <li>Since it was already approved in the 'development' stage a maintainer is allowed to merge it (<b>DON'T</b> perform a squash-merge).</li>
