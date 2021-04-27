@@ -12,7 +12,7 @@ def main():
     }
 
     response = requests.get(queryPath, headers=headers)
-    if response.status_code != 200:
+    if not response:
         print(f"Can't query the GitHub API. Status code is {response.status_code}")
         return
 
