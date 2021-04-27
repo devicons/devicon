@@ -388,7 +388,7 @@ We are running a Discord server. You can go here to talk, discuss, and more with
         Take the PRs/commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).
         </li>
         <li>
-        Rather than doing it manually, you can instead run <code>python ./.github/scripts/get_release_message.py $GITHUB_TOKEN</code> locally. Pass in your GitHub Personal Access Token for <code>$GITHUB_TOKEN</code> and you should see the messages. Next release, you can trigger this script in the GitHub Actions tab.
+        Rather than doing it manually, you can instead run <code>python ./.github/scripts/get_release_message.py $GITHUB_TOKEN</code> locally. Pass in your GitHub Personal Access Token for <code>$GITHUB_TOKEN</code> and you should see the messages. You can also use the `workflow_dispatch` trigger in the GitHub Actions tab.
         </li>
       </ul>
     </li>
