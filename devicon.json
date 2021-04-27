@@ -210,7 +210,8 @@
     {
         "name": "arduino",
         "tags": [
-            "microcontroller"
+            "microcontroller",
+            "hardware"
         ],
         "versions": {
             "svg": [
