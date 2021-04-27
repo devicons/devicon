@@ -59,7 +59,7 @@ Find all the authors of a PR based on its commits.
 """
 def findAllAuthors(pullData, authHeader):
     response = requests.get(pullData["commits_url"], headers=authHeader)
-    if response.status_code != 200:
+    if not response:
         print(f"Can't query the GitHub API. Status code is {response.status_code}")
         print("Response is: ", response.text)
         return
