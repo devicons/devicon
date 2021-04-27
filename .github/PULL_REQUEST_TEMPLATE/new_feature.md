@@ -4,6 +4,6 @@
 
 ## Notes
 
-*List anything note-worthy here (potential issues, this needs merge to `master` before working etc....)*
+*List anything note-worthy here (potential issues, this needs merge to `master` before working, etc....).*
 
 *Don't forget to link any issues that this PR will solved.*
