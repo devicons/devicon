@@ -2371,6 +2371,26 @@
         ]
     },
     {
+        "name": "nixos",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#5277C3",
+        "aliases": []
+    },
+    {
         "name": "nodejs",
         "tags": [
             "javascript",
@@ -2487,6 +2507,24 @@
             ]
         },
         "color": "#F18803",
+        "aliases": []
+    },
+    {
+        "name": "perl",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#212177",
         "aliases": []
     },
     {
