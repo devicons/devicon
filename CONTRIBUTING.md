@@ -14,7 +14,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#example">Example</a></li>
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
-  <li><a href="#buildScript">Regarding the Build Script</a></li>
+  <li><a href="#buildScript">The Build Script: how it works and its quirks</a></li>
   <li><a href="#discordServer">Discord server</a></li>
   <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
 </ul>
@@ -115,14 +115,29 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <pre>
   <code>
     {
-        "name": string, // the official name of the technology. Must be lower case, no space and don't have the dash '-' character.
-        "tags": string[], // list of tags relating to the technology for search purpose
+        // the official name of the technology. Must be lower case, no space and don't have the dash '-' character.
+        "name": string, 
+
+        // list of tags relating to the technology for search purpose
+        "tags": string[], 
+
+        // keep tracks of the different versions that you have.
         "versions": {
-            "svg": VersionString[], // list the svgs that you have 
-            "font": VersionString[] // list the fonts acceptable versions that you have
+            // list the svgs that you have 
+            "svg": VersionString[], 
+
+            // list the fonts acceptable versions that you have
+            "font": VersionString[] 
         },
-        "color": string, // the main color of the logo. Only track 1 color
-        "aliases": AliasObj[] // keeps track of the aliases for the font versions ONLY
+
+        // the main color of the logo. Only track 1 color
+        "color": string, 
+
+        // keeps track of the aliases for the font versions ONLY
+        // see the <a href="#example">Example</a> section for more details
+        // NOTE: this attribute is not required from now on (see <a href='https://github.com/devicons/devicon/discussions/465'>this</a>)
+        // it is only being kept for backward compatibility
+        "aliases": AliasObj[] 
     }
   </code>
 </pre>
@@ -294,20 +309,49 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 </p>
 
 <hr>
-<h2 id='buildScript'>Regarding The Build Script</h2>
+<h2 id='buildScript'>The Build Script: how it works and its quirks</h2>
 <p>To make adding icons easier for repo maintainers, we rely on GitHub Actions, Python, Selenium, and Gulp to automate our tasks.</p>
 <p>So far, the tasks in the build script are:</p>
 <ul>
   <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a></li>
+  <li>Preview what an svg would look like as an icon using the upload svgs script (see <a href="https://github.com/devicons/devicon/pull/412">this</a></li>
   <li>Build, combine, and minify CSS files. For details, see <a href="https://github.com/devicons/devicon/pull/290">this</a></li>
-</ul>
-<p>There are also other tasks that we are automating, such as:</p>
-<ul>
+  <li>Send screenshots to Imgur and upload it to a PR. See <a href="https://github.com/devicons/devicon/pull/398">the PR for the Imgur action</a> and <a href="https://github.com/devicons/devicon/pull/481"> the PR for uploading the pictures to a PR</a>
   <li>Ensure code quality is up to standard</li>
-  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and take a screenshot to check that it looks good.
   <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
   <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
 </ul>
+
+<p>There are some quirks and bugs that the build scripts might run into. Listed below are the common ones and their solution</p>
+<ol>
+  <li><b>No connection could be made because the target machine actively refused it. (os error 10061)</b>
+    <ul>
+      <li>See <a href="https://github.com/devicons/devicon/runs/2292634069?check_suite_focus=true">this action</a> for an example.</li>
+      <li>Caused by Selenium being unable to connect to the Icomoon website. It is unknown why this happens but the hypothesis is Icomoon blocks Selenium's multiple connection request and treats them as bots. See <a href="https://github.com/devicons/devicon/pull/544#issuecomment-812147713">this</a>.</li>
+      <li>Solution: wait for a few minutes and rerun the script. Repeat until it works.</li>
+    </ul>
+  </li>
+  <li><b>SHA Integrity</b>
+    <ul>
+      <li>See <a href="https://github.com/devicons/devicon/runs/2310036084?check_suite_focus=true">this action</a> for an example.</li>
+      <li>Caused by the <code>package-lock.json</code>. Most likely the result of a dependabot update but not 100% sure.</li>
+      <li>Solution: Remove the <code>package-lock.json</code> and run `npm install` to generate a new file. Commit and push.</li>
+    </ul>
+  </li>
+  <li><b>Wrong PR Title</b>
+    <ul>
+      <li>The <code>bot-peek</code> script relies on the PR title to find the icon that was added in the PR. If the format doesn't match what is specified in <a href="#overview">Overview on Submitting Icon</a>, the bot will fail.</li>
+      <li>Solution: Ensure the name of the PR follows the convention.</li>
+    </ul>
+  </li>
+  <li><b>Peek bot fails when an icon is updated</b>
+    <ul>
+      <li>See <a href="https://github.com/devicons/devicon/pull/554">this PR</a> for an example.</li>
+      <li>The <code>bot-peek</code> script compares the <code>devicon.json</code> and <code>icomoon.json</code> to limit the icon uploading process. An update in the repo won't change anything in the <code>devicon.json</code> and <code>icomoon.json</code> so the script would report that nothing is found.</li>
+      <li>Solution: Follow the steps laid out <a href="https://github.com/devicons/devicon/pull/554#issuecomment-816860577">here</a></li>
+    </ul>
+  </li>
+</ol>
 
 <h2 id="discordServer">Discord server</h2>
 <p>
@@ -335,8 +379,8 @@ We are running a Discord server. You can go here to talk, discuss, and more with
     <li>Push the branch <code>draft-release</code></li>
     <li>Manually trigger the workflow <code><a href="https://github.com/devicons/devicon/actions/workflows/build_icons.yml">build_icons.yml</a></code> (which has a <code>workflow_dispatch</code> event trigger) and select the branch <code>draft-release</code> as target branch. This will build a font version of all icons using icomoon and automatically creates a pull request to merge the build result back into <code>draft-release</code></li>
     <li>Review and approve the auto-create pull request created by the action of the step above</li>
-    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title and add information about all new icons, fixes, features and enhancements in the description of the pull request. Take the commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).</li>
-    <li>Wait for review and approval of the pull request (<b>DON'T</b> perform a squash-merge)</li>
+    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title (like "Build preparation for release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>) and add information about all new icons, fixes, features and enhancements in the description of the pull request. Take the commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).</li>
+    <li>Wait for review and approval of the pull request (you can perform a squash-merge)</li>
     <li>Once merged create a pull request with BASE <code>master</code> and HEAD <code>development</code>. Copy the description of the earlier pull request.</li>
     <li>Since it was already approved in the 'development' stage a maintainer is allowed to merge it (<b>DON'T</b> perform a squash-merge).</li>
     <li>Create a <a href="https://github.com/devicons/devicon/releases/new">new release</a> using v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i> as tag and release title. Use the earlier created description as description of the release.</li>
