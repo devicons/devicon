@@ -178,7 +178,11 @@
     },
     {
         "name": "appwrite",
-        "tags": ["cloud", "platform", "server"],
+        "tags": [
+            "cloud", 
+            "platform", 
+            "server"
+        ],
         "versions": {
           "svg": [
             "original",
@@ -202,6 +206,27 @@
                 "alias": "original-wordmark"
             }
         ]
+    },
+    {
+        "name": "arduino",
+        "tags": [
+            "microcontroller",
+            "hardware"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00979d",
+        "aliases": []
     },
     {
         "name": "atom",
