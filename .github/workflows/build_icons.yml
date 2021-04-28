@@ -51,7 +51,7 @@ jobs:
 
             I'm Devicon's Build Bot and I just built some new font files and devicon.min.css file.
 
-            Here are all the files that were built into icons:
+            Here are all the files that were built into icons (the new ones are those without highlight):
 
             ![Files Built]({0})
 
@@ -59,15 +59,13 @@ jobs:
             -The icon content
             -The aliases
             -The colored classes
-            -The default fallback font
 
             More information can be found in the GitHub Action logs for this workflow.
 
             Adios, 
             Build Bot :sunglasses:
         with:
-          branch: 'master-build-result'
-          base: 'master'
+          branch: 'bot/build-result'
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
           body: ${{ format(env.MESSAGE, fromJSON(steps.imgur_step.outputs.imgur_urls)[0] ) }}
