@@ -12,6 +12,11 @@ jobs:
         with: 
           python-version: 3.8
 
+      - name: Install dependencies 
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ./.github/scripts/requirements.txt
+
       - name: Run the get_release_message.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
