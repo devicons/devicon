@@ -5,6 +5,13 @@ jobs:
     name: Get Fonts From Icomoon
     runs-on: ubuntu-18.04
     steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python v3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
       - name: Run the get_release_message.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
