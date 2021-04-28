@@ -320,7 +320,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>Ensure code quality is up to standard</li>
   <li>Comment on the PR so maintainers don't have to manually upload icon result. Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
   <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
-  <li>Creating a list of features that was added since last release. Note that this is limited to the last 100 PRs for now.</li>
+  <li>Creating a list of features that was added since last release. See <a href="https://github.com/devicons/devicon/discussions/574">this discussion</a> for inception and limitations. </li>
 </ul>
 
 <p>There are some bugs that the build scripts might run into. Listed below are the common ones and their solutions</p>
