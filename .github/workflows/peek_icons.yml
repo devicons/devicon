@@ -44,6 +44,13 @@ jobs:
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
           ./devicon.json ./icons ./ --headless --pr_title "%PR_TITLE%"
 
+      - name: Upload the err messages (created by icomoon_peek.py)
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: err_messages
+          path: ./err_messages.txt
+
       - name: Upload screenshots for comments
         uses: actions/upload-artifact@v2
         if: success()
