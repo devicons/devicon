@@ -320,9 +320,10 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li>Ensure code quality is up to standard</li>
   <li>Comment on the PR so maintainers don't have to manually upload icon result. Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
   <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
+  <li>Creating a list of features that was added since last release. Note that this is limited to the last 100 PRs for now.</li>
 </ul>
 
-<p>There are some quirks and bugs that the build scripts might run into. Listed below are the common ones and their solutions</p>
+<p>There are some bugs that the build scripts might run into. Listed below are the common ones and their solutions</p>
 <ol>
   <li><b>No connection could be made because the target machine actively refused it. (os error 10061)</b>
     <ul>
@@ -349,6 +350,13 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
       <li>See <a href="https://github.com/devicons/devicon/pull/554">this PR</a> for an example.</li>
       <li>The <code>bot-peek</code> script compares the <code>devicon.json</code> and <code>icomoon.json</code> to limit the icon uploading process. An update in the repo won't change anything in the <code>devicon.json</code> and <code>icomoon.json</code> so the script would report that nothing is found.</li>
       <li>Solution: Follow the steps laid out <a href="https://github.com/devicons/devicon/pull/554#issuecomment-816860577">here</a></li>
+    </ul>
+  </li>
+  <li><b>Icon created by Icomoon contains strange lines that aren't in the SVG</b>
+    <ul>
+      <li>See <a href="https://github.com/devicons/devicon/pull/532">this PR</a>'s peek result.</li>
+      <li>This is caused by a bug in Icomoon's parser (see <a href="https://github.com/devicons/devicon/pull/532#issuecomment-827180766">this</a>).</li>
+      <li>Solution: Luckily this is an extremely rare case. Try remake the svg in a different way (using different paths/shapes) and test using Icomoon.</li>
     </ul>
   </li>
 </ol>

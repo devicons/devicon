@@ -13,7 +13,7 @@ def main():
 
     response = requests.get(queryPath, headers=headers)
     if not response:
-        print(f"Can't query the GitHub API. Status code is {response.status_code}")
+        print(f"Can't query the GitHub API. Status code is {response.status_code}. Message is {response.text}")
         return
 
     data = response.json()

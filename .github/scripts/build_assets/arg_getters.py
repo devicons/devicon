@@ -72,7 +72,7 @@ def get_check_svgs_monthly_args():
 
 def get_release_message_args():
     """
-    Get the commandline arguments for the check_svgs_monthly.py.
+    Get the commandline arguments for get_release_message.py.
     """
     parser = ArgumentParser(description="Create a text containing the icons and features added since last release.")
     parser.add_argument("token",
