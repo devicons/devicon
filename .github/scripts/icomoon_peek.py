@@ -20,13 +20,7 @@ def main():
             raise Exception("No files need to be uploaded. Ending script...")
 
         # get only the icon object that has the name matching the pr title
-        err_messages = []
-        filtered_icon = find_object_added_in_this_pr(new_icons, args.pr_title, err_messages)
-
-        if filtered_icon is None:
-            # should have 1 error message if filtered_icon is None
-            raise Exception(err_messages[0])
-
+        filtered_icon = find_object_added_in_this_pr(new_icons, args.pr_title)
         print("Icon being checked:", filtered_icon, sep = "\n", end='\n\n')
 
         runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
@@ -44,15 +38,14 @@ def main():
         runner.close() 
 
 
-def find_object_added_in_this_pr(icons: List[dict], pr_title: str, err_messages: List[str]):
+def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
     """
     Find the icon name from the PR title. 
     :param icons, a list of the font objects found in the devicon.json.
     :pr_title, the title of the PR that this workflow was called on.
-    :param err_messages, the error messages that will be displayed
     :return a dictionary with the "name"
     entry's value matching the name in the pr_title.
-    If none can be found, return None.
+    :raise If no object can be found, raise an Exception.
     """
     try:
         pattern = re.compile(r"(?<=^new icon: )\w+ (?=\(.+\))", re.I)
@@ -61,11 +54,9 @@ def find_object_added_in_this_pr(icons: List[dict], pr_title: str, err_messages:
         check_devicon_object(icon, icon_name)
         return icon
     except IndexError:  # there are no match in the findall()
-        err_messages.append("Couldn't find an icon matching the name in the PR title.")
-        return None  
+        raise Exception("Couldn't find an icon matching the name in the PR title.")
     except ValueError as e:
-        err_messages.append(str(e))
-        return None
+        raise Exception(str(e))
 
 
 def check_devicon_object(icon: dict, icon_name: str):
