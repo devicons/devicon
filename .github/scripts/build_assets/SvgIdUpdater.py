@@ -3,6 +3,11 @@ from pathlib import Path
 
 
 class SvgIdUpdater:
+    """
+    Update an svg's id reference so it's unique among other
+    svg files in this repo.
+    """
+
     # look for anything that is between ` id="` and `"`
     id_declare_pattern = r"(?<= id=(\"|')).+?(?=(\"|'))"
 
@@ -13,7 +18,14 @@ class SvgIdUpdater:
     id_pattern = f"{id_declare_pattern}|{id_use_pattern}"
 
     def __init__(self):
+        """
+        The id generator that we will use throughout the process.
+        """
         self.id_generator = None
+
+        """
+        Tracks the ids that we are swapping out.
+        """
         self.old_to_new_ids_dict = None
 
 
@@ -21,7 +33,6 @@ class SvgIdUpdater:
         """
         Update the ids inside an svg file.
         """
-        # reset the data for each file
         self.reset(filepath.stem)
 
         # can switch to other patterns if needed
@@ -39,16 +50,23 @@ class SvgIdUpdater:
             #     print("Finished substituting. Writing to " + new_file.name)
                 
             # overwrite same file
-            file.write(new_content)  # overwrite
+            file.write(new_content)  
             print("Finished substituting id.")
 
 
     def reset(self, filename: str):
+        """
+        Reset the instance variables for a new file.
+        """
         self.id_generator = self.id_generator_setup(filename)
         self.old_to_new_ids_dict = {}
 
 
     def id_generator_setup(self, filename: str):
+        """
+        Set up the id generator with the new filename.
+        :param filename - the file name without an extension/suffix.
+        """
         num = 0
         while True:
             yield f"{filename}-{num}"
@@ -56,6 +74,10 @@ class SvgIdUpdater:
 
 
     def sub_id(self, match):
+        """
+        A 'callback' function that will return the appropriate
+        new id for an id that was found.
+        """
         old = match.group()
         try:
             # see if we already have an id for this
