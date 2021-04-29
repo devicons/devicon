@@ -33,13 +33,14 @@ class SvgIdUpdater:
             new_content = search_regexp.sub(self.sub_id, file.read())
 
             # write to a new file
-            new_path = filepath.with_name(filepath.stem + "-written" + filepath.suffix)
-            with open(new_path, "w") as new_file:
-                new_file.write(new_content)
-                print("Finished substituting. Writing to " + new_file.name)
+            # new_path = filepath.with_name(filepath.stem + "-written" + filepath.suffix)
+            # with open(new_path, "w") as new_file:
+            #     new_file.write(new_content)
+            #     print("Finished substituting. Writing to " + new_file.name)
                 
             # overwrite same file
-            # file.write(new_content)  # overwrite
+            file.write(new_content)  # overwrite
+            print("Finished substituting id.")
 
 
     def reset(self, filename: str):
