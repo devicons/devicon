@@ -68,8 +68,11 @@
 <sub>
     All product names, logos, and brands are property of their respective owners. All company, product and service 
     names used in this website are for identification purposes only. Use of these names, logos, and brands does not 
-    imply endorsement.
+    imply endorsement. Usage of these logos should be done according to the company/brand/service's brand policy.
 </sub>
+<p>
+    Thank you to our contributors and the <a href="https://icomoon.io/#home">IcoMoon app</a>. Devicon would not be possible without you.
+</p>
 
 
 <h2 id="getting-started">Getting started</h2>
