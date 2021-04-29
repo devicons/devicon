@@ -11,34 +11,28 @@ from build_assets import util
 
 
 def main():
-    args = arg_getters.get_selenium_runner_args(True)
-    new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
-
-    if len(new_icons) == 0:
-        sys.exit("No files need to be uploaded. Ending script...")
-
-    # get only the icon object that has the name matching the pr title
-    filtered_icon = find_object_added_in_this_pr(new_icons, args.pr_title)
-
-    if filtered_icon == None:
-        message = "No proper icon found matching the icon name in the PR's title.\n" \
-        "Ensure that a new icon entry is properly added in the devicon.json and the PR title matches the convention here: \n" \
-        "https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview\n" \
-        "Ending script...\n"
-        sys.exit(message)
-
-    print("Icon being checked:", filtered_icon, sep = "\n", end='\n\n')
-
     runner = None
     try:
+        args = arg_getters.get_selenium_runner_args(True)
+        new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
+
+        if len(new_icons) == 0:
+            raise Exception("No files need to be uploaded. Ending script...")
+
+        # get only the icon object that has the name matching the pr title
+        filtered_icon = find_object_added_in_this_pr(new_icons, args.pr_title)
+        print("Icon being checked:", filtered_icon, sep = "\n", end='\n\n')
+
         runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
         svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, True)
         screenshot_folder = filehandler.create_screenshot_folder("./") 
         runner.upload_svgs(svgs, screenshot_folder)
         print("Task completed.")
-    except TimeoutException as e:
-        util.exit_with_err("Selenium Time Out Error: \n" + str(e))
+
+        # no errors, do this so upload-artifact won't fail
+        filehandler.write_to_file("./err_messages.txt", "0")
     except Exception as e:
+        filehandler.write_to_file("./err_messages.txt", str(e))
         util.exit_with_err(e)
     finally:
         runner.close() 
@@ -51,7 +45,7 @@ def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
     :pr_title, the title of the PR that this workflow was called on.
     :return a dictionary with the "name"
     entry's value matching the name in the pr_title.
-    If none can be found, return None.
+    :raise If no object can be found, raise an Exception.
     """
     try:
         pattern = re.compile(r"(?<=^new icon: )\w+ (?=\(.+\))", re.I)
@@ -60,10 +54,9 @@ def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
         check_devicon_object(icon, icon_name)
         return icon
     except IndexError:  # there are no match in the findall()
-        return None  
+        raise Exception("Couldn't find an icon matching the name in the PR title.")
     except ValueError as e:
-        print(e)
-        return None
+        raise Exception(str(e))
 
 
 def check_devicon_object(icon: dict, icon_name: str):
@@ -73,52 +66,52 @@ def check_devicon_object(icon: dict, icon_name: str):
     """
     err_msgs = []
     try:
-        if type(icon["name"]) != icon_name:
-            err_msgs.append("'name' value is not: " + icon_name)
+        if icon["name"] != icon_name:
+            err_msgs.append("- 'name' value is not: " + icon_name)
     except KeyError:
-        err_msgs.append("Missing key: 'name'.")
+        err_msgs.append("- missing key: 'name'.")
 
     try:
         for tag in icon["tags"]:
             if type(tag) != str:
                 raise TypeError()
     except TypeError:
-        err_msgs.append("'tags' must be an array of strings, not: " + str(icon["tags"]))
+        err_msgs.append("- 'tags' must be an array of strings, not: " + str(icon["tags"]))
     except KeyError:
-        err_msgs.append("Missing key: 'tags'.")
+        err_msgs.append("- missing key: 'tags'.")
 
     try:
         if type(icon["versions"]) != dict:
-            err_msgs.append("'versions' must be an object.")
+            err_msgs.append("- 'versions' must be an object.")
     except KeyError:
-        err_msgs.append("Missing key: 'versions'.")
+        err_msgs.append("- missing key: 'versions'.")
 
     try:
         if type(icon["versions"]["svg"]) != list or len(icon["versions"]["svg"]) == 0:
-            err_msgs.append("Must contain at least 1 svg version in a list.")
+            err_msgs.append("- must contain at least 1 svg version in a list.")
     except KeyError:
-        err_msgs.append("Missing key: 'svg' in 'versions'.")
+        err_msgs.append("- missing key: 'svg' in 'versions'.")
     
     try:
         if type(icon["versions"]["font"]) != list or len(icon["versions"]["svg"]) == 0:
-            err_msgs.append("Must contain at least 1 font version in a list.")
+            err_msgs.append("- must contain at least 1 font version in a list.")
     except KeyError:
-        err_msgs.append("Missing key: 'font' in 'versions'.")
+        err_msgs.append("- missing key: 'font' in 'versions'.")
 
     try:
         if type(icon["color"]) != str or "#" not in icon["color"]:
-            err_msgs.append("'color' must be a string in the format '#abcdef'")
+            err_msgs.append("- 'color' must be a string in the format '#abcdef'")
     except KeyError:
-        err_msgs.append("Missing key: 'color'.")
+        err_msgs.append("- missing key: 'color'.")
 
     try:
         if type(icon["aliases"]) != list:
-            err_msgs.append("'aliases' must be an array.")
+            err_msgs.append("- 'aliases' must be an array.")
     except KeyError:
-        err_msgs.append("Missing key: 'aliases'.")
+        err_msgs.append("- missing key: 'aliases'.")
     
     if len(err_msgs) > 0:
-        message = f"Error found in 'devicon.json' for '{icon_name}' entry: \n" + "\n".join(err_msgs) + "\n"
+        message = "Error found in 'devicon.json' for '{}' entry: \n{}".format(icon_name, "\n".join(err_msgs))
         raise ValueError(message)
     return ""
 
