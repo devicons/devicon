@@ -46,7 +46,7 @@ jobs:
 
       - name: Upload the err messages (created by icomoon_peek.py)
         uses: actions/upload-artifact@v2
-        if: success()
+        if: always()
         with:
           name: err_messages
           path: ./err_messages.txt
