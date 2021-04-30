@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <title>TensorFlow icon</title>
-  <path d="M 4.196 4.117 L 10.969 0.108 L 10.969 16.539 L 8.263 14.911 L 8.263 5.314 L 4.186 7.754 L 4.196 4.118 Z M 18.358 7.754 L 18.349 4.118 L 11.576 0.108 L 11.576 16.539 L 14.283 14.911 L 14.283 10.288 L 16.327 11.513 L 16.314 8.351 L 14.283 7.148 L 14.283 5.314 L 18.359 7.754 Z" style="fill-opacity: 0; stroke: rgb(0, 0, 0); stroke-linecap: square; stroke-miterlimit: 0; stroke-dashoffset: -1px; vector-effect: non-scaling-stroke; stroke-width: 5px; stroke-linejoin: round;"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128pt" height="128pt" viewBox="0 0 128 128" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:0;" d="M 4.196045 4.116943 L 10.96875 0.107666 L 10.96875 16.538818 L 8.263184 14.910645 L 8.263184 5.313721 L 4.185791 7.75415 L 4.196045 4.117676 Z M 18.358154 7.75415 L 18.349365 4.117676 L 11.575928 0.107666 L 11.575928 16.538818 L 14.282959 14.910645 L 14.282959 10.28833 L 16.327148 11.512939 L 16.313965 8.351074 L 14.282959 7.147705 L 14.282959 5.313721 L 18.358887 7.75415 Z M 18.358154 7.75415 " transform="matrix(5.333333,0,0,5.333333,0,0)"/>
+</g>
 </svg>
