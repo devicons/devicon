@@ -3159,6 +3159,34 @@
         ]
     },
     {
+        "name": "tensorflow",
+        "tags": [
+            "library",
+            "machine-learning",
+            "deep-learning"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#ff6f00"
+        "aliases": []
+    },
+    {
         "name": "tomcat",
         "tags": [
             "server"
