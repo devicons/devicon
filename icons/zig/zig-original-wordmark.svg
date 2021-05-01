@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg46"
+   sodipodi:docname="zig-original-wordmark-viewbox.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+  <metadata
+     id="metadata52">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs50" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1061"
+     id="namedview48"
+     showgrid="false"
+     inkscape:zoom="3.1203622"
+     inkscape:cx="56.747952"
+     inkscape:cy="64.876041"
+     inkscape:window-x="0"
+     inkscape:window-y="19"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg46" />
+  <g
+     fill="#f7a41d"
+     id="g28"
+     transform="matrix(0.32315072,0,0,0.32315072,0,41.3795)">
+    <path
+       d="M 46,22 28,44 19,30 Z"
+       id="path2" />
+    <path
+       shape-rendering="crispEdges"
+       d="M 46,22 33,33 28,44 h -6 v 51 h 9 l -11,5 -8,17 H 0 V 22 Z"
+       id="path4" />
+    <path
+       d="M 31,95 12,117 4,106 Z"
+       id="path6" />
+    <g
+       id="g18">
+      <path
+         d="m 56,22 6,14 -25,8 z"
+         id="path8" />
+      <path
+         shape-rendering="crispEdges"
+         d="m 56,22 h 55 V 44 H 37 L 56,32 Z"
+         id="path10" />
+      <path
+         d="M 116,95 97,117 90,104 Z"
+         id="path12" />
+      <path
+         shape-rendering="crispEdges"
+         d="m 116,95 -16,9 -3,13 H 42 V 95 Z"
+         id="path14" />
+      <path
+         d="M 150,0 52,117 3,140 101,22 Z"
+         id="path16" />
+    </g>
+    <g
+       id="g26">
+      <path
+         d="m 141,22 -1,18 -18,5 z"
+         id="path20" />
+      <path
+         shape-rendering="crispEdges"
+         d="m 153,22 v 95 h -47 l 14,-12 5,-10 h 6 V 45 h -9 l 10,-9 9,-14 z"
+         id="path22" />
+      <path
+         d="m 125,95 5,15 -24,7 z"
+         id="path24" />
+    </g>
+  </g>
+  <g
+     fill="#ffffff"
+     id="g44"
+     transform="matrix(0.32315072,0,0,0.32315072,0,41.3795)">
+    <path
+       shape-rendering="crispEdges"
+       d="m 260,22 v 15 l -31,3 H 177 V 22 Z"
+       id="path30" />
+    <path
+       d="m 260,37 -53,62 v 4 h -31 l 53,-63 v -3 z"
+       id="path32" />
+    <path
+       shape-rendering="crispEdges"
+       d="m 261,99 v 18 h -85 v -14 l 30,-4 z m 11,-77 h 22 v 95 h -22 z"
+       id="path34" />
+    <g
+       id="g42">
+      <path
+         shape-rendering="crispEdges"
+         d="m 394,67 v 39 H 376 V 81 L 360,70 346,67 Z"
+         id="path36" />
+      <path
+         d="M 360,68 376,81 346,67 Z"
+         id="path38" />
+      <path
+         d="m 394,106 c -10.2,7.3 -24,12 -37.7,12 -29,0 -51.1,-20.8 -51.1,-48.3 0,-27.3 22.5,-48.1 52,-48.1 14.3,0 29.2,5.5 38.9,14 l -13,15 c -7.1,-6.3 -16.8,-10 -25.9,-10 -17,0 -30.2,12.9 -30.2,29.5 0,16.8 13.3,29.6 30.3,29.6 5.7,0 12.8,-2.3 19,-5.5 z"
+         id="path40" />
+    </g>
+  </g>
+</svg>
