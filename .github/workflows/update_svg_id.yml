@@ -1,0 +1,27 @@
+name: Update the ID within an svg
+on:
+  pull_request:
+      types: [labeled]
+jobs:
+  peek:
+    # four outcomes: successful check and upload,
+    # unsuccessful check (fail due to user),
+    # fail due to system, skipped
+    name: Update the ID within an svg
+    if: github.event.label.name == 'bot:update-id'
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python v3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
+      - name: Get Changed Files and generate files_added.json & files_modified.json
+        uses: lots0logs/gh-action-get-changed-files@2.1.4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run the update_id.py
+        run: python ./.github/scripts/update_svg_id.py $HOME/files_added.json $HOME/files_modified.json

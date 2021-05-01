@@ -28,6 +28,13 @@ class SvgIdUpdater:
         """
         self.old_to_new_ids_dict = None
 
+        """
+        The search reg exp that we will use to update the id.
+        Can switch to other patterns if needed.
+        """
+        self.search_regexp = re.compile(SvgIdUpdater.id_pattern)
+
+
 
     def update_id(self, filepath: Path):
         """
@@ -35,22 +42,18 @@ class SvgIdUpdater:
         """
         self.reset(filepath.stem)
 
-        # can switch to other patterns if needed
-        search_regexp = re.compile(SvgIdUpdater.id_pattern)
-            
         with open(filepath, "r+") as file:
             print("Opening " + file.name)
+            file_content = file.read()
 
-            new_content = search_regexp.sub(self.sub_id, file.read())
+            # stop early to save time from subbing and writing back to file
+            if self.search_regexp.search(file_content) is None:
+                print("No ids found. Ending function.")
+                return
 
-            # write to a new file
-            # new_path = filepath.with_name(filepath.stem + "-written" + filepath.suffix)
-            # with open(new_path, "w") as new_file:
-            #     new_file.write(new_content)
-            #     print("Finished substituting. Writing to " + new_file.name)
-                
-            # overwrite same file
-            file.write(new_content)  
+            file.seek(0)
+            file.write(self.search_regexp.sub(self.sub_id, file_content))  
+            file.truncate()
             print("Finished substituting id.")
 
 
@@ -87,5 +90,4 @@ class SvgIdUpdater:
             new = next(self.id_generator)
             self.old_to_new_ids_dict[old] = new
         finally:
-            print("Old Id:", old, ". New Id:", new)
             return new

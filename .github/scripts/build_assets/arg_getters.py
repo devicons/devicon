@@ -64,3 +64,17 @@ def get_release_message_args():
                         help="The GitHub token to access the GitHub REST API.",
                         type=str)
     return parser.parse_args()
+
+def get_update_svg_id_args():
+    """
+    Get the commandline arguments for the update_svg_id.py.
+    """
+    parser = ArgumentParser(description="Make all ids within an svg file unique values within this whole repo.")
+    parser.add_argument("files_added_json_path",
+                        help="The path to the files_added.json created by the gh-action-get-changed-files@2.1.4",
+                        action=PathResolverAction)
+
+    parser.add_argument("files_modified_json_path",
+                        help="The path to the files_modified.json created by the gh-action-get-changed-files@2.1.4",
+                        action=PathResolverAction)
+    return parser.parse_args()
