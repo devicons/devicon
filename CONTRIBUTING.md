@@ -6,12 +6,12 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <h2>Table of Content</h2>
 <ul>
   <li><a href="#terms">Terms</a></li>
-  <li><a href="#overview">Overview on Submitting Icon</a></li>
+  <li><a href="#overview">Overview on Submitting Icon (start here if new)</a></li>
   <li><a href="#versionNaming">Naming Conventions</a></li>
   <li><a href="#svgStandards">SVG Standards</a></li>
   <li><a href="#orgGuidelines">Organizational Guidelines</a></li>
   <li><a href="#updateDevicon">Updating the <code>devicon.json</code></a></li>
-  <li><a href="#example">Example</a></li>
+  <li><a href="#example">Example of Submitting An Icon</a></li>
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
   <li><a href="#buildScript">The Build Script: how it works and its quirks</a></li>
@@ -33,14 +33,13 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <h2 id="overview">Overview on Submitting Icons</h2>
 <p>Here is what you have to do to submit your icons to the repo.</p>
 <ol>
-  <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have</li>
-  <li>Put the svgs of each Icon into its own folders in <code>/icons</code> </li>
+  <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have. Follow the <a href="#svgStandards">convention</a> listed.</li>
+  <li>Put the svgs of each Icon into its own <a href="#orgGuidelines">folders</a> in <code>/icons</code></li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
   <li>Create a separated pull request (PR) towards the <code>develop</code> branch for each Icon.</li>
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
-  <li><i>Optional</i>: Add images of the new svg(s) to the description of the pull request. This would help speed up the review process </li>
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
-  <li>A bot will check your SVGs. If there are any errors, please fix them as instructed.</li>
+  <li>Some bots will check your SVGs. If there are any errors, please fix them as instructed.</li>
   <li>Wait for a maintainer to review your changes. They will run a script to check your icons.</li>
   <li>If there are no issues, they will accept your pull request and merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
 </ol>
@@ -54,14 +53,30 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Microsoft SQL Server becomes <code>microsoftsqlserver</code></li>
 </ul>
 
-<p>Each icon/svg can come in different versions. So far, we have:</p>
+<p>Each icon/svg can come in different versions:</p>
 <ul>
-  <li><b>original</b>: the original logo. Can contain multiple colors. <a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original.svg"> Example </a> </li>
-  <li><b>original-wordmark</b>: similar to the above but must contain the name of the technology.<a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"> Example </a></li>
-  <li><b>plain</b>: a one-color version of the original logo.<a href="https://github.com/devicons/devicon/blob/master/icons/android/android-plain.svg"> Example </a></li>
-  <li><b>plain-wordmark</b>: a one-color version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/android/android-plain-wordmark.svg"> Example </a></li>
-  <li><b>line</b>: a one-color, line version of the original logo.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line.svg"> Example </a></li>
-  <li><b>line-wordmark</b>: a one-color, line version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line-wordmark.svg"> Example </a></li>
+  <li><b>original</b>: the original logo. Can contain multiple colors. Example:<br>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/gimp/gimp-original.svg' height='100px' width='100px' /> <code>gimp-original.svg</code>
+
+  <li style='margin-top: 3em'><b>original-wordmark</b>: similar to the above but must contain the name of the technology. Example: <br>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/gimp/gimp-original-wordmark.svg' height='100px' width='100px' /> <code>gimp-original-wordmark.svg</code>
+  </li>
+
+  <li style='margin-top: 3em'><b>plain</b>: a one-color version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. Example: <br>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/gimp/gimp-plain.svg' height='100px' width='100px' /> <code>gimp-plain-wordmark.svg</code>
+  </li>
+
+  <li style='margin-top: 3em'><b>plain-wordmark</b>: a one-color version of the original logo but with wordmark. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. Example: <br>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/gimp/gimp-plain-wordmark.svg' height='100px' width='100px' /> <code>gimp-plain-wordmark.svg</code>
+  </li>
+
+  <li style='margin-top: 3em'><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. Example: <br>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line.svg' height='100px' width='100px' /> <code>apache-line.svg</code>
+  </li>
+
+  <li style='margin-top: 3em'><b>line-wordmark</b>: a one-color, line version of the original logo but with wordmark. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. Example: <br>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line-wordmark.svg' height='100px' width='100px' /> <code>apache-line-wordmark.svg</code>
+  </li>
 </ul>
 <p> Notes <p>
 <ul>  
@@ -72,10 +87,14 @@ First of all, thanks for taking the time to contribute! This project can only gr
     The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font.
   </li>
   <li>
-    The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
+    The <b>original</b> svg version do not need to be simple and can contain numerous colors/gradients. However, if it's intended to be made into an icon, keep it simple.
   </li>
   <li>
-    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note: this only applies to font icon versions only, not the SVG versions.
+    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. 
+      <ul>
+        <li>This only applies to font icon versions only, not the SVG versions.</li>
+        <li>Aliases are no longer mandated. If you are wondering which name to use, just pick <code>original</code></li>
+      </ul>
   </li>
 </ul>
 
@@ -84,23 +103,22 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
 <ul>
   <li>The background must be transparent.</li>
+  <li>The icon is centered within the file.</li>
   <li>The svg name follows this convention: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
-  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. We will strip the color when turning it into icons so they can have any color.
+  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. The color will be removed when being turned into icons so the <code>.svg</code> can have any color.
   </li>
-  <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
-  <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
   <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the svg.</li>
+  <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
   <li>The <code>svg</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
-  <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
+  <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
+  <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. This is to prevent class name clashing when using inline svg. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
 </ul>
 
 <hr>
 <h2 id='orgGuidelines'>Organizational Guidelines</h2>
 <ul>
-  <li>Each icon has its own folder located in the <code>icons</code> folder</li>
-  <li>Each folder <i>may</i> contain one <code>.eps</code> file</li> (optional)
-  <li>The <code>.eps</code> file should contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
-  <li>Each folder must contain all the <code>.svg</code> files for the Icon</li>
+  <li>Each icon has its own folder located in the <code>icons</code> folder. All the <code>.svg</code> files for the Icon must go in the same folder</li>
+  <li><i>Optional</i>: Each folder <i>may</i> contain one <code>.eps</code> file. The <code>.eps</code> file should contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
 </ul>
 
 <hr>
@@ -165,7 +183,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 </pre>
 <hr>
 
-<h2 id='example'>Example </h2>
+<h2 id='example'>Example of Submitting An Icon</h2>
 <p>
 As an example, let's assume you have created the svgs for Redhat and Amazon Web Services logos.
 </p>
@@ -237,6 +255,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                     "base": "original", // here is the base version that we will upload to Icomoon
                     "alias": "plain" // this is its alias. Our script will create a reference so users can search using "original" or "plain" for this icon
                     // note that you don't provide aliases for the svg version. If "original" can't be made into a font, there's no need to provide it with a plain alias
+                    // note that this is now optional. You do not need to create aliases from now on. The attribute needs to stay though.
                 }
               ]
             }
@@ -247,9 +266,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   </li>
   <li>Create a separate pull request (PR) for each Icon.
     <ul>
-      <li>This means you would have to create two PRs</li>
-      <li>For Amazon Web Services, the branch name would be icons/amazonwebservices. </li>
-      <li>For Redhat, the branch name would be icons/redhat. </li>
+      <li>This means you would have to create two PRs for each Icon.</li>
     </ul>
   </li>
   <li>
