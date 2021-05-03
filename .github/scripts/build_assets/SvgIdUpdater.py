@@ -39,6 +39,7 @@ class SvgIdUpdater:
     def update_id(self, filepath: Path):
         """
         Update the ids inside an svg file.
+        :return True if the file's id was changed. Else returns False.
         """
         self.reset(filepath.stem)
 
@@ -49,12 +50,13 @@ class SvgIdUpdater:
             # stop early to save time from subbing and writing back to file
             if self.search_regexp.search(file_content) is None:
                 print("No ids found. Ending function.")
-                return
+                return False
 
             file.seek(0)
             file.write(self.search_regexp.sub(self.sub_id, file_content))  
             file.truncate()
             print("Finished substituting id.")
+            return True
 
 
     def reset(self, filename: str):

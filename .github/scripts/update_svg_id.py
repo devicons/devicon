@@ -9,16 +9,16 @@ def main():
     # get all files
     # run the script for each file
     id_updater = SvgIdUpdater()
-    id_updater.update_id(Path("./icons/elixir/elixir-test.svg"))
-    id_updater.update_id(Path("./icons/ruby/ruby-test.svg"))
-
     # update all svgs in the repo
-    # print("Start iterating through folder.")
-    # icons_folder_path = Path("./icons")
-    # for icon_folder in icons_folder_path.iterdir():
-    #     for file in icon_folder.iterdir():
-    #         if file.suffix == ".svg":
-    #             id_updater.update_id(file) 
+    print("Start iterating through folder.")
+    icons_folder_path = Path("./icons")
+    updated_files = []
+    for icon_folder in icons_folder_path.iterdir():
+        for file in icon_folder.iterdir():
+            if file.suffix == ".svg":
+                if id_updater.update_id(file):
+                    updated_files.append(file.name)
+    print("Updated the following files: \n\n", "\n".join(updated_files))
 
 
     # update only the svgs added 
