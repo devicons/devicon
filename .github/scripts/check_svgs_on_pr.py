@@ -92,7 +92,7 @@ def check_svgs(svg_file_paths: List[Path]):
             if len(err_msg) > 1:
                 err_msgs.append("\n".join(err_msg))
         except et.ParseError as e:
-            raise Exception(f"SVG Error in file: {svg_path}. Full Error: \n" + e)
+            raise Exception(f"SVG Error in file: {svg_path}. Full Error: \n" + str(e))
 
     if len(err_msgs) > 0:
         return "\n\n".join(err_msgs)
