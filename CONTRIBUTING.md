@@ -103,7 +103,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
 <ul>
   <li>The background must be transparent.</li>
-  <li>The icon is centered within the file.</li>
+  <li>The icon is centered horizontally and vertically within the <code>viewBox</code>.</li>
   <li>The svg name follows this convention: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
   <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. The color will be removed when being turned into icons so the <code>.svg</code> can have any color.
   </li>
