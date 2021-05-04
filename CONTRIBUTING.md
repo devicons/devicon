@@ -52,33 +52,48 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Amazon Web Services becomes <code>amazonwebservices</code></li>
   <li>Microsoft SQL Server becomes <code>microsoftsqlserver</code></li>
 </ul>
+<br>
 
 <p>Each icon/svg can come in different versions:</p>
-<ul>
-  <li><b>original</b>: the original logo. Can contain multiple colors. Example:<br>
-  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/gimp/gimp-original.svg' height='100px' width='100px' /> <code>gimp-original.svg</code>
+  <table>
+    <tr>
+      <td style='width: 33%'>
+          <p><b>original</b>: the original logo. Can contain multiple colors. </p>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original.svg' height='100px' width='100px' /> 
+          <h4>devicon-original.svg</h4>
+      </td>
+      <td style='width: 33%'>
+          <p><b>plain</b>: a one-color version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-plain.svg' height='100px' width='100px' />
+          <h4>devicon-plain-wordmark.svg</h4>
+      </td>
+      <td style='width: 33%'>
+          <p><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line.svg' height='100px' width='100px' />
+          <h4>apache-line.svg</h4>
+      </td>
+    </tr>
+    <tr>
+      <td style='width: 33%'>
+        <p><b>original-wordmark</b>: similar to the above but must contain the name of the technology. </p>      
+        <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original-wordmark.svg' height='100px' width='100px' /> 
+        <h4>devicon-original-wordmark.svg</h4>
+      </td>
+      <td style='width: 33%'>
+          <p><b>plain-wordmark</b>: similar to the above but must contain the name of the technology. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-plain-wordmark.svg' height='100px' width='100px' />
+          <h4>devicon-plain-wordmark.svg</h4>
+      </td>
+      <td style='width: 33%'>
+          <p><b>line-wordmark</b>: similar to the above but must contain the name of the technology. Note that the icon version will be stripped of all colors so you don't have to strip beforehand.</p>      
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line-wordmark.svg' height='100px' width='100px' />
+          <h4>apache-line-wordmark.svg</h4>
+      </td>
+    </tr>
+  </table>
+<br>
 
-  <li style='margin-top: 3em'><b>original-wordmark</b>: similar to the above but must contain the name of the technology. Example: <br>
-  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/gimp/gimp-original-wordmark.svg' height='100px' width='100px' /> <code>gimp-original-wordmark.svg</code>
-  </li>
-
-  <li style='margin-top: 3em'><b>plain</b>: a one-color version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. Example: <br>
-  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/gimp/gimp-plain.svg' height='100px' width='100px' /> <code>gimp-plain-wordmark.svg</code>
-  </li>
-
-  <li style='margin-top: 3em'><b>plain-wordmark</b>: a one-color version of the original logo but with wordmark. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. Example: <br>
-  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/gimp/gimp-plain-wordmark.svg' height='100px' width='100px' /> <code>gimp-plain-wordmark.svg</code>
-  </li>
-
-  <li style='margin-top: 3em'><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. Example: <br>
-  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line.svg' height='100px' width='100px' /> <code>apache-line.svg</code>
-  </li>
-
-  <li style='margin-top: 3em'><b>line-wordmark</b>: a one-color, line version of the original logo but with wordmark. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. Example: <br>
-  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line-wordmark.svg' height='100px' width='100px' /> <code>apache-line-wordmark.svg</code>
-  </li>
-</ul>
-<p> Notes <p>
+<p><b>Notes:</b><p>
 <ul>  
   <li>
     You don't need to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
@@ -90,10 +105,10 @@ First of all, thanks for taking the time to contribute! This project can only gr
     The <b>original</b> svg version do not need to be simple and can contain numerous colors/gradients. However, if it's intended to be made into an icon, keep it simple.
   </li>
   <li>
-    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. 
+    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either <b>original</b> or <b>plain</b>). You can then add an alias in the <code>devicon.json</code> so they can be found with either the <b>original</b> or <b>plain</b> naming convention. 
       <ul>
         <li>This only applies to font icon versions only, not the SVG versions.</li>
-        <li>Aliases are no longer mandated. If you are wondering which name to use, just pick <code>original</code></li>
+        <li>Aliases are no longer mandatory. If you are wondering which name to use, just pick <code>original</code></li>
       </ul>
   </li>
 </ul>
@@ -266,7 +281,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   </li>
   <li>Create a separate pull request (PR) for each Icon.
     <ul>
-      <li>This means you would have to create two PRs for each Icon.</li>
+      <li>This means you would have to create one PR for Amazon Web Services and one PR for Redhat.</li>
     </ul>
   </li>
   <li>
