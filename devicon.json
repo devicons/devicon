@@ -3222,6 +3222,30 @@
         ]
     },
     {
+        "name": "tensorflow",
+        "tags": [
+            "library",
+            "machine-learning",
+            "deep-learning"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#ff6f00",
+        "aliases": []
+    },
+    {
         "name": "tomcat",
         "tags": [
             "server"
@@ -3691,5 +3715,29 @@
         },
         "color": "#68b604",
         "aliases": []
+    },
+    {
+        "name": "zig",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f7a41d",
+        "aliases": [
+            {
+                "base":"original",
+                "alias":"plain"
+            }
+        ]
     }
 ]
