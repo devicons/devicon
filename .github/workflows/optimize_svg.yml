@@ -1,13 +1,10 @@
-name: Update the ID within an svg
+name: Optimize the added/changed svgs
 on:
   pull_request:
       types: [labeled]
 jobs:
   peek:
-    # four outcomes: successful check and upload,
-    # unsuccessful check (fail due to user),
-    # fail due to system, skipped
-    name: Update the ID within an svg
+    name: Optimize the added/changed svgs
     if: github.event.label.name == 'bot:update-id'
     runs-on: ubuntu-18.04
     steps:
@@ -22,13 +19,17 @@ jobs:
 
       - name: Get Changed Files and generate files_added.json & files_modified.json
         uses: lots0logs/gh-action-get-changed-files@2.1.4
+        id: get_added_and_modified_files
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run the update_id.py
-        run: python ./.github/scripts/update_svg_id.py $HOME/files_added.json $HOME/files_modified.json
+        env:
+          ADDED_FILES: ${{ toJSON(steps.get_added_and_modified_files.outputs.added) }}
+          MODIFIED_FILES: ${{ toJSON(steps.get_added_and_modified_files.outputs.modified) }}
+        run: npm run optimize-svg -- --filesAddedJson=$ADDED_FILES --filesModifiedJson=$MODIFIED_FILES
 
       - name: Commit the changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update the IDs within the SVG"
+          commit_message: Optimized the SVGs

@@ -10,14 +10,18 @@ def main():
     # run the script for each file
     # update all svgs in the repo
     print("Start iterating through folder.")
-    icons_folder_path = Path("./icons")
-    for icon_folder in icons_folder_path.iterdir():
-        # run the subscript for every folder cause can't run all at once
-        files = []
-        for file in icon_folder.iterdir():
-            if file.suffix == ".svg":
-                files.append(str(file.resolve()))
-        subprocess.run(["npm", "run", "update-svg", "--", json.dumps(files)], shell=True)
+    added_files = ["abc", "def"]
+    modified_files = ["123", "456"]
+    subprocess.run(["npm", "run", "optimize-svg", "--", 
+        f"--filesAddedJson={json.dumps(added_files)}", f"--filesModifiedJson={json.dumps(modified_files)}"], shell=True)
+    # icons_folder_path = Path("./icons")
+    # for icon_folder in icons_folder_path.iterdir():
+    #     # run the subscript for every folder cause can't run all at once
+    #     files = []
+    #     for file in icon_folder.iterdir():
+    #         if file.suffix == ".svg":
+    #             files.append(str(file.resolve()))
+    #     subprocess.run(["npm", "run", "update-svg", "--", json.dumps(files)], shell=True)
 
 
     # update only the svgs added 
