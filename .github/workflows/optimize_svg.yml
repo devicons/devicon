@@ -5,7 +5,7 @@ on:
 jobs:
   peek:
     name: Optimize the added/changed svgs
-    if: github.event.label.name == 'bot:update-id'
+    if: github.event.label.name == 'bot:optimize'
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
