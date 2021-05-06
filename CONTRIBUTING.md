@@ -40,8 +40,8 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
   <li>Some bots will check your SVGs. If there are any errors, please fix them as instructed.</li>
-  <li>Wait for a maintainer to review your changes. They will run a script to check your icons.</li>
-  <li>If there are no issues, they will accept your pull request and merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
+  <li>Wait for a maintainer to review your changes. They will run the <a href='#peekBot'><code>peek-bot</code></a> to check your icons.</li>
+  <li>If there are no issues, they will run the <a href='#optimizeBot'><code>optimize-bot</code></a> on your svgs then merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
 </ol>
 
 <hr>
@@ -343,7 +343,18 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 <hr>
 <h2 id='buildScript'>The Build Script: how it works and its quirks</h2>
 <p>We rely on GitHub Actions, Python, Selenium, Imgur, and Gulp to automate our tasks. Please feel free to take a look at the workflow files. The codes should be clear enough to follow along.</p>
-<p>So far, the tasks in the build script are:</p>
+
+<p>Here are the main bots/script that we use:</p>
+<ul>
+  <li id='peekBot'><code>peek-bot</code>: Upload the icons to Icomoon and see what it looks like. Doesn't download any icons at this time.</li>
+  <li id='buildBot'><code>build-bot</code>: Build the icons by uploading them to Icomoon and download the resulting icon files. Also update the css file</li>
+  <li id='optimizeBot'><code>optimize-bot</code>: Optimize the svgs by minifying them and prefixing their ids with the file names. This is done so using inline svgs from this repo will not cause id clash.</li>
+  <li id='checkSvgBot'><code>check-svg-bot</code>: Check the SVGs uploaded and ensure they have the correct view box, fills, etc..</li>
+  <li id='npmReleaseBot'><code>npm-release-bot</code>: Update the NPM package.</li>
+  <li id='releaseMessageBot'><code>release-message-bot</code>: Create the release message for the PR.</li>
+</ul>
+
+<p>Here are the modular tasks in the build script:</p>
 <ul>
   <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a> Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
   <li>Preview what an svg would look like as an icon using the upload svgs script (see <a href="https://github.com/devicons/devicon/pull/412">this</a>). Used by <b>peek-bot</b>.</li>
