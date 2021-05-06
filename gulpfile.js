@@ -178,9 +178,14 @@ function optimizeSvg() {
  * It will only return icons in '/icons' path (see https://github.com/devicons/devicon/issues/505)
  */
 function getAddedModifiedSvg(filesAddedJson, filesModifiedJson) {
+  console.log(filesAddedJson)
+  console.log(filesModifiedJson)
   const filesAdded = JSON.parse(filesAddedJson),
     filesModified = JSON.parse(filesModifiedJson)
 
+  console.log(filesAdded)
+  console.log(filesModified)
+  
   files = filesAdded.concat(filesModified)
   return files.filter(filename => {
     if (path.extname(filename) == ".svg" 
