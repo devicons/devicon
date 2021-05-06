@@ -12,10 +12,8 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Setup Python v3.8
-        uses: actions/setup-python@v2
-        with: 
-          python-version: 3.8
+      - name: Set up gulp
+        run: npm install
 
       - name: Get Changed Files and generate files_added.json & files_modified.json
         uses: lots0logs/gh-action-get-changed-files@2.1.4
