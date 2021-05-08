@@ -55,21 +55,6 @@ def get_check_svgs_on_pr_args():
     return parser.parse_args()
 
 
-def get_check_svgs_monthly_args():
-    """
-    Get the commandline arguments for the check_svgs_monthly.py.
-    """
-    parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run monthly.")
-    parser.add_argument("devicon_json_path",
-                        help="The path to the devicon.json",
-                        action=PathResolverAction)
-
-    parser.add_argument("icons_folder_path",
-                        help="The path to the icons folder",
-                        action=PathResolverAction)
-    return parser.parse_args()
-
-
 def get_release_message_args():
     """
     Get the commandline arguments for get_release_message.py.
