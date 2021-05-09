@@ -146,7 +146,7 @@ Add css rules in your stylesheet
 }
 ```
 
-<h4>You can also use the <code>img</code> tag and referencing a svg directly from the repo.</h4>
+<h4>You can also use the <code>img</code> tag and referencing an SVG directly from the repo.</h4>
 
 ```html
 <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg'>
