@@ -33,8 +33,8 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <h2 id="overview">Overview on Submitting Icons</h2>
 <p>Here is what you have to do to submit your icons to the repo.</p>
 <ol>
-  <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have. Follow the <a href="#svgStandards">convention</a> listed.</li>
-  <li>Put the svgs of each Icon into its own <a href="#orgGuidelines">folders</a> in <code>/icons</code></li>
+  <li>Create the SVGs for each <a href="#versionNaming"> SVG versions </a> that you have. Follow the <a href="#svgStandards">convention</a> listed.</li>
+  <li>Put the SVGs of each Icon into its own <a href="#orgGuidelines">folders</a> in <code>/icons</code></li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
   <li>Create a separated pull request (PR) towards the <code>develop</code> branch for each Icon.</li>
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
