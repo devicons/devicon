@@ -126,7 +126,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
   <li>The <code>svg</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
   <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
-  <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. This is to prevent class name clashing when using inline svg. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
+  <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. This is to prevent class name clashing when using inline SVG. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
 </ul>
 
 <hr>
