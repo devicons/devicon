@@ -348,7 +348,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 <ul>
   <li id='peekBot'><code>peek-bot</code>: Upload the icons to Icomoon and see what it looks like. Doesn't download any icons at this time.</li>
   <li id='buildBot'><code>build-bot</code>: Build the icons by uploading them to Icomoon and download the resulting icon files. Also update the css file</li>
-  <li id='optimizeBot'><code>optimize-bot</code>: Optimize the svgs by minifying them and prefixing their ids with the file names. This is done so using inline svgs from this repo will not cause id clash.</li>
+  <li id='optimizeBot'><code>optimize-bot</code>: Optimize the SVGs by minifying them and prefixing their IDs with the file names. This is done so using inline SVGs from this repository will not cause ID clash.</li>
   <li id='checkSvgBot'><code>check-svg-bot</code>: Check the SVGs uploaded and ensure they have the correct view box, fills, etc..</li>
   <li id='npmReleaseBot'><code>npm-release-bot</code>: Update the NPM package.</li>
   <li id='releaseMessageBot'><code>release-message-bot</code>: Create the release message for the PR.</li>
