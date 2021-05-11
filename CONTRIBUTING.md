@@ -41,7 +41,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
   <li>Some bots will check your SVGs. If there are any errors, please fix them as instructed.</li>
   <li>Wait for a maintainer to review your changes. They will run the <a href='#peekBot'><code>peek-bot</code></a> to check your icons.</li>
-  <li>If there are no issues, they will run the <a href='#optimizeBot'><code>optimize-bot</code></a> on your svgs then merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
+  <li>If there are no issues, they will run the <a href='#optimizeBot'><code>optimize-bot</code></a> on your SVGs then merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
 </ol>
 
 <hr>
