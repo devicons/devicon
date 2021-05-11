@@ -8,7 +8,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#terms">Terms</a></li>
   <li><a href="#overview">Overview on Submitting Icon (start here if new)</a></li>
   <li><a href="#versionNaming">Naming Conventions</a></li>
-  <li><a href="#svgStandards">SVG Standards</a></li>
+  <li><a href="#SVGStandards">SVG Standards</a></li>
   <li><a href="#orgGuidelines">Organizational Guidelines</a></li>
   <li><a href="#updateDevicon">Updating the <code>devicon.json</code></a></li>
   <li><a href="#example">Example of Submitting An Icon</a></li>
@@ -24,8 +24,8 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p>Here are some terms that we will use in this repo: </p>
 <ol>
   <li>"Technology" is used to describe a software, libraries, tool, etc...</li>
-  <li>"Icon" refers to the svgs and icons version of a technology as a whole.</li>
-  <li>"SVG/<code>svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
+  <li>"Icon" refers to the SVGs and icons version of a technology as a whole.</li>
+  <li>"SVG/<code>SVG</code>" refers to the <code>svg</code> versions of the Icons.</li>
   <li>"icon" (lowercase) refers specficially to the font icon versions of the Icons.</li>
 </ol>
 
@@ -33,7 +33,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <h2 id="overview">Overview on Submitting Icons</h2>
 <p>Here is what you have to do to submit your icons to the repo.</p>
 <ol>
-  <li>Create the SVGs for each <a href="#versionNaming"> SVG versions </a> that you have. Follow the <a href="#svgStandards">convention</a> listed.</li>
+  <li>Create the SVGs for each <a href="#versionNaming"> SVG versions </a> that you have. Follow the <a href="#SVGStandards">convention</a> listed.</li>
   <li>Put the SVGs of each Icon into its own <a href="#orgGuidelines">folders</a> in <code>/icons</code></li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
   <li>Create a separated pull request (PR) towards the <code>develop</code> branch for each Icon.</li>
@@ -114,18 +114,18 @@ First of all, thanks for taking the time to contribute! This project can only gr
 </ul>
 
 <hr>
-<h2 id='svgStandards'>SVG Standards</h2>
-<p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
+<h2 id='SVGStandards'>SVG Standards</h2>
+<p>Before you submit your logos/SVGs, please ensure that they meet the following standard:</p>
 <ul>
   <li>The background must be transparent.</li>
   <li>The icon is centered horizontally and vertically within the <code>viewBox</code>.</li>
-  <li>The svg name follows this convention: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>The SVG name follows this convention: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
   <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. The color will be removed when being turned into icons so the <code>.svg</code> can have any color.
   </li>
   <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the SVG.</li>
   <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
-  <li>The <code>svg</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
-  <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
+  <li>The <code>SVG</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
+  <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/SVG-editor">SVG Editor</a>.</li>
   <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. This is to prevent class name clashing when using inline SVG. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
 </ul>
 
@@ -156,8 +156,8 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
         // keep tracks of the different versions that you have.
         "versions": {
-            // list the svgs that you have 
-            "svg": VersionString[], 
+            // list the SVGs that you have 
+            "SVG": VersionString[], 
 
             // list the fonts acceptable versions that you have
             "font": VersionString[] 
@@ -179,7 +179,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   Here is what VersionString means:
 </p>
 <ol>
-  <li> It's the version part of an <code>svg</code> file's name</li>
+  <li> It's the version part of an <code>SVG</code> file's name</li>
   <li> If you have "html5-original", the version string would be "original" </li>
   <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
   <li> See <a href="#versionNaming">naming conventions section</a> for more details </li>
@@ -200,13 +200,13 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
 <h2 id='example'>Example of Submitting An Icon</h2>
 <p>
-As an example, let's assume you have created the svgs for Redhat and Amazon Web Services logos.
+As an example, let's assume you have created the SVGs for Redhat and Amazon Web Services logos.
 </p>
-<p>For the Redhat svg, you have the "original", "original-wordmark", "plain", and "plain-wordmark" versions. </p>
-<p>For the Amazon Web Services svgs, you have the "original", "original-wordmark", "plain-wordmark" versions. The "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
+<p>For the Redhat SVG, you have the "original", "original-wordmark", "plain", and "plain-wordmark" versions. </p>
+<p>For the Amazon Web Services SVGs, you have the "original", "original-wordmark", "plain-wordmark" versions. The "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
 <ol>
   <li>
-    Put the svgs for each logo that you have into its own folders in <code>/icons</code>
+    Put the SVGs for each logo that you have into its own folders in <code>/icons</code>
     <ul>
       <li>This means you would create two folders: one for <code>amazonwebservices</code> and one for <code>redhat</code></li>
       <li><b>Note</b>: don't do this in the same commits; we want to have each Icon in its own PR.</li>
@@ -225,7 +225,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                 "linux"
               ],
               "versions": {
-                "svg": [ // here are the versions that are available in svgs
+                "SVG": [ // here are the versions that are available in svgs
                   "original",
                   "original-wordmark",
                   "plain",
@@ -253,7 +253,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                 "server"
               ],
               "versions": {
-                "svg": [ // here are the versions that are available in svgs
+                "SVG": [ // here are the versions that are available in svgs
                   "original",
                   "original-wordmark",
                   "plain-wordmark"
@@ -269,7 +269,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                 {
                     "base": "original", // here is the base version that we will upload to Icomoon
                     "alias": "plain" // this is its alias. Our script will create a reference so users can search using "original" or "plain" for this icon
-                    // note that you don't provide aliases for the svg version. If "original" can't be made into a font, there's no need to provide it with a plain alias
+                    // note that you don't provide aliases for the SVG version. If "original" can't be made into a font, there's no need to provide it with a plain alias
                     // note that this is now optional. You do not need to create aliases from now on. The attribute needs to stay though.
                 }
               ]
@@ -349,15 +349,15 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   <li id='peekBot'><code>peek-bot</code>: Upload the icons to Icomoon and see what it looks like. Doesn't download any icons at this time.</li>
   <li id='buildBot'><code>build-bot</code>: Build the icons by uploading them to Icomoon and download the resulting icon files. Also update the css file</li>
   <li id='optimizeBot'><code>optimize-bot</code>: Optimize the SVGs by minifying them and prefixing their IDs with the file names. This is done so using inline SVGs from this repository will not cause ID clash.</li>
-  <li id='checkSvgBot'><code>check-svg-bot</code>: Check the SVGs uploaded and ensure they have the correct view box, fills, etc..</li>
+  <li id='checkSvgBot'><code>check-SVG-bot</code>: Check the SVGs uploaded and ensure they have the correct view box, fills, etc..</li>
   <li id='npmReleaseBot'><code>npm-release-bot</code>: Update the NPM package.</li>
   <li id='releaseMessageBot'><code>release-message-bot</code>: Create the release message for the PR.</li>
 </ul>
 
 <p>Here are the modular tasks in the build script:</p>
 <ul>
-  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a> Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
-  <li>Preview what an svg would look like as an icon using the upload svgs script (see <a href="https://github.com/devicons/devicon/pull/412">this</a>). Used by <b>peek-bot</b>.</li>
+  <li>Upload SVGs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a> Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
+  <li>Preview what an SVG would look like as an icon using the upload svgs script (see <a href="https://github.com/devicons/devicon/pull/412">this</a>). Used by <b>peek-bot</b>.</li>
   <li>Build, combine, and minify CSS files. For details, see <a href="https://github.com/devicons/devicon/pull/290">this</a>. Used by <b>build-bot</b>.</li>
   <li>Send screenshots to Imgur and upload it to a PR. See <a href="https://github.com/devicons/devicon/pull/398">the PR for the Imgur action</a> and <a href="https://github.com/devicons/devicon/pull/481"> the PR for uploading the pictures to a PR. Used by <b>peek-bot</b> and <b>build-bot</b>.</a>
   <li>Ensure code quality is up to standard</li>
@@ -399,7 +399,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
     <ul>
       <li>See <a href="https://github.com/devicons/devicon/pull/532">this PR</a>'s peek result.</li>
       <li>This is caused by a bug in Icomoon's parser (see <a href="https://github.com/devicons/devicon/pull/532#issuecomment-827180766">this</a>).</li>
-      <li>Solution: Luckily this is an extremely rare case. Try remake the svg in a different way (using different paths/shapes) and test using Icomoon.</li>
+      <li>Solution: Luckily this is an extremely rare case. Try remake the SVG in a different way (using different paths/shapes) and test using Icomoon.</li>
     </ul>
   </li>
 </ol>

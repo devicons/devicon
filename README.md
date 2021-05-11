@@ -58,7 +58,7 @@
 <h2 id="about">About the project</h2>
 <p>
     Devicon aims to gather all logos representing development languages and tools.
-    Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
+    Each icon comes in several versions: font/SVG, original/plain/line, colored/not colored, wordmark/no wordmark.
     Devicon has 150+ icons. And it's growing!<br />
 </p>
 <p>
@@ -78,7 +78,7 @@
 <h2 id="getting-started">Getting started</h2>
 <p>
     For a super fast setup go check <a href="https://devicon.dev">devicon.dev</a>.<br />
-    You can either <a href="#getting-started-svg">use the raw svg</a> icons or our <a href="#getting-started-font">devicon font</a> (which is 
+    You can either <a href="#getting-started-svg">use the raw SVG</a> icons or our <a href="#getting-started-font">devicon font</a> (which is 
     also available via CDN).
 </p>
 
@@ -124,7 +124,7 @@ yarn add devicon
 ```
 
 <p>
-    An alternate way to use <code>devicon</code> is by copy/paste the raw svg code
+    An alternate way to use <code>devicon</code> is by copy/paste the raw SVG code
     to your project.
 </p>
 <h4 id="getting-started-svg">Copy/paste SVG code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">svg folder</a> or the <a href="https://devicon.dev">project page</a>)</h4>
@@ -146,7 +146,7 @@ Add css rules in your stylesheet
 }
 ```
 
-<h4>You can also use the <code>img</code> tag and referencing an SVG directly from the repo.</h4>
+<h4>You can also use the <code>img</code> tag and referencing an svg directly from the repo.</h4>
 
 ```html
 <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg'>
