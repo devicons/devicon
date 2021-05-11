@@ -127,7 +127,7 @@ yarn add devicon
     An alternate way to use <code>devicon</code> is by copy/paste the raw svg code
     to your project.
 </p>
-<h4 id="getting-started-svg">Copy/paste svg code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">svg folder</a> or the <a href="https://devicon.dev">project page</a>)</h4>
+<h4 id="getting-started-svg">Copy/paste SVG code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">svg folder</a> or the <a href="https://devicon.dev">project page</a>)</h4>
 
 ```html
 <!--  for devicon plain version -->
@@ -146,7 +146,7 @@ Add css rules in your stylesheet
 }
 ```
 
-<h4>You can also use the <code>img</code> tag and referencing a svg directly from the repo.</h4>
+<h4>You can also use the <code>img</code> tag and referencing an SVG directly from the repo.</h4>
 
 ```html
 <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg'>

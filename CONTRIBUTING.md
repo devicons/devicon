@@ -102,7 +102,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
     The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font.
   </li>
   <li>
-    The <b>original</b> svg version do not need to be simple and can contain numerous colors/gradients. However, if it's intended to be made into an icon, keep it simple.
+    The <b>original</b> SVG version do not need to be simple and can contain numerous colors/gradients. However, if it's intended to be made into an icon, keep it simple.
   </li>
   <li>
     Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either <b>original</b> or <b>plain</b>). You can then add an alias in the <code>devicon.json</code> so they can be found with either the <b>original</b> or <b>plain</b> naming convention. 
