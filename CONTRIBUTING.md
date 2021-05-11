@@ -54,7 +54,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 </ul>
 <br>
 
-<p>Each icon/svg can come in different versions:</p>
+<p>Each icon/SVG can come in different versions:</p>
   <table>
     <tr>
       <td style='width: 33%'>
