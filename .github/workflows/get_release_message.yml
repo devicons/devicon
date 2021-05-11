@@ -2,7 +2,7 @@ name: Get Release Message
 on: workflow_dispatch
 jobs:
   build:
-    name: Get release message
+    name: Get features since last release
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
