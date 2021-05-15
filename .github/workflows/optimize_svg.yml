@@ -1,0 +1,33 @@
+name: Optimize the added/changed svgs
+on:
+  pull_request:
+      types: [labeled]
+jobs:
+  peek:
+    name: Optimize the added/changed svgs
+    if: github.event.label.name == 'bot:optimize'
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set up gulp
+        run: npm install
+
+      - name: Get Changed Files and generate files_added.json & files_modified.json
+        uses: lots0logs/gh-action-get-changed-files@2.1.4
+        id: get_added_and_modified_files
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run the update_id.py
+        env:
+          ADDED_FILES: ${{ steps.get_added_and_modified_files.outputs.added }}
+          MODIFIED_FILES: ${{ steps.get_added_and_modified_files.outputs.modified }}
+        run: npm run optimize-svg -- --filesAddedJson=$ADDED_FILES --filesModifiedJson=$MODIFIED_FILES
+
+      - name: Commit the changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Optimized the SVGs

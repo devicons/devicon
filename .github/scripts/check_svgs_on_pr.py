@@ -69,21 +69,11 @@ def check_svgs(svg_file_paths: List[Path]):
             if root.get("viewBox") != "0 0 128 128":
                 err_msg.append("-'viewBox' is not '0 0 128 128' -> Set it or scale the file using https://www.iloveimg.com/resize-image/resize-svg")
 
-            acceptable_size = [None, "128px", "128"]
-            if root.get("height") not in acceptable_size:
-                err_msg.append("-'height' is present in svg element but is not '128' or '128px' -> Remove it or set it to '128' or '128px'")
-
-            if root.get("width") not in acceptable_size:
-                err_msg.append("-'width' is present in svg element but is not '128' or '128px' -> Remove it or set it to '128' or '128px'")
-
-            if root.get("style") is not None and "enable-background" in root.get("style"):
-                err_msg.append("-deprecated 'enable-background' in style attribute -> Remove it")
-
             if root.get("x") is not None:
-                err_msg.append("-unneccessary 'x' attribute in svg element -> Remove it")
+                err_msg.append("-unneccessary 'x' attribute in svg root element -> Remove it")
 
             if root.get("y") is not None:
-                err_msg.append("-unneccessary 'y' attribute in svg element -> Remove it")
+                err_msg.append("-unneccessary 'y' attribute in svg root element -> Remove it")
 
             style = root.findtext(f".//{namespace}style")
             if style != None and "fill" in style:
