@@ -1,14 +1,17 @@
 {
   "name": "devicon",
-  "version": "2.2.0",
+  "version": "2.11.0",
   "description": "Programming related icons collection",
   "main": "devicon.min.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "gulp updateCss && gulp clean",
+    "peek-test": "python ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./  --pr_title \"%PR_TITLE%\"",
+    "build-test": "python ./.github/scripts/icomoon_build.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./",
+    "optimize-svg": "gulp optimizeSvg"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/konpa/devicon.git"
+    "url": "https://github.com/devicons/devicon.git"
   },
   "keywords": [
     "programming",
@@ -16,16 +19,18 @@
     "svg",
     "font"
   ],
-  "author": "konpa",
+  "author": "devicons",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/konpa/devicon/issues"
+    "url": "https://github.com/devicons/devicon/issues"
   },
-  "homepage": "http://konpa.github.io/devicon/",
+  "homepage": "https://devicon.dev",
   "devDependencies": {
-    "gulp": "^3.8.10",
-    "gulp-concat-css": "^2.0.0",
-    "gulp-minify-css": "^0.4.3",
-    "gulp-plumber": "^0.6.6"
-  }
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svgmin": "^3.0.0",
+    "sass": "^1.26.10",
+    "yargs": "^17.0.0"
+  },
+  "dependencies": {}
 }

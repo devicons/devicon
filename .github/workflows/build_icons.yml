@@ -1,0 +1,72 @@
+name: Build Icons
+on: workflow_dispatch
+jobs:
+  build:
+    name: Get Fonts From Icomoon
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
+      - name: Install dependencies (python, pip, npm)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ./.github/scripts/requirements.txt
+          npm install
+
+      - name: Executing build and create fonts via icomoon
+        run: >
+          python ./.github/scripts/icomoon_build.py 
+          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
+          ./devicon.json ./icons ./ --headless
+
+      - name: Upload geckodriver.log for debugging purposes
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: geckodriver-log
+          path: ./geckodriver.log
+
+      - name: Build devicon.min.css
+        if: success() 
+        run: npm run build-css
+
+      - name: Upload screenshot of the newly made icons
+        id: imgur_step
+        uses: devicons/public-upload-to-imgur@v2.1.1
+        if: success()
+        with:
+          path: ./new_icons.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+
+      - name: Create Pull Request
+        if: success() 
+        uses: peter-evans/create-pull-request@v3
+        env:
+          MESSAGE: |
+            What's up!
+
+            I'm Devicon's Build Bot and I just built some new font files and devicon.min.css file.
+
+            Here are all the files that were built into icons (the new ones are those without highlight):
+
+            ![Files Built]({0})
+
+            The devicon.min.css file contains:
+            -The icon content
+            -The aliases
+            -The colored classes
+
+            More information can be found in the GitHub Action logs for this workflow.
+
+            Adios, 
+            Build Bot :sunglasses:
+        with:
+          branch: 'bot/build-result'
+          commit-message: 'Built new icons, icomoon.json and devicon.css'
+          title: 'bot:build new icons, icomoon.json and devicon.css'
+          body: ${{ format(env.MESSAGE, fromJSON(steps.imgur_step.outputs.imgur_urls)[0] ) }}
+          delete-branch: true

@@ -1,3 +1,7 @@
 node_modules
 .DS_Store
 .idea
+geckodriver.log
+__pycache__
+*.pyc
+new_icons.png

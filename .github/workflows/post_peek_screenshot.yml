@@ -1,0 +1,118 @@
+name: Post the screenshots into a comment from Peek Icons workflow
+on:
+  workflow_run:
+    workflows: ['Peek Icons']
+    types: 
+      - completed
+jobs: 
+  post_screenshots_in_comment:
+    name: Post the screenshot
+    runs-on: ubuntu-18.04
+    if: github.event.action == 'completed' && github.event.workflow_run.conclusion != 'skipped'
+    env: 
+      # three possible values: 'skipped', 'success', 'failure'
+      # have to print github.event to console to see these values
+      # note: can't use this env variable up in the if statement above for some reason.
+      # I don't think it's an ordering issue cause it seems 'if' is auto evaluate first
+      PEEK_STATUS: ${{ github.event.workflow_run.conclusion }}
+    steps:
+      - name: Check state of last run
+        run: echo $PEEK_STATUS
+
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.11.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: peek_icons.yml
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Read the pr_num file
+        id: pr_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./pr_num/pr_num.txt
+
+      - name: Read the err message file
+        if: success()
+        id: err_message_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./err_messages/err_messages.txt
+
+
+      - name: Upload screenshot of the newly made icons gotten from the artifacts
+        id: icons_overview_img_step
+        if: env.PEEK_STATUS == 'success' && success()
+        uses: devicons/public-upload-to-imgur@v2.2.1
+        with:
+          path: ./screenshots/new_icons.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+
+      - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
+        id: icons_detailed_img_step
+        uses: devicons/public-upload-to-imgur@v2.2.1
+        if: env.PEEK_STATUS == 'success' && success()
+        with:
+          path: ./screenshots/screenshot_*.png
+          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+
+      - name: Comment on the PR about the result - Success
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: env.PEEK_STATUS == 'success' && success()
+        env:
+          MESSAGE: |
+            Hi there,
+
+            I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
+            Here is the result below (top right):
+
+            {0}
+
+            Here are the zoomed-in screenshots of the added icons:
+            {1}
+
+            Note: If the images don't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
+
+            **The maintainers will now take a look at it and decide whether to merge your PR.**
+
+            Thank you for contributing to Devicon! I hope everything works out and your icons are accepted into the repo.
+
+            Cheers, 
+            Peek Bot :blush:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: >
+            ${{ format(env.MESSAGE, 
+            fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0],
+            join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '')) }}
+
+      - name: Comment on the PR about the result - Failure
+        if: failure() || env.PEEK_STATUS == 'failure'
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        env:
+          MESSAGE: |
+            Hi there,
+
+            I'm Devicons' Peek Bot and it seems we've ran into a problem.
+
+            ```
+            {0}
+            ```
+
+            Make sure that:
+
+            - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
+            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
+            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
+
+            I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate. 
+
+            Best of luck, 
+            Peek Bot :relaxed:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
