@@ -1,0 +1,22 @@
+name: 'Stale'
+on:
+  schedule:
+    - cron: '30 1 * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@main
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-pr-message: 'Hello there,
+          we noticed that this PR has been inactive for a while now. If there are any changes which are suitable for our repository,
+          we would love to have it. It would be great if you can continue with this PR, but if you cannot, we might fork your changes and merge the changes ourselves.
+
+          Since GitHub tracks contributions by commits, you will still be credited.
+
+          Let us know what you think 😃'
+        stale-pr-label: 'stale'
+        days-before-pr-stale: 30
+        days-before-pr-close: -1

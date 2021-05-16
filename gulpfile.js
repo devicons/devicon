@@ -1,6 +1,8 @@
 var gulp      = require('gulp');
+const svgmin = require("gulp-svgmin")
 const sass = require('gulp-sass');
 sass.compiler = require('sass')
+const yargs = require("yargs")
 const fsPromise = require('fs').promises;
 const path = require("path");
 
@@ -10,6 +12,7 @@ const aliasSCSSName = "devicon-alias.scss";
 const colorsCSSName = "devicon-colors.css";
 const finalMinSCSSName = "devicon.min.scss";
 
+//////// CSS Tasks ////////
 
 /**
  * Create the devicon.min.css by creating needed
@@ -148,5 +151,70 @@ function cleanUp() {
 }
 
 
+//////// Update SVG Task ////////
+/**
+ * Update the svg by optimizing it 
+ * and prefixing its ids so it's unique across the repo.
+ * 
+ * This requires a json list of svg file names to update.
+ * This must be passed through the commandline arguments.
+ */
+function optimizeSvg() {
+  let svgPaths = getAddedModifiedSvg(yargs.argv.filesAddedJson,
+    yargs.argv.filesModifiedJson)
+
+  return gulp.src(svgPaths)
+    .pipe(svgmin(configOptionCallback))
+    .pipe(gulp.dest(file => {
+      return file.base
+    }))
+}
+
+/**
+ * Get the svgs added and modified from the '/icons' folder only.
+ * @param {*} filesAddedJson - the files that were added in this commit.
+ * @param {*} filesModifiedJson - the files that were modified in this commit.
+ * @returns a list of the svg file paths that were added/modified in this pr as Path. 
+ * It will only return icons in '/icons' path (see https://github.com/devicons/devicon/issues/505)
+ */
+function getAddedModifiedSvg(filesAddedJson, filesModifiedJson) {
+  const filesAdded = JSON.parse(filesAddedJson),
+    filesModified = JSON.parse(filesModifiedJson)
+
+  files = filesAdded.concat(filesModified)
+  return files.filter(filename => {
+    if (path.extname(filename) == ".svg" 
+      && path.dirname(filename).includes('icons/'))
+        return filename
+  })
+}
+
+/**
+ * Create a config option for each file.
+ * @param {Object} file - Gulp Vinyl instance of the file 
+ * being processed.
+ * @returns a SVGO config object.
+ */
+function configOptionCallback(file) {
+  return {
+    plugins: [
+      {
+        prefixIds: {
+          prefix: file.stem, // add file name to ids
+          delim: "-"
+        } 
+      },
+      {
+        removeViewBox: false // keep viewbox
+      },
+      {
+        removeDimensions: true // remove height and width
+      }
+    ]
+  }
+}
+
+
 exports.updateCss = createDeviconMinCSS;
 exports.clean = cleanUp;
+exports.optimizeSvg = optimizeSvg;

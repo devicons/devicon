@@ -33,7 +33,7 @@
   <meta name="msapplication-TileImage" content="./logos/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/devicons/devicon/master/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon/devicon.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -77,7 +77,7 @@
           <h4>SVG versions</h4>
           <ul class="icons-list">
             <li ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}">
-              <img ng-src="https://raw.githubusercontent.com/devicons/devicon/master/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
+              <img ng-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
           <div class="cde">
@@ -88,16 +88,19 @@
         </li>
       </ul>
 
-      <h3>Github Repo</h3>
-      <h5>If you prefer a local install, you can download all the files on the github repo.</h5>
+      <h3>GitHub repository</h3>
+      <h5>If you prefer a local install, you can download all the files on the GitHub repository.</h5>
       <p class="download">
         <a href="https://github.com/devicons/devicon/archive/master.zip"><i class="devicon-github-original"></i>DOWNLOAD</a>
       </p>
       <p class="download">
-        <a href="https://github.com/devicons/devicon/" target="blank"><i class="devicon-github-original"></i>GO TO REPO</a>
+        <a href="https://github.com/devicons/devicon/" target="blank"><i class="devicon-github-original"></i>GO TO THE REPOSITORY</a>
       </p>
       <p class="download">
         <a href="https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md" target="blank"><i class="devicon-github-original"></i>CONTRIBUTE</a>
+      </p>
+      <p class="download">
+        <a href="https://discord.gg/hScy8KWACQ" target="blank"><i class="discord-logo"></i>DISCORD SERVER</a>
       </p>
 
       <p class="footer">
