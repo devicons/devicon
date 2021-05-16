@@ -2686,10 +2686,10 @@
         "name": "raspberrypi",
         "tags": ["arm", "computer"],
         "versions": {
-            "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-            "font": ["plain", "plain-wordmark"]
+            "svg": ["original", "original-wordmark", "line", "line-wordmark"],
+            "font": ["line", "line-wordmark"]
         },
-        "color": "#ea2480",
+        "color": "#c51850",
         "aliases": []
     },
     {
