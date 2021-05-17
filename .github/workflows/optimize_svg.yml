@@ -2,6 +2,8 @@ name: Optimize the added/changed svgs
 on:
   pull_request:
       types: [labeled]
+  pull_request_target:
+      types: [labeled]
 jobs:
   peek:
     name: Optimize the added/changed svgs
@@ -9,8 +11,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
 
       - name: Set up gulp
         run: npm install
