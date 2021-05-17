@@ -178,7 +178,11 @@
     },
     {
         "name": "appwrite",
-        "tags": ["cloud", "platform", "server"],
+        "tags": [
+            "cloud", 
+            "platform", 
+            "server"
+        ],
         "versions": {
           "svg": [
             "original",
@@ -202,6 +206,27 @@
                 "alias": "original-wordmark"
             }
         ]
+    },
+    {
+        "name": "arduino",
+        "tags": [
+            "microcontroller",
+            "hardware"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00979d",
+        "aliases": []
     },
     {
         "name": "atom",
@@ -2346,6 +2371,26 @@
         ]
     },
     {
+        "name": "nixos",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#5277C3",
+        "aliases": []
+    },
+    {
         "name": "nodejs",
         "tags": [
             "javascript",
@@ -2462,6 +2507,24 @@
             ]
         },
         "color": "#F18803",
+        "aliases": []
+    },
+    {
+        "name": "perl",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#212177",
         "aliases": []
     },
     {
@@ -2617,6 +2680,16 @@
             ]
         },
         "color": "#ffd845",
+        "aliases": []
+    },
+    {
+        "name": "raspberrypi",
+        "tags": ["arm", "computer"],
+        "versions": {
+            "svg": ["original", "original-wordmark", "line", "line-wordmark"],
+            "font": ["line", "line-wordmark"]
+        },
+        "color": "#c51850",
         "aliases": []
     },
     {
@@ -3177,6 +3250,30 @@
         "aliases": []
     },
     {
+        "name": "tensorflow",
+        "tags": [
+            "library",
+            "machine-learning",
+            "deep-learning"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#ff6f00",
+        "aliases": []
+    },
+    {
         "name": "tomcat",
         "tags": [
             "server"
@@ -3646,5 +3743,29 @@
         },
         "color": "#68b604",
         "aliases": []
+    },
+    {
+        "name": "zig",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f7a41d",
+        "aliases": [
+            {
+                "base":"original",
+                "alias":"plain"
+            }
+        ]
     }
 ]

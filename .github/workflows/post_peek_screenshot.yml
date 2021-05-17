@@ -32,6 +32,14 @@ jobs:
         with:
           path: ./pr_num/pr_num.txt
 
+      - name: Read the err message file
+        if: success()
+        id: err_message_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./err_messages/err_messages.txt
+
+
       - name: Upload screenshot of the newly made icons gotten from the artifacts
         id: icons_overview_img_step
         if: env.PEEK_STATUS == 'success' && success()
@@ -87,15 +95,19 @@ jobs:
           MESSAGE: |
             Hi there,
 
-            I'm Devicons' Peek Bot and it seems we've ran into a problem (sorry!).
+            I'm Devicons' Peek Bot and it seems we've ran into a problem.
 
-            Please double check and fix the possible issues below:
+            ```
+            {0}
+            ```
+
+            Make sure that:
 
             - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
             - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
             - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
 
-            I will retry once everything is fixed. If I still fail (sorry!) or there are other erros, the maintainers will investigate. 
+            I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate. 
 
             Best of luck, 
             Peek Bot :relaxed:
@@ -103,4 +115,4 @@ jobs:
           type: create
           issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ env.MESSAGE }}
+          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
