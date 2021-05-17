@@ -2683,6 +2683,16 @@
         "aliases": []
     },
     {
+        "name": "raspberrypi",
+        "tags": ["arm", "computer"],
+        "versions": {
+            "svg": ["original", "original-wordmark", "line", "line-wordmark"],
+            "font": ["line", "line-wordmark"]
+        },
+        "color": "#c51850",
+        "aliases": []
+    },
+    {
         "name": "phoenix",
         "tags": [
             "framework"
