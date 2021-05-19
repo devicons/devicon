@@ -164,11 +164,15 @@ function optimizeSvg() {
   let iconName = yargs.argv.prTitle.match(pattern)[0] // should only have 1 match
   let svgGlob = path.resolve(yargs.argv.iconsFolderPath, iconName, "*.svg")
   console.log("Minifying: ", svgGlob)
-  return gulp.src(svgGlob)
-    .pipe(svgmin(configOptionCallback))
-    .pipe(gulp.dest(file => {
-      return file.base
-    }))
+  let iconFolder = path.resolve(yargs.argv.iconsFolderPath, iconName)
+  fsPromise.access(iconFolder)
+    .then(() => console.log(iconFolder, " exists"))
+    .catch(() => console.log(iconFolder, " not exists"))
+  // return gulp.src(svgGlob)
+  //   .pipe(svgmin(configOptionCallback))
+  //   .pipe(gulp.dest(file => {
+  //     return file.base
+  //   }))
 }
 
 /**
