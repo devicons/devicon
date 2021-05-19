@@ -160,7 +160,11 @@ function cleanUp() {
  * This must be passed through the commandline arguments.
  */
 function optimizeSvg() {
-  return gulp.src(yargs.argv.svgFiles)
+  let pattern = /(?<=^new icon: )\w+(?= \(.+\))/
+  let iconName = yargs.argv.prTitle.match(pattern)[0] // should only have 1 match
+  let svgGlob = path.resolve(yargs.argv.iconsFolderPath, iconName, "*.svg")
+  console.log("Minifying: ", svgGlob)
+  return gulp.src(svgGlob)
     .pipe(svgmin(configOptionCallback))
     .pipe(gulp.dest(file => {
       return file.base
