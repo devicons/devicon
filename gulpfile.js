@@ -160,10 +160,7 @@ function cleanUp() {
  * This must be passed through the commandline arguments.
  */
 function optimizeSvg() {
-  let svgPaths = getAddedModifiedSvg(yargs.argv.filesAddedJson,
-    yargs.argv.filesModifiedJson)
-
-  return gulp.src(svgPaths)
+  return gulp.src(yargs.argv.svgFiles)
     .pipe(svgmin(configOptionCallback))
     .pipe(gulp.dest(file => {
       return file.base
