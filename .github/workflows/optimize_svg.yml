@@ -1,6 +1,6 @@
 name: Optimize the added/changed svgs
 on:
-  pull_request:
+  pull_request_target:
       types: [labeled]
 jobs:
   peek:
@@ -13,7 +13,7 @@ jobs:
       - name: Set up gulp
         run: npm install
 
-      - name: Run the update_id.py
+      - name: Run the optimize_svg script
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: npm run optimize-svg -- --iconsFolderPath="./icons" --prTitle="$PR_TITLE"
