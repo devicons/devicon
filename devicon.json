@@ -3232,6 +3232,24 @@
         ]
     },
     {
+        "name": "tailwindcss",
+        "tags": [
+            "css",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+                
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#38b2ac",
+        "aliases": []
+    },
+    {
         "name": "tensorflow",
         "tags": [
             "library",
