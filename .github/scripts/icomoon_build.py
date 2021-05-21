@@ -1,6 +1,8 @@
 from pathlib import Path
 import sys
 from selenium.common.exceptions import TimeoutException
+import subprocess
+import json
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
@@ -20,10 +22,19 @@ def main():
     
     runner = None
     try:
+        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path, True)
+        # optimizes the files
+        # do in each batch in case the command 
+        # line complains there's too many characters
+        start = 0
+        step = 10
+        for i in range(start, len(svgs), step):
+            batch = svgs[i:i + step]
+            subprocess.run(["npm", "run", "optimize-svg", "--", f"--svgFiles={json.dumps(batch)}"], shell=True)
+
         runner = SeleniumRunner(args.download_path,
                                 args.geckodriver_path, args.headless)
         runner.upload_icomoon(args.icomoon_json_path)
-        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path, True)
         runner.upload_svgs(svgs)
 
         zip_name = "devicon-v1.0.zip"
