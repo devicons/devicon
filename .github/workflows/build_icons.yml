@@ -66,7 +66,7 @@ jobs:
             Build Bot :sunglasses:
         with:
           branch: 'bot/build-result'
-          commit-message: 'Built new icons, icomoon.json and devicon.css'
+          commit-message: 'Built new icons, icomoon.json and devicon.css. Also Optimized SVGs'
           title: 'bot:build new icons, icomoon.json and devicon.css'
           body: ${{ format(env.MESSAGE, fromJSON(steps.imgur_step.outputs.imgur_urls)[0] ) }}
           delete-branch: true

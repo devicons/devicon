@@ -22,7 +22,7 @@ def main():
     
     runner = None
     try:
-        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path, True)
+        svgs = filehandler.get_svgs_paths(new_icons, args.icons_folder_path, icon_versions_only=False)
         # optimizes the files
         # do in each batch in case the command 
         # line complains there's too many characters
@@ -32,10 +32,12 @@ def main():
             batch = svgs[i:i + step]
             subprocess.run(["npm", "run", "optimize-svg", "--", f"--svgFiles={json.dumps(batch)}"], shell=True)
 
+        icon_svgs = filehandler.get_svgs_paths(
+            new_icons, args.icons_folder_path, icon_versions_only=True)
         runner = SeleniumRunner(args.download_path,
                                 args.geckodriver_path, args.headless)
         runner.upload_icomoon(args.icomoon_json_path)
-        runner.upload_svgs(svgs)
+        runner.upload_svgs(icon_svgs)
 
         zip_name = "devicon-v1.0.zip"
         zip_path = Path(args.download_path, zip_name)
