@@ -9,8 +9,6 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="Layer_1"
-   x="0px"
-   y="0px"
    viewBox="0 0 128 128"
    style="enable-background:new 0 0 128 128;"
    xml:space="preserve"
@@ -20,102 +18,6 @@
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
    id="defs61">
-	
-	
-
-		
-			<linearGradient
-   id="SVGID_1_"
-   gradientUnits="userSpaceOnUse"
-   x1="102.9177"
-   y1="-275.3316"
-   x2="70.278198"
-   y2="-254.078"
-   gradientTransform="matrix(1,0,0,-1,0,-247.4922)">
-			<stop
-   offset="0"
-   style="stop-color:#80C3E6"
-   id="stop4" />
-			<stop
-   offset="1"
-   style="stop-color:#3380C2"
-   id="stop6" />
-		</linearGradient>
-		
-		
-		
-			<linearGradient
-   id="SVGID_2_"
-   gradientUnits="userSpaceOnUse"
-   x1="108.6724"
-   y1="-324.37109"
-   x2="84.274498"
-   y2="-308.25931"
-   gradientTransform="matrix(1,0,0,-1,0,-247.4922)">
-			<stop
-   offset="0"
-   style="stop-color:#F38649"
-   id="stop13" />
-			<stop
-   offset="0.1849"
-   style="stop-color:#F28147"
-   id="stop15" />
-			<stop
-   offset="0.4091"
-   style="stop-color:#EF7242"
-   id="stop17" />
-			<stop
-   offset="0.6537"
-   style="stop-color:#EA5A3A"
-   id="stop19" />
-			<stop
-   offset="0.911"
-   style="stop-color:#E4382E"
-   id="stop21" />
-			<stop
-   offset="1"
-   style="stop-color:#E12A29"
-   id="stop23" />
-		</linearGradient>
-		
-		
-		
-			<linearGradient
-   id="SVGID_3_"
-   gradientUnits="userSpaceOnUse"
-   x1="28.2805"
-   y1="-290.00009"
-   x2="74.946098"
-   y2="-260.84009"
-   gradientTransform="matrix(1,0,0,-1,0,-247.4922)">
-			<stop
-   offset="0"
-   style="stop-color:#42AB4A"
-   id="stop30" />
-			<stop
-   offset="1"
-   style="stop-color:#ADD155"
-   id="stop32" />
-		</linearGradient>
-		
-		
-			<linearGradient
-   id="SVGID_4_"
-   gradientUnits="userSpaceOnUse"
-   x1="38.4734"
-   y1="-342.211"
-   x2="76.426598"
-   y2="-281.47339"
-   gradientTransform="matrix(1,0,0,-1,0,-247.4922)">
-			<stop
-   offset="0"
-   style="stop-color:#42AB4A"
-   id="stop37" />
-			<stop
-   offset="1"
-   style="stop-color:#ADD155"
-   id="stop39" />
-		</linearGradient>
 		
 	</defs><sodipodi:namedview
    pagecolor="#ffffff"
@@ -137,19 +39,9 @@
    inkscape:window-y="-6"
    inkscape:window-maximized="1"
    inkscape:current-layer="Layer_1" />
-<style
-   type="text/css"
-   id="style2">
-	.st0{fill:url(#SVGID_1_);}
-	.st1{opacity:0.15;enable-background:new    ;}
-	.st2{fill:url(#SVGID_2_);}
-	.st3{fill:url(#SVGID_3_);}
-	.st4{fill:url(#SVGID_4_);}
-</style>
 <g
    id="g954"
    transform="matrix(1.0316667,0,0,1.0316667,-2.0266671,-2.0266671)"><polygon
-     class="st0"
      points="66.4,11.5 60.3,21.3 92.1,40.8 110.4,11.5 "
      id="polygon9"
      style="fill:#00b5de;fill-opacity:1"
