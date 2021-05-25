@@ -2026,6 +2026,23 @@
         "aliases": []
     },
     {
+        "name": "knockout",
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e42e16",
+        "aliases": []
+    },
+    {
         "name": "krakenjs",
         "tags": [
             "nodejs",
@@ -2064,6 +2081,16 @@
         },
         "color": "#486bb3",
         "aliases": []
+    },
+    {
+      "name": "labview",
+      "tags": ["language"],
+      "versions": {
+        "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+        "font": ["plain", "plain-wordmark"]
+      },
+      "color": "#fed500",
+      "aliases": []
     },
     {
         "name": "laravel",
@@ -2218,6 +2245,28 @@
             ]
         },
         "color": "#8d6748",
+        "aliases": []
+    },
+    {
+        "name": "modx",
+        "tags": [
+            "cms",
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00decc",
         "aliases": []
     },
     {
