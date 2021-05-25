@@ -2016,6 +2016,23 @@
         "aliases": []
     },
     {
+        "name": "knockout",
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e42e16",
+        "aliases": []
+    },
+    {
         "name": "krakenjs",
         "tags": [
             "nodejs",
