@@ -2056,6 +2056,16 @@
         "aliases": []
     },
     {
+      "name": "labview",
+      "tags": ["language"],
+      "versions": {
+        "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+        "font": ["plain", "plain-wordmark"]
+      },
+      "color": "#fed500",
+      "aliases": []
+    },
+    {
         "name": "laravel",
         "tags": [
             "php",
