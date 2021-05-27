@@ -383,6 +383,16 @@
         "aliases": []
     },
     {
+        "name": "bulma",
+        "tags": ["css", "framework"],
+        "versions": {
+          "svg": ["plain"],
+          "font": ["plain"]
+        },
+        "color": "#00d1b2",
+        "aliases": []
+  	},
+    {
         "name": "bower",
         "tags": [
             "package",
@@ -3219,6 +3229,16 @@
             ]
         },
         "color": "#5FB832",
+        "aliases": []
+    },
+    {
+        "name": "spss",
+        "tags": ["package", "statistics"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#cc1e4c",
         "aliases": []
     },
     {
