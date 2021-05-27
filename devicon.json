@@ -1922,6 +1922,16 @@
         "aliases": []
     },
     {
+        "name": "jest",
+        "tags": ["testing", "javascript"],
+        "versions": {
+          "svg": ["plain"],
+          "font": ["plain"]
+        },
+        "color": "#99425b",
+        "aliases": []
+    },
+    {
         "name": "jenkins",
         "tags": [
             "platform",
