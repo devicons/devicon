@@ -2997,6 +2997,16 @@
         "aliases": []
     },
     {
+        "name": "rstudio",
+        "tags": ["editor", "package", "statistics"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#75aadb",
+        "aliases": []
+    },
+    {
         "name": "sass",
         "tags": [
             "pre-processor",
