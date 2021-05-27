@@ -2359,6 +2359,16 @@
         "aliases": []
     },
     {
+        "name": "minitab",
+        "tags": ["package", "statistics"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#8dc63f",
+        "aliases": []
+    },
+    {
         "name": "nestjs",
         "tags": [
             "framework"
@@ -2594,6 +2604,16 @@
             ]
         },
         "color": "#212177",
+        "aliases": []
+    },
+    {
+        "name": "phalcon",
+        "tags": ["php", "framework"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#76c39b",
         "aliases": []
     },
     {
@@ -3004,6 +3024,16 @@
             ]
         },
         "color": "#1B88CA",
+        "aliases": []
+    },
+    {
+        "name": "rstudio",
+        "tags": ["editor", "package", "statistics"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#75aadb",
         "aliases": []
     },
     {

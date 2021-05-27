@@ -160,33 +160,13 @@ function cleanUp() {
  * This must be passed through the commandline arguments.
  */
 function optimizeSvg() {
-  let svgPaths = getAddedModifiedSvg(yargs.argv.filesAddedJson,
-    yargs.argv.filesModifiedJson)
-
-  return gulp.src(svgPaths)
+  let svgGlob = JSON.parse(yargs.argv.svgFiles)
+  console.log("Optimizing these files: ", svgGlob)
+  return gulp.src(svgGlob)
     .pipe(svgmin(configOptionCallback))
     .pipe(gulp.dest(file => {
       return file.base
     }))
-}
-
-/**
- * Get the svgs added and modified from the '/icons' folder only.
- * @param {*} filesAddedJson - the files that were added in this commit.
- * @param {*} filesModifiedJson - the files that were modified in this commit.
- * @returns a list of the svg file paths that were added/modified in this pr as Path. 
- * It will only return icons in '/icons' path (see https://github.com/devicons/devicon/issues/505)
- */
-function getAddedModifiedSvg(filesAddedJson, filesModifiedJson) {
-  const filesAdded = JSON.parse(filesAddedJson),
-    filesModified = JSON.parse(filesModifiedJson)
-
-  files = filesAdded.concat(filesModified)
-  return files.filter(filename => {
-    if (path.extname(filename) == ".svg" 
-      && path.dirname(filename).includes('icons/'))
-        return filename
-  })
 }
 
 /**
