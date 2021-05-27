@@ -383,6 +383,16 @@
         "aliases": []
     },
     {
+        "name": "bulma",
+        "tags": ["css", "framework"],
+        "versions": {
+          "svg": ["plain"],
+          "font": ["plain"]
+        },
+        "color": "#00d1b2",
+        "aliases": []
+  	},
+    {
         "name": "bower",
         "tags": [
             "package",
