@@ -2587,6 +2587,16 @@
         "aliases": []
     },
     {
+        "name": "phalcon",
+        "tags": ["php", "framework"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#76c39b",
+        "aliases": []
+    },
+    {
         "name": "photoshop",
         "tags": [
             "editor",
