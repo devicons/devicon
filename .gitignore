@@ -4,3 +4,8 @@ node_modules
 geckodriver.log
 __pycache__
 *.pyc
+
+
+# DO NOT ADD THE FOLLOWING FILES TO THE GITIGNORE
+# new_icons.png - this is used by peek bot
+# screenshots/ - this is used by build bot
