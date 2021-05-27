@@ -3182,6 +3182,16 @@
         "aliases": []
     },
     {
+        "name": "spss",
+        "tags": ["package", "statistics"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#cc1e4c",
+        "aliases": []
+    },
+    {
         "name": "microsoftsqlserver",
         "tags": [
             "database"
