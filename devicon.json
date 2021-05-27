@@ -1118,6 +1118,16 @@
         "aliases": []
     },
     {
+        "name": "excel",
+        "tags": ["spreadsheet", "statistics"],
+        "versions": {
+          "svg": ["plain"],
+          "font": ["plain"]
+        },
+        "color": "#1d7044",
+        "aliases": []
+  	},
+    {
         "name": "express",
         "tags": [
             "framework"
