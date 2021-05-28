@@ -507,6 +507,16 @@
         "aliases": []
     },
     {
+        "name": "circleci",
+        "tags": ["integration", "platform"],
+        "versions": {
+          "svg": ["plain", "plain-wordmark"],
+          "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#343434",
+        "aliases": []
+    },
+    {
         "name": "clojure",
         "tags": [
             "language"
@@ -2023,6 +2033,16 @@
             ]
         },
         "color": "#F37726",
+        "aliases": []
+    },
+    {
+        "name": "karma",
+        "tags": ["testing", "test-runner"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#56c5a8",
         "aliases": []
     },
     {
