@@ -14,10 +14,7 @@ def main():
     runner = None
     try:
         args = arg_getters.get_selenium_runner_args(True)
-        new_icons = filehandler.find_new_icons(args.devicon_json_path, args.icomoon_json_path)
-
-        if len(new_icons) == 0:
-            raise Exception("No files need to be uploaded. Ending script...")
+        new_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
         filtered_icon = find_object_added_in_this_pr(new_icons, args.pr_title)
