@@ -6,13 +6,14 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <h2>Table of Content</h2>
 <ul>
   <li><a href="#terms">Terms</a></li>
+  <li><a href="#iconRequirements">What Icons Do We Accept?</a></li>
+  <li><a href="#requestingIcon">Requesting An Icon</a></li>
   <li><a href="#overview">Overview on Submitting Icon (start here if new)</a></li>
   <li><a href="#versionNaming">Naming Conventions</a></li>
   <li><a href="#SVGStandards">SVG Standards</a></li>
   <li><a href="#orgGuidelines">Organizational Guidelines</a></li>
   <li><a href="#updateDevicon">Updating the <code>devicon.json</code></a></li>
   <li><a href="#example">Example of Submitting An Icon</a></li>
-  <li><a href="#requestingIcon">Requesting An Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
   <li><a href="#buildScript">The Build Script: how it works and its quirks</a></li>
   <li><a href="#discordServer">Discord server</a></li>
@@ -28,6 +29,37 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>"SVG/<code>SVG</code>" refers to the <code>svg</code> versions of the Icons.</li>
   <li>"icon" (lowercase) refers specficially to the font icon versions of the Icons.</li>
 </ol>
+
+<hr>
+<h2 id='iconRequirements'>What Icons Do We Accept?</h2>
+<p>Devicon only accepts Icons of development languages and tools. </p>
+<p><b>Development</b> refers to programming or programming related jobs.</p>
+<p><b>Tools</b> can be software, OS, services, etc... that helps with development. It must be specifically related to development (so softwares like Microsoft Word or Google Calendar won't be accepted since it's too general).</p>
+
+<b>Special Cases (see <a href='https://github.com/devicons/devicon/discussions/353'>this discussion</a> for more details)</b>
+<ul>
+  <li>Tech companies used to be accepted in the repo. However, we do not accept them any more. Icons like Facebook, Twitter, etc... are kept due to backwards compatibility. </li>
+    <ul>
+    <li>We still accept their icons if they represents a service and not the company itself.</li>
+    <li>Ex. AWS is accepted since their names refer to their services. We will not accept Amazon since that's the parent company that includes non-tech related tools</li>
+    </ul>
+  <li>Related fields like graphic designs or game development. Since many "development" jobs require people to know related fields, some softwares will be accepted in Devicon even though they aren't strictly "development tools". </li>
+    <ul>
+      <li>ex. some Adobe products, game engines, CMS, etc... See <a href='https://github.com/devicons/devicon/pull/336'> for more details.</a></li>
+    </ul>
+  <li>General tools that are well known in the tech industries. Things like Trello, Slack, etc... are accepted under this category. Unfortunately, we won't accept Discord since its use are still too general. This will be treated on a case by case basis.</li>
+</ul>
+
+
+<hr>
+<h2 id='requestingIcon'>Requesting an Icon</h2>
+<p>To request an icon, you can create an issue in the repo. Please follow these simple guidelines:</p>
+<ul>
+  <li>Search for other issues already requesting the icon</li>
+  <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
+  <li>Please create a separate issues for each icon</li>
+  <li>Optional: include links where the icon can be found</li>
+</ul>
 
 <hr>
 <h2 id="overview">Overview on Submitting Icons</h2>
@@ -293,16 +325,6 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
   </li>
   <li>For the rest of the steps, you can follow <a href="#overview">Overview on Submitting Icon</a></li>
 </ol>
-
-<hr>
-<h2 id='requestingIcon'>Requesting an Icon</h2>
-<p>To request an icon, you can create an issue in the repo. Please follow these simple guidelines:</p>
-<ul>
-  <li>Search for other issues already requesting the icon</li>
-  <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
-  <li>Please create a separate issues for each icon</li>
-  <li>Optional: include links where the icon can be found</li>
-</ul>
 
 <hr>
 <h2 id='teams'>Maintainer/Reviewer/Teams</h2>
