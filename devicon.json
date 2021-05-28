@@ -3057,6 +3057,24 @@
         "aliases": []
     },
     {
+        "name": "salesforce",
+        "tags": [
+            "platform",
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00a1e0",
+        "aliases": []
+    },
+    {
         "name": "rstudio",
         "tags": ["editor", "package", "statistics"],
         "versions": {
