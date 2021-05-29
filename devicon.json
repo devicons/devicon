@@ -507,6 +507,16 @@
         "aliases": []
     },
     {
+        "name": "circleci",
+        "tags": ["integration", "platform"],
+        "versions": {
+          "svg": ["plain", "plain-wordmark"],
+          "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#343434",
+        "aliases": []
+    },
+    {
         "name": "clojure",
         "tags": [
             "language"
@@ -2036,6 +2046,16 @@
         "aliases": []
     },
     {
+        "name": "karma",
+        "tags": ["testing", "test-runner"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#56c5a8",
+        "aliases": []
+    },
+    {
         "name": "kotlin",
         "tags": [
             "language"
@@ -3047,6 +3067,24 @@
         "aliases": []
     },
     {
+        "name": "salesforce",
+        "tags": [
+            "platform",
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00a1e0",
+        "aliases": []
+    },
+    {
         "name": "rstudio",
         "tags": ["editor", "package", "statistics"],
         "versions": {
@@ -3128,6 +3166,25 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "shopware",
+        "tags": [
+            "cloud",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#179eff",
+        "aliases": []
     },
     {
         "name": "sketch",
@@ -3658,6 +3715,23 @@
             ]
         },
         "color": "#41B883",
+        "aliases": []
+    },
+    {
+        "name": "vuestorefront",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5ecf7b",
         "aliases": []
     },
     {

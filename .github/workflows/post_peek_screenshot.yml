@@ -43,14 +43,14 @@ jobs:
       - name: Upload screenshot of the newly made icons gotten from the artifacts
         id: icons_overview_img_step
         if: env.PEEK_STATUS == 'success' && success()
-        uses: devicons/public-upload-to-imgur@v2.2.1
+        uses: devicons/public-upload-to-imgur@v2.2.2
         with:
           path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
         id: icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.1
+        uses: devicons/public-upload-to-imgur@v2.2.2
         if: env.PEEK_STATUS == 'success' && success()
         with:
           path: ./screenshots/screenshot_*.png
