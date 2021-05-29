@@ -1,6 +1,6 @@
 ---
 name: New Feature
-about: Add a new feature to the repo.
+about: Add a new feature to the repository.
 title: 'New Feature: [NAME]'
 labels: 'enhancement'
 assignees: ''

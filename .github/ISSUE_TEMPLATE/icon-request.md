@@ -11,4 +11,4 @@ assignees: ''
 *Short description of why you think this icon belongs in our project.*
 
 ### Links
-*Provide links to the icon's official website/repo. Anywhere that shows us what the technology is about and its official logo. If available, also provide some resources (svg's) where the icon can be found (Font Awesome, Icomoon, etc..)*
+*Provide links to the icon's official website/repository. Anywhere that shows us what the technology is about and its official logo. If available, also provide some resources (SVG's) where the icon can be found (Font Awesome, Icomoon, etc..).*
