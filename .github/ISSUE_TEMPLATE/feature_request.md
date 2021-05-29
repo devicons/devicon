@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ### Problem 
-*Tell us about the current problem that you face that this feature might helps you with*
+*Tell us about the current problem that you face that this feature might help you with.*
 
 ### Suggested Feature
 *Short description about this feature*
