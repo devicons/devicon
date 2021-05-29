@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ### Bug
-*Short description about the bug that you found. Provides images/code if applicable.*
+*Short description of the bug that you found. Provide images/code if applicable.*
 
 ### How to replicate the bug
 *What should we do to find this bug*
