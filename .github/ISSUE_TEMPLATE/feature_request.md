@@ -11,7 +11,7 @@ assignees: ''
 *Tell us about the current problem that you face that this feature might help you with.*
 
 ### Suggested Feature
-*Short description about this feature*
+*Short description of the feature.*
 
 ### Why we should have this feature
 *List any extra benefits, other than solving your problem, that this feature will bring to the repo. If none, leaves blank.*
