@@ -3612,6 +3612,22 @@
         "aliases": []
     },
     {
+        "name": "unix",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#4051b5",
+        "aliases": []
+    },
+    {
         "name": "uwsgi",
         "tags": [
             "hosting"
