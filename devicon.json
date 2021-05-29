@@ -557,6 +557,16 @@
         "aliases": []
     },
     {
+        "name": "codecov",
+        "tags": ["platform", "integration"],
+        "versions": {
+          "svg": ["plain"],
+          "font": ["plain"]
+        },
+        "color": "#e0225c",
+        "aliases": []
+    },
+    {
         "name": "codeigniter",
         "tags": [
             "php",
