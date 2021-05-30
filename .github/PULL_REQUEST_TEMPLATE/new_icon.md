@@ -18,5 +18,5 @@ assignees: ''
 Refer to the [`CONTRIBUTING.md`](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#contributing-to-devicon) for more details.
 
 
-**Link to the official page to prove your SVG is correct and up to date**
+**Link to the official page to prove your SVG is correct and up to date.**
 *Link goes here*
