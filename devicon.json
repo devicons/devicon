@@ -557,6 +557,16 @@
         "aliases": []
     },
     {
+        "name": "codecov",
+        "tags": ["platform", "integration"],
+        "versions": {
+          "svg": ["plain"],
+          "font": ["plain"]
+        },
+        "color": "#e0225c",
+        "aliases": []
+    },
+    {
         "name": "codeigniter",
         "tags": [
             "php",
@@ -2252,6 +2262,27 @@
         "aliases": []
     },
     {
+        "name": "magento",
+        "tags": [
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line"
+            ]
+        },
+        "color": "#f26322",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "tags": [
             "javascript"
@@ -3609,6 +3640,22 @@
             ]
         },
         "color": "#dd4814",
+        "aliases": []
+    },
+    {
+        "name": "unix",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#4051b5",
         "aliases": []
     },
     {
