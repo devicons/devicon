@@ -507,6 +507,16 @@
         "aliases": []
     },
     {
+        "name": "circleci",
+        "tags": ["integration", "platform"],
+        "versions": {
+          "svg": ["plain", "plain-wordmark"],
+          "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#343434",
+        "aliases": []
+    },
+    {
         "name": "clojure",
         "tags": [
             "language"
@@ -544,6 +554,16 @@
             ]
         },
         "color": "#96ca4b",
+        "aliases": []
+    },
+    {
+        "name": "codecov",
+        "tags": ["platform", "integration"],
+        "versions": {
+          "svg": ["plain"],
+          "font": ["plain"]
+        },
+        "color": "#e0225c",
         "aliases": []
     },
     {
@@ -2026,6 +2046,16 @@
         "aliases": []
     },
     {
+        "name": "karma",
+        "tags": ["testing", "test-runner"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#56c5a8",
+        "aliases": []
+    },
+    {
         "name": "kotlin",
         "tags": [
             "language"
@@ -2229,6 +2259,27 @@
             ]
         },
         "color": "#1FA6CA",
+        "aliases": []
+    },
+    {
+        "name": "magento",
+        "tags": [
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line"
+            ]
+        },
+        "color": "#f26322",
         "aliases": []
     },
     {
@@ -3039,6 +3090,24 @@
         "aliases": []
     },
     {
+        "name": "salesforce",
+        "tags": [
+            "platform",
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00a1e0",
+        "aliases": []
+    },
+    {
         "name": "rstudio",
         "tags": ["editor", "package", "statistics"],
         "versions": {
@@ -3120,6 +3189,25 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "shopware",
+        "tags": [
+            "cloud",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#179eff",
+        "aliases": []
     },
     {
         "name": "sketch",
@@ -3557,6 +3645,22 @@
         "aliases": []
     },
     {
+        "name": "unix",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#4051b5",
+        "aliases": []
+    },
+    {
         "name": "uwsgi",
         "tags": [
             "hosting"
@@ -3650,6 +3754,23 @@
             ]
         },
         "color": "#41B883",
+        "aliases": []
+    },
+    {
+        "name": "vuestorefront",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5ecf7b",
         "aliases": []
     },
     {
