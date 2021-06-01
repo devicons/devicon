@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug/issue that you found in the SVGs, CSS files, etc...
+about: Report a bug/issue that you found in the SVGs, CSS files, etc.
 title: 'Bug Report: [NAME]'
 labels: 'bug'
 assignees: ''
