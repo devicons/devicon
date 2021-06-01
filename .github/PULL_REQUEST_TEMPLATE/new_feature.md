@@ -13,5 +13,5 @@ assignees: ''
 
 ## Notes
 
-*List anything note-worthy here (potential issues, this needs to merged to `master` before working, etc....).*
+*List anything note-worthy here (potential issues, this needs to be merged to `master` before working, etc....).*
 *Don't forget to link any issues that this PR will solved.*
