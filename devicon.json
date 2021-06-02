@@ -1655,6 +1655,27 @@
         "aliases": []
     },
     {
+        "name": "godot",
+        "tags": [
+            "game-engine",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#478cbf",
+        "aliases": []
+    },
+    {
         "name": "haskell",
         "tags": [
             "language",
