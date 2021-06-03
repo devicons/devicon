@@ -3793,6 +3793,27 @@
         "aliases": []
     },
     {
+        "name": "vscode",
+        "tags": [
+            "editor",
+            "ide"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3C99D4",
+        "aliases": []
+    },
+    {
         "name": "weblate",
         "tags": [
             "localization"
