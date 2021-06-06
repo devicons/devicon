@@ -2046,6 +2046,27 @@
         "aliases": []
     },
     {
+        "name": "julia",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#28a745",
+        "aliases": []
+    },
+    {
         "name": "jupyter",
         "tags": [
             "programming",
