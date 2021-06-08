@@ -4,7 +4,7 @@ from selenium.common.exceptions import TimeoutException
 import re
 import subprocess
 import json
-from typing import List
+from typing import List, Dict
 
 
 # pycharm complains that build_assets is an unresolved ref
@@ -26,21 +26,24 @@ def main():
 
         print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n")
 
-        # optimize_svgs(new_icons, args.icons_folder_path)
+        print("Begin optimizing files")
+        optimize_svgs(new_icons, args.icons_folder_path)
+
+        print("Updating the icomoon json")
         update_icomoon_json(new_icons, args.icomoon_json_path)
 
-        # icon_svgs = filehandler.get_svgs_paths(
-        #     new_icons, args.icons_folder_path, icon_versions_only=True)
-        # runner = SeleniumRunner(args.download_path,
-        #                         args.geckodriver_path, args.headless)
-        # runner.upload_icomoon(args.icomoon_json_path)
-        # runner.upload_svgs(icon_svgs)
+        icon_svgs = filehandler.get_svgs_paths(
+            new_icons, args.icons_folder_path, icon_versions_only=True)
+        runner = SeleniumRunner(args.download_path,
+                                args.geckodriver_path, args.headless)
+        runner.upload_icomoon(args.icomoon_json_path)
+        runner.upload_svgs(icon_svgs)
 
-        # zip_name = "devicon-v1.0.zip"
-        # zip_path = Path(args.download_path, zip_name)
-        # runner.download_icomoon_fonts(zip_path)
-        # filehandler.extract_files(str(zip_path), args.download_path)
-        # filehandler.rename_extracted_files(args.download_path)
+        zip_name = "devicon-v1.0.zip"
+        zip_path = Path(args.download_path, zip_name)
+        runner.download_icomoon_fonts(zip_path)
+        filehandler.extract_files(str(zip_path), args.download_path)
+        filehandler.rename_extracted_files(args.download_path)
         print("Task completed.")
     except TimeoutException as e:
         util.exit_with_err("Selenium Time Out Error: \n" + str(e))
@@ -75,7 +78,6 @@ def optimize_svgs(new_icons: List[str], icons_folder_path: str):
     :param new_icons - the new icons that need to be optimized.
     :param icons_folder_path - the path to the /icons folder.
     """
-    print("Begin optimizing files")
     svgs = filehandler.get_svgs_paths(new_icons, icons_folder_path, icon_versions_only=False)
     start = 0
     step = 10
@@ -92,17 +94,33 @@ def update_icomoon_json(new_icons: List[str], icomoon_json_path: str):
     it later.
     """
     icomoon_json = filehandler.get_json_file_content(icomoon_json_path)
-    wrapper_function = lambda icomoon_icon : find_icomoon_icon_not_in_new_icons(icomoon_icon, new_icons)
+    cur_len = len(icomoon_json["icons"])
+    messages = []
+
+    wrapper_function = lambda icomoon_icon : find_icomoon_icon_not_in_new_icons(
+        icomoon_icon, new_icons, messages)
     icons_to_keep = filter(wrapper_function, icomoon_json["icons"])
-    icomoon_json["icons"] = icons_to_keep
-    print(len(icons_to_keep))
-    # filehandler.write_to_file(icomoon_json_path, json.dumps(icomoon_json))
+    icomoon_json["icons"] = list(icons_to_keep)
+
+    new_len = len(icomoon_json["icons"])
+    print(f"Update completed. Removed {cur_len - new_len} icons:", *messages, sep='\n')
+    filehandler.write_to_file(icomoon_json_path, json.dumps(icomoon_json))
   
 
-def find_icomoon_icon_not_in_new_icons(icomoon_icon, new_icons):
+def find_icomoon_icon_not_in_new_icons(icomoon_icon: Dict, new_icons: List, messages: List):
+    """
+    Find all the icomoon icons that are not listed in the new icons.
+    This also add logging for which icons were removed.
+    :param icomoon_icon - a dict object from the icomoon.json's `icons` attribute.
+    :param new_icons - a list of new icons. Each element is an object from the `devicon.json`.
+    :param messages - an empty list where the function can attach logging on which 
+    icon were removed.
+    """
     for new_icon in new_icons:
         pattern = re.compile(f"^{new_icon['name']}-")
         if pattern.search(icomoon_icon["properties"]["name"]):
+            message = f"-'{icomoon_icon['properties']['name']}' cause it matches '{new_icon['name']}'"
+            messages.append(message)
             return False
     return True
 
