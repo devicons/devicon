@@ -1655,6 +1655,27 @@
         "aliases": []
     },
     {
+        "name": "godot",
+        "tags": [
+            "game-engine",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#478cbf",
+        "aliases": []
+    },
+    {
         "name": "haskell",
         "tags": [
             "language",
@@ -2022,6 +2043,27 @@
             ]
         },
         "color": "#0769ad",
+        "aliases": []
+    },
+    {
+        "name": "julia",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#28a745",
         "aliases": []
     },
     {
@@ -3771,6 +3813,27 @@
             ]
         },
         "color": "#5ecf7b",
+        "aliases": []
+    },
+    {
+        "name": "vscode",
+        "tags": [
+            "editor",
+            "ide"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3C99D4",
         "aliases": []
     },
     {
