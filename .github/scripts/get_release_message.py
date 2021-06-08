@@ -1,75 +1,36 @@
 import requests
-from build_assets import arg_getters
+from build_assets import arg_getters, api_handler
 import re
 
 def main():
     print("Please wait a few seconds...")
     args = arg_getters.get_release_message_args()
-    queryPath = "https://api.github.com/repos/devicons/devicon/pulls?accept=application/vnd.github.v3+json&state=closed&per_page=100"
-    stopPattern = r"^(r|R)elease v"
-    headers = {
-        "Authorization": f"token {args.token}"
-    }
 
-    response = requests.get(queryPath, headers=headers)
-    if not response:
-        print(f"Can't query the GitHub API. Status code is {response.status_code}. Message is {response.text}")
-        return
-
-    data = response.json()
+    # fetch first page by default
+    data = api_handler.get_merged_pull_reqs_since_last_release(args.token)
     newIcons = []
     features = []
 
+    print("Parsing through the pull requests")
     for pullData in data:
-        if re.search(stopPattern, pullData["title"]):
-            break
-
-        authors = findAllAuthors(pullData, headers)
+        authors = api_handler.find_all_authors(pullData, args.token)
         markdown = f"- [{pullData['title']}]({pullData['html_url']}) by {authors}."
 
-        if isFeatureIcon(pullData):
+        if api_handler.is_feature_icon(pullData):
             newIcons.append(markdown)
         else:
             features.append(markdown)
 
+    print("Constructing message")
     thankYou = "A huge thanks to all our maintainers and contributors for making this release possible!"
-    iconTitle = "**{} New Icons**\n".format(len(newIcons))
-    featureTitle = "**{} New Features**\n".format(len(features))
-    finalString = "{0}\n\n {1}{2}\n\n {3}{4}".format(thankYou, 
+    iconTitle = f"**{len(newIcons)} New Icons**"
+    featureTitle = f"**{len(features)} New Features**"
+    finalString = "{0}\n\n {1}\n{2}\n\n {3}\n{4}".format(thankYou, 
         iconTitle, "\n".join(newIcons), featureTitle, "\n".join(features))
 
     print("--------------Here is the build message--------------\n", finalString)
-
-
-"""
- Check whether the pullData is a feature:icon PR.
- :param pullData 
- :return true if the pullData has a label named "feature:icon"
-"""
-def isFeatureIcon(pullData):
-    for label in pullData["labels"]:
-        if label["name"] == "feature:icon":
-            return True
-    return False
-
-
-"""
-Find all the authors of a PR based on its commits.
-:param pullData - the data of a pull request.
-"""
-def findAllAuthors(pullData, authHeader):
-    response = requests.get(pullData["commits_url"], headers=authHeader)
-    if not response:
-        print(f"Can't query the GitHub API. Status code is {response.status_code}")
-        print("Response is: ", response.text)
-        return
-
-    commits = response.json()
-    authors = set()  # want unique authors only
-    for commit in commits:
-        authors.add("@" + commit["author"]["login"]) 
-    return ", ".join(list(authors))
-
+    print("Script finished")
+    
 
 if __name__ == "__main__":
     main()
