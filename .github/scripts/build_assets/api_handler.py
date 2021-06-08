@@ -33,28 +33,28 @@ def get_merged_pull_reqs(token, page):
         if merged_pull_req["merged_at"] is not None]
 
 
-def is_feature_icon(pullRegData):
+def is_feature_icon(pull_req_data):
     """
     Check whether the pullData is a feature:icon PR.
-    :param pullReqData - the data on a specific pull request from GitHub.
+    :param pull_req_data - the data on a specific pull request from GitHub.
     :return true if the pullData has a label named "feature:icon"
     """
-    for label in pullRegData["labels"]:
+    for label in pull_req_data["labels"]:
         if label["name"] == "feature:icon":
             return True
     return False
 
 
-def find_all_authors(pullReqData, token):
+def find_all_authors(pull_req_data, token):
     """
     Find all the authors of a PR based on its commits.
-    :param pullReqData - the data on a specific pull request from GitHub.
+    :param pull_req_data - the data on a specific pull request from GitHub.
     :param token - a GitHub API token.
     """
     headers = {
         "Authorization": f"token {token}"
     }
-    response = requests.get(pullReqData["commits_url"], headers=headers)
+    response = requests.get(pull_req_data["commits_url"], headers=headers)
     if not response:
         print(f"Can't query the GitHub API. Status code is {response.status_code}")
         print("Response is: ", response.text)
