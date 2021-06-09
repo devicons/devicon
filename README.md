@@ -187,12 +187,10 @@ npm install
 ```
 
 <h5>Build the font and export stylesheet</h5>
-Open <a href="https://icomoon.io/app/#/select">icomoon.io</a> and import <a href="/icomoon.json">icomoon.json</a>. Choose <i>yes</i> when beeing asked
-if you like to restore the settings stored in the configuration file.
+Open <a href="https://icomoon.io/app/#/select">icomoon.io</a> and import <a href="/icomoon.json">icomoon.json</a>. Choose <i>yes</i> when being asked
+if you would like to restore the settings stored in the configuration file.
 
-The next step is to click on <b>Generate font</b> and download the resulting archive. Extract it
-contents and you will find a <a href="/fonts">fonts</a> directory next to a <code>style.css</code>. Replace the content of the <code>fonts</code> folder,
-rename the <code>style.css</code> to <a href="/devicon.css">devicon.css</a> and follow the next step to build the final stylesheet.
+The next step is to click on <b>Generate font</b> and download the resulting archive. Extract the contents and you will find a <a href="/fonts">fonts</a> directory next to a <code>style.css</code>. Replace the contents of the <code>fonts</code> folder, rename <code>style.css</code> as <a href="/devicon.css">devicon.css</a> and follow the next step to build the final stylesheet.
 
 <h5>Build and minify stylesheet</h5>
 <p>
