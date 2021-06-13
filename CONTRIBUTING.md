@@ -137,10 +137,9 @@ First of all, thanks for taking the time to contribute! This project can only gr
     The <b>original</b> SVG version do not need to be simple and can contain numerous colors/gradients. However, if it's intended to be made into an icon, keep it simple.
   </li>
   <li>
-    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either <b>original</b> or <b>plain</b>). You can then add an alias in the <code>devicon.json</code> so they can be found with either the <b>original</b> or <b>plain</b> naming convention. 
+    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either <b>original</b> or <b>plain</b>) and name them <b>original</b>. 
       <ul>
-        <li>This only applies to font icon versions only, not the SVG versions.</li>
-        <li>Aliases are no longer mandatory. If you are wondering which name to use, just pick <code>original</code></li>
+        <li>If you are a long time contributor: aliases are no longer mandatory. If you are wondering which name to use, just pick <code>original</code></li>
       </ul>
   </li>
 </ul>
