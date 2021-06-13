@@ -67,7 +67,8 @@ def get_icons_for_building(devicon_json_path: str, token: str):
     for pull_req in pull_reqs:
         if api_handler.is_feature_icon(pull_req):
             filtered_icon = util.find_object_added_in_this_pr(all_icons, pull_req["title"])
-            new_icons.append(filtered_icon)
+            if filtered_icon not in new_icons:
+                new_icons.append(filtered_icon)
     return new_icons
 
 
