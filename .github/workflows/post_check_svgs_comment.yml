@@ -35,22 +35,6 @@ jobs:
         with:
           path: ./svg_err_messages/svg_err_messages.txt
 
-      # - name: Comment on the PR about the result - Success
-      #   uses: jungwinter/comment@v1 # let us comment on a specific PR
-      #   if: success() && steps.err_message_reader.outputs.content == '1'
-      #   env:
-      #     MESSAGE: |
-      #       Hi!
-      #       I'm Devicons' SVG-Checker Bot and everything looks great. Good job!
-
-      #       Have a nice day, 
-      #       SVG-Checker Bot :grin:
-      #   with:
-      #     type: create
-      #     issue_number: ${{ steps.pr_num_reader.outputs.content }}
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     body: ${{ env.MESSAGE }}
-
       - name: Comment on the PR about the result - SVG Error
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         if: success() && (steps.err_message_reader.outputs.content != '0' && steps.err_message_reader.outputs.content != '1')
@@ -78,11 +62,6 @@ jobs:
           issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
-
-      # if we posted error messages before, we fail this entire workflow
-      - name: Fail workflow is there is an error.
-        uses: cutenode/action-always-fail@v1.0.1
-        if: success() && (steps.err_message_reader.outputs.content != '0' && steps.err_message_reader.outputs.content != '1')
 
       - name: Comment on the PR about the result - Failure
         uses: jungwinter/comment@v1 # let us comment on a specific PR
