@@ -17,7 +17,8 @@ def main():
         new_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
-        filtered_icon = find_object_added_in_this_pr(new_icons, args.pr_title)
+        filtered_icon = util.find_object_added_in_this_pr(new_icons, args.pr_title)
+        check_devicon_object(filtered_icon)
         print("Icon being checked:", filtered_icon, sep = "\n", end='\n\n')
 
         runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
@@ -35,39 +36,12 @@ def main():
         runner.close() 
 
 
-def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
-    """
-    Find the icon name from the PR title. 
-    :param icons, a list of the font objects found in the devicon.json.
-    :pr_title, the title of the PR that this workflow was called on.
-    :return a dictionary with the "name"
-    entry's value matching the name in the pr_title.
-    :raise If no object can be found, raise an Exception.
-    """
-    try:
-        pattern = re.compile(r"(?<=^new icon: )\w+ (?=\(.+\))", re.I)
-        icon_name = pattern.findall(pr_title)[0].lower().strip()  # should only have one match
-        icon =  [icon for icon in icons if icon["name"] == icon_name][0]
-        check_devicon_object(icon, icon_name)
-        return icon
-    except IndexError:  # there are no match in the findall()
-        raise Exception("Couldn't find an icon matching the name in the PR title.")
-    except ValueError as e:
-        raise Exception(str(e))
-
-
-def check_devicon_object(icon: dict, icon_name: str):
+def check_devicon_object(icon: dict):
     """
     Check that the devicon object added is up to standard.
     :return a string containing the error messages if any.
     """
     err_msgs = []
-    try:
-        if icon["name"] != icon_name:
-            err_msgs.append("- 'name' value is not: " + icon_name)
-    except KeyError:
-        err_msgs.append("- missing key: 'name'.")
-
     try:
         for tag in icon["tags"]:
             if type(tag) != str:
@@ -108,9 +82,10 @@ def check_devicon_object(icon: dict, icon_name: str):
         err_msgs.append("- missing key: 'aliases'.")
     
     if len(err_msgs) > 0:
-        message = "Error found in 'devicon.json' for '{}' entry: \n{}".format(icon_name, "\n".join(err_msgs))
+        message = "Error found in 'devicon.json' for '{}' entry: \n{}".format(icon["name"], "\n".join(err_msgs))
         raise ValueError(message)
     return ""
+
 
 if __name__ == "__main__":
     main()
