@@ -18,10 +18,13 @@ jobs:
           npm install
 
       - name: Executing build and create fonts via icomoon
+        shell: cmd
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
           python ./.github/scripts/icomoon_build.py 
           ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
-          ./devicon.json ./icons ./ --headless
+          ./devicon.json ./icons ./ %GITHUB_TOKEN% --headless
 
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
