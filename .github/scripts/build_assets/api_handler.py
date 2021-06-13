@@ -63,7 +63,13 @@ def find_all_authors(pull_req_data, token):
     commits = response.json()
     authors = set()  # want unique authors only
     for commit in commits:
-        authors.add(commit["commit"]["author"]["name"]) 
+        try:
+            # this contains proper referenceable github name
+            authors.add(commit["author"]["login"]) 
+        except TypeError:
+            # special case
+            authors.add(commit["commit"]["author"]["name"]) 
+            print(f"This URL didn't have an `author` attribute: {pull_req_data['commits_url']}")
     return ", ".join(["@" + author for author in list(authors)])
 
 
