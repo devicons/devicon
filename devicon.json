@@ -3509,14 +3509,15 @@
         ],
         "versions": {
             "svg": [
+                "original-wordmark",
                 "plain"
-                
             ],
             "font": [
+                "original-wordmark",
                 "plain"
             ]
         },
-        "color": "#38b2ac",
+        "color": "#2298BD",
         "aliases": []
     },
     {
