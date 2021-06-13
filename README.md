@@ -58,7 +58,7 @@
 <h2 id="about">About the project</h2>
 <p>
     Devicon aims to gather all logos representing development languages and tools.
-    Each icon comes in several versions: font/SVG, original/plain/line, colored/not colored, wordmark/no wordmark.
+    Each icon comes in several versions: font/svg, original/plain/line, colored/not colored, wordmark/no wordmark.
     Devicon has 150+ icons. And it's growing!<br />
 </p>
 <p>
@@ -68,17 +68,14 @@
 <sub>
     All product names, logos, and brands are property of their respective owners. All company, product and service 
     names used in this website are for identification purposes only. Use of these names, logos, and brands does not 
-    imply endorsement. Usage of these logos should be done according to the company/brand/service's brand policy.
+    imply endorsement.
 </sub>
-<p>
-    Thank you to our contributors and the <a href="https://icomoon.io/#home">IcoMoon app</a>. Devicon would not be possible without you.
-</p>
 
 
 <h2 id="getting-started">Getting started</h2>
 <p>
     For a super fast setup go check <a href="https://devicon.dev">devicon.dev</a>.<br />
-    You can either <a href="#getting-started-svg">use the raw SVG</a> icons or our <a href="#getting-started-font">devicon font</a> (which is 
+    You can either <a href="#getting-started-svg">use the raw svg</a> icons or our <a href="#getting-started-font">devicon font</a> (which is 
     also available via CDN).
 </p>
 
@@ -110,46 +107,42 @@ yarn add devicon
 <p>Start using icons with <code>&lt;i&gt;</code>-tag</p>
 
 ```html
-<!--  for devicon plain version -->
-<i class="devicon-devicon-plain"></i>
+<!--  for git plain version -->
+<i class="devicon-git-plain"></i>
 
-<!--  for devicon plain version with wordmark -->
-<i class="devicon-devicon-plain-wordmark"></i>
+<!--  for git plain version with wordmark -->
+<i class="devicon-git-plain-wordmark"></i>
 
-<!--  for devicon plain version colored with devicon main color -->
-<i class="devicon-devicon-plain colored"></i>
+<!--  for git plain version colored with git main color (devicon-color.css or devicon.min.css required) -->
+<i class="devicon-git-plain colored"></i>
 
-<!--  for devicon plain version with wordmark colored with devicon main color -->
-<i class="devicon-devicon-plain-wordmark colored"></i>
+<!--  for git plain version with wordmark colored with git main color (devicon-color.css or devicon.min.css required) -->
+<i class="devicon-git-plain-wordmark colored"></i>
 ```
 
 <p>
-    An alternate way to use <code>devicon</code> is by copy/paste the raw SVG code
+    An alternate way to use <code>devicon</code> is by copy/paste the raw svg code
     to your project.
 </p>
-<h4 id="getting-started-svg">Copy/paste SVG code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">svg folder</a> or the <a href="https://devicon.dev">project page</a>)</h4>
+<h4 id="getting-started-svg">Copy/paste svg code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">svg folder</a> or the <a href="https://devicon.dev">project page</a></h4>
 
 ```html
-<!--  for devicon plain version -->
-<svg id="Devicon" class='devicon-devicon-plain' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path id="plain" fill="#60be86" d="M64,7.83H4.77L14.95,95.13l49,25,.06,0,49.07-25L123.23,7.83Zm42.77,54.86c0,.88,0,1.67-.77,2L73.25,80.44l-2.42,1.13-.27-3.15V72.23l.24-1.57,1.09-.47L95.07,59.81l-21.54-9.6L64.35,68.34,58.9,78.87l-1.22,2.27-2.05-.9L22,64.71a2.42,2.42,0,0,1-1.45-2V56.91a2.39,2.39,0,0,1,1.42-2l34-15.73,3.21-1.44v9.66l.24,1.34-1.56.7L34.45,59.79,56.3,69.42l8.05-16,6.21-12.65,1.13-2.28,1.81.91L106,54.89c.73.35.76,1.14.76,2Z"/></svg>
+<!--  for git plain version -->
+<svg class="devicon-git-plain" viewBox="0 0 128 128">
+  <path fill="#F34F29" d="M124.742,58.378L69.625,3.264c-3.172-3.174-8.32-3.174-11.497,0L46.685,14.71l14.518,14.518c3.375-1.139,7.243-0.375,9.932,2.314c2.703,2.706,3.462,6.607,2.293,9.993L87.42,55.529c3.385-1.167,7.292-0.413,9.994,2.295c3.78,3.777,3.78,9.9,0,13.679c-3.78,3.78-9.901,3.78-13.683,0c-2.842-2.844-3.545-7.019-2.105-10.521L68.578,47.933l-0.002,34.341c0.922,0.455,1.791,1.063,2.559,1.828c3.779,3.777,3.779,9.898,0,13.683c-3.779,3.777-9.904,3.777-13.679,0c-3.778-3.784-4.088-9.905-0.311-13.683C58.079,83.169,59,82.464,60,81.992V47.333c-1-0.472-1.92-1.172-2.856-2.111c-2.861-2.86-3.396-7.06-1.928-10.576L40.983,20.333L3.229,58.123c-3.175,3.177-3.155,8.325,0.02,11.5l55.126,55.114c3.173,3.174,8.325,3.174,11.503,0l54.86-54.858C127.913,66.703,127.916,61.552,124.742,58.378z"/>
+</svg>
 ```
 
 Add css rules in your stylesheet
 ```css
-.devicon-devicon-plain {
+.devicon-git-plain {
   max-width: 2em;
 }
 
 /* if you want to change the original color */
-.devicon-devicon-plain path {
+.devicon-git-plain path {
   fill: #4691f6;
 }
-```
-
-<h4>You can also use the <code>img</code> tag and referencing an svg directly from the repo.</h4>
-
-```html
-<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg'>
 ```
 
 <h2 id="request-icon">Requesting icon</h2>
@@ -187,10 +180,12 @@ npm install
 ```
 
 <h5>Build the font and export stylesheet</h5>
-Open <a href="https://icomoon.io/app/#/select">icomoon.io</a> and import <a href="/icomoon.json">icomoon.json</a>. Choose <i>yes</i> when being asked
-if you would like to restore the settings stored in the configuration file.
+Open <a href="https://icomoon.io/app/#/select">icomoon.io</a> and import <a href="/icomoon.json">icomoon.json</a>. Choose <i>yes</i> when beeing asked
+if you like to restore the settings stored in the configuration file.
 
-The next step is to click on <b>Generate font</b> and download the resulting archive. Extract the contents and you will find a <a href="/fonts">fonts</a> directory next to a <code>style.css</code>. Replace the contents of the <code>fonts</code> folder, rename <code>style.css</code> as <a href="/devicon.css">devicon.css</a> and follow the next step to build the final stylesheet.
+The next step is to click on <b>Generate font</b> and download the resulting archive. Extract it
+contents and you will find a <a href="/fonts">fonts</a> directory next to a <code>style.css</code>. Replace the content of the <code>fonts</code> folder,
+rename the <code>style.css</code> to <a href="/devicon.css">devicon.css</a> and follow the next step to build the final stylesheet.
 
 <h5>Build and minify stylesheet</h5>
 <p>

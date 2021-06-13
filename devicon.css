@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devicon';
-  src:  url('fonts/devicon.eot?f7gwp9');
-  src:  url('fonts/devicon.eot?f7gwp9#iefix') format('embedded-opentype'),
-    url('fonts/devicon.ttf?f7gwp9') format('truetype'),
-    url('fonts/devicon.woff?f7gwp9') format('woff'),
-    url('fonts/devicon.svg?f7gwp9#devicon') format('svg');
+  src:  url('fonts/devicon.eot?jsodij');
+  src:  url('fonts/devicon.eot?jsodij#iefix') format('embedded-opentype'),
+    url('fonts/devicon.ttf?jsodij') format('truetype'),
+    url('fonts/devicon.woff?jsodij') format('woff'),
+    url('fonts/devicon.svg?jsodij#devicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,150 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.devicon-nixos-plain-wordmark:before {
-  content: "\e992";
-}
-.devicon-nixos-plain:before {
-  content: "\e9b2";
-}
-.devicon-perl-plain:before {
-  content: "\e9b3";
-}
-.devicon-tensorflow-line-wordmark:before {
-  content: "\e9b4";
-}
-.devicon-tensorflow-line:before {
-  content: "\e9b5";
-}
-.devicon-tensorflow-original-wordmark:before {
-  content: "\e9b6";
-}
-.devicon-tensorflow-original:before {
-  content: "\e9b7";
-}
-.devicon-zig-plain-wordmark:before {
-  content: "\e9b8";
-}
-.devicon-zig-original:before {
-  content: "\e9b9";
-}
-.devicon-raspberrypi-line-wordmark:before {
-  content: "\e9ba";
-}
-.devicon-raspberrypi-line:before {
-  content: "\e9bb";
-}
-.devicon-embeddedc-plain-wordmark:before {
-  content: "\e9bc";
-}
-.devicon-embeddedc-plain:before {
-  content: "\e9bd";
-}
-.devicon-labview-plain-wordmark:before {
-  content: "\e9be";
-}
-.devicon-labview-plain:before {
-  content: "\e9bf";
-}
-.devicon-modx-plain-wordmark:before {
-  content: "\e9c0";
-}
-.devicon-modx-plain:before {
-  content: "\e9c1";
-}
-.devicon-knockout-plain-wordmark:before {
-  content: "\e9c2";
-}
-.devicon-rstudio-plain:before {
-  content: "\e9c3";
-}
-.devicon-phalcon-plain:before {
-  content: "\e9c4";
-}
-.devicon-minitab-plain:before {
-  content: "\e9c5";
-}
-.devicon-bulma-plain:before {
-  content: "\e9c6";
-}
-.devicon-spss-plain:before {
-  content: "\e9c7";
-}
-.devicon-matlab-line:before {
-  content: "\e9c8";
-}
-.devicon-matlab-plain:before {
-  content: "\e9c9";
-}
-.devicon-karma-plain:before {
-  content: "\e9ca";
-}
-.devicon-jest-plain:before {
-  content: "\e9cb";
-}
-.devicon-circleci-plain-wordmark:before {
-  content: "\e9cc";
-}
-.devicon-circleci-plain:before {
-  content: "\e9cd";
-}
-.devicon-codecov-plain:before {
-  content: "\e9ce";
-}
-.devicon-magento-line:before {
-  content: "\e9cf";
-}
-.devicon-magento-original-wordmark:before {
-  content: "\e9d0";
-}
-.devicon-magento-original:before {
-  content: "\e9d1";
-}
-.devicon-shopware-original-wordmark:before {
-  content: "\e9d2";
-}
-.devicon-shopware-original:before {
-  content: "\e9d3";
-}
-.devicon-salesforce-plain:before {
-  content: "\e9d4";
-}
-.devicon-vuestorefront-plain:before {
-  content: "\e9d5";
-}
-.devicon-unix-original:before {
-  content: "\e9d6";
-}
-.devicon-godot-plain-wordmark:before {
-  content: "\e9d7";
-}
-.devicon-godot-plain:before {
-  content: "\e9d8";
-}
-.devicon-vscode-plain-wordmark:before {
-  content: "\e9d9";
-}
-.devicon-vscode-plain:before {
-  content: "\e9da";
-}
-.devicon-julia-plain-wordmark:before {
-  content: "\e9db";
-}
-.devicon-julia-plain:before {
-  content: "\e9dc";
-}
-.devicon-crystal-original-wordmark:before {
-  content: "\e9dd";
-}
-.devicon-crystal-original:before {
-  content: "\e9de";
-}
-.devicon-tailwindcss-plain:before {
-  content: "\e9df";
-}
-.devicon-tailwindcss-original-wordmark:before {
-  content: "\e9e0";
-}
 .devicon-weblate-plain-wordmark:before {
   content: "\e999";
 }
@@ -255,6 +111,9 @@
 }
 .devicon-ocaml-plain:before {
   content: "\e991";
+}
+.devicon-matlab-plain:before {
+  content: "\e992";
 }
 .devicon-jupyter-plain-wordmark:before {
   content: "\e993";

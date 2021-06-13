@@ -32,25 +32,17 @@ jobs:
         with:
           path: ./pr_num/pr_num.txt
 
-      - name: Read the err message file
-        if: success()
-        id: err_message_reader
-        uses: juliangruber/read-file-action@v1.0.0
-        with:
-          path: ./err_messages/err_messages.txt
-
-
       - name: Upload screenshot of the newly made icons gotten from the artifacts
         id: icons_overview_img_step
         if: env.PEEK_STATUS == 'success' && success()
-        uses: devicons/public-upload-to-imgur@v2.2.2
+        uses: devicons/public-upload-to-imgur@v2.2.1
         with:
           path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
         id: icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.2
+        uses: devicons/public-upload-to-imgur@v2.2.1
         if: env.PEEK_STATUS == 'success' && success()
         with:
           path: ./screenshots/screenshot_*.png
@@ -64,7 +56,7 @@ jobs:
             Hi there,
 
             I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
-            Here is the result below (top left):
+            Here is the result below (top right):
 
             {0}
 
@@ -95,19 +87,15 @@ jobs:
           MESSAGE: |
             Hi there,
 
-            I'm Devicons' Peek Bot and it seems we've ran into a problem.
+            I'm Devicons' Peek Bot and it seems we've ran into a problem (sorry!).
 
-            ```
-            {0}
-            ```
-
-            Make sure that:
+            Please double check and fix the possible issues below:
 
             - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
             - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
             - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
 
-            I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate. 
+            I will retry once everything is fixed. If I still fail (sorry!) or there are other erros, the maintainers will investigate. 
 
             Best of luck, 
             Peek Bot :relaxed:
@@ -115,4 +103,4 @@ jobs:
           type: create
           issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
+          body: ${{ env.MESSAGE }}

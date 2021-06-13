@@ -24,7 +24,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   });
 
 
-  var baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}/`
+  var baseUrl = 'https://raw.githubusercontent.com/' + gitHubPath + '/master/'
 
   // Get devicon.json
   $http.get(baseUrl + '/devicon.json').success(function(data) {
