@@ -13,7 +13,7 @@ from build_assets import util
 def main():
     runner = None
     try:
-        args = arg_getters.get_selenium_runner_args(True)
+        args = arg_getters.get_selenium_runner_args(peek_mode=True)
         new_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
