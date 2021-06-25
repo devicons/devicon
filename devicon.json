@@ -3545,6 +3545,23 @@
         "aliases": []
     },
     {
+        "name": "threejs",
+        "tags": [
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+            ],
+            "font": [
+                "original",
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "tomcat",
         "tags": [
             "server"
