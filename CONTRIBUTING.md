@@ -59,6 +59,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
   <li>Please create separate issues for each icon</li>
   <li>Use the Issue Template and fill out the proper information</li>
+  <li>Please include links where the icon can be found. Ex: the icon's official webpage/wiki article.</li>
 </ul>
 
 <hr>
