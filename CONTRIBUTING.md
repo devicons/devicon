@@ -53,7 +53,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
 <hr>
 <h2 id='requestingIcon'>Requesting an Icon</h2>
-<p>To request an icon, please create an issue in the repository and follow these guidelines:</p>
+<p>To request an icon, please create an issue in the repository, and follow these guidelines:</p>
 <ul>
   <li>Search for other issues already requesting the icon</li>
   <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
@@ -73,7 +73,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
   <li>Some bots will check your SVGs. If there are any errors, please fix them as instructed.</li>
   <li>Wait for a maintainer to review your changes. They will run the <a href='#peekBot'><code>peek-bot</code></a> to check your icons.</li>
-  <li>If there are no issues, they will merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
+  <li>If there are no issues, they will merge it using <a href="https://github.com/devicons/devicon/discussions/470"><b>squash merging</b></a>. If there are any problems, they will let you know, and give you a chance to fix them.</li>
 </ol>
 
 <hr>
