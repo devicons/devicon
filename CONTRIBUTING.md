@@ -97,7 +97,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
       <td style='width: 33%'>
           <p><b>plain</b>: a one-color version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
           <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-plain.svg' height='100px' width='100px' />
-          <h4>devicon-plain-wordmark.svg</h4>
+          <h4>devicon-plain.svg</h4>
       </td>
       <td style='width: 33%'>
           <p><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
