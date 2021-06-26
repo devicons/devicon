@@ -162,7 +162,9 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <hr>
 <h2 id='orgGuidelines'>Organizational Guidelines</h2>
 <ul>
-  <li>Each icon has its own folder located in the <code>icons</code> folder. All the <code>.svg</code> files for the Icon must go in the same folder</li>
+  <li>Each icon has its own folder located in the <code>icons</code> folder. </li>
+  <li>The folder name must matches the name value uses for the SVG files. Ex: `react-original.svg` should go inside a `react` folder, `microsoftsqlserver` icons should go inside a `microsoftsqlserver` folder. </li>
+  <li>All the <code>.svg</code> files for the Icon must go in the same folder. </li>
   <li><i>Optional</i>: Each folder <i>may</i> contain one <code>.eps</code> file. The <code>.eps</code> file should contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
 </ul>
 
