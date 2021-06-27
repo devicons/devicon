@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ## Double check these details before you open a PR**
-*Tick the checkboxes to ensure you've done everything*
+*Tick the checkboxes to ensure you've done everything correctly*
 - [] PR does not match another non-stale PR currently opened
 - [] PR name matches the format *New Feature: brief description of feature*
 
