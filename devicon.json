@@ -2926,6 +2926,27 @@
         "aliases": []
     },
     {
+        "name": "qt",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#41cd52",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "r",
         "tags": [
             "programming",
@@ -3563,6 +3584,25 @@
             ]
         },
         "color": "#ff6f00",
+        "aliases": []
+    },
+    {
+        "name": "threejs",
+        "tags": [
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
         "aliases": []
     },
     {
