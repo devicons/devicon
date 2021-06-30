@@ -3476,6 +3476,27 @@
         "aliases": []
     },
     {
+        "name": "svelte",
+        "tags": [
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff3e00",
+        "aliases": []
+    },
+    {
         "name": "swift",
         "tags": [
             "language"
@@ -3563,6 +3584,25 @@
             ]
         },
         "color": "#ff6f00",
+        "aliases": []
+    },
+    {
+        "name": "threejs",
+        "tags": [
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
         "aliases": []
     },
     {
