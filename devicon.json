@@ -1389,6 +1389,24 @@
         "aliases": []
     },
     {
+        "name": "gcc",
+        "tags": [
+            "compiler",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffcfab",
+        "aliases": []
+    },
+    {
         "name": "gimp",
         "tags": [
             "graphic"
