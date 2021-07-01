@@ -889,6 +889,26 @@
         "aliases": []
     },
     {
+        "name": "denojs",
+        "tags": [
+            "javascript",
+            "rust",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "devicon",
         "tags": [
             "iconset"
