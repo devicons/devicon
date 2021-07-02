@@ -2039,27 +2039,11 @@
                 "plain"
             ],
             "font": [
-                "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain"
             ]
         },
-        "color": "#F68B1F",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "line"
-            },
-            {
-                "base": "plain",
-                "alias": "line-wordmark"
-            },
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "color": "#000000",
+        "aliases": []
     },
     {
         "name": "jira",
