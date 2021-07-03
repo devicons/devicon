@@ -468,6 +468,27 @@
         "aliases": []
     },
     {
+        "name": "canva",
+        "tags": [
+            "design"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#00C4CC",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "ceylon",
         "tags": [
             "language"
@@ -903,12 +924,20 @@
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#000000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+        ]
     },
     {
         "name": "devicon",
@@ -1408,6 +1437,24 @@
             ]
         },
         "color": "#64328B",
+        "aliases": []
+    },
+    {
+        "name": "gcc",
+        "tags": [
+            "compiler",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffcfab",
         "aliases": []
     },
     {
@@ -2064,6 +2111,27 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "jira",
+        "tags": [
+            "platform",
+            "organize"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2684ff",
+        "aliases": []
     },
     {
         "name": "jquery",
@@ -2948,6 +3016,27 @@
         "aliases": []
     },
     {
+        "name": "qt",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#41cd52",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "r",
         "tags": [
             "programming",
@@ -3477,6 +3566,27 @@
         "aliases": []
     },
     {
+        "name": "svelte",
+        "tags": [
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff3e00",
+        "aliases": []
+    },
+    {
         "name": "swift",
         "tags": [
             "language"
@@ -3564,6 +3674,25 @@
             ]
         },
         "color": "#ff6f00",
+        "aliases": []
+    },
+    {
+        "name": "threejs",
+        "tags": [
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
         "aliases": []
     },
     {
