@@ -2053,7 +2053,9 @@
     },
     {
         "name": "jetbrains",
-        "tags": [],
+        "tags": [
+            "ide"
+        ],
         "versions": {
             "svg": [
                 "original",
