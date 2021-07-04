@@ -1943,6 +1943,31 @@
         "aliases": []
     },
     {
+        "name": "jamstack",
+        "tags": [
+            "javascript",
+            "markup"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F0047F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "jasmine",
         "tags": [
             "testing"
