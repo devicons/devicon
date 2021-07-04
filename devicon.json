@@ -2053,34 +2053,20 @@
     },
     {
         "name": "jetbrains",
-        "tags": [],
+        "tags": [
+            "ide"
+        ],
         "versions": {
             "svg": [
                 "original",
                 "plain"
             ],
             "font": [
-                "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain"
             ]
         },
-        "color": "#F68B1F",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "line"
-            },
-            {
-                "base": "plain",
-                "alias": "line-wordmark"
-            },
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "color": "#FDCC21",
+        "aliases": []
     },
     {
         "name": "jira",
