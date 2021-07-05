@@ -130,6 +130,33 @@
         "aliases": []
     },
     {
+        "name": "apachekafka",
+        "tags": [
+            "streaming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#231f20",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "appcelerator",
         "tags": [
             "app",
