@@ -132,7 +132,8 @@
     {
         "name": "apachekafka",
         "tags": [
-            "streaming"
+            "streaming",
+            "open-source"
         ],
         "versions": {
             "svg": [
