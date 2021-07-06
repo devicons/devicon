@@ -1,7 +1,7 @@
 ---
 name: New Icon
 about: Add a new icon to the repository.
-title: 'new Icon: [NAME] (versions)'
+title: 'new icon: [NAME] (versions)'
 labels: 'feature:icon'
 assignees: ''
 
