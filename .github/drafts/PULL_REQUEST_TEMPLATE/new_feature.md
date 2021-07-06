@@ -21,4 +21,4 @@ assignees: ''
 
 ## Notes
 
-<!-- List anything note-worthy here (potential issues, this needs to be merged to `master` before working, etc....). -->
+<!-- List anything note-worthy here (potential issues, this needs to be merged to `master` before working, etc.). -->
