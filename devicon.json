@@ -1,5 +1,54 @@
 [
     {
+        "name": "3dPrint",
+        "tags": [
+            "3d",
+            "design"
+        ],
+        "versions": {
+            "svg": [
+                "original"                
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "alpinelinux",
+        "tags": [
+            "linux"           
+        ],
+        "versions": {
+            "svg": [
+                "original"                
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#181aab",
+        "aliases": []
+    },
+    {
+        "name": "azure",
+        "tags": [
+            "linux"           
+        ],
+        "versions": {
+            "svg": [
+                "original"                
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#666666",
+        "aliases": []
+    },
+    {
         "name": "aftereffects",
         "tags": [
             "video",
@@ -363,6 +412,18 @@
           }
         ]
     },
+    {
+        "name": "blackberry",
+        "tags": ["networking"],
+        "versions": {
+          "svg": ["original"],
+          "font": [
+            "plain"            
+        ]
+    },
+        "color": "#0033bf",
+        "aliases": []
+  	},
     {
         "name": "bootstrap",
         "tags": [
@@ -1014,6 +1075,24 @@
             ]
         },
         "color": "#623697",
+        "aliases": []
+    },
+    {
+        "name": "dreamhost",
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+                
+            ],
+            "font": [
+                "plain"            
+            ]
+            
+        },
+        "color": "#000000",
         "aliases": []
     },
     {
