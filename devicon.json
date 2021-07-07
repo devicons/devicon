@@ -2613,7 +2613,12 @@
             ]
         },
         "color": "#ff0000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
 	{
         "name": "mysql",
