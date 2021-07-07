@@ -2450,6 +2450,26 @@
         "color": "#1FA6CA",
         "aliases": []
     },
+	{
+        "name": "matlab",
+        "tags": [
+          "programming",
+          "language"
+        ],
+        "versions": {
+          "svg": [
+            "original",
+            "plain",
+            "line"
+          ],
+          "font": [
+            "plain",
+            "line"
+          ]
+        },
+        "color": "#6dd0c7",
+        "aliases": []
+    },
     {
         "name": "magento",
         "tags": [
@@ -2489,6 +2509,16 @@
             ]
         },
         "color": "#df5052",
+        "aliases": []
+    },
+    {
+        "name": "minitab",
+        "tags": ["package", "statistics"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#8dc63f",
         "aliases": []
     },
     {
@@ -2569,7 +2599,23 @@
         "color": "#F7931E",
         "aliases": []
     },
-    {
+	{
+        "name": "msdos",
+        "tags": [
+            "os",
+        ],
+        "versions": {
+            "svg": [
+                "original",
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#ff0000",
+        "aliases": []
+    },
+	{
         "name": "mysql",
         "tags": [
             "database",
@@ -2588,36 +2634,6 @@
             ]
         },
         "color": "#00618a",
-        "aliases": []
-    },
-    {
-        "name": "matlab",
-        "tags": [
-          "programming",
-          "language"
-        ],
-        "versions": {
-          "svg": [
-            "original",
-            "plain",
-            "line"
-          ],
-          "font": [
-            "plain",
-            "line"
-          ]
-        },
-        "color": "#6dd0c7",
-        "aliases": []
-    },
-    {
-        "name": "minitab",
-        "tags": ["package", "statistics"],
-        "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
-        },
-        "color": "#8dc63f",
         "aliases": []
     },
     {
