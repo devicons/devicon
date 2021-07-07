@@ -2925,6 +2925,24 @@
         "color": "#5058A6",
         "aliases": []
     },
+	{
+        "name": "playstation",
+        "tags": [
+            "platform",
+            "cplusplus",
+			"game"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#df0024",
+        "aliases": []
+    },
     {
         "name": "postgresql",
         "tags": [
