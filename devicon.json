@@ -3558,7 +3558,16 @@
             ]
         },
         "color": "#809cc8",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+            {
+                "base": "original-wordmark",
+                "alias": "original-wordmark"
+            }
+        ]
     },
     {
         "name": "microsoftsqlserver",
