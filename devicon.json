@@ -1315,7 +1315,12 @@
             ]
         },
         "color": "#b30000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "firebase",
