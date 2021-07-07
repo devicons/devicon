@@ -411,19 +411,7 @@
             "alias": "plain-wordmark"
           }
         ]
-    },
-    {
-        "name": "blackberry",
-        "tags": ["networking"],
-        "versions": {
-          "svg": ["original"],
-          "font": [
-            "plain"            
-        ]
-    },
-        "color": "#0033bf",
-        "aliases": []
-  	},
+    },    
     {
         "name": "bootstrap",
         "tags": [
