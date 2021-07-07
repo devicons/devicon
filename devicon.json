@@ -2997,7 +2997,12 @@
             ]
         },
         "color": "#0000fc",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "pycharm",
