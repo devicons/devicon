@@ -2941,7 +2941,12 @@
             ]
         },
         "color": "#df0024",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "postgresql",
