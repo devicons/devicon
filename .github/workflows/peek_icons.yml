@@ -9,7 +9,7 @@ jobs:
     # fail due to system, skipped
     name: Peek Icons
     if: github.event.label.name == 'bot:peek'
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
 
