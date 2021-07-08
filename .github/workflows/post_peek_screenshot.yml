@@ -7,7 +7,7 @@ on:
 jobs: 
   post_screenshots_in_comment:
     name: Post the screenshot
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     if: github.event.action == 'completed' && github.event.workflow_run.conclusion != 'skipped'
     env: 
       # three possible values: 'skipped', 'success', 'failure'
