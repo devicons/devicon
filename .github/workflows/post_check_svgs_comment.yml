@@ -7,7 +7,7 @@ on:
 jobs: 
   post_result_of_svg_check:
     name: Post the result of the Check SVG Action
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check if the trigger run worked. If it failed, fail the current run.
         if: github.event.workflow_run.conclusion != 'success' 
