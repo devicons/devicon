@@ -3,7 +3,7 @@ on: workflow_dispatch
 jobs:
   build:
     name: Get features since last release
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
