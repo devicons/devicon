@@ -2817,10 +2817,11 @@
             {
                 "base": "original",
                 "alias": "plain"
-            }
+            },
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
+	    }
         ]
     },
     {
