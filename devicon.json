@@ -56,7 +56,12 @@
             ]
         },
         "color": "#666666",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "aftereffects",
