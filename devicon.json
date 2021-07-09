@@ -17,38 +17,6 @@
         "aliases": []
     },
     {
-        "name": "alpinelinux",
-        "tags": [
-            "linux"           
-        ],
-        "versions": {
-            "svg": [
-                "original"                
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#181aab",
-        "aliases": []
-    },
-    {
-        "name": "azure",
-        "tags": [
-            "linux"           
-        ],
-        "versions": {
-            "svg": [
-                "original"                
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#666666",
-        "aliases": []
-    },
-    {
         "name": "aftereffects",
         "tags": [
             "video",
@@ -1063,24 +1031,6 @@
             ]
         },
         "color": "#623697",
-        "aliases": []
-    },
-    {
-        "name": "dreamhost",
-        "tags": [
-            "framework"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-                
-            ],
-            "font": [
-                "plain"            
-            ]
-            
-        },
-        "color": "#000000",
         "aliases": []
     },
     {
