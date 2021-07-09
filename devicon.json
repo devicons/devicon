@@ -1311,7 +1311,8 @@
                 "plain", "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#b30000",
