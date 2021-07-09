@@ -3912,6 +3912,26 @@
         "color": "#dd4814",
         "aliases": []
     },
+	{
+        "name": "unity",
+        "tags": [
+			"csharp",
+            "engine",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#212b35",
+        "aliases": []
+    },
     {
         "name": "unix",
         "tags": [
