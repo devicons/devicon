@@ -10,11 +10,16 @@
                 "original"                
             ],
             "font": [
-                "plain"
+                "original"
             ]
         },
         "color": "#000000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "aftereffects",
@@ -379,7 +384,7 @@
             "alias": "plain-wordmark"
           }
         ]
-    },    
+    },
     {
         "name": "bootstrap",
         "tags": [
