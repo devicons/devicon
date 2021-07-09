@@ -1308,19 +1308,14 @@
         ],
         "versions": {
             "svg": [
-                "original", "original-wordmark"
+                "plain", "plain-wordmark"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
         "color": "#b30000",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "firebase",
