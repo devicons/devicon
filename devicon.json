@@ -1301,6 +1301,23 @@
         "color": "#f24e1e",
         "aliases": []
     },
+	{
+        "name": "filezilla",
+        "tags": [
+            "ftp"
+        ],
+        "versions": {
+            "svg": [
+                "plain", "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#b30000",
+        "aliases": []
+    },
     {
         "name": "firebase",
         "tags": [
