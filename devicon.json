@@ -3311,6 +3311,33 @@
         "aliases": []
     },
     {
+        "name": "socketio",
+        "tags": [
+            "library",
+            "networking",
+            "websockets"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "sourcetree",
         "tags": [
             "version-control"
