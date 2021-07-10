@@ -2493,6 +2493,26 @@
         "aliases": []
     },
     {
+        "name": "neo4j",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#018BFF",
+        "aliases": []
+    },
+    {
         "name": "nestjs",
         "tags": [
             "framework"
