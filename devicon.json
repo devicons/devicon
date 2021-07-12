@@ -3046,6 +3046,22 @@
         "aliases": []
     },
     {
+        "name": "devicon",
+        "tags": [
+            "java",
+            "application",
+            "ide",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    }
+    {
         "name": "protractor",
         "tags": [
             "framework",
