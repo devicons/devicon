@@ -3046,21 +3046,30 @@
         "aliases": []
     },
     {
-        "name": "devicon",
+        "name": "processing",
         "tags": [
             "java",
+            "python",
+            "android",
             "application",
             "ide",
             "framework"
         ],
         "versions": {
             "svg": [
-                "plain"
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "fonts": [
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#000000",
         "aliases": []
-    }
+    },
     {
         "name": "protractor",
         "tags": [
