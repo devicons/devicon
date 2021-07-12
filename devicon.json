@@ -1,27 +1,5 @@
 [
     {
-        "name": "3dPrint",
-        "tags": [
-            "3d",
-            "design"
-        ],
-        "versions": {
-            "svg": [
-                "original"                
-            ],
-            "font": [
-                "original"
-            ]
-        },
-        "color": "#000000",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
-    },
-    {
         "name": "aftereffects",
         "tags": [
             "video",
@@ -274,6 +252,28 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "azure",
+        "tags": [
+            "Dev-Ops",
+            "cloud"            
+        ],
+        "versions": {
+            "svg": [
+                "original"                
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0079eb",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
             }
         ]
     },
