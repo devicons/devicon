@@ -2841,6 +2841,30 @@
         "aliases": []
     },
     {
+        "name": "nuxtjs",
+        "tags": [
+            "js",
+            "javascript",
+            "framework",
+            "frontend",
+            "vuejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00c48d",
+        "aliases": []
+    },
+    {
         "name": "objectivec",
         "tags": [
             "programming",
