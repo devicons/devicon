@@ -2849,9 +2849,8 @@
             "frontend",
             "vuejs"
         ],
-        "color": "#00c48d",
         "versions": {
-            "SVG": [
+            "svg": [
                 "original",
                 "original-wordmark",
                 "plain",
@@ -2861,7 +2860,9 @@
                 "plain",
                 "plain-wordmark"
             ]
-        }
+        },
+        "color": "#00c48d",
+        "aliases": []
     },
     {
         "name": "objectivec",
@@ -3565,6 +3566,35 @@
         },
         "color": "#2D333A",
         "aliases": []
+    },
+    {
+        "name": "socketio",
+        "tags": [
+            "library",
+            "networking",
+            "websockets"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "sourcetree",
