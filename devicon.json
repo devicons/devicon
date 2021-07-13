@@ -2841,6 +2841,30 @@
         "aliases": []
     },
     {
+        "name": "nuxtjs",
+        "tags": [
+            "js",
+            "javascript",
+            "framework",
+            "frontend",
+            "vuejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00c48d",
+        "aliases": []
+    },
+    {
         "name": "objectivec",
         "tags": [
             "programming",
@@ -3519,6 +3543,35 @@
         "aliases": []
     },
     {
+        "name": "socketio",
+        "tags": [
+            "library",
+            "networking",
+            "websockets"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "sourcetree",
         "tags": [
             "version-control"
@@ -3539,31 +3592,6 @@
             "base": "original",
             "alias": "plain"
           },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
-        ]
-    },
-    {
-        "name": "sqlalchemy",
-        "tags": [
-            "python",
-            "orm"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain"
-            ],
-            "font": [
-                "plain",
-                "original-wordmark"
-            ]
-        },
-        "color": "#333333",
-        "aliases": [
           {
             "base": "original-wordmark",
             "alias": "plain-wordmark"
@@ -3599,6 +3627,54 @@
         },
         "color": "#cc1e4c",
         "aliases": []
+    },
+    {
+        "name": "sqlalchemy",
+        "tags": [
+            "python",
+            "orm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
+    },
+	{
+        "name": "subversion",
+        "tags": [
+            "svn",
+            "version"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#809cc8",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "microsoftsqlserver",
