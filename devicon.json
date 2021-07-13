@@ -2861,7 +2861,8 @@
                 "plain",
                 "plain-wordmark"
             ]
-        }
+        },
+        "aliases": []
     },
     {
         "name": "objectivec",
