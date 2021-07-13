@@ -3665,8 +3665,7 @@
                 "original-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "original"
             ]
         },
         "color": "#809cc8",
@@ -3674,10 +3673,6 @@
             {
                 "base": "original",
                 "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
             }
         ]
     },
