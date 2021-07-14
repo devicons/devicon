@@ -3047,6 +3047,31 @@
         "aliases": []
     },
     {
+        "name": "processing",
+        "tags": [
+            "java",
+            "python",
+            "android",
+            "application",
+            "ide",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "protractor",
         "tags": [
             "framework",
