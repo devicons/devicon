@@ -399,10 +399,12 @@
         ],
         "versions": {
             "svg": [
+		"original", 
                 "plain",
                 "plain-wordmark"
             ],
             "font": [
+		"original"    
                 "plain",
                 "plain-wordmark"
             ]
