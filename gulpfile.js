@@ -100,7 +100,7 @@ function createColorsCSS(deviconJson) {
         name,
         versions: { font: fonts },
         color,
-        aliases,
+        aliases
       } = fontObj;
 
       if (fonts.length === 0 || typeof color !== "string") {
@@ -112,7 +112,7 @@ function createColorsCSS(deviconJson) {
       let cssClasses = fonts.map((font) => `.devicon-${name}-${font}.colored`);
 
       // process the icons in the aliases attr
-      aliases.forEach((aliasObj) => {
+      aliases.forEach(aliasObj => {
         cssClasses.push(`.devicon-${name}-${aliasObj["alias"]}.colored`);
       });
 
@@ -158,7 +158,7 @@ function optimizeSvg() {
     .src(svgGlob)
     .pipe(svgmin(configOptionCallback))
     .pipe(
-      gulp.dest((file) => {
+      gulp.dest(file => {
         return file.base;
       })
     );
@@ -180,12 +180,12 @@ function configOptionCallback(file) {
         },
       },
       {
-        removeViewBox: false, // keep viewbox
+        removeViewBox: false // keep viewbox
       },
       {
-        removeDimensions: true, // remove height and width
-      },
-    ],
+        removeDimensions: true // remove height and width
+      }
+    ]
   };
 }
 
