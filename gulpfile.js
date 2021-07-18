@@ -77,7 +77,7 @@ function createAliasStatement(fontObj) {
   let { name, aliases } = fontObj;
 
   return aliases
-    .map((aliasObj) => {
+    .map(aliasObj => {
       return `.devicon-${name}-${aliasObj.alias} {
             @extend .devicon-${name}-${aliasObj.base};
         }`;
