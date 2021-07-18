@@ -132,7 +132,7 @@ function cleanUp() {
   let fileNames = [aliasSCSSName, colorsCSSName, finalMinSCSSName];
 
   return Promise.all(
-    fileNames.map((name) => {
+    fileNames.map(name => {
       try {
         let filePath = path.join(__dirname, name);
         return fsPromise.unlink(filePath);
