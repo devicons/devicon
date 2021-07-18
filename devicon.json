@@ -1244,6 +1244,20 @@
         "color": "#a90533",
         "aliases": []
     },
+   {
+   	"name": "etherum",
+	"tags": [],
+	"versions": {
+		"svg": [
+			"original"
+		],
+		"font": [
+			"plain"
+		]	
+	},
+	"color": "#3c3c3d",
+	"aliases": []
+   },		
     {
         "name": "express",
         "tags": [
