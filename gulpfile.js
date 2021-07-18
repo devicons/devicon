@@ -95,7 +95,7 @@ function createAliasStatement(fontObj) {
 function createColorsCSS(deviconJson) {
   // create the color statements for each font object
   let statements = deviconJson
-    .map((fontObj) => {
+    .map(fontObj => {
       let {
         name,
         versions: { font: fonts },
