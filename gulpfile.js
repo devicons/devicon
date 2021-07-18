@@ -176,7 +176,7 @@ function configOptionCallback(file) {
       {
         prefixIds: {
           prefix: file.stem, // add file name to ids
-          delim: "-",
+          delim: "-"
         },
       },
       {
