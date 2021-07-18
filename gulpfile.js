@@ -44,7 +44,7 @@ async function createCSSFiles() {
 
   await Promise.all([
     createAliasSCSS(deviconJson),
-    createColorsCSS(deviconJson),
+    createColorsCSS(deviconJson)
   ]);
 }
 
