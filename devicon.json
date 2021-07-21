@@ -2806,23 +2806,17 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+				"plain",
+				"plain-wordmark"
             ],
             "font": [
-                "original"
+                "original",
+				"plain"
             ]
         },
         "color": "#f7192d",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-			}
-        ]
+        "aliases": []
     },
     {
         "name": "oracle",
