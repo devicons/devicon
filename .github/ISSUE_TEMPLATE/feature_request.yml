@@ -1,0 +1,33 @@
+name: Feature Request
+description: Requesting a new feature or changes to an existing feature
+title: '[FEATURE REQUEST] <feature name>'
+labels: [enhancement]
+body:
+  - type: textarea
+    id: currentproblem
+    attributes:
+      label: Problem
+      description: Tell us about the current problem that you face that this feature might help you with.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestedfeat
+    attributes:
+      label: Suggested feature
+      description: Tell us about the feature that might solve the above problem.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should we have this feature?
+      description: List any extra benefits, other than solving your problem, that this feature will bring to the repository. If none, leave blank.
+      validations:
+        required: false
+  - type: textarea
+    id: extrainformation
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this feature request?
+    validations:
+      required: false
