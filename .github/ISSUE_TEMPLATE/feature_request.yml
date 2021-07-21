@@ -14,7 +14,7 @@ body:
     id: suggestedfeat
     attributes:
       label: Suggested feature
-      description: Tell us about the current problem that you face that this feature might help you with.
+      description: Tell us about the feature that might solve the above problem.
     validations:
       required: true
   - type: textarea
