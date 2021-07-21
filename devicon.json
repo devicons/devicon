@@ -2607,18 +2607,15 @@
         "versions": {
             "svg": [
                 "original",
+				"plain",
+				"line"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
         "color": "#ff0000",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": []
     },
 	{
         "name": "mysql",
