@@ -2830,9 +2830,10 @@
         "versions": {
             "svg": [
                 "original",
+                "plain",
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
         "color": "#5586a4",
