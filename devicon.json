@@ -3760,10 +3760,12 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+				"plain",
+				"line"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
         "color": "#4a8fb5",
