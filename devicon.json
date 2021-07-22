@@ -2881,6 +2881,26 @@
         "color": "#0b5a9d",
         "aliases": []
     },
+	{
+        "name": "opera",
+        "tags": [
+            "browser"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+				"plain",
+				"plain-wordmark"
+            ],
+            "font": [
+                "plain",
+		"plain-wordmark"
+            ]
+        },
+        "color": "#f7192d",
+        "aliases": []
+    },
     {
         "name": "ocaml",
         "tags": [
