@@ -2940,7 +2940,12 @@
             ]
         },
         "color": "#5586a4",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "oracle",
