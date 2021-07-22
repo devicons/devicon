@@ -2650,7 +2650,8 @@
 				"line"
             ],
             "font": [
-                "plain"
+                "plain",
+				"line"
             ]
         },
         "color": "#ff0000",
