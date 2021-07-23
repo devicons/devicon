@@ -419,7 +419,7 @@
         },
         "color": "#00d1b2",
         "aliases": []
-  	},
+    },
     {
         "name": "bower",
         "tags": [
@@ -1301,7 +1301,7 @@
         "color": "#f24e1e",
         "aliases": []
     },
-	{
+    {
         "name": "filezilla",
         "tags": [
             "ftp"
@@ -2467,7 +2467,7 @@
         "color": "#1FA6CA",
         "aliases": []
     },
-	{
+    {
         "name": "matlab",
         "tags": [
           "programming",
@@ -2638,7 +2638,7 @@
         "color": "#F7931E",
         "aliases": []
     },
-	{
+    {
         "name": "msdos",
         "tags": [
             "os"
@@ -2646,18 +2646,18 @@
         "versions": {
             "svg": [
                 "original",
-				"plain",
-				"line"
+                "plain",
+                "line"
             ],
             "font": [
                 "plain",
-				"line"
+                "line"
             ]
         },
         "color": "#ff0000",
         "aliases": []
     },
-	{
+    {
         "name": "mysql",
         "tags": [
             "database",
@@ -2900,7 +2900,7 @@
         "color": "#0b5a9d",
         "aliases": []
     },
-	{
+    {
         "name": "opera",
         "tags": [
             "browser"
@@ -2909,12 +2909,12 @@
             "svg": [
                 "original",
                 "original-wordmark",
-				"plain",
-				"plain-wordmark"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
-		"plain-wordmark"
+        "plain-wordmark"
             ]
         },
         "color": "#f7192d",
@@ -3717,7 +3717,7 @@
           }
         ]
     },
-	{
+    {
         "name": "subversion",
         "tags": [
             "svn",
@@ -4094,10 +4094,10 @@
         "color": "#dd4814",
         "aliases": []
     },
-	{
+    {
         "name": "unity",
         "tags": [
-			"csharp",
+            "csharp",
             "engine",
             "game"
         ],
