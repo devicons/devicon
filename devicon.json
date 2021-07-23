@@ -516,7 +516,7 @@
             }
         ]
     },
-	{
+    {
         "name": "centos",
         "tags": [
             "server",
