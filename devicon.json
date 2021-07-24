@@ -1285,6 +1285,23 @@
         ]
     },
     {
+        "name": "feathersjs",
+        "tags": [
+            "framework",
+            "rest"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [        ]
+    },
+    {
         "name": "figma",
         "tags": [
             "design"
