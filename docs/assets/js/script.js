@@ -53,7 +53,7 @@ devicon.controller("IconListCtrl", function ($scope, $http, $compile) {
         name: devicon.name,
         svg: devicon.versions.svg,
         font: devicon.versions.font,
-        main: "",
+        main: ""
       };
 
       // Loop through devicon.json icons
