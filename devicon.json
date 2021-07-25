@@ -1285,6 +1285,23 @@
         ]
     },
     {
+        "name": "feathersjs",
+        "tags": [
+            "framework",
+            "rest"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [        ]
+    },
+    {
         "name": "figma",
         "tags": [
             "design"
@@ -2921,27 +2938,6 @@
         "aliases": []
     },
     {
-        "name": "oracle",
-        "tags": [
-            "database"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "original"
-            ]
-        },
-        "color": "#EA1B22",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
-    },
-    {
         "name": "ocaml",
         "tags": [
             "programming",
@@ -2961,6 +2957,52 @@
         },
         "color": "#F18803",
         "aliases": []
+    },
+	{
+        "name": "opengl",
+        "tags": [
+            "library",
+            "graphics",
+            "game",
+            "3d"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5586a4",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "oracle",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#EA1B22",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "perl",
