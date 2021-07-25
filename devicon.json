@@ -3925,7 +3925,8 @@
 				"line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#4a8fb5",
