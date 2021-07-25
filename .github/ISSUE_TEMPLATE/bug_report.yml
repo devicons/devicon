@@ -1,0 +1,26 @@
+name: Bug Report
+description: Report a bug/issue that you found in the SVGs, CSS files, etc.
+title: '[BUG] <bug name>'
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: Short description of the bug that you found. Provide images/code if applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: howtoreplicate
+    attributes:
+      label: Possible fixes or solutions
+      description: List any possible fixes/suggestions that you have in mind that could solve this issue.
+    validations:
+      required: true
+  - type: textarea
+    id: extrainformation
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this bug?
+    validations:
+      required: false
