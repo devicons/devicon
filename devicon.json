@@ -4288,6 +4288,18 @@
         "aliases": []
     },
     {
+        "name": "vscode-insiders",
+        "tags":[
+            "editor", "ide"
+        ],
+        "verisons": {
+            "svg": ["original"],
+            "font": "plain"
+        },
+        "color": "#03b293",
+        "aliases": []
+    },
+    {
         "name": "weblate",
         "tags": [
             "localization"
