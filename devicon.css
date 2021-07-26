@@ -11,6 +11,7 @@
 }
 [class^="devicon-"],
 [class*=" devicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "devicon" !important;
   speak: never;
   font-style: normal;
@@ -18,6 +19,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
