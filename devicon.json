@@ -4239,7 +4239,12 @@
             ]
         },
         "color": "#654FF0",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "weblate",
