@@ -3160,19 +3160,15 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+				"line"
             ],
             "font": [
-                "original"
+                "line"
             ]
         },
         "color": "#0000fc",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "pycharm",
