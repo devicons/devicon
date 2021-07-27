@@ -1285,6 +1285,23 @@
         ]
     },
     {
+        "name": "feathersjs",
+        "tags": [
+            "framework",
+            "rest"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [        ]
+    },
+    {
         "name": "figma",
         "tags": [
             "design"
@@ -1299,6 +1316,23 @@
             ]
         },
         "color": "#f24e1e",
+        "aliases": []
+    },
+	{
+        "name": "filezilla",
+        "tags": [
+            "ftp"
+        ],
+        "versions": {
+            "svg": [
+                "plain", "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#b30000",
         "aliases": []
     },
     {
@@ -2472,6 +2506,28 @@
         "aliases": []
     },
     {
+        "name": "markdown",
+        "tags": [
+            "markup",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "meteor",
         "tags": [
             "javascript"
@@ -2618,6 +2674,26 @@
           "font": ["plain"]
         },
         "color": "#8dc63f",
+        "aliases": []
+    },
+    {
+        "name": "neo4j",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#018BFF",
         "aliases": []
     },
     {
@@ -2782,6 +2858,30 @@
         "aliases": []
     },
     {
+        "name": "nuxtjs",
+        "tags": [
+            "js",
+            "javascript",
+            "framework",
+            "frontend",
+            "vuejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00c48d",
+        "aliases": []
+    },
+    {
         "name": "objectivec",
         "tags": [
             "programming",
@@ -2798,26 +2898,25 @@
         "color": "#0b5a9d",
         "aliases": []
     },
-    {
-        "name": "oracle",
+	{
+        "name": "opera",
         "tags": [
-            "database"
+            "browser"
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark",
+				"plain",
+				"plain-wordmark"
             ],
             "font": [
-                "original"
+                "plain",
+		"plain-wordmark"
             ]
         },
-        "color": "#EA1B22",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "color": "#f7192d",
+        "aliases": []
     },
     {
         "name": "ocaml",
@@ -2839,6 +2938,52 @@
         },
         "color": "#F18803",
         "aliases": []
+    },
+	{
+        "name": "opengl",
+        "tags": [
+            "library",
+            "graphics",
+            "game",
+            "3d"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5586a4",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "oracle",
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#EA1B22",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "perl",
@@ -2961,6 +3106,31 @@
             ]
         },
         "color": "#2A0634",
+        "aliases": []
+    },
+    {
+        "name": "processing",
+        "tags": [
+            "java",
+            "python",
+            "android",
+            "application",
+            "ide",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -3460,6 +3630,35 @@
         "aliases": []
     },
     {
+        "name": "socketio",
+        "tags": [
+            "library",
+            "networking",
+            "websockets"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "sourcetree",
         "tags": [
             "version-control"
@@ -3480,31 +3679,6 @@
             "base": "original",
             "alias": "plain"
           },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
-        ]
-    },
-    {
-        "name": "sqlalchemy",
-        "tags": [
-            "python",
-            "orm"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain"
-            ],
-            "font": [
-                "plain",
-                "original-wordmark"
-            ]
-        },
-        "color": "#333333",
-        "aliases": [
           {
             "base": "original-wordmark",
             "alias": "plain-wordmark"
@@ -3540,6 +3714,54 @@
         },
         "color": "#cc1e4c",
         "aliases": []
+    },
+    {
+        "name": "sqlalchemy",
+        "tags": [
+            "python",
+            "orm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
+    },
+	{
+        "name": "subversion",
+        "tags": [
+            "svn",
+            "version"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#809cc8",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "microsoftsqlserver",
@@ -3910,6 +4132,26 @@
             ]
         },
         "color": "#dd4814",
+        "aliases": []
+    },
+	{
+        "name": "unity",
+        "tags": [
+			"csharp",
+            "engine",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#212b35",
         "aliases": []
     },
     {
