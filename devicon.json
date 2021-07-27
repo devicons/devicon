@@ -3161,9 +3161,11 @@
         "versions": {
             "svg": [
                 "original",
+				"plain",
 				"line"
             ],
             "font": [
+				"plain",
                 "line"
             ]
         },
