@@ -3983,24 +3983,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+				"plain"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain"
             ]
         },
         "color": "#d18900",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "travis",
