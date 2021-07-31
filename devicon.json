@@ -1199,12 +1199,11 @@
         "name": "emacs",
         "tags": ["editor"],
         "versions": {
-        "svg": ["original"],
-        "font": ["original"],
+            "svg": ["original"],
+            "font": ["original"],
         },
         "color": "#8563bc",
-        "aliases: []
-         
+        "aliases": []
     },
     {
         "name": "ember",
