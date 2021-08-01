@@ -1,5 +1,22 @@
 [
     {
+      "name": "adonisjs",
+      "tags": [
+          "nodejs",
+          "framework"
+      ],
+      "versions": {
+          "svg": [
+              "original"
+          ],
+          "font": [
+              "plain"
+          ]
+      },
+      "color": "#5A45FF",
+      "aliases": []
+    },
+    {
         "name": "aftereffects",
         "tags": [
             "video",
