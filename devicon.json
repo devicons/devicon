@@ -3984,12 +3984,10 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
-                "line"
+                "plain"
             ],
             "font": [
-                "plain",
-                "line"
+                "plain"
             ]
         },
         "color": "#d18900",
