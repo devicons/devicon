@@ -10,11 +10,16 @@
               "original"
           ],
           "font": [
-              "plain"
+              "original"
           ]
       },
       "color": "#5A45FF",
-      "aliases": []
+      "aliases": [
+          {
+              "base": "original",
+              "alias": "plain"
+          }
+      ]
     },
     {
         "name": "aftereffects",
