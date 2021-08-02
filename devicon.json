@@ -7,10 +7,12 @@
       ],
       "versions": {
           "svg": [
-              "original"
+              "original",
+              "original-wordmark"
           ],
           "font": [
-              "original"
+              "original",
+              "original-wordmark"
           ]
       },
       "color": "#5A45FF",
@@ -18,6 +20,10 @@
           {
               "base": "original",
               "alias": "plain"
+          },
+          {
+              "base": "original-wordmark",
+              "alias": "plain-wordmark"
           }
       ]
     },
