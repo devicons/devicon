@@ -37,6 +37,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <p><b>Tools</b> can be software, OS, services, etc. that helps with development. It must be specifically related to development (so software like Microsoft Word or Google Calendar won't be accepted since it's too general).</p>
 
 <b>Special Cases (see <a href='https://github.com/devicons/devicon/discussions/353'>this discussion</a> for more details)</b>
+
 <ul>
   <li>Tech companies used to be accepted in the repository. However, we do not accept them anymore. Icons like Facebook, Twitter, etc., are kept due to backward compatibility. </li>
     <ul>
@@ -49,7 +50,6 @@ First of all, thanks for taking the time to contribute! This project can only gr
     </ul>
   <li>General tools that are well known in the tech industries. Things like Trello, Slack, etc., are accepted under this category. Unfortunately, we won't accept Discord since its use is still too general. This will be treated on a case-by-case basis.</li>
 </ul>
-
 
 <hr>
 <h2 id='requestingIcon'>Requesting an Icon</h2>

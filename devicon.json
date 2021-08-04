@@ -2654,6 +2654,24 @@
         "aliases": []
     },
     {
+        "name": "numpy",
+        "tags": [
+            "library",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original-wordmark"
+            ]
+        },
+        "color": "#4DABCF",
+        "aliases": []
+    },
+    {
         "name": "objectivec",
         "tags": [
             "programming",
