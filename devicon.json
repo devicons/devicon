@@ -3161,12 +3161,10 @@
         "versions": {
             "svg": [
                 "original",
-                "plain",
-                "line"
+                "plain"
             ],
             "font": [
-                "plain",
-                "line"
+                "plain"
             ]
         },
         "color": "#0000fc",
