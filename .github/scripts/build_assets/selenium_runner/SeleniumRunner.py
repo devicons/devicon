@@ -244,12 +244,15 @@ class SeleniumRunner:
         except SeleniumTimeoutException:
             pass # do nothing cause sometimes, the color tab doesn't appear in the site
 
-        if screenshot_folder and index:
+        if screenshot_folder != None and index != None:
+            edit_screen_selector = "div.overlay div.overlayWindow"
             screenshot_path = str(
-                Path(screenshot_folder, f"screenshot_{index}.png").resolve()
+                Path(screenshot_folder, f"new_svg_{index}.png").resolve()
             )
-            self.driver.save_screenshot(screenshot_path)
-            print("Took screenshot and saved it at " + screenshot_path)
+            edit_screen = self.driver.find_element_by_css_selector(
+                edit_screen_selector)
+            edit_screen.screenshot(screenshot_path)
+            print("Took screenshot of svg and saved it at " + screenshot_path)
 
         close_btn = self.driver \
             .find_element_by_css_selector("div.overlayWindow i.icon-close")

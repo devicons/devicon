@@ -1,10 +1,3 @@
-from typing import List
-import re
-import sys
-from selenium.common.exceptions import TimeoutException
-
-# pycharm complains that build_assets is an unresolved ref
-# don't worry about it, the script still runs
 from build_assets.selenium_runner.PeekSeleniumRunner import PeekSeleniumRunner
 from build_assets import filehandler, arg_getters
 from build_assets import util

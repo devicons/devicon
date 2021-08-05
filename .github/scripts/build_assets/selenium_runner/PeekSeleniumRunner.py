@@ -13,7 +13,7 @@ class PeekSeleniumRunner(SeleniumRunner):
         """
         # enforce ordering
         self.peek_svgs(svgs, screenshot_folder)        
-        self.peek_icons(screenshot_folder)
+        self.peek_icons(svgs, screenshot_folder)
 
     def peek_svgs(self, svgs: List[str], screenshot_folder: str):
         """
@@ -36,20 +36,40 @@ class PeekSeleniumRunner(SeleniumRunner):
 
         # take a screenshot of the svgs that were just added
         self.select_all_icons_in_top_set()
-        new_icons_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
-        self.driver.save_screenshot(new_icons_path);
+        new_svgs_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
+        icon_set_xpath = "/html/body/div[4]/div[1]/div[2]/div[1]"
+        icon_set = self.driver.find_element_by_xpath(icon_set_xpath)
+        icon_set.screenshot(new_svgs_path);
 
-        print("Finished uploading the svgs...")
+        print("Finished peeking the svgs...")
 
-    def peek_icons(self, screenshot_folder: str):
+    def peek_icons(self, svgs: List[str], screenshot_folder: str):
         """
         Peek at the icon versions of the SVGs that were uploaded.
         :param screenshot_folder: the name of the screenshot_folder. 
         """
+        print("Begin peeking at the icons...")
         # ensure all icons in the set is selected.
         self.select_all_icons_in_top_set()
         self.go_to_font_tab()
 
-        # take a screenshot of the icons that were just added
+        # take an overall screenshot of the icons that were just added
+        # also include the glyph count
         new_icons_path = str(Path(screenshot_folder, "new_icons.png").resolve())
-        self.driver.save_screenshot(new_icons_path);
+        main_content_xpath = "/html/body/div[4]/div[2]/div/div[1]"
+        main_content = self.driver.find_element_by_xpath(main_content_xpath)
+        main_content.screenshot(new_icons_path);
+
+        # go downward so we get the oldest icon first
+        len_ = len(svgs)
+        for i in range(len_, 0, -1):
+            xpath = f'//*[@id="glyphSet0"]/div[{i}]'
+            icon_div = self.driver.find_element_by_xpath(xpath)
+
+            # crop the div out from the screenshot
+            icon_screenshot = str(
+                Path(screenshot_folder, f"new_icon_{len_ - i}.png").resolve()
+            )
+            icon_div.screenshot(icon_screenshot)
+
+        print("Finished peeking the icons...")
