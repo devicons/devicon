@@ -2731,24 +2731,6 @@
         "aliases": []
     },
     {
-        "name": "pandas",
-        "tags": [
-            "library",
-            "python"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original-wordmark"
-            ]
-        },
-        "color": "#130754",
-        "aliases": []
-    },
-    {
         "name": "perl",
         "tags": [
             "programming",
