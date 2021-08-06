@@ -9,7 +9,7 @@ from typing import List, Dict
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
-from build_assets.SeleniumRunner import SeleniumRunner
+from build_assets.selenium_runner.BuildSeleniumRunner import BuildSeleniumRunner
 from build_assets import filehandler, arg_getters, util, api_handler
 
 
@@ -26,24 +26,24 @@ def main():
 
         print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n")
 
-        print("Begin optimizing files")
-        optimize_svgs(new_icons, args.icons_folder_path)
+        # print("Begin optimizing files")
+        # optimize_svgs(new_icons, args.icons_folder_path)
 
-        print("Updating the icomoon json")
-        update_icomoon_json(new_icons, args.icomoon_json_path)
+        # print("Updating the icomoon json")
+        # update_icomoon_json(new_icons, args.icomoon_json_path)
 
         icon_svgs = filehandler.get_svgs_paths(
             new_icons, args.icons_folder_path, icon_versions_only=True)
-        runner = SeleniumRunner(args.download_path,
-                                args.geckodriver_path, args.headless)
-        runner.upload_icomoon(args.icomoon_json_path)
-        runner.upload_svgs(icon_svgs)
-
         zip_name = "devicon-v1.0.zip"
         zip_path = Path(args.download_path, zip_name)
-        runner.download_icomoon_fonts(zip_path)
-        filehandler.extract_files(str(zip_path), args.download_path)
-        filehandler.rename_extracted_files(args.download_path)
+        screenshot_folder = filehandler.create_screenshot_folder("./") 
+        runner = BuildSeleniumRunner(args.download_path,
+            args.geckodriver_path, args.headless)
+        runner.build_icons(args.icomoon_json_path, zip_path,
+            icon_svgs, screenshot_folder)
+
+        # filehandler.extract_files(str(zip_path), args.download_path)
+        # filehandler.rename_extracted_files(args.download_path)
         print("Task completed.")
     except TimeoutException as e:
         util.exit_with_err("Selenium Time Out Error: \n" + str(e))
