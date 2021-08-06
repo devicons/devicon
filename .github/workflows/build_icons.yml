@@ -42,7 +42,7 @@ jobs:
         uses: devicons/public-upload-to-imgur@v2.2.2
         if: success()
         with:
-          path: ./new_icons.png
+          path: ./screenshots/*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Create Pull Request
@@ -54,9 +54,13 @@ jobs:
 
             I'm Devicon's Build Bot and I just built some new font files and devicon.min.css file.
 
-            Here are all the files that were built into icons (the new ones are those without highlight):
+            Here are all the **SVGs** that were uploaded (the new ones are those without highlight):
 
-            ![Files Built]({0})
+            {0}
+
+            Here is what they look like as icons:
+
+            {1}
 
             The devicon.min.css file contains:
             -The icon content
@@ -71,5 +75,9 @@ jobs:
           branch: 'bot/build-result'
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
-          body: ${{ format(env.MESSAGE, fromJSON(steps.imgur_step.outputs.imgur_urls)[0] ) }}
+          body: ${{ format(
+            env.MESSAGE,
+            fromJSON(steps.imgur_step.outputs.markdown_urls)[0],
+            fromJSON(steps.imgur_step.outputs.markdown_urls)[1]) 
+          }}
           delete-branch: true
