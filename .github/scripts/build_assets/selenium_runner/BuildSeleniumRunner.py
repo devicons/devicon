@@ -3,6 +3,7 @@ import time
 from pathlib import Path
 
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import TimeoutException as SeleniumTimeoutException
 
@@ -13,7 +14,7 @@ class BuildSeleniumRunner(SeleniumRunner):
         zip_path: Path, svgs: List[str], screenshot_folder: str):
         self.upload_icomoon(icomoon_json_path)
         self.upload_svgs(svgs, screenshot_folder)
-        self.download_icomoon_fonts(zip_path)
+        self.download_icomoon_fonts(zip_path, screenshot_folder)
 
     def upload_icomoon(self, icomoon_json_path: str):
         """
@@ -52,11 +53,19 @@ class BuildSeleniumRunner(SeleniumRunner):
             SeleniumRunner.SET_IMPORT_BUTTON_CSS
         )
 
+        dismiss_btn_text = "Dismiss"
+        replace_btn_text = "Replace"
         for i in range(len(svgs)):
             import_btn.send_keys(svgs[i])
-            print(f"Uploaded {svgs[i]}")
-            self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Dismiss")
+            print(f"Uploading {svgs[i]}")
+            # see if there are stroke messages or replacing icon message
+            # there should be none of the second kind
+            self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, dismiss_btn_text)
+            if self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, replace_btn_text):
+                message = f"Duplicated SVG: check for {svgs[i]}."
+                raise Exception(message)
             self.edit_svg()
+            print(f"Finished editing icon.")
 
         # take a screenshot of the icons that were just added
         new_icons_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
@@ -66,7 +75,8 @@ class BuildSeleniumRunner(SeleniumRunner):
 
     def download_icomoon_fonts(self, zip_path: Path, screenshot_folder: str):
         """
-        Download the icomoon.zip from icomoon.io.
+        Download the icomoon.zip from icomoon.io. Also take a picture of 
+        what the icons look like.
         :param zip_path: the path to the zip file after it's downloaded.
         :param screenshot_folder: the name of the screenshot_folder. 
         """

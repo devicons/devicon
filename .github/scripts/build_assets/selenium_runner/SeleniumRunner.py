@@ -36,7 +36,12 @@ class SeleniumRunner:
     """
     The short wait time for the driver in seconds.
     """
-    SHORT_WAIT_IN_SEC = 0.6
+    SHORT_WAIT_IN_SEC = 2.5
+
+    """
+    The short wait time for the driver in seconds.
+    """
+    BRIEF_WAIT_IN_SEC = 0.6
 
     """
     The Icomoon Url.
@@ -72,9 +77,10 @@ class SeleniumRunner:
         :param headless: whether to run browser in headless (no UI) mode.
         """
         self.driver = None
-        self.set_options(download_path, geckodriver_path, headless)
+        self.option_state = IcomoonOptionState.SELECT
+        self.set_browser_options(download_path, geckodriver_path, headless)
 
-    def set_options(self, download_path: str, geckodriver_path: str,
+    def set_browser_options(self, download_path: str, geckodriver_path: str,
         headless: bool):
         """
         Build the WebDriver with Firefox Options allowing downloads and
@@ -112,10 +118,14 @@ class SeleniumRunner:
         Switch the toolbar option to the option argument.
         :param option: an option from the toolbar of Icomoon.
         """
+        if self.option_state == option:
+            return
+
         option_btn = self.driver.find_element_by_css_selector(
             SeleniumRunner.TOOLBAR_OPTIONS_CSS[option]
         )
         option_btn.click()
+        self.option_state = option
 
     def click_hamburger_input(self):
         """
@@ -142,7 +152,7 @@ class SeleniumRunner:
         :param wait_period: the wait period for the possible alert
         in seconds.
         :param btn_text: the text that the alert's button will have.
-        :return: None.
+        :return: True if there was an alert. Else, false
         """
         try:
             dismiss_btn = WebDriverWait(self.driver, wait_period, 0.15).until(
@@ -150,8 +160,9 @@ class SeleniumRunner:
                     (By.XPATH, f"//div[@class='overlay']//button[text()='{btn_text}']"))
             )
             dismiss_btn.click()
+            return True
         except SeleniumTimeoutException:
-            pass  # nothing found => everything is good
+            return False  # nothing found => everything is good
 
     def edit_svg(self, screenshot_folder: str=None, index: int=None):
         """
@@ -165,7 +176,7 @@ class SeleniumRunner:
         screenshot_folder is a truthy value.
         """
         self.switch_toolbar_option(IcomoonOptionState.EDIT)
-        latest_icon = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
+        latest_icon = WebDriverWait(self.driver, self.BRIEF_WAIT_IN_SEC).until(
             ec.element_to_be_clickable(
                 (By.XPATH, "//div[@id='set0']//mi-box[1]//div")
             )
@@ -178,7 +189,7 @@ class SeleniumRunner:
         # The color removal is also necessary so that the Icomoon-generated
         # icons fit within one font symbol/ligiature.
         try:
-            color_tab = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC).until(
+            color_tab = WebDriverWait(self.driver, self.BRIEF_WAIT_IN_SEC).until(
                 ec.element_to_be_clickable((By.CSS_SELECTOR, "div.overlayWindow i.icon-droplet"))
             )
             color_tab.click()
@@ -222,7 +233,7 @@ class SeleniumRunner:
             "a[href='#/select/font']"
         )
         font_tab.click()
-        self.test_for_possible_alert(self.MED_WAIT_IN_SEC, "Continue")
+        self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Continue")
 
     def close(self):
         """

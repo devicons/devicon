@@ -91,7 +91,7 @@ def get_icon_svgs_paths(folder_path: Path, icon_info: dict,
     for font_version in icon_info["versions"]["font"]:
         # if it's an alias, we don't want to make it into an icon
         if is_alias(font_version, aliases):
-            print(f"Skipping this font since it's an alias: {icon_info['name']}-{font_version}.svg")
+            print(f"Finding SVG filepaths: skipping this font since it's an alias: {icon_info['name']}-{font_version}.svg")
             continue
 
         file_name = f"{icon_info['name']}-{font_version}.svg"
@@ -203,7 +203,7 @@ def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
     try:
         os.mkdir(screenshot_folder)
     except FileExistsError:
-        print(f"{screenshot_folder} already exist. Script will do nothing.")
+        print(f"{screenshot_folder} already exist. Not creating new folder.")
     finally:
         return str(screenshot_folder)
 

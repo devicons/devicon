@@ -49,9 +49,9 @@ def main():
         util.exit_with_err("Selenium Time Out Error: \n" + str(e))
     except Exception as e:
         util.exit_with_err(e)
-    finally:
-        if runner is not None:
-            runner.close() 
+    # finally:
+    #     if runner is not None:
+    #         runner.close() 
 
 
 def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token: str):
@@ -72,6 +72,7 @@ def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token
                 new_icons.append(filtered_icon)
 
     # get any icons that might not have been found by the API
+    # sometimes happen due to the PR being opened before the latest build release
     new_icons_from_devicon_json = filehandler.find_new_icons_in_devicon_json(
         devicon_json_path, icomoon_json_path)
 
