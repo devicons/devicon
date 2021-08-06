@@ -29,8 +29,8 @@ def main():
         # print("Begin optimizing files")
         # optimize_svgs(new_icons, args.icons_folder_path)
 
-        # print("Updating the icomoon json")
-        # update_icomoon_json(new_icons, args.icomoon_json_path)
+        print("Updating the icomoon json")
+        update_icomoon_json(new_icons, args.icomoon_json_path)
 
         icon_svgs = filehandler.get_svgs_paths(
             new_icons, args.icons_folder_path, icon_versions_only=True)

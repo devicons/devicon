@@ -7,14 +7,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import TimeoutException as SeleniumTimeoutException
 
-from build_assets.selenium_runner.SeleniumRunner import SeleniumRunner
+from build_assets.selenium_runner.SeleniumRunner import SeleniumRunner, IcomoonPage, IcomoonOptionState
 
 class BuildSeleniumRunner(SeleniumRunner):
     def build_icons(self, icomoon_json_path: str,
         zip_path: Path, svgs: List[str], screenshot_folder: str):
         self.upload_icomoon(icomoon_json_path)
+        # necessary so we can take screenshot of only the 
+        # recently uploaded icons later
+        self.deselect_all_icons_in_top_set()
         self.upload_svgs(svgs, screenshot_folder)
-        self.download_icomoon_fonts(zip_path, screenshot_folder)
+        self.take_icon_screenshot(screenshot_folder)
+        self.download_icomoon_fonts(zip_path)
 
     def upload_icomoon(self, icomoon_json_path: str):
         """
@@ -67,29 +71,45 @@ class BuildSeleniumRunner(SeleniumRunner):
             self.edit_svg()
             print(f"Finished editing icon.")
 
-        # take a screenshot of the icons that were just added
+        # take a screenshot of the svgs that were just added
+        # select the latest icons
+        self.switch_toolbar_option(IcomoonOptionState.SELECT)
+        self.click_latest_icons_in_top_set(len(svgs)) 
         new_icons_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
         self.driver.save_screenshot(new_icons_path);
 
         print("Finished uploading the svgs...")
 
-    def download_icomoon_fonts(self, zip_path: Path, screenshot_folder: str):
+    def take_icon_screenshot(self, screenshot_folder: str):
         """
-        Download the icomoon.zip from icomoon.io. Also take a picture of 
-        what the icons look like.
-        :param zip_path: the path to the zip file after it's downloaded.
+        Take the overview icon screenshot of the uploaded icons.
+        :param svgs: a list of svg Paths that we'll upload to icomoon.
         :param screenshot_folder: the name of the screenshot_folder. 
         """
-        print("Downloading Font files...")
-        self.select_all_icons_in_top_set()
-        self.go_to_font_tab()
+        # take pictures
+        print("Taking screenshot of the new icons...")
+        self.go_to_page(IcomoonPage.GENERATE_FONT)
 
         # take an overall screenshot of the icons that were just added
         # also include the glyph count
         new_icons_path = str(Path(screenshot_folder, "new_icons.png").resolve())
         main_content_xpath = "/html/body/div[4]/div[2]/div/div[1]"
         main_content = self.driver.find_element_by_xpath(main_content_xpath)
-        main_content.screenshot(new_icons_path);
+        main_content.screenshot(new_icons_path)
+        print("Saved screenshot of the new icons...")
+
+    def download_icomoon_fonts(self, zip_path: Path):
+        """
+        Download the icomoon.zip from icomoon.io. Also take a picture of 
+        what the icons look like.
+        :param zip_path: the path to the zip file after it's downloaded.
+        """
+        print("Downloading Font files...")
+        if self.current_page != IcomoonPage.SELECTION:
+            self.go_to_page(IcomoonPage.SELECTION)
+
+        self.select_all_icons_in_top_set()
+        self.go_to_page(IcomoonPage.GENERATE_FONT)
 
         download_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
             ec.presence_of_element_located((By.CSS_SELECTOR, "button.btn4 span"))

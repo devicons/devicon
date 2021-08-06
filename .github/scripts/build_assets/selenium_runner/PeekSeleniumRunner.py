@@ -1,7 +1,7 @@
 from typing import List
 from pathlib import Path
 
-from build_assets.selenium_runner.SeleniumRunner import SeleniumRunner
+from build_assets.selenium_runner.SeleniumRunner import SeleniumRunner, IcomoonPage
 
 class PeekSeleniumRunner(SeleniumRunner):
     def peek(self, svgs: List[str], screenshot_folder: str):
@@ -51,7 +51,7 @@ class PeekSeleniumRunner(SeleniumRunner):
         print("Begin peeking at the icons...")
         # ensure all icons in the set is selected.
         self.select_all_icons_in_top_set()
-        self.go_to_font_tab()
+        self.go_to_page(IcomoonPage.GENERATE_FONT)
 
         # take an overall screenshot of the icons that were just added
         # also include the glyph count

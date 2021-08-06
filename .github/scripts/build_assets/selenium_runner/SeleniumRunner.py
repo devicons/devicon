@@ -17,6 +17,14 @@ class IcomoonOptionState(Enum):
     EDIT = 1
 
 
+class IcomoonPage(Enum):
+    """
+    The available pages on the Icomoon website.
+    """
+    SELECTION = 0,
+    GENERATE_FONT = 1
+
+
 class SeleniumRunner:
     """
     A runner that upload and download Icomoon resources using Selenium.
@@ -67,6 +75,15 @@ class SeleniumRunner:
         IcomoonOptionState.EDIT: "div.btnBar button i.icon-edit"
     }
 
+    """
+    The URL to go to different pages within the Icomoon domain. 
+    There are more but these are the ones that we actually use.
+    """
+    PAGES_URL = {
+        IcomoonPage.SELECTION: ICOMOON_URL,
+        IcomoonPage.GENERATE_FONT: ICOMOON_URL + "/font"
+    }
+
     def __init__(self, download_path: str,
                  geckodriver_path: str, headless: bool):
         """
@@ -77,7 +94,9 @@ class SeleniumRunner:
         :param headless: whether to run browser in headless (no UI) mode.
         """
         self.driver = None
-        self.option_state = IcomoonOptionState.SELECT
+        # default values when we open Icomoon
+        self.current_option_state = IcomoonOptionState.SELECT
+        self.current_page = IcomoonPage.SELECTION
         self.set_browser_options(download_path, geckodriver_path, headless)
 
     def set_browser_options(self, download_path: str, geckodriver_path: str,
@@ -118,14 +137,14 @@ class SeleniumRunner:
         Switch the toolbar option to the option argument.
         :param option: an option from the toolbar of Icomoon.
         """
-        if self.option_state == option:
+        if self.current_option_state == option:
             return
 
         option_btn = self.driver.find_element_by_css_selector(
             SeleniumRunner.TOOLBAR_OPTIONS_CSS[option]
         )
         option_btn.click()
-        self.option_state = option
+        self.current_option_state = option
 
     def click_hamburger_input(self):
         """
@@ -176,12 +195,7 @@ class SeleniumRunner:
         screenshot_folder is a truthy value.
         """
         self.switch_toolbar_option(IcomoonOptionState.EDIT)
-        latest_icon = WebDriverWait(self.driver, self.BRIEF_WAIT_IN_SEC).until(
-            ec.element_to_be_clickable(
-                (By.XPATH, "//div[@id='set0']//mi-box[1]//div")
-            )
-        )
-        latest_icon.click()
+        self.click_latest_icons_in_top_set(1)
 
         # strip the colors from the SVG.
         # This is because some SVG have colors in them and we don't want to
@@ -214,6 +228,19 @@ class SeleniumRunner:
             .find_element_by_css_selector("div.overlayWindow i.icon-close")
         close_btn.click()
 
+    def click_latest_icons_in_top_set(self, amount: int):
+        """
+        Click on the latest icons in the top set based on the amount passed in.
+        This is state option agnostic (doesn't care if it's in SELECT or EDIT mode).
+        :param amount: the amount of icons to click on from top left of the top
+        set. Must be > 0.
+        """
+        icon_base_xpath = '//div[@id="set0"]//mi-box[{}]//div'
+        for i in range(1, amount + 1):
+            icon_xpath = icon_base_xpath.format(i)
+            latest_icon = self.driver.find_element_by_xpath(icon_xpath)
+            latest_icon.click()
+
     def select_all_icons_in_top_set(self):
         """
         Select all the svgs in the top most (latest) set.
@@ -224,16 +251,29 @@ class SeleniumRunner:
         )
         select_all_button.click()
 
-    def go_to_font_tab(self):
+    def deselect_all_icons_in_top_set(self):
         """
-        Go to the font tab of the Icomoon page. Also check for confirmation
-        alert that sometimes appear.
+        Select all the svgs in the top most (latest) set.
         """
-        font_tab = self.driver.find_element_by_css_selector(
-            "a[href='#/select/font']"
+        self.click_hamburger_input()
+        select_all_button = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
+            ec.element_to_be_clickable((By.XPATH, "//button[text()='Deselect']"))
         )
-        font_tab.click()
+        select_all_button.click()
+
+    def go_to_page(self, page: IcomoonPage):
+        """
+        Go to the specified page in Icomoon. Also check for confirmation
+        alert that sometimes appear. This used the URL rather than UI 
+        elements due to the inconsistent UI rendering.
+        :param page: a valid page that can be accessed in Icomoon.
+        """
+        if self.current_page == page:
+            return
+
+        self.driver.get(self.PAGES_URL[page])
         self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Continue")
+        self.current_page = page
 
     def close(self):
         """
