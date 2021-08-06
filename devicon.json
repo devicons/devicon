@@ -2902,7 +2902,12 @@
             ]
         },
         "color": "#4DABCF",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "nuxtjs",
