@@ -3975,7 +3975,7 @@
         "color": "#D1A41A",
         "aliases": []
     },
-	{
+    {
         "name": "towergit",
         "tags": [
             "git"
@@ -3984,7 +3984,8 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain"
