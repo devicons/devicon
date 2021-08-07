@@ -93,13 +93,19 @@ jobs:
             Here are the zoomed-in screenshots of the added icons as **icons**. This is what the font will look like:
             {3}
 
-            The number of Glyphs should match the number of icons that were uploaded.
+            Please ensure that:
+            
+            1. The number of Glyphs should match the number of SVGs that were selected. 
+            2. The icons (second group of pictures) look the same as the SVGs (first group of pictures).
 
-            Note: If the images don't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
+            If one of the above is incorrect, this might be caused by Icomoon not intepreting your SVGs correctly. Check this [doc](https://icomoon.io/#faq/importing) for more details.
+            Please fix the issues as instructed by Icomoon and update this PR once you are done.
 
             **The maintainers will now take a look at it and decide whether to merge your PR.**
 
-            Thank you for contributing to Devicon! I hope everything works out and your icons are accepted into the repo.
+            Thank you for contributing to Devicon! I hope that your icons are accepted into the repo.
+
+            Note: If the images don't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
 
             Cheers, 
             Peek Bot :blush:
