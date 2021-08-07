@@ -3200,6 +3200,24 @@
         "color": "#b7111d",
         "aliases": []
     },
+	{
+        "name": "putty",
+        "tags": [
+            "ssh",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0000fc",
+        "aliases": []
+    },
     {
         "name": "pycharm",
         "tags": [
