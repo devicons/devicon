@@ -137,6 +137,7 @@ class SeleniumRunner:
         options.set_preference("browser.download.dir", download_path)
         options.headless = headless
 
+        print("Activating browser client...")
         self.driver = WebDriver(options=options, executable_path=geckodriver_path)
         self.driver.get(self.ICOMOON_URL)
         assert "IcoMoon App" in self.driver.title
@@ -195,7 +196,7 @@ class SeleniumRunner:
             )
             alert_message = overlay_div.text
             for alert in self.ALERTS.keys():
-                if self.ALERTS[alert].text in alert_message:
+                if self.ALERTS[alert]["text"] in alert_message:
                     return alert
 
             return IcomoonAlerts.UNKNOWN

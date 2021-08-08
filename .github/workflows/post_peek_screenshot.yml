@@ -93,15 +93,16 @@ jobs:
             Here are the zoomed-in screenshots of the added icons as **icons**. This is what the font will look like:
             {3}
 
-            Please ensure that:
-            
+            **The maintainers will now check for:**
             1. The number of Glyphs matches the number of SVGs that were selected. 
-            2. The icons (second group of pictures) look the same as the SVGs (first group of pictures).
+            2. The icons (second group of pictures) look the same as the SVGs (first group of pictures). 
+            3. The icons are of high quality (legible, matches the official logo, etc.)
 
-            If one of the above is incorrect, this might be caused by Icomoon not intepreting your SVGs correctly. Check this [doc](https://icomoon.io/#faq/importing) for more details.
-            Please fix the issues as instructed by Icomoon and update this PR once you are done.
+            {4}
 
-            **The maintainers will now take a look at it and decide whether to merge your PR.**
+            In case of font issues, it might be caused by Icomoon not acceptin strokes in the SVGs. 
+            Check this [doc](https://icomoon.io/#faq/importing) for more details and fix the issues as 
+            instructed by Icomoon and update this PR once you are done.
 
             Thank you for contributing to Devicon! I hope that your icons are accepted into the repo.
 
@@ -120,12 +121,13 @@ jobs:
                 fromJSON(steps.svgs_overview_img_step.outputs.markdown_urls)[0],
                 join(fromJSON(steps.svgs_detailed_img_step.outputs.markdown_urls), ''),
                 fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0],
-                join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '')
+                join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), ''),
+                steps.err_message_reader.outputs.content
               ) 
             }}
 
       - name: Comment on the PR about the result - Failure
-        if: failure() || env.PEEK_STATUS == 'failure'
+        if: env.PEEK_STATUS == 'failure'
         uses: jungwinter/comment@v1 # let us comment on a specific PR
         env:
           MESSAGE: |
@@ -146,6 +148,23 @@ jobs:
             I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate. 
 
             Best of luck, 
+            Peek Bot :relaxed:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
+      - name: Comment on the PR about the result - Failure
+        if: failure()
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        env:
+          MESSAGE: |
+            Hi there,
+
+            I'm Devicons' Peek Bot and we've ran into a problem with the `post_peek_screenshot` workflow.
+            The maintainers will take a look and fix the issue. Please wait for further instructions.
+
+            Thank you, 
             Peek Bot :relaxed:
         with:
           type: create

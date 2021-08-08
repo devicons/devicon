@@ -11,10 +11,12 @@ class PeekSeleniumRunner(SeleniumRunner):
         font versions.
         :param svgs: a list of svg Paths that we'll upload to icomoon.
         :param screenshot_folder: the name of the screenshot_folder. 
+        :return an array of svgs with strokes as strings. These show which icon
+        post_peek workflow's message.
         """
-        # enforce ordering
-        self.peek_svgs(svgs, screenshot_folder)        
+        messages = self.peek_svgs(svgs, screenshot_folder)        
         self.peek_icons(svgs, screenshot_folder)
+        return messages
 
     def peek_svgs(self, svgs: List[str], screenshot_folder: str):
         """
@@ -22,6 +24,8 @@ class PeekSeleniumRunner(SeleniumRunner):
         interprets the SVGs as a font.
         :param svgs: a list of svg Paths that we'll upload to icomoon.
         :param screenshot_folder: the name of the screenshot_folder. 
+        :return an array of svgs with strokes as strings. These show which icon
+        contains stroke.
         """
         print("Peeking SVGs...")
 
@@ -29,6 +33,7 @@ class PeekSeleniumRunner(SeleniumRunner):
             SeleniumRunner.GENERAL_IMPORT_BUTTON_CSS
         )
 
+        svgs_with_strokes = []
         for i in range(len(svgs)):
             import_btn.send_keys(svgs[i])
             print(f"Uploaded {svgs[i]}")
@@ -37,7 +42,8 @@ class PeekSeleniumRunner(SeleniumRunner):
             if alert == None:
                 pass  # all good
             elif alert == IcomoonAlerts.STROKES_GET_IGNORED_WARNING:
-                print("This icon contains strokes!")
+                print(f"- This icon contains strokes: {svgs[i]}")
+                svgs_with_strokes.append(svgs[i])
                 self.click_alert_button(self.ALERTS[alert]["buttons"]["DISMISS"])
             else:
                 raise Exception(f"Unexpected alert found: {alert}")
@@ -52,6 +58,7 @@ class PeekSeleniumRunner(SeleniumRunner):
         icon_set.screenshot(new_svgs_path);
 
         print("Finished peeking the svgs...")
+        return svgs_with_strokes
 
     def peek_icons(self, svgs: List[str], screenshot_folder: str):
         """
