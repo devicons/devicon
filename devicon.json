@@ -4042,6 +4042,26 @@
         "aliases": []
     },
     {
+        "name": "towergit",
+        "tags": [
+            "git"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#d18900",
+        "aliases": []
+    },
+    {
         "name": "travis",
         "tags": [
             "platform",
