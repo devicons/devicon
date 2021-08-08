@@ -7,7 +7,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import TimeoutException as SeleniumTimeoutException
 
-from build_assets.selenium_runner.SeleniumRunner import SeleniumRunner, IcomoonPage, IcomoonOptionState
+from build_assets.selenium_runner.SeleniumRunner import SeleniumRunner
+from build_assets.selenium_runner.enums import IcomoonPage, IcomoonAlerts, IcomoonOptionState
 
 class BuildSeleniumRunner(SeleniumRunner):
     def build_icons(self, icomoon_json_path: str,
@@ -57,17 +58,24 @@ class BuildSeleniumRunner(SeleniumRunner):
             SeleniumRunner.SET_IMPORT_BUTTON_CSS
         )
 
-        dismiss_btn_text = "Dismiss"
-        replace_btn_text = "Replace"
         for i in range(len(svgs)):
             import_btn.send_keys(svgs[i])
             print(f"Uploading {svgs[i]}")
+
             # see if there are stroke messages or replacing icon message
             # there should be none of the second kind
-            self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, dismiss_btn_text)
-            if self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, replace_btn_text):
-                message = f"Duplicated SVG: check for {svgs[i]}."
+            alert = self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC)
+            if alert == None:
+                pass  # all good
+            elif alert == IcomoonAlerts.STROKES_GET_IGNORED_WARNING:
+                message = f"SVG contained strokes: {svgs[i]}. This should not happen."
                 raise Exception(message)
+            elif alert == IcomoonAlerts.REPLACE_OR_REIMPORT_ICON:
+                message = f"Duplicated SVG: {svgs[i]}. This should not happen."
+                raise Exception(message)
+            else:
+                raise Exception(f"Unexpected alert found: {alert}")
+
             self.edit_svg()
             print(f"Finished editing icon.")
 
@@ -88,7 +96,7 @@ class BuildSeleniumRunner(SeleniumRunner):
         """
         # take pictures
         print("Taking screenshot of the new icons...")
-        self.go_to_page(IcomoonPage.GENERATE_FONT)
+        self.go_to_generate_font_page()
 
         # take an overall screenshot of the icons that were just added
         # also include the glyph count
@@ -97,6 +105,21 @@ class BuildSeleniumRunner(SeleniumRunner):
         main_content = self.driver.find_element_by_xpath(main_content_xpath)
         main_content.screenshot(new_icons_path)
         print("Saved screenshot of the new icons...")
+
+    def go_to_generate_font_page(self):
+        """
+        Go to the generate font page. Also handles the "Deselect Icons 
+        with Strokes" alert.
+        """
+        self.go_to_page(IcomoonPage.GENERATE_FONT)
+        alert = self.test_for_possible_alert(self.MED_WAIT_IN_SEC)
+        if alert == None:
+            pass  # all good
+        elif alert == IcomoonAlerts.DESELECT_ICONS_CONTAINING_STROKES:
+            message = f"One of SVGs contained strokes. This should not happen."
+            raise Exception(message)
+        else:
+            raise Exception(f"Unexpected alert found: {alert}")
 
     def download_icomoon_fonts(self, zip_path: Path):
         """
@@ -109,7 +132,7 @@ class BuildSeleniumRunner(SeleniumRunner):
             self.go_to_page(IcomoonPage.SELECTION)
 
         self.select_all_icons_in_top_set()
-        self.go_to_page(IcomoonPage.GENERATE_FONT)
+        self.go_to_generate_font_page()
 
         download_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
             ec.presence_of_element_located((By.CSS_SELECTOR, "button.btn4 span"))

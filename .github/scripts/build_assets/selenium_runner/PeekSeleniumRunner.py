@@ -1,7 +1,8 @@
 from typing import List
 from pathlib import Path
 
-from build_assets.selenium_runner.SeleniumRunner import SeleniumRunner, IcomoonPage
+from build_assets.selenium_runner.SeleniumRunner import SeleniumRunner
+from build_assets.selenium_runner.enums import IcomoonPage, IcomoonAlerts
 
 class PeekSeleniumRunner(SeleniumRunner):
     def peek(self, svgs: List[str], screenshot_folder: str):
@@ -31,7 +32,16 @@ class PeekSeleniumRunner(SeleniumRunner):
         for i in range(len(svgs)):
             import_btn.send_keys(svgs[i])
             print(f"Uploaded {svgs[i]}")
-            self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Dismiss")
+
+            alert = self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC)
+            if alert == None:
+                pass  # all good
+            elif alert == IcomoonAlerts.STROKES_GET_IGNORED_WARNING:
+                print("This icon contains strokes!")
+                self.click_alert_button(self.ALERTS[alert]["buttons"]["DISMISS"])
+            else:
+                raise Exception(f"Unexpected alert found: {alert}")
+
             self.edit_svg(screenshot_folder, i)
 
         # take a screenshot of the svgs that were just added
@@ -52,6 +62,13 @@ class PeekSeleniumRunner(SeleniumRunner):
         # ensure all icons in the set is selected.
         self.select_all_icons_in_top_set()
         self.go_to_page(IcomoonPage.GENERATE_FONT)
+        alert = self.test_for_possible_alert(self.MED_WAIT_IN_SEC)
+        if alert == None:
+            pass  # all good
+        elif alert == IcomoonAlerts.DESELECT_ICONS_CONTAINING_STROKES:
+            self.click_alert_button(self.ALERTS[alert]["buttons"]["CONTINUE"])
+        else:
+            raise Exception(f"Unexpected alert found: {alert}")
 
         # take an overall screenshot of the icons that were just added
         # also include the glyph count

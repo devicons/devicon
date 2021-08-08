@@ -21,7 +21,8 @@ def main():
         print("Task completed.")
 
         # no errors, do this so upload-artifact won't fail
-        filehandler.write_to_file("./err_messages.txt", "0")
+        no_err_message = "No errors from `icomoon_peek.py`. Check the post_peek_script action if this shows up."
+        filehandler.write_to_file("./err_messages.txt", no_err_message)
     except Exception as e:
         filehandler.write_to_file("./err_messages.txt", str(e))
         util.exit_with_err(e)

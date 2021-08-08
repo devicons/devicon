@@ -26,8 +26,8 @@ def main():
 
         print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n")
 
-        # print("Begin optimizing files")
-        # optimize_svgs(new_icons, args.icons_folder_path)
+        print("Begin optimizing files")
+        optimize_svgs(new_icons, args.icons_folder_path)
 
         print("Updating the icomoon json")
         update_icomoon_json(new_icons, args.icomoon_json_path)
@@ -42,16 +42,16 @@ def main():
         runner.build_icons(args.icomoon_json_path, zip_path,
             icon_svgs, screenshot_folder)
 
-        # filehandler.extract_files(str(zip_path), args.download_path)
-        # filehandler.rename_extracted_files(args.download_path)
+        filehandler.extract_files(str(zip_path), args.download_path)
+        filehandler.rename_extracted_files(args.download_path)
         print("Task completed.")
     except TimeoutException as e:
         util.exit_with_err("Selenium Time Out Error: \n" + str(e))
     except Exception as e:
         util.exit_with_err(e)
-    # finally:
-    #     if runner is not None:
-    #         runner.close() 
+    finally:
+        if runner is not None:
+            runner.close() 
 
 
 def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token: str):

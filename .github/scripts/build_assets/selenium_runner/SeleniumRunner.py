@@ -1,5 +1,4 @@
 from pathlib import Path
-from enum import Enum
 
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.firefox.options import Options
@@ -8,21 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import TimeoutException as SeleniumTimeoutException
 
-
-class IcomoonOptionState(Enum):
-    """
-    The state of the Icomoon toolbar options
-    """
-    SELECT = 0,
-    EDIT = 1
-
-
-class IcomoonPage(Enum):
-    """
-    The available pages on the Icomoon website.
-    """
-    SELECTION = 0,
-    GENERATE_FONT = 1
+from build_assets.selenium_runner.enums import IcomoonOptionState, IcomoonPage, IcomoonAlerts
 
 
 class SeleniumRunner:
@@ -82,6 +67,35 @@ class SeleniumRunner:
     PAGES_URL = {
         IcomoonPage.SELECTION: ICOMOON_URL,
         IcomoonPage.GENERATE_FONT: ICOMOON_URL + "/font"
+    }
+
+    """
+    The different types of alerts that this workflow will encounter.
+    It contains part of the text in the actual alert and buttons
+    available to press. It's up to the user to know what button to 
+    press for which alert.
+    """
+    ALERTS = {
+        IcomoonAlerts.STROKES_GET_IGNORED_WARNING: {
+            "text": "Strokes get ignored when generating fonts or CSH files.",
+            "buttons": {
+                "DISMISS": "Dismiss",
+            }
+        },
+        IcomoonAlerts.REPLACE_OR_REIMPORT_ICON : {
+            "text": "Replace existing icons?",
+            "buttons": {
+                "REPLACE": "Replace",
+                "REIMPORT": "Reimport"
+            }
+        },
+        IcomoonAlerts.DESELECT_ICONS_CONTAINING_STROKES: {
+            "text": "Strokes get ignored when generating fonts.",
+            "buttons": {
+                "DESELECT": "Deselect",
+                "CONTINUE": "Continue"
+            }
+        }
     }
 
     def __init__(self, download_path: str,
@@ -165,23 +179,42 @@ class SeleniumRunner:
         while not menu_appear_callback(self.driver):
             hamburger_input.click()
 
-    def test_for_possible_alert(self, wait_period: float, btn_text: str):
+    def test_for_possible_alert(self, wait_period: float) -> IcomoonAlerts:
         """
-        Test for the possible alert when we upload the svgs.
+        Test for the possible alerts that might appear. Return the 
+        type of alert if one shows up.
         :param wait_period: the wait period for the possible alert
         in seconds.
-        :param btn_text: the text that the alert's button will have.
-        :return: True if there was an alert. Else, false
+        :return: an IcomoonAlerts enum representing the alert that was found.
+        Else, return None.
         """
         try:
-            dismiss_btn = WebDriverWait(self.driver, wait_period, 0.15).until(
+            overlay_div = WebDriverWait(self.driver, wait_period, 0.15).until(
+                ec.element_to_be_clickable(
+                    (By.XPATH, "//div[@class='overlay']"))
+            )
+            alert_message = overlay_div.text
+            for alert in self.ALERTS.keys():
+                if self.ALERTS[alert].text in alert_message:
+                    return alert
+
+            return IcomoonAlerts.UNKNOWN
+        except SeleniumTimeoutException:
+            return None  # nothing found => everything is good
+
+    def click_alert_button(self, btn_text: str):
+        """
+        Click the button in the alert that matches the button text.
+        :param btn_text: the text that the alert's button will have.
+        """
+        try:
+            button = WebDriverWait(self.driver, self.BRIEF_WAIT_IN_SEC, 0.15).until(
                 ec.element_to_be_clickable(
                     (By.XPATH, f"//div[@class='overlay']//button[text()='{btn_text}']"))
             )
-            dismiss_btn.click()
-            return True
+            button.click()
         except SeleniumTimeoutException:
-            return False  # nothing found => everything is good
+            return None  # nothing found => everything is good
 
     def edit_svg(self, screenshot_folder: str=None, index: int=None):
         """
@@ -263,8 +296,7 @@ class SeleniumRunner:
 
     def go_to_page(self, page: IcomoonPage):
         """
-        Go to the specified page in Icomoon. Also check for confirmation
-        alert that sometimes appear. This used the URL rather than UI 
+        Go to the specified page in Icomoon. This used the URL rather than UI 
         elements due to the inconsistent UI rendering.
         :param page: a valid page that can be accessed in Icomoon.
         """
@@ -272,7 +304,6 @@ class SeleniumRunner:
             return
 
         self.driver.get(self.PAGES_URL[page])
-        self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC, "Continue")
         self.current_page = page
 
     def close(self):

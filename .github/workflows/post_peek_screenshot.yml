@@ -95,7 +95,7 @@ jobs:
 
             Please ensure that:
             
-            1. The number of Glyphs should match the number of SVGs that were selected. 
+            1. The number of Glyphs matches the number of SVGs that were selected. 
             2. The icons (second group of pictures) look the same as the SVGs (first group of pictures).
 
             If one of the above is incorrect, this might be caused by Icomoon not intepreting your SVGs correctly. Check this [doc](https://icomoon.io/#faq/importing) for more details.
