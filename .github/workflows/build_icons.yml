@@ -45,12 +45,19 @@ jobs:
           path: ./screenshots/*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
+      - name: Get the release message from file
+        id: release_message_step
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          # taken from icomoon_build.py's get_release_message()
+          path: ./release_message.txt  
+
       - name: Create Pull Request
         if: success() 
         uses: peter-evans/create-pull-request@v3
         env:
           MESSAGE: |
-            What's up!
+            Hello,
 
             I'm Devicon's Build Bot and I just built some new font files and devicon.min.css file.
 
@@ -67,6 +74,11 @@ jobs:
             -The aliases
             -The colored classes
 
+            I also compiled a list of new features and icons that were added since last release.
+            ```
+            {2}
+            ```
+
             More information can be found in the GitHub Action logs for this workflow.
 
             Adios, 
@@ -78,6 +90,7 @@ jobs:
           body: ${{ format(
               env.MESSAGE,
               fromJSON(steps.imgur_step.outputs.markdown_urls)[0],
-              fromJSON(steps.imgur_step.outputs.markdown_urls)[1]) 
+              fromJSON(steps.imgur_step.outputs.markdown_urls)[1]),
+              steps.release_message_step.outputs.content
             }}
           delete-branch: true

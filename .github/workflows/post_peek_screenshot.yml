@@ -170,4 +170,4 @@ jobs:
           type: create
           issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
+          body: env.MESSAGE

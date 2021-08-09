@@ -26,12 +26,13 @@ def main():
 
         print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n")
 
-        print("Begin optimizing files")
+        print("Begin optimizing files...")
         optimize_svgs(new_icons, args.icons_folder_path)
 
-        print("Updating the icomoon json")
+        print("Updating the icomoon json...")
         update_icomoon_json(new_icons, args.icomoon_json_path)
 
+        print("Start the building icons process...")
         icon_svgs = filehandler.get_svgs_paths(
             new_icons, args.icons_folder_path, icon_versions_only=True)
         zip_name = "devicon-v1.0.zip"
@@ -44,6 +45,10 @@ def main():
 
         filehandler.extract_files(str(zip_path), args.download_path)
         filehandler.rename_extracted_files(args.download_path)
+
+        print("Creating the release message by querying GitHub API...")
+        get_release_message(args.token)
+
         print("Task completed.")
     except TimeoutException as e:
         util.exit_with_err("Selenium Time Out Error: \n" + str(e))
@@ -60,6 +65,8 @@ def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token
     :param icomoon_json_path - the path to the `icomoon.json`.
     :param devicon_json_path - the path to the `devicon.json`.
     :param token - the token to access the GitHub API.
+    :return a list of dict containing info on the icons. These are 
+    from the `devicon.json`.
     """
     devicon_json = filehandler.get_json_file_content(devicon_json_path)
     pull_reqs = api_handler.get_merged_pull_reqs_since_last_release(token)
@@ -135,6 +142,41 @@ def find_icomoon_icon_not_in_new_icons(icomoon_icon: Dict, new_icons: List, mess
             messages.append(message)
             return False
     return True
+
+
+def get_release_message(token):
+    """
+    Get the release message for the latest build and write
+    the result in a file.
+    :param token: the GitHub API token to access the API.
+    """
+    # fetch first page by default
+    data = api_handler.get_merged_pull_reqs_since_last_release(token)
+    newIcons = []
+    features = []
+
+    print("Parsing through the pull requests...")
+    for pullData in data:
+        authors = api_handler.find_all_authors(pullData, token)
+        markdown = f"- [{pullData['title']}]({pullData['html_url']}) by {authors}."
+
+        if api_handler.is_feature_icon(pullData):
+            newIcons.append(markdown)
+        else:
+            features.append(markdown)
+
+    print("Constructing message...")
+    thankYou = "A huge thanks to all our maintainers and contributors for making this release possible!"
+    iconTitle = f"**{len(newIcons)} New Icons**"
+    featureTitle = f"**{len(features)} New Features**"
+    finalString = "{0}\n\n {1}\n{2}\n\n {3}\n{4}".format(thankYou, 
+        iconTitle, "\n".join(newIcons),
+        featureTitle, "\n".join(features))
+
+    print("--------------Here is the build message--------------\n", finalString)
+    release_message_path = "./release_message.txt"
+    filehandler.write_to_file(release_message_path, finalString)
+    print("Script finished")
 
 
 if __name__ == "__main__":
