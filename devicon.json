@@ -4036,6 +4036,25 @@
         "color": "#D1A41A",
         "aliases": []
     },
+	{
+        "name": "tortoisegit",
+        "tags": [
+            "git"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+				"plain",
+				"line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#4a8fb5",
+        "aliases": []
+    },
     {
         "name": "towergit",
         "tags": [
