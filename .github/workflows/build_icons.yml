@@ -87,10 +87,13 @@ jobs:
           branch: 'bot/build-result'
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
-          body: ${{ format(
-              env.MESSAGE,
-              fromJSON(steps.imgur_step.outputs.markdown_urls)[0],
-              fromJSON(steps.imgur_step.outputs.markdown_urls)[1]),
-              steps.release_message_step.outputs.content
+          body: >
+            ${{ 
+              format(
+                env.MESSAGE,
+                fromJSON(steps.imgur_step.outputs.markdown_urls)[0],
+                fromJSON(steps.imgur_step.outputs.markdown_urls)[1],
+                steps.release_message_step.outputs.content
+              )
             }}
           delete-branch: true

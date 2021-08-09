@@ -177,7 +177,7 @@ def rename_extracted_files(extract_path: str):
         },
         {
             "old": Path(extract_path, "style.css"),
-            "new": Path(extract_path, "devicon.css")
+            "new": Path(extract_path, "devicon-base.css")
         }
     ]
 
