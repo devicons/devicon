@@ -17,18 +17,20 @@ def main():
         runner = PeekSeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
         svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, True)
         screenshot_folder = filehandler.create_screenshot_folder("./") 
-        messages = runner.peek(svgs, screenshot_folder)
+        svgs_with_strokes = runner.peek(svgs, screenshot_folder)
         print("Task completed.")
 
         message = ""
-        if messages != []:
-            message = "\n**Strokes detected in SVGs:**\n" + "\n\n".join(messages) + "\n"
+        if svgs_with_strokes != []:
+            svgs_str = "\n\n".join(svgs_with_strokes)
+            message = "\n### WARNING: strokes detected in SVGs:**\n" + svgs_str + "\n"
         filehandler.write_to_file("./err_messages.txt", message)
     except Exception as e:
         filehandler.write_to_file("./err_messages.txt", str(e))
         util.exit_with_err(e)
     finally:
-        runner.close() 
+        if runner is not None:
+            runner.close() 
 
 
 def check_devicon_object(icon: dict):

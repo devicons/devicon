@@ -12,7 +12,7 @@ class PeekSeleniumRunner(SeleniumRunner):
         :param svgs: a list of svg Paths that we'll upload to icomoon.
         :param screenshot_folder: the name of the screenshot_folder. 
         :return an array of svgs with strokes as strings. These show which icon
-        post_peek workflow's message.
+        contains stroke.
         """
         messages = self.peek_svgs(svgs, screenshot_folder)        
         self.peek_icons(svgs, screenshot_folder)
@@ -43,7 +43,8 @@ class PeekSeleniumRunner(SeleniumRunner):
                 pass  # all good
             elif alert == IcomoonAlerts.STROKES_GET_IGNORED_WARNING:
                 print(f"- This icon contains strokes: {svgs[i]}")
-                svgs_with_strokes.append(svgs[i])
+                svg = Path(svgs[i])
+                svgs_with_strokes.append(svg.name)
                 self.click_alert_button(self.ALERTS[alert]["buttons"]["DISMISS"])
             else:
                 raise Exception(f"Unexpected alert found: {alert}")

@@ -63,5 +63,5 @@ def find_object_added_in_pr(icons: List[dict], pr_title: str):
     except IndexError as e:  # there are no match in the findall()
         print(e)
         message = "util.find_object_added_in_pr: Couldn't find an icon matching the name in the PR title.\n" \
-            f"Icon name is: '{icon_name}'. PR title is: '{pr_title}'"
+            f"PR title is: '{pr_title}'"
         raise Exception(message)
