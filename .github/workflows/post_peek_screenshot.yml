@@ -93,12 +93,14 @@ jobs:
             Here are the zoomed-in screenshots of the added icons as **icons**. This is what the font will look like:
             {4}
 
+            You can click on the pictures and zoom on them if needed.
+
             The maintainers will now check for:
             1. The number of Glyphs matches the number of SVGs that were selected. 
             2. The icons (second group of pictures) look the same as the SVGs (first group of pictures). 
             3. The icons are of high quality (legible, matches the official logo, etc.)
 
-            In case of font issues, it might be caused by Icomoon not acceptin strokes in the SVGs. 
+            In case of font issues, it might be caused by Icomoon not accepting strokes in the SVGs. 
             Check this [doc](https://icomoon.io/#faq/importing) for more details and fix the issues as 
             instructed by Icomoon and update this PR once you are done.
 
@@ -118,9 +120,9 @@ jobs:
                 env.MESSAGE, 
                 steps.err_message_reader.outputs.content,
                 fromJSON(steps.svgs_overview_img_step.outputs.markdown_urls)[0],
-                join(fromJSON(steps.svgs_detailed_img_step.outputs.markdown_urls), ''),
+                join(fromJSON(steps.svgs_detailed_img_step.outputs.markdown_urls), '  '),
                 fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0],
-                join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '\n')
+                join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '  ')
               ) 
             }}
 

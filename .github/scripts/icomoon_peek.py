@@ -23,7 +23,7 @@ def main():
         message = ""
         if svgs_with_strokes != []:
             svgs_str = "\n\n".join(svgs_with_strokes)
-            message = "\n### WARNING: strokes detected in SVGs:**\n" + svgs_str + "\n"
+            message = "\n### WARNING -- Strokes detected in the following SVGs:\n" + svgs_str + "\n"
         filehandler.write_to_file("./err_messages.txt", message)
     except Exception as e:
         filehandler.write_to_file("./err_messages.txt", str(e))

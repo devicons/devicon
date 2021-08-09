@@ -44,7 +44,7 @@ class PeekSeleniumRunner(SeleniumRunner):
             elif alert == IcomoonAlerts.STROKES_GET_IGNORED_WARNING:
                 print(f"- This icon contains strokes: {svgs[i]}")
                 svg = Path(svgs[i])
-                svgs_with_strokes.append(svg.name)
+                svgs_with_strokes.append(f"- {svg.name}")
                 self.click_alert_button(self.ALERTS[alert]["buttons"]["DISMISS"])
             else:
                 raise Exception(f"Unexpected alert found: {alert}")
