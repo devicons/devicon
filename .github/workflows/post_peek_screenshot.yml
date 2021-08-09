@@ -97,9 +97,7 @@ jobs:
             1. The number of Glyphs matches the number of SVGs that were selected. 
             2. The icons (second group of pictures) look the same as the SVGs (first group of pictures). 
             3. The icons are of high quality (legible, matches the official logo, etc.)
-
             {4}
-
             In case of font issues, it might be caused by Icomoon not acceptin strokes in the SVGs. 
             Check this [doc](https://icomoon.io/#faq/importing) for more details and fix the issues as 
             instructed by Icomoon and update this PR once you are done.

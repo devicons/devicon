@@ -20,9 +20,9 @@ def main():
         messages = runner.peek(svgs, screenshot_folder)
         print("Task completed.")
 
-        message = "**No strokes detected in SVGs.**"
+        message = ""
         if messages != []:
-            message = "**Strokes detected in SVGs:**\n" + "\n\n".join(messages)
+            message = "\n**Strokes detected in SVGs:**\n" + "\n\n".join(messages) + "\n"
         filehandler.write_to_file("./err_messages.txt", message)
     except Exception as e:
         filehandler.write_to_file("./err_messages.txt", str(e))
