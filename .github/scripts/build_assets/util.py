@@ -56,7 +56,7 @@ def find_object_added_in_pr(icons: List[dict], pr_title: str):
     :raise If no object can be found, raise an Exception.
     """
     try:
-        pattern = re.compile(r"(?<=^new icon: )\w+ (?=\(.+\))", re.I)
+        pattern = re.compile(r"(?<=^(new|update) icon: )\w+ (?=\(.+\))", re.I)
         icon_name = pattern.findall(pr_title)[0].lower().strip()  # should only have one match
         icon = [icon for icon in icons if icon["name"] == icon_name][0]
         return icon
