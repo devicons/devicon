@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const svgmin = require("gulp-svgmin");
-const sass = require("gulp-sass");
-sass.compiler = require("sass");
+const sass = require("gulp-sass")(require("sass"));
 const yargs = require("yargs");
 const fsPromise = require("fs").promises;
 const path = require("path");
