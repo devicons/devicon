@@ -32,5 +32,7 @@
     "sass": "^1.26.10",
     "yargs": "^17.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-footer": "^2.0.2"
+  }
 }
