@@ -30,9 +30,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-svgmin": "^3.0.0",
     "sass": "^1.26.10",
-    "yargs": "^17.0.0"
-  },
-  "dependencies": {
+    "yargs": "^17.0.0",
     "gulp-footer": "^2.0.2"
   }
 }
