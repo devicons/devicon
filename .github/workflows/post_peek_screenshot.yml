@@ -100,9 +100,7 @@ jobs:
             2. The icons (second group of pictures) look the same as the SVGs (first group of pictures). 
             3. The icons are of high quality (legible, matches the official logo, etc.)
 
-            In case of font issues, it might be caused by Icomoon not accepting strokes in the SVGs. 
-            Check this [doc](https://icomoon.io/#faq/importing) for more details and fix the issues as 
-            instructed by Icomoon and update this PR once you are done.
+            In case of font issues, it might be caused by Icomoon not accepting strokes in the SVGs.  Check this [doc](https://icomoon.io/#faq/importing) for more details and fix the issues as instructed by Icomoon and update this PR once you are done.
 
             Thank you for contributing to Devicon! I hope that your icons are accepted into the repo.
 
