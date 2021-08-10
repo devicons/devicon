@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const svgmin = require("gulp-svgmin");
 const sass = require("gulp-sass")(require("sass"));
+const footer = require("gulp-footer");
 const yargs = require("yargs");
 const fsPromise = require("fs").promises;
 const path = require("path");
@@ -157,6 +158,7 @@ function optimizeSvg() {
   return gulp
     .src(svgGlob)
     .pipe(svgmin(configOptionCallback))
+    .pipe(footer("\n"))
     .pipe(
       gulp.dest(file => {
         return file.base;
