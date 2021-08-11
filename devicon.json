@@ -3911,6 +3911,28 @@
         "aliases": []
     },
     {
+      "name": "storybook",
+      "tags": [
+        "framework",
+        "documentation", 
+        "ui"
+      ],
+      "versions": {
+        "svg": [
+          "original", 
+          "original-wordmark", 
+          "plain", 
+          "plain-wordmark"
+        ],
+        "font": [
+          "plain", 
+          "plain-wordmark"
+        ]
+      },
+      "color": "#FF4785",
+      "aliases": []
+    },
+    {
         "name": "svelte",
         "tags": [
             "javascript",
