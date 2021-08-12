@@ -58,26 +58,36 @@ class BuildSeleniumRunner(SeleniumRunner):
             SeleniumRunner.SET_IMPORT_BUTTON_CSS
         )
 
+        # there could be at most 2 alerts when we upload an SVG.
+        possible_alerts_amount = 2
+        err_messages = []
         for i in range(len(svgs)):
             import_btn.send_keys(svgs[i])
             print(f"Uploading {svgs[i]}")
 
             # see if there are stroke messages or replacing icon message
             # there should be none of the second kind
-            alert = self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC)
-            if alert == None:
-                pass  # all good
-            elif alert == IcomoonAlerts.STROKES_GET_IGNORED_WARNING:
-                message = f"SVG contained strokes: {svgs[i]}. This should not happen."
-                raise Exception(message)
-            elif alert == IcomoonAlerts.REPLACE_OR_REIMPORT_ICON:
-                message = f"Duplicated SVG: {svgs[i]}. This should not happen."
-                raise Exception(message)
-            else:
-                raise Exception(f"Unexpected alert found: {alert}")
+            for j in range(possible_alerts_amount):
+                alert = self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC)
+                if alert == None:
+                    pass  # all good
+                elif alert == IcomoonAlerts.STROKES_GET_IGNORED_WARNING:
+                    message = f"SVG contained strokes: {svgs[i]}."
+                    err_messages.append(message)
+                    self.click_alert_button(self.ALERTS[alert]["buttons"]["DISMISS"])
+                elif alert == IcomoonAlerts.REPLACE_OR_REIMPORT_ICON:
+                    message = f"Duplicated SVG: {svgs[i]}."
+                    err_messages.append(message)
+                    self.click_alert_button(self.ALERTS[alert]["buttons"]["REIMPORT"])
+                else:
+                    raise Exception(f"Unexpected alert found: {alert}")
 
             self.edit_svg()
             print(f"Finished editing icon.")
+
+        if err_messages != []:
+            message = "BuildSeleniumRunner - Issues found when uploading SVGs:\n"
+            raise Exception(message + '\n'.join(err_messages))
 
         # take a screenshot of the svgs that were just added
         # select the latest icons
