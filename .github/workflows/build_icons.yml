@@ -42,6 +42,8 @@ jobs:
         uses: devicons/public-upload-to-imgur@v2.2.2
         if: success()
         with:
+          # will have "new_icons.png" and "new_svgs.png"
+          # in that order (cause sorted alphabetically)
           path: ./screenshots/*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
@@ -91,8 +93,8 @@ jobs:
             ${{ 
               format(
                 env.MESSAGE,
+                fromJSON(steps.imgur_step.outputs.markdown_urls)[1],  
                 fromJSON(steps.imgur_step.outputs.markdown_urls)[0],
-                fromJSON(steps.imgur_step.outputs.markdown_urls)[1],
                 steps.release_message_step.outputs.content
               )
             }}

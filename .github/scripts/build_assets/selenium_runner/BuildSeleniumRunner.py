@@ -93,8 +93,8 @@ class BuildSeleniumRunner(SeleniumRunner):
         # select the latest icons
         self.switch_toolbar_option(IcomoonOptionState.SELECT)
         self.click_latest_icons_in_top_set(len(svgs)) 
-        new_icons_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
-        self.driver.save_screenshot(new_icons_path);
+        new_svgs_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
+        self.driver.save_screenshot(new_svgs_path);
 
         print("Finished uploading the svgs...")
 
