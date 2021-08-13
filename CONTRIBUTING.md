@@ -339,7 +339,7 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
     Create a new commit to fix the SVGs.
   </li>
   <li>
-    Open a pull request to `develop` branch. 
+    Open a pull request based on the `develop` branch. 
   </li>
   <li>
     <strong>IMPORTANT</strong>: name the pull request <code>update icon: <i>icon-name</i> (<i>versions</i>)</code>. Basically, follow the <a href="#overview">Overview on Submitting Icon</a> but replace the <code>new</code> with <code>update</code> in name of request with the above.
@@ -477,7 +477,7 @@ We are running a Discord server. You can go here to talk, discuss, and more with
         Take the PRs/commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).
         </li>
         <li>
-        We now have a script that will do this for us. Check the `build-bot`'s PR message in the last step. There should be a section where it displays the features that has been added in the release. You can copy the markdown there and use it for the release message.
+        We now have a script that will do this for us. Check the `build-bot`'s PR message in the last step. There should be a section where it displays the features that have been added to the release. You can copy the markdown there and use it for the release message.
         </li>
       </ul>
     </li>

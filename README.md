@@ -189,7 +189,7 @@ All official releases shall be in <code>master</code>. Any updates in between (i
 <b><code>master</code> contains:</b>
 <ul>
     <li>
-        Latest official release, which contains the release' SVGs and icons.
+        Latest official release, which contains the SVGs and icons.
     </li>
     <li>
         Official tested changes.
