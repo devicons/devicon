@@ -46,7 +46,7 @@ def main():
         filehandler.extract_files(str(zip_path), args.download_path)
         filehandler.rename_extracted_files(args.download_path)
 
-        print("Creating the release message by querying GitHub API...")
+        print("Creating the release message by querying the GitHub API...")
         get_release_message(args.token)
 
         print("Task completed.")

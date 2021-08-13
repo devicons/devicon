@@ -102,7 +102,7 @@ jobs:
 
             In case of font issues, it might be caused by Icomoon not accepting strokes in the SVGs.  Check this [doc](https://icomoon.io/#faq/importing) for more details and fix the issues as instructed by Icomoon and update this PR once you are done.
 
-            Thank you for contributing to Devicon! I hope that your icons are accepted into the repo.
+            Thank you for contributing to Devicon! I hope that your icons are accepted into the repository.
 
             Note: If the images don't show up, it's probably because it has been autodeleted by Imgur after 6 months due to our API choice.
 

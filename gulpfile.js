@@ -23,7 +23,7 @@ async function createDeviconMinCSS() {
   await createCSSFiles();
 
   let deviconMinPath = path.join(__dirname, finalMinSCSSName);
-  // recall that devicon-alias.scss imported the devicon-icomoon.css => don't need
+  // recall that devicon-alias.scss imported the devicon-base.css => don't need
   // to reimport that file.
   const fileContent = `@use "${aliasSCSSName}";@use "${colorsCSSName}";`;
   await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
