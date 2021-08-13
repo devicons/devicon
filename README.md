@@ -51,6 +51,8 @@
     <li><a href="#getting-started">Getting started</a></li>
     <li><a href="#request-icon">Requesting icon</a></li>
     <li><a href="#contribute">Contributing</a></li>
+    <li><a href="#discord-server">Discord server</a></li>
+    <li><a href="#develop-vs-master"><code>develop</code> vs <code>master</code></a></li>
     <li><a href="#stale-prs">Stale pull requests</a></li>
     <li><a href="#build-yourself">Go build yourself</a></li>
 </ol>
@@ -159,19 +161,44 @@ Add css rules in your stylesheet
 
 <h2 id="contribute">Contributing</h2>
 <p>
-    We are happy for every contribution. Please have a look at our <a href="CONTRIBUTING.md">contribution guidelines</a>
-    to see how you can contribute to this project.
-</p>
-
-<h2 id="stale-prs">Stale pull requests</h2>
-<p>
-After a pull request has been open for over 30 days with no activity or response from the author, it'll be automatically marked as stale. We might fork your changes and merge the changes ourselves. Since GitHub tracks contributions by commits, you will be credited.
+    We are happy for every contribution, whether it's new icons, features, or maintainers. Please have a look at our <a href="CONTRIBUTING.md">contribution guidelines</a> to see how you can contribute to this project.
 </p>
 
 <h2 id="discord-server">Discord server</h2>
 <p>
 We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ.
-<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.<b>
+<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
+</p>
+
+<h2 id="develop-vs-master"><code>develop</code> vs <code>master</code></h2>
+<p>
+All official releases shall be in <code>master</code>. Any updates in between (icons, features, etc.) will be kept in <code>develop</code>. 
+</p>
+<b><code>develop</code> contains:</b>
+<ul>
+    <li>
+        Latest SVGs (non-optimized).
+    </li>
+    <li>
+        No icons for the latest SVGs. These will be build at every release.
+    </li>
+    <li>
+        Experimental changes.
+    </li>
+</ul>
+<b><code>master</code> contains:</b>
+<ul>
+    <li>
+        Latest official release, which contains the release' SVGs and icons.
+    </li>
+    <li>
+        Official tested changes.
+    </li>
+</ul>
+
+<h2 id="stale-prs">Stale pull requests</h2>
+<p>
+After a pull request has been open for over 30 days with no activity or response from the author, it'll be automatically marked as stale. We might fork your changes and merge the changes ourselves. Since GitHub tracks contributions by commits, you will be credited.
 </p>
 
 <h2 id="build-yourself">Go build yourself</h2>
