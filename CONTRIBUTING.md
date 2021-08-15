@@ -8,14 +8,15 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#terms">Terms</a></li>
   <li><a href="#iconRequirements">What Icons Do We Accept?</a></li>
   <li><a href="#requestingIcon">Requesting An Icon</a></li>
-  <li><a href="#overview">Overview on Submitting Icon (start here if new)</a></li>
+  <li><a href="#overview">Overview on Submitting Icon (start here if new to contributing)</a></li>
   <li><a href="#versionNaming">Naming Conventions</a></li>
   <li><a href="#SVGStandards">SVG Standards</a></li>
   <li><a href="#orgGuidelines">Organizational Guidelines</a></li>
   <li><a href="#updateDevicon">Updating the <code>devicon.json</code></a></li>
   <li><a href="#example">Example of Submitting An Icon</a></li>
+  <li><a href="#updatingIcons">Updating an Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
-  <li><a href="#buildScript">The Build Script: how it works and its quirks</a></li>
+  <li><a href="#buildScript">Our Workflows: how they work and their issues</a></li>
   <li><a href="#discordServer">Discord server</a></li>
   <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
 </ul>
@@ -53,12 +54,13 @@ First of all, thanks for taking the time to contribute! This project can only gr
 
 <hr>
 <h2 id='requestingIcon'>Requesting an Icon</h2>
-<p>To request an icon, you can create an issue in the repository. Please follow these simple guidelines:</p>
+<p>To request an icon, please create an issue in the repository, and follow these guidelines:</p>
 <ul>
   <li>Search for other issues already requesting the icon</li>
   <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
   <li>Please create separate issues for each icon</li>
-  <li><b>Optional:</b> include links where the icon can be found</li>
+  <li>Use the Issue Template and fill out the proper information</li>
+  <li>Please include links where the icon can be found. Ex: the icon's official webpage/wiki article.</li>
 </ul>
 
 <hr>
@@ -69,12 +71,14 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Put the SVGs of each Icon into its own <a href="#orgGuidelines">folders</a> in <code>/icons</code></li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
   <li>Create a separated pull request (PR) towards the <code>develop</code> branch for each Icon.</li>
+  <li>Fill out the info as stated in the PR template.</li>
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
-  <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
+  <li><i>Optional</i>: Reference the issues regarding the new icon and label the PR `feature:icon`. </li>
   <li>Some bots will check your SVGs. If there are any errors, please fix them as instructed.</li>
   <li>Wait for a maintainer to review your changes. They will run the <a href='#peekBot'><code>peek-bot</code></a> to check your icons.</li>
-  <li>If there are no issues, they will run the <a href='#optimizeBot'><code>optimize-bot</code></a> on your SVGs then merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
+  <li>If there are no issues, they will merge it using <a href="https://github.com/devicons/devicon/discussions/470"><b>squash merging</b></a>. If there are any problems, they will let you know, and give you a chance to fix them.</li>
 </ol>
+<p><b>Note:</b> Due to our recent bot upgrades, icon contributors don't have to optimize/minify their SVGs anymore!</p>
 
 <hr>
 <h2 id='versionNaming'>Versions and Naming Conventions</h2>
@@ -97,7 +101,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
       <td style='width: 33%'>
           <p><b>plain</b>: a one-color version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
           <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-plain.svg' height='100px' width='100px' />
-          <h4>devicon-plain-wordmark.svg</h4>
+          <h4>devicon-plain.svg</h4>
       </td>
       <td style='width: 33%'>
           <p><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
@@ -155,15 +159,15 @@ First of all, thanks for taking the time to contribute! This project can only gr
   </li>
   <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the SVG.</li>
   <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
-  <li>The <code>SVG</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
-  <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/SVG-editor">SVG Editor</a>.</li>
   <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. This is to prevent class name clashing when using inline SVG. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
 </ul>
 
 <hr>
 <h2 id='orgGuidelines'>Organizational Guidelines</h2>
 <ul>
-  <li>Each icon has its own folder located in the <code>icons</code> folder. All the <code>.svg</code> files for the Icon must go in the same folder</li>
+  <li>Each icon has its own folder located in the <code>icons</code> folder. </li>
+  <li>The folder name must matches the name value uses for the SVG files. Ex: `react-original.svg` should go inside a `react` folder, `microsoftsqlserver` icons should go inside a `microsoftsqlserver` folder. </li>
+  <li>All the <code>.svg</code> files for the Icon must go in the same folder. </li>
   <li><i>Optional</i>: Each folder <i>may</i> contain one <code>.eps</code> file. The <code>.eps</code> file should contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
 </ul>
 
@@ -326,6 +330,26 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
 </ol>
 
 <hr>
+<h2 id='updatingIcons'>Updating an Icon</h2>
+<p>
+  Sometimes, a company will update their logo or someone spotted an error in the SVG/icon that needs to be fixed. This means the current icon in our repository might need an update. The steps to do this is simple:
+</p>
+<ol>
+  <li>
+    Create a new commit to fix the SVGs.
+  </li>
+  <li>
+    Open a pull request based on the `develop` branch. 
+  </li>
+  <li>
+    <strong>IMPORTANT</strong>: name the pull request <code>update icon: <i>icon-name</i> (<i>versions</i>)</code>. Basically, follow the <a href="#overview">Overview on Submitting Icon</a> but replace the <code>new</code> with <code>update</code> in name of request with the above.
+  </li>
+  <li>
+    Follow the rest of the steps as laid out in <a href="#overview">Overview on Submitting Icon</a>.
+  </li>
+</ol>
+
+<hr>
 <h2 id='teams'>Maintainer/Reviewer/Teams</h2>
 <p>
     Devicon is living by it's contributors and <a href="https://github.com/orgs/devicons/people">maintainers</a>. Everyone can and is asked to contribute to this project. 
@@ -409,13 +433,6 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
       <li>Solution: Ensure the name of the PR follows the convention.</li>
     </ul>
   </li>
-  <li><b>Peek bot fails when an icon is updated</b>
-    <ul>
-      <li>See <a href="https://github.com/devicons/devicon/pull/554">this PR</a> for an example.</li>
-      <li>The <code>bot-peek</code> script compares the <code>devicon.json</code> and <code>icomoon.json</code> to limit the icon uploading process. An update in the repo won't change anything in the <code>devicon.json</code> and <code>icomoon.json</code> so the script would report that nothing is found.</li>
-      <li>Solution: Follow the steps laid out <a href="https://github.com/devicons/devicon/pull/554#issuecomment-816860577">here</a></li>
-    </ul>
-  </li>
   <li><b>Icon created by Icomoon contains strange lines that aren't in the SVG</b>
     <ul>
       <li>See <a href="https://github.com/devicons/devicon/pull/532">this PR</a>'s peek result.</li>
@@ -428,7 +445,7 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
 <h2 id="discordServer">Discord server</h2>
 <p>
 We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ. If you don't have a GitHub account but want to suggest ideas or new icons, you can do that here in our Discord channel.
-<b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
+<b>The Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
 </p>
 
 <h2 id='release'>Release strategy, conventions, preparation and execution</h2>
@@ -460,7 +477,7 @@ We are running a Discord server. You can go here to talk, discuss, and more with
         Take the PRs/commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).
         </li>
         <li>
-        Rather than doing it manually, you can instead run <code>python ./.github/scripts/get_release_message.py $GITHUB_TOKEN</code> locally. Pass in your GitHub Personal Access Token for <code>$GITHUB_TOKEN</code> and you should see the messages. You can also use the `workflow_dispatch` trigger in the GitHub Actions tab.
+        We now have a script that will do this for us. Check the `build-bot`'s PR message in the last step. There should be a section where it displays the features that have been added to the release. You can copy the markdown there and use it for the release message.
         </li>
       </ul>
     </li>

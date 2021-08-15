@@ -46,7 +46,7 @@ def set_env_var(key: str, value: str, delimiter: str='~'):
         raise Exception("This function doesn't support this platform: " + platform.system())
 
 
-def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
+def find_object_added_in_pr(icons: List[dict], pr_title: str):
     """
     Find the icon name from the PR title. 
     :param icons, a list of the font objects found in the devicon.json.
@@ -56,9 +56,13 @@ def find_object_added_in_this_pr(icons: List[dict], pr_title: str):
     :raise If no object can be found, raise an Exception.
     """
     try:
-        pattern = re.compile(r"(?<=^new icon: )\w+ (?=\(.+\))", re.I)
-        icon_name = pattern.findall(pr_title)[0].lower().strip()  # should only have one match
-        icon =  [icon for icon in icons if icon["name"] == icon_name][0]
+        pattern = re.compile(r"(?<=^new icon: )\w+ (?=\(.+\))|(?<=^update icon: )\w+ (?=\(.+\))", re.I)
+        icon_name_index = 0
+        icon_name = pattern.findall(pr_title)[icon_name_index].lower().strip()  # should only have one match
+        icon = [icon for icon in icons if icon["name"] == icon_name][0]
         return icon
-    except IndexError:  # there are no match in the findall()
-        raise Exception("Couldn't find an icon matching the name in the PR title.")
+    except IndexError as e:  # there are no match in the findall()
+        print(e)
+        message = "util.find_object_added_in_pr: Couldn't find an icon matching the name in the PR title.\n" \
+            f"PR title is: '{pr_title}'"
+        raise Exception(message)
