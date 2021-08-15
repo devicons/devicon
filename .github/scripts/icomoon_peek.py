@@ -1,11 +1,4 @@
-from typing import List
-import re
-import sys
-from selenium.common.exceptions import TimeoutException
-
-# pycharm complains that build_assets is an unresolved ref
-# don't worry about it, the script still runs
-from build_assets.SeleniumRunner import SeleniumRunner
+from build_assets.selenium_runner.PeekSeleniumRunner import PeekSeleniumRunner
 from build_assets import filehandler, arg_getters
 from build_assets import util
 
@@ -13,27 +6,31 @@ from build_assets import util
 def main():
     runner = None
     try:
-        args = arg_getters.get_selenium_runner_args(True)
+        args = arg_getters.get_selenium_runner_args(peek_mode=True)
         new_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
-        filtered_icon = util.find_object_added_in_this_pr(new_icons, args.pr_title)
+        filtered_icon = util.find_object_added_in_pr(new_icons, args.pr_title)
         check_devicon_object(filtered_icon)
         print("Icon being checked:", filtered_icon, sep = "\n", end='\n\n')
 
-        runner = SeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
+        runner = PeekSeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
         svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, True)
         screenshot_folder = filehandler.create_screenshot_folder("./") 
-        runner.upload_svgs(svgs, screenshot_folder)
+        svgs_with_strokes = runner.peek(svgs, screenshot_folder)
         print("Task completed.")
 
-        # no errors, do this so upload-artifact won't fail
-        filehandler.write_to_file("./err_messages.txt", "0")
+        message = ""
+        if svgs_with_strokes != []:
+            svgs_str = "\n\n".join(svgs_with_strokes)
+            message = "\n### WARNING -- Strokes detected in the following SVGs:\n" + svgs_str + "\n"
+        filehandler.write_to_file("./err_messages.txt", message)
     except Exception as e:
         filehandler.write_to_file("./err_messages.txt", str(e))
         util.exit_with_err(e)
     finally:
-        runner.close() 
+        if runner is not None:
+            runner.close() 
 
 
 def check_devicon_object(icon: dict):
