@@ -1,11 +1,13 @@
 const gulp = require("gulp");
 const svgmin = require("gulp-svgmin");
 const sass = require("gulp-sass")(require("sass"));
+const footer = require("gulp-footer");
 const yargs = require("yargs");
 const fsPromise = require("fs").promises;
 const path = require("path");
 
 // global const
+const deviconBaseCSSName = "devicon-base.css"
 const deviconJSONName = "devicon.json";
 const aliasSCSSName = "devicon-alias.scss";
 const colorsCSSName = "devicon-colors.css";
@@ -21,7 +23,7 @@ async function createDeviconMinCSS() {
   await createCSSFiles();
 
   let deviconMinPath = path.join(__dirname, finalMinSCSSName);
-  // recall that devicon-alias.scss imported the devicon.css => don't need
+  // recall that devicon-alias.scss imported the devicon-base.css => don't need
   // to reimport that file.
   const fileContent = `@use "${aliasSCSSName}";@use "${colorsCSSName}";`;
   await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
@@ -59,7 +61,7 @@ async function createCSSFiles() {
  */
 function createAliasSCSS(deviconJson) {
   let statements = deviconJson.map(createAliasStatement).join(" ");
-  let sass = `@use "devicon";${statements}`;
+  let sass = `@use "${deviconBaseCSSName}";${statements}`;
   let sassPath = path.join(__dirname, aliasSCSSName);
   return fsPromise.writeFile(sassPath, sass, "utf8");
 }
@@ -156,6 +158,7 @@ function optimizeSvg() {
   return gulp
     .src(svgGlob)
     .pipe(svgmin(configOptionCallback))
+    .pipe(footer("\n"))
     .pipe(
       gulp.dest(file => {
         return file.base;

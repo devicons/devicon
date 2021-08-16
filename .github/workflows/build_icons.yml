@@ -42,26 +42,44 @@ jobs:
         uses: devicons/public-upload-to-imgur@v2.2.2
         if: success()
         with:
-          path: ./new_icons.png
+          # will have "new_icons.png" and "new_svgs.png"
+          # in that order (cause sorted alphabetically)
+          path: ./screenshots/*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
+
+      - name: Get the release message from file
+        id: release_message_step
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          # taken from icomoon_build.py's get_release_message()
+          path: ./release_message.txt  
 
       - name: Create Pull Request
         if: success() 
         uses: peter-evans/create-pull-request@v3
         env:
           MESSAGE: |
-            What's up!
+            Hello,
 
             I'm Devicon's Build Bot and I just built some new font files and devicon.min.css file.
 
-            Here are all the files that were built into icons (the new ones are those without highlight):
+            Here are all the **SVGs** that were uploaded (the new ones are those with highlight):
 
-            ![Files Built]({0})
+            {0}
+
+            Here is what they look like as icons:
+
+            {1}
 
             The devicon.min.css file contains:
             -The icon content
             -The aliases
             -The colored classes
+
+            I also compiled a list of new features and icons that were added since last release.
+            ```
+            {2}
+            ```
 
             More information can be found in the GitHub Action logs for this workflow.
 
@@ -71,5 +89,13 @@ jobs:
           branch: 'bot/build-result'
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
-          body: ${{ format(env.MESSAGE, fromJSON(steps.imgur_step.outputs.imgur_urls)[0] ) }}
+          body: >
+            ${{ 
+              format(
+                env.MESSAGE,
+                fromJSON(steps.imgur_step.outputs.markdown_urls)[1],  
+                fromJSON(steps.imgur_step.outputs.markdown_urls)[0],
+                steps.release_message_step.outputs.content
+              )
+            }}
           delete-branch: true
