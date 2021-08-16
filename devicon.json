@@ -1,5 +1,33 @@
 [
     {
+      "name": "adonisjs",
+      "tags": [
+          "nodejs",
+          "framework"
+      ],
+      "versions": {
+          "svg": [
+              "original",
+              "original-wordmark"
+          ],
+          "font": [
+              "original",
+              "original-wordmark"
+          ]
+      },
+      "color": "#5A45FF",
+      "aliases": [
+          {
+              "base": "original",
+              "alias": "plain"
+          },
+          {
+              "base": "original-wordmark",
+              "alias": "plain-wordmark"
+          }
+      ]
+    },
+    {
         "name": "aftereffects",
         "tags": [
             "video",
@@ -399,6 +427,7 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "plain",
                 "plain-wordmark"
             ],
@@ -419,7 +448,7 @@
         },
         "color": "#00d1b2",
         "aliases": []
-  	},
+    },
     {
         "name": "bower",
         "tags": [
@@ -1285,6 +1314,23 @@
         ]
     },
     {
+        "name": "feathersjs",
+        "tags": [
+            "framework",
+            "rest"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [        ]
+    },
+    {
         "name": "figma",
         "tags": [
             "design"
@@ -1299,6 +1345,23 @@
             ]
         },
         "color": "#f24e1e",
+        "aliases": []
+    },
+    {
+        "name": "filezilla",
+        "tags": [
+            "ftp"
+        ],
+        "versions": {
+            "svg": [
+                "plain", "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#b30000",
         "aliases": []
     },
     {
@@ -2451,6 +2514,26 @@
         "aliases": []
     },
     {
+        "name": "matlab",
+        "tags": [
+          "programming",
+          "language"
+        ],
+        "versions": {
+          "svg": [
+            "original",
+            "plain",
+            "line"
+          ],
+          "font": [
+            "plain",
+            "line"
+          ]
+        },
+        "color": "#6dd0c7",
+        "aliases": []
+    },
+    {
         "name": "magento",
         "tags": [
             "php",
@@ -2472,6 +2555,28 @@
         "aliases": []
     },
     {
+        "name": "markdown",
+        "tags": [
+            "markup",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "meteor",
         "tags": [
             "javascript"
@@ -2489,6 +2594,16 @@
             ]
         },
         "color": "#df5052",
+        "aliases": []
+    },
+    {
+        "name": "minitab",
+        "tags": ["package", "statistics"],
+        "versions": {
+          "svg": ["original", "plain"],
+          "font": ["plain"]
+        },
+        "color": "#8dc63f",
         "aliases": []
     },
     {
@@ -2570,6 +2685,25 @@
         "aliases": []
     },
     {
+        "name": "msdos",
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#ff0000",
+        "aliases": []
+    },
+    {
         "name": "mysql",
         "tags": [
             "database",
@@ -2591,33 +2725,23 @@
         "aliases": []
     },
     {
-        "name": "matlab",
+        "name": "neo4j",
         "tags": [
-          "programming",
-          "language"
+            "database"
         ],
         "versions": {
-          "svg": [
-            "original",
-            "plain",
-            "line"
-          ],
-          "font": [
-            "plain",
-            "line"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
-        "color": "#6dd0c7",
-        "aliases": []
-    },
-    {
-        "name": "minitab",
-        "tags": ["package", "statistics"],
-        "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
-        },
-        "color": "#8dc63f",
+        "color": "#018BFF",
         "aliases": []
     },
     {
@@ -2782,6 +2906,54 @@
         "aliases": []
     },
     {
+        "name": "numpy",
+        "tags": [
+            "library",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4DABCF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "nuxtjs",
+        "tags": [
+            "js",
+            "javascript",
+            "framework",
+            "frontend",
+            "vuejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00c48d",
+        "aliases": []
+    },
+    {
         "name": "objectivec",
         "tags": [
             "programming",
@@ -2796,6 +2968,67 @@
             ]
         },
         "color": "#0b5a9d",
+        "aliases": []
+    },
+    {
+        "name": "opera",
+        "tags": [
+            "browser"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+        "plain-wordmark"
+            ]
+        },
+        "color": "#f7192d",
+        "aliases": []
+    },
+    {
+        "name": "ocaml",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F18803",
+        "aliases": []
+    },
+	{
+        "name": "opengl",
+        "tags": [
+            "library",
+            "graphics",
+            "game",
+            "3d"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5586a4",
         "aliases": []
     },
     {
@@ -2818,27 +3051,6 @@
                 "alias": "plain"
             }
         ]
-    },
-    {
-        "name": "ocaml",
-        "tags": [
-            "programming",
-            "language"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#F18803",
-        "aliases": []
     },
     {
         "name": "perl",
@@ -2964,6 +3176,31 @@
         "aliases": []
     },
     {
+        "name": "processing",
+        "tags": [
+            "java",
+            "python",
+            "android",
+            "application",
+            "ide",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "protractor",
         "tags": [
             "framework",
@@ -2980,6 +3217,24 @@
             ]
         },
         "color": "#b7111d",
+        "aliases": []
+    },
+	{
+        "name": "putty",
+        "tags": [
+            "ssh",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0000fc",
         "aliases": []
     },
     {
@@ -3460,6 +3715,35 @@
         "aliases": []
     },
     {
+        "name": "socketio",
+        "tags": [
+            "library",
+            "networking",
+            "websockets"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "sourcetree",
         "tags": [
             "version-control"
@@ -3480,31 +3764,6 @@
             "base": "original",
             "alias": "plain"
           },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
-        ]
-    },
-    {
-        "name": "sqlalchemy",
-        "tags": [
-            "python",
-            "orm"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain"
-            ],
-            "font": [
-                "plain",
-                "original-wordmark"
-            ]
-        },
-        "color": "#333333",
-        "aliases": [
           {
             "base": "original-wordmark",
             "alias": "plain-wordmark"
@@ -3540,6 +3799,54 @@
         },
         "color": "#cc1e4c",
         "aliases": []
+    },
+    {
+        "name": "sqlalchemy",
+        "tags": [
+            "python",
+            "orm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#333333",
+        "aliases": [
+          {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+          }
+        ]
+    },
+    {
+        "name": "subversion",
+        "tags": [
+            "svn",
+            "version"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#809cc8",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "microsoftsqlserver",
@@ -3753,6 +4060,45 @@
         "color": "#D1A41A",
         "aliases": []
     },
+	{
+        "name": "tortoisegit",
+        "tags": [
+            "git"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+				"plain",
+				"line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#4a8fb5",
+        "aliases": []
+    },
+    {
+        "name": "towergit",
+        "tags": [
+            "git"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#d18900",
+        "aliases": []
+    },
     {
         "name": "travis",
         "tags": [
@@ -3893,6 +4239,26 @@
             ]
         },
         "color": "#dd4814",
+        "aliases": []
+    },
+    {
+        "name": "unity",
+        "tags": [
+            "csharp",
+            "engine",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#212b35",
         "aliases": []
     },
     {
