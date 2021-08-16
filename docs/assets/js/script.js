@@ -28,7 +28,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   var baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}/`
 
   // Get devicon.json
-  $http.get(baseUrl + '/devicon.json').success(function(data) {
+  $http.get(baseUrl + '/devicon.json?' + $scope.latestReleaseTagging).success(function(data) {
 
     /*
     | Re-format devicon.json
@@ -126,7 +126,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   */
   $scope.selectSvg = function(svgVersion, index) {
 
-    $http.get(baseUrl + '/icons/' + $scope.selectedIcon.name + '/' + $scope.selectedIcon.name + '-' + svgVersion + '.svg').success(function(data){
+    $http.get(baseUrl + '/icons/' + $scope.selectedIcon.name + '/' + $scope.selectedIcon.name + '-' + svgVersion + '.svg?' + $scope.latestReleaseTagging).success(function(data){
 
       var svgElement = angular.element(data);
       var innerSvgElement = null;
