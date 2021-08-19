@@ -312,6 +312,31 @@
         ]
     },
     {
+        "name": "azure",
+        "tags": [
+            "cloud",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#0089D6",
+        "aliases": []
+    },
+    {
         "name": "babel",
         "tags": [
             "javascript",
