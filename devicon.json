@@ -322,15 +322,11 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain-wordmark"
             ]
         },
         "color": "#0089D6",
