@@ -2,10 +2,38 @@ import requests
 import sys
 import re
 
+
+def get_merged_pull_reqs_since_last_release(token):
+    """
+    Get all the merged pull requests since the last release.
+    """
+    stopPattern = r"^(r|R)elease v"
+    pull_reqs = []
+    found_last_release = False
+    page = 1
+
+    print("Getting PRs since last release.")
+    while not found_last_release:
+        data = get_merged_pull_reqs(token, page)
+        # assume we don't encounter it during the loop
+        last_release_index = 101 
+
+        for i in range(len(data)):
+            if re.search(stopPattern, data[i]["title"]):
+                found_last_release = True
+                last_release_index = i
+                break
+        pull_reqs.extend(data[:last_release_index])
+        page += 1
+
+    # should contain all the PRs since last release
+    return pull_reqs
+
+
 def get_merged_pull_reqs(token, page):
     """
     Get the merged pull requests based on page. There are 
-    100 results page. See https://docs.github.com/en/rest/reference/pulls
+    100 results per page. See https://docs.github.com/en/rest/reference/pulls
     for more details on the parameters.
     :param token, a GitHub API token.
     :param page, the page number.
@@ -71,30 +99,3 @@ def find_all_authors(pull_req_data, token):
             authors.add(commit["commit"]["author"]["name"]) 
             print(f"This URL didn't have an `author` attribute: {pull_req_data['commits_url']}")
     return ", ".join(["@" + author for author in list(authors)])
-
-
-def get_merged_pull_reqs_since_last_release(token):
-    """
-    Get all the merged pull requests since the last release.
-    """
-    stopPattern = r"^(r|R)elease v"
-    pull_reqs = []
-    found_last_release = False
-    page = 1
-
-    print("Getting PRs since last release.")
-    while not found_last_release:
-        data = get_merged_pull_reqs(token, page)
-        # assume we don't encounter it during the loop
-        last_release_index = 101 
-
-        for i in range(len(data)):
-            if re.search(stopPattern, data[i]["title"]):
-                found_last_release = True
-                last_release_index = i
-                break
-        pull_reqs.extend(data[:last_release_index])
-        page += 1
-
-    # should contain all the PRs since last release
-    return pull_reqs

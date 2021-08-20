@@ -1,6 +1,6 @@
 {
   "name": "devicon",
-  "version": "2.12.0",
+  "version": "2.13.0",
   "description": "Programming related icons collection",
   "main": "devicon.min.css",
   "scripts": {
@@ -26,11 +26,11 @@
   },
   "homepage": "https://devicon.dev",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-svgmin": "^3.0.0",
     "sass": "^1.26.10",
-    "yargs": "^17.0.0"
-  },
-  "dependencies": {}
+    "yargs": "^17.0.0",
+    "gulp-footer": "^2.0.2"
+  }
 }
