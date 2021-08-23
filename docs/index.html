@@ -135,7 +135,10 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-sanitize.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-animate.min.js"></script>
-  <script src="assets/js/script.js"></script>
+  
+  <script>
+    document.write("<script src='assets/js/script.js?" + Date.now() + "'><\/script>");
+  </script>
 
   <script>
     (function(i, s, o, g, r, a, m) {
