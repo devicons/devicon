@@ -1698,16 +1698,23 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
                 "line"
             ],
             "font": [
+                "original-wordmark",
                 "plain",
                 "line"
             ]
         },
         "color": "#00acd7",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "google",
