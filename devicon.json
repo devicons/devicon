@@ -1047,11 +1047,15 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#60BE86",
