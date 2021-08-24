@@ -23,7 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
           python ./.github/scripts/icomoon_build.py 
-          ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json 
+          ./.github/scripts/build_assets/geckodriver-v0.29.1-win64/geckodriver.exe ./icomoon.json 
           ./devicon.json ./icons ./ %GITHUB_TOKEN% --headless
 
       - name: Upload geckodriver.log for debugging purposes
