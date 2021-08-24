@@ -24,11 +24,11 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     console.log('Unable to determine latest release version, fallback to master.')
   });
 
-
-  var baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}/`
+  var versionStr = '@' + $scope.latestReleaseTagging;
+  var baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}${versionStr}/`
 
   // Get devicon.json
-  $http.get(baseUrl + '/devicon.json').success(function(data) {
+  $http.get(baseUrl + 'devicon.json').success(function(data) {
 
     /*
     | Re-format devicon.json
@@ -126,7 +126,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   */
   $scope.selectSvg = function(svgVersion, index) {
 
-    $http.get(baseUrl + '/icons/' + $scope.selectedIcon.name + '/' + $scope.selectedIcon.name + '-' + svgVersion + '.svg').success(function(data){
+    $http.get(baseUrl + 'icons/' + $scope.selectedIcon.name + '/' + $scope.selectedIcon.name + '-' + svgVersion + '.svg').success(function(data){
 
       var svgElement = angular.element(data);
       var innerSvgElement = null;
