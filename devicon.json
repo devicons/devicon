@@ -312,6 +312,27 @@
         ]
     },
     {
+        "name": "azure",
+        "tags": [
+            "cloud",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0089D6",
+        "aliases": []
+    },
+    {
         "name": "babel",
         "tags": [
             "javascript",
@@ -544,6 +565,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "centos",
+        "tags": [
+            "server",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#932178",
+        "aliases": []
     },
     {
         "name": "ceylon",
@@ -1005,11 +1047,15 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#60BE86",
@@ -1656,16 +1702,23 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
                 "line"
             ],
             "font": [
+                "original-wordmark",
                 "plain",
                 "line"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#00acd7",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "google",
@@ -3052,6 +3105,34 @@
         ]
     },
     {
+        "name": "pandas",
+        "tags": [
+            "library",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#130754",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "perl",
         "tags": [
             "programming",
@@ -3976,6 +4057,28 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "storybook",
+        "tags": [
+            "framework",
+            "documentation", 
+            "ui"
+        ],
+        "versions": {
+          "svg": [
+              "original", 
+              "original-wordmark",
+              "plain", 
+              "plain-wordmark"
+          ],
+          "font": [
+              "plain", 
+              "plain-wordmark"
+          ]
+        },
+        "color": "#FF4785",
+        "aliases": []
     },
     {
         "name": "tailwindcss",
