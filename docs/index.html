@@ -66,13 +66,16 @@
               </li>
             </div>
           </ul>
+          <p>Place this in your header</p>
           <div class="cde">
-            <div class="cde-com">&lt;!-- in your header --&gt;</div>
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css"&gt;<br />
-            <br />
-            <div class="cde-com">&lt;!-- in your body --&gt;</div>
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css"&gt;
+          </div>
+
+          <p>Use this in your body</p>
+          <div class="cde">
             &lt;i class="devicon-{{selectedIcon.name}}-{{selectedFontIcon}}<span ng-if="colored"> colored</span>"&gt;&lt;/i&gt;<br />
           </div>
+          <p><i>*To change the size, change the <code>i</code>'s <code>font-size</code></i></p>
         </li>
         <li>
           <h4>SVG versions <input type='color' value='#60be86' ng-model="svgBackground"></h4>
@@ -81,11 +84,21 @@
               <img ng-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
+          <p>Using &lt;img&gt; element</p>
           <div class="cde">
-          &lt;svg viewBox="0 0 128 128"&gt;<br />
-          <div class="cde-ind">{{selectedSvgIcon}}</div>
-          &lt;/svg&gt;
+            &lt;img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
           </div>
+          <p><i>*To change the size, change the <code>img</code>'s <code>height</code> and <code>width</code></i></p>
+
+          <br />
+
+          <p>Using Pure SVG</p>
+          <div class="cde">
+            &lt;svg viewBox="0 0 128 128"&gt;<br />
+            <div class="cde-ind">{{selectedSvgIcon}}</div>
+            &lt;/svg&gt;
+          </div>
+          <p><i>*To change the size, change the <code>svg</code>'s <code>height</code> and <code>width</code></i></p>
         </li>
       </ul>
 
