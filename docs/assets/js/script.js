@@ -88,6 +88,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.selectedFontIcon = $scope.icons[0].font[0];
     $scope.selectedSvgIcon = $scope.selectSvg($scope.icons[0].svg[0], 0);
     $scope.selectedFontIndex = 0;
+    $scope.selectedSvgIndex = 0;
 
     /*------ End of "Re-format devicon.json" ------*/
   });
@@ -101,6 +102,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.selectedFontIcon = icon.font[0];
     $scope.selectedFontIndex = 0;
     $scope.selectedSvgIcon = $scope.selectSvg(icon.svg[0], 0);
+    $scope.selectedSvgIndex = 0;
 
     // reset color
     $scope.fontBackground = DEFAULT_BACKGROUND;
@@ -154,6 +156,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
       }
     });
   }
+
   /*---- End of "Change selected svg icon" ----*/
 });
 
