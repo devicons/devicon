@@ -75,7 +75,7 @@
           <div class="cde">
             &lt;i class="devicon-{{selectedIcon.name}}-{{selectedFontIcon}}<span ng-if="colored"> colored</span>"&gt;&lt;/i&gt;<br />
           </div>
-          <p><i>*Change the element's <code>font-size</code> to change the size of the icon</i></p>
+          <p><i>*To change the size, change the <code>i</code>'s <code>font-size</code></i></p>
         </li>
         <li>
           <h4>SVG versions <input type='color' value='#60be86' ng-model="svgBackground"></h4>
@@ -88,6 +88,7 @@
           <div class="cde">
             &lt;img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
           </div>
+          <p><i>*To change the size, change the <code>img</code>'s <code>height</code> and <code>width</code></i></p>
 
           <br />
 
@@ -97,6 +98,7 @@
             <div class="cde-ind">{{selectedSvgIcon}}</div>
             &lt;/svg&gt;
           </div>
+          <p><i>*To change the size, change the <code>svg</code>'s <code>height</code> and <code>width</code></i></p>
         </li>
       </ul>
 
