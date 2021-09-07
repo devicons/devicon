@@ -5,6 +5,7 @@ const footer = require("gulp-footer");
 const yargs = require("yargs");
 const fsPromise = require("fs").promises;
 const path = require("path");
+const {execSync} = require("child_process")
 
 // global const
 const deviconBaseCSSName = "devicon-base.css"
@@ -191,6 +192,16 @@ function configOptionCallback(file) {
   };
 }
 
+function bumpVersion() {
+  let newVersion = yargs.argv.v
+  let command = `npm version v${newVersion} -m "bump npm version to v${newVersion}"`
+  console.log("Running command: " + command)
+  let stdout = execSync(command)
+  console.log("Command ran. Here's the result:\n" + stdout)
+  return Promise.resolve()
+}
+
 exports.updateCss = createDeviconMinCSS;
 exports.clean = cleanUp;
 exports.optimizeSvg = optimizeSvg;
+exports.bumpVersion = bumpVersion
