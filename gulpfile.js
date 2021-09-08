@@ -192,6 +192,12 @@ function configOptionCallback(file) {
   };
 }
 
+/**
+ * Bump the NPM version of this project. 
+ * This is called via the command line 
+ * using the format "npm run bump -- -v='MAJOR.MINOR.PATCH'"
+ * @returns a Promise.resolve()
+ */
 function bumpVersion() {
   let newVersion = yargs.argv.v
   let command = `npm version v${newVersion} -m "bump npm version to v${newVersion}"`
