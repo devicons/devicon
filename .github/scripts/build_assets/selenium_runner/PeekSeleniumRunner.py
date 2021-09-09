@@ -86,15 +86,18 @@ class PeekSeleniumRunner(SeleniumRunner):
         main_content.screenshot(new_icons_path);
 
         # go downward so we get the oldest icon first
-        len_ = len(svgs)
-        for i in range(len_, 0, -1):
-            xpath = f'//*[@id="glyphSet0"]/div[{i}]'
-            icon_div = self.driver.find_element_by_xpath(xpath)
+        icon_divs_xpath = f'//div[@id="glyphSet0"]/div'
+        icon_divs = self.driver.find_elements_by_xpath(icon_divs_xpath)
+        icon_divs.reverse()
+        i = 0
+        for icon_div in icon_divs:
+            if not icon_div.is_displayed():
+                continue
 
-            # crop the div out from the screenshot
             icon_screenshot = str(
-                Path(screenshot_folder, f"new_icon_{len_ - i}.png").resolve()
+                Path(screenshot_folder, f"new_icon_{i}.png").resolve()
             )
             icon_div.screenshot(icon_screenshot)
+            i += 1
 
         print("Finished peeking the icons...")

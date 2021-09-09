@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devicon';
-  src:  url('fonts/devicon.eot?iabzzq');
-  src:  url('fonts/devicon.eot?iabzzq#iefix') format('embedded-opentype'),
-    url('fonts/devicon.ttf?iabzzq') format('truetype'),
-    url('fonts/devicon.woff?iabzzq') format('woff'),
-    url('fonts/devicon.svg?iabzzq#devicon') format('svg');
+  src:  url('fonts/devicon.eot?rgb6be');
+  src:  url('fonts/devicon.eot?rgb6be#iefix') format('embedded-opentype'),
+    url('fonts/devicon.ttf?rgb6be') format('truetype'),
+    url('fonts/devicon.woff?rgb6be') format('woff'),
+    url('fonts/devicon.svg?rgb6be#devicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,164 +25,206 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.devicon-arduino-plain-wordmark:before {
+.devicon-storybook-plain-wordmark:before {
   content: "\e900";
 }
-.devicon-arduino-plain:before {
+.devicon-storybook-plain:before {
   content: "\e901";
 }
-.devicon-qt-original:before {
+.devicon-pandas-original-wordmark:before {
   content: "\e902";
 }
-.devicon-gcc-plain:before {
+.devicon-pandas-original:before {
   content: "\e903";
 }
-.devicon-svelte-plain-wordmark:before {
+.devicon-centos-plain-wordmark:before {
   content: "\e904";
 }
-.devicon-svelte-plain:before {
+.devicon-centos-plain:before {
   content: "\e905";
 }
-.devicon-jira-plain-wordmark:before {
+.devicon-azure-plain-wordmark:before {
   content: "\e906";
 }
-.devicon-jira-plain:before {
+.devicon-azure-plain:before {
   content: "\e907";
 }
-.devicon-slack-plain-wordmark:before {
+.devicon-go-line:before {
   content: "\e908";
 }
-.devicon-slack-plain:before {
+.devicon-go-plain:before {
   content: "\e909";
 }
-.devicon-canva-original:before {
+.devicon-go-original-wordmark:before {
   content: "\e90a";
 }
-.devicon-jamstack-plain-wordmark:before {
+.devicon-devicon-line-wordmark:before {
   content: "\e90b";
 }
-.devicon-jamstack-original:before {
+.devicon-devicon-line:before {
   content: "\e90c";
 }
-.devicon-denojs-original-wordmark:before {
+.devicon-devicon-plain-wordmark:before {
   content: "\e90d";
 }
-.devicon-denojs-original:before {
+.devicon-devicon-plain:before {
   content: "\e90e";
 }
-.devicon-apachekafka-original-wordmark:before {
+.devicon-msdos-line:before {
   content: "\e90f";
 }
-.devicon-apachekafka-original:before {
+.devicon-arduino-plain-wordmark:before {
   content: "\e910";
 }
-.devicon-filezilla-plain-wordmark:before {
+.devicon-arduino-plain:before {
   content: "\e911";
 }
-.devicon-filezilla-plain:before {
+.devicon-qt-original:before {
   content: "\e912";
 }
-.devicon-msdos-line:before {
+.devicon-gcc-plain:before {
   content: "\e913";
 }
-.devicon-msdos-plain:before {
+.devicon-svelte-plain-wordmark:before {
   content: "\e914";
 }
-.devicon-opengl-plain:before {
+.devicon-svelte-plain:before {
   content: "\e915";
 }
-.devicon-putty-plain:before {
+.devicon-jira-plain-wordmark:before {
   content: "\e916";
 }
-.devicon-opera-plain-wordmark:before {
+.devicon-jira-plain:before {
   content: "\e917";
 }
-.devicon-opera-plain:before {
+.devicon-slack-plain-wordmark:before {
   content: "\e918";
 }
-.devicon-subversion-original:before {
+.devicon-slack-plain:before {
   content: "\e919";
 }
-.devicon-tortoisegit-line:before {
+.devicon-canva-original:before {
   content: "\e91a";
 }
-.devicon-tortoisegit-plain:before {
+.devicon-jamstack-plain-wordmark:before {
   content: "\e91b";
 }
-.devicon-towergit-plain-wordmark:before {
+.devicon-jamstack-original:before {
   content: "\e91c";
 }
-.devicon-towergit-plain:before {
+.devicon-denojs-original-wordmark:before {
   content: "\e91d";
 }
-.devicon-unity-original-wordmark:before {
+.devicon-denojs-original:before {
   content: "\e91e";
 }
-.devicon-unity-original:before {
+.devicon-apachekafka-original-wordmark:before {
   content: "\e91f";
 }
-.devicon-neo4j-plain-wordmark:before {
+.devicon-apachekafka-original:before {
   content: "\e920";
 }
-.devicon-neo4j-plain:before {
+.devicon-filezilla-plain-wordmark:before {
   content: "\e921";
 }
-.devicon-nuxtjs-plain-wordmark:before {
+.devicon-filezilla-plain:before {
   content: "\e922";
 }
-.devicon-nuxtjs-plain:before {
+.devicon-opengl-plain:before {
   content: "\e923";
 }
-.devicon-socketio-original-wordmark:before {
+.devicon-putty-plain:before {
   content: "\e924";
 }
-.devicon-socketio-original:before {
+.devicon-opera-plain-wordmark:before {
   content: "\e925";
 }
-.devicon-processing-plain-wordmark:before {
+.devicon-opera-plain:before {
   content: "\e926";
 }
-.devicon-processing-plain:before {
+.devicon-subversion-original:before {
   content: "\e927";
 }
-.devicon-bootstrap-plain-wordmark:before {
+.devicon-tortoisegit-line:before {
   content: "\e928";
 }
-.devicon-bootstrap-plain:before {
+.devicon-tortoisegit-plain:before {
   content: "\e929";
 }
-.devicon-feathersjs-original:before {
+.devicon-towergit-plain-wordmark:before {
   content: "\e92a";
 }
-.devicon-adonisjs-original-wordmark:before {
+.devicon-towergit-plain:before {
   content: "\e92b";
 }
-.devicon-adonisjs-original:before {
+.devicon-unity-original-wordmark:before {
   content: "\e92c";
 }
-.devicon-numpy-original-wordmark:before {
+.devicon-unity-original:before {
   content: "\e92d";
 }
-.devicon-numpy-original:before {
+.devicon-neo4j-plain-wordmark:before {
   content: "\e92e";
 }
-.devicon-matlab-line:before {
+.devicon-neo4j-plain:before {
   content: "\e92f";
 }
-.devicon-matlab-plain:before {
+.devicon-nuxtjs-plain-wordmark:before {
   content: "\e930";
 }
-.devicon-clojurescript-plain:before {
+.devicon-nuxtjs-plain:before {
   content: "\e931";
 }
-.devicon-threejs-original-wordmark:before {
+.devicon-socketio-original-wordmark:before {
   content: "\e932";
 }
-.devicon-threejs-original:before {
+.devicon-socketio-original:before {
   content: "\e933";
 }
-.devicon-markdown-original:before {
+.devicon-processing-plain-wordmark:before {
   content: "\e934";
+}
+.devicon-processing-plain:before {
+  content: "\e935";
+}
+.devicon-bootstrap-plain-wordmark:before {
+  content: "\e936";
+}
+.devicon-bootstrap-plain:before {
+  content: "\e937";
+}
+.devicon-feathersjs-original:before {
+  content: "\e938";
+}
+.devicon-adonisjs-original-wordmark:before {
+  content: "\e939";
+}
+.devicon-adonisjs-original:before {
+  content: "\e93a";
+}
+.devicon-numpy-original-wordmark:before {
+  content: "\e93b";
+}
+.devicon-numpy-original:before {
+  content: "\e93c";
+}
+.devicon-matlab-line:before {
+  content: "\e93d";
+}
+.devicon-matlab-plain:before {
+  content: "\e93e";
+}
+.devicon-clojurescript-plain:before {
+  content: "\e93f";
+}
+.devicon-threejs-original-wordmark:before {
+  content: "\e940";
+}
+.devicon-threejs-original:before {
+  content: "\e941";
+}
+.devicon-markdown-original:before {
+  content: "\e942";
 }
 .devicon-nixos-plain-wordmark:before {
   content: "\e992";
@@ -650,202 +692,196 @@
   content: "\e944";
 }
 .devicon-elm-plain-wordmark:before {
-  content: "\e941";
-}
-.devicon-elm-plain:before {
-  content: "\e942";
-}
-.devicon-cakephp-plain-wordmark:before {
-  content: "\e93f";
-}
-.devicon-cakephp-plain:before {
-  content: "\e940";
-}
-.devicon-stylus-original:before {
-  content: "\e93e";
-}
-.devicon-express-original-wordmark:before {
-  content: "\e93c";
-}
-.devicon-express-original:before {
-  content: "\e93d";
-}
-.devicon-devicon-plain-wordmark:before {
-  content: "\e93a";
-}
-.devicon-devicon-plain:before {
-  content: "\e93b";
-}
-.devicon-intellij-plain-wordmark:before {
-  content: "\e935";
-}
-.devicon-intellij-plain:before {
-  content: "\e936";
-}
-.devicon-pycharm-plain-wordmark:before {
-  content: "\e937";
-}
-.devicon-pycharm-plain:before {
-  content: "\e938";
-}
-.devicon-rubymine-plain-wordmark:before {
-  content: "\e939";
-}
-.devicon-rubymine-plain:before {
   content: "\e965";
 }
-.devicon-webstorm-plain-wordmark:before {
+.devicon-elm-plain:before {
   content: "\e9c8";
 }
-.devicon-webstorm-plain:before {
+.devicon-cakephp-plain-wordmark:before {
   content: "\e9c9";
 }
-.devicon-tomcat-line-wordmark:before {
+.devicon-cakephp-plain:before {
   content: "\e9e1";
 }
-.devicon-tomcat-line:before {
+.devicon-stylus-original:before {
   content: "\e9e2";
 }
-.devicon-vuejs-line-wordmark:before {
+.devicon-express-original-wordmark:before {
   content: "\e9e3";
 }
-.devicon-vuejs-line:before {
+.devicon-express-original:before {
   content: "\e9e4";
 }
-.devicon-vuejs-plain-wordmark:before {
+.devicon-intellij-plain-wordmark:before {
   content: "\e9e5";
 }
-.devicon-vuejs-plain:before {
+.devicon-intellij-plain:before {
   content: "\e9e6";
 }
-.devicon-swift-plain-wordmark:before {
+.devicon-pycharm-plain-wordmark:before {
   content: "\e9e7";
 }
-.devicon-swift-plain:before {
+.devicon-pycharm-plain:before {
   content: "\e9e8";
 }
-.devicon-webpack-plain-wordmark:before {
+.devicon-rubymine-plain-wordmark:before {
   content: "\e9e9";
 }
-.devicon-webpack-plain:before {
+.devicon-rubymine-plain:before {
   content: "\e9ea";
 }
-.devicon-visualstudio-plain-wordmark:before {
+.devicon-webstorm-plain-wordmark:before {
   content: "\e9eb";
 }
-.devicon-visualstudio-plain:before {
+.devicon-webstorm-plain:before {
   content: "\e9ec";
 }
-.devicon-sequelize-plain-wordmark:before {
+.devicon-tomcat-line-wordmark:before {
   content: "\e9ed";
 }
-.devicon-sequelize-plain:before {
+.devicon-tomcat-line:before {
   content: "\e9ee";
 }
-.devicon-typescript-plain:before {
+.devicon-vuejs-line-wordmark:before {
   content: "\e9ef";
 }
-.devicon-babel-plain:before {
+.devicon-vuejs-line:before {
   content: "\e9f0";
 }
-.devicon-facebook-plain:before {
+.devicon-vuejs-plain-wordmark:before {
   content: "\e9f1";
 }
-.devicon-google-plain-wordmark:before {
+.devicon-vuejs-plain:before {
   content: "\e9f2";
 }
-.devicon-google-plain:before {
+.devicon-swift-plain-wordmark:before {
   content: "\e9f3";
 }
-.devicon-twitter-original:before {
+.devicon-swift-plain:before {
   content: "\e9f4";
 }
-.devicon-mocha:before {
+.devicon-webpack-plain-wordmark:before {
   content: "\e9f5";
 }
-.devicon-jasmine-plain:before {
+.devicon-webpack-plain:before {
   content: "\e9f6";
 }
-.devicon-jasmine-wordmark:before {
+.devicon-visualstudio-plain-wordmark:before {
   content: "\e9f7";
 }
-.devicon-gatling-plain:before {
+.devicon-visualstudio-plain:before {
   content: "\e9f8";
 }
-.devicon-gatling-plain-wordmark:before {
+.devicon-sequelize-plain-wordmark:before {
   content: "\e9f9";
 }
-.devicon-phpstorm-plain:before {
+.devicon-sequelize-plain:before {
   content: "\e9fa";
 }
-.devicon-phpstorm-plain-wordmark:before {
+.devicon-typescript-plain:before {
   content: "\e9fb";
 }
-.devicon-sourcetree-original:before {
+.devicon-babel-plain:before {
   content: "\e9fc";
 }
-.devicon-sourcetree-original-wordmark:before {
+.devicon-facebook-plain:before {
   content: "\e9fd";
 }
-.devicon-ssh-original:before {
+.devicon-google-plain-wordmark:before {
   content: "\e9fe";
 }
-.devicon-ssh-original-wordmark:before {
+.devicon-google-plain:before {
   content: "\e9ff";
 }
-.devicon-jeet-plain:before {
+.devicon-twitter-original:before {
   content: "\ea00";
 }
-.devicon-jeet-plain-wordmark:before {
+.devicon-mocha:before {
   content: "\ea01";
 }
-.devicon-gitlab-plain:before {
+.devicon-jasmine-plain:before {
   content: "\ea02";
 }
-.devicon-gitlab-plain-wordmark:before {
+.devicon-jasmine-wordmark:before {
   content: "\ea03";
 }
-.devicon-github-original:before {
+.devicon-gatling-plain:before {
   content: "\ea04";
 }
-.devicon-github-original-wordmark:before {
+.devicon-gatling-plain-wordmark:before {
   content: "\ea05";
 }
-.devicon-d3js-plain:before {
+.devicon-phpstorm-plain:before {
   content: "\ea06";
 }
-.devicon-d3js-original:before {
+.devicon-phpstorm-plain-wordmark:before {
   content: "\ea07";
 }
-.devicon-confluence-original:before {
+.devicon-sourcetree-original:before {
   content: "\ea08";
 }
-.devicon-confluence-original-wordmark:before {
+.devicon-sourcetree-original-wordmark:before {
   content: "\ea09";
 }
-.devicon-bitbucket-original:before {
+.devicon-ssh-original:before {
   content: "\ea0a";
 }
-.devicon-bitbucket-original-wordmark:before {
+.devicon-ssh-original-wordmark:before {
   content: "\ea0b";
 }
-.devicon-gradle-plain:before {
+.devicon-jeet-plain:before {
   content: "\ea0c";
+}
+.devicon-jeet-plain-wordmark:before {
+  content: "\ea0d";
+}
+.devicon-gitlab-plain:before {
+  content: "\ea0e";
+}
+.devicon-gitlab-plain-wordmark:before {
+  content: "\ea0f";
+}
+.devicon-github-original:before {
+  content: "\ea10";
+}
+.devicon-github-original-wordmark:before {
+  content: "\ea11";
+}
+.devicon-d3js-plain:before {
+  content: "\ea12";
+}
+.devicon-d3js-original:before {
+  content: "\ea13";
+}
+.devicon-confluence-original:before {
+  content: "\ea14";
+}
+.devicon-confluence-original-wordmark:before {
+  content: "\ea15";
+}
+.devicon-bitbucket-original:before {
+  content: "\ea16";
+}
+.devicon-bitbucket-original-wordmark:before {
+  content: "\ea17";
+}
+.devicon-gradle-plain:before {
+  content: "\ea18";
 }
 .devicon-gradle-plain-wordmark:before {
   content: "\e8f1";
 }
 .devicon-cucumber-plain:before {
-  content: "\ea0d";
+  content: "\ea19";
 }
 .devicon-cucumber-plain-wordmark:before {
-  content: "\ea0e";
+  content: "\ea1a";
 }
 .devicon-protractor-plain:before {
-  content: "\ea0f";
+  content: "\ea1b";
 }
 .devicon-protractor-plain-wordmark:before {
-  content: "\ea10";
+  content: "\ea1c";
 }
 .devicon-safari-line-wordmark:before {
   content: "\e632";
@@ -940,9 +976,6 @@
 .devicon-apache-plain:before {
   content: "\e629";
 }
-.devicon-go-line:before {
-  content: "\e610";
-}
 .devicon-redis-plain-wordmark:before {
   content: "\e606";
 }
@@ -966,9 +999,6 @@
 }
 .devicon-heroku-plain:before {
   content: "\e60f";
-}
-.devicon-go-plain:before {
-  content: "\e61b";
 }
 .devicon-docker-plain-wordmark:before {
   content: "\e61e";

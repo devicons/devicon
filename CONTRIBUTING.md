@@ -16,7 +16,8 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#example">Example of Submitting An Icon</a></li>
   <li><a href="#updatingIcons">Updating an Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
-  <li><a href="#buildScript">Our Workflows: how they work and their issues</a></li>
+  <li><a href="#buildScript">Our Workflows: how they work</a></li>
+  <li><a href="#bugs">Common Bugs and Solutions</a></li>
   <li><a href="#discordServer">Discord server</a></li>
   <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
 </ul>
@@ -411,6 +412,8 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
   <li>Creating a list of features that was added since last release. See <a href="https://github.com/devicons/devicon/discussions/574">this discussion</a> for inception and limitations. </li>
 </ul>
 
+<hr>
+<h2 id='bugs'>Common Bugs and Solutions</h2>
 <p>There are some bugs that the build scripts might run into. Listed below are the common ones and their solutions</p>
 <ol>
   <li><b>No connection could be made because the target machine actively refused it. (os error 10061)</b>
@@ -437,7 +440,7 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
     <ul>
       <li>See <a href="https://github.com/devicons/devicon/pull/532">this PR</a>'s peek result.</li>
       <li>This is caused by a bug in Icomoon's parser (see <a href="https://github.com/devicons/devicon/pull/532#issuecomment-827180766">this</a>).</li>
-      <li>Solution: Luckily this is an extremely rare case. Try remake the SVG in a different way (using different paths/shapes) and test using Icomoon.</li>
+      <li>Solution: Luckily this is an extremely rare case. Try remaking the SVG in a different way (using different paths/shapes). If your text/paths are joined with another object (say, the logo), try splitting them into individual paths (see <a href="https://github.com/devicons/devicon/pull/816#issuecomment-904021383">this PR</a>). You can always test using Icomoon to see if your fix works.</li>
     </ul>
   </li>
 </ol>
