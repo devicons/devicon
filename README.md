@@ -39,7 +39,7 @@
 
 ```html
 <!-- in your header -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="https://gitcdn.link/repo/devicons/devicon/latest/devicon.min.css">
 
 <!-- in your body -->
 <i class="devicon-devicon-plain"></i>
@@ -151,7 +151,7 @@ Add css rules in your stylesheet
 <h4>You can also use the <code>img</code> tag and referencing an svg directly from the repo.</h4>
 
 ```html
-<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg'>
+<img src='https://gitcdn.link/repo/devicons/devicon/latest/icons/devicon/devicon-original.svg'>
 ```
 
 <h2 id="request-icon">Requesting icon</h2>
