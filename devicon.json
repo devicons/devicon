@@ -2351,6 +2351,35 @@
         "aliases": []
     },
     {
+        "name": "kaggle",
+        "tags": [
+            "platform",
+            "auth",
+            "machine-learning"
+        ],
+        "versions": {
+          "svg": [
+              "original",
+              "original-wordmark"
+            ],
+          "font": [
+              "original",
+              "original-wordmark"
+            ]
+        },
+        "color": "#20BEFF",
+        "aliases": [
+          {
+              "base": "original",
+              "alias": "plain"
+          },
+          {
+              "base": "original-wordmark",
+              "alias": "plain-wordmark"
+          }
+      ]
+    },
+    {
         "name": "karma",
         "tags": ["testing", "test-runner"],
         "versions": {
