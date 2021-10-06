@@ -4822,5 +4822,26 @@
         },
         "color": "#128dff",
         "aliases": []
+    },
+    {
+        "name": "fastapi",
+        "tags": [
+            "python",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#009688",
+        "aliases": []
     }
 ]
