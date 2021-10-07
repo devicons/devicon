@@ -1,31 +1,29 @@
-[
-    {
-      "name": "adonisjs",
-      "tags": [
-          "nodejs",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#5A45FF",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
+[{
+        "name": "adonisjs",
+        "tags": [
+            "nodejs",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#5A45FF",
+        "aliases": [{
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "aftereffects",
@@ -64,12 +62,10 @@
             ]
         },
         "color": "#F7A80D",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "android",
@@ -174,8 +170,7 @@
             ]
         },
         "color": "#231f20",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -203,12 +198,10 @@
             ]
         },
         "color": "#ac162c",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "apple",
@@ -218,42 +211,40 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "white"
             ],
             "font": [
                 "original"
             ]
         },
         "color": "#000000",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "appwrite",
         "tags": [
-            "cloud", 
-            "platform", 
+            "cloud",
+            "platform",
             "server"
         ],
         "versions": {
-          "svg": [
-            "original",
-            "original-wordmark",
-            "plain",
-            "plain-wordmark"
-          ],
-          "font": [
-            "plain",
-            "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#f02e65",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "plain",
                 "alias": "original"
             },
@@ -300,8 +291,7 @@
             ]
         },
         "color": "#67595D",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -348,12 +338,10 @@
             ]
         },
         "color": "#f9dc3e",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "original"
-            }
-        ]
+        "aliases": [{
+            "base": "plain",
+            "alias": "original"
+        }]
     },
     {
         "name": "backbonejs",
@@ -429,15 +417,14 @@
             ]
         },
         "color": "#205081",
-        "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+        "aliases": [{
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -464,8 +451,8 @@
         "name": "bulma",
         "tags": ["css", "framework"],
         "versions": {
-          "svg": ["plain"],
-          "font": ["plain"]
+            "svg": ["plain"],
+            "font": ["plain"]
         },
         "color": "#00d1b2",
         "aliases": []
@@ -514,8 +501,7 @@
             ]
         },
         "color": "#03599c",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "plain",
                 "alias": "plain-wordmark"
             },
@@ -559,12 +545,10 @@
             ]
         },
         "color": "#00C4CC",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "centos",
@@ -630,8 +614,8 @@
         "name": "circleci",
         "tags": ["integration", "platform"],
         "versions": {
-          "svg": ["plain", "plain-wordmark"],
-          "font": ["plain", "plain-wordmark"]
+            "svg": ["plain", "plain-wordmark"],
+            "font": ["plain", "plain-wordmark"]
         },
         "color": "#343434",
         "aliases": []
@@ -652,12 +636,10 @@
             ]
         },
         "color": "#5881d8",
-        "aliases": [
-            {
-                "base": "line",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "line",
+            "alias": "plain"
+        }]
     },
     {
         "name": "clojurescript",
@@ -680,8 +662,8 @@
         "name": "codecov",
         "tags": ["platform", "integration"],
         "versions": {
-          "svg": ["plain"],
-          "font": ["plain"]
+            "svg": ["plain"],
+            "font": ["plain"]
         },
         "color": "#e0225c",
         "aliases": []
@@ -723,12 +705,10 @@
             ]
         },
         "color": "#231F20",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "original"
-            }
-        ]
+        "aliases": [{
+            "base": "plain",
+            "alias": "original"
+        }]
     },
     {
         "name": "coffeescript",
@@ -747,8 +727,7 @@
             ]
         },
         "color": "#28334c",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -777,8 +756,7 @@
             ]
         },
         "color": "#000000",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "line",
                 "alias": "plain"
             },
@@ -802,15 +780,14 @@
             ]
         },
         "color": "#205081",
-        "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+        "aliases": [{
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -852,8 +829,7 @@
             ]
         },
         "color": "#9c033a",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "plain",
                 "alias": "plain-wordmark"
             },
@@ -882,8 +858,7 @@
             ]
         },
         "color": "#68217a",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "plain",
                 "alias": "plain-wordmark"
             },
@@ -1026,8 +1001,7 @@
             ]
         },
         "color": "#000000",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -1078,8 +1052,7 @@
             ]
         },
         "color": "#003A2B",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "plain",
                 "alias": "plain-wordmark"
             },
@@ -1231,14 +1204,14 @@
         "aliases": []
     },
     {
-      "name": "eleventy",
-      "tags": ["ssg", "static site generator"],
-      "versions": {
-        "svg": ["original", "plain"],
-        "font": ["plain"]
-      },
-      "color": "#1f1f1f",
-      "aliases": []
+        "name": "eleventy",
+        "tags": ["ssg", "static site generator"],
+        "versions": {
+            "svg": ["original", "plain"],
+            "font": ["plain"]
+        },
+        "color": "#1f1f1f",
+        "aliases": []
     },
     {
         "name": "elixir",
@@ -1284,22 +1257,20 @@
             ]
         },
         "color": "#dd3f24",
-        "aliases": [
-          {
+        "aliases": [{
             "base": "original-wordmark",
             "alias": "plain-wordmark"
-          }
-        ]
+        }]
     },
     {
-      "name": "embeddedc",
-      "tags": ["language", "programming"],
-      "versions": {
-        "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-        "font": ["plain", "plain-wordmark"]
-      },
-      "color": "#444444",
-      "aliases": []
+        "name": "embeddedc",
+        "tags": ["language", "programming"],
+        "versions": {
+            "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+            "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#444444",
+        "aliases": []
     },
     {
         "name": "erlang",
@@ -1352,12 +1323,10 @@
             ]
         },
         "color": "#3d5a98",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "original"
-            }
-        ]
+        "aliases": [{
+            "base": "plain",
+            "alias": "original"
+        }]
     },
     {
         "name": "feathersjs",
@@ -1374,7 +1343,7 @@
             ]
         },
         "color": "#333333",
-        "aliases": [        ]
+        "aliases": []
     },
     {
         "name": "figma",
@@ -1468,15 +1437,14 @@
             ]
         },
         "color": "#010101",
-        "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+        "aliases": [{
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -1648,12 +1616,10 @@
             ]
         },
         "color": "#181616",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "gitlab",
@@ -1713,12 +1679,10 @@
             ]
         },
         "color": "#00acd7",
-        "aliases": [
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": [{
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+        }]
     },
     {
         "name": "google",
@@ -1738,8 +1702,7 @@
             ]
         },
         "color": "#587dbd",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "plain",
                 "alias": "original"
             },
@@ -1984,8 +1947,7 @@
             ]
         },
         "color": "#6762a6",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "line",
                 "alias": "original"
             },
@@ -2030,12 +1992,10 @@
             ]
         },
         "color": "#1EBBEE",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "illustrator",
@@ -2133,12 +2093,10 @@
             ]
         },
         "color": "#F0047F",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "jasmine",
@@ -2222,8 +2180,8 @@
         "name": "jest",
         "tags": ["testing", "javascript"],
         "versions": {
-          "svg": ["plain"],
-          "font": ["plain"]
+            "svg": ["plain"],
+            "font": ["plain"]
         },
         "color": "#99425b",
         "aliases": []
@@ -2354,8 +2312,8 @@
         "name": "karma",
         "tags": ["testing", "test-runner"],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": ["original", "plain"],
+            "font": ["plain"]
         },
         "color": "#56c5a8",
         "aliases": []
@@ -2438,14 +2396,14 @@
         "aliases": []
     },
     {
-      "name": "labview",
-      "tags": ["language"],
-      "versions": {
-        "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-        "font": ["plain", "plain-wordmark"]
-      },
-      "color": "#fed500",
-      "aliases": []
+        "name": "labview",
+        "tags": ["language"],
+        "versions": {
+            "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+            "font": ["plain", "plain-wordmark"]
+        },
+        "color": "#fed500",
+        "aliases": []
     },
     {
         "name": "laravel",
@@ -2569,19 +2527,19 @@
     {
         "name": "matlab",
         "tags": [
-          "programming",
-          "language"
+            "programming",
+            "language"
         ],
         "versions": {
-          "svg": [
-            "original",
-            "plain",
-            "line"
-          ],
-          "font": [
-            "plain",
-            "line"
-          ]
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
         },
         "color": "#6dd0c7",
         "aliases": []
@@ -2622,12 +2580,10 @@
             ]
         },
         "color": "#000000",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "meteor",
@@ -2653,8 +2609,8 @@
         "name": "minitab",
         "tags": ["package", "statistics"],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": ["original", "plain"],
+            "font": ["plain"]
         },
         "color": "#8dc63f",
         "aliases": []
@@ -2834,8 +2790,7 @@
             ]
         },
         "color": "#000000",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -2862,8 +2817,7 @@
             ]
         },
         "color": "#090",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "original-wordmark"
             },
@@ -2974,12 +2928,10 @@
             ]
         },
         "color": "#4DABCF",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "nuxtjs",
@@ -3036,7 +2988,7 @@
             ],
             "font": [
                 "plain",
-        "plain-wordmark"
+                "plain-wordmark"
             ]
         },
         "color": "#f7192d",
@@ -3063,7 +3015,7 @@
         "color": "#F18803",
         "aliases": []
     },
-	{
+    {
         "name": "opengl",
         "tags": [
             "library",
@@ -3097,12 +3049,10 @@
             ]
         },
         "color": "#EA1B22",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "pandas",
@@ -3121,8 +3071,7 @@
             ]
         },
         "color": "#130754",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -3154,8 +3103,8 @@
         "name": "phalcon",
         "tags": ["php", "framework"],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": ["original", "plain"],
+            "font": ["plain"]
         },
         "color": "#76c39b",
         "aliases": []
@@ -3299,7 +3248,7 @@
         "color": "#b7111d",
         "aliases": []
     },
-	{
+    {
         "name": "putty",
         "tags": [
             "ssh",
@@ -3402,12 +3351,10 @@
             ]
         },
         "color": "#41cd52",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "r",
@@ -3463,8 +3410,7 @@
             ]
         },
         "color": "#61dafb",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -3529,12 +3475,10 @@
             ]
         },
         "color": "#764abc",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "rocksdb",
@@ -3656,8 +3600,8 @@
         "name": "rstudio",
         "tags": ["editor", "package", "statistics"],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": ["original", "plain"],
+            "font": ["plain"]
         },
         "color": "#75aadb",
         "aliases": []
@@ -3677,12 +3621,10 @@
             ]
         },
         "color": "#cc6699",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "scala",
@@ -3724,8 +3666,7 @@
             ]
         },
         "color": "#3b4b72",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "plain",
                 "alias": "plain"
             },
@@ -3812,8 +3753,7 @@
             ]
         },
         "color": "#010101",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -3839,15 +3779,14 @@
             ]
         },
         "color": "#205081",
-        "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+        "aliases": [{
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -3874,8 +3813,8 @@
         "name": "spss",
         "tags": ["package", "statistics"],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": ["original", "plain"],
+            "font": ["plain"]
         },
         "color": "#cc1e4c",
         "aliases": []
@@ -3898,12 +3837,10 @@
             ]
         },
         "color": "#333333",
-        "aliases": [
-          {
+        "aliases": [{
             "base": "original-wordmark",
             "alias": "plain-wordmark"
-          }
-        ]
+        }]
     },
     {
         "name": "subversion",
@@ -3921,12 +3858,10 @@
             ]
         },
         "color": "#809cc8",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     },
     {
         "name": "microsoftsqlserver",
@@ -3962,15 +3897,14 @@
             ]
         },
         "color": "#231F20",
-        "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+        "aliases": [{
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -4047,8 +3981,7 @@
             ]
         },
         "color": "#1A171B",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -4062,20 +3995,20 @@
         "name": "storybook",
         "tags": [
             "framework",
-            "documentation", 
+            "documentation",
             "ui"
         ],
         "versions": {
-          "svg": [
-              "original", 
-              "original-wordmark",
-              "plain", 
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain", 
-              "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#FF4785",
         "aliases": []
@@ -4162,7 +4095,7 @@
         "color": "#D1A41A",
         "aliases": []
     },
-	{
+    {
         "name": "tortoisegit",
         "tags": [
             "git"
@@ -4170,8 +4103,8 @@
         "versions": {
             "svg": [
                 "original",
-				"plain",
-				"line"
+                "plain",
+                "line"
             ],
             "font": [
                 "plain",
@@ -4274,12 +4207,10 @@
             ]
         },
         "color": "#1da1f2",
-        "aliases": [
-          {
+        "aliases": [{
             "base": "original",
             "alias": "plain"
-          }
-        ]
+        }]
     },
     {
         "name": "typescript",
@@ -4297,12 +4228,10 @@
             ]
         },
         "color": "#007acc",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "original"
-            }
-        ]
+        "aliases": [{
+            "base": "plain",
+            "alias": "original"
+        }]
     },
     {
         "name": "typo3",
@@ -4590,8 +4519,7 @@
             ]
         },
         "color": "#00adef",
-        "aliases": [
-            {
+        "aliases": [{
                 "base": "original",
                 "alias": "plain"
             },
@@ -4743,11 +4671,9 @@
             ]
         },
         "color": "#f7a41d",
-        "aliases": [
-            {
-                "base":"original",
-                "alias":"plain"
-            }
-        ]
+        "aliases": [{
+            "base": "original",
+            "alias": "plain"
+        }]
     }
 ]
