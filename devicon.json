@@ -4800,5 +4800,27 @@
         },
         "color": "#009fe3",
         "aliases": []
+    },
+    {
+        "name": "opencv",
+        "tags": [
+            "library",
+            "c/c++",
+            "computer-vision"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#128dff",
+        "aliases": []
     }
 ]
