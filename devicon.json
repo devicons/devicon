@@ -4822,5 +4822,27 @@
         },
         "color": "#128dff",
         "aliases": []
+    },
+    {
+        "name": "k3s",
+        "tags": [
+            "kubernetes",
+            "container",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffc519",
+        "aliases": []
     }
 ]
