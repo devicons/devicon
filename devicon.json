@@ -4871,6 +4871,35 @@
         ]
     },
     {
+        "name": "packer",
+        "tags": [
+            "infrastructure",
+            "infrastructure-as-code",
+            "continuous-delivery"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        }
+        "color": "#1d94dd",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "anaconda",
         "tags": [
             "python",
