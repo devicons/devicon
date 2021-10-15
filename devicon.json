@@ -3283,18 +3283,24 @@
     {
         "name": "androidstudio",
         "tags": [
-            "mobile"
+            "mobile",
+            "development"
         ],
         "versions": {
             "svg": [
                 "original"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
         "color": "#000000",
-        "aliases": []
+      "aliases": [
+          {
+              "base": "original",
+              "alias": "plain"
+          }
+      ]
     },
     {
         "name": "protractor",
