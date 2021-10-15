@@ -2351,6 +2351,35 @@
         "aliases": []
     },
     {
+        "name": "kaggle",
+        "tags": [
+            "platform",
+            "auth",
+            "machine-learning"
+        ],
+        "versions": {
+          "svg": [
+              "original",
+              "original-wordmark"
+            ],
+          "font": [
+              "original",
+              "original-wordmark"
+            ]
+        },
+        "color": "#20BEFF",
+        "aliases": [
+          {
+              "base": "original",
+              "alias": "plain"
+          },
+          {
+              "base": "original-wordmark",
+              "alias": "plain-wordmark"
+          }
+      ]
+    },
+    {
         "name": "karma",
         "tags": ["testing", "test-runner"],
         "versions": {
@@ -4769,6 +4798,97 @@
             {
                 "base":"original",
                 "alias":"plain"
+            }
+        ]
+    },
+    {
+        "name": "pytest",
+        "tags": [
+            "python",
+            "framework",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#009fe3",
+        "aliases": []
+    },
+    {
+        "name": "opencv",
+        "tags": [
+            "library",
+            "c/c++",
+            "computer-vision"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#128dff",
+        "aliases": []
+    },
+    {
+        "name": "fastapi",
+        "tags": [
+            "python",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#009688",
+        "aliases": []
+    },
+    {
+        "name": "k3s",
+        "tags": [
+            "kubernetes",
+            "container",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffc519",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
             }
         ]
     }
