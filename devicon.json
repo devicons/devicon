@@ -4926,5 +4926,34 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "rspec",
+        "tags": [
+            "ruby",
+            "framework",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#6de1fa",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     }
 ]
