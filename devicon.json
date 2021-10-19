@@ -4955,5 +4955,26 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "argocd",
+        "tags": [
+            "gitops",
+            "continuous-delivery"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ef7b4d",
+        "aliases": []
     }
 ]
