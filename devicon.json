@@ -4749,5 +4749,26 @@
                 "alias":"plain"
             }
         ]
+    },
+    {
+        "name": "blender",
+        "tags": [
+            "modelling",
+            "python",
+            "3d",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "line-wordmark"
+            ]
+        },
+        "color": "#DC7B2E",
+        "aliases": []
     }
 ]
