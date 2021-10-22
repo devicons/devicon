@@ -4928,11 +4928,39 @@
         ]
     },
     {
-        "name": "prometheus",
+        "name": "rspec",
         "tags": [
-            "monitoring",
-            "observability",
-            "analysis"
+            "ruby",
+            "framework",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#6de1fa",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "argocd",
+        "tags": [
+            "gitops",
+            "continuous-delivery"
         ],
         "versions": {
             "svg": [
@@ -4946,16 +4974,28 @@
                 "plain-wordmark"
             ]
         },
+        "color": "#ef7b4d",
+        "aliases": []
+    },
+    {
+        "name": "prometheus",
+        "tags": [
+            "monitoring",
+            "observability",
+            "analysis"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
         "color": "#e75225",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
+        "aliases": []
         ]
     }
 ]
