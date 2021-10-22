@@ -2,7 +2,7 @@
 <svg
    width="128px"
    height="128px"
-   viewBox="0 0 128 104"
+   viewBox="0 0 128 128"
    version="1.1"
    id="svg16"
    sodipodi:docname="blender-original.svg"
@@ -23,17 +23,17 @@
      inkscape:pagecheckerboard="true"
      showgrid="false"
      inkscape:zoom="5.6171875"
-     inkscape:cx="64"
+     inkscape:cx="37.47427"
      inkscape:cy="64"
      inkscape:window-width="1670"
      inkscape:window-height="987"
      inkscape:window-x="1121"
-     inkscape:window-y="30"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg16" />
   <g
      id="surface1"
-     transform="matrix(1.0233682,0,0,1.0233682,-1.4976746,-0.58803322)">
+     transform="matrix(1.0233682,0,0,1.0233682,-1.4976746,11.411967)">
     <path
        style="fill:#235785;fill-opacity:1;fill-rule:nonzero;stroke:none"
        d="m 66.28125,57.28125 c 0.234375,-4.144531 2.273438,-7.804688 5.359375,-10.390625 3.023437,-2.542969 7.082031,-4.097656 11.539063,-4.097656 4.433593,0 8.492187,1.554687 11.511718,4.097656 3.089844,2.585937 5.117188,6.246094 5.359374,10.390625 0.23438,4.25 -1.48828,8.21875 -4.499999,11.15625 -3.085937,2.980469 -7.453125,4.863281 -12.371093,4.863281 -4.921876,0 -9.308594,-1.871093 -12.375,-4.863281 -3.023438,-2.9375 -4.742188,-6.882812 -4.5,-11.136719 z m 0,0"

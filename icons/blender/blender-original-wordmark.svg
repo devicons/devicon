@@ -2,10 +2,10 @@
 <svg
    width="128px"
    height="128px"
-   viewBox="0 0 128 34"
+   viewBox="0 0 128 128"
    version="1.1"
    id="svg44"
-   sodipodi:docname="blender-line-wordmark.svg"
+   sodipodi:docname="blender-original-wordmark.svg"
    inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,12 +22,12 @@
      inkscape:pagecheckerboard="true"
      showgrid="false"
      inkscape:zoom="6.7664987"
-     inkscape:cx="34.508246"
-     inkscape:cy="64.361203"
+     inkscape:cx="12.487995"
+     inkscape:cy="64.361204"
      inkscape:window-width="1670"
      inkscape:window-height="987"
      inkscape:window-x="1121"
-     inkscape:window-y="30"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg44" />
   <defs
@@ -54,7 +54,7 @@
   </defs>
   <g
      id="surface1"
-     transform="matrix(1.0115121,0,0,1,-0.74257014,0.13817031)">
+     transform="matrix(1.0115121,0,0,1,-0.74257014,47.13817)">
     <path
        style="fill:#235785;fill-opacity:1;fill-rule:nonzero;stroke:none"
        d="m 21.238281,18.824219 c 0.07422,-1.296875 0.71875,-2.441407 1.6875,-3.25 0.949219,-0.796875 2.230469,-1.285157 3.625,-1.285157 1.394531,0 2.675781,0.488282 3.625,1.285157 0.96875,0.808593 1.613281,1.953125 1.6875,3.25 0.07031,1.332031 -0.46875,2.570312 -1.421875,3.488281 -0.96875,0.933594 -2.347656,1.519531 -3.890625,1.519531 -1.542969,0 -2.925781,-0.585937 -3.894531,-1.519531 -0.949219,-0.917969 -1.492188,-2.15625 -1.417969,-3.488281 z m 0,0"
