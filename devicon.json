@@ -4353,14 +4353,16 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+		"original-gray",
+                "original-wordmark",
+		"original-wordmark-gray"
             ],
             "font": [
                 "original",
                 "original-wordmark"
             ]
         },
-        "color": "#212b35",
+        "color": ["#212b35",#767fad],
         "aliases": []
     },
     {
