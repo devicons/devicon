@@ -660,6 +660,26 @@
         ]
     },
     {
+        "name": "cmake",
+        "tags": [
+            "build"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0e8a16",
+        "aliases": []
+    },
+    {
         "name": "clojurescript",
         "tags": [
             "language"
