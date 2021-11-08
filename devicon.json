@@ -4749,5 +4749,22 @@
                 "alias":"plain"
             }
         ]
+    },
+    {
+        "name": "dropwizard",
+        "tags": [
+            "java",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#24265d",
+        "aliases": []
     }
 ]
