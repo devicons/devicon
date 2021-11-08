@@ -1,17 +1,16 @@
-# License for branding assets
+# License for our logos
 
-Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
 Copyright (C) ?-2021 The Devicon team
 
 You are free to:
 Share — copy and redistribute the material in any medium or format
-Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+for any purpose, even commercially.
 
 Under the following terms:
-
 Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
-ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+NoDerivatives — If you remix, transform, or build upon the material, you may not distribute the modified material.
 
 Notices:
 
@@ -19,10 +18,10 @@ You do not have to comply with the license for elements of the material in the p
 No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
 
 For more details:
-<https://creativecommons.org/licenses/by-sa/4.0/>
+<https://creativecommons.org/licenses/by-nd/4.0/>
 <https://github.com/devicons/devicon/blob/master/branding_guidelines.md>
 
-## License for the source code
+## License for everything else
 
 The MIT License (MIT)
 

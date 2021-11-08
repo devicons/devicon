@@ -13,7 +13,7 @@ Here we've written some guidelines for proper use of our logos.
 | :heavy_check_mark: Use the provided original logos | :x: Create your own versions of the provided original logos |                             |
 | :heavy_check_mark: Use the original colors                  |               :x: Use our logos (for your own use-case) without permission
 | :heavy_check_mark: Use our logos commercially      |               :x: Sell our logos (for your own use-case) without permission
-| :heavy_check_mark: Use the provided logo sizes      |               :x: Violate the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license guidelines
+| :heavy_check_mark: Use the provided logo sizes      |               :x: Violate the [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) license guidelines
 |                     |               :x: Mix/integrate your logo with our provided logos
 
 ## 🖼 Logos
@@ -81,7 +81,7 @@ Here we've written some guidelines for proper use of our logos.
 
 ## 📝 License
 
-All of our branding assets are licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.\
+All of our branding assets are licensed under the [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) license.\
 Please follow their guidelines as well. Not following them might result in legal problems.
 
 ## 📧 Contact
