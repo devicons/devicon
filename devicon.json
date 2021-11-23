@@ -5048,23 +5048,16 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#872b9e",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     }
 ]
