@@ -3025,6 +3025,25 @@
         "aliases": []
     },
     {
+        "name": "nuget",
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#004880",
+        "aliases": []
+    },
+    {
         "name": "numpy",
         "tags": [
             "library",
