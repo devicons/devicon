@@ -5074,5 +5074,27 @@
         },
         "color": "#DC7B2E",
         "aliases": []
+    },
+    {
+        "name": "podman",
+        "tags": [
+            "container",
+            "pods",
+            "docker"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#872b9e",
+        "aliases": []
     }
 ]
