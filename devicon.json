@@ -2864,6 +2864,24 @@
         "aliases": []
     },
     {
+        "name": "networkx",
+        "tags": [
+            "graph",
+            "library",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#2C7FB8",
+        "aliases": []
+    },
+    {
         "name": "nextjs",
         "tags": [
             "framework"
