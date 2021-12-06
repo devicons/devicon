@@ -1245,7 +1245,8 @@
                 "original-wordmark"
             ]
         },
-        "color": "#2a2c3e"
+        "color": "#2a2c3e",
+        "aliases": []
     },
     {
         "name": "electron",
