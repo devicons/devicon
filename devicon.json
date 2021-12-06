@@ -1233,6 +1233,21 @@
         "aliases": []
     },
     {
+        "name": "discordjs",
+        "tags": [
+            "wrapper",
+            "api_wrapper",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2a2c3e"
+    },
+    {
         "name": "electron",
         "tags": [
             "framework"
