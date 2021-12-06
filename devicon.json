@@ -4004,7 +4004,11 @@
                 "original-wordmark",
                 "plain",
                 "plain-wordmark"
-            ]
+            ],
+          "font": [
+              "plain",
+              "plain-wordmark"
+          ]
         },
         "color": "#0f80cc",
         "aliases": []
