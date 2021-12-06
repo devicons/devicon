@@ -4446,7 +4446,7 @@
                 "original-wordmark"
             ]
         },
-        "color": "#212b35",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -4463,6 +4463,26 @@
             ]
         },
         "color": "#4051b5",
+        "aliases": []
+    },
+    {
+        "name": "unrealengine",
+        "tags": [
+            "c++",
+            "engine",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original-colored",
+                "original-wordmark-colored"
+            ]
+        },
+        "color": "#212b35",
         "aliases": []
     },
     {
