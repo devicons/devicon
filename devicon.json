@@ -4006,7 +4006,8 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#0f80cc"
+        "color": "#0f80cc",
+        "aliases": []
     },
     {
         "name": "subversion",
