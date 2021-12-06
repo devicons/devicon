@@ -1242,7 +1242,8 @@
         "versions": {
             "svg": [
                 "plain",
-                "original-wordmark"
+                "original-wordmark",
+                "plain-wordmark"
             ]
         },
         "color": "#2a2c3e",
