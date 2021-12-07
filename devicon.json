@@ -1254,8 +1254,8 @@
         "color": "#2a2c3e",
         "aliases": [
           {
-              "base": "original",
-              "alias": "plain"
+              "base": "plain",
+              "alias": "original"
           }
       ]
     },
