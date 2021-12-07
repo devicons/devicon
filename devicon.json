@@ -1247,7 +1247,12 @@
             ]
         },
         "color": "#2a2c3e",
-        "aliases": []
+        "aliases": [
+          {
+              "base": "original",
+              "alias": "plain"
+          }
+      ]
     },
     {
         "name": "electron",
