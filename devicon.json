@@ -4483,16 +4483,16 @@
             ]
         },
         "color": "#000000",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "uwsgi",
