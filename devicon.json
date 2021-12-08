@@ -1086,28 +1086,16 @@
         "tags": [],
         "versions": {
             "svg": [
-                "original",
                 "plain",
-                "line"
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain-wordmark"
             ]
         },
-        "color": "#003A2B",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            },
-            {
-                "base": "line",
-                "alias": "line-wordmark"
-            }
-        ]
+        "color": "#092e20",
+        "aliases": []
     },
     {
         "name": "docker",
@@ -1262,7 +1250,7 @@
     },
     {
         "name": "elixir",
-        "tags": "language",
+        "tags": ["language"],
         "versions": {
             "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
             "font": ["plain", "plain-wordmark"]
@@ -2864,6 +2852,24 @@
         "aliases": []
     },
     {
+        "name": "networkx",
+        "tags": [
+            "graph",
+            "library",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#2C7FB8",
+        "aliases": []
+    },
+    {
         "name": "nextjs",
         "tags": [
             "framework"
@@ -3004,6 +3010,25 @@
             ]
         },
         "color": "#cb3837",
+        "aliases": []
+    },
+    {
+        "name": "nuget",
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#004880",
         "aliases": []
     },
     {
@@ -5036,6 +5061,28 @@
             ]
         },
         "color": "#DC7B2E",
+        "aliases": []
+    },
+    {
+        "name": "podman",
+        "tags": [
+            "container",
+            "pods",
+            "docker"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#872b9e",
         "aliases": []
     }
 ]
