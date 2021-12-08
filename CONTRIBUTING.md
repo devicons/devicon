@@ -124,7 +124,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
       <td style='width: 33%'>
           <p><b>line-wordmark</b>: similar to the above but must contain the name of the technology. Note that the icon version will be stripped of all colors so you don't have to strip beforehand.</p>      
           <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-line-wordmark.svg' height='100px' width='100px' />
-          <h4>apache-line-wordmark.svg</h4>
+          <h4>devicon-line-wordmark.svg</h4>
       </td>
     </tr>
   </table>
