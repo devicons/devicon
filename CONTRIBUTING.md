@@ -105,7 +105,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
           <h4>devicon-plain.svg</h4>
       </td>
       <td style='width: 33%'>
-          <p><b>line</b>: a one-color, <a href="https://www.script-tutorials.com/line-icons/#:~:text=Line%20icons%20is%20a%20shape%20vector%20of%20a%20symbolic%20glyph%20outline%20only%20which%20basically%20consist%20of%20fonts%20styled%20in%20css%20%7Bresize%2C%20colors%20and%20moved%7D">line version</a> of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
+          <p><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
           <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-line.svg' height='100px' width='100px' />
           <h4>devicon-line.svg</h4>
       </td>
