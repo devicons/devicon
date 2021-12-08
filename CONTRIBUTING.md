@@ -106,7 +106,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
       </td>
       <td style='width: 33%'>
           <p><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
-          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line.svg' height='100px' width='100px' />
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-line.svg' height='100px' width='100px' />
           <h4>apache-line.svg</h4>
       </td>
     </tr>
@@ -123,7 +123,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
       </td>
       <td style='width: 33%'>
           <p><b>line-wordmark</b>: similar to the above but must contain the name of the technology. Note that the icon version will be stripped of all colors so you don't have to strip beforehand.</p>      
-          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line-wordmark.svg' height='100px' width='100px' />
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-line-wordmark.svg' height='100px' width='100px' />
           <h4>apache-line-wordmark.svg</h4>
       </td>
     </tr>
