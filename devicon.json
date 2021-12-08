@@ -4478,11 +4478,11 @@
                 "original-wordmark"
             ],
             "font": [
-                "original-color",
-                "original-wordmark-color"
+                "original",
+                "original-wordmark"
             ]
         },
-        "color": "#212b35",
+        "color": "#000000",
         "aliases": []
     },
     {
