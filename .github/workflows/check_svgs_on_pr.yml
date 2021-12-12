@@ -19,6 +19,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      # this is where we create the check_err_messages
       - name: Run the check_svg script
         run: >
           python ./.github/scripts/check_svgs_on_pr.py $HOME/files_added.json $HOME/files_modified.json
@@ -27,8 +28,8 @@ jobs:
         uses: actions/upload-artifact@v2
         if: success()
         with:
-          name: svg_err_messages
-          path: ./svg_err_messages.txt
+          name: check_err_messages
+          path: ./check_err_messages.txt
 
       - name: Save the pr num in an artifact
         shell: bash

@@ -33,7 +33,7 @@ jobs:
         id: err_message_reader
         uses: juliangruber/read-file-action@v1.0.0
         with:
-          path: ./svg_err_messages/svg_err_messages.txt
+          path: ./check_err_messages/check_err_messages.txt
 
       - name: Comment on the PR about the result - SVG Error
         uses: jungwinter/comment@v1 # let us comment on a specific PR

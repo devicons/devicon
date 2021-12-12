@@ -69,11 +69,11 @@ def check_svgs(svg_file_paths: List[Path]):
             if root.get("viewBox") != "0 0 128 128":
                 err_msg.append("-'viewBox' is not '0 0 128 128' -> Set it or scale the file using https://www.iloveimg.com/resize-image/resize-svg.")
 
-            if root.get("x") is not None:
-                err_msg.append("-unneccessary 'x' attribute in svg root element -> Remove it")
-
-            if root.get("y") is not None:
-                err_msg.append("-unneccessary 'y' attribute in svg root element -> Remove it")
+            # goes through all elems and check for strokes
+            for child in tree.iter():
+                if child.get("stroke") != None:
+                    err_msg.append("-SVG contains `stroke` property. This will get ignored by Icomoon. Please convert them to fills.")
+                    break
 
             if len(err_msg) > 1:
                 err_msgs.append("\n".join(err_msg))
