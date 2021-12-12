@@ -2,6 +2,7 @@ from enum import Enum
 from typing import List
 import xml.etree.ElementTree as et
 from pathlib import Path
+import build_assets.util
 
 
 # pycharm complains that build_assets is an unresolved ref
@@ -58,10 +59,16 @@ def check_svgs(svg_file_paths: List[Path]):
     err_msgs = []
     for svg_path in svg_file_paths:
         try:
+            err_msg = [f"{svg_path}:"]
+
+            # name check
+            if not is_svg_name_valid(svg_path.absolute()):
+                err_msg.append("-SVG file name didn't match our pattern of `name-(original|plain|line)(-wordmark)?.svg`")
+
+            # svg check
             tree = et.parse(svg_path)
             root = tree.getroot()
             namespace = "{http://www.w3.org/2000/svg}"
-            err_msg = [f"{svg_path}:"]
 
             if root.tag != f"{namespace}svg":
                 err_msg.append(f"-root is '{root.tag}'. Root must be an 'svg' element")
