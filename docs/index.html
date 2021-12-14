@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>DEVICON | All programming languages and development tools related icons font</title>
-  <meta name="description" content="devicon aims to gather all logos representing development languages and tools in one font.">
+  <meta name="description" content="Devicon aims to gather all logos representing development languages and tools in one font. 🚀">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="./logos/favicon.ico" sizes="196x196">
   <link rel="apple-touch-icon" sizes="57x57" href="./logos/apple-touch-icon-57x57.png">
@@ -33,6 +33,12 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon/devicon.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <meta property="og:title" content="Devicon" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original-wordmark.svg" />
+  <meta property="og:url" content="https://devicon.dev" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:description" content="Devicon aims to gather all logos representing development languages and tools in one font. 🚀" />
 </head>
 
 <body ng-app="devicon" ng-controller="IconListCtrl">
@@ -66,13 +72,16 @@
               </li>
             </div>
           </ul>
+          <p>Place this in your header</p>
           <div class="cde">
-            <div class="cde-com">&lt;!-- in your header --&gt;</div>
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css"&gt;<br />
-            <br />
-            <div class="cde-com">&lt;!-- in your body --&gt;</div>
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css"&gt;
+          </div>
+
+          <p>Use this in your body</p>
+          <div class="cde">
             &lt;i class="devicon-{{selectedIcon.name}}-{{selectedFontIcon}}<span ng-if="colored"> colored</span>"&gt;&lt;/i&gt;<br />
           </div>
+          <p><i>*To change the size, change the <code>i</code>'s <code>font-size</code></i></p>
         </li>
         <li>
           <h4>SVG versions <input type='color' value='#60be86' ng-model="svgBackground"></h4>
@@ -81,11 +90,21 @@
               <img ng-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
+          <p>Using &lt;img&gt; element</p>
           <div class="cde">
-          &lt;svg viewBox="0 0 128 128"&gt;<br />
-          <div class="cde-ind">{{selectedSvgIcon}}</div>
-          &lt;/svg&gt;
+            &lt;img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
           </div>
+          <p><i>*To change the size, change the <code>img</code>'s <code>height</code> and <code>width</code></i></p>
+
+          <br />
+
+          <p>Using Pure SVG</p>
+          <div class="cde">
+            &lt;svg viewBox="0 0 128 128"&gt;<br />
+            <div class="cde-ind">{{selectedSvgIcon}}</div>
+            &lt;/svg&gt;
+          </div>
+          <p><i>*To change the size, change the <code>svg</code>'s <code>height</code> and <code>width</code></i></p>
         </li>
       </ul>
 
