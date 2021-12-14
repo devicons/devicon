@@ -45,21 +45,21 @@ jobs:
           ./devicon.json ./icons ./ --headless --pr_title "%PR_TITLE%"
 
       - name: Upload the err messages (created by icomoon_peek.py)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2.2.4
         if: always()
         with:
           name: err_messages
           path: ./err_messages.txt
 
       - name: Upload screenshots for comments
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2.2.4
         if: success()
         with:
           name: screenshots
           path: ./screenshots/*.png
 
       - name: Upload geckodriver.log for debugging purposes
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2.2.4
         if: failure()
         with:
           name: geckodriver-log
