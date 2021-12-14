@@ -30,7 +30,7 @@ jobs:
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the PR number
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2.2.4
         with:
           name: pr_num
           path: ./pr_num.txt
