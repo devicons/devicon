@@ -195,7 +195,7 @@ class SeleniumRunner:
         if driver is not None:
             return driver
 
-        err_msg_formatted = '\n'.join(err_msg)
+        err_msg_formatted = '\n'.join(reversed(err_msg))
         msg = f"Unable to create WebDriver Instance:\n{err_msg_formatted}"
         raise Exception(msg)
 
