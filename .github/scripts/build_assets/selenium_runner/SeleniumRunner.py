@@ -70,6 +70,11 @@ class SeleniumRunner:
     }
 
     """
+    Number of retries for creating a web driver instance.
+    """
+    MAX_RETRY = 5
+
+    """
     The different types of alerts that this workflow will encounter.
     It contains part of the text in the actual alert and buttons
     available to press. It's up to the user to know what button to 
@@ -155,11 +160,10 @@ class SeleniumRunner:
         :param geckodriver_path: the path to the firefox executable.
         the icomoon.zip to.
         """
-        MAX_RETRY = 5
-        retries = MAX_RETRY
+        retries = SeleniumRunner.MAX_RETRY
         finished = False
         driver = None
-        err_msg = []
+        err_msg = [] # keep for logging purposes
         while not finished and retries > 0:
             try:
                 # order matters, don't change the 2 lines below
@@ -169,17 +173,17 @@ class SeleniumRunner:
                 # retry. This is intended to catch "no connection could be made" error
                 retries -= 1 
                 finished = False # flip the var so we can retry
-                err_msg.append(f"Retry {retries}/{MAX_RETRY} SeleniumTimeoutException: {e.msg}")
+                err_msg.append(f"Retry {retries}/{SeleniumRunner.MAX_RETRY} SeleniumTimeoutException: {e.msg}")
             except Exception as e:
                 # anything else: unsure if retry works. Just end the retry
-                err_msg.append(f"Retry {retries}/{MAX_RETRY} Exception: {e}")
+                err_msg.append(f"Retry {retries}/{SeleniumRunner.MAX_RETRY} Exception: {e}")
                 break
 
         if driver is not None:
             return driver
 
         err_msg_formatted = '\n'.join(err_msg)
-        msg = f"Unable to create WebDriver Instance after {MAX_RETRY} retries:\n{err_msg_formatted}"
+        msg = f"Unable to create WebDriver Instance:\n{err_msg_formatted}"
         raise Exception(msg)
 
     def switch_toolbar_option(self, option: IcomoonOptionState):
