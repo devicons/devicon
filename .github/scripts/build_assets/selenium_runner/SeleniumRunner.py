@@ -163,11 +163,10 @@ class SeleniumRunner:
         :param geckodriver_path: the path to the firefox executable.
         the icomoon.zip to.
         """
-
         retries = SeleniumRunner.MAX_RETRY
         finished = False
         driver = None
-        err_msg = [] # keep for logging purposes
+        err_msgs = [] # keep for logging purposes
         while not finished and retries > 0:
             try:
                 # order matters, don't change the lines below
@@ -186,16 +185,20 @@ class SeleniumRunner:
                 # retry. This is intended to catch "no connection could be made" error
                 retries -= 1 
                 finished = False # flip the var so we can retry
-                err_msg.append(f"Retry {retries}/{SeleniumRunner.MAX_RETRY} SeleniumTimeoutException: {e.msg}")
+                msg = f"Retry {retries}/{SeleniumRunner.MAX_RETRY} SeleniumTimeoutException: {e.msg}"
+                print(msg)
+                err_msgs.append(msg)
             except Exception as e:
                 # anything else: unsure if retry works. Just end the retry
-                err_msg.append(f"Retry {retries}/{SeleniumRunner.MAX_RETRY} Exception: {e}")
+                msg = f"Retry {retries}/{SeleniumRunner.MAX_RETRY} Exception: {e}"
+                err_msgs.append(msg)
+                print(msg)
                 break
 
         if driver is not None:
             return driver
 
-        err_msg_formatted = '\n'.join(reversed(err_msg))
+        err_msg_formatted = '\n'.join(reversed(err_msgs))
         msg = f"Unable to create WebDriver Instance:\n{err_msg_formatted}"
         raise Exception(msg)
 
