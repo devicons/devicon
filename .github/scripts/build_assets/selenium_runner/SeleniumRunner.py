@@ -1,6 +1,8 @@
 from pathlib import Path
+from selenium.webdriver.common import service
 
 from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -131,6 +133,7 @@ class SeleniumRunner:
         :raises AssertionError: if the page title does not contain
         "IcoMoon App".
         """
+        # customize the download options
         options = Options()
         allowed_mime_types = "application/zip, application/gzip, application/octet-stream"
         # disable prompt to download from Firefox
@@ -152,7 +155,7 @@ class SeleniumRunner:
         )
         print("Accessed icomoon.io")
 
-    def create_driver_instance(self, options, geckodriver_path):
+    def create_driver_instance(self, options: Options, geckodriver_path: str):
         """
         Create a WebDriver instance. Isolate retrying code here to address
         "no connection can be made" error.
@@ -160,15 +163,25 @@ class SeleniumRunner:
         :param geckodriver_path: the path to the firefox executable.
         the icomoon.zip to.
         """
+
         retries = SeleniumRunner.MAX_RETRY
         finished = False
         driver = None
         err_msg = [] # keep for logging purposes
         while not finished and retries > 0:
             try:
-                # order matters, don't change the 2 lines below
+                # order matters, don't change the lines below
                 finished = True # signal we are done in case we are actually done
-                driver = WebDriver(options=options, executable_path=geckodriver_path)
+
+                # customize the local server
+                service = None
+                # first retry: use 8080
+                # else: random
+                if retries == SeleniumRunner.MAX_RETRY:
+                    service = Service(executable_path=geckodriver_path, port=8080)
+                else:
+                    service = Service(executable_path=geckodriver_path)
+                driver = WebDriver(options=options, service=service)
             except SeleniumTimeoutException as e:
                 # retry. This is intended to catch "no connection could be made" error
                 retries -= 1 
