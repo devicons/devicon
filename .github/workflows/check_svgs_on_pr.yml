@@ -28,8 +28,8 @@ jobs:
         uses: actions/upload-artifact@v2
         if: success()
         with:
-          name: check_err_messages
-          path: ./check_err_messages.txt
+          name: svg_err_messages
+          path: ./svg_err_messages.txt
 
       - name: Save the pr num in an artifact
         shell: bash
