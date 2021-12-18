@@ -20,7 +20,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#bugs">Common Bugs and Solutions</a></li>
   <li><a href="#discordServer">Discord server</a></li>
   <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
-  <li><a href="#resources">Resources and tools we use and recommend</a></li>
+  <li><a href="#resources">Recommended resources and tools</a></li>
 </ul>
 
 <hr>
