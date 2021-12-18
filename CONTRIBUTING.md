@@ -20,6 +20,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#bugs">Common Bugs and Solutions</a></li>
   <li><a href="#discordServer">Discord server</a></li>
   <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
+  <li><a href="#resources">Resources and tools we use and recommend</a></li>
 </ul>
 
 <hr>
@@ -490,3 +491,13 @@ We are running a Discord server. You can go here to talk, discuss, and more with
     <li>Create a <a href="https://github.com/devicons/devicon/releases/new">new release</a> using the format "<b>Release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i></b>" as tag and release title. Use the earlier created description as description of the release.</li>
     <li>Publishing the release will trigger the <a href="/.github/workflows/npm_publish.yml">npm_publish.yml</a> workflow which will execute a <code>npm publish</code> leading to a updated <a href="https://www.npmjs.com/package/devicon">npm package</a> (v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).</li>
 </ol>
+
+<h2 id='resources'>Resources and tools we use and recommend</h2>
+
+| Tool Name          | Link                                               | Description & Usage                                |
+| ------------------ | -------------------------------------------------- | -------------------------------------------------- |
+| Inkscape           | https://inkscape.org/                              | Desktop application for editing and Making SVG's   |
+| Visual Studio Code | https://code.visualstudio.com/                     | A code editor for editing code                     |
+| vscode.dev         | https://vscode.dev/                                | Visual Studio Code in the browser                  |
+| Iloveimg           | https://www.iloveimg.com/resize-image/resize-svg   | Resizing SVG's                                     |
+| svgviewer.dev      | https://www.svgviewer.dev/                         | View, save, and optimize SVGs                      |
