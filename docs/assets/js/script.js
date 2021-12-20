@@ -95,6 +95,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
 
   /*
   | Change selected icon
+  | param icon: the new icon.
   |--------------------------------
   */
   $scope.selectIcon = function(icon) {
@@ -158,6 +159,49 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   }
 
   /*---- End of "Change selected svg icon" ----*/
+
+  /**
+   * Copy the text located using `id` into the user's clipboard.
+   * @param {Event} event - a JS Event object.
+   * @param {String} id - id of the element we are copying its text
+   * content from.
+   */
+  $scope.copyToClipboard = function(event, id) {
+    let text = document.getElementById(id).textContent
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        $scope.displayTooltip("Copied", event.target)
+      })
+      .catch(() => {
+        $scope.displayTooltip("Failed to copy", event.target)
+      })
+  }
+
+  /**
+   * Display a tooltip.
+   * @param {String} text - text the tooltip should have.
+   * @param {Element} copyBtn - the copyBtn element, which is an <img>
+   */
+  $scope.displayTooltip = function(text, copyBtn) {
+    let tooltip = copyBtn.parentElement.getElementsByClassName("tooltip")[0]
+    tooltip.textContent = text
+    // reset opacity (for some reason, default opacity is null)
+    tooltip.style.opacity = 1
+    tooltip.style.visibility = "visible"
+
+    // create fade out effect after 2 sec
+    setTimeout(() => {
+      let count = 10
+      let intervalObj
+      intervalObj = setInterval(() => {
+        tooltip.style.opacity -= 0.1
+        if (--count == 0) {
+          clearInterval(intervalObj)
+          tooltip.style.visibility = "hidden"
+        } 
+      }, 50)
+    }, 2000)
+  }
 });
 
 /*================ End of "Devicons controller" ================*/

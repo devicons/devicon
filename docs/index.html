@@ -62,6 +62,17 @@
       <ul>
         <li>
           <h4>Font versions <input type='color' value='#60be86' ng-model="fontBackground"></h4>
+          <p>
+            Place this in your header (once per HTML file) 
+            <span>
+              <img src="./assets/img/copy.svg" class='copyBtn' ng-click="copyToClipboard($event, 'headerLinkCode')">
+              <span class='tooltip'></span>
+            </span>
+          </p>
+          <div class="cde" id='headerLinkCode'>
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css"&gt;
+          </div>
+
           <ul class="icons-list">
             <div ng-repeat="fontVersion in selectedIcon.font">
               <li ng-click="selectFont(fontVersion, false, $index)" ng-class="{'selected-version' : ($index == selectedFontIndex && !colored)}" ng-style="{'background-color': fontBackground}">
@@ -72,16 +83,17 @@
               </li>
             </div>
           </ul>
-          <p>Place this in your header</p>
-          <div class="cde">
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css"&gt;
-          </div>
-
-          <p>Use this in your body</p>
-          <div class="cde">
+          <p>
+            Place this in your body 
+            <span>
+              <img src="./assets/img/copy.svg" class='copyBtn' ng-click="copyToClipboard($event, 'iconClassCode')">
+              <span class='tooltip'></span>
+            </span>
+          </p>
+          <div class="cde" id="iconClassCode">
             &lt;i class="devicon-{{selectedIcon.name}}-{{selectedFontIcon}}<span ng-if="colored"> colored</span>"&gt;&lt;/i&gt;<br />
           </div>
-          <p><i>*To change the size, change the <code>i</code>'s <code>font-size</code></i></p>
+          <p><i>*To change the size, change the <code>i</code> element's <code>font-size</code> attribute.</i></p>
         </li>
         <li>
           <h4>SVG versions <input type='color' value='#60be86' ng-model="svgBackground"></h4>
@@ -90,21 +102,33 @@
               <img ng-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
-          <p>Using &lt;img&gt; element</p>
-          <div class="cde">
+          <p>
+            Using &lt;img&gt; element 
+            <span>
+              <img src="./assets/img/copy.svg" class='copyBtn' ng-click="copyToClipboard($event, 'imgCode')">
+              <span class='tooltip'></span>
+            </span>
+          </p>
+          <div class="cde" id='imgCode'>
             &lt;img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
           </div>
-          <p><i>*To change the size, change the <code>img</code>'s <code>height</code> and <code>width</code></i></p>
+          <p><i>*To change the size, change the <code>img</code>'s <code>height</code> and <code>width</code> attributes.</i></p>
 
           <br />
 
-          <p>Using Pure SVG</p>
-          <div class="cde">
+          <p>
+            Using Pure SVG 
+            <span>
+              <img src="./assets/img/copy.svg" class='copyBtn' ng-click="copyToClipboard($event, 'svgCode')">
+              <span class='tooltip'></span>
+            </span>
+          </p>
+          <div class="cde" id='svgCode'>
             &lt;svg viewBox="0 0 128 128"&gt;<br />
             <div class="cde-ind">{{selectedSvgIcon}}</div>
             &lt;/svg&gt;
           </div>
-          <p><i>*To change the size, change the <code>svg</code>'s <code>height</code> and <code>width</code></i></p>
+          <p><i>*To change the size, change the <code>svg</code>'s <code>height</code> and <code>width</code> attributes.</i></p>
         </li>
       </ul>
 

@@ -350,6 +350,37 @@ header {
     header .icons-list img {
       max-width: 100%; }
 
+
+input[type='color'] {
+  width: 1.25em;
+  height: 1.25em;
+  margin-left: 0.5em;
+}
+
+.copyBtn {
+  height: 1.25em;
+  width: 1.25em;
+  margin-left: 0.25em;
+  position: relative;
+  top: 0.5em;
+  border-radius: 20%;
+  padding: 0.25em;
+  box-sizing: content-box;
+  transition: background-color 0.25s;
+}
+
+.copyBtn:hover {
+  cursor: pointer;
+  background-color: #2D804E;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #2D804E;
+  border-radius: 0.25em;
+  padding: 0.25em;
+}
+
 .borders {
   position: fixed;
   top: 0;
@@ -409,9 +440,3 @@ header {
 .footer {
   margin-top: 6rem;
   text-align: center; }
-
-input[type='color'] {
-  width: 1.25em;
-  height: 1.25em;
-  margin-left: 0.5em;
-}
