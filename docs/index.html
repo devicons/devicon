@@ -61,7 +61,23 @@
       <h5>First select an icon on the right, then select the version below and copy/paste the code into your project.</h5>
       <ul>
         <li>
-          <h4>Font versions <input type='color' value='#60be86' ng-model="fontBackground"></h4>
+          <h4>
+            Font versions 
+            <img src="./assets/img/color_wheel.png" class='colorPicker'>
+            <span class='colorPickerMenu'>
+              <span>
+                <input type='color' value='#60be86' ng-model="fontBackground">
+                Background Color 
+              </span>
+              <br>
+              <span>
+                <input type='checkbox' id='checkboardInput' class='checkerboardInput'>
+                <label for='checkboardInput' >Checkerboard</label>
+              </span>
+              <br>
+              <button class='colorPickerResetBtn'>Reset</button>
+            </span>
+          </h4>
           <p>
             Place this in your header (once per HTML file) 
             <span>
@@ -152,7 +168,7 @@
         supported by various <a href="https://github.com/devicons/devicon/graphs/contributors">contributors</a>.<br />
         Copyright &copy; 2015 <a href="https://github.com/konpa">Konpa</a><br />
         <br />
-        Final font build with <a href="https://icomoon.io/">Icomoon app</a><br />
+        Final font build with <a href="https://icomoon.io/">Icomoon</a><br />
         <br />
         <i>All product names, logos, and brandsare property of their respective owners.  All company, product and service names used in this website are for identification purposes only.  Use of these names, logos, and brands does not imply endorsement.</i>
       </p>
