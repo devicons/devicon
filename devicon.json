@@ -1086,28 +1086,16 @@
         "tags": [],
         "versions": {
             "svg": [
-                "original",
                 "plain",
-                "line"
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain-wordmark"
             ]
         },
-        "color": "#003A2B",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            },
-            {
-                "base": "line",
-                "alias": "line-wordmark"
-            }
-        ]
+        "color": "#092e20",
+        "aliases": []
     },
     {
         "name": "docker",
@@ -3990,6 +3978,28 @@
             "alias": "plain-wordmark"
           }
         ]
+    },
+    {
+        "name": "sqlite",
+        "tags": [
+            "sql",
+            "database",
+            "db"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+          "font": [
+              "plain",
+              "plain-wordmark"
+          ]
+        },
+        "color": "#0f80cc",
+        "aliases": []
     },
     {
         "name": "subversion",
