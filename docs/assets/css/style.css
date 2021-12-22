@@ -211,25 +211,24 @@ header {
   header > h2 {
     font-weight: 400;
     font-size: 1.3rem; }
-  header .download {
+  header .buttonLink {
     margin: 2rem 0 0;
     font-weight: 900;
     font-size: 1.3rem;
     text-align: center; }
-    header .download i {
+    header .buttonLink i {
       position: relative;
       top: 12px;
       left: -10px;
       font-size: 3rem; }
-    header .download a {
+    header .buttonLink > a {
       padding: 1.3rem 1.8rem;
       border: 6px solid var(--primaryColor);
       color: var(--primaryColor);
       background: whitesmoke; 
       text-decoration: none;}
-    header .download a:hover {
-      border-color: whitesmoke;
-      color: var(--primaryColor); }
+    header .buttonLink a:hover {
+      border-color: whitesmoke; }
   header > h3 {
     margin: 4rem 0 0;
     font-size: 3rem;
@@ -327,7 +326,7 @@ header {
   position: absolute;
   font-size: 1rem;
   background-color: var(--primaryColor);
-  border-radius: 1em;
+  border-radius: 0.2em;
   border: 2px solid var(--grey);
   transform: translate(0, -30%);
   padding: 0.5em;
@@ -466,6 +465,6 @@ input[type='color']:hover {
   color: var(--grey);
   opacity: .5; }
 
-.footer {
+footer {
   margin-top: 6rem;
   text-align: center; }
