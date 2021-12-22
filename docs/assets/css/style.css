@@ -298,11 +298,8 @@ header {
         border-left: 15px solid transparent;
         content: ' '; }
 
-      .standinDiv {
-        height: 5rem;
-      }
-
-    header .icons-list i {
+    header .icons-list i,
+    .svgLogo {
       font-size: 5rem; 
       position: absolute;
       left: 0;
