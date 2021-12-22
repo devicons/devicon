@@ -1,5 +1,5 @@
 var devicon = angular.module('devicon', ['ngSanitize', 'ngAnimate']);
-const DEFAULT_BACKGROUND = "#60be86";
+// const DEFAULT_BACKGROUND = "#60be86";
 
 /*
 ||==============================================================
@@ -41,8 +41,9 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
 
     // background color related stuff
     // default is the default site background color
-    $scope.fontBackground = DEFAULT_BACKGROUND;
-    $scope.svgBackground = DEFAULT_BACKGROUND;
+    $scope.DEFAULT_BACKGROUND = "#60be86";
+    $scope.fontBackground = $scope.DEFAULT_BACKGROUND;
+    $scope.svgBackground = $scope.DEFAULT_BACKGROUND;
 
     // Loop through devicon.json
     angular.forEach(data, function(devicon, key) {
@@ -106,8 +107,8 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.selectedSvgIndex = 0;
 
     // reset color
-    $scope.fontBackground = DEFAULT_BACKGROUND;
-    $scope.svgBackground = DEFAULT_BACKGROUND;
+    $scope.fontBackground = $scope.DEFAULT_BACKGROUND;
+    $scope.svgBackground = $scope.DEFAULT_BACKGROUND;
   }
   /*---- End of "Change selected icon" ----*/
 
