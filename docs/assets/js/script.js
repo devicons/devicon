@@ -202,6 +202,15 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
       }, 50)
     }, 2000)
   }
+
+  /**
+   * Display the color picker.
+   * @param {String} id - id of the menu we are showing.
+   */
+  $scope.toggleColorPickerMenu = function(id) {
+    let menu = document.getElementById(id)
+    menu.style.display = menu.style.display == "none" || menu.style.display == "" ? "inherit" : "none"
+  }
 });
 
 /*================ End of "Devicons controller" ================*/
