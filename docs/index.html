@@ -72,7 +72,7 @@
                   Background Color 
                 </div>
                 <div>
-                  <input type='checkbox' id='checkboardInput' class='checkerboardInput'>
+                  <input type='checkbox' class='checkerboardInput' ng-model="fontDisplayCheckerboard">
                   <label for='checkboardInput' >Checkerboard</label>
                 </div>
                 <button class='colorPickerResetBtn' ng-click="fontBackground = DEFAULT_BACKGROUND">Reset</button>
@@ -93,9 +93,11 @@
           <ul class="icons-list">
             <div ng-repeat="fontVersion in selectedIcon.font">
               <li ng-click="selectFont(fontVersion, false, $index)" ng-class="{'selected-version' : ($index == selectedFontIndex && !colored)}" ng-style="{'background-color': fontBackground}">
+                <img src="assets/img/checkerboard.png" ng-style="{'visibility': fontDisplayCheckerboard ? 'visible' : 'hidden'}">
                 <i class="devicon-{{selectedIcon.name}}-{{fontVersion}}"></i>
               </li>
               <li ng-click="selectFont(fontVersion, true, $index)" ng-class="{'selected-version' : ($index == selectedFontIndex && colored)}"  ng-style="{'background-color': fontBackground}">
+                <img src="assets/img/checkerboard.png" ng-style="{'visibility': fontDisplayCheckerboard ? 'visible' : 'hidden'}">
                 <i class="devicon-{{selectedIcon.name}}-{{fontVersion}} colored"></i>
               </li>
             </div>

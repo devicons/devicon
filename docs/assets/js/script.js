@@ -1,5 +1,4 @@
 var devicon = angular.module('devicon', ['ngSanitize', 'ngAnimate']);
-// const DEFAULT_BACKGROUND = "#60be86";
 
 /*
 ||==============================================================
@@ -44,6 +43,11 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.DEFAULT_BACKGROUND = "#60be86";
     $scope.fontBackground = $scope.DEFAULT_BACKGROUND;
     $scope.svgBackground = $scope.DEFAULT_BACKGROUND;
+
+    // whether to display the checkerboard img in the background
+    // for the font and svg respectively
+    $scope.fontDisplayChecker = false;
+    $scope.svgDisplayChecker = false;
 
     // Loop through devicon.json
     angular.forEach(data, function(devicon, key) {
