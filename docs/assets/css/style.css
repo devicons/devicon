@@ -354,13 +354,13 @@ header {
   cursor: pointer;
 }
 
-#colorInput {
+input[type='color'] {
   width: 1.25em;
   height: 1.25em;
   padding: 0;
 }
 
-#colorInput:hover {
+input[type='color']:hover {
   cursor: pointer;
 }
 

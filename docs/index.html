@@ -66,16 +66,16 @@
             <span>
               <img src="./assets/img/color_wheel.png" class='colorPicker' ng-click="toggleColorPickerMenu('fontColorPickerMenu')">
               <span class='colorPickerMenu' id='fontColorPickerMenu'>
-                <div class='colorPickerMenuCloseBtn' ng-click="toggleColorPickerMenu('fontColorPickerMenu')"><span>X</span></div>
+                <div class='colorPickerMenuCloseBtn'><span ng-click="toggleColorPickerMenu('fontColorPickerMenu')">X</span></div>
                 <div>
-                  <input type='color' value='#60be86' ng-model="fontBackground" id='colorInput'>
+                  <input type='color' value='#60be86' ng-model="fontBackground">
                   Background Color 
                 </div>
                 <div>
                   <input type='checkbox' id='checkboardInput' class='checkerboardInput'>
                   <label for='checkboardInput' >Checkerboard</label>
                 </div>
-                <button class='colorPickerResetBtn'>Reset</button>
+                <button class='colorPickerResetBtn' ng-click="fontBackground = DEFAULT_BACKGROUND">Reset</button>
               </span>
             </span>
           </h4>
