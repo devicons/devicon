@@ -297,20 +297,40 @@ header {
 .colorPicker {
   height: 0.8em;
   width: 0.8em;
+  border-radius: 50%;
+}
+
+.colorPicker:hover {
+  cursor: pointer;
+  border: 1px solid whitesmoke;
 }
 
 .colorPickerMenu {
   position: absolute;
-  display: inline-block;
   font-size: 1rem;
   background-color: var(--primaryColor);
   border-radius: 1em;
   border: 2px solid var(--grey);
   transform: translate(0, -30%);
   padding: 0.5em;
+  padding-top: 0;
   margin-left: 1em;
   font-weight: normal;
   z-index: 1;
+  display: none;
+}
+
+.colorPickerMenuCloseBtn {
+  color: red;
+  font-weight: bold;
+  margin-top: 0;
+  margin-right: 0.25em;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.colorPickerMenuCloseBtn > span:hover {
+  cursor: pointer;
 }
 
 .colorPickerResetBtn {
@@ -330,10 +350,18 @@ header {
   top: 0.2em;
 }
 
-input[type='color'] {
+.checkerboardInput:hover {
+  cursor: pointer;
+}
+
+#colorInput {
   width: 1.25em;
   height: 1.25em;
   padding: 0;
+}
+
+#colorInput:hover {
+  cursor: pointer;
 }
 
 /** Copy Btn */

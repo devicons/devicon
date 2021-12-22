@@ -63,19 +63,20 @@
         <li>
           <h4>
             Font versions 
-            <img src="./assets/img/color_wheel.png" class='colorPicker'>
-            <span class='colorPickerMenu'>
-              <span>
-                <input type='color' value='#60be86' ng-model="fontBackground">
-                Background Color 
+            <span>
+              <img src="./assets/img/color_wheel.png" class='colorPicker' ng-click="toggleColorPickerMenu('fontColorPickerMenu')">
+              <span class='colorPickerMenu' id='fontColorPickerMenu'>
+                <div class='colorPickerMenuCloseBtn' ng-click="toggleColorPickerMenu('fontColorPickerMenu')"><span>X</span></div>
+                <div>
+                  <input type='color' value='#60be86' ng-model="fontBackground" id='colorInput'>
+                  Background Color 
+                </div>
+                <div>
+                  <input type='checkbox' id='checkboardInput' class='checkerboardInput'>
+                  <label for='checkboardInput' >Checkerboard</label>
+                </div>
+                <button class='colorPickerResetBtn'>Reset</button>
               </span>
-              <br>
-              <span>
-                <input type='checkbox' id='checkboardInput' class='checkerboardInput'>
-                <label for='checkboardInput' >Checkerboard</label>
-              </span>
-              <br>
-              <button class='colorPickerResetBtn'>Reset</button>
             </span>
           </h4>
           <p>
