@@ -115,10 +115,28 @@
           <p><i>*To change the size, change the <code>i</code> element's <code>font-size</code> attribute.</i></p>
         </li>
         <li>
-          <h4>SVG versions <input type='color' value='#60be86' ng-model="svgBackground"></h4>
+          <h4>
+            SVG versions 
+            <span>
+              <img src="./assets/img/color_wheel.png" class='colorPicker' ng-click="toggleColorPickerMenu('svgColorPickerMenu')">
+              <span class='colorPickerMenu' id='svgColorPickerMenu'>
+                <div class='colorPickerMenuCloseBtn'><span ng-click="toggleColorPickerMenu('svgColorPickerMenu')">X</span></div>
+                <div>
+                  <input type='color' value='#60be86' ng-model="svgBackground">
+                  Background Color 
+                </div>
+                <div>
+                  <input type='checkbox' class='checkerboardInput' ng-model="svgDisplayCheckerboard">
+                  <label for='checkboardInput' >Checkerboard</label>
+                </div>
+                <button class='colorPickerResetBtn' ng-click="svgBackground = DEFAULT_BACKGROUND">Reset</button>
+              </span>
+            </span>
+          </h4>
           <ul class="icons-list">
             <li ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}" ng-style="{'background-color': svgBackground}">
-              <img ng-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
+              <img src="assets/img/checkerboard.png" ng-style="{'visibility': svgDisplayCheckerboard ? 'visible' : 'hidden'}">
+              <img class='svgLogo' ng-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
           <p>
