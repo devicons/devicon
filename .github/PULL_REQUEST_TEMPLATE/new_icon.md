@@ -3,10 +3,8 @@ name: New Icon
 about: Add a new icon to the repository.
 title: 'new icon: [NAME] (versions)'
 labels: 'feature:icon'
-assignees: ''
-
 ---
-<!-- If you are adding a new icon, follow the steps listed here, and delete the **New Feature** section below. -->
+
 ## Double check these details before you open a PR
 
 <!-- Tick the checkboxes to ensure you've done everything correctly -->
