@@ -7,23 +7,16 @@ body:
     id: currentproblem
     attributes:
       label: Problem
-      description: Tell us about the current problem that you face that this feature might help you with.
+      description: Tell us about the problem and its impacts on the you/Devicon.
     validations:
       required: true
   - type: textarea
-    id: suggestedfeat
+    id: possiblesolution
     attributes:
-      label: Suggested feature
-      description: Tell us about the feature that might solve the above problem.
+      label: Possible Solution
+      description: If you have one, tell us about the feature(s) that might solve the above problem.
     validations:
       required: true
-  - type: textarea
-    id: why
-    attributes:
-      label: Why should we have this feature?
-      description: List any extra benefits, other than solving your problem, that this feature will bring to the repository. If none, leave blank.
-    validations:
-      required: false
   - type: textarea
     id: extrainformation
     attributes:
