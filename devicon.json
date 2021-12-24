@@ -3899,6 +3899,22 @@
         ]
     },
     {
+        "name": "solidity",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#383838"
+    },
+    {
         "name": "sourcetree",
         "tags": [
             "version-control"
