@@ -1,5 +1,5 @@
 Adding a New Icon? 
-- Add `?quick_pull=1&template=new_icon.md` to the end of your current URL.
+- Add `?quick_pull=1&template=new_icon.md` to the end of your current URL and press `Enter`
 
 Adding a New Feature/Bug Fix? 
-- Add `?quick_pull=1&template=new_feature.md` to the end of your current URL.
+- Add `?quick_pull=1&template=new_feature.md` to the end of your current URL and press `Enter`.
