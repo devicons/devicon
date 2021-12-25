@@ -7,14 +7,14 @@ body:
     id: currentproblem
     attributes:
       label: Problem
-      description: Tell us about the problem and its impacts on the you/Devicon.
+      description: Tell us about the problem.
     validations:
       required: true
   - type: textarea
     id: possiblesolution
     attributes:
       label: Possible Solution
-      description: If you have one, tell us about the feature(s) that might solve the above problem.
+      description: If you have an idea, please tell us what might solve the above problem.
     validations:
       required: true
   - type: textarea

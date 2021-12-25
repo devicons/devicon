@@ -1,2 +1,0 @@
-Adding a New Icon? Go to https://github.com/devicons/devicon/compare/master...develop?quick_pull=1&template=new_icon.md
-Adding a New Feature/Bug Fix? Go to https://github.com/devicons/devicon/compare/master...develop?quick_pull=1&template=new_feature.md
