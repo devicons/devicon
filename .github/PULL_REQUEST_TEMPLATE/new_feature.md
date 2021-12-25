@@ -1,18 +1,13 @@
----
-name: New Feature
-about: Add a new feature to the repository.
-title: 'New Feature: [NAME]'
-labels: 'enhancement'
----
-## Double check these details before you open a PR**
+## Double check these details before you open a PR
 
 <!-- Tick the checkboxes to ensure you've done everything correctly -->
 - [] PR does not match another non-stale PR currently opened
-- [] PR name matches the format *New Feature: brief description of feature*
 
+## Features
+<!-- List your features here and the benefits they bring. Include images/codes as appropriate -->
 
-## This PR adds/fixes...
-<!-- List your features here and the benefits they bring. -->
+**This PR closes...**
+<!-- List issues that this PR would close above. Leave blank if N/A. See [this](https://github.blog/2013-05-14-closing-issues-via-pull-requests/) for more details. -->
 
 ## Notes
 <!-- List anything note-worthy here (potential issues, this needs to be merged to `master` before working, etc.). -->
