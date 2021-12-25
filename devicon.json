@@ -3924,7 +3924,9 @@
     {
         "name": "solidity",
         "tags": [
-            "language"
+            "programming",
+            "language",
+            "blockchain"
         ],
         "versions": {
             "svg": [
@@ -3935,7 +3937,8 @@
                 "plain"
             ]
         },
-        "color": "#383838"
+        "color": "#383838",
+        "aliases": []
     },
     {
         "name": "sourcetree",
