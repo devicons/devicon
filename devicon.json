@@ -3922,6 +3922,25 @@
         ]
     },
     {
+        "name": "solidity",
+        "tags": [
+            "programming",
+            "language",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#383838",
+        "aliases": []
+    },
+    {
         "name": "sourcetree",
         "tags": [
             "version-control"
