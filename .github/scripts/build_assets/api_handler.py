@@ -1,6 +1,7 @@
 import requests
 import sys
 import re
+from typing import List
 
 
 def get_merged_pull_reqs_since_last_release(token):
@@ -99,3 +100,25 @@ def find_all_authors(pull_req_data, token):
             authors.add(commit["commit"]["author"]["name"]) 
             print(f"This URL didn't have an `author` attribute: {pull_req_data['commits_url']}")
     return ", ".join(["@" + author for author in list(authors)])
+
+def label_issues(token: str, issues: List[str], labels: List[str]):
+    """
+    Label the issues specified with the label specified.
+    :param token: the GitHub API token.
+    :param issues: the issue numbers (as str) that we are labelling.
+    :param labels: the labels that we are labelling.
+    """
+    headers = {
+        "Authorization": f"token {token}",
+        "accept": "application/vnd.github.v3+json"
+    }
+    base_url = "https://api.github.com/repos/devicons/devicon/issues/{0}/labels"
+    for issue in issues:
+        body = {
+            "labels": labels
+        }
+        response = requests.post(base_url.format(issue), headers=headers, body=body)
+        if not response:
+            raise Exception(f"Can't label the Issue provided. Issue: {issue}, labels: {labels}.")
+        else:
+            print(f"Successfully labelled issue {issue}")

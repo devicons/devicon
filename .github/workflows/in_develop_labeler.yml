@@ -8,4 +8,13 @@ jobs:
     runs-on: ubuntu-18.04
     if: github.event.merged == true
     steps:
-      - uses: actions/checkout@v2
+      - name: Setup Python v3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
+      - name: Run in_develop_labeler.py
+        env:
+          BODY: ${{ github.event.body }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python in_develop_labeler.py $TOKEN $BODY
