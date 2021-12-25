@@ -1,0 +1,11 @@
+name: Label Issue In Develop
+on: 
+  pull_request:
+    types: [closed]
+jobs:
+  label:
+    name: Get Fonts From Icomoon
+    runs-on: ubuntu-18.04
+    if: github.event.merged == true
+    steps:
+      - uses: actions/checkout@v2
