@@ -10,8 +10,8 @@
 
 <!-- Refer to the [contributing](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#contributing-to-devicon) guidelines for more details. -->
 
-**This PR closes...**
-<!-- List issues that this PR would close above. See [this](https://github.blog/2013-05-14-closing-issues-via-pull-requests/) for more details. -->
+**This PR closes NONE**
+<!-- List issues that this PR would close above. Ex: This PR closes #1, #2, #3. -->
 
 ## Link to prove your SVG is correct and up-to-date.
 <!-- Link to an official page/wiki goes here. Anything that proves your SVGs are the correct ones. -->

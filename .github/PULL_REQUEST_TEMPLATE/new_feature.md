@@ -6,8 +6,8 @@
 ## Features
 <!-- List your features here and the benefits they bring. Include images/codes as appropriate -->
 
-**This PR closes...**
-<!-- List issues that this PR would close above. Leave blank if N/A. See [this](https://github.blog/2013-05-14-closing-issues-via-pull-requests/) for more details. -->
+**This PR closes NONE**
+<!-- List issues that this PR would close above. Ex: This PR closes #1, #2, #3. -->
 
 ## Notes
 <!-- List anything note-worthy here (potential issues, this needs to be merged to `master` before working, etc.). -->
