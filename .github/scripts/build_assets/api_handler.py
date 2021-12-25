@@ -122,3 +122,62 @@ def label_issues(token: str, issues: List[str], labels: List[str]):
             raise Exception(f"Can't label the Issue provided. Issue: {issue}, labels: {labels}.")
         else:
             print(f"Successfully labelled issue {issue}")
+
+
+def close_issues(token: str, issues: List[str]):
+    """
+    Close issues.
+    :param token: the GitHub API token.
+    :param issues: the issue numbers (as str) that we are labelling.
+    """
+    headers = {
+        "Authorization": f"token {token}",
+        "accept": "application/vnd.github.v3+json"
+    }
+    base_url = "https://api.github.com/repos/devicons/devicon/issues/{0}"
+    body = {
+        "state": "closed"
+    }
+    for issue in issues:
+        response = requests.post(base_url.format(issue), headers=headers, body=body)
+        if not response:
+            raise Exception(f"Can't close Issue provided. Issue: {issue}")
+        else:
+            print(f"Successfully closed issue {issue}")
+
+
+def get_issues_by_labels(token: str, labels: List[str]):
+    """
+    Get a list of issues based on their labels.
+    :param token: the GitHub API token.
+    :param labels: the labels that we are labelling.
+    """
+    url = "https://api.github.com/repos/devicons/devicon/issues/"
+    headers = {
+        "Authorization": f"token {token}",
+        "accept": "application/vnd.github.v3+json"
+    }
+    issues = []
+    done = False
+    page_num = 1
+    while not done:
+        body = {
+            "labels": ",".join(labels),
+            "per_page": 100,
+            "page": page_num
+        }
+        response = requests.post(url, headers=headers, body=body)
+        if not response:
+            raise Exception(f"Can't access API. Can't get issues for labels: {labels}")
+        else:
+            results = response.json()
+            if len(results) < 100:
+                done = True # we are done
+            else:
+                page_num += 1 # page is full => might need to check another page
+
+            # GitHub API also returns PRs for issues queries => have to check
+            issues_only = [issue for issue in results if issue.get("pull_request") is None]
+            issues.extend(issues_only)
+
+    return issues
