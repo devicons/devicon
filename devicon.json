@@ -449,6 +449,7 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -1219,6 +1220,29 @@
         },
         "color": "#0080FF",
         "aliases": []
+    },
+    {
+        "name": "discordjs",
+        "tags": [
+            "wrapper",
+            "api_wrapper",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2a2c3e",
+        "aliases": [
+      ]
     },
     {
         "name": "electron",
@@ -3896,6 +3920,25 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "solidity",
+        "tags": [
+            "programming",
+            "language",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#383838",
+        "aliases": []
     },
     {
         "name": "sourcetree",
