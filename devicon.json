@@ -3319,6 +3319,47 @@
         "aliases": []
     },
     {
+        "name": "podman",
+        "tags": [
+            "container",
+            "pods",
+            "docker"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#872b9e",
+        "aliases": []
+    },
+    {
+        "name": "polygon",
+        "tags": [
+            "ethereum",
+            "erc20",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#38285B",
+        "aliases": [ "matic" ]
+    },
+    {
         "name": "postgresql",
         "tags": [
             "database"
@@ -5088,28 +5129,6 @@
             ]
         },
         "color": "#DC7B2E",
-        "aliases": []
-    },
-    {
-        "name": "podman",
-        "tags": [
-            "container",
-            "pods",
-            "docker"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#872b9e",
         "aliases": []
     }
 ]
