@@ -207,6 +207,14 @@ def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
     finally:
         return str(screenshot_folder)
 
+def write_to_file(path: str, value: any):
+    """
+    Write the value to a file.
+    """
+    with open(path, "w") as file:
+        file.write(value)
+
+# --- NOT USED CURRENTLY --- 
 def get_added_modified_svgs(files_added_json_path: str,
     files_modified_json_path: str):
     """
@@ -231,10 +239,3 @@ def get_added_modified_svgs(files_added_json_path: str,
     
     return svgs
 
-
-def write_to_file(path: str, value: any):
-    """
-    Write the value to a file.
-    """
-    with open(path, "w") as file:
-        file.write(value)

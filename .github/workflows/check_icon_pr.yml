@@ -1,9 +1,10 @@
-name: Check SVGs On PR
+name: Check Icon PR
 on: pull_request
 jobs:
   check:
-    name: Check the SVGs' quality
+    name: Check the `devicon.json` and the SVGs' quality
     runs-on: ubuntu-18.04
+    if: startsWith(github.event.pull_request.title, "new icon")  # only checks icon PR
     steps:
       - uses: actions/checkout@v2
       
@@ -14,15 +15,11 @@ jobs:
       - name: Install dependencies 
         run: python -m pip install --upgrade pip
 
-      - name: Get Changed Files and generate files_added.json & files_modified.json
-        uses: lots0logs/gh-action-get-changed-files@2.1.4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      # this is where we create the check_err_messages
       - name: Run the check_svg script
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
         run: >
-          python ./.github/scripts/check_svgs_on_pr.py $HOME/files_added.json $HOME/files_modified.json
+          python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons
 
       - name: Upload the err messages
         uses: actions/upload-artifact@v2

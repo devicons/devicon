@@ -42,7 +42,7 @@ jobs:
         run: >
           python ./.github/scripts/icomoon_peek.py 
           ./.github/scripts/build_assets/geckodriver-v0.29.1-win64/geckodriver.exe ./icomoon.json 
-          ./devicon.json ./icons ./ --headless --pr_title "%PR_TITLE%"
+          ./devicon.json ./icons ./ "%PR_TITLE%" --headless 
 
       - name: Upload the err messages (created by icomoon_peek.py)
         uses: actions/upload-artifact@v2

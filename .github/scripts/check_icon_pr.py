@@ -2,7 +2,6 @@ from enum import Enum
 from typing import List
 import xml.etree.ElementTree as et
 from pathlib import Path
-import build_assets.util
 
 
 # pycharm complains that build_assets is an unresolved ref
@@ -21,15 +20,20 @@ class SVG_STATUS_CODE(Enum):
 
 def main():
     """
-    Check the quality of the svgs.
+    Check the quality of the svgs IF this is an icon PR. Else, does nothing.
     If any svg error is found, create a json file called 'svg_err_messages.json'
     in the root folder that will contains the error messages.
     """
     args = arg_getters.get_check_svgs_on_pr_args()
     try:
+        all_icons = filehandler.get_json_file_content(args.devicon_json_path)
+
+        # get only the icon object that has the name matching the pr title
+        filtered_icon = util.find_object_added_in_pr(all_icons, args.pr_title)
+        check_devicon_object(filtered_icon)
+
         # check the svgs
-        svgs = filehandler.get_added_modified_svgs(args.files_added_json_path,
-            args.files_modified_json_path)
+        svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path)
         print("SVGs to check: ", *svgs, sep='\n')
 
         if len(svgs) == 0:
@@ -41,7 +45,59 @@ def main():
         filehandler.write_to_file("./svg_err_messages.txt", str(err_messages))
         print("Task completed.")
     except Exception as e:
+        filehandler.write_to_file("./svg_err_messages.txt", str(e))
         util.exit_with_err(e)
+
+
+def check_devicon_object(icon: dict):
+    """
+    Check that the devicon object added is up to standard.
+    :return a string containing the error messages if any.
+    """
+    err_msgs = []
+    try:
+        for tag in icon["tags"]:
+            if type(tag) != str:
+                raise TypeError()
+    except TypeError:
+        err_msgs.append("- 'tags' must be an array of strings, not: " + str(icon["tags"]))
+    except KeyError:
+        err_msgs.append("- missing key: 'tags'.")
+
+    try:
+        if type(icon["versions"]) != dict:
+            err_msgs.append("- 'versions' must be an object.")
+    except KeyError:
+        err_msgs.append("- missing key: 'versions'.")
+
+    try:
+        if type(icon["versions"]["svg"]) != list or len(icon["versions"]["svg"]) == 0:
+            err_msgs.append("- must contain at least 1 svg version in a list.")
+    except KeyError:
+        err_msgs.append("- missing key: 'svg' in 'versions'.")
+    
+    try:
+        if type(icon["versions"]["font"]) != list or len(icon["versions"]["svg"]) == 0:
+            err_msgs.append("- must contain at least 1 font version in a list.")
+    except KeyError:
+        err_msgs.append("- missing key: 'font' in 'versions'.")
+
+    try:
+        if type(icon["color"]) != str or "#" not in icon["color"]:
+            err_msgs.append("- 'color' must be a string in the format '#abcdef'")
+    except KeyError:
+        err_msgs.append("- missing key: 'color'.")
+
+    try:
+        if type(icon["aliases"]) != list:
+            err_msgs.append("- 'aliases' must be an array.")
+    except KeyError:
+        err_msgs.append("- missing key: 'aliases'.")
+    
+    if len(err_msgs) > 0:
+        message = "Error found in 'devicon.json' for '{}' entry: \n{}".format(icon["name"], "\n".join(err_msgs))
+        raise ValueError(message)
+    return ""
 
 
 def check_svgs(svg_file_paths: List[Path]):
@@ -62,7 +118,7 @@ def check_svgs(svg_file_paths: List[Path]):
             err_msg = [f"{svg_path}:"]
 
             # name check
-            if not is_svg_name_valid(svg_path.absolute()):
+            if not util.is_svg_name_valid(svg_path.name):
                 err_msg.append("-SVG file name didn't match our pattern of `name-(original|plain|line)(-wordmark)?.svg`")
 
             # svg check

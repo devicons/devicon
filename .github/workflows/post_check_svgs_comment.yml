@@ -1,7 +1,7 @@
 name: Post the result of a SVG Check into its PR.
 on:
   workflow_run:
-    workflows: ['Check SVGs On PR']
+    workflows: ['Check Icon PR']
     types: 
       - completed
 jobs: 
@@ -18,7 +18,7 @@ jobs:
         if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          workflow: peek_icons.yml
+          workflow: check_icon_pr.yml
           run_id: ${{ github.event.workflow_run.id }}
 
       - name: Read the pr_num file
