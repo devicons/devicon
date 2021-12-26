@@ -4,17 +4,24 @@ on:
     types: [closed]
 jobs:
   label:
-    name: Get Fonts From Icomoon
+    name: Label Issue In Develop
     runs-on: ubuntu-18.04
-    if: github.event.merged == true
+    if: github.event.pull_request.merged == true
     steps:
+      - uses: actions/checkout@v2
+
       - name: Setup Python v3.8
         uses: actions/setup-python@v2
         with: 
           python-version: 3.8
 
+      - name: Install dependencies 
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ./.github/scripts/requirements.txt
+
       - name: Run in_develop_labeler.py
         env:
-          BODY: ${{ github.event.body }}
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python in_develop_labeler.py $TOKEN $BODY
+          BODY: ${{ github.event.pull_request.body }}
+        run: python ./.github/scripts/in_develop_labeler.py $TOKEN "$BODY" $GITHUB_REPOSITORY

@@ -101,10 +101,11 @@ def find_all_authors(pull_req_data, token):
             print(f"This URL didn't have an `author` attribute: {pull_req_data['commits_url']}")
     return ", ".join(["@" + author for author in list(authors)])
 
-def label_issues(token: str, issues: List[str], labels: List[str]):
+def label_issues(token: str, repo: str, issues: List[str], labels: List[str]):
     """
     Label the issues specified with the label specified.
     :param token: the GitHub API token.
+    :param repo: the owner and name of the repo.
     :param issues: the issue numbers (as str) that we are labelling.
     :param labels: the labels that we are labelling.
     """
@@ -112,14 +113,14 @@ def label_issues(token: str, issues: List[str], labels: List[str]):
         "Authorization": f"token {token}",
         "accept": "application/vnd.github.v3+json"
     }
-    base_url = "https://api.github.com/repos/devicons/devicon/issues/{0}/labels"
+    base_url = "https://api.github.com/repos/{}/issues/{}/labels"
     for issue in issues:
         body = {
             "labels": labels
         }
-        response = requests.post(base_url.format(issue), headers=headers, body=body)
+        response = requests.post(base_url.format(repo, issue), headers=headers, json=body)
         if not response:
-            raise Exception(f"Can't label the Issue provided. Issue: {issue}, labels: {labels}.")
+            raise Exception(f"Can't label the Issue provided. Issue: {issue}, labels: {labels}, API response: " + response.text)
         else:
             print(f"Successfully labelled issue {issue}")
 
@@ -139,9 +140,9 @@ def close_issues(token: str, issues: List[str]):
         "state": "closed"
     }
     for issue in issues:
-        response = requests.post(base_url.format(issue), headers=headers, body=body)
+        response = requests.post(base_url.format(issue), headers=headers, json=body)
         if not response:
-            raise Exception(f"Can't close Issue provided. Issue: {issue}")
+            raise Exception(f"Can't close Issue provided. Issue: {issue}, API response: " + response.text)
         else:
             print(f"Successfully closed issue {issue}")
 
@@ -166,9 +167,9 @@ def get_issues_by_labels(token: str, labels: List[str]):
             "per_page": 100,
             "page": page_num
         }
-        response = requests.post(url, headers=headers, body=body)
+        response = requests.post(url, headers=headers, json=body)
         if not response:
-            raise Exception(f"Can't access API. Can't get issues for labels: {labels}")
+            raise Exception(f"Can't access API. Can't get issues for labels: {labels}, API response: " + response.text)
         else:
             results = response.json()
             if len(results) < 100:

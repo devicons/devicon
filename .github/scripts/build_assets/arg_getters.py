@@ -82,4 +82,8 @@ def get_in_develop_labeler_args():
     parser.add_argument("body",
                         help="The PR's initial comment by the author AKA the `body` attribute of the `pull_request` API object.",
                         type=str)
+
+    parser.add_argument("repo",
+                        help="The owner and repo name. Ex: devicons/devicon",
+                        type=str)
     return parser.parse_args()
