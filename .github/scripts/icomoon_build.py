@@ -20,38 +20,39 @@ def main():
     runner = None
     try:
         args = arg_getters.get_selenium_runner_args()
-        # new_icons = get_icons_for_building(args.icomoon_json_path, args.devicon_json_path, args.token)
-        # if len(new_icons) == 0:
-        #     sys.exit("No files need to be uploaded. Ending script...")
+        new_icons = get_icons_for_building(args.icomoon_json_path, args.devicon_json_path, args.token)
+        if len(new_icons) == 0:
+            sys.exit("No files need to be uploaded. Ending script...")
 
-        # print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n")
+        print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n")
 
-        # print("Begin optimizing files...")
-        # optimize_svgs(new_icons, args.icons_folder_path)
+        print("Begin optimizing files...")
+        optimize_svgs(new_icons, args.icons_folder_path)
 
-        # print("Updating the icomoon json...")
-        # update_icomoon_json(new_icons, args.icomoon_json_path)
+        print("Updating the icomoon json...")
+        update_icomoon_json(new_icons, args.icomoon_json_path)
 
-        # print("Start the building icons process...")
-        # icon_svgs = filehandler.get_svgs_paths(
-        #     new_icons, args.icons_folder_path, icon_versions_only=True)
-        # zip_name = "devicon-v1.0.zip"
-        # zip_path = Path(args.download_path, zip_name)
-        # screenshot_folder = filehandler.create_screenshot_folder("./") 
-        # runner = BuildSeleniumRunner(args.download_path,
-        #     args.geckodriver_path, args.headless)
-        # runner.build_icons(args.icomoon_json_path, zip_path,
-        #     icon_svgs, screenshot_folder)
+        print("Start the building icons process...")
+        icon_svgs = filehandler.get_svgs_paths(
+            new_icons, args.icons_folder_path, icon_versions_only=True)
+        zip_name = "devicon-v1.0.zip"
+        zip_path = Path(args.download_path, zip_name)
+        screenshot_folder = filehandler.create_screenshot_folder("./") 
+        runner = BuildSeleniumRunner(args.download_path,
+            args.geckodriver_path, args.headless)
+        runner.build_icons(args.icomoon_json_path, zip_path,
+            icon_svgs, screenshot_folder)
 
-        # filehandler.extract_files(str(zip_path), args.download_path)
-        # filehandler.rename_extracted_files(args.download_path)
+        filehandler.extract_files(str(zip_path), args.download_path)
+        filehandler.rename_extracted_files(args.download_path)
 
-        # print("Creating the release message by querying the GitHub API...")
-        # get_release_message(args.token)
+        print("Creating the release message by querying the GitHub API...")
+        get_release_message(args.token)
 
         print("Closing the issues with the label of `in-develop`.")
         issues = api_handler.get_issues_by_labels(args.token, ["in-develop"])
-        api_handler.close_issues(args.token, issues)
+        issue_nums = [issue_num["number"] for issue_num in issues]
+        api_handler.close_issues(args.token, issue_nums)
 
         print("Task completed.")
     except TimeoutException as e:

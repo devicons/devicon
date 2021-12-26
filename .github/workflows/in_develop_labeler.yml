@@ -24,4 +24,4 @@ jobs:
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BODY: ${{ github.event.pull_request.body }}
-        run: python ./.github/scripts/in_develop_labeler.py $TOKEN "$BODY" $GITHUB_REPOSITORY
+        run: python ./.github/scripts/in_develop_labeler.py $TOKEN "$BODY"
