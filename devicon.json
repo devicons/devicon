@@ -449,6 +449,7 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -1240,12 +1241,7 @@
             ]
         },
         "color": "#2a2c3e",
-        "aliases": [
-          {
-              "base": "plain",
-              "alias": "original"
-          }
-      ]
+        "aliases": []
     },
     {
         "name": "electron",
@@ -3966,6 +3962,25 @@
         ]
     },
     {
+        "name": "solidity",
+        "tags": [
+            "programming",
+            "language",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#383838",
+        "aliases": []
+    },
+    {
         "name": "sourcetree",
         "tags": [
             "version-control"
@@ -4046,6 +4061,28 @@
             "alias": "plain-wordmark"
           }
         ]
+    },
+    {
+        "name": "sqlite",
+        "tags": [
+            "sql",
+            "database",
+            "db"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+          "font": [
+              "plain",
+              "plain-wordmark"
+          ]
+        },
+        "color": "#0f80cc",
+        "aliases": []
     },
     {
         "name": "subversion",
@@ -4502,7 +4539,7 @@
                 "original-wordmark"
             ]
         },
-        "color": "#212b35",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -4520,6 +4557,35 @@
         },
         "color": "#4051b5",
         "aliases": []
+    },
+    {
+        "name": "unrealengine",
+        "tags": [
+            "c++",
+            "engine",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "uwsgi",
