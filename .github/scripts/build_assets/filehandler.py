@@ -68,7 +68,7 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str,
         folder_path = Path(icons_folder_path, icon_info['name'])
 
         if not folder_path.is_dir():
-            raise ValueError(f"Invalid path. This is not a directory: {folder_path}.")
+            raise ValueError(f"Invalid path. This is not a directory: '{folder_path}'.")
 
         if icon_versions_only:
             get_icon_svgs_paths(folder_path, icon_info, file_paths, as_str)
@@ -100,7 +100,7 @@ def get_icon_svgs_paths(folder_path: Path, icon_info: dict,
         if path.exists():
             file_paths.append(str(path) if as_str else path)
         else:
-            raise ValueError(f"This path doesn't exist: {path}")
+            raise ValueError(f"This path doesn't exist: '{path}'")
 
 
 def get_all_svgs_paths(folder_path: Path, icon_info: dict,
@@ -119,7 +119,7 @@ def get_all_svgs_paths(folder_path: Path, icon_info: dict,
         if path.exists():
             file_paths.append(str(path) if as_str else path)
         else:
-            raise ValueError(f"This path doesn't exist: {path}")
+            raise ValueError(f"This path doesn't exist: '{path}'")
 
 
 def is_alias(font_version: str, aliases: List[dict]):
@@ -238,4 +238,3 @@ def get_added_modified_svgs(files_added_json_path: str,
             svgs.append(path)
     
     return svgs
-

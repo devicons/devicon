@@ -1,4 +1,4 @@
-name: Post the result of a SVG Check into its PR.
+name: Post the result of the check_icon_pr workflow into its PR.
 on:
   workflow_run:
     workflows: ['Check Icon PR']
@@ -33,11 +33,11 @@ jobs:
         id: err_message_reader
         uses: juliangruber/read-file-action@v1.0.0
         with:
-          path: ./svg_err_messages/svg_err_messages.txt
+          path: ./err_messages/err_messages.txt
 
       - name: Comment on the PR about the result - SVG Error
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success() && (steps.err_message_reader.outputs.content != '0' && steps.err_message_reader.outputs.content != '1')
+        if: success() && (steps.err_message_reader.outputs.content != '')
         env:
           MESSAGE: |
             Hi!
