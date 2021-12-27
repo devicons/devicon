@@ -6,8 +6,7 @@ from pathlib import Path
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
-from build_assets import filehandler, arg_getters
-from build_assets import util
+from build_assets import filehandler, arg_getters, util
 
 
 class SVG_STATUS_CODE(Enum):
@@ -24,13 +23,13 @@ def main():
     If any svg error is found, create a json file called 'svg_err_messages.json'
     in the root folder that will contains the error messages.
     """
-    args = arg_getters.get_check_svgs_on_pr_args()
+    args = arg_getters.get_check_icon_pr_args()
     try:
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
         filtered_icon = util.find_object_added_in_pr(all_icons, args.pr_title)
-        check_devicon_object(filtered_icon)
+        devicon_err_msg = check_devicon_object(filtered_icon)
 
         # check the svgs
         svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path)
@@ -38,11 +37,11 @@ def main():
 
         if len(svgs) == 0:
             print("No SVGs to check, ending script.")
-            err_messages = SVG_STATUS_CODE.NO_SVG.value
+            err_messages = str(SVG_STATUS_CODE.NO_SVG.value)
         else:
             err_messages = check_svgs(svgs)
 
-        filehandler.write_to_file("./svg_err_messages.txt", str(err_messages))
+        filehandler.write_to_file("./svg_err_messages.txt", devicon_err_msg + "\n\n" + err_messages)
         print("Task completed.")
     except Exception as e:
         filehandler.write_to_file("./svg_err_messages.txt", str(e))
@@ -96,7 +95,7 @@ def check_devicon_object(icon: dict):
     
     if len(err_msgs) > 0:
         message = "Error found in 'devicon.json' for '{}' entry: \n{}".format(icon["name"], "\n".join(err_msgs))
-        raise ValueError(message)
+        return message
     return ""
 
 
@@ -145,7 +144,7 @@ def check_svgs(svg_file_paths: List[Path]):
 
     if len(err_msgs) > 0:
         return "\n\n".join(err_msgs)
-    return SVG_STATUS_CODE.SVG_OK.value
+    return str(SVG_STATUS_CODE.SVG_OK.value)
 
 
 if __name__ == "__main__":

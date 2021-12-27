@@ -1,6 +1,5 @@
 from build_assets.selenium_runner.PeekSeleniumRunner import PeekSeleniumRunner
-from build_assets import filehandler, arg_getters
-from build_assets import util
+from build_assets import filehandler, arg_getters, util
 
 
 def main():

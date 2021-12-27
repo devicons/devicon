@@ -42,7 +42,7 @@ jobs:
           MESSAGE: |
             Hi!
 
-            I'm the SVG-Checker Bot and we have some issues with your SVGs:
+            I'm the `check-bot` and we have some issues with your PR:
 
             ```
             {0}

@@ -43,9 +43,9 @@ def get_selenium_runner_args(peek_mode=False):
     return parser.parse_args()
 
 
-def get_check_svgs_on_pr_args():
+def get_check_icon_pr_args():
     """
-    Get the commandline arguments for the check_svgs_on_pr.py.
+    Get the commandline arguments for the check_icon_pr.py.
     """
     parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run whenever a PR is opened")
 
@@ -54,6 +54,10 @@ def get_check_svgs_on_pr_args():
 
     parser.add_argument("icons_folder_path",
                         help="The path to the icons folder",
+                        action=PathResolverAction)
+
+    parser.add_argument("devicon_json_path",
+                        help="The path to the devicon.json",
                         action=PathResolverAction)
 
     return parser.parse_args()
