@@ -1,12 +1,3 @@
----
-name: New Icon
-about: Add a new icon to the repository.
-title: 'new icon: [NAME] (versions)'
-labels: 'feature:icon'
-assignees: ''
-
----
-<!-- If you are adding a new icon, follow the steps listed here, and delete the **New Feature** section below. -->
 ## Double check these details before you open a PR
 
 <!-- Tick the checkboxes to ensure you've done everything correctly -->
@@ -18,6 +9,9 @@ assignees: ''
 - [] A new object is added in the `devicon.json` file as seen [here](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#-updating-the-deviconjson-)
 
 <!-- Refer to the [contributing](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#contributing-to-devicon) guidelines for more details. -->
+
+**This PR closes NONE**
+<!-- List issues that this PR would close above. Ex: This PR closes #1, #2, #3. -->
 
 ## Link to prove your SVG is correct and up-to-date.
 <!-- Link to an official page/wiki goes here. Anything that proves your SVGs are the correct ones. -->
