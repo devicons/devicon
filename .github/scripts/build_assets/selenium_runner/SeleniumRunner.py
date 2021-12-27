@@ -1,6 +1,8 @@
 from pathlib import Path
+from selenium.webdriver.common import service
 
 from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -70,6 +72,11 @@ class SeleniumRunner:
     }
 
     """
+    Number of retries for creating a web driver instance.
+    """
+    MAX_RETRY = 5
+
+    """
     The different types of alerts that this workflow will encounter.
     It contains part of the text in the actual alert and buttons
     available to press. It's up to the user to know what button to 
@@ -126,6 +133,7 @@ class SeleniumRunner:
         :raises AssertionError: if the page title does not contain
         "IcoMoon App".
         """
+        # customize the download options
         options = Options()
         allowed_mime_types = "application/zip, application/gzip, application/octet-stream"
         # disable prompt to download from Firefox
@@ -138,14 +146,61 @@ class SeleniumRunner:
         options.headless = headless
 
         print("Activating browser client...")
-        self.driver = WebDriver(options=options, executable_path=geckodriver_path)
+        self.driver = self.create_driver_instance(options, geckodriver_path)
+
         self.driver.get(self.ICOMOON_URL)
-        assert "IcoMoon App" in self.driver.title
         # wait until the whole web page is loaded by testing the hamburger input
         WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
             ec.element_to_be_clickable((By.XPATH, "(//i[@class='icon-menu'])[2]"))
         )
         print("Accessed icomoon.io")
+
+    def create_driver_instance(self, options: Options, geckodriver_path: str):
+        """
+        Create a WebDriver instance. Isolate retrying code here to address
+        "no connection can be made" error.
+        :param options: the FirefoxOptions for the browser.
+        :param geckodriver_path: the path to the firefox executable.
+        the icomoon.zip to.
+        """
+        retries = SeleniumRunner.MAX_RETRY
+        finished = False
+        driver = None
+        err_msgs = [] # keep for logging purposes
+        while not finished and retries > 0:
+            try:
+                # order matters, don't change the lines below
+                finished = True # signal we are done in case we are actually done
+
+                # customize the local server
+                service = None
+                # first retry: use 8080
+                # else: random
+                if retries == SeleniumRunner.MAX_RETRY:
+                    service = Service(executable_path=geckodriver_path, port=8080)
+                else:
+                    service = Service(executable_path=geckodriver_path)
+                driver = WebDriver(options=options, service=service)
+            except SeleniumTimeoutException as e:
+                # retry. This is intended to catch "no connection could be made" error
+                retries -= 1 
+                finished = False # flip the var so we can retry
+                msg = f"Retry {retries}/{SeleniumRunner.MAX_RETRY} SeleniumTimeoutException: {e.msg}"
+                print(msg)
+                err_msgs.append(msg)
+            except Exception as e:
+                # anything else: unsure if retry works. Just end the retry
+                msg = f"Retry {retries}/{SeleniumRunner.MAX_RETRY} Exception: {e}"
+                err_msgs.append(msg)
+                print(msg)
+                break
+
+        if driver is not None:
+            return driver
+
+        err_msg_formatted = '\n'.join(reversed(err_msgs))
+        msg = f"Unable to create WebDriver Instance:\n{err_msg_formatted}"
+        raise Exception(msg)
 
     def switch_toolbar_option(self, option: IcomoonOptionState):
         """
@@ -248,7 +303,7 @@ class SeleniumRunner:
         except SeleniumTimeoutException:
             pass # do nothing cause sometimes, the color tab doesn't appear in the site
 
-        if screenshot_folder != None and index != None:
+        if screenshot_folder is not None and index is not None:
             edit_screen_selector = "div.overlay div.overlayWindow"
             screenshot_path = str(
                 Path(screenshot_folder, f"new_svg_{index}.png").resolve()
