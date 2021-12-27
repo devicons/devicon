@@ -1,7 +1,7 @@
 ## Double check these details before you open a PR
 
 <!-- Tick the checkboxes to ensure you've done everything correctly -->
-- [] PR does not match another non-stale PR currently opened
+- [ ] PR does not match another non-stale PR currently opened
 
 ## Features
 <!-- List your features here and the benefits they bring. Include images/codes as appropriate -->
