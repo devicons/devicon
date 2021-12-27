@@ -49,7 +49,7 @@ def main():
         print("Creating the release message by querying the GitHub API...")
         get_release_message(args.token)
 
-        print("Closing the issues with the label of `in-develop`.")
+        print("Closing issues with the `in-develop` label.")
         issues = api_handler.get_issues_by_labels(args.token, ["in-develop"])
         issue_nums = [issue_num["number"] for issue_num in issues]
         api_handler.close_issues(args.token, issue_nums)
