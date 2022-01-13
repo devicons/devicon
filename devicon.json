@@ -2069,6 +2069,29 @@
         ]
     },
     {
+        "name": "ifttt",
+        "tags": [
+            "automation",
+            "applets",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "illustrator",
         "tags": [
             "editor",
