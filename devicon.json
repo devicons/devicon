@@ -3844,6 +3844,28 @@
         "aliases": []
     },
     {
+        "name": "selenium",
+        "tags": [
+            "webdrive",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#CF0A2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "sequelize",
         "tags": [
             "database",
