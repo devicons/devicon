@@ -449,6 +449,7 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -1086,28 +1087,16 @@
         "tags": [],
         "versions": {
             "svg": [
-                "original",
                 "plain",
-                "line"
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain-wordmark"
             ]
         },
-        "color": "#003A2B",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            },
-            {
-                "base": "line",
-                "alias": "line-wordmark"
-            }
-        ]
+        "color": "#092e20",
+        "aliases": []
     },
     {
         "name": "docker",
@@ -1233,6 +1222,28 @@
         "aliases": []
     },
     {
+        "name": "discordjs",
+        "tags": [
+            "wrapper",
+            "api_wrapper",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2a2c3e",
+        "aliases": []
+    },
+    {
         "name": "electron",
         "tags": [
             "framework"
@@ -1262,7 +1273,7 @@
     },
     {
         "name": "elixir",
-        "tags": "language",
+        "tags": ["language"],
         "versions": {
             "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
             "font": ["plain", "plain-wordmark"]
@@ -2679,6 +2690,35 @@
         ]
     },
     {
+        "name": "maya",
+        "tags": [
+            "mel",
+            "pymel",
+            "python",
+            "3d",
+            "programming",
+            "vfx",
+            "graphic",
+            "graphics",
+            "game",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#149B9A",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "tags": [
             "javascript"
@@ -2864,6 +2904,24 @@
         "aliases": []
     },
     {
+        "name": "networkx",
+        "tags": [
+            "graph",
+            "library",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#2C7FB8",
+        "aliases": []
+    },
+    {
         "name": "nextjs",
         "tags": [
             "framework"
@@ -3004,6 +3062,25 @@
             ]
         },
         "color": "#cb3837",
+        "aliases": []
+    },
+    {
+        "name": "nuget",
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#004880",
         "aliases": []
     },
     {
@@ -3264,6 +3341,47 @@
             ]
         },
         "color": "#5058A6",
+        "aliases": []
+    },
+    {
+        "name": "podman",
+        "tags": [
+            "container",
+            "pods",
+            "docker"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#872b9e",
+        "aliases": []
+    },
+    {
+        "name": "polygon",
+        "tags": [
+            "ethereum",
+            "erc20",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#38285B",
         "aliases": []
     },
     {
@@ -3873,6 +3991,25 @@
         ]
     },
     {
+        "name": "solidity",
+        "tags": [
+            "programming",
+            "language",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#383838",
+        "aliases": []
+    },
+    {
         "name": "sourcetree",
         "tags": [
             "version-control"
@@ -3953,6 +4090,28 @@
             "alias": "plain-wordmark"
           }
         ]
+    },
+    {
+        "name": "sqlite",
+        "tags": [
+            "sql",
+            "database",
+            "db"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+          "font": [
+              "plain",
+              "plain-wordmark"
+          ]
+        },
+        "color": "#0f80cc",
+        "aliases": []
     },
     {
         "name": "subversion",
@@ -4409,7 +4568,7 @@
                 "original-wordmark"
             ]
         },
-        "color": "#212b35",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -4427,6 +4586,35 @@
         },
         "color": "#4051b5",
         "aliases": []
+    },
+    {
+        "name": "unrealengine",
+        "tags": [
+            "c++",
+            "engine",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "uwsgi",
