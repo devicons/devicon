@@ -1820,6 +1820,38 @@
         "aliases": []
     },
     {
+        "name": "grafana",
+        "tags": [
+            "monitoring",
+            "analytics",
+            "metrics",
+            "logs",
+            "visualization",
+            "web-application"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#E78040",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "grails",
         "tags": [
             "framework"
