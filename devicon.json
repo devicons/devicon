@@ -4878,6 +4878,29 @@
         "aliases": []
     },
     {
+        "name": "xcode",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "ios",
+            "iphone",
+            "mobile",
+            "apple"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#069CEC",
+        "aliases": []
+    },
+    {
         "name": "xd",
         "tags": ["design", "editor", "ui"],
         "versions": {
