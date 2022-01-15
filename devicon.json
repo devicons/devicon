@@ -2713,6 +2713,35 @@
         ]
     },
     {
+        "name": "maya",
+        "tags": [
+            "mel",
+            "pymel",
+            "python",
+            "3d",
+            "programming",
+            "vfx",
+            "graphic",
+            "graphics",
+            "game",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#149B9A",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "tags": [
             "javascript"
@@ -3520,6 +3549,33 @@
         "aliases": []
     },
     {
+        "name": "pytorch",
+        "tags": [
+            "programming",
+            "framework",
+            "machine-learning",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#EE4C2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "raspberrypi",
         "tags": ["arm", "computer"],
         "versions": {
@@ -3865,6 +3921,28 @@
         },
         "color": "#de3423",
         "aliases": []
+    },
+    {
+        "name": "selenium",
+        "tags": [
+            "webdrive",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#CF0A2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "sequelize",
@@ -4869,6 +4947,29 @@
             ]
         },
         "color": "#494949",
+        "aliases": []
+    },
+    {
+        "name": "xcode",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "ios",
+            "iphone",
+            "mobile",
+            "apple"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#069CEC",
         "aliases": []
     },
     {
