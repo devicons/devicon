@@ -2094,6 +2094,29 @@
         ]
     },
     {
+        "name": "ifttt",
+        "tags": [
+            "automation",
+            "applets",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "illustrator",
         "tags": [
             "editor",
@@ -2713,6 +2736,35 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "maya",
+        "tags": [
+            "mel",
+            "pymel",
+            "python",
+            "3d",
+            "programming",
+            "vfx",
+            "graphic",
+            "graphics",
+            "game",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#149B9A",
+        "aliases": []
     },
     {
         "name": "meteor",
@@ -3522,6 +3574,33 @@
         "aliases": []
     },
     {
+        "name": "pytorch",
+        "tags": [
+            "programming",
+            "framework",
+            "machine-learning",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#EE4C2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "raspberrypi",
         "tags": ["arm", "computer"],
         "versions": {
@@ -3867,6 +3946,28 @@
         },
         "color": "#de3423",
         "aliases": []
+    },
+    {
+        "name": "selenium",
+        "tags": [
+            "webdrive",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#CF0A2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "sequelize",
@@ -4871,6 +4972,64 @@
             ]
         },
         "color": "#494949",
+        "aliases": []
+    },
+    {
+        "name": "xamarin",
+        "tags": [
+            "application",
+            "programming",
+            "editor",
+            "ide",
+            "ios",
+            "mobile",
+            "apple",
+            "android",
+            "windows"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3498DB",
+        "aliases": [
+            {
+                "base":"original",
+                "alias":"plain"
+            },
+            {
+                "base":"original-wordmark",
+                "alias":"plain-wordmark"
+            }
+        ]
+    },
+    {
+	"name": "xcode",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "ios",
+            "iphone",
+            "mobile",
+            "apple"
+	],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#069CEC",
         "aliases": []
     },
     {
