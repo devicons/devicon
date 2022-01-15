@@ -4961,8 +4961,8 @@
             }
         ]
     },
-	  {
-		    "name": "xcode",
+    {
+	"name": "xcode",
         "tags": [
             "application",
             "editor",
@@ -4971,7 +4971,7 @@
             "iphone",
             "mobile",
             "apple"
-		    ],
+	],
         "versions": {
             "svg": [
                 "original",
@@ -4983,7 +4983,7 @@
         },
         "color": "#069CEC",
         "aliases": []
-	  },
+    },
     {
         "name": "xd",
         "tags": ["design", "editor", "ui"],
