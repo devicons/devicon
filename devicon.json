@@ -2690,6 +2690,35 @@
         ]
     },
     {
+        "name": "maya",
+        "tags": [
+            "mel",
+            "pymel",
+            "python",
+            "3d",
+            "programming",
+            "vfx",
+            "graphic",
+            "graphics",
+            "game",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#149B9A",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "tags": [
             "javascript"
@@ -3871,6 +3900,28 @@
         "aliases": []
     },
     {
+        "name": "selenium",
+        "tags": [
+            "webdrive",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#CF0A2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "sequelize",
         "tags": [
             "database",
@@ -4873,6 +4924,29 @@
             ]
         },
         "color": "#494949",
+        "aliases": []
+    },
+    {
+        "name": "xcode",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "ios",
+            "iphone",
+            "mobile",
+            "apple"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#069CEC",
         "aliases": []
     },
     {
