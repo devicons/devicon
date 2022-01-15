@@ -4927,7 +4927,42 @@
         "aliases": []
     },
     {
-        "name": "xcode",
+        "name": "xamarin",
+        "tags": [
+            "application",
+            "programming",
+            "editor",
+            "ide",
+            "ios",
+            "mobile",
+            "apple",
+            "android",
+            "windows"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3498DB",
+        "aliases": [
+            {
+                "base":"original",
+                "alias":"plain"
+            },
+            {
+                "base":"original-wordmark",
+                "alias":"plain-wordmark"
+            }
+        ]
+    },
+    {
+	"name": "xcode",
         "tags": [
             "application",
             "editor",
@@ -4936,7 +4971,7 @@
             "iphone",
             "mobile",
             "apple"
-        ],
+	],
         "versions": {
             "svg": [
                 "original",
