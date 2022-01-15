@@ -1199,6 +1199,28 @@
         "aliases": []
     },
     {
+        "name": "elasticsearch",
+        "tags": [
+            "search-engine",
+            "nosql",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#343741",
+        "aliases": []
+    },
+    {
         "name": "digitalocean",
         "tags": [
             "cloud",
