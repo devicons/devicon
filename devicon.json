@@ -4074,6 +4074,35 @@
         "aliases": []
     },
     {
+        "name": "shotgrid",
+        "tags": [
+            "web-application",
+            "autodesk",
+            "project-management",
+            "pipeline",
+            "production-tool",
+            "production-tracking"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "sketch",
         "tags": [
             "application"
