@@ -2684,6 +2684,31 @@
         "aliases": []
     },
     {
+        "name": "latex",
+        "tags": [
+            "latex3",
+            "latex2e",
+            "markup",
+            "tex",
+            "typesetting-system"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "less",
         "tags": [
             "css",
