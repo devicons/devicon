@@ -93,6 +93,30 @@
         "aliases": []
     },
     {
+        "name": "androidstudio",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "android",
+            "mobile"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4285F4",
+        "aliases": []
+    },
+    {
         "name": "aarch64",
         "tags": [
             "architecture",
@@ -4102,6 +4126,35 @@
         },
         "color": "#179eff",
         "aliases": []
+    },
+    {
+        "name": "shotgrid",
+        "tags": [
+            "web-application",
+            "autodesk",
+            "project-management",
+            "pipeline",
+            "production-tool",
+            "production-tracking"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "sketch",
