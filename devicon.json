@@ -134,6 +134,29 @@
         "aliases": []
     },
     {
+        "name": "ansible",
+        "tags": [
+            "automation",
+            "provisioning",
+            "deployment",
+            "continuous-delivery"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1A1918",
+        "aliases": []
+    },
+    {
         "name": "apache",
         "tags": [
             "php"
