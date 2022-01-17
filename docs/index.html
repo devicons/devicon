@@ -67,16 +67,16 @@
             <span>
               <img src="./assets/img/color_wheel.png" class='colorPicker' ng-click="toggleColorPickerMenu('fontColorPickerMenu')">
               <span class='colorPickerMenu' id='fontColorPickerMenu'>
-                <div class='colorPickerMenuCloseBtn'><span ng-click="toggleColorPickerMenu('fontColorPickerMenu')">X</span></div>
                 <div>
                   <input type='color' value='#60be86' ng-model="fontBackground">
                   Background Color 
                 </div>
                 <div>
-                  <input type='checkbox' class='checkerboardInput' ng-model="fontDisplayCheckerboard">
-                  <label for='checkboardInput' >Checkerboard</label>
+                  <input type='checkbox' id='checkboardInputFont' class='checkerboardInput' ng-model="fontDisplayCheckerboard">
+                  <label for='checkboardInputFont' >Checkerboard</label>
                 </div>
-                <button class='colorPickerResetBtn' ng-click="fontBackground = DEFAULT_BACKGROUND">Reset</button>
+                <button class='colorPickerBtn' ng-click="toggleColorPickerMenu('fontColorPickerMenu')">Close</button>
+                <button class='colorPickerBtn' ng-click="fontBackground = DEFAULT_BACKGROUND; fontDisplayCheckerboard=0; toggleColorPickerMenu('fontColorPickerMenu')">Reset</button>
               </span>
             </span>
           </h4>
@@ -121,16 +121,16 @@
             <span>
               <img src="./assets/img/color_wheel.png" class='colorPicker' ng-click="toggleColorPickerMenu('svgColorPickerMenu')">
               <span class='colorPickerMenu' id='svgColorPickerMenu'>
-                <div class='colorPickerMenuCloseBtn'><span ng-click="toggleColorPickerMenu('svgColorPickerMenu')">X</span></div>
                 <div>
                   <input type='color' value='#60be86' ng-model="svgBackground">
                   Background Color 
                 </div>
                 <div>
-                  <input type='checkbox' class='checkerboardInput' ng-model="svgDisplayCheckerboard">
-                  <label for='checkboardInput' >Checkerboard</label>
+                  <input type='checkbox' id='checkboardInputSvg' class='checkerboardInput' ng-model="svgDisplayCheckerboard">
+                  <label for='checkboardInputSvg' >Checkerboard</label>
                 </div>
-                <button class='colorPickerResetBtn' ng-click="svgBackground = DEFAULT_BACKGROUND">Reset</button>
+                <button class='colorPickerBtn' ng-click="toggleColorPickerMenu('svgColorPickerMenu')">Close</button>
+                <button class='colorPickerBtn' ng-click="svgBackground = DEFAULT_BACKGROUND; svgDisplayCheckerboard=0; toggleColorPickerMenu('svgColorPickerMenu')">Reset</button>
               </span>
             </span>
           </h4>
@@ -186,7 +186,7 @@
       </p>
 
       <h3>Contact</h3>
-      <h5>If you have any legal concerns regarding copyrights, please reach out to us at <b><a>info@devicon.dev</a></b>. Any code/logo contributions should be made through our GitHub repository listed above.</h5>
+      <h5>If you have any legal concerns regarding copyrights or want to report an abuse, please reach out to us at <b><a href="mailto:info@devicon.dev">info@devicon.dev</a></b>. Any code/logo contributions should be made through our GitHub repository listed above.</h5>
 
       <footer>
         Originally created by <a href="https://github.com/konpa">Konpa</a> (under <a href="https://github.com/devicons/devicon/blob/master/LICENSE">MIT License</a>) and <br />

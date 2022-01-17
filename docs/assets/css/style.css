@@ -327,37 +327,33 @@ header {
   font-size: 1rem;
   background-color: var(--primaryColor);
   border-radius: 0.2em;
-  border: 2px solid var(--grey);
+  border: 1px solid var(--grey);
   transform: translate(0, -30%);
-  padding: 0.5em;
-  padding-top: 0;
+  padding: 1em;
   margin-left: 1em;
   font-weight: normal;
   z-index: 1;
   display: none;
-}
-
-.colorPickerMenuCloseBtn {
-  color: red;
-  font-weight: bold;
-  margin-top: 0;
-  margin-right: 0.25em;
-  display: flex;
-  flex-direction: row-reverse;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 }
 
 .colorPickerMenuCloseBtn > span:hover {
   cursor: pointer;
 }
 
-.colorPickerResetBtn {
+.colorPickerBtn {
   margin: auto;
   margin-top: 0.5em;
-  display: block;
   width: min-content;
   background-color: var(--primaryColor);
   border-radius: 1em;
   border: 1px solid var(--grey);
+  display: inline-block;
+}
+
+.colorPickerBtn:hover {
+  background-color: var(--grey);
 }
 
 .checkerboardInput {
