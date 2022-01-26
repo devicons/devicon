@@ -93,6 +93,30 @@
         "aliases": []
     },
     {
+        "name": "androidstudio",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "android",
+            "mobile"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4285F4",
+        "aliases": []
+    },
+    {
         "name": "aarch64",
         "tags": [
             "architecture",
@@ -131,6 +155,29 @@
             ]
         },
         "color": "#c4473a",
+        "aliases": []
+    },
+    {
+        "name": "ansible",
+        "tags": [
+            "automation",
+            "provisioning",
+            "deployment",
+            "continuous-delivery"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1A1918",
         "aliases": []
     },
     {
@@ -449,6 +496,7 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -1221,6 +1269,28 @@
         "aliases": []
     },
     {
+        "name": "discordjs",
+        "tags": [
+            "wrapper",
+            "api_wrapper",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2a2c3e",
+        "aliases": []
+    },
+    {
         "name": "electron",
         "tags": [
             "framework"
@@ -1326,6 +1396,36 @@
         },
         "color": "#a90533",
         "aliases": []
+    },
+    {
+        "name": "eslint",
+        "tags": [
+            "linter",
+            "javascript",
+            "code-quality",
+            "coding-style"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4b32c3",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "express",
@@ -1797,6 +1897,38 @@
         "aliases": []
     },
     {
+        "name": "grafana",
+        "tags": [
+            "monitoring",
+            "analytics",
+            "metrics",
+            "logs",
+            "visualization",
+            "web-application"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#E78040",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "grails",
         "tags": [
             "framework"
@@ -2025,6 +2157,31 @@
         "aliases": []
     },
     {
+        "name": "hugo",
+        "tags": [
+            "framework",
+            "ssg",
+            "static-site-generator",
+            "go",
+            "html",
+            "css"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FF4088",
+        "aliases": []
+    },
+    {
         "name": "ie10",
         "tags": [
             "browser"
@@ -2038,6 +2195,29 @@
             ]
         },
         "color": "#1EBBEE",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "ifttt",
+        "tags": [
+            "automation",
+            "applets",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000",
         "aliases": [
             {
                 "base": "original",
@@ -2504,6 +2684,31 @@
         "aliases": []
     },
     {
+        "name": "latex",
+        "tags": [
+            "latex3",
+            "latex2e",
+            "markup",
+            "tex",
+            "typesetting-system"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "less",
         "tags": [
             "css",
@@ -2665,6 +2870,35 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "maya",
+        "tags": [
+            "mel",
+            "pymel",
+            "python",
+            "3d",
+            "programming",
+            "vfx",
+            "graphic",
+            "graphics",
+            "game",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#149B9A",
+        "aliases": []
     },
     {
         "name": "meteor",
@@ -3292,6 +3526,47 @@
         "aliases": []
     },
     {
+        "name": "podman",
+        "tags": [
+            "container",
+            "pods",
+            "docker"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#872b9e",
+        "aliases": []
+    },
+    {
+        "name": "polygon",
+        "tags": [
+            "ethereum",
+            "erc20",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#38285B",
+        "aliases": []
+    },
+    {
         "name": "postgresql",
         "tags": [
             "database"
@@ -3431,6 +3706,33 @@
         },
         "color": "#ffd845",
         "aliases": []
+    },
+    {
+        "name": "pytorch",
+        "tags": [
+            "programming",
+            "framework",
+            "machine-learning",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#EE4C2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "raspberrypi",
@@ -3780,6 +4082,28 @@
         "aliases": []
     },
     {
+        "name": "selenium",
+        "tags": [
+            "webdrive",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#CF0A2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "sequelize",
         "tags": [
             "database",
@@ -3827,6 +4151,35 @@
         },
         "color": "#179eff",
         "aliases": []
+    },
+    {
+        "name": "shotgrid",
+        "tags": [
+            "web-application",
+            "autodesk",
+            "project-management",
+            "pipeline",
+            "production-tool",
+            "production-tracking"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "sketch",
@@ -3896,6 +4249,25 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "solidity",
+        "tags": [
+            "programming",
+            "language",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#383838",
+        "aliases": []
     },
     {
         "name": "sourcetree",
@@ -3978,6 +4350,28 @@
             "alias": "plain-wordmark"
           }
         ]
+    },
+    {
+        "name": "sqlite",
+        "tags": [
+            "sql",
+            "database",
+            "db"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+          "font": [
+              "plain",
+              "plain-wordmark"
+          ]
+        },
+        "color": "#0f80cc",
+        "aliases": []
     },
     {
         "name": "subversion",
@@ -4434,7 +4828,7 @@
                 "original-wordmark"
             ]
         },
-        "color": "#212b35",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -4452,6 +4846,35 @@
         },
         "color": "#4051b5",
         "aliases": []
+    },
+    {
+        "name": "unrealengine",
+        "tags": [
+            "c++",
+            "engine",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "uwsgi",
@@ -4712,6 +5135,64 @@
             ]
         },
         "color": "#494949",
+        "aliases": []
+    },
+    {
+        "name": "xamarin",
+        "tags": [
+            "application",
+            "programming",
+            "editor",
+            "ide",
+            "ios",
+            "mobile",
+            "apple",
+            "android",
+            "windows"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3498DB",
+        "aliases": [
+            {
+                "base":"original",
+                "alias":"plain"
+            },
+            {
+                "base":"original-wordmark",
+                "alias":"plain-wordmark"
+            }
+        ]
+    },
+    {
+	"name": "xcode",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "ios",
+            "iphone",
+            "mobile",
+            "apple"
+	],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#069CEC",
         "aliases": []
     },
     {
@@ -5061,28 +5542,6 @@
             ]
         },
         "color": "#DC7B2E",
-        "aliases": []
-    },
-    {
-        "name": "podman",
-        "tags": [
-            "container",
-            "pods",
-            "docker"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#872b9e",
         "aliases": []
     }
 ]

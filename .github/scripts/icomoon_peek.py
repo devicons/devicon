@@ -7,17 +7,17 @@ def main():
     runner = None
     try:
         args = arg_getters.get_selenium_runner_args(peek_mode=True)
-        new_icons = filehandler.get_json_file_content(args.devicon_json_path)
+        all_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
-        filtered_icon = util.find_object_added_in_pr(new_icons, args.pr_title)
+        filtered_icon = util.find_object_added_in_pr(all_icons, args.pr_title)
         check_devicon_object(filtered_icon)
         print("Icon being checked:", filtered_icon, sep = "\n", end='\n\n')
 
         runner = PeekSeleniumRunner(args.download_path, args.geckodriver_path, args.headless)
         svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, True)
         screenshot_folder = filehandler.create_screenshot_folder("./") 
-        svgs_with_strokes = runner.peek(svgs, screenshot_folder)
+        svgs_with_strokes = runner.peek(svgs, screenshot_folder, filtered_icon)
         print("Task completed.")
 
         message = ""
@@ -36,6 +36,7 @@ def main():
 def check_devicon_object(icon: dict):
     """
     Check that the devicon object added is up to standard.
+    :param icon: a dictionary containing info on an icon. Taken from the devicon.json.
     :return a string containing the error messages if any.
     """
     err_msgs = []
