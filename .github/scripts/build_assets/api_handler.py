@@ -6,8 +6,6 @@ from typing import List
 
 # our base url which leads to devicon
 base_url = "https://api.github.com/repos/devicons/devicon/"
-# testing url
-# base_url = "https://api.github.com/repos/Thomas-Boi/devicon/" 
 
 def get_merged_pull_reqs_since_last_release(token):
     """
