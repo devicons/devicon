@@ -93,6 +93,30 @@
         "aliases": []
     },
     {
+        "name": "androidstudio",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "android",
+            "mobile"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4285F4",
+        "aliases": []
+    },
+    {
         "name": "aarch64",
         "tags": [
             "architecture",
@@ -131,6 +155,29 @@
             ]
         },
         "color": "#c4473a",
+        "aliases": []
+    },
+    {
+        "name": "ansible",
+        "tags": [
+            "automation",
+            "provisioning",
+            "deployment",
+            "continuous-delivery"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1A1918",
         "aliases": []
     },
     {
@@ -1378,6 +1425,36 @@
         },
         "color": "#a90533",
         "aliases": []
+    },
+    {
+        "name": "eslint",
+        "tags": [
+            "linter",
+            "javascript",
+            "code-quality",
+            "coding-style"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4b32c3",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "express",
@@ -2634,6 +2711,31 @@
         },
         "color": "#fd4f31",
         "aliases": []
+    },
+    {
+        "name": "latex",
+        "tags": [
+            "latex3",
+            "latex2e",
+            "markup",
+            "tex",
+            "typesetting-system"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "less",
@@ -4080,6 +4182,35 @@
         "aliases": []
     },
     {
+        "name": "shotgrid",
+        "tags": [
+            "web-application",
+            "autodesk",
+            "project-management",
+            "pipeline",
+            "production-tool",
+            "production-tracking"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "sketch",
         "tags": [
             "application"
@@ -5441,5 +5572,27 @@
         },
         "color": "#DC7B2E",
         "aliases": []
+    },
+    {
+        "name": "vuetify", 
+        "tags": [
+            "css",
+            "framework",
+            "vuejs-library",
+            "material-design"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ] 
+        },
+        "color": "#1697F6", 
+        "aliases": [] 
     }
 ]
