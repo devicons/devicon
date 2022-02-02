@@ -5543,5 +5543,27 @@
         },
         "color": "#DC7B2E",
         "aliases": []
+    },
+    {
+        "name": "vuetify", 
+        "tags": [
+            "css",
+            "framework",
+            "vuejs-library",
+            "material-design"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ] 
+        },
+        "color": "#1697F6", 
+        "aliases": [] 
     }
 ]
