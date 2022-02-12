@@ -165,6 +165,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the SVG.</li>
   <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
   <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. This is to prevent class name clashing when using inline SVG. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
+  <li>Recommended: use an SVG compressor, such as <a href="https://vecta.io/nano">Vecta.io</a>, to reduce its file size. Remove the width and height attributes afterwards.</li>
 </ul>
 
 <hr>
