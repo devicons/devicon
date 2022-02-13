@@ -4047,14 +4047,14 @@
         },
         "color": "#00a1e0",
         "aliases": []
-	},
-	{
+    },
+    {
         "name": "sdl",
         "tags": [
             "library",
-             "cross-platform"
+            "cross-platform",
             "multimedia",
-            "game",
+            "game"
         ],
         "versions": {
             "svg": [
