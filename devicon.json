@@ -4049,6 +4049,26 @@
         "aliases": []
     },
     {
+        "name": "sdl",
+        "tags": [
+            "library",
+            "cross-platform",
+            "multimedia",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#173354",
+        "aliases": []
+    },
+    {
         "name": "rstudio",
         "tags": ["editor", "package", "statistics"],
         "versions": {
