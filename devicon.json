@@ -5605,5 +5605,26 @@
         },
         "color": "#1697F6", 
         "aliases": [] 
+    },
+    {
+        "name": "fedora", 
+        "tags": [
+            "linux",
+            "distribuition",
+            "desktop"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ] 
+        },
+        "color": "#294172", 
+        "aliases": [] 
     }
+
 ]
