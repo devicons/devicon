@@ -93,6 +93,30 @@
         "aliases": []
     },
     {
+        "name": "androidstudio",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "android",
+            "mobile"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4285F4",
+        "aliases": []
+    },
+    {
         "name": "aarch64",
         "tags": [
             "architecture",
@@ -131,6 +155,29 @@
             ]
         },
         "color": "#c4473a",
+        "aliases": []
+    },
+    {
+        "name": "ansible",
+        "tags": [
+            "automation",
+            "provisioning",
+            "deployment",
+            "continuous-delivery"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1A1918",
         "aliases": []
     },
     {
@@ -1351,6 +1398,36 @@
         "aliases": []
     },
     {
+        "name": "eslint",
+        "tags": [
+            "linter",
+            "javascript",
+            "code-quality",
+            "coding-style"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4b32c3",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "express",
         "tags": [
             "framework"
@@ -1820,6 +1897,38 @@
         "aliases": []
     },
     {
+        "name": "grafana",
+        "tags": [
+            "monitoring",
+            "analytics",
+            "metrics",
+            "logs",
+            "visualization",
+            "web-application"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#E78040",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "grails",
         "tags": [
             "framework"
@@ -2048,6 +2157,31 @@
         "aliases": []
     },
     {
+        "name": "hugo",
+        "tags": [
+            "framework",
+            "ssg",
+            "static-site-generator",
+            "go",
+            "html",
+            "css"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FF4088",
+        "aliases": []
+    },
+    {
         "name": "ie10",
         "tags": [
             "browser"
@@ -2061,6 +2195,29 @@
             ]
         },
         "color": "#1EBBEE",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "ifttt",
+        "tags": [
+            "automation",
+            "applets",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000",
         "aliases": [
             {
                 "base": "original",
@@ -2525,6 +2682,31 @@
         },
         "color": "#fd4f31",
         "aliases": []
+    },
+    {
+        "name": "latex",
+        "tags": [
+            "latex3",
+            "latex2e",
+            "markup",
+            "tex",
+            "typesetting-system"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "less",
@@ -3190,6 +3372,26 @@
         "aliases": []
     },
 	{
+        "name": "openal",
+        "tags": [
+            "library",
+            "audio",
+            "game",
+            "3d"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#7e000d",
+        "aliases": []
+    },
+	{
         "name": "opengl",
         "tags": [
             "library",
@@ -3526,6 +3728,33 @@
         "aliases": []
     },
     {
+        "name": "pytorch",
+        "tags": [
+            "programming",
+            "framework",
+            "machine-learning",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#EE4C2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "raspberrypi",
         "tags": ["arm", "computer"],
         "versions": {
@@ -3820,6 +4049,26 @@
         "aliases": []
     },
     {
+        "name": "sdl",
+        "tags": [
+            "library",
+            "cross-platform",
+            "multimedia",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#173354",
+        "aliases": []
+    },
+    {
         "name": "rstudio",
         "tags": ["editor", "package", "statistics"],
         "versions": {
@@ -3873,6 +4122,28 @@
         "aliases": []
     },
     {
+        "name": "selenium",
+        "tags": [
+            "webdrive",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#CF0A2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "sequelize",
         "tags": [
             "database",
@@ -3920,6 +4191,35 @@
         },
         "color": "#179eff",
         "aliases": []
+    },
+    {
+        "name": "shotgrid",
+        "tags": [
+            "web-application",
+            "autodesk",
+            "project-management",
+            "pipeline",
+            "production-tool",
+            "production-tracking"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "sketch",
@@ -4878,6 +5178,64 @@
         "aliases": []
     },
     {
+        "name": "xamarin",
+        "tags": [
+            "application",
+            "programming",
+            "editor",
+            "ide",
+            "ios",
+            "mobile",
+            "apple",
+            "android",
+            "windows"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3498DB",
+        "aliases": [
+            {
+                "base":"original",
+                "alias":"plain"
+            },
+            {
+                "base":"original-wordmark",
+                "alias":"plain-wordmark"
+            }
+        ]
+    },
+    {
+	"name": "xcode",
+        "tags": [
+            "application",
+            "editor",
+            "ide",
+            "ios",
+            "iphone",
+            "mobile",
+            "apple"
+	],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#069CEC",
+        "aliases": []
+    },
+    {
         "name": "xd",
         "tags": ["design", "editor", "ui"],
         "versions": {
@@ -5243,5 +5601,27 @@
         },
         "color": "#24265d",
         "aliases": []
+},
+{
+        "name": "vuetify", 
+        "tags": [
+            "css",
+            "framework",
+            "vuejs-library",
+            "material-design"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ] 
+        },
+        "color": "#1697F6", 
+        "aliases": [] 
     }
 ]
