@@ -156,12 +156,12 @@ Add css rules in your stylesheet
 
 <h2 id="request-icon">Requesting icon</h2>
 <p>
-    When you want to request a icon please feel feel to create a issue. See our <a href="/CONTRIBUTING.md#requestingIcon">contribution guidelines</a> for more information.
+    When you want to request an icon please feel free to create an issue. See our <a href="https://github.com/devicons/devicon/wiki/Requesting-an-Icon">Wiki</a> for more information.
 </p>
 
 <h2 id="contribute">Contributing</h2>
 <p>
-    We are happy for every contribution, whether it's new icons, features, or maintainers. Please have a look at our <a href="CONTRIBUTING.md">contribution guidelines</a> to see how you can contribute to this project.
+    We are happy with every contribution, whether it's new icons, features, or maintainers. Please have a look at our <a href="https://github.com/devicons/devicon/wiki">Wiki</a> to see how you can contribute to this project.
 </p>
 
 <h2 id="discord-server">Discord server</h2>
