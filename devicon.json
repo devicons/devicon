@@ -5585,6 +5585,24 @@
         "aliases": []
     },
     {
+        "name": "dropwizard",
+        "tags": [
+            "java",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#24265d",
+        "aliases": []
+},
+{
         "name": "vuetify", 
         "tags": [
             "css",
