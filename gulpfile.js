@@ -187,6 +187,12 @@ function configOptionCallback(file) {
       },
       {
         removeDimensions: true // remove height and width
+      },
+      {
+        name: "removeAttrs",
+        params: {
+          attrs: "svg:(x|y)"
+        }
       }
     ]
   };

@@ -5,7 +5,6 @@ import platform
 import sys
 import traceback
 
-
 def exit_with_err(err: Exception):
     """
     Exit the current step and display the err.
@@ -66,3 +65,9 @@ def find_object_added_in_pr(icons: List[dict], pr_title: str):
         message = "util.find_object_added_in_pr: Couldn't find an icon matching the name in the PR title.\n" \
             f"PR title is: '{pr_title}'"
         raise Exception(message)
+
+
+valid_svg_filename_pattern = re.compile(r"-(original|plain|line)(-wordmark)?\.svg$")
+def is_svg_name_valid(filename: str):
+    return valid_svg_filename_pattern.search(filename) is not None
+

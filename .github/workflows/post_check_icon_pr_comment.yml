@@ -1,7 +1,7 @@
-name: Post the result of a SVG Check into its PR.
+name: Post the result of the check_icon_pr workflow into its PR.
 on:
   workflow_run:
-    workflows: ['Check SVGs On PR']
+    workflows: ['Check Icon PR']
     types: 
       - completed
 jobs: 
@@ -18,7 +18,7 @@ jobs:
         if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          workflow: peek_icons.yml
+          workflow: check_icon_pr.yml
           run_id: ${{ github.event.workflow_run.id }}
 
       - name: Read the pr_num file
@@ -33,30 +33,27 @@ jobs:
         id: err_message_reader
         uses: juliangruber/read-file-action@v1.0.0
         with:
-          path: ./svg_err_messages/svg_err_messages.txt
+          path: ./err_messages/err_messages.txt
 
       - name: Comment on the PR about the result - SVG Error
         uses: jungwinter/comment@v1 # let us comment on a specific PR
-        if: success() && (steps.err_message_reader.outputs.content != '0' && steps.err_message_reader.outputs.content != '1')
+        if: success() && (steps.err_message_reader.outputs.content != '')
         env:
           MESSAGE: |
             Hi!
 
-            I'm Devicons' SVG-Checker Bot and it seems we have some issues with your SVGs.
+            I'm the `check-bot` and we have some issues with your PR:
 
-            Here is what went wrong:
             ```
             {0}
             ```
 
-            For more reference on why these are errors, check out our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards)
+            Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards) for more details regarding these errors.
 
             Please address these issues. When you update this PR, I will check your SVGs again.
 
             Thanks for your help,
             SVG-Checker Bot :smile:
-              
-            PS. One day, I will be smart enough to fix these errors for you :persevere:. Until then, I can only point them out.
         with:
           type: create
           issue_number: ${{ steps.pr_num_reader.outputs.content }}
