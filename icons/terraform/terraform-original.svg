@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 116.12 114.64"
+   version="1.1"
+   id="svg1233"
+   sodipodi:docname="terraform-original.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1235"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="7.8244941"
+     inkscape:cx="58.086823"
+     inkscape:cy="57.32"
+     inkscape:window-width="1312"
+     inkscape:window-height="1081"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1233" />
+  <defs
+     id="defs1195">
+    <style
+       id="style1193">.cls-1{fill:#5c4ee5;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#4040b2;}</style>
+  </defs>
+  <title
+     id="title1197">Asset 1</title>
+  <g
+     id="g2422"
+     transform="matrix(1.3555347,0,0,1.3555347,-22.33564,4.7287403)">
+    <polygon
+       class="cls-1"
+       points="68.64,25.86 68.64,50.3 47.48,38.08 47.48,13.64 "
+       id="polygon1219" />
+    <polygon
+       class="cls-2"
+       points="70.96,50.3 92.13,38.08 92.13,13.64 70.96,25.86 "
+       id="polygon1221" />
+    <polygon
+       class="cls-1"
+       points="24,24.44 45.16,36.66 45.16,12.22 24,0 "
+       id="polygon1223" />
+    <polygon
+       class="cls-1"
+       points="68.64,52.98 47.48,40.76 47.48,65.19 68.64,77.41 68.64,53.14 "
+       id="polygon1225" />
+  </g>
+  <path
+     class="cls-1"
+     d="M 83.18,61.37"
+     id="path1227" />
+  <path
+     class="cls-1"
+     d="M 47.48,40.76"
+     id="path1229" />
+</svg>
