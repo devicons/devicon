@@ -1,7 +1,7 @@
 import json
 from zipfile import ZipFile
 from pathlib import Path
-from typing import List
+from typing import List, Union
 import os
 import re
 
@@ -78,7 +78,7 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str,
 
 
 def get_icon_svgs_paths(folder_path: Path, icon_info: dict,
-    file_paths: List[str], as_str: bool):
+    file_paths: List[Union[str, Path]], as_str: bool):
     """
     Get only the svg file paths that can be made into an icon from the icon_info.
     :param: folder_path, the folder where we can find the icons.
@@ -104,7 +104,7 @@ def get_icon_svgs_paths(folder_path: Path, icon_info: dict,
 
 
 def get_all_svgs_paths(folder_path: Path, icon_info: dict,
-    file_paths: List[str], as_str: bool):
+    file_paths: List[Union[str, Path]], as_str: bool):
     """
     Get all the svg file paths of an icon.
     :param: folder_path, the folder where we can find the icons.
@@ -207,7 +207,7 @@ def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
     finally:
         return str(screenshot_folder)
 
-def write_to_file(path: str, value: any):
+def write_to_file(path: str, value):
     """
     Write the value to a file.
     """
