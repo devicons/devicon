@@ -56,7 +56,7 @@ def main():
 
         print("Task completed.")
     except TimeoutException as e:
-        util.exit_with_err("Selenium Time Out Error: \n" + str(e))
+        util.exit_with_err(Exception("Selenium Time Out Error: \n" + str(e)))
     except Exception as e:
         util.exit_with_err(e)
     finally:
@@ -95,7 +95,7 @@ def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token
     return new_icons
 
 
-def optimize_svgs(new_icons: List[str], icons_folder_path: str):
+def optimize_svgs(new_icons: List[dict], icons_folder_path: str):
     """
     Optimize the newly added svgs. This is done in batches
     since the command line has a limit on characters allowed.
