@@ -1,77 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   viewBox="0 0 116.12 114.64"
-   version="1.1"
-   id="svg1735"
-   sodipodi:docname="terraform-plain.svg"
-   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <sodipodi:namedview
-     id="namedview1737"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="7.6151431"
-     inkscape:cx="58.107903"
-     inkscape:cy="58.895807"
-     inkscape:window-width="1296"
-     inkscape:window-height="1081"
-     inkscape:window-x="1310"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg1735" />
-  <defs
-     id="defs1697">
-    <style
-       id="style1695">.cls-1{fill-rule:evenodd;}</style>
-  </defs>
-  <title
-     id="title1699">Asset 1</title>
-  <g
-     id="g1776"
-     transform="matrix(1.3555409,0,0,1.3555355,-22.335981,4.729)">
-    <polygon
-       class="cls-1"
-       points="47.48,13.64 68.64,25.86 68.64,50.3 47.48,38.08 "
-       id="polygon1721" />
-    <polygon
-       class="cls-1"
-       points="70.96,25.86 70.96,50.3 92.13,38.08 92.13,13.64 "
-       id="polygon1723" />
-    <polygon
-       class="cls-1"
-       points="24,0 24,24.44 45.16,36.66 45.16,12.22 "
-       id="polygon1725" />
-    <polygon
-       class="cls-1"
-       points="68.64,52.98 47.48,40.76 47.48,65.19 68.64,77.41 68.64,53.14 "
-       id="polygon1727" />
-  </g>
-  <path
-     class="cls-1"
-     d="M 83.18,61.37"
-     id="path1729" />
-  <path
-     class="cls-1"
-     d="M 47.48,40.76"
-     id="path1731" />
-  <metadata
-     id="metadata2452">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:title>Asset 1</dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128px" height="128px" viewBox="0 0 128 128" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 46.324219 26.082031 L 77.941406 44.5 L 77.941406 81.335938 L 46.324219 62.917969 Z M 46.324219 26.082031 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 81.410156 44.5 L 81.410156 81.335938 L 113.042969 62.917969 L 113.042969 26.082031 Z M 81.410156 44.5 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 11.242188 5.523438 L 11.242188 42.359375 L 42.859375 60.777344 L 42.859375 23.941406 Z M 11.242188 5.523438 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 77.941406 85.375 L 46.324219 66.957031 L 46.324219 103.78125 L 77.941406 122.199219 Z M 77.941406 85.375 "/>
+</g>
 </svg>
