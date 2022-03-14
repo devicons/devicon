@@ -82,7 +82,7 @@ def check_devicon_object(icon: dict):
             err_msgs.append("- must contain at least 1 svg version in a list.")
 
         for version in icon["versions"]["svg"]:
-            if not util.is_version_name_valid(version):
+            if not util.is_svg_name_valid(version):
                 err_msgs.append(f"- Invalid version name in versions['svg']: '{version}'. Must match regexp: (original|plain|line)(-wordmark)?")
     except KeyError:
         err_msgs.append("- missing key: 'svg' in 'versions'.")
@@ -92,7 +92,7 @@ def check_devicon_object(icon: dict):
             err_msgs.append("- must contain at least 1 font version in a list.")
 
         for version in icon["versions"]["font"]:
-            if not util.is_version_name_valid(version):
+            if not util.is_svg_name_valid(version):
                 err_msgs.append(f"- Invalid version name in versions['font']: '{version}'. Must match regexp: (original|plain|line)(-wordmark)?")
     except KeyError:
         err_msgs.append("- missing key: 'font' in 'versions'.")
