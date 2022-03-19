@@ -155,7 +155,6 @@ function cleanUp() {
  */
 function optimizeSvg() {
   let svgGlob = JSON.parse(yargs.argv.svgFiles);
-  console.log("Optimizing these files: ", svgGlob);
   return gulp
     .src(svgGlob)
     .pipe(svgmin(configOptionCallback))

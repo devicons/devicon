@@ -1,9 +1,10 @@
 import json
-from zipfile import ZipFile
+from zipfile import ZipFile, is_zipfile
 from pathlib import Path
 from typing import List, Union
 import os
 import re
+from io import FileIO
 
 
 def find_new_icons_in_devicon_json(devicon_json_path: str, icomoon_json_path: str):
@@ -133,7 +134,7 @@ def is_alias(font_version: str, aliases: List[dict]):
     return False
 
 
-def extract_files(zip_path: str, extract_path: str, delete=True):
+def extract_files(zip_path: str, extract_path: str, logfile: FileIO, delete=True):
     """
     Extract the style.css and font files from the devicon.zip
     folder. Must call the gulp task "get-icomoon-files"
@@ -144,9 +145,11 @@ def extract_files(zip_path: str, extract_path: str, delete=True):
     will put the extracted files.
     :param delete, whether the function should delete the zip file
     when it's done.
+    :param logfile
     """
-    print("Extracting zipped files...")
-
+    print("Extracting zipped files...", file=logfile)
+    fixBadZipfile(zip_path, logfile)
+    print(f"it's zipped {is_zipfile(zip_path)}", file=logfile)
     icomoon_zip = ZipFile(zip_path)
     target_files = ('selection.json', 'fonts/', 'fonts/devicon.ttf',
                     'fonts/devicon.woff', 'fonts/devicon.eot',
@@ -154,22 +157,40 @@ def extract_files(zip_path: str, extract_path: str, delete=True):
     for file in target_files:
         icomoon_zip.extract(file, extract_path)
 
-    print("Files extracted")
+    print("Files extracted", file=logfile)
 
     if delete:
-        print("Deleting devicon zip file...")
+        print("Deleting devicon zip file...", file=logfile)
         icomoon_zip.close()
         os.remove(zip_path)
 
 
-def rename_extracted_files(extract_path: str):
+def fixBadZipfile(zippath: str, logfile: FileIO):  
+    """
+    Fix a bad zipfile (one that causes zipfile.ZipFile to throw a BadZipfile Error).
+    Taken from https://stackoverflow.com/a/11385480/11683637.
+    """
+    f = open(zippath, 'r+b')  
+    data = f.read()  
+    pos = data.find(b'\x50\x4b\x05\x06') # End of central directory signature  
+    if (pos > 0):  
+        # self._log("Trancating file at location " + str(pos + 22)+ ".")  
+        f.seek(pos + 22)   # size of 'ZIP end of central directory record' 
+        f.truncate()  
+    else:
+        print("Zipfile don't need to be fixed", file=logfile)
+
+    f.close() 
+
+
+def rename_extracted_files(extract_path: str, logfile: FileIO):
     """
     Rename the extracted files selection.json and style.css.
     :param extract_path, the location where the function
     can find the extracted files.
     :return: None.
     """
-    print("Renaming files")
+    print("Renaming files", file=logfile)
     old_to_new_list = [
         {
             "old": Path(extract_path, "selection.json"),
@@ -184,7 +205,7 @@ def rename_extracted_files(extract_path: str):
     for dict_ in old_to_new_list:
         os.replace(dict_["old"], dict_["new"])
 
-    print("Files renamed")
+    print("Files renamed", file=logfile)
 
 
 def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
