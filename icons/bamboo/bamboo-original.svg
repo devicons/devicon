@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128px" height="px" viewBox="0 0 128 128" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="11.2175" y1="7.48601" x2="11.2175" y2="21.607" gradientTransform="matrix(4,0,0,4,0,0)">
+<stop offset="0" style="stop-color:rgb(0%,32.156863%,80%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(14.901961%,51.764706%,100%);stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="11.1683" y1="7.48595" x2="11.1683" y2="21.6069" gradientTransform="matrix(4,0,0,4,0,0)">
+<stop offset="0" style="stop-color:rgb(0%,32.156863%,80%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(14.901961%,51.764706%,100%);stop-opacity:1;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(14.901961%,51.764706%,100%);fill-opacity:1;" d="M 104.132812 70.632812 L 84.132812 70.632812 C 82.898438 70.632812 81.667969 71.59375 81.53125 72.824219 C 80.433594 80.769531 73.585938 86.933594 65.367188 86.933594 L 70.710938 111.589844 C 90.160156 108.988281 105.363281 93.097656 106.734375 73.371094 C 106.871094 71.867188 105.636719 70.632812 104.132812 70.632812 Z M 104.132812 70.632812 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(14.901961%,51.764706%,100%);fill-opacity:1;" d="M 69.746094 69.949219 L 98.511719 45.292969 C 99.746094 44.195312 99.746094 42.414062 98.511719 41.320312 L 69.746094 16.664062 C 68.101562 15.15625 65.5 16.390625 65.5 18.582031 L 65.5 67.894531 C 65.363281 70.222656 67.964844 71.457031 69.746094 69.949219 Z M 69.746094 69.949219 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 24.273438 75.976562 C 26.878906 96.246094 44.273438 112 65.367188 112 L 65.367188 86.933594 C 56.328125 86.933594 48.929688 79.671875 48.929688 70.632812 Z M 24.273438 75.976562 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 24 70.222656 L 24 70.632812 L 49.066406 70.632812 C 49.066406 61.59375 56.464844 54.332031 65.503906 54.332031 L 60.160156 29.675781 C 39.890625 32.28125 24.136719 49.402344 24 70.222656 Z M 24 70.222656 "/>
+</g>
+</svg>
