@@ -493,7 +493,9 @@
     },
     {
         "name": "bitbucket",
-        "tags": [],
+        "tags": [
+            "version-control"
+        ],
         "versions": {
             "svg": [
                 "original",
@@ -887,7 +889,11 @@
     },
     {
         "name": "confluence",
-        "tags": [],
+        "tags": [
+            "collaboration",
+            "documentation",
+            "wiki"
+        ],
         "versions": {
             "svg": [
                 "original",
