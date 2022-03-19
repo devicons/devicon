@@ -1,31 +1,31 @@
 [
     {
-      "name": "adonisjs",
-      "tags": [
-          "nodejs",
-          "framework"
-      ],
-      "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
-          ],
-          "font": [
-              "original",
-              "original-wordmark"
-          ]
-      },
-      "color": "#5A45FF",
-      "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
+        "name": "adonisjs",
+        "tags": [
+            "nodejs",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#5A45FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "aftereffects",
@@ -4511,6 +4511,25 @@
             ]
         },
         "color": "#3C99D4",
+        "aliases": []
+    },
+    {
+        "name": "webflow",
+        "tags": [
+            "cms",
+            "ecommerce",
+            ""
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#4353ff",
         "aliases": []
     },
     {
