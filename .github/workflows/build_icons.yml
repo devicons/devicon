@@ -33,6 +33,13 @@ jobs:
           name: geckodriver-log
           path: ./geckodriver.log
 
+      - name: Upload log file for debugging purposes
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: logfile
+          path: ./log.txt
+
       - name: Build devicon.min.css
         if: success() 
         run: npm run build-css

@@ -1,5 +1,6 @@
 from pathlib import Path
-from selenium.webdriver.common import service
+from io import FileIO
+import sys
 
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.firefox.service import Service
@@ -8,6 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import TimeoutException as SeleniumTimeoutException
+from selenium.common.exceptions import ElementNotInteractableException
 
 from build_assets.selenium_runner.enums import IcomoonOptionState, IcomoonPage, IcomoonAlerts
 
@@ -106,7 +108,7 @@ class SeleniumRunner:
     }
 
     def __init__(self, download_path: str,
-                 geckodriver_path: str, headless: bool):
+                 geckodriver_path: str, headless: bool, log_output: FileIO=sys.stdout):
         """
         Create a SeleniumRunner object.
         :param download_path: the location where you want to download
@@ -117,7 +119,16 @@ class SeleniumRunner:
         self.driver = None
         # default values when we open Icomoon
         self.current_option_state = IcomoonOptionState.SELECT
+        """
+        Track the current option in the tool bar.
+        """
+
         self.current_page = IcomoonPage.SELECTION
+        """Track the current page the driver is on."""
+
+        file=self.log_output = log_output
+        """The log output stream. Default is stdout."""
+
         self.set_browser_options(download_path, geckodriver_path, headless)
 
     def set_browser_options(self, download_path: str, geckodriver_path: str,
@@ -145,7 +156,7 @@ class SeleniumRunner:
         options.set_preference("browser.download.dir", download_path)
         options.headless = headless
 
-        print("Activating browser client...")
+        print("Activating browser client...", file=self.log_output)
         self.driver = self.create_driver_instance(options, geckodriver_path)
 
         self.driver.get(self.ICOMOON_URL)
@@ -153,7 +164,7 @@ class SeleniumRunner:
         WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
             ec.element_to_be_clickable((By.XPATH, "(//i[@class='icon-menu'])[2]"))
         )
-        print("Accessed icomoon.io")
+        print("Accessed icomoon.io", file=self.log_output)
 
     def create_driver_instance(self, options: Options, geckodriver_path: str):
         """
@@ -163,44 +174,37 @@ class SeleniumRunner:
         :param geckodriver_path: the path to the firefox executable.
         the icomoon.zip to.
         """
-        retries = SeleniumRunner.MAX_RETRY
-        finished = False
         driver = None
         err_msgs = [] # keep for logging purposes
-        while not finished and retries > 0:
+        for i in range(SeleniumRunner.MAX_RETRY):
             try:
-                # order matters, don't change the lines below
-                finished = True # signal we are done in case we are actually done
-
                 # customize the local server
                 service = None
-                # first retry: use 8080
+                # first try: use 8080
                 # else: random
-                if retries == SeleniumRunner.MAX_RETRY:
+                if i == 0:
                     service = Service(executable_path=geckodriver_path, port=8080)
                 else:
                     service = Service(executable_path=geckodriver_path)
                 driver = WebDriver(options=options, service=service)
-            except SeleniumTimeoutException as e:
-                # retry. This is intended to catch "no connection could be made" error
-                retries -= 1 
-                finished = False # flip the var so we can retry
-                msg = f"Retry {retries}/{SeleniumRunner.MAX_RETRY} SeleniumTimeoutException: {e.msg}"
-                print(msg)
-                err_msgs.append(msg)
             except Exception as e:
-                # anything else: unsure if retry works. Just end the retry
-                msg = f"Retry {retries}/{SeleniumRunner.MAX_RETRY} Exception: {e}"
+                # retry. This is intended to catch "no connection could be made" error
+                # anything else: unsure if retry works. Still retry
+                msg = f"Retry {i + 1}/{SeleniumRunner.MAX_RETRY} Exception: {e}"
                 err_msgs.append(msg)
-                print(msg)
+                print(msg, file=self.log_output)
+            else:
+                # works fine
                 break
+        else:
+            # out of retries
+            # handle situation when we can't make a driver
+            err_msg_formatted = '\n'.join(reversed(err_msgs))
+            msg = f"Unable to create WebDriver Instance:\n{err_msg_formatted}"
+            raise Exception(msg)
 
-        if driver is not None:
-            return driver
+        return driver
 
-        err_msg_formatted = '\n'.join(reversed(err_msgs))
-        msg = f"Unable to create WebDriver Instance:\n{err_msg_formatted}"
-        raise Exception(msg)
 
     def switch_toolbar_option(self, option: IcomoonOptionState):
         """
@@ -311,7 +315,7 @@ class SeleniumRunner:
             edit_screen = self.driver.find_element_by_css_selector(
                 edit_screen_selector)
             edit_screen.screenshot(screenshot_path)
-            print("Took screenshot of svg and saved it at " + screenshot_path)
+            print("Took screenshot of svg and saved it at " + screenshot_path, file=self.log_output)
 
         close_btn = self.driver \
             .find_element_by_css_selector("div.overlayWindow i.icon-close")
@@ -334,11 +338,22 @@ class SeleniumRunner:
         """
         Select all the svgs in the top most (latest) set.
         """
-        self.click_hamburger_input()
-        select_all_button = WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
-            ec.element_to_be_clickable((By.XPATH, "//button[text()='Select All']"))
-        )
-        select_all_button.click()
+        tries = 3
+        for i in range(tries):
+            try:
+                self.click_hamburger_input()
+                select_all_button = WebDriverWait(self.driver, self.SHORT_WAIT_IN_SEC).until(
+                    ec.element_to_be_clickable((By.XPATH, "//button[text()='Select All']"))
+                )
+                select_all_button.click()
+            except ElementNotInteractableException:
+                # retry until it works
+                pass
+            else:
+                break
+        else:
+            # after all tries and still can't click? Raise an error
+            raise ElementNotInteractableException("Can't click the 'Select All' button in the hamburger input.")
 
     def deselect_all_icons_in_top_set(self):
         """
@@ -366,5 +381,5 @@ class SeleniumRunner:
         """
         Close the SeleniumRunner instance.
         """
-        print("Closing down SeleniumRunner...")
+        print("Closing down SeleniumRunner...", file=self.log_output)
         self.driver.quit()

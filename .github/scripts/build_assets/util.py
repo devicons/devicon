@@ -4,13 +4,17 @@ from typing import List
 import platform
 import sys
 import traceback
+from io import FileIO
 
-def exit_with_err(err: Exception):
+def exit_with_err(err: Exception, logfile: FileIO=None):
     """
     Exit the current step and display the err.
     :param: err, the error/exception encountered.
     """
-    traceback.print_exc()
+    if logfile:
+        traceback.print_exc(file=logfile)
+    else:
+        traceback.print_exc()
     sys.exit(1)
 
 
