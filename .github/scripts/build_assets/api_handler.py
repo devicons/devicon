@@ -2,12 +2,13 @@ import requests
 import sys
 import re
 from typing import List
+from io import FileIO
 
 
 # our base url which leads to devicon
 base_url = "https://api.github.com/repos/devicons/devicon/"
 
-def get_merged_pull_reqs_since_last_release(token):
+def get_merged_pull_reqs_since_last_release(token, log_output: FileIO=sys.stdout):
     """
     Get all the merged pull requests since the last release.
     """
@@ -16,9 +17,8 @@ def get_merged_pull_reqs_since_last_release(token):
     found_last_release = False
     page = 1
 
-    print("Getting PRs since last release.")
     while not found_last_release:
-        data = get_merged_pull_reqs(token, page)
+        data = get_merged_pull_reqs(token, page, log_output)
         # assume we don't encounter it during the loop
         last_release_index = 101 
 
@@ -34,7 +34,7 @@ def get_merged_pull_reqs_since_last_release(token):
     return pull_reqs
 
 
-def get_merged_pull_reqs(token, page):
+def get_merged_pull_reqs(token, page, log_output: FileIO=sys.stdout):
     """
     Get the merged pull requests based on page. There are 
     100 results per page. See https://docs.github.com/en/rest/reference/pulls
@@ -53,7 +53,7 @@ def get_merged_pull_reqs(token, page):
         "page": page
     }
 
-    print(f"Querying the GitHub API for requests page #{page}")
+    print(f"Querying the GitHub API for requests page #{page}", file=log_output)
     response = requests.get(url, headers=headers, params=params)
     if not response:
         print(f"Can't query the GitHub API. Status code is {response.status_code}. Message is {response.text}")

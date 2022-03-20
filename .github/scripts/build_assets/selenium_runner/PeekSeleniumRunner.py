@@ -28,7 +28,7 @@ class PeekSeleniumRunner(SeleniumRunner):
         :return an array of svgs with strokes as strings. These show which icon
         contains stroke.
         """
-        print("Peeking SVGs...")
+        print("Peeking SVGs...", file=self.log_output)
 
         import_btn = self.driver.find_element_by_css_selector(
             SeleniumRunner.GENERAL_IMPORT_BUTTON_CSS
@@ -37,13 +37,13 @@ class PeekSeleniumRunner(SeleniumRunner):
         svgs_with_strokes = []
         for i in range(len(svgs)):
             import_btn.send_keys(svgs[i])
-            print(f"Uploaded {svgs[i]}")
+            print(f"Uploaded {svgs[i]}", file=self.log_output)
 
             alert = self.test_for_possible_alert(self.SHORT_WAIT_IN_SEC)
             if alert == None:
                 pass  # all good
             elif alert == IcomoonAlerts.STROKES_GET_IGNORED_WARNING:
-                print(f"- This icon contains strokes: {svgs[i]}")
+                print(f"- This icon contains strokes: {svgs[i]}", file=self.log_output)
                 svg = Path(svgs[i])
                 svgs_with_strokes.append(f"- {svg.name}")
                 self.click_alert_button(self.ALERTS[alert]["buttons"]["DISMISS"])
@@ -57,9 +57,9 @@ class PeekSeleniumRunner(SeleniumRunner):
         new_svgs_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
         icon_set_xpath = "/html/body/div[4]/div[1]/div[2]/div[1]"
         icon_set = self.driver.find_element_by_xpath(icon_set_xpath)
-        icon_set.screenshot(new_svgs_path);
+        icon_set.screenshot(new_svgs_path)
 
-        print("Finished peeking the svgs...")
+        print("Finished peeking the svgs...", file=self.log_output)
         return svgs_with_strokes
 
     def peek_icons(self, screenshot_folder: str, icon_info: dict):
@@ -68,7 +68,7 @@ class PeekSeleniumRunner(SeleniumRunner):
         :param screenshot_folder: the name of the screenshot_folder. 
         :param icon_info: a dictionary containing info on an icon. Taken from the devicon.json.
         """
-        print("Begin peeking at the icons...")
+        print("Begin peeking at the icons...", file=self.log_output)
         # ensure all icons in the set is selected.
         self.select_all_icons_in_top_set()
         self.go_to_page(IcomoonPage.GENERATE_FONT)
@@ -119,4 +119,4 @@ class PeekSeleniumRunner(SeleniumRunner):
 
             i += 1
 
-        print("Finished peeking the icons...")
+        print("Finished peeking the icons...", file=self.log_output)
