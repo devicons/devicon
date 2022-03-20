@@ -1755,6 +1755,25 @@
         "aliases": []
     },
     {
+        "name": "gentoo", 
+        "tags": [
+            "linux",
+            "distribuition",
+            "desktop"
+        ], 
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ] 
+        },
+        "color": "#9991d9", 
+        "aliases": [] 
+    },
+    {
         "name": "gimp",
         "tags": [
             "graphic"
