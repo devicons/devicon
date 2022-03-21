@@ -1767,7 +1767,8 @@
                 "plain-wordmark"
             ],
             "font": [
-                "plain-wordmark"
+                "plain-wordmark",
+                "plain"
             ] 
         },
         "color": "#9991d9", 
