@@ -1,4 +1,7 @@
 <h1>Contributing to Devicon</h1>
+
+<h2>This guide has been converted to a <a href="https://github.com/devicons/devicon/wiki">Wiki</a>! This document will eventually be removed, please use the Wiki instead.</h2>
+<br>
 <p>
 First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintainable, we have developed some guidelines for our contributors.
 </p>
@@ -20,6 +23,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li><a href="#bugs">Common Bugs and Solutions</a></li>
   <li><a href="#discordServer">Discord server</a></li>
   <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
+  <li><a href="#resources">Recommended resources and tools</a></li>
 </ul>
 
 <hr>
@@ -106,8 +110,8 @@ First of all, thanks for taking the time to contribute! This project can only gr
       </td>
       <td style='width: 33%'>
           <p><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
-          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line.svg' height='100px' width='100px' />
-          <h4>apache-line.svg</h4>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-line.svg' height='100px' width='100px' />
+          <h4>devicon-line.svg</h4>
       </td>
     </tr>
     <tr>
@@ -123,8 +127,8 @@ First of all, thanks for taking the time to contribute! This project can only gr
       </td>
       <td style='width: 33%'>
           <p><b>line-wordmark</b>: similar to the above but must contain the name of the technology. Note that the icon version will be stripped of all colors so you don't have to strip beforehand.</p>      
-          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-line-wordmark.svg' height='100px' width='100px' />
-          <h4>apache-line-wordmark.svg</h4>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-line-wordmark.svg' height='100px' width='100px' />
+          <h4>devicon-line-wordmark.svg</h4>
       </td>
     </tr>
   </table>
@@ -490,3 +494,13 @@ We are running a Discord server. You can go here to talk, discuss, and more with
     <li>Create a <a href="https://github.com/devicons/devicon/releases/new">new release</a> using the format "<b>Release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i></b>" as tag and release title. Use the earlier created description as description of the release.</li>
     <li>Publishing the release will trigger the <a href="/.github/workflows/npm_publish.yml">npm_publish.yml</a> workflow which will execute a <code>npm publish</code> leading to a updated <a href="https://www.npmjs.com/package/devicon">npm package</a> (v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).</li>
 </ol>
+
+<h2 id='resources'>Recommended resources and tools</h2>
+
+| Tool Name          | Link                                               | Description & Usage                                |
+| :----------------- | :------------------------------------------------- | :------------------------------------------------- |
+| Inkscape           | https://inkscape.org/                              | Desktop application for editing and Making SVG's   |
+| Visual Studio Code | https://code.visualstudio.com/                     | A code editor for editing code                     |
+| vscode.dev         | https://vscode.dev/                                | Visual Studio Code in the browser                  |
+| Iloveimg           | https://www.iloveimg.com/resize-image/resize-svg   | Resizing SVG's                                     |
+| svgviewer.dev      | https://www.svgviewer.dev/                         | View, save, and optimize SVGs                      |

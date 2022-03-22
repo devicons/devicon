@@ -23,7 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
           python ./.github/scripts/icomoon_build.py 
-          ./.github/scripts/build_assets/geckodriver-v0.29.1-win64/geckodriver.exe ./icomoon.json 
+          ./.github/scripts/build_assets/geckodriver-v0.30.0-win64/geckodriver.exe ./icomoon.json 
           ./devicon.json ./icons ./ %GITHUB_TOKEN% --headless
 
       - name: Upload geckodriver.log for debugging purposes
@@ -32,6 +32,13 @@ jobs:
         with:
           name: geckodriver-log
           path: ./geckodriver.log
+
+      - name: Upload log file for debugging purposes
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: logfile
+          path: ./log.txt
 
       - name: Build devicon.min.css
         if: success() 

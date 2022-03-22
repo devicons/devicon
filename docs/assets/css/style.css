@@ -2,6 +2,17 @@
 @import '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css';
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Damion);
+:root {
+  /* color */
+  --primaryColor: #60be86;
+  --primaryColorDark: #2D804E;
+  --primaryColorLight: #65d693;
+  --grey: #4c6857;
+
+  /* sizing */
+  --listItemPadding: 0.4rem;
+}
+
 html {
   box-sizing: border-box; }
 
@@ -16,71 +27,6 @@ html {
     display: inline-block;
     background-size: cover;
 }
-
-.icon-brush:before {
-  content: "\e600"; }
-
-.icon-type:before {
-  content: "\e601"; }
-
-.icon-github:before {
-  content: "\e602"; }
-
-.icon-github2:before {
-  content: "\e603"; }
-
-.icon-bucket:before {
-  content: "\e605"; }
-
-.icon-github3:before {
-  content: "\e604"; }
-
-.icon-bucket2:before {
-  content: "\e606"; }
-
-/* Cachons la case à cocher */
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
-  position: absolute;
-  left: -9999px; }
-
-/* on prépare le label */
-[type="checkbox"]:not(:checked) + label,
-[type="checkbox"]:checked + label {
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
-  display: inline-block;
-  padding: 0.71429rem 1.07143rem;
-  margin-left: 0.35714rem;
-  font-family: "Lato", Calibri, Arial, sans-serif;
-  font-weight: 700;
-  color: #60be86;
-  background: #4f755e;
-  box-shadow: 0px 6px 0px #4a5c51;
-  border-radius: 5px; }
-
-/* Aspect si "cochée" */
-[type="checkbox"]:checked + label {
-  top: 6px;
-  box-shadow: 0px 0px 0px #4a5c51; }
-
-.button {
-  position: relative;
-  z-index: 10;
-  display: inline-block;
-  padding: 0.71429rem 1.07143rem;
-  margin: 0 0.71429rem;
-  font-family: "Lato", Calibri, Arial, sans-serif;
-  font-weight: 700;
-  color: #60be86;
-  background: #4c6857;
-  text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0px 6px 0px #4a5c51; }
-  .button:active {
-    top: 6px;
-    box-shadow: 0px 0px 0px #4a5c51; }
 
 /* General Blueprint Style */
 *,
@@ -105,12 +51,11 @@ html {
   clear: both; }
 
 body {
-  color: #47a3da;
   font-family: 'Lato', Calibri, Arial, sans-serif; }
 
 a {
   color: #f0f0f0;
-  text-decoration: none; }
+}
 
 a:hover {
   color: #000; }
@@ -137,7 +82,7 @@ a:hover {
 .cbp-ig-grid li > span {
   display: block;
   height: 100%;
-  color: #60be86;
+  color: var(--primaryColor);
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   transition: background 0.2s;
@@ -173,7 +118,7 @@ a:hover {
 .cbp-ig-grid .cbp-ig-title:before {
   content: '';
   position: absolute;
-  background: #60be86;
+  background: var(--primaryColor);
   width: 60px;
   height: 2px;
   top: 0;
@@ -184,7 +129,7 @@ a:hover {
   transition: margin-top 0.2s; }
 
 .cbp-ig-grid li > span:hover {
-  background: #60be86; }
+  background: var(--primaryColor); }
 
 .cbp-ig-grid li > span:hover .cbp-ig-icon {
   -webkit-transform: translateY(10px);
@@ -252,7 +197,7 @@ header {
   padding: 0 2rem;
   width: 480px;
   color: whitesmoke;
-  background: #60be86; }
+  background: var(--primaryColor); }
   header > h1,
   header > h3 {
     font-weight: 400;
@@ -266,24 +211,24 @@ header {
   header > h2 {
     font-weight: 400;
     font-size: 1.3rem; }
-  header .download {
+  header .buttonLink {
     margin: 2rem 0 0;
     font-weight: 900;
     font-size: 1.3rem;
     text-align: center; }
-    header .download i {
+    header .buttonLink i {
       position: relative;
       top: 12px;
       left: -10px;
       font-size: 3rem; }
-    header .download a {
+    header .buttonLink > a {
       padding: 1.3rem 1.8rem;
-      border: 6px solid #60be86;
-      color: #60be86;
-      background: whitesmoke; }
-    header .download a:hover {
-      border-color: whitesmoke;
-      color: #60be86; }
+      border: 6px solid var(--primaryColor);
+      color: var(--primaryColor);
+      background: whitesmoke; 
+      text-decoration: none;}
+    header .buttonLink a:hover {
+      border-color: whitesmoke; }
   header > h3 {
     margin: 4rem 0 0;
     font-size: 3rem;
@@ -306,20 +251,24 @@ header {
   header .icons-list {
     margin: 1rem 0;
     padding: 0;
-    list-style: none; }
+    list-style: none;
+    position: relative; }
     header .icons-list > div {
       display: inline; }
+
     header .icons-list li {
       position: relative;
       display: inline-block;
       width: 6.5rem;
       margin: .5rem .3rem;
-      padding: .4rem;
+      padding: var(--listItemPadding);
       cursor: pointer;
-      border: 5px solid #60be86; }
+      border: 5px solid var(--primaryColor); }
+
       header .icons-list li:hover {
-        border: 5px solid #65d693;
+        border: 5px solid var(--primaryColorLight);
         border-radius: 5px; }
+
         header .icons-list li:hover::before {
           content: ' ';
           position: absolute;
@@ -330,10 +279,12 @@ header {
           height: 0px;
           border-left: 15px solid transparent;
           border-right: 15px solid transparent;
-          border-top: 15px solid #65d693; }
+          border-top: 15px solid var(--primaryColorLight); }
+
       header .icons-list li.selected-version {
-        border: 5px solid #65d693;
+        border: 5px solid var(--primaryColorLight);
         border-radius: 5px; }
+
       header .icons-list li.selected-version::before {
         position: absolute;
         bottom: -19px;
@@ -341,14 +292,116 @@ header {
         display: block;
         width: 0;
         height: 0;
-        border-top: 15px solid #65d693;
+        border-top: 15px solid var(--primaryColorLight);
         border-right: 15px solid transparent;
         border-left: 15px solid transparent;
         content: ' '; }
-    header .icons-list i {
-      font-size: 5rem; }
+
+    header .icons-list i,
+    .svgLogo {
+      font-size: 5rem; 
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: var(--listItemPadding); 
+    }
+
     header .icons-list img {
       max-width: 100%; }
+
+
+/** color picker */
+.colorPicker {
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 50%;
+}
+
+.colorPicker:hover {
+  cursor: pointer;
+  border: 1px solid whitesmoke;
+}
+
+.colorPickerMenu {
+  position: absolute;
+  font-size: 1rem;
+  background-color: var(--primaryColor);
+  border-radius: 0.2em;
+  border: 1px solid var(--grey);
+  transform: translate(0, -30%);
+  padding: 1em;
+  margin-left: 1em;
+  font-weight: normal;
+  z-index: 1;
+  display: none;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.colorPickerMenuCloseBtn > span:hover {
+  cursor: pointer;
+}
+
+.colorPickerBtn {
+  margin: auto;
+  margin-top: 0.5em;
+  width: min-content;
+  background-color: var(--primaryColor);
+  border-radius: 1em;
+  border: 1px solid var(--grey);
+  display: inline-block;
+}
+
+.colorPickerBtn:hover {
+  background-color: var(--grey);
+}
+
+.checkerboardInput {
+  width: 1.25em;
+  height: 1.25em;
+  position: relative;
+  top: 0.2em;
+}
+
+.checkerboardInput:hover {
+  cursor: pointer;
+}
+
+input[type='color'] {
+  width: 1.25em;
+  height: 1.25em;
+  padding: 0;
+}
+
+input[type='color']:hover {
+  cursor: pointer;
+}
+
+/** Copy Btn */
+
+.copyBtn {
+  height: 1.25em;
+  width: 1.25em;
+  margin-left: 0.25em;
+  position: relative;
+  top: 0.5em;
+  border-radius: 20%;
+  padding: 0.25em;
+  box-sizing: content-box;
+  transition: background-color 0.25s;
+}
+
+.copyBtn:hover {
+  cursor: pointer;
+  background-color: var(--primaryColorDark);
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: var(--primaryColorDark);
+  border-radius: 0.25em;
+  padding: 0.25em;
+}
 
 .borders {
   position: fixed;
@@ -357,7 +410,7 @@ header {
   bottom: 0;
   left: 0;
   z-index: -1;
-  border: 8px solid #60be86; }
+  border: 8px solid var(--primaryColor); }
 
 .main {
   margin: 0 0 0 480px; }
@@ -369,32 +422,34 @@ header {
     margin: 4rem;
     padding: .5rem 1rem;
     border: 0;
-    border-bottom: 2px solid #60be86;
-    color: #60be86;
+    border-bottom: 2px solid var(--primaryColor);
+    color: var(--primaryColor);
     background: none;
     font-size: 1.2rem;
     text-align: center; }
 
 ::-webkit-input-placeholder {
-  color: #60be86; }
+  color: var(--primaryColor); }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #60be86; }
+  color: var(--primaryColor); }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #60be86; }
+  color: var(--primaryColor); }
 
 :-ms-input-placeholder {
-  color: #60be86; }
+  color: var(--primaryColor); }
+
+/* Code related CSS */
 
 .cde {
   white-space: nowrap;
   padding: 1rem;
   border-radius: 4px;
-  color: #4c6857;
-  background: #65d693;
+  color: var(--grey);
+  background: var(--primaryColorLight);
   font-size: .9rem;
   font-family: courier;
   overflow: auto; }
@@ -403,15 +458,9 @@ header {
   padding: 0 0 0 .5rem; }
 
 .cde-com {
-  color: #4c6857;
+  color: var(--grey);
   opacity: .5; }
 
-.footer {
+footer {
   margin-top: 6rem;
   text-align: center; }
-
-input[type='color'] {
-  width: 1.25em;
-  height: 1.25em;
-  margin-left: 0.5em;
-}
