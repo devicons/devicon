@@ -1,10 +1,9 @@
 import json
-from zipfile import ZipFile, is_zipfile
+from zipfile import ZipFile
 from pathlib import Path
-from typing import List, Union
+from typing import List
 import os
 import re
-from io import FileIO
 
 
 def find_new_icons_in_devicon_json(devicon_json_path: str, icomoon_json_path: str):
@@ -69,7 +68,7 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str,
         folder_path = Path(icons_folder_path, icon_info['name'])
 
         if not folder_path.is_dir():
-            raise ValueError(f"Invalid path. This is not a directory: '{folder_path}'.")
+            raise ValueError(f"Invalid path. This is not a directory: {folder_path}.")
 
         if icon_versions_only:
             get_icon_svgs_paths(folder_path, icon_info, file_paths, as_str)
@@ -79,7 +78,7 @@ def get_svgs_paths(new_icons: List[dict], icons_folder_path: str,
 
 
 def get_icon_svgs_paths(folder_path: Path, icon_info: dict,
-    file_paths: List[Union[str, Path]], as_str: bool):
+    file_paths: List[str], as_str: bool):
     """
     Get only the svg file paths that can be made into an icon from the icon_info.
     :param: folder_path, the folder where we can find the icons.
@@ -101,11 +100,11 @@ def get_icon_svgs_paths(folder_path: Path, icon_info: dict,
         if path.exists():
             file_paths.append(str(path) if as_str else path)
         else:
-            raise ValueError(f"This path doesn't exist: '{path}'")
+            raise ValueError(f"This path doesn't exist: {path}")
 
 
 def get_all_svgs_paths(folder_path: Path, icon_info: dict,
-    file_paths: List[Union[str, Path]], as_str: bool):
+    file_paths: List[str], as_str: bool):
     """
     Get all the svg file paths of an icon.
     :param: folder_path, the folder where we can find the icons.
@@ -120,7 +119,7 @@ def get_all_svgs_paths(folder_path: Path, icon_info: dict,
         if path.exists():
             file_paths.append(str(path) if as_str else path)
         else:
-            raise ValueError(f"This path doesn't exist: '{path}'")
+            raise ValueError(f"This path doesn't exist: {path}")
 
 
 def is_alias(font_version: str, aliases: List[dict]):
@@ -134,7 +133,7 @@ def is_alias(font_version: str, aliases: List[dict]):
     return False
 
 
-def extract_files(zip_path: str, extract_path: str, logfile: FileIO, delete=True):
+def extract_files(zip_path: str, extract_path: str, delete=True):
     """
     Extract the style.css and font files from the devicon.zip
     folder. Must call the gulp task "get-icomoon-files"
@@ -145,11 +144,9 @@ def extract_files(zip_path: str, extract_path: str, logfile: FileIO, delete=True
     will put the extracted files.
     :param delete, whether the function should delete the zip file
     when it's done.
-    :param logfile
     """
-    print("Extracting zipped files...", file=logfile)
-    fixBadZipfile(zip_path, logfile)
-    print(f"it's zipped {is_zipfile(zip_path)}", file=logfile)
+    print("Extracting zipped files...")
+
     icomoon_zip = ZipFile(zip_path)
     target_files = ('selection.json', 'fonts/', 'fonts/devicon.ttf',
                     'fonts/devicon.woff', 'fonts/devicon.eot',
@@ -157,40 +154,22 @@ def extract_files(zip_path: str, extract_path: str, logfile: FileIO, delete=True
     for file in target_files:
         icomoon_zip.extract(file, extract_path)
 
-    print("Files extracted", file=logfile)
+    print("Files extracted")
 
     if delete:
-        print("Deleting devicon zip file...", file=logfile)
+        print("Deleting devicon zip file...")
         icomoon_zip.close()
         os.remove(zip_path)
 
 
-def fixBadZipfile(zippath: str, logfile: FileIO):  
-    """
-    Fix a bad zipfile (one that causes zipfile.ZipFile to throw a BadZipfile Error).
-    Taken from https://stackoverflow.com/a/11385480/11683637.
-    """
-    f = open(zippath, 'r+b')  
-    data = f.read()  
-    pos = data.find(b'\x50\x4b\x05\x06') # End of central directory signature  
-    if (pos > 0):  
-        # self._log("Trancating file at location " + str(pos + 22)+ ".")  
-        f.seek(pos + 22)   # size of 'ZIP end of central directory record' 
-        f.truncate()  
-    else:
-        print("Zipfile don't need to be fixed", file=logfile)
-
-    f.close() 
-
-
-def rename_extracted_files(extract_path: str, logfile: FileIO):
+def rename_extracted_files(extract_path: str):
     """
     Rename the extracted files selection.json and style.css.
     :param extract_path, the location where the function
     can find the extracted files.
     :return: None.
     """
-    print("Renaming files", file=logfile)
+    print("Renaming files")
     old_to_new_list = [
         {
             "old": Path(extract_path, "selection.json"),
@@ -205,7 +184,7 @@ def rename_extracted_files(extract_path: str, logfile: FileIO):
     for dict_ in old_to_new_list:
         os.replace(dict_["old"], dict_["new"])
 
-    print("Files renamed", file=logfile)
+    print("Files renamed")
 
 
 def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
@@ -228,14 +207,6 @@ def create_screenshot_folder(dir, screenshot_name: str="screenshots/"):
     finally:
         return str(screenshot_folder)
 
-def write_to_file(path: str, value):
-    """
-    Write the value to a file.
-    """
-    with open(path, "w") as file:
-        file.write(value)
-
-# --- NOT USED CURRENTLY --- 
 def get_added_modified_svgs(files_added_json_path: str,
     files_modified_json_path: str):
     """
@@ -259,3 +230,11 @@ def get_added_modified_svgs(files_added_json_path: str,
             svgs.append(path)
     
     return svgs
+
+
+def write_to_file(path: str, value: any):
+    """
+    Write the value to a file.
+    """
+    with open(path, "w") as file:
+        file.write(value)

@@ -27,7 +27,7 @@ class BuildSeleniumRunner(SeleniumRunner):
         :param icomoon_json_path: a path to the iconmoon.json.
         :raises TimeoutException: happens when elements are not found.
         """
-        print("Uploading icomoon.json file...", file=self.log_output)
+        print("Uploading icomoon.json file...")
         
         # find the file input and enter the file path
         import_btn = self.driver.find_element_by_css_selector(
@@ -44,7 +44,7 @@ class BuildSeleniumRunner(SeleniumRunner):
             raise Exception("Cannot find the confirm button when uploading the icomoon.json" \
                   "Ensure that the icomoon.json is in the correct format for Icomoon.io")
 
-        print("JSON file uploaded.", file=self.log_output)
+        print("JSON file uploaded.")
 
     def upload_svgs(self, svgs: List[str], screenshot_folder: str):
         """
@@ -52,7 +52,7 @@ class BuildSeleniumRunner(SeleniumRunner):
         :param svgs: a list of svg Paths that we'll upload to icomoon.
         :param screenshot_folder: the name of the screenshot_folder. 
         """
-        print("Uploading SVGs...", file=self.log_output)
+        print("Uploading SVGs...")
 
         import_btn = self.driver.find_element_by_css_selector(
             SeleniumRunner.SET_IMPORT_BUTTON_CSS
@@ -63,7 +63,7 @@ class BuildSeleniumRunner(SeleniumRunner):
         err_messages = []
         for i in range(len(svgs)):
             import_btn.send_keys(svgs[i])
-            print(f"Uploading {svgs[i]}", file=self.log_output)
+            print(f"Uploading {svgs[i]}")
 
             # see if there are stroke messages or replacing icon message
             # there should be none of the second kind
@@ -83,9 +83,8 @@ class BuildSeleniumRunner(SeleniumRunner):
                     raise Exception(f"Unexpected alert found: {alert}")
 
             self.edit_svg()
-            print(f"Finished editing icon.", file=self.log_output)
+            print(f"Finished editing icon.")
 
-        print("Finished uploading all files.", file=self.log_output)
         if err_messages != []:
             message = "BuildSeleniumRunner - Issues found when uploading SVGs:\n"
             raise Exception(message + '\n'.join(err_messages))
@@ -93,11 +92,11 @@ class BuildSeleniumRunner(SeleniumRunner):
         # take a screenshot of the svgs that were just added
         # select the latest icons
         self.switch_toolbar_option(IcomoonOptionState.SELECT)
-        self.select_all_icons_in_top_set()
+        self.click_latest_icons_in_top_set(len(svgs)) 
         new_svgs_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
-        self.driver.save_screenshot(new_svgs_path)
+        self.driver.save_screenshot(new_svgs_path);
 
-        print("Finished uploading the svgs...", file=self.log_output)
+        print("Finished uploading the svgs...")
 
     def take_icon_screenshot(self, screenshot_folder: str):
         """
@@ -106,7 +105,7 @@ class BuildSeleniumRunner(SeleniumRunner):
         :param screenshot_folder: the name of the screenshot_folder. 
         """
         # take pictures
-        print("Taking screenshot of the new icons...", file=self.log_output)
+        print("Taking screenshot of the new icons...")
         self.go_to_generate_font_page()
 
         # take an overall screenshot of the icons that were just added
@@ -114,11 +113,8 @@ class BuildSeleniumRunner(SeleniumRunner):
         new_icons_path = str(Path(screenshot_folder, "new_icons.png").resolve())
         main_content_xpath = "/html/body/div[4]/div[2]/div/div[1]"
         main_content = self.driver.find_element_by_xpath(main_content_xpath)
-
-        # wait a bit for all the icons to load before we take a pic
-        time.sleep(SeleniumRunner.MED_WAIT_IN_SEC)
         main_content.screenshot(new_icons_path)
-        print("Saved screenshot of the new icons...", file=self.log_output)
+        print("Saved screenshot of the new icons...")
 
     def go_to_generate_font_page(self):
         """
@@ -141,7 +137,7 @@ class BuildSeleniumRunner(SeleniumRunner):
         what the icons look like.
         :param zip_path: the path to the zip file after it's downloaded.
         """
-        print("Downloading Font files...", file=self.log_output)
+        print("Downloading Font files...")
         if self.current_page != IcomoonPage.SELECTION:
             self.go_to_page(IcomoonPage.SELECTION)
 
@@ -153,7 +149,7 @@ class BuildSeleniumRunner(SeleniumRunner):
         )
         download_btn.click()
         if self.wait_for_zip(zip_path):
-            print("Font files downloaded.", file=self.log_output)
+            print("Font files downloaded.")
         else:
             raise TimeoutError(f"Couldn't find {zip_path} after download button was clicked.")
 
