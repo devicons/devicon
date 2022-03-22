@@ -5,15 +5,7 @@ labels: ["awaiting triage"]
 body:
   - type: markdown
     attributes:
-      value: "## Before you continue, please search our open/closed issues to see if a similar issue has been addressed."
-
-  - type: checkboxes
-    attributes:
-      label: I have searched through the issues and didn't find my problem.
-      options:
-        - label: Confirm
-          required: true
-
+      value: "# Other issue"
   - type: textarea
     id: issuedescription
     attributes:
@@ -21,9 +13,10 @@ body:
       description: Provide a clear and concise explanation of your issue.
     validations:
       required: true
-
   - type: textarea
     id: extrainfo
     attributes:
       label: Additional information
       description: Is there anything else we should know about this issue?
+    validations:
+      required: false

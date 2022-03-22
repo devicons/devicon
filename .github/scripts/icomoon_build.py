@@ -5,7 +5,6 @@ import re
 import subprocess
 import json
 from typing import List, Dict
-from io import FileIO
 
 
 # pycharm complains that build_assets is an unresolved ref
@@ -19,68 +18,58 @@ def main():
     Build the icons using Icomoon. Also optimize the svgs.
     """
     runner = None
-    logfile = open("log.txt", "w")
     try:
         args = arg_getters.get_selenium_runner_args()
-        new_icons = get_icons_for_building(args.icomoon_json_path, args.devicon_json_path, args.token, logfile)
+        new_icons = get_icons_for_building(args.icomoon_json_path, args.devicon_json_path, args.token)
         if len(new_icons) == 0:
             sys.exit("No files need to be uploaded. Ending script...")
 
-        print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n", file=logfile)
+        print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n")
 
-        print("Begin optimizing files...", file=logfile)
-        optimize_svgs(new_icons, args.icons_folder_path, logfile=logfile)
+        print("Begin optimizing files...")
+        optimize_svgs(new_icons, args.icons_folder_path)
 
-        print("Updating the icomoon json...", file=logfile)
-        update_icomoon_json(new_icons, args.icomoon_json_path, logfile)
+        print("Updating the icomoon json...")
+        update_icomoon_json(new_icons, args.icomoon_json_path)
 
-        print("Start the building icons process...", file=logfile)
+        print("Start the building icons process...")
         icon_svgs = filehandler.get_svgs_paths(
             new_icons, args.icons_folder_path, icon_versions_only=True)
         zip_name = "devicon-v1.0.zip"
         zip_path = Path(args.download_path, zip_name)
         screenshot_folder = filehandler.create_screenshot_folder("./") 
-
         runner = BuildSeleniumRunner(args.download_path,
-            args.geckodriver_path, args.headless, log_output=logfile)
+            args.geckodriver_path, args.headless)
         runner.build_icons(args.icomoon_json_path, zip_path,
             icon_svgs, screenshot_folder)
 
-        filehandler.extract_files(str(zip_path), args.download_path, logfile)
-        filehandler.rename_extracted_files(args.download_path, logfile)
+        filehandler.extract_files(str(zip_path), args.download_path)
+        filehandler.rename_extracted_files(args.download_path)
 
-        print("Creating the release message by querying the GitHub API...", file=logfile)
-        get_release_message(args.token, logfile)
+        print("Creating the release message by querying the GitHub API...")
+        get_release_message(args.token)
 
-        print("Closing issues with the `in-develop` label.", file=logfile)
-        issues = api_handler.get_issues_by_labels(args.token, ["in-develop"])
-        issue_nums = [issue_num["number"] for issue_num in issues]
-        api_handler.close_issues(args.token, issue_nums)
-
-        print("Task completed.", file=logfile)
+        print("Task completed.")
     except TimeoutException as e:
-        util.exit_with_err(Exception("Selenium Time Out Error: \n" + str(e)), logfile)
+        util.exit_with_err("Selenium Time Out Error: \n" + str(e))
     except Exception as e:
-        util.exit_with_err(e, logfile)
+        util.exit_with_err(e)
     finally:
-        print("Exiting", file=logfile)
         if runner is not None:
             runner.close() 
-        logfile.close()
 
 
-def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token: str, logfile: FileIO):
+def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token: str):
     """
     Get the icons for building.
     :param icomoon_json_path - the path to the `icomoon.json`.
     :param devicon_json_path - the path to the `devicon.json`.
     :param token - the token to access the GitHub API.
-    :param logfile.
     :return a list of dict containing info on the icons. These are 
     from the `devicon.json`.
     """
     devicon_json = filehandler.get_json_file_content(devicon_json_path)
-    pull_reqs = api_handler.get_merged_pull_reqs_since_last_release(token, logfile)
+    pull_reqs = api_handler.get_merged_pull_reqs_since_last_release(token)
     new_icons = []
 
     for pull_req in pull_reqs:
@@ -101,24 +90,22 @@ def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token
     return new_icons
 
 
-def optimize_svgs(new_icons: List[str], icons_folder_path: str, logfile: FileIO):
+def optimize_svgs(new_icons: List[str], icons_folder_path: str):
     """
     Optimize the newly added svgs. This is done in batches
     since the command line has a limit on characters allowed.
     :param new_icons - the new icons that need to be optimized.
     :param icons_folder_path - the path to the /icons folder.
-    :param logfile - the file obj to store logging info in.
     """
     svgs = filehandler.get_svgs_paths(new_icons, icons_folder_path, icon_versions_only=False)
     start = 0
     step = 10
     for i in range(start, len(svgs), step):
         batch = svgs[i:i + step]
-        print(f"Optimizing these files\n{batch}", file=logfile)
         subprocess.run(["npm", "run", "optimize-svg", "--", f"--svgFiles={json.dumps(batch)}"], shell=True)
 
 
-def update_icomoon_json(new_icons: List[str], icomoon_json_path: str, logfile: FileIO):
+def update_icomoon_json(new_icons: List[str], icomoon_json_path: str):
     """
     Update the `icomoon.json` if it contains any icons
     that needed to be updated. This will remove the icons
@@ -135,7 +122,7 @@ def update_icomoon_json(new_icons: List[str], icomoon_json_path: str, logfile: F
     icomoon_json["icons"] = list(icons_to_keep)
 
     new_len = len(icomoon_json["icons"])
-    print(f"Update completed. Removed {cur_len - new_len} icons:", *messages, sep='\n', file=logfile)
+    print(f"Update completed. Removed {cur_len - new_len} icons:", *messages, sep='\n')
     filehandler.write_to_file(icomoon_json_path, json.dumps(icomoon_json))
   
 
@@ -157,18 +144,18 @@ def find_icomoon_icon_not_in_new_icons(icomoon_icon: Dict, new_icons: List, mess
     return True
 
 
-def get_release_message(token, logfile: FileIO):
+def get_release_message(token):
     """
     Get the release message for the latest build and write
     the result in a file.
     :param token: the GitHub API token to access the API.
     """
     # fetch first page by default
-    data = api_handler.get_merged_pull_reqs_since_last_release(token, logfile)
+    data = api_handler.get_merged_pull_reqs_since_last_release(token)
     newIcons = []
     features = []
 
-    print("Parsing through the pull requests...", file=logfile)
+    print("Parsing through the pull requests...")
     for pullData in data:
         authors = api_handler.find_all_authors(pullData, token)
         markdown = f"- [{pullData['title']}]({pullData['html_url']}) by {authors}."
@@ -178,7 +165,7 @@ def get_release_message(token, logfile: FileIO):
         else:
             features.append(markdown)
 
-    print("Constructing message...", file=logfile)
+    print("Constructing message...")
     thankYou = "A huge thanks to all our maintainers and contributors for making this release possible!"
     iconTitle = f"**{len(newIcons)} New Icons**"
     featureTitle = f"**{len(features)} New Features**"
@@ -186,10 +173,10 @@ def get_release_message(token, logfile: FileIO):
         iconTitle, "\n".join(newIcons),
         featureTitle, "\n".join(features))
 
-    print("--------------Here is the build message--------------\n", finalString, file=logfile)
+    print("--------------Here is the build message--------------\n", finalString)
     release_message_path = "./release_message.txt"
     filehandler.write_to_file(release_message_path, finalString)
-    print("Script finished", file=logfile)
+    print("Script finished")
 
 
 if __name__ == "__main__":
