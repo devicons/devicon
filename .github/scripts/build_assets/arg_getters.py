@@ -34,28 +34,32 @@ def get_selenium_runner_args(peek_mode=False):
                         action=PathResolverAction)
 
     if peek_mode:
-        parser.add_argument("--pr_title",
+        parser.add_argument("pr_title",
                             help="The title of the PR that we are peeking at")
     else:
         parser.add_argument("token",
-                            help="The GitHub token to access the GitHub REST API.",
-                            type=str)
+                            help="The GitHub token to access the GitHub REST API.")
 
     return parser.parse_args()
 
 
-def get_check_svgs_on_pr_args():
+def get_check_icon_pr_args():
     """
-    Get the commandline arguments for the check_svgs_on_pr.py.
+    Get the commandline arguments for the check_icon_pr.py.
     """
     parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run whenever a PR is opened")
-    parser.add_argument("files_added_json_path",
-                        help="The path to the files_added.json created by the gh-action-get-changed-files@2.1.4",
+
+    parser.add_argument("pr_title",
+                        help="The title of the PR that we are peeking at")
+
+    parser.add_argument("icons_folder_path",
+                        help="The path to the icons folder",
                         action=PathResolverAction)
 
-    parser.add_argument("files_modified_json_path",
-                        help="The path to the files_modified.json created by the gh-action-get-changed-files@2.1.4",
+    parser.add_argument("devicon_json_path",
+                        help="The path to the devicon.json",
                         action=PathResolverAction)
+
     return parser.parse_args()
 
 
@@ -65,6 +69,20 @@ def get_release_message_args():
     """
     parser = ArgumentParser(description="Create a text containing the icons and features added since last release.")
     parser.add_argument("token",
+                        help="The GitHub token to access the GitHub REST API.")
+    return parser.parse_args()
+
+
+def get_in_develop_labeler_args():
+    """
+    Get the commandline arguments for in_develop_labeler.py.
+    """
+    parser = ArgumentParser(description="Parse the PR body to find the issue(s) we are labelling.")
+    parser.add_argument("token",
                         help="The GitHub token to access the GitHub REST API.",
+                        type=str)
+
+    parser.add_argument("body",
+                        help="The PR's initial comment by the author AKA the `body` attribute of the `pull_request` API object.",
                         type=str)
     return parser.parse_args()
