@@ -1,0 +1,80 @@
+name: Post the result of the check_icon_pr workflow into its PR.
+on:
+  workflow_run:
+    workflows: ['Check Icon PR']
+    types: 
+      - completed
+jobs: 
+  post_result_of_svg_check:
+    name: Post the result of the Check SVG Action
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check if the trigger run worked. If it failed, fail the current run.
+        if: github.event.workflow_run.conclusion != 'success' 
+        uses: cutenode/action-always-fail@v1.0.1
+
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.11.0
+        if: success()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: check_icon_pr.yml
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Read the pr_num file
+        if: success()
+        id: pr_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./pr_num/pr_num.txt
+
+      - name: Read the err message file
+        if: success()
+        id: err_message_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./err_messages/err_messages.txt
+
+      - name: Comment on the PR about the result - SVG Error
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: success() && (steps.err_message_reader.outputs.content != '')
+        env:
+          MESSAGE: |
+            Hi!
+
+            I'm the `check-bot` and we have some issues with your PR:
+
+            ```
+            {0}
+            ```
+
+            Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards) for more details regarding these errors.
+
+            Please address these issues. When you update this PR, I will check your SVGs again.
+
+            Thanks for your help,
+            SVG-Checker Bot :smile:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
+
+      - name: Comment on the PR about the result - Failure
+        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        if: failure() 
+        env:
+          MESSAGE: |
+            Hi!
+
+            I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
+
+            Please let my maintainers know of the issues. They will take a look at my work and try to resolve the problem. Until then, please hang tight and sorry for the inconvenience.
+
+            Cheers,
+            SVG-Checker Bot :smile:
+        with:
+          type: create
+          issue_number: ${{ steps.pr_num_reader.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ env.MESSAGE }}

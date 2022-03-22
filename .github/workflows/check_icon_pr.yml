@@ -1,0 +1,39 @@
+name: Check Icon PR
+on: pull_request
+jobs:
+  check:
+    name: Check the `devicon.json` and the SVGs' quality
+    runs-on: ubuntu-18.04
+    if: startsWith(github.event.pull_request.title, 'new icon') || startsWith(github.event.pull_request.title, 'update icon')  # only checks icon PR
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
+      - name: Run the check_svg script
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
+
+      - name: Upload the err messages
+        uses: actions/upload-artifact@v2
+        if: success()
+        with:
+          name: err_messages
+          path: ./err_messages.txt
+
+      - name: Save the pr num in an artifact
+        shell: bash
+        if: success()
+        env:
+          PR_NUM: ${{ github.event.number }}
+        run: echo $PR_NUM > pr_num.txt
+
+      - name: Upload the pr num
+        uses: actions/upload-artifact@v2
+        if: success()
+        with:
+          name: pr_num
+          path: ./pr_num.txt
