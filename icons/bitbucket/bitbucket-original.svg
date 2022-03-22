@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128px" height="px" viewBox="0 0 128 128" version="1.1">
-<defs>
-<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="28.5925" y1="14.2265" x2="16.672" y2="23.5316" gradientTransform="matrix(4,0,0,4,0,0)">
-<stop offset="0.176" style="stop-color:rgb(0%,32.156863%,80%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(14.901961%,51.764706%,100%);stop-opacity:1;"/>
-</linearGradient>
-</defs>
-<g id="surface1">
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(14.901961%,51.764706%,100%);fill-opacity:1;" d="M 19.082031 20 C 17.164062 20 15.726562 21.757812 16.042969 23.515625 L 28.992188 102.804688 C 29.3125 104.882812 31.070312 106.320312 33.148438 106.320312 L 95.808594 106.320312 C 97.25 106.320312 98.527344 105.199219 98.847656 103.761719 L 111.957031 23.675781 C 112.273438 21.757812 110.835938 20.160156 108.917969 20.160156 Z M 74.070312 77.226562 L 54.089844 77.226562 L 48.8125 48.933594 L 79.027344 48.933594 Z M 74.070312 77.226562 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 107.640625 48.933594 L 78.867188 48.933594 L 74.070312 77.226562 L 54.089844 77.226562 L 30.589844 105.199219 C 30.589844 105.199219 31.710938 106.160156 33.308594 106.160156 L 95.96875 106.160156 C 97.410156 106.160156 98.6875 105.039062 99.007812 103.601562 Z M 107.640625 48.933594 "/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><defs><linearGradient id="bitbucket-original-a" gradientUnits="userSpaceOnUse" x1="28.593" y1="14.226" x2="16.672" y2="23.532" gradientTransform="scale(4)"><stop offset=".176" stop-color="#0052cc"/><stop offset="1" stop-color="#2684ff"/></linearGradient></defs><path d="M19.082 20c-1.918 0-3.355 1.758-3.039 3.516l12.95 79.289c.32 2.078 2.077 3.515 4.155 3.515h62.66c1.442 0 2.72-1.12 3.04-2.558l13.109-80.086c.316-1.918-1.121-3.516-3.039-3.516zM74.07 77.227H54.09l-5.278-28.293h30.215zm0 0" fill="#2684ff"/><path d="M107.64 48.934H78.868L74.07 77.227H54.09l-23.5 27.972s1.12.961 2.719.961h62.66c1.441 0 2.719-1.12 3.039-2.558zm0 0" fill="url(#bitbucket-original-a)"/></svg>
