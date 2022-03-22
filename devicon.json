@@ -3485,6 +3485,28 @@
         "aliases": []
     },
     {
+        "name": "opensuse", 
+        "tags": [
+            "linux",
+            "distribuition",
+            "desktop"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ] 
+        },
+        "color": "#73ba25", 
+        "aliases": [] 
+    },
+    {
         "name": "oracle",
         "tags": [
             "database"
