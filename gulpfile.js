@@ -155,6 +155,7 @@ function cleanUp() {
  */
 function optimizeSvg() {
   let svgGlob = JSON.parse(yargs.argv.svgFiles);
+  console.log("Optimizing these files: ", svgGlob);
   return gulp
     .src(svgGlob)
     .pipe(svgmin(configOptionCallback))
@@ -186,12 +187,6 @@ function configOptionCallback(file) {
       },
       {
         removeDimensions: true // remove height and width
-      },
-      {
-        name: "removeAttrs",
-        params: {
-          attrs: "svg:(x|y)"
-        }
       }
     ]
   };
