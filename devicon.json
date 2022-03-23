@@ -339,6 +339,28 @@
         ]
     },
     {
+        "name": "archlinux", 
+        "tags": [
+            "linux",
+            "distribuition",
+            "desktop"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ] 
+        },
+        "color": "#1791cf", 
+        "aliases": [] 
+    },
+    {
         "name": "arduino",
         "tags": [
             "microcontroller",
