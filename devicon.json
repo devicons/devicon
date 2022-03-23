@@ -4102,6 +4102,22 @@
         "aliases": []
     },
     {
+        "name": "sanity",
+        "tags": [
+            "CMS"
+        ],
+        "versions": {
+            "svg": [
+                "original" 
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#F03E2F",
+        "aliases": []
+    },
+    {
         "name": "sdl",
         "tags": [
             "library",
