@@ -1132,12 +1132,12 @@
         ],
         "versions": {
             "svg": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#4a4a4d",
