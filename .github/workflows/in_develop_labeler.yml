@@ -2,6 +2,11 @@ name: Label Issue In Develop
 on: 
   pull_request:
     types: [closed]
+# solution taken from https://github.com/actions/first-interaction/issues/10#issuecomment-1041402989
+# this allows this workflow to label the PRs to have the `in-develop` label
+permissions:
+  contents: write
+  pull-requests: write
 jobs:
   label:
     name: Label Issue In Develop
