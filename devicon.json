@@ -4510,10 +4510,11 @@
         ],
         "versions": {
             "svg": [
-                "original" 
+                "original",
+                "plain"
             ],
-            "font": [
-                "original"
+            "font": [ 
+                "plain"
             ]
         },
         "color": "#F03E2F",
