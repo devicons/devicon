@@ -1769,6 +1769,23 @@
         "aliases": []
     },
     {
+        "name": "fortran",
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#734f96",
+        "aliases": []
+    },
+    {
         "name": "foundation",
         "tags": [
             "framework",
