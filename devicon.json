@@ -4309,6 +4309,27 @@
         "aliases": []
     },
     {
+        "name": "ros",
+        "tags": [
+            "robotics"
+
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#21304c",
+        "aliases": []
+    },
+    {
         "name": "rspec",
         "tags": [
             "ruby",
