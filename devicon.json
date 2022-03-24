@@ -408,6 +408,26 @@
         ]
     },
     {
+        "name": "axios",
+        "tags": [
+            "http",
+            "promise",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [ 
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#5a29e4",
+        "aliases": []
+    },
+    {
         "name": "azure",
         "tags": [
             "cloud",
