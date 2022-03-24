@@ -2,17 +2,34 @@ name: Label Issue In Develop
 on: 
   pull_request:
     types: [closed]
-# solution taken from https://github.com/actions/first-interaction/issues/10#issuecomment-1041402989
-# this allows this workflow to label the PRs to have the `in-develop` label
-permissions:
-  contents: write
-  pull-requests: write
 jobs:
   label:
     name: Label Issue In Develop
     runs-on: ubuntu-18.04
-    if: github.event.pull_request.merged == true
+    if: github.event.action == 'completed' && github.event.workflow_run.conclusion != 'skipped'
+    env: 
+      # three possible values: 'skipped', 'success', 'failure'
+      # have to print github.event to console to see these values
+      # note: can't use this env variable up in the if statement above for some reason.
+      # I don't think it's an ordering issue cause it seems 'if' is auto evaluate first
+      PREV_STATUS: ${{ github.event.workflow_run.conclusion }}
     steps:
+      - name: Check state of last run
+        run: echo $PREV_STATUS
+
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.11.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: issue_finder_in_pr.yml
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Read the issue_nums file
+        id: issues_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./issue_nums/issue_nums.txt
+
       - uses: actions/checkout@v2
 
       - name: Setup Python v3.8
@@ -28,5 +45,5 @@ jobs:
       - name: Run in_develop_labeler.py
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BODY: ${{ github.event.pull_request.body }}
-        run: python ./.github/scripts/in_develop_labeler.py $TOKEN "$BODY"
+          ISSUES: ${{ steps.issues_num_reader.outputs.content }}
+        run: python ./.github/scripts/in_develop_labeler.py $TOKEN "$ISSUES"

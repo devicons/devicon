@@ -73,16 +73,30 @@ def get_release_message_args():
     return parser.parse_args()
 
 
-def get_in_develop_labeler_args():
+def get_issue_finder_in_pr():
     """
-    Get the commandline arguments for in_develop_labeler.py.
+    Get the commandline arguments for issue_finder_in_pr.py.
     """
     parser = ArgumentParser(description="Parse the PR body to find the issue(s) we are labelling.")
-    parser.add_argument("token",
-                        help="The GitHub token to access the GitHub REST API.",
-                        type=str)
 
     parser.add_argument("body",
                         help="The PR's initial comment by the author AKA the `body` attribute of the `pull_request` API object.",
                         type=str)
+
+    return parser.parse_args()
+
+
+def get_in_develop_labeler_args():
+    """
+    Get the commandline arguments for in_develop_labeler.py.
+    """
+    parser = ArgumentParser(description="Find the issue numbers from the line passed in and label the issues.")
+    parser.add_argument("token",
+                        help="The GitHub token to access the GitHub REST API.",
+                        type=str)
+
+    parser.add_argument("issues",
+                        help="The issues as a ' ' delimited string. Can also be NONE if there's nothing.",
+                        type=str)
+
     return parser.parse_args()

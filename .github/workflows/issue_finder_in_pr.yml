@@ -1,0 +1,28 @@
+name: Find the issues we want to close in a merged PR
+on: 
+  pull_request:
+    types: [closed]
+jobs:
+  label:
+    name: Label Issue In Develop
+    runs-on: ubuntu-18.04
+    if: github.event.pull_request.merged == true
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python v3.8
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
+      - name: Run issue_finder_in_pr.py
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+        run: python ./.github/scripts/issue_finder_in_pr.py "$BODY"
+
+      - name: Upload the issues found created by issue_finder_in_pr.py
+        uses: actions/upload-artifact@v2
+        if: success()
+        with:
+          name: issue_nums
+          path: ./issue_nums.txt
