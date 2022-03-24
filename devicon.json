@@ -1472,6 +1472,22 @@
         "aliases": []
     },
     {
+        "name": "emacs",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#421f5f",
+        "aliases": []
+    },
+    {
       "name": "embeddedc",
       "tags": ["language", "programming"],
       "versions": {
