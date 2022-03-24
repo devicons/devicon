@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128px" height="128px" viewBox="0 0 128 128" version="1.1">
-<g id="surface1">
-<path style=" stroke:none;fill-rule:evenodd;fill:rgb(36.078431%,30.588235%,89.803922%);fill-opacity:1;" d="M 77.941406 44.5 L 77.941406 81.335938 L 46.324219 62.917969 L 46.324219 26.082031 Z M 77.941406 44.5 "/>
-<path style=" stroke:none;fill-rule:evenodd;fill:rgb(25.098039%,25.098039%,69.803922%);fill-opacity:1;" d="M 81.410156 81.335938 L 113.042969 62.917969 L 113.042969 26.082031 L 81.410156 44.5 Z M 81.410156 81.335938 "/>
-<path style=" stroke:none;fill-rule:evenodd;fill:rgb(36.078431%,30.588235%,89.803922%);fill-opacity:1;" d="M 11.242188 42.359375 L 42.859375 60.777344 L 42.859375 23.941406 L 11.242188 5.523438 Z M 11.242188 42.359375 "/>
-<path style=" stroke:none;fill-rule:evenodd;fill:rgb(36.078431%,30.588235%,89.803922%);fill-opacity:1;" d="M 77.941406 85.375 L 46.324219 66.957031 L 46.324219 103.777344 L 77.941406 122.195312 Z M 77.941406 85.375 "/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g fill-rule="evenodd"><path d="M77.941 44.5v36.836L46.324 62.918V26.082zm0 0" fill="#5c4ee5"/><path d="M81.41 81.336l31.633-18.418V26.082L81.41 44.5zm0 0" fill="#4040b2"/><path d="M11.242 42.36L42.86 60.776V23.941L11.242 5.523zm0 0M77.941 85.375L46.324 66.957v36.82l31.617 18.418zm0 0" fill="#5c4ee5"/></g></svg>

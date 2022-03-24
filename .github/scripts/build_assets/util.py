@@ -4,13 +4,17 @@ from typing import List
 import platform
 import sys
 import traceback
+from io import FileIO
 
-def exit_with_err(err: Exception):
+def exit_with_err(err: Exception, logfile: FileIO=None):
     """
     Exit the current step and display the err.
     :param: err, the error/exception encountered.
     """
-    traceback.print_exc()
+    if logfile:
+        traceback.print_exc(file=logfile)
+    else:
+        traceback.print_exc()
     sys.exit(1)
 
 
@@ -70,4 +74,8 @@ def find_object_added_in_pr(icons: List[dict], pr_title: str):
 valid_svg_filename_pattern = re.compile(r"-(original|plain|line)(-wordmark)?\.svg$")
 def is_svg_name_valid(filename: str):
     return valid_svg_filename_pattern.search(filename) is not None
+
+valid_svg_version_pattern = re.compile(r"^(original|plain|line)(-wordmark)?$")
+def is_svg_version_valid(version):
+    return valid_svg_version_pattern.search(version) is not None
 
