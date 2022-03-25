@@ -4602,6 +4602,23 @@
         ]
     },
     {
+        "name": "sanity",
+        "tags": [
+            "CMS"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [ 
+                "plain"
+            ]
+        },
+        "color": "#F03E2F",
+        "aliases": []
+    },
+    {
         "name": "scala",
         "tags": [
             "programming",
