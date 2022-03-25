@@ -828,6 +828,24 @@
         "aliases": []
     },
     {
+        "name": "clion",
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "clojure",
         "tags": [
             "language"
