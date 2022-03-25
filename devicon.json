@@ -792,10 +792,12 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#000000",
