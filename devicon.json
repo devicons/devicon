@@ -3216,6 +3216,25 @@
         "aliases": []
     },
     {
+        "name": "mongoose",
+        "tags": [
+            "data-model",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#860000",
+        "aliases": []
+    },
+    {
         "name": "moodle",
         "tags": [
             "platform"
