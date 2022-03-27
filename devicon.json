@@ -1047,6 +1047,24 @@
         ]
     },
     {
+        "name": "contao",
+        "tags": [
+            "cms"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#f47c00",
+        "aliases": []
+    },
+    {
         "name": "couchdb",
         "tags": [
             "database"
