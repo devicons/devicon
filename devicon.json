@@ -4480,19 +4480,14 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "plain-wordmark"
             ],
             "font": [
-                "original-wordmark"
+                "plain-wordmark"
             ]
         },
         "color": "#DD1866",
-        "aliases": [
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "rocksdb",
