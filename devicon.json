@@ -4480,9 +4480,11 @@
         "versions": {
             "svg": [
                 "original",
+                "plain",
                 "plain-wordmark"
             ],
             "font": [
+                "plain",
                 "plain-wordmark"
             ]
         },
