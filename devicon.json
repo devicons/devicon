@@ -3251,6 +3251,26 @@
         "aliases": []
     },
     {
+        "name": "maven",
+        "tags": [
+            "build"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e97826",
+        "aliases": []
+    },
+    {
         "name": "maya",
         "tags": [
             "mel",
