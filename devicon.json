@@ -5542,6 +5542,26 @@
         "aliases": []
     },
     {
+        "name": "vertx",
+        "tags": [
+            "sdk",
+            "java",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#623c94",
+        "aliases": []
+    },
+    {
         "name": "vim",
         "tags": [
             "editor"
