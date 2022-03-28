@@ -3288,6 +3288,26 @@
         "aliases": []
     },
     {
+        "name": "mobx",
+        "tags": [
+            "state-management",
+            "testing",
+            "reactjs",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#e05e11",
+        "aliases": []
+    },
+    {
         "name": "mocha",
         "tags": [
             "testing"
