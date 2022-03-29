@@ -3623,6 +3623,27 @@
         ]
     },
     {
+        "name": "nim",
+        "tags": [
+            "programming",
+            "functional",
+            "object-oriented",
+            "procedural"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#efc743",
+        "aliases": []
+    },
+    {
         "name": "nixos",
         "tags": [
             "os"
