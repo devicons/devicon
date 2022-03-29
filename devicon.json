@@ -6032,6 +6032,23 @@
         "aliases": []
     },
     {
+        "name": "xml",
+        "tags": [
+            "markup",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#005fad",
+        "aliases": []
+    },
+    {
         "name": "yarn",
         "tags": [
             "package",
