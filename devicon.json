@@ -2419,6 +2419,35 @@
         "aliases": []
     },
     {
+        "name": "harvester",
+        "tags": [
+            "kubernetes",
+            "operating system",
+            "hypervisor",
+            "rancher"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#00A580",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "haskell",
         "tags": [
             "language",
