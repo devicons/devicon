@@ -4307,6 +4307,26 @@
         "color": "#b7111d",
         "aliases": []
     },
+    {
+        "name": "purescript",
+        "tags": [
+            "functional",
+            "programming",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#14161a",
+        "aliases": []
+    },
 	{
         "name": "putty",
         "tags": [
