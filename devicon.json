@@ -4592,6 +4592,27 @@
         ]
     },
     {
+        "name": "rider",
+        "tags": [
+            "jetbrains",
+            "ide",
+            "dotnet"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#DD1866",
+        "aliases": []
+    },
+    {
         "name": "rocksdb",
         "tags": [
             "database"
