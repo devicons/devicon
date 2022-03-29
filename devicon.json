@@ -3623,6 +3623,23 @@
         ]
     },
     {
+        "name": "nimble",
+        "tags": [
+            "package-manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f7e941",
+        "aliases": []
+    },
+    {
         "name": "nixos",
         "tags": [
             "os"
