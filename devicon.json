@@ -2893,6 +2893,26 @@
         "aliases": []
     },
     {
+        "name": "junit",
+        "tags": [
+            "testing",
+            "framework",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#dc514a",
+        "aliases": []
+    },
+    {
         "name": "jupyter",
         "tags": [
             "programming",
