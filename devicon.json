@@ -2422,7 +2422,7 @@
         "name": "harvester",
         "tags": [
             "kubernetes",
-            "operating system",
+            "operating-system",
             "hypervisor",
             "rancher"
         ],
