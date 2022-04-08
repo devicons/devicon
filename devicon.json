@@ -209,6 +209,28 @@
         "aliases": []
     },
     {
+        "name": "antdesign",
+        "tags": [
+            "reactjs",
+            "design",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0073bb",
+        "aliases": []
+    },
+    {
         "name": "apache",
         "tags": [
             "php"
@@ -2397,6 +2419,35 @@
         "aliases": []
     },
     {
+        "name": "harvester",
+        "tags": [
+            "kubernetes",
+            "operating-system",
+            "hypervisor",
+            "rancher"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#00A580",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "haskell",
         "tags": [
             "language",
@@ -2433,6 +2484,29 @@
         },
         "color": "#EA8220",
         "aliases": []
+    },
+    {
+        "name": "helm",
+        "tags": [
+            "package",
+            "manager",
+            "kubernetes"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#277a9f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "heroku",
@@ -2868,6 +2942,26 @@
             ]
         },
         "color": "#28a745",
+        "aliases": []
+    },
+    {
+        "name": "junit",
+        "tags": [
+            "testing",
+            "framework",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#dc514a",
         "aliases": []
     },
     {
@@ -3623,6 +3717,27 @@
         ]
     },
     {
+        "name": "nim",
+        "tags": [
+            "programming",
+            "functional",
+            "object-oriented",
+            "procedural"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#efc743",
+        "aliases": []
+    },
+    {
         "name": "nimble",
         "tags": [
             "package-manager"
@@ -4303,6 +4418,26 @@
         "color": "#b7111d",
         "aliases": []
     },
+    {
+        "name": "purescript",
+        "tags": [
+            "functional",
+            "programming",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#14161a",
+        "aliases": []
+    },
 	{
         "name": "putty",
         "tags": [
@@ -4471,6 +4606,34 @@
         "aliases": []
     },
     {
+        "name": "rancher",
+        "tags": [
+            "kubernetes",
+            "orchestrator"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2453FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "raspberrypi",
         "tags": ["arm", "computer"],
         "versions": {
@@ -4586,6 +4749,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "rider",
+        "tags": [
+            "jetbrains",
+            "ide",
+            "dotnet"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#DD1866",
+        "aliases": []
     },
     {
         "name": "rocksdb",
@@ -4819,6 +5003,26 @@
             ]
         },
         "color": "#de3423",
+        "aliases": []
+    },
+    {
+        "name": "scalingo",
+        "tags": [
+            "cloud",
+            "platform",
+            "hosting"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#173aee",
         "aliases": []
     },
     {
@@ -5754,6 +5958,35 @@
         "aliases": []
     },
     {
+        "name": "vsphere",
+        "tags": [
+            "hypervisor",
+            "operating-system",
+            "vmware"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#0091DA",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "vuejs",
         "tags": [
             "framework"
@@ -6026,6 +6259,23 @@
             "font": ["plain", "line"]
         },
         "color": "#DD80BC",
+        "aliases": []
+    },
+    {
+        "name": "xml",
+        "tags": [
+            "markup",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#005fad",
         "aliases": []
     },
     {
