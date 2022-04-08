@@ -2486,6 +2486,29 @@
         "aliases": []
     },
     {
+        "name": "helm",
+        "tags": [
+            "package",
+            "manager",
+            "kubernetes"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#277a9f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "heroku",
         "tags": [
             "cloud"
