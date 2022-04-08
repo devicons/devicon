@@ -2986,6 +2986,36 @@
         "aliases": []
     },
     {
+        "name": "k3os",
+        "tags": [
+            "kubernetes",
+            "operating-system",
+            "k3s",
+            "rancher"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#FD824E",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "k3s",
         "tags": [
             "kubernetes",
