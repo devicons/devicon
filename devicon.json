@@ -5941,6 +5941,35 @@
         "aliases": []
     },
     {
+        "name": "vsphere",
+        "tags": [
+            "hypervisor",
+            "operating-system",
+            "vmware"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#0091DA",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "vuejs",
         "tags": [
             "framework"
