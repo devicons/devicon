@@ -4636,6 +4636,30 @@
         "aliases": []
     },
     {
+        "name": "rabbitmq",
+        "tags": [
+            "message-broker",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff6600",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "rancher",
         "tags": [
             "kubernetes",
