@@ -4054,7 +4054,7 @@
     {
         "name": "openstack",
         "tags": [
-            "infrastructure-as-code",
+            "infrastructure-as-a-service",
             "cloud-computing-platform"
         ],
         "versions": {
