@@ -4052,6 +4052,27 @@
         "aliases": []
     },
     {
+        "name": "openstack",
+        "tags": [
+            "infrastructure-as-code",
+            "cloud-computing-platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ed1843",
+        "aliases": []
+    },
+    {
         "name": "opensuse", 
         "tags": [
             "linux",
