@@ -1,0 +1,37 @@
+name: Icon Request
+description: Requesting a new icon or changes to an existing icon
+title: '[ICON REQUEST]: <icon name>'
+labels: ["request:icon"]
+body:
+  - type: markdown
+    attributes:
+      value: "## Before you continue, please search our open/closed issues to see if a similar issue has been addressed."
+
+  - type: checkboxes
+    attributes:
+      label: I have searched through the issues and didn't find my problem.
+      options:
+        - label: Confirm
+          required: true
+
+  - type: input
+    id: about
+    attributes:
+      label: About the icon
+      description: Short description of why you think this icon belongs in our project.
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links and sources
+      description: Provide links to the icon's official website/repository/anywhere that shows what the technology is about, and its official logo. If available, also provide some resources where the icon/SVG can be found (Font Awesome, Icomoon, etc.).
+    validations:
+      required: true
+
+  - type: textarea
+    id: extrainformation
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this icon?

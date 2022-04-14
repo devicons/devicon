@@ -1,0 +1,35 @@
+name: Feature Request
+description: Requesting a new feature or changes to an existing feature
+title: '[FEATURE REQUEST] <feature name>'
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: "## Before you continue, please search our open/closed issues to see if a similar issue has been addressed."
+
+  - type: checkboxes
+    attributes:
+      label: I have searched through the issues and didn't find my problem.
+      options:
+        - label: Confirm
+          required: true
+
+  - type: textarea
+    id: currentproblem
+    attributes:
+      label: Problem
+      description: Tell us about the problem and its negative impacts.
+    validations:
+      required: true
+
+  - type: textarea
+    id: possiblesolution
+    attributes:
+      label: Possible Solution
+      description: If you have an idea, please tell us what might solve the above problem and the benefits it provides.
+
+  - type: textarea
+    id: extrainformation
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this feature request?

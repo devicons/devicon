@@ -5,3 +5,6 @@ geckodriver.log
 __pycache__
 *.pyc
 new_icons.png
+screenshots/
+release_message.txt
+log.txt

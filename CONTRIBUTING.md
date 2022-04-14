@@ -1,58 +1,140 @@
 <h1>Contributing to Devicon</h1>
+
+<h2>This guide has been converted to a <a href="https://github.com/devicons/devicon/wiki">Wiki</a>! This document will eventually be removed, please use the Wiki instead.</h2>
+<br>
 <p>
-First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintable we developed some guidelines for contributions. 
+First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintainable, we have developed some guidelines for our contributors.
 </p>
 
 <h2>Table of Content</h2>
 <ul>
   <li><a href="#terms">Terms</a></li>
-  <li><a href="#overview">Overview on Submitting Icon</a></li>
+  <li><a href="#iconRequirements">What Icons Do We Accept?</a></li>
+  <li><a href="#requestingIcon">Requesting An Icon</a></li>
+  <li><a href="#overview">Overview on Submitting Icon (start here if new to contributing)</a></li>
   <li><a href="#versionNaming">Naming Conventions</a></li>
-  <li><a href="#svgStandards">SVG Standards</a></li>
+  <li><a href="#SVGStandards">SVG Standards</a></li>
   <li><a href="#orgGuidelines">Organizational Guidelines</a></li>
   <li><a href="#updateDevicon">Updating the <code>devicon.json</code></a></li>
-  <li><a href="#example">Example</a></li>
-  <li><a href="#requestingIcon">Requesting An Icon</a></li>
+  <li><a href="#example">Example of Submitting An Icon</a></li>
+  <li><a href="#updatingIcons">Updating an Icon</a></li>
   <li><a href="#teams">Maintainer/Reviewer/Teams</a></li>
-  <li><a href="#buildScript">Regarding the Build Script</a></li>
+  <li><a href="#buildScript">Our Workflows: how they work</a></li>
+  <li><a href="#bugs">Common Bugs and Solutions</a></li>
+  <li><a href="#discordServer">Discord server</a></li>
+  <li><a href="#release">Release strategy, conventions, preparation and execution</a></li>
+  <li><a href="#resources">Recommended resources and tools</a></li>
 </ul>
 
 <hr>
 <h2 id="terms">Terms</h2>
 <p>Here are some terms that we will use in this repo: </p>
 <ol>
-  <li>"Icon" refers to the set of svgs/icons of a technology/tool. Ex: We might refer to the React svgs and React icons as the React Icon</li>
-  <li>"SVG/<code>.svg</code>" refers to the <code>svg</code> versions of the Icons.</li>
-  <li>"icons" (lowercase) refers to the font icon versions of the Icons.</li>
+  <li>"Technology" is used to describe a software, libraries, tool, etc...</li>
+  <li>"Icon" refers to the SVGs and icons version of a technology as a whole.</li>
+  <li>"SVG/<code>SVG</code>" refers to the <code>svg</code> versions of the Icons.</li>
+  <li>"icon" (lowercase) refers specficially to the font icon versions of the Icons.</li>
 </ol>
+
+<hr>
+<h2 id='iconRequirements'>What Icons Do We Accept?</h2>
+<p>Devicon only accepts Icons of development languages and tools. </p>
+<p><b>Development</b> refers to programming or programming-related jobs.</p>
+<p><b>Tools</b> can be software, OS, services, etc. that helps with development. It must be specifically related to development (so software like Microsoft Word or Google Calendar won't be accepted since it's too general).</p>
+
+<b>Special Cases (see <a href='https://github.com/devicons/devicon/discussions/353'>this discussion</a> for more details)</b>
+<ul>
+  <li>Tech companies used to be accepted in the repository. However, we do not accept them anymore. Icons like Facebook, Twitter, etc., are kept due to backward compatibility. </li>
+    <ul>
+    <li>We still accept their icons if they represent a service and not the company itself.</li>
+    <li>Ex. AWS is accepted since their names refer to their services. We will not accept Amazon since that's the parent company that includes non-tech related tools</li>
+    </ul>
+  <li>Related fields like graphic designs or game development. Since many "development" jobs require people to know related fields, some softwares will be accepted in Devicon even though they aren't strictly "development tools". </li>
+    <ul>
+      <li>ex. some Adobe products, game engines, CMS, etc... See <a href='https://github.com/devicons/devicon/pull/336'> for more details.</a></li>
+    </ul>
+  <li>General tools that are well known in the tech industries. Things like Trello, Slack, etc., are accepted under this category. Unfortunately, we won't accept Discord since its use is still too general. This will be treated on a case-by-case basis.</li>
+</ul>
+
+
+<hr>
+<h2 id='requestingIcon'>Requesting an Icon</h2>
+<p>To request an icon, please create an issue in the repository, and follow these guidelines:</p>
+<ul>
+  <li>Search for other issues already requesting the icon</li>
+  <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
+  <li>Please create separate issues for each icon</li>
+  <li>Use the Issue Template and fill out the proper information</li>
+  <li>Please include links where the icon can be found. Ex: the icon's official webpage/wiki article.</li>
+</ul>
 
 <hr>
 <h2 id="overview">Overview on Submitting Icons</h2>
-<p>Here is an overview of what you have to do to submit your icons to the repo.</p>
+<p>Here is what you have to do to submit your icons to the repo.</p>
 <ol>
-  <li>Create the svgs for each <a href="#versionNaming"> svg versions </a> that you have</li>
-  <li>Put the svgs of each Icon into its own folders in <code>/icons</code> </li>
+  <li>Create the SVGs for each <a href="#versionNaming"> SVG versions </a> that you have. Follow the <a href="#SVGStandards">convention</a> listed.</li>
+  <li>Put the SVGs of each Icon into its own <a href="#orgGuidelines">folders</a> in <code>/icons</code></li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
   <li>Create a separated pull request (PR) towards the <code>develop</code> branch for each Icon.</li>
+  <li>Fill out the info as stated in the PR template.</li>
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
-  <li><i>Optional</i>: Add images of the new svg(s) to the description of the pull request. This would help speed up the review process </li>
-  <li><i>Optional</i>: Reference the issues regarding the new icon. </li>
-  <li>Wait for a maintainer to review your changes. They will run a script to check your icons.</li>
-  <li>If there are no issues, they will accept your pull request and merge it using <a href="https://github.com/devicons/devicon/discussions/470">squash merging</a>. If there are any problems, they will let you know and give you a chance to fix it.</li>
+  <li><i>Optional</i>: Reference the issues regarding the new icon and label the PR `feature:icon`. </li>
+  <li>Some bots will check your SVGs. If there are any errors, please fix them as instructed.</li>
+  <li>Wait for a maintainer to review your changes. They will run the <a href='#peekBot'><code>peek-bot</code></a> to check your icons.</li>
+  <li>If there are no issues, they will merge it using <a href="https://github.com/devicons/devicon/discussions/470"><b>squash merging</b></a>. If there are any problems, they will let you know, and give you a chance to fix them.</li>
 </ol>
+<p><b>Note:</b> Due to our recent bot upgrades, icon contributors don't have to optimize/minify their SVGs anymore!</p>
 
 <hr>
 <h2 id='versionNaming'>Versions and Naming Conventions</h2>
-<p>Each icon/svg can come in different versions. So far, we have:</p>
+<p>For the technology name, make the file and folder name lowercase and concatenate them. For example:</p>
 <ul>
-  <li><b>original</b>: the original logo. Can contain multiple colors. <a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original.svg"> Example </a> </li>
-  <li><b>original-wordmark</b>: similar to the above but must contain the name of the technology.<a href="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"> Example </a></li>
-  <li><b>plain</b>: a one-color version of the original logo.<a href="https://github.com/devicons/devicon/blob/master/icons/android/android-plain.svg"> Example </a></li>
-  <li><b>plain-wordmark</b>: a one-color version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/android/android-plain-wordmark.svg"> Example </a></li>
-  <li><b>line</b>: a one-color, line version of the original logo.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line.svg"> Example </a></li>
-  <li><b>line-wordmark</b>: a one-color, line version of the original logo but with wordmark.<a href="https://github.com/devicons/devicon/blob/master/icons/apache/apache-line-wordmark.svg"> Example </a></li>
+  <li>AngularJS becomes <code>angularjs</code> or just <code>angular</code></li>
+  <li>Amazon Web Services becomes <code>amazonwebservices</code></li>
+  <li>Microsoft SQL Server becomes <code>microsoftsqlserver</code></li>
 </ul>
-<p> Notes <p>
+<br>
+
+<p>Each icon/SVG can come in different versions:</p>
+  <table>
+    <tr>
+      <td style='width: 33%'>
+          <p><b>original</b>: the original logo. Can contain multiple colors. </p>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original.svg' height='100px' width='100px' /> 
+          <h4>devicon-original.svg</h4>
+      </td>
+      <td style='width: 33%'>
+          <p><b>plain</b>: a one-color version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-plain.svg' height='100px' width='100px' />
+          <h4>devicon-plain.svg</h4>
+      </td>
+      <td style='width: 33%'>
+          <p><b>line</b>: a one-color, line version of the original logo. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-line.svg' height='100px' width='100px' />
+          <h4>devicon-line.svg</h4>
+      </td>
+    </tr>
+    <tr>
+      <td style='width: 33%'>
+        <p><b>original-wordmark</b>: similar to the above but must contain the name of the technology. </p>      
+        <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original-wordmark.svg' height='100px' width='100px' /> 
+        <h4>devicon-original-wordmark.svg</h4>
+      </td>
+      <td style='width: 33%'>
+          <p><b>plain-wordmark</b>: similar to the above but must contain the name of the technology. Note that the icon version will be stripped of all colors so you don't have to strip beforehand. </p>      
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-plain-wordmark.svg' height='100px' width='100px' />
+          <h4>devicon-plain-wordmark.svg</h4>
+      </td>
+      <td style='width: 33%'>
+          <p><b>line-wordmark</b>: similar to the above but must contain the name of the technology. Note that the icon version will be stripped of all colors so you don't have to strip beforehand.</p>      
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-line-wordmark.svg' height='100px' width='100px' />
+          <h4>devicon-line-wordmark.svg</h4>
+      </td>
+    </tr>
+  </table>
+<br>
+
+<p><b>Notes:</b><p>
 <ul>  
   <li>
     You don't need to have 6 versions for each icon. An icon can only have one or two versions available. Just keep in mind that the minimum is 1 and the maximum 6 (for now). You must also have at least one version that can be make into an icon.
@@ -61,37 +143,37 @@ First of all, thanks for taking the time to contribute! This project can only gr
     The <b>plain</b> and <b>line</b> versions (with or without wordmark) are designed to be available in the final icon font.
   </li>
   <li>
-    The <b>original</b> version are only available in svg format, so they do not need to be as simple and can contain numerous colors.
+    The <b>original</b> SVG version do not need to be simple and can contain numerous colors/gradients. However, if it's intended to be made into an icon, keep it simple.
   </li>
   <li>
-    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either "original" or "plain"). You can then add an alias in the <code>devicon.json</code> so they can be found with either the "original" or "plain" naming convention. Note: this only applies to font icon versions only, not the SVG versions.
-    
+    Some icons are really simple (ex. Apple), so the original version can be used as the plain version and as the icon font. In this case, you'll only need to make one of the version (either <b>original</b> or <b>plain</b>) and name them <b>original</b>. 
+      <ul>
+        <li>If you are a long time contributor: aliases are no longer mandatory. If you are wondering which name to use, just pick <code>original</code></li>
+      </ul>
   </li>
 </ul>
 
 <hr>
-<h2 id='svgStandards'>SVG Standards</h2>
-<p>Before you submit your logos/svgs, please ensure that they meet the following standard:</p>
+<h2 id='SVGStandards'>SVG Standards</h2>
+<p>Before you submit your logos/SVGs, please ensure that they meet the following standard:</p>
 <ul>
   <li>The background must be transparent.</li>
-  <li>The svg name follows this convention: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
-  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. We will strip the color when turning it into icons so they can have any color.
+  <li>The icon is centered horizontally and vertically within the <code>viewBox</code>.</li>
+  <li>The SVG name follows this convention: <code>(Technology name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>The <b>plain</b> and <b>line</b> versions (with or without wordmark) need to stay as simple as possible. They must have only one color and the paths are united. The color will be removed when being turned into icons so the <code>.svg</code> can have any color.
   </li>
-  <li>Optimize/compress your SVGs. You can use a service like <a href="https://compressor.io/">compressor</a> or <a href="https://petercollingridge.appspot.com/svg-editor">SVG Editor</a>.</li>
+  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the SVG.</li>
   <li>The icon's strokes and texts must be fills. This is to satisfy our conversion website's <a href="https://icomoon.io/#docs/stroke-to-fill">requirements.</a></li>
-  <li>Each <code>.svg</code> file contains one version of an icon in a <code>0 0 128 128</code> viewbox. You can use a service like <a href="https://www.iloveimg.com/resize-image/resize-svg">resize-image</a> for scaling the svg.</li>
-  <li>The <code>svg</code> element does not need the <code>height</code> and <code>width</code> attributes. However, if you do use it, ensure their values are either <code>"128"</code> or <code>"128px"</code>. Ex: <code>height="128"</code></li>
-  <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
-  <li>The naming convention for the svg file is the following: <code>(Icon name)-(original|plain|line)(-wordmark?).</code></li>
+  <li>Each <code>.svg</code> must use the <code>fill</code> attribute instead of using <code>classes</code> for colors. This is to prevent class name clashing when using inline SVG. See <a href="https://github.com/devicons/devicon/issues/407">here</a> for more details.</li>
 </ul>
 
 <hr>
 <h2 id='orgGuidelines'>Organizational Guidelines</h2>
 <ul>
-  <li>Each icon has its own folder located in the <code>icons</code> folder</li>
-  <li>Each folder <i>may</i> contain one <code>.eps</code> file</li> (optional)
-  <li>The <code>.eps</code> file should contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
-  <li>Each folder must contain all the <code>.svg</code> files for the Icon</li>
+  <li>Each icon has its own folder located in the <code>icons</code> folder. </li>
+  <li>The folder name must matches the name value uses for the SVG files. Ex: `react-original.svg` should go inside a `react` folder, `microsoftsqlserver` icons should go inside a `microsoftsqlserver` folder. </li>
+  <li>All the <code>.svg</code> files for the Icon must go in the same folder. </li>
+  <li><i>Optional</i>: Each folder <i>may</i> contain one <code>.eps</code> file. The <code>.eps</code> file should contains all available versions of an icon. Each version is contained in a 128px by 128px artboard</li>
 </ul>
 
 <hr>
@@ -106,14 +188,29 @@ First of all, thanks for taking the time to contribute! This project can only gr
 <pre>
   <code>
     {
-        "name": string, // the official name of the technology. Must be lower case, no space and don't have the dash '-' character.
-        "tags": string[], // list of tags relating to the technology for search purpose
+        // the official name of the technology. Must be lower case, no space and don't have the dash '-' character.
+        "name": string, 
+
+        // list of tags relating to the technology for search purpose
+        "tags": string[], 
+
+        // keep tracks of the different versions that you have.
         "versions": {
-            "svg": VersionString[], // list the svgs that you have 
-            "font": VersionString[] // list the fonts acceptable versions that you have
+            // list the SVGs that you have 
+            "SVG": VersionString[], 
+
+            // list the fonts acceptable versions that you have
+            "font": VersionString[] 
         },
-        "color": string, // the main color of the logo. Only track 1 color
-        "aliases": AliasObj[] // keeps track of the aliases for the font versions ONLY
+
+        // the main color of the logo. Only track 1 color
+        "color": string, 
+
+        // keeps track of the aliases for the font versions ONLY
+        // see the <a href="#example">Example</a> section for more details
+        // NOTE: this attribute is not required from now on (see <a href='https://github.com/devicons/devicon/discussions/465'>this</a>)
+        // it is only being kept for backward compatibility
+        "aliases": AliasObj[] 
     }
   </code>
 </pre>
@@ -122,7 +219,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   Here is what VersionString means:
 </p>
 <ol>
-  <li> It's the version part of an <code>svg</code> file's name</li>
+  <li> It's the version part of an <code>SVG</code> file's name</li>
   <li> If you have "html5-original", the version string would be "original" </li>
   <li> If you have "react-line-wordmark", the version string would be "line-wordmark" </li>
   <li> See <a href="#versionNaming">naming conventions section</a> for more details </li>
@@ -141,15 +238,15 @@ First of all, thanks for taking the time to contribute! This project can only gr
 </pre>
 <hr>
 
-<h2 id='example'>Example </h2>
+<h2 id='example'>Example of Submitting An Icon</h2>
 <p>
-As an example, let's assume you have created the svgs for Redhat and Amazon Web Services logos.
+As an example, let's assume you have created the SVGs for Redhat and Amazon Web Services logos.
 </p>
-<p>For the Redhat svg, you have the "original", "original-wordmark", "plain", and "plain-wordmark" versions. </p>
-<p>For the Amazon Web Services svgs, you have the "original", "original-wordmark", "plain-wordmark" versions. The "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
+<p>For the Redhat SVG, you have the "original", "original-wordmark", "plain", and "plain-wordmark" versions. </p>
+<p>For the Amazon Web Services SVGs, you have the "original", "original-wordmark", "plain-wordmark" versions. The "original" version is simple enough to be a "plain" version as well. Note that we are not using the acronym AWS.</p>
 <ol>
   <li>
-    Put the svgs for each logo that you have into its own folders in <code>/icons</code>
+    Put the SVGs for each logo that you have into its own folders in <code>/icons</code>
     <ul>
       <li>This means you would create two folders: one for <code>amazonwebservices</code> and one for <code>redhat</code></li>
       <li><b>Note</b>: don't do this in the same commits; we want to have each Icon in its own PR.</li>
@@ -168,7 +265,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                 "linux"
               ],
               "versions": {
-                "svg": [ // here are the versions that are available in svgs
+                "SVG": [ // here are the versions that are available in svgs
                   "original",
                   "original-wordmark",
                   "plain",
@@ -196,7 +293,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                 "server"
               ],
               "versions": {
-                "svg": [ // here are the versions that are available in svgs
+                "SVG": [ // here are the versions that are available in svgs
                   "original",
                   "original-wordmark",
                   "plain-wordmark"
@@ -212,7 +309,8 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
                 {
                     "base": "original", // here is the base version that we will upload to Icomoon
                     "alias": "plain" // this is its alias. Our script will create a reference so users can search using "original" or "plain" for this icon
-                    // note that you don't provide aliases for the svg version. If "original" can't be made into a font, there's no need to provide it with a plain alias
+                    // note that you don't provide aliases for the SVG version. If "original" can't be made into a font, there's no need to provide it with a plain alias
+                    // note that this is now optional. You do not need to create aliases from now on. The attribute needs to stay though.
                 }
               ]
             }
@@ -223,9 +321,7 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
   </li>
   <li>Create a separate pull request (PR) for each Icon.
     <ul>
-      <li>This means you would have to create two PRs</li>
-      <li>For Amazon Web Services, the branch name would be icons/amazonwebservices. </li>
-      <li>For Redhat, the branch name would be icons/redhat. </li>
+      <li>This means you would have to create one PR for Amazon Web Services and one PR for Redhat.</li>
     </ul>
   </li>
   <li>
@@ -239,14 +335,24 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 </ol>
 
 <hr>
-<h2 id='requestingIcon'>Requesting an Icon</h2>
-<p>To request an icon, you can create an issue in the repo. Please follow these simple guidelines:</p>
-<ul>
-  <li>Search for other issues already requesting the icon</li>
-  <li>If an issue doesn't exist, create an issue naming it "Icon request: <i>name-of-the-icon</i>". </li>
-  <li>Please create a separate issues for each icon</li>
-  <li>Optional: include links where the icon can be found</li>
-</ul>
+<h2 id='updatingIcons'>Updating an Icon</h2>
+<p>
+  Sometimes, a company will update their logo or someone spotted an error in the SVG/icon that needs to be fixed. This means the current icon in our repository might need an update. The steps to do this is simple:
+</p>
+<ol>
+  <li>
+    Create a new commit to fix the SVGs.
+  </li>
+  <li>
+    Open a pull request based on the `develop` branch. 
+  </li>
+  <li>
+    <strong>IMPORTANT</strong>: name the pull request <code>update icon: <i>icon-name</i> (<i>versions</i>)</code>. Basically, follow the <a href="#overview">Overview on Submitting Icon</a> but replace the <code>new</code> with <code>update</code> in name of request with the above.
+  </li>
+  <li>
+    Follow the rest of the steps as laid out in <a href="#overview">Overview on Submitting Icon</a>.
+  </li>
+</ol>
 
 <hr>
 <h2 id='teams'>Maintainer/Reviewer/Teams</h2>
@@ -285,17 +391,116 @@ As an example, let's assume you have created the svgs for Redhat and Amazon Web 
 </p>
 
 <hr>
-<h2 id='buildScript'>Regarding The Build Script</h2>
-<p>To make adding icons easier for repo maintainers, we rely on GitHub Actions, Python, Selenium, and Gulp to automate our tasks.</p>
-<p>So far, the tasks in the build script are:</p>
+<h2 id='buildScript'>The Build Script: how it works and its quirks</h2>
+<p>We rely on GitHub Actions, Python, Selenium, Imgur, and Gulp to automate our tasks. Please feel free to take a look at the workflow files. The codes should be clear enough to follow along.</p>
+
+<p>Here are the main bots/script that we use:</p>
 <ul>
-  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a></li>
-  <li>Build, combine, and minify CSS files. For details, see <a href="https://github.com/devicons/devicon/pull/290">this</a></li>
+  <li id='peekBot'><code>peek-bot</code>: Upload the icons to Icomoon and see what it looks like. Doesn't download any icons at this time.</li>
+  <li id='buildBot'><code>build-bot</code>: Build the icons by uploading them to Icomoon and download the resulting icon files. Also update the css file</li>
+  <li id='optimizeBot'><code>optimize-bot</code>: Optimize the SVGs by minifying them and prefixing their IDs with the file names. This is done so using inline SVGs from this repository will not cause ID clash.</li>
+  <li id='checkSvgBot'><code>check-SVG-bot</code>: Check the SVGs uploaded and ensure they have the correct view box, fills, etc..</li>
+  <li id='npmReleaseBot'><code>npm-release-bot</code>: Update the NPM package.</li>
+  <li id='releaseMessageBot'><code>release-message-bot</code>: Create the release message for the PR.</li>
 </ul>
-<p>There are also other tasks that we are automating, such as:</p>
+
+<p>Here are the modular tasks in the build script:</p>
 <ul>
+  <li>Upload SVGs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and get the icons back. For details, see <a href="https://github.com/devicons/devicon/issues/252"> the original disscussion</a>, <a href="https://github.com/devicons/devicon/pull/268">this PR that introduce the feature</a> and <a href="https://github.com/devicons/devicon/issues/300">the final changes to it.</a> Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
+  <li>Preview what an SVG would look like as an icon using the upload svgs script (see <a href="https://github.com/devicons/devicon/pull/412">this</a>). Used by <b>peek-bot</b>.</li>
+  <li>Build, combine, and minify CSS files. For details, see <a href="https://github.com/devicons/devicon/pull/290">this</a>. Used by <b>build-bot</b>.</li>
+  <li>Send screenshots to Imgur and upload it to a PR. See <a href="https://github.com/devicons/devicon/pull/398">the PR for the Imgur action</a> and <a href="https://github.com/devicons/devicon/pull/481"> the PR for uploading the pictures to a PR. Used by <b>peek-bot</b> and <b>build-bot</b>.</a>
   <li>Ensure code quality is up to standard</li>
-  <li>Upload svgs to <a href="https://icomoon.io/app/#/select">icomoon.io</a> and take a screenshot to check that it looks good.
-  <li>Comment on the PR so maintainers don't have to manually upload icon result.</li>
+  <li>Comment on the PR so maintainers don't have to manually upload icon result. Used by <b>peek-bot</b> and <b>build-bot</b>.</li>
   <li>Publishing a new release to <a href="https://www.npmjs.com/package/devicon">npm</a>; See <a href="https://github.com/devicons/devicon/issues/288">#288</a></li>
+  <li>Creating a list of features that was added since last release. See <a href="https://github.com/devicons/devicon/discussions/574">this discussion</a> for inception and limitations. </li>
 </ul>
+
+<hr>
+<h2 id='bugs'>Common Bugs and Solutions</h2>
+<p>There are some bugs that the build scripts might run into. Listed below are the common ones and their solutions</p>
+<ol>
+  <li><b>No connection could be made because the target machine actively refused it. (os error 10061)</b>
+    <ul>
+      <li>See <a href="https://github.com/devicons/devicon/runs/2292634069?check_suite_focus=true">this action</a> for an example.</li>
+      <li>Caused by Selenium being unable to connect to the Icomoon website. It is unknown why this happens but the hypothesis is Icomoon blocks Selenium's multiple connection request and treats them as bots. See <a href="https://github.com/devicons/devicon/pull/544#issuecomment-812147713">this</a>.</li>
+      <li>Solution: wait for a few minutes and rerun the script. Repeat until it works.</li>
+    </ul>
+  </li>
+  <li><b>SHA Integrity</b>
+    <ul>
+      <li>See <a href="https://github.com/devicons/devicon/runs/2310036084?check_suite_focus=true">this action</a> for an example.</li>
+      <li>Caused by the <code>package-lock.json</code>. Most likely the result of a dependabot update but not 100% sure.</li>
+      <li>Solution: Remove the <code>package-lock.json</code> and run `npm install` to generate a new file. Commit and push.</li>
+    </ul>
+  </li>
+  <li><b>Wrong PR Title</b>
+    <ul>
+      <li>The <code>bot-peek</code> script relies on the PR title to find the icon that was added in the PR. If the format doesn't match what is specified in <a href="#overview">Overview on Submitting Icon</a>, the bot will fail.</li>
+      <li>Solution: Ensure the name of the PR follows the convention.</li>
+    </ul>
+  </li>
+  <li><b>Icon created by Icomoon contains strange lines that aren't in the SVG</b>
+    <ul>
+      <li>See <a href="https://github.com/devicons/devicon/pull/532">this PR</a>'s peek result.</li>
+      <li>This is caused by a bug in Icomoon's parser (see <a href="https://github.com/devicons/devicon/pull/532#issuecomment-827180766">this</a>).</li>
+      <li>Solution: Luckily this is an extremely rare case. Try remaking the SVG in a different way (using different paths/shapes). If your text/paths are joined with another object (say, the logo), try splitting them into individual paths (see <a href="https://github.com/devicons/devicon/pull/816#issuecomment-904021383">this PR</a>). You can always test using Icomoon to see if your fix works.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="discordServer">Discord server</h2>
+<p>
+We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ. If you don't have a GitHub account but want to suggest ideas or new icons, you can do that here in our Discord channel.
+<b>The Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
+</p>
+
+<h2 id='release'>Release strategy, conventions, preparation and execution</h2>
+<h5>Release strategy</h5>
+<p>Devicon does not follow a strict release plan. A new release is depended on current amount of contributions, required bugfixes/patches and will be discussed by the team of maintainers.</p>
+<p>Generally speaking: A new release will be published when new icons are added or a bug was fixed. When it's predictable that multiple icons are added in a foreseeable amount of time they are usually wrapped together.</p>
+<h5>Conventions</h5>
+<p>The version naming follows the rules of <a href="https://semver.org/">Semantic Versioning</a>. Given a version number MAJOR.MINOR.PATCH, increment the:</p>
+<ul>
+    <li>MAJOR version when you make incompatible API changes,</li>
+    <li>MINOR version when you add functionality <b>(like a new icon)</b> in a backwards compatible manner, and</li>
+    <li>PATCH version when you make backwards compatible bug fixes.</li>
+</ul>
+
+<h5>Release preparation and execution</h5>
+<ol>
+    <li>Define the next release version number based on the conventions</li>
+    <li>Checkout <code>development</code> as <code>draft-release</code> branch</li>
+    <li>Bump the package version using <code>npm version v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i> -m "bump npm version to v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>"</code>  (see <code><a href="https://github.com/devicons/devicon/pull/497">#487</a></code>)</li>
+    <li>Push the branch <code>draft-release</code></li>
+    <li>Manually trigger the workflow <code><a href="https://github.com/devicons/devicon/actions/workflows/build_icons.yml">build_icons.yml</a></code> (which has a <code>workflow_dispatch</code> event trigger) and select the branch <code>draft-release</code> as target branch. This will build a font version of all icons using icomoon and automatically creates a pull request to merge the build result back into <code>draft-release</code></li>
+    <li>Review and approve the auto-create pull request created by the action of the step above</li>
+    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title (like "Build preparation for release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).
+      <ul> 
+        <li>
+        Add information about all new icons, fixes, features and enhancements in the description of the pull request. 
+        </li>
+        <li>
+        Take the PRs/commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).
+        </li>
+        <li>
+        We now have a script that will do this for us. Check the `build-bot`'s PR message in the last step. There should be a section where it displays the features that have been added to the release. You can copy the markdown there and use it for the release message.
+        </li>
+      </ul>
+    </li>
+    <li>Wait for review and approval of the pull request (you can perform a squash-merge)</li>
+    <li>Once merged create a pull request with BASE <code>master</code> and HEAD <code>development</code>. Copy the description of the earlier pull request.</li>
+    <li>Since it was already approved in the 'development' stage a maintainer is allowed to merge it (<b>DON'T</b> perform a squash-merge).</li>
+    <li>Create a <a href="https://github.com/devicons/devicon/releases/new">new release</a> using the format "<b>Release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i></b>" as tag and release title. Use the earlier created description as description of the release.</li>
+    <li>Publishing the release will trigger the <a href="/.github/workflows/npm_publish.yml">npm_publish.yml</a> workflow which will execute a <code>npm publish</code> leading to a updated <a href="https://www.npmjs.com/package/devicon">npm package</a> (v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).</li>
+</ol>
+
+<h2 id='resources'>Recommended resources and tools</h2>
+
+| Tool Name          | Link                                               | Description & Usage                                |
+| :----------------- | :------------------------------------------------- | :------------------------------------------------- |
+| Inkscape           | https://inkscape.org/                              | Desktop application for editing and Making SVG's   |
+| Visual Studio Code | https://code.visualstudio.com/                     | A code editor for editing code                     |
+| vscode.dev         | https://vscode.dev/                                | Visual Studio Code in the browser                  |
+| Iloveimg           | https://www.iloveimg.com/resize-image/resize-svg   | Resizing SVG's                                     |
+| svgviewer.dev      | https://www.svgviewer.dev/                         | View, save, and optimize SVGs                      |

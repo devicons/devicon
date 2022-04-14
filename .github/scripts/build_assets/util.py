@@ -1,15 +1,20 @@
 import os
+import re
+from typing import List
 import platform
 import sys
 import traceback
+from io import FileIO
 
-
-def exit_with_err(err: Exception):
+def exit_with_err(err: Exception, logfile: FileIO=None):
     """
     Exit the current step and display the err.
     :param: err, the error/exception encountered.
     """
-    traceback.print_exc()
+    if logfile:
+        traceback.print_exc(file=logfile)
+    else:
+        traceback.print_exc()
     sys.exit(1)
 
 
@@ -42,3 +47,31 @@ def set_env_var(key: str, value: str, delimiter: str='~'):
             os.system(f'echo "{key}={value}" >> $GITHUB_ENV')
     else:
         raise Exception("This function doesn't support this platform: " + platform.system())
+
+
+def find_object_added_in_pr(icons: List[dict], pr_title: str):
+    """
+    Find the icon name from the PR title. 
+    :param icons, a list of the font objects found in the devicon.json.
+    :pr_title, the title of the PR that this workflow was called on.
+    :return a dictionary with the "name"
+    entry's value matching the name in the pr_title.
+    :raise If no object can be found, raise an Exception.
+    """
+    try:
+        pattern = re.compile(r"(?<=^new icon: )\w+ (?=\(.+\))|(?<=^update icon: )\w+ (?=\(.+\))", re.I)
+        icon_name_index = 0
+        icon_name = pattern.findall(pr_title)[icon_name_index].lower().strip()  # should only have one match
+        icon = [icon for icon in icons if icon["name"] == icon_name][0]
+        return icon
+    except IndexError as e:  # there are no match in the findall()
+        print(e)
+        message = "util.find_object_added_in_pr: Couldn't find an icon matching the name in the PR title.\n" \
+            f"PR title is: '{pr_title}'"
+        raise Exception(message)
+
+
+valid_svg_filename_pattern = re.compile(r"-(original|plain|line)(-wordmark)?\.svg$")
+def is_svg_name_valid(filename: str):
+    return valid_svg_filename_pattern.search(filename) is not None
+
