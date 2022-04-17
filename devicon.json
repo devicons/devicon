@@ -6354,6 +6354,27 @@
         "aliases": []
     },
     {
+        "name": "yaml",
+        "tags": [
+            "data-serialization",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain-black",
+                "plain-white"
+            ],
+            "font": [		
+                "original",
+                "plain-black",
+                "plain-white"
+	    ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "yarn",
         "tags": [
             "package",
