@@ -6361,14 +6361,10 @@
         ],
         "versions": {
             "svg": [
-                "original",
-                "plain-black",
-                "plain-white"
+                "original"
             ],
             "font": [		
-                "original",
-                "plain-black",
-                "plain-white"
+                "original"
 	    ]
         },
         "color": "#000000",
