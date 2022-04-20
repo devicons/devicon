@@ -3787,12 +3787,13 @@
             "editor"
         ],
         "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
+          "svg": [
+            "icon",
+            "original",
+            "original-wordmark",
+            "plain",
+            "plain-wordmark"
+          ],
             "font": [
                 "plain",
                 "plain-wordmark"
