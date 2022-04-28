@@ -50,6 +50,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
       // New icon format
       var icon = {
         name: devicon.name,
+        altnames: devicon.altnames,
         svg: devicon.versions.svg,
         font: devicon.versions.font,
         main: ""

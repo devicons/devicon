@@ -1,6 +1,9 @@
 [
     {
       "name": "adonisjs",
+      "altnames": [
+          "adonis"
+      ],
       "tags": [
           "nodejs",
           "framework"
@@ -29,6 +32,10 @@
     },
     {
         "name": "aftereffects",
+        "altnames": [
+            "adobeaftereffects",
+            "ae"
+        ],
         "tags": [
             "video",
             "editor"
@@ -47,6 +54,9 @@
     },
     {
         "name": "amazonwebservices",
+        "altnames": [
+            "aws"
+        ],
         "tags": [
             "cloud",
             "hosting",
@@ -73,6 +83,7 @@
     },
     {
         "name": "android",
+        "altnames": [],
         "tags": [
             "os",
             "mobile"
@@ -94,6 +105,9 @@
     },
     {
         "name": "aarch64",
+        "altnames": [
+            "arm64"
+        ],
         "tags": [
             "architecture",
             "programming",
@@ -114,6 +128,7 @@
     },
     {
         "name": "angularjs",
+        "altnames": [],
         "tags": [
             "framework",
             "javascript"
@@ -135,6 +150,9 @@
     },
     {
         "name": "apache",
+        "altnames": [
+            "apachemaven"
+        ],
         "tags": [
             "php"
         ],
@@ -159,6 +177,7 @@
     },
     {
         "name": "apachekafka",
+        "altnames": [],
         "tags": [
             "streaming",
             "open-source"
@@ -187,6 +206,7 @@
     },
     {
         "name": "appcelerator",
+        "altnames": [],
         "tags": [
             "app",
             "mobile"
@@ -212,6 +232,7 @@
     },
     {
         "name": "apple",
+        "altnames": [],
         "tags": [
             "brand",
             "mobile"
@@ -234,6 +255,7 @@
     },
     {
         "name": "appwrite",
+        "altnames": [],
         "tags": [
             "cloud", 
             "platform", 
@@ -265,6 +287,7 @@
     },
     {
         "name": "arduino",
+        "altnames": [],
         "tags": [
             "microcontroller",
             "hardware"
@@ -286,6 +309,7 @@
     },
     {
         "name": "atom",
+        "altnames": [],
         "tags": [
             "editor"
         ],
@@ -313,6 +337,9 @@
     },
     {
         "name": "azure",
+        "altnames": [
+            "microsoftazure"
+        ],
         "tags": [
             "cloud",
             "devops"
@@ -334,6 +361,9 @@
     },
     {
         "name": "babel",
+        "altnames": [
+            "babeljs"
+        ],
         "tags": [
             "javascript",
             "transpiler"
@@ -357,6 +387,7 @@
     },
     {
         "name": "backbonejs",
+        "altnames": [],
         "tags": [
             "javascript",
             "framework"
@@ -378,6 +409,9 @@
     },
     {
         "name": "bash",
+        "altnames": [
+            "bash"
+        ],
         "tags": [
             "shell",
             "command"
@@ -396,6 +430,7 @@
     },
     {
         "name": "behance",
+        "altnames": [],
         "tags": [
             "social",
             "website"
@@ -417,6 +452,9 @@
     },
     {
         "name": "bitbucket",
+        "altnames": [
+            "atlassianbitbucket"
+        ],
         "tags": [],
         "versions": {
             "svg": [
@@ -442,6 +480,7 @@
     },
     {
         "name": "bootstrap",
+        "altnames": [],
         "tags": [
             "css",
             "framework"
@@ -462,6 +501,7 @@
     },
     {
         "name": "bulma",
+        "altnames": [],
         "tags": ["css", "framework"],
         "versions": {
           "svg": ["plain"],
@@ -472,6 +512,7 @@
     },
     {
         "name": "bower",
+        "altnames": [],
         "tags": [
             "package",
             "manager"
@@ -497,6 +538,7 @@
     },
     {
         "name": "c",
+        "altnames": [],
         "tags": [
             "language"
         ],
@@ -527,6 +569,7 @@
     },
     {
         "name": "cakephp",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -547,6 +590,7 @@
     },
     {
         "name": "canva",
+        "altnames": [],
         "tags": [
             "design"
         ],
@@ -568,6 +612,7 @@
     },
     {
         "name": "centos",
+        "altnames": [],
         "tags": [
             "server",
             "linux"
@@ -589,6 +634,10 @@
     },
     {
         "name": "ceylon",
+        "altnames": [
+            "eclipseceylon",
+            "ceylonlang"
+        ],
         "tags": [
             "language"
         ],
@@ -608,6 +657,9 @@
     },
     {
         "name": "chrome",
+        "altnames": [
+            "googlechrome"
+        ],
         "tags": [
             "browser"
         ],
@@ -628,6 +680,7 @@
     },
     {
         "name": "circleci",
+        "altnames": [],
         "tags": ["integration", "platform"],
         "versions": {
           "svg": ["plain", "plain-wordmark"],
@@ -638,6 +691,7 @@
     },
     {
         "name": "clojure",
+        "altnames": [],
         "tags": [
             "language"
         ],
@@ -681,6 +735,7 @@
     },
     {
         "name": "clojurescript",
+        "altnames": [],
         "tags": [
             "language"
         ],
@@ -698,6 +753,7 @@
     },
     {
         "name": "codecov",
+        "altnames": [],
         "tags": ["platform", "integration"],
         "versions": {
           "svg": ["plain"],
@@ -708,6 +764,7 @@
     },
     {
         "name": "codeigniter",
+        "altnames": [],
         "tags": [
             "php",
             "framework"
@@ -727,6 +784,7 @@
     },
     {
         "name": "codepen",
+        "altnames": [],
         "tags": [
             "social",
             "website",
@@ -752,6 +810,7 @@
     },
     {
         "name": "coffeescript",
+        "altnames": [],
         "tags": [
             "javascript",
             "language"
@@ -780,6 +839,7 @@
     },
     {
         "name": "composer",
+        "altnames": [],
         "tags": [
             "package",
             "manager",
@@ -810,6 +870,9 @@
     },
     {
         "name": "confluence",
+        "altnames": [
+            "atlassianconfluence"
+        ],
         "tags": [],
         "versions": {
             "svg": [
@@ -835,6 +898,9 @@
     },
     {
         "name": "couchdb",
+        "altnames": [
+            "apachecouchdb"
+        ],
         "tags": [
             "database"
         ],
@@ -855,6 +921,10 @@
     },
     {
         "name": "cplusplus",
+        "altnames": [
+            "c++",
+            "cpp"
+        ],
         "tags": [
             "language"
         ],
@@ -885,6 +955,9 @@
     },
     {
         "name": "csharp",
+        "altnames": [
+            "c#"
+        ],
         "tags": [
             "language"
         ],
@@ -915,6 +988,9 @@
     },
     {
         "name": "css3",
+        "altnames": [
+            "cascadingstylesheets3"
+        ],
         "tags": [
             "language",
             "programming"
@@ -936,6 +1012,9 @@
     },
     {
         "name": "cucumber",
+        "altnames": [
+            "cucumberjs"
+        ],
         "tags": [
             "framework"
         ],
@@ -954,6 +1033,9 @@
     },
     {
         "name": "crystal",
+        "altnames": [
+            "crystallang"
+        ],
         "tags": [
             "programming",
             "language"
@@ -973,6 +1055,7 @@
     },
     {
         "name": "d3js",
+        "altnames": [],
         "tags": [],
         "versions": {
             "svg": [
@@ -988,6 +1071,9 @@
     },
     {
         "name": "dart",
+        "altnames": [
+            "googledart"
+        ],
         "tags": [
             "programming",
             "language"
@@ -1009,6 +1095,9 @@
     },
     {
         "name": "debian",
+        "altnames": [
+            "debian"
+        ],
         "tags": [
             "os",
             "server"
@@ -1030,6 +1119,7 @@
     },
     {
         "name": "denojs",
+        "altnames": [],
         "tags": [
             "javascript",
             "rust",
@@ -1059,6 +1149,7 @@
     },
     {
         "name": "devicon",
+        "altnames": [],
         "tags": [
             "iconset"
         ],
@@ -1083,6 +1174,7 @@
     },
     {
         "name": "django",
+        "altnames": [],
         "tags": [],
         "versions": {
             "svg": [
@@ -1099,6 +1191,7 @@
     },
     {
         "name": "docker",
+        "altnames": [],
         "tags": [
             "platform",
             "deploy"
@@ -1120,6 +1213,7 @@
     },
     {
         "name": "doctrine",
+        "altnames": [],
         "tags": [],
         "versions": {
             "svg": [
@@ -1142,6 +1236,9 @@
     },
     {
         "name": "dot-net",
+        "altnames": [
+            ".net"
+        ],
         "tags": [
             "framework"
         ],
@@ -1162,6 +1259,9 @@
     },
     {
         "name": "dotnetcore",
+        "altnames": [
+            ".netcore"
+        ],
         "tags": [
             "framework"
         ],
@@ -1179,6 +1279,7 @@
     },
     {
         "name": "drupal",
+        "altnames": [],
         "tags": [
             "cms"
         ],
@@ -1199,6 +1300,7 @@
     },
     {
         "name": "digitalocean",
+        "altnames": [],
         "tags": [
             "cloud",
             "hosting",
@@ -1222,6 +1324,9 @@
     },
     {
         "name": "electron",
+        "altnames": [
+            "electronjs"
+        ],
         "tags": [
             "framework"
         ],
@@ -1240,6 +1345,9 @@
     },
     {
       "name": "eleventy",
+      "altnames": [
+          "11ty"
+      ],
       "tags": ["ssg", "static site generator"],
       "versions": {
         "svg": ["original", "plain"],
@@ -1250,6 +1358,9 @@
     },
     {
         "name": "elixir",
+        "altnames": [
+            "elexirlang"
+        ],
         "tags": ["language"],
         "versions": {
             "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
@@ -1260,6 +1371,9 @@
     },
     {
         "name": "elm",
+        "altnames": [
+            "elmlang"
+        ],
         "tags": [
             "framework"
         ],
@@ -1280,6 +1394,9 @@
     },
     {
         "name": "ember",
+        "altnames": [
+            "emberjs"
+        ],
         "tags": [
             "framework"
         ],
@@ -1301,6 +1418,9 @@
     },
     {
       "name": "embeddedc",
+      "altnames": [
+          ""
+      ],
       "tags": ["language", "programming"],
       "versions": {
         "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
@@ -1311,6 +1431,7 @@
     },
     {
         "name": "erlang",
+        "altnames": [],
         "tags": [],
         "versions": {
             "svg": [
@@ -1329,6 +1450,9 @@
     },
     {
         "name": "express",
+        "altnames": [
+            "expressjs"
+        ],
         "tags": [
             "framework"
         ],
@@ -1347,6 +1471,7 @@
     },
     {
         "name": "facebook",
+        "altnames": [],
         "tags": [
             "auth"
         ],
@@ -1369,6 +1494,7 @@
     },
     {
         "name": "feathersjs",
+        "altnames": [],
         "tags": [
             "framework",
             "rest"
@@ -1386,6 +1512,7 @@
     },
     {
         "name": "figma",
+        "altnames": [],
         "tags": [
             "design"
         ],
@@ -1403,6 +1530,7 @@
     },
     {
         "name": "filezilla",
+        "altnames": [],
         "tags": [
             "ftp"
         ],
@@ -1420,6 +1548,7 @@
     },
     {
         "name": "firebase",
+        "altnames": [],
         "tags": [
             "auth",
             "hosting",
@@ -1441,6 +1570,9 @@
     },
     {
         "name": "firefox",
+        "altnames": [
+            "mozillafirefox"
+        ],
         "tags": [
             "browser"
         ],
@@ -1461,6 +1593,7 @@
     },
     {
         "name": "flask",
+        "altnames": [],
         "tags": [
             "python",
             "framework"
@@ -1489,6 +1622,7 @@
     },
     {
         "name": "flutter",
+        "altnames": [],
         "tags": [
             "framework",
             "sdk"
@@ -1507,6 +1641,7 @@
     },
     {
         "name": "foundation",
+        "altnames": [],
         "tags": [
             "framework",
             "css"
@@ -1528,6 +1663,9 @@
     },
     {
         "name": "fsharp",
+        "altnames": [
+            "f#"
+        ],
         "tags": [
             "language"
         ],
@@ -1545,6 +1683,7 @@
     },
     {
         "name": "gatling",
+        "altnames": [],
         "tags": [
             "framework",
             "testing"
@@ -1564,6 +1703,9 @@
     },
     {
         "name": "gatsby",
+        "altnames": [
+            "gatsbyjs"
+        ],
         "tags": [
             "reactjs",
             "framework"
@@ -1585,6 +1727,9 @@
     },
     {
         "name": "gcc",
+        "altnames": [
+            "gnucompilercollection"
+        ],
         "tags": [
             "compiler",
             "linux"
@@ -1603,6 +1748,7 @@
     },
     {
         "name": "gimp",
+        "altnames": [],
         "tags": [
             "graphic"
         ],
@@ -1622,6 +1768,7 @@
     },
     {
         "name": "git",
+        "altnames": [],
         "tags": [
             "version-control"
         ],
@@ -1642,6 +1789,7 @@
     },
     {
         "name": "github",
+        "altnames": [],
         "tags": [
             "version-control"
         ],
@@ -1665,6 +1813,7 @@
     },
     {
         "name": "gitlab",
+        "altnames": [],
         "tags": [
             "version-control"
         ],
@@ -1685,6 +1834,7 @@
     },
     {
         "name": "gitter",
+        "altnames": [],
         "tags": [
             "social",
             "chat"
@@ -1704,6 +1854,9 @@
     },
     {
         "name": "go",
+        "altnames": [
+            "golang"
+        ],
         "tags": [
             "language"
         ],
@@ -1730,6 +1883,7 @@
     },
     {
         "name": "google",
+        "altnames": [],
         "tags": [
             "auth"
         ],
@@ -1759,6 +1913,7 @@
     },
     {
         "name": "googlecloud",
+        "altnames": [],
         "tags": [
             "google",
             "cloud"
@@ -1780,6 +1935,10 @@
     },
     {
         "name": "gradle",
+        "altnames": [
+            "apachegradle",
+            "gradlebuildtool"
+        ],
         "tags": [
             "task-runner"
         ],
@@ -1798,6 +1957,7 @@
     },
     {
         "name": "grails",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -1815,6 +1975,7 @@
     },
     {
         "name": "graphql",
+        "altnames": [],
         "tags": [
             "language",
             "data",
@@ -1835,6 +1996,10 @@
     },
     {
         "name": "groovy",
+        "altnames": [
+            "groovylang",
+            "apachegroovy"
+        ],
         "tags": [
             "programming",
             "language"
@@ -1853,6 +2018,9 @@
     },
     {
         "name": "grunt",
+        "altnames": [
+            "gruntjs"
+        ],
         "tags": [
             "task-runner",
             "nodejs"
@@ -1878,6 +2046,9 @@
     },
     {
         "name": "gulp",
+        "altnames": [
+            "gulpjs"
+        ],
         "tags": [
             "task-runner",
             "nodejs"
@@ -1895,6 +2066,9 @@
     },
     {
         "name": "godot",
+        "altnames": [
+            "godotengine"
+        ],
         "tags": [
             "game-engine",
             "open-source"
@@ -1916,6 +2090,7 @@
     },
     {
         "name": "haskell",
+        "altnames": [],
         "tags": [
             "language",
             "functional"
@@ -1937,6 +2112,9 @@
     },
     {
         "name": "handlebars",
+        "altnames": [
+            "handlebarsjs"
+        ],
         "tags": [
             "framework"
         ],
@@ -1955,6 +2133,7 @@
     },
     {
         "name": "haxe",
+        "altnames": [],
         "tags": [
             "language"
         ],
@@ -1972,6 +2151,7 @@
     },
     {
         "name": "heroku",
+        "altnames": [],
         "tags": [
             "cloud"
         ],
@@ -2005,6 +2185,9 @@
     },
     {
         "name": "html5",
+        "altnames": [
+            "hypertextmarkdownlanguage5"
+        ],
         "tags": [
             "programming",
             "language"
@@ -2026,6 +2209,9 @@
     },
     {
         "name": "ie10",
+        "altnames": [
+            "internetexplorer10"
+        ],
         "tags": [
             "browser"
         ],
@@ -2047,6 +2233,9 @@
     },
     {
         "name": "illustrator",
+        "altnames": [
+            "adobeillustrator"
+        ],
         "tags": [
             "editor",
             "vector"
@@ -2066,6 +2255,7 @@
     },
     {
         "name": "inkscape",
+        "altnames": [],
         "tags": [
             "editor",
             "vector"
@@ -2087,6 +2277,9 @@
     },
     {
         "name": "intellij",
+        "altnames": [
+            "intellijidea"
+        ],
         "tags": [
             "editor"
         ],
@@ -2107,6 +2300,7 @@
     },
     {
         "name": "ionic",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -2125,6 +2319,7 @@
     },
     {
         "name": "jamstack",
+        "altnames": [],
         "tags": [
             "javascript",
             "markup"
@@ -2150,6 +2345,9 @@
     },
     {
         "name": "jasmine",
+        "altnames": [
+            "jasminejs"
+        ],
         "tags": [
             "testing"
         ],
@@ -2168,6 +2366,7 @@
     },
     {
         "name": "java",
+        "altnames": [],
         "tags": [
             "programming",
             "language"
@@ -2189,6 +2388,10 @@
     },
     {
         "name": "javascript",
+        "altnames": [
+            "js",
+            "ecmascript"
+        ],
         "tags": [
             "programming",
             "language"
@@ -2207,6 +2410,7 @@
     },
     {
         "name": "jeet",
+        "altnames": [],
         "tags": [
             "framework",
             "css"
@@ -2228,6 +2432,9 @@
     },
     {
         "name": "jest",
+        "altnames": [
+            "jestjs"
+        ],
         "tags": ["testing", "javascript"],
         "versions": {
           "svg": ["plain"],
@@ -2238,6 +2445,9 @@
     },
     {
         "name": "jenkins",
+        "altnames": [
+            "hudson"
+        ],
         "tags": [
             "platform",
             "integration",
@@ -2259,6 +2469,9 @@
     },
     {
         "name": "jetbrains",
+        "altnames": [
+            "intellijsoftware"
+        ],
         "tags": [
             "ide"
         ],
@@ -2276,6 +2489,9 @@
     },
     {
         "name": "jira",
+        "altnames": [
+            "atlassianjira"
+        ],
         "tags": [
             "platform",
             "organize"
@@ -2297,6 +2513,9 @@
     },
     {
         "name": "jquery",
+        "altnames": [
+            "jqueryjs"
+        ],
         "tags": [
             "library",
             "javascript"
@@ -2318,6 +2537,9 @@
     },
     {
         "name": "julia",
+        "altnames": [
+            "julialang"
+        ],
         "tags": [
             "programming",
             "language"
@@ -2339,6 +2561,9 @@
     },
     {
         "name": "jupyter",
+        "altnames": [
+            "jupyternotebook"
+        ],
         "tags": [
             "programming",
             "language"
@@ -2389,6 +2614,10 @@
     },
     {
         "name": "karma",
+        "altnames": [
+            "karmarunner",
+            "karmajs"
+        ],
         "tags": ["testing", "test-runner"],
         "versions": {
           "svg": ["original", "plain"],
@@ -2399,6 +2628,9 @@
     },
     {
         "name": "kotlin",
+        "altnames": [
+            "kotlinlang"
+        ],
         "tags": [
             "language"
         ],
@@ -2419,6 +2651,9 @@
     },
     {
         "name": "knockout",
+        "altnames": [
+            "knockoutjs"
+        ],
         "tags": [
             "framework",
             "javascript"
@@ -2436,6 +2671,7 @@
     },
     {
         "name": "krakenjs",
+        "altnames": [],
         "tags": [
             "nodejs",
             "framework"
@@ -2457,6 +2693,7 @@
     },
     {
         "name": "kubernetes",
+        "altnames": [],
         "tags": [
             "container",
             "deployment"
@@ -2476,6 +2713,9 @@
     },
     {
       "name": "labview",
+      "altnames": [
+          ""
+      ],
       "tags": ["language"],
       "versions": {
         "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
@@ -2486,6 +2726,7 @@
     },
     {
         "name": "laravel",
+        "altnames": [],
         "tags": [
             "php",
             "framework"
@@ -2505,6 +2746,9 @@
     },
     {
         "name": "less",
+        "altnames": [
+            "lesscss"
+        ],
         "tags": [
             "css",
             "pre-processor"
@@ -2522,6 +2766,7 @@
     },
     {
         "name": "linkedin",
+        "altnames": [],
         "tags": [
             "social",
             "auth"
@@ -2543,6 +2788,7 @@
     },
     {
         "name": "lua",
+        "altnames": [],
         "tags": [
             "programming",
             "language",
@@ -2569,6 +2815,7 @@
     },
     {
         "name": "linux",
+        "altnames": [],
         "tags": [
             "os"
         ],
@@ -2586,6 +2833,9 @@
     },
     {
         "name": "materialui",
+        "altnames": [
+            "mui"
+        ],
         "tags": [
             "framework",
             "design",
@@ -2605,6 +2855,7 @@
     },
     {
         "name": "matlab",
+        "altnames": [],
         "tags": [
           "programming",
           "language"
@@ -2625,6 +2876,7 @@
     },
     {
         "name": "magento",
+        "altnames": [],
         "tags": [
             "php",
             "framework"
@@ -2646,6 +2898,9 @@
     },
     {
         "name": "markdown",
+        "altnames": [
+            "md"
+        ],
         "tags": [
             "markup",
             "language"
@@ -2668,6 +2923,9 @@
     },
     {
         "name": "meteor",
+        "altnames": [
+            "meteorjs"
+        ],
         "tags": [
             "javascript"
         ],
@@ -2688,6 +2946,7 @@
     },
     {
         "name": "minitab",
+        "altnames": [],
         "tags": ["package", "statistics"],
         "versions": {
           "svg": ["original", "plain"],
@@ -2698,6 +2957,7 @@
     },
     {
         "name": "mocha",
+        "altnames": [],
         "tags": [
             "testing"
         ],
@@ -2714,6 +2974,7 @@
     },
     {
         "name": "modx",
+        "altnames": [],
         "tags": [
             "cms",
             "php",
@@ -2736,6 +2997,7 @@
     },
     {
         "name": "mongodb",
+        "altnames": [],
         "tags": [
             "database"
         ],
@@ -2756,6 +3018,7 @@
     },
     {
         "name": "moodle",
+        "altnames": [],
         "tags": [
             "platform"
         ],
@@ -2776,6 +3039,9 @@
     },
     {
         "name": "msdos",
+        "altnames": [
+            "microsoftdiskoperatingsystem"
+        ],
         "tags": [
             "os"
         ],
@@ -2794,6 +3060,7 @@
     },
     {
         "name": "mysql",
+        "altnames": [],
         "tags": [
             "database",
             "language"
@@ -2815,6 +3082,7 @@
     },
     {
         "name": "neo4j",
+        "altnames": [],
         "tags": [
             "database"
         ],
@@ -2835,6 +3103,7 @@
     },
     {
         "name": "nestjs",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -2871,6 +3140,7 @@
     },
     {
         "name": "nextjs",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -2902,6 +3172,7 @@
     },
     {
         "name": "nginx",
+        "altnames": [],
         "tags": [
             "server"
         ],
@@ -2934,6 +3205,7 @@
     },
     {
         "name": "nixos",
+        "altnames": [],
         "tags": [
             "os"
         ],
@@ -2954,6 +3226,7 @@
     },
     {
         "name": "nodejs",
+        "altnames": [],
         "tags": [
             "javascript",
             "language"
@@ -2975,6 +3248,9 @@
     },
     {
         "name": "nodewebkit",
+        "altnames": [
+            "nwjs"
+        ],
         "tags": [],
         "versions": {
             "svg": [
@@ -2997,6 +3273,10 @@
     },
     {
         "name": "npm",
+        "altnames": [
+            "npmjs",
+            "nodepackagemanager"
+        ],
         "tags": [
             "package",
             "manager"
@@ -3033,6 +3313,7 @@
     },
     {
         "name": "numpy",
+        "altnames": [],
         "tags": [
             "library",
             "python"
@@ -3057,6 +3338,7 @@
     },
     {
         "name": "nuxtjs",
+        "altnames": [],
         "tags": [
             "js",
             "javascript",
@@ -3081,6 +3363,7 @@
     },
     {
         "name": "objectivec",
+        "altnames": [],
         "tags": [
             "programming",
             "language"
@@ -3098,6 +3381,7 @@
     },
     {
         "name": "opera",
+        "altnames": [],
         "tags": [
             "browser"
         ],
@@ -3118,6 +3402,7 @@
     },
     {
         "name": "ocaml",
+        "altnames": [],
         "tags": [
             "programming",
             "language"
@@ -3139,6 +3424,9 @@
     },
 	{
         "name": "opengl",
+        "altnames": [
+            "opengraphicslibrary"
+        ],
         "tags": [
             "library",
             "graphics",
@@ -3159,6 +3447,9 @@
     },
     {
         "name": "oracle",
+        "altnames": [
+            "oracledatabase"
+        ],
         "tags": [
             "database"
         ],
@@ -3180,6 +3471,7 @@
     },
     {
         "name": "pandas",
+        "altnames": [],
         "tags": [
             "library",
             "python"
@@ -3208,6 +3500,7 @@
     },
     {
         "name": "perl",
+        "altnames": [],
         "tags": [
             "programming",
             "language"
@@ -3226,6 +3519,7 @@
     },
     {
         "name": "phalcon",
+        "altnames": [],
         "tags": ["php", "framework"],
         "versions": {
           "svg": ["original", "plain"],
@@ -3236,6 +3530,9 @@
     },
     {
         "name": "photoshop",
+        "altnames": [
+            "adobephotoshop"
+        ],
         "tags": [
             "editor",
             "graphic"
@@ -3255,6 +3552,9 @@
     },
     {
         "name": "php",
+        "altnames": [
+            "phphypertextpreprocessor"
+        ],
         "tags": [
             "programming",
             "language"
@@ -3273,6 +3573,7 @@
     },
     {
         "name": "phpstorm",
+        "altnames": [],
         "tags": [
             "editor"
         ],
@@ -3293,6 +3594,7 @@
     },
     {
         "name": "postgresql",
+        "altnames": [],
         "tags": [
             "database"
         ],
@@ -3313,6 +3615,9 @@
     },
     {
         "name": "premierepro",
+        "altnames": [
+            "adobepremierepro"
+        ],
         "tags": [
             "editor",
             "video"
@@ -3331,6 +3636,9 @@
     },
     {
         "name": "processing",
+        "altnames": [
+            "processingpy"
+        ],
         "tags": [
             "java",
             "python",
@@ -3356,6 +3664,10 @@
     },
     {
         "name": "protractor",
+        "altnames": [
+            "protractorjs",
+            "protractortest"
+        ],
         "tags": [
             "framework",
             "javascript"
@@ -3375,6 +3687,7 @@
     },
 	{
         "name": "putty",
+        "altnames": [],
         "tags": [
             "ssh",
             "server"
@@ -3393,6 +3706,7 @@
     },
     {
         "name": "pycharm",
+        "altnames": [],
         "tags": [
             "editor"
         ],
@@ -3413,6 +3727,7 @@
     },
     {
         "name": "python",
+        "altnames": [],
         "tags": [
             "programming",
             "language"
@@ -3434,6 +3749,9 @@
     },
     {
         "name": "raspberrypi",
+        "altnames": [
+            "rpi"
+        ],
         "tags": ["arm", "computer"],
         "versions": {
             "svg": ["original", "original-wordmark", "line", "line-wordmark"],
@@ -3444,6 +3762,7 @@
     },
     {
         "name": "phoenix",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -3464,6 +3783,7 @@
     },
     {
         "name": "qt",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -3485,6 +3805,9 @@
     },
     {
         "name": "r",
+        "altnames": [
+            "rlang"
+        ],
         "tags": [
             "programming",
             "language"
@@ -3504,6 +3827,9 @@
     },
     {
         "name": "rails",
+        "altnames": [
+            "rubyonrails"
+        ],
         "tags": [
             "framework"
         ],
@@ -3523,6 +3849,9 @@
     },
     {
         "name": "react",
+        "altnames": [
+            "reactjs"
+        ],
         "tags": [
             "framework"
         ],
@@ -3550,6 +3879,7 @@
     },
     {
         "name": "redhat",
+        "altnames": [],
         "tags": [
             "server",
             "linux"
@@ -3571,6 +3901,9 @@
     },
     {
         "name": "redis",
+        "altnames": [
+            "remotedictionaryserver"
+        ],
         "tags": [
             "server"
         ],
@@ -3591,6 +3924,9 @@
     },
     {
         "name": "redux",
+        "altnames": [
+            "reduxjs"
+        ],
         "tags": [
             "framework"
         ],
@@ -3612,6 +3948,7 @@
     },
     {
         "name": "rocksdb",
+        "altnames": [],
         "tags": [
             "database"
         ],
@@ -3628,6 +3965,9 @@
     },
     {
         "name": "ruby",
+        "altnames": [
+            "rubylang"
+        ],
         "tags": [
             "programming",
             "language"
@@ -3649,6 +3989,7 @@
     },
     {
         "name": "rubymine",
+        "altnames": [],
         "tags": [
             "editor"
         ],
@@ -3669,6 +4010,9 @@
     },
     {
         "name": "rust",
+        "altnames": [
+            "rustlang"
+        ],
         "tags": [
             "programming",
             "language"
@@ -3686,6 +4030,9 @@
     },
     {
         "name": "safari",
+        "altnames": [
+            "applesafari"
+        ],
         "tags": [
             "browser"
         ],
@@ -3710,6 +4057,7 @@
     },
     {
         "name": "salesforce",
+        "altnames": [],
         "tags": [
             "platform",
             "ecommerce"
@@ -3728,6 +4076,7 @@
     },
     {
         "name": "rstudio",
+        "altnames": [],
         "tags": ["editor", "package", "statistics"],
         "versions": {
           "svg": ["original", "plain"],
@@ -3738,6 +4087,9 @@
     },
     {
         "name": "sass",
+        "altnames": [
+            "scss"
+        ],
         "tags": [
             "pre-processor",
             "css"
@@ -3760,6 +4112,9 @@
     },
     {
         "name": "scala",
+        "altnames": [
+            "scalalang"
+        ],
         "tags": [
             "programming",
             "language"
@@ -3781,6 +4136,9 @@
     },
     {
         "name": "sequelize",
+        "altnames": [
+            "sequelizejs"
+        ],
         "tags": [
             "database",
             "language"
@@ -3811,6 +4169,7 @@
     },
     {
         "name": "shopware",
+        "altnames": [],
         "tags": [
             "cloud",
             "platform"
@@ -3830,6 +4189,7 @@
     },
     {
         "name": "sketch",
+        "altnames": [],
         "tags": [
             "application"
         ],
@@ -3850,6 +4210,7 @@
     },
     {
         "name": "slack",
+        "altnames": [],
         "tags": [
             "chat"
         ],
@@ -3870,6 +4231,7 @@
     },
     {
         "name": "socketio",
+        "altnames": [],
         "tags": [
             "library",
             "networking",
@@ -3899,6 +4261,7 @@
     },
     {
         "name": "sourcetree",
+        "altnames": [],
         "tags": [
             "version-control"
         ],
@@ -3926,6 +4289,9 @@
     },
     {
         "name": "spring",
+        "altnames": [
+            "springframework"
+        ],
         "tags": [
             "framework"
         ],
@@ -3946,6 +4312,9 @@
     },
     {
         "name": "spss",
+        "altnames": [
+            "ibmspss"
+        ],
         "tags": ["package", "statistics"],
         "versions": {
           "svg": ["original", "plain"],
@@ -3956,6 +4325,7 @@
     },
     {
         "name": "sqlalchemy",
+        "altnames": [],
         "tags": [
             "python",
             "orm"
@@ -3981,6 +4351,9 @@
     },
     {
         "name": "subversion",
+        "altnames": [
+            "apachesubversion"
+        ],
         "tags": [
             "svn",
             "version"
@@ -4004,6 +4377,7 @@
     },
     {
         "name": "microsoftsqlserver",
+        "altnames": [],
         "tags": [
             "database"
         ],
@@ -4022,6 +4396,9 @@
     },
     {
         "name": "ssh",
+        "altnames": [
+            "secureshell"
+        ],
         "tags": [
             "security"
         ],
@@ -4049,6 +4426,9 @@
     },
     {
         "name": "stylus",
+        "altnames": [
+            "styluslang"
+        ],
         "tags": [
             "css",
             "pre-processor"
@@ -4066,6 +4446,9 @@
     },
     {
         "name": "svelte",
+        "altnames": [
+            "sveltejs"
+        ],
         "tags": [
             "javascript",
             "framework"
@@ -4087,6 +4470,7 @@
     },
     {
         "name": "swift",
+        "altnames": [],
         "tags": [
             "language"
         ],
@@ -4107,6 +4491,7 @@
     },
     {
         "name": "symfony",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -4134,6 +4519,9 @@
     },
     {
         "name": "storybook",
+        "altnames": [
+            "storybookjs"
+        ],
         "tags": [
             "framework",
             "documentation", 
@@ -4156,6 +4544,7 @@
     },
     {
         "name": "tailwindcss",
+        "altnames": [],
         "tags": [
             "css",
             "framework"
@@ -4175,6 +4564,7 @@
     },
     {
         "name": "tensorflow",
+        "altnames": [],
         "tags": [
             "library",
             "machine-learning",
@@ -4199,6 +4589,7 @@
     },
     {
         "name": "threejs",
+        "altnames": [],
         "tags": [
             "javascript",
             "framework"
@@ -4218,6 +4609,9 @@
     },
     {
         "name": "tomcat",
+        "altnames": [
+            "tomcat"
+        ],
         "tags": [
             "server"
         ],
@@ -4238,6 +4632,7 @@
     },
 	{
         "name": "tortoisegit",
+        "altnames": [],
         "tags": [
             "git"
         ],
@@ -4257,6 +4652,9 @@
     },
     {
         "name": "towergit",
+        "altnames": [
+            "towergitclient"
+        ],
         "tags": [
             "git"
         ],
@@ -4277,6 +4675,9 @@
     },
     {
         "name": "travis",
+        "altnames": [
+            "travisci"
+        ],
         "tags": [
             "platform",
             "integration"
@@ -4296,6 +4697,7 @@
     },
     {
         "name": "thealgorithms",
+        "altnames": [],
         "tags": [
             "organization",
             "algorithms"
@@ -4317,6 +4719,9 @@
     },
     {
         "name": "trello",
+        "altnames": [
+            "atlassiantrello"
+        ],
         "tags": [
             "platform",
             "organize"
@@ -4336,6 +4741,7 @@
     },
     {
         "name": "twitter",
+        "altnames": [],
         "tags": [
             "auth"
         ],
@@ -4357,6 +4763,9 @@
     },
     {
         "name": "typescript",
+        "altnames": [
+            "ts"
+        ],
         "tags": [
             "programming",
             "transpiler"
@@ -4380,6 +4789,7 @@
     },
     {
         "name": "typo3",
+        "altnames": [],
         "tags": [
             "cms",
             "php"
@@ -4401,6 +4811,7 @@
     },
     {
         "name": "ubuntu",
+        "altnames": [],
         "tags": [
             "os"
         ],
@@ -4419,6 +4830,7 @@
     },
     {
         "name": "unity",
+        "altnames": [],
         "tags": [
             "csharp",
             "engine",
@@ -4439,6 +4851,7 @@
     },
     {
         "name": "unix",
+        "altnames": [],
         "tags": [
             "os"
         ],
@@ -4455,6 +4868,9 @@
     },
     {
         "name": "uwsgi",
+        "altnames": [
+            "uwebservergatewayinterface"
+        ],
         "tags": [
             "hosting"
         ],
@@ -4472,6 +4888,7 @@
     },
     {
         "name": "vagrant",
+        "altnames": [],
         "tags": [
             "platform"
         ],
@@ -4492,6 +4909,9 @@
     },
     {
         "name": "vim",
+        "altnames": [
+            "viimproved"
+        ],
         "tags": [
             "editor"
         ],
@@ -4509,6 +4929,9 @@
     },
     {
         "name": "visualstudio",
+        "altnames": [
+            "vs"
+        ],
         "tags": [
             "editor"
         ],
@@ -4527,6 +4950,7 @@
     },
     {
         "name": "vuejs",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -4551,6 +4975,7 @@
     },
     {
         "name": "vuestorefront",
+        "altnames": [],
         "tags": [
             "framework"
         ],
@@ -4568,6 +4993,9 @@
     },
     {
         "name": "vscode",
+        "altnames": [
+            "visualstudiocode"
+        ],
         "tags": [
             "editor",
             "ide"
@@ -4589,6 +5017,7 @@
     },
     {
         "name": "weblate",
+        "altnames": [],
         "tags": [
             "localization"
         ],
@@ -4609,6 +5038,9 @@
     },
     {
         "name": "webpack",
+        "altnames": [
+            "webpackjs"
+        ],
         "tags": [
             "package",
             "manager"
@@ -4630,6 +5062,7 @@
     },
     {
         "name": "webstorm",
+        "altnames": [],
         "tags": [
             "editor"
         ],
@@ -4650,6 +5083,7 @@
     },
     {
         "name": "windows8",
+        "altnames": [],
         "tags": [
             "os"
         ],
@@ -4677,6 +5111,7 @@
     },
     {
         "name": "woocommerce",
+        "altnames": [],
         "tags": [
             "ecommerce"
         ],
@@ -4697,6 +5132,7 @@
     },
     {
         "name": "wordpress",
+        "altnames": [],
         "tags": [
             "cms"
         ],
@@ -4716,6 +5152,9 @@
     },
     {
         "name": "xd",
+        "altnames": [
+            "adobexd"
+        ],
         "tags": ["design", "editor", "ui"],
         "versions": {
             "svg": ["plain", "line"],
@@ -4726,6 +5165,7 @@
     },
     {
         "name": "yarn",
+        "altnames": [],
         "tags": [
             "package",
             "manager"
@@ -4745,6 +5185,9 @@
     },
     {
         "name": "yii",
+        "altnames": [
+            "yesitis"
+        ],
         "tags": [
             "php",
             "framework"
@@ -4766,6 +5209,7 @@
     },
     {
         "name": "yunohost",
+        "altnames": [],
         "tags": [
             "os"
         ],
@@ -4783,6 +5227,7 @@
     },
     {
         "name": "zend",
+        "altnames": [],
         "tags": [
             "php",
             "framework"
@@ -4802,6 +5247,9 @@
     },
     {
         "name": "zig",
+        "altnames": [
+            "ziglang"
+        ],
         "tags": [
             "language"
         ],
