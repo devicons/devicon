@@ -537,6 +537,33 @@
         "aliases": []
     },
     {
+        "name": "ballerina",
+        "tags": [
+            "java",
+            "cloud",
+            "server",
+            "networking"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#46C0BC",
+        "aliases": []
+    },
+    {
         "name": "bamboo",
         "tags": [
             "platform",
