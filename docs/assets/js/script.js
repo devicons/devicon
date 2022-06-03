@@ -11,7 +11,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   // Determination of the latest release tagging
   // which is used for showing in the header of the page
   // as well as for CDN links
-  var gitHubPath = 'snailedlt/devicon';
+  var gitHubPath = 'devicons/devicon';
   var url = 'https://api.github.com/repos/' + gitHubPath + '/tags';
 
   $scope.latestReleaseTagging = 'master';
@@ -24,7 +24,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   });
 
   var versionStr = '@' + $scope.latestReleaseTagging;
-  var baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}@a6e7612e7e105247eb1103fc3756c09e838b51a7/`
+  var baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}${versionStr}/`
 
   // Get devicon.json
   $http.get(baseUrl + 'devicon.json').success(function(data) {
