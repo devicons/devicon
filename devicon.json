@@ -4685,6 +4685,7 @@
     },
     {
         "name": "plotly",
+        "altnames": [],
         "tags": [
             "frontend",
             "machine-learning",
