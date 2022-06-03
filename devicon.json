@@ -161,6 +161,7 @@
         "tags": [
             "application",
             "editor",
+            "jetbrains",
             "ide",
             "android",
             "mobile"
@@ -251,9 +252,7 @@
     },
     {
         "name": "apache",
-        "altnames": [
-            "apachemaven"
-        ],
+        "altnames": [],
         "tags": [
             "php"
         ],
@@ -608,7 +607,9 @@
     },
     {
         "name": "bash",
-        "altnames": [],
+        "altnames": [
+            "bourneagainshell"
+        ],
         "tags": [
             "shell",
             "command",
@@ -750,7 +751,9 @@
     },
     {
         "name": "bulma",
-        "altnames": [],
+        "altnames": [
+            "bulmacss"
+        ],
         "tags": ["css", "framework"],
         "versions": {
           "svg": ["plain"],
@@ -916,6 +919,7 @@
         "name": "clion",
         "altnames": [],
         "tags": [
+            "jetbrains",
             "editor"
         ],
         "versions": {
@@ -936,7 +940,8 @@
         "name": "clojure",
         "altnames": [],
         "tags": [
-            "language"
+            "language",
+            "jvm"
         ],
         "versions": {
             "svg": [
@@ -1057,6 +1062,7 @@
         "altnames": [],
         "tags": [
             "javascript",
+            "transpiler",
             "language"
         ],
         "versions": {
@@ -1571,6 +1577,7 @@
     {
         "name": "dot-net",
         "altnames": [
+            "dotnet",
             ".net"
         ],
         "tags": [
@@ -1907,7 +1914,7 @@
             ]
         },
         "color": "#333333",
-        "aliases": [        ]
+        "aliases": []
     },
     {
         "name": "fedora",
@@ -2534,7 +2541,8 @@
         ],
         "tags": [
             "programming",
-            "language"
+            "language",
+            "jvm"
         ],
         "versions": {
             "svg": [
@@ -2899,6 +2907,7 @@
             "intellijidea"
         ],
         "tags": [
+            "jetbrains",
             "editor"
         ],
         "versions": {
@@ -2987,7 +2996,8 @@
         "altnames": [],
         "tags": [
             "programming",
-            "language"
+            "language",
+            "jvm"
         ],
         "versions": {
             "svg": [
@@ -3374,7 +3384,9 @@
             "kotlinlang"
         ],
         "tags": [
-            "language"
+            "language",
+            "jetbrains",
+            "jvm"
         ],
         "versions": {
             "svg": [
@@ -3393,7 +3405,9 @@
     },
     {
         "name": "krakenjs",
-        "altnames": [],
+        "altnames": [
+            "kraken"
+        ],
         "tags": [
             "nodejs",
             "framework"
@@ -3466,9 +3480,7 @@
     },
     {
         "name": "latex",
-        "altnames": [
-            "latex"
-        ],
+        "altnames": [],
         "tags": [
             "latex3",
             "latex2e",
@@ -3554,7 +3566,9 @@
     },
     {
         "name": "lua",
-        "altnames": [],
+        "altnames": [
+            "lualang"
+        ],
         "tags": [
             "programming",
             "language",
@@ -3671,7 +3685,10 @@
     },
     {
         "name": "maven",
-        "altnames": [],
+        "altnames": [
+            "apachemaven",
+            "mvn"
+        ],
         "tags": [
             "build"
         ],
@@ -3726,7 +3743,8 @@
             "meteorjs"
         ],
         "tags": [
-            "javascript"
+            "javascript",
+            "framework"
         ],
         "versions": {
             "svg": [
@@ -3925,7 +3943,9 @@
     },
     {
         "name": "mysql",
-        "altnames": [],
+        "altnames": [
+            "mystructuredquerylanguage"
+        ],
         "tags": [
             "database",
             "language"
@@ -4645,6 +4665,7 @@
         "name": "phpstorm",
         "altnames": [],
         "tags": [
+            "jetbrains",
             "editor"
         ],
         "versions": {
@@ -4913,6 +4934,7 @@
         "name": "pycharm",
         "altnames": [],
         "tags": [
+            "jetbrains",
             "editor"
         ],
         "versions": {
@@ -5262,6 +5284,7 @@
         "tags": [
             "jetbrains",
             "ide",
+            "editor",
             "dotnet"
         ],
         "versions": {
@@ -5386,6 +5409,7 @@
         "name": "rubymine",
         "altnames": [],
         "tags": [
+            "jetbrains",
             "editor"
         ],
         "versions": {
@@ -5519,7 +5543,8 @@
         ],
         "tags": [
             "programming",
-            "language"
+            "language",
+            "jvm"
         ],
         "versions": {
             "svg": [
@@ -6001,7 +6026,8 @@
         ],
         "tags": [
             "javascript",
-            "framework"
+            "framework",
+            "compiler"
         ],
         "versions": {
             "svg": [
@@ -6043,7 +6069,8 @@
         "name": "symfony",
         "altnames": [],
         "tags": [
-            "framework"
+            "framework",
+            "php"
         ],
         "versions": {
             "svg": [
@@ -6314,7 +6341,9 @@
         ],
         "tags": [
             "programming",
-            "transpiler"
+            "transpiler",
+            "javascript",
+            "language"
         ],
         "versions": {
             "svg": [
@@ -6380,7 +6409,7 @@
         "tags": [
             "csharp",
             "engine",
-            "game"
+            "game-engine"
         ],
         "versions": {
             "svg": [
@@ -6418,7 +6447,7 @@
         "tags": [
             "c++",
             "engine",
-            "game"
+            "game-engine"
         ],
         "versions": {
             "svg": [
@@ -6736,6 +6765,7 @@
         "name": "webstorm",
         "altnames": [],
         "tags": [
+            "jetbrains",
             "editor"
         ],
         "versions": {
@@ -6859,8 +6889,8 @@
         ]
     },
     {
-	"name": "xcode",
-    "altnames": [],
+	    "name": "xcode",
+        "altnames": [],
         "tags": [
             "application",
             "editor",
