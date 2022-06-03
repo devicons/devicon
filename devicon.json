@@ -157,9 +157,7 @@
     },
     {
         "name": "androidstudio",
-        "altnames": [
-            "arm64"
-        ],
+        "altnames": [],
         "tags": [
             "application",
             "editor",
@@ -610,12 +608,11 @@
     },
     {
         "name": "bash",
-        "altnames": [
-            "bash"
-        ],
+        "altnames": [],
         "tags": [
             "shell",
-            "command"
+            "command",
+            "scripting"
         ],
         "versions": {
             "svg": [
@@ -723,17 +720,6 @@
             ]
         },
         "color": "#59407f",
-        "aliases": []
-    },
-    {
-        "name": "bulma",
-        "altnames": [],
-        "tags": ["css", "framework"],
-        "versions": {
-          "svg": ["plain"],
-          "font": ["plain"]
-        },
-        "color": "#00d1b2",
         "aliases": []
     },
     {
@@ -1007,24 +993,6 @@
             ]
         },
         "color": "#0e8a16",
-        "aliases": []
-    },
-    {
-        "name": "clojurescript",
-        "altnames": [],
-        "tags": [
-            "language"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#96ca4b",
         "aliases": []
     },
     {
@@ -1416,9 +1384,7 @@
     },
     {
         "name": "debian",
-        "altnames": [
-            "debian"
-        ],
+        "altnames": [],
         "tags": [
             "os",
             "server"
@@ -5973,9 +5939,7 @@
     },
     {
         "name": "sqlite",
-        "altnames": [
-            "apachesubversion"
-        ],
+        "altnames": [],
         "tags": [
             "sql",
             "database",
@@ -6171,31 +6135,6 @@
         ]
     },
     {
-        "name": "storybook",
-        "altnames": [
-            "storybookjs"
-        ],
-        "tags": [
-            "framework",
-            "documentation", 
-            "ui"
-        ],
-        "versions": {
-          "svg": [
-              "original", 
-              "original-wordmark",
-              "plain", 
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain", 
-              "plain-wordmark"
-          ]
-        },
-        "color": "#FF4785",
-        "aliases": []
-    },
-    {
         "name": "tailwindcss",
         "altnames": [],
         "tags": [
@@ -6307,9 +6246,7 @@
     },
     {
         "name": "tomcat",
-        "altnames": [
-            "tomcat"
-        ],
+        "altnames": [],
         "tags": [
             "server"
         ],
@@ -6391,28 +6328,6 @@
             ]
         },
         "color": "#bb2031",
-        "aliases": []
-    },
-    {
-        "name": "thealgorithms",
-        "altnames": [],
-        "tags": [
-            "organization",
-            "algorithms"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#00BCB4",
         "aliases": []
     },
     {
@@ -6800,9 +6715,7 @@
     },
     {
         "name": "vuetify",
-        "altnames": [
-            "visualstudiocode"
-        ],
+        "altnames": [],
         "tags": [
             "css",
             "framework",
