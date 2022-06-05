@@ -929,6 +929,19 @@
         "aliases": []
     },
     {
+        "name": "codeac",
+        "tags": [
+		"platform", 
+		"integration"
+	],
+        "versions": {
+          "svg": ["original"],
+          "font": ["original"]
+        },
+        "color": "#005096",
+        "aliases": []
+    },
+    {
         "name": "codecov",
         "tags": ["platform", "integration"],
         "versions": {
