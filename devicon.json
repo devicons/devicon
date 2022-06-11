@@ -5976,6 +5976,7 @@
     },
     {
         "name": "streamlit",
+	"altnames": [],
         "tags": [
             "python",
             "machine-learning",
