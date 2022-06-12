@@ -5992,6 +5992,29 @@
         "aliases": []
     },
     {
+        "name": "streamlit",
+	"altnames": [],
+        "tags": [
+            "python",
+            "machine-learning",
+            "data-science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#7d353b",
+        "aliases": []
+    },
+    {
         "name": "stylus",
         "altnames": [
             "styluslang"
