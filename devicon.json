@@ -4795,6 +4795,29 @@
         ]
     },
     {
+        "name": "postcss",
+        "altnames": [],
+        "tags": [
+            "pre-processor",
+            "css",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#dd3735",
+        "aliases": []
+    },
+    {
         "name": "postgresql",
         "altnames": [],
         "tags": [
