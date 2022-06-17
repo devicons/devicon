@@ -4839,6 +4839,29 @@
         "aliases": []
     },
     {
+        "name": "powershell",
+        "altnames": ["ps"],
+        "tags": [
+            "command-line",
+            "shell",
+            "terminal",
+            "cli",
+            "windows",
+            "cmdlets"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1E2A3A",
+        "aliases": []
+    },
+    {
         "name": "premierepro",
         "altnames": [
             "adobepremierepro"
