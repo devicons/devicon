@@ -538,6 +538,9 @@
     },
     {
         "name": "ballerina",
+	"altnames": [
+	    "bal"
+	],
         "tags": [
             "java",
             "cloud",
