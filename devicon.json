@@ -7189,6 +7189,11 @@
             ]
         },
         "color": "#FF3C00",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     }
 ]
