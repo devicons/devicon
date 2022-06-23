@@ -7170,5 +7170,27 @@
                 "alias":"plain"
             }
         ]
+    },
+    {
+        "name": "envoyproxy",
+        "altnames": [
+            "envoy"
+        ],
+        "tags": [
+            "middle proxy",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4a0d66",
+        "aliases": []
     }
 ]
