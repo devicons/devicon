@@ -7173,6 +7173,7 @@
     },
     {
         "name": "liquibase",
+        "altnames": [],
         "tags": [
             "tool",
             "database"
