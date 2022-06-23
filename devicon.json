@@ -7170,5 +7170,29 @@
                 "alias":"plain"
             }
         ]
+    },
+    {
+        "name": "nhibernate",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original-wordmark",
+                "original",
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#903a36",
+        "aliases": []
     }
 ]
