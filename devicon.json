@@ -5776,6 +5776,23 @@
         },
         "color": "#294172", 
         "aliases": [] 
-    }
+    },
+  {
+    "name": "solidjs",
+    "tags": [
+        "framework", 
+        "ui-liberary"
+    ],
+    "versions": {
+      "svg": ["original"],
+      "font": []
+    },
+    "color": ["#8DC1E7"],
+    "aliases": [
+      {
+        "base": "original"
+      }
+    ]
+  },
 
 ]
