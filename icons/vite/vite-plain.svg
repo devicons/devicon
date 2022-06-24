@@ -1,17 +1,14 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="150pt" height="150pt" viewBox="0 0 2200.000000 1200.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,700.000000) scale(0.100000,-0.100000)"
-fill="#006BFF" stroke="none">
-<path d="M8532 10475 c-1915 -452 -3484 -824 -3485 -826 -4 -5 -1035 -8933
--1032 -8937 1 -1 1803 2379 4004 5289 2201 2910 4001 5292 3999 5293 -2 2
--1570 -367 -3486 -819z"/>
-<path d="M2530 9116 c-932 -211 -1711 -387 -1732 -392 l-36 -9 1566 -3996
-c953 -2431 1568 -3986 1570 -3970 4 42 342 8626 342 8691 0 33 -3 60 -7 59 -5
--1 -771 -173 -1703 -383z"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 85.1 80.9" style="enable-background:new 0 0 85.1 80.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#006BFF;}
+</style>
+<g transform="translate(0.000000,700.000000) scale(0.100000,-0.100000)">
+	<path class="st0" d="M581.7,6896c-130.6-30.8-237.5-56.2-237.6-56.3c-0.3-0.3-70.6-609.1-70.4-609.3c0.1-0.1,122.9,162.2,273,360.6
+		c150.1,198.4,272.8,360.8,272.7,360.9C819.3,6952,712.4,6926.8,581.7,6896z"/>
+	<path class="st0" d="M172.5,6803.4C109,6789,55.8,6777,54.4,6776.6L52,6776l106.8-272.5c65-165.8,106.9-271.8,107-270.7
+		c0.3,2.9,23.3,588.1,23.3,592.6c0,2.3-0.2,4.1-0.5,4C288.3,6829.4,236,6817.7,172.5,6803.4z"/>
 </g>
 </svg>
