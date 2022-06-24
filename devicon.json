@@ -7195,5 +7195,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "karate",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": []
     }
 ]
