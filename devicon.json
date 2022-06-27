@@ -7195,5 +7195,24 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "opentelemetry",
+        "altnames": [],
+        "tags": [
+            "telemetry"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f5a800",
+        "aliases": []
     }
 ]
