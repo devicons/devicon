@@ -7195,5 +7195,25 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "jaegertracing",
+        "altnames": ["jaeger"],
+        "tags": [
+            "monitoring",
+            "tracing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#67cfe3",
+        "aliases": []
     }
 ]
