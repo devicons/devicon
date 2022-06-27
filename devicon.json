@@ -7195,5 +7195,25 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "postman",
+        "altnames": [],
+        "tags": [
+            "tool",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff6c37",
+        "aliases": []
     }
 ]
