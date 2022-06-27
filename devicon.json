@@ -7197,8 +7197,8 @@
         ]
     },
     {
-        "name": "karate",
-        "altnames": [],
+        "name": "karatelabs",
+        "altnames": ["karate"],
         "tags": [
             "framework",
             "testing"
@@ -7206,9 +7206,7 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
                 "plain",
