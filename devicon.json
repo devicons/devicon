@@ -7195,5 +7195,34 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "perforce",
+        "altnames": [],
+        "tags": [
+            "git",
+            "svn"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     }
 ]
