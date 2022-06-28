@@ -7195,5 +7195,22 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "poetry",
+        "altnames": [],
+        "tags": [
+            "package-manager"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0080c5",
+        "aliases": []
     }
 ]
