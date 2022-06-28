@@ -7197,11 +7197,12 @@
         ]
     },
     {
-        "name": "uml",
-        "altnames": [],
+        "name": "unifiedmodelinglanguage",
+        "altnames": [
+            "uml"
+        ],
         "tags": [
-            "language",
-            "modelization"
+            "language"
         ],
         "versions": {
             "svg": [
