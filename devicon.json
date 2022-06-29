@@ -7195,5 +7195,23 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "sqldeveloper",
+        "altnames": [],
+        "tags": [
+            "tool",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#adadad",
+        "aliases": []
     }
 ]
