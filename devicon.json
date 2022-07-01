@@ -7195,5 +7195,23 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "dbeaver",
+        "altnames": [],
+        "tags": [
+            "tool",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#382a24",
+        "aliases": []
     }
 ]
