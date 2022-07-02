@@ -7202,7 +7202,8 @@
             "python-poetry"
         ],
         "tags": [
-            "package-manager"
+            "package-manager",
+            "python"
         ],
         "versions": {
             "svg": [
