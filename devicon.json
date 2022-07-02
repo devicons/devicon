@@ -7195,5 +7195,32 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "traefikproxy",
+        "altnames": [
+            "traefik"
+        ],
+        "tags": [
+            "proxy",
+            "router"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#24a1c1",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     }
 ]
