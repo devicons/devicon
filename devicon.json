@@ -7198,7 +7198,9 @@
     },
     {
         "name": "poetry",
-        "altnames": [],
+        "altnames": [
+            "python-poetry"
+        ],
         "tags": [
             "package-manager"
         ],
