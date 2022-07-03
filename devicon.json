@@ -7195,5 +7195,24 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "eclipse",
+        "altnames": [],
+        "tags": [
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#2c2255",
+        "aliases": []
     }
 ]
