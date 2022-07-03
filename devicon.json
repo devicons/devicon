@@ -7198,20 +7198,16 @@
     },
     {
         "name": "vite",
-	"tags": ["react", "compiler", "esbuild"],
+	"tags": ["web3", "blockchain", "DAG"],
 	"versions": {
 	  "svg": [
-	      "original", 
-	      "plain"
+	      "original"
 	  ],
-	  "font": ["plain"]
+	  "font": ["original-wordmark"]
 	},
 	"color": "#006BFF",
 	"aliases": [
-	  {
-	    "base": "plain",
-	    "alias": "original"
-	  }
-        ]
+	      "base": "original"
+	]
     }
 ]
