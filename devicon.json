@@ -5776,6 +5776,36 @@
         },
         "color": "#294172", 
         "aliases": [] 
-    }
+    },
+{
+        "name": "solidjs",
+        "tags": [
+            "nodejs",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+	    	"plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original-wordmark",
+	    	"plain-wordmark",
+            ]
+        },
+        "color": "#85bce5",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
 
 ]
