@@ -7195,5 +7195,23 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "vite",
+	"tags": ["react", "compiler", "esbuild"],
+	"versions": {
+	  "svg": [
+	      "original", 
+	      "plain"
+	  ],
+	  "font": ["plain"]
+	},
+	"color": "#006BFF",
+	"aliases": [
+	  {
+	    "base": "plain",
+	    "alias": "original"
+	  }
+        ]
     }
 ]
