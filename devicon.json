@@ -5776,6 +5776,22 @@
         },
         "color": "#294172", 
         "aliases": [] 
-    }
-
+    },
+    {
+    "name": "vitejs",
+    "tags": ["react", "compiler", "esbuild"],
+    "versions": {
+      "svg": [
+	      "original", 
+	      "original-wordmark",
+      ],
+      "font": ["original"]
+    },
+    "color": "#4FBFFF",
+    "aliases": [
+      {
+        "base": "original"
+      }
+    ]
+  }
 ]
