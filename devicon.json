@@ -5796,16 +5796,7 @@
             ]
         },
         "color": "#85bce5",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
 
 ]
