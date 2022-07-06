@@ -7198,9 +7198,12 @@
     },
     {
         "name": "eclipse",
-        "altnames": [],
+        "altnames": [
+            "Eclipse IDE"
+        ],
         "tags": [
-            "editor"
+            "editor",
+            "IDE"
         ],
         "versions": {
             "svg": [
