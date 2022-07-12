@@ -7195,5 +7195,35 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "faunadb",
+        "altnames": [
+            "fauna"
+        ],
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "original-wordmark",
+                "original"
+            ]
+        },
+        "color": "#3A1AB6",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     }
 ]
