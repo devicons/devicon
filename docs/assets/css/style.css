@@ -415,11 +415,22 @@ input[type='color']:hover {
 .main {
   margin: 0 0 0 480px; }
 
+.result {
+  max-width: 75px;
+}
+
+.computed-data {
+  margin-bottom: 1rem;
+  color: var(--primaryColor);
+  font-weight: bold;
+  text-align: center;
+}
+
 .search {
-  text-align: center; }
+  text-align: center;
+  margin: 4rem 0 1rem 0; }
+
   .search input {
-    width: 300px;
-    margin: 4rem;
     padding: .5rem 1rem;
     border: 0;
     border-bottom: 2px solid var(--primaryColor);

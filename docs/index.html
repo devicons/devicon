@@ -203,10 +203,17 @@
 
       <div class="search">
         <input type="text" placeholder="Search for icons" ng-model="search">
+        <input type="text" class="result" value="{{ filtered.length }}" disabled>
+      </div>
+
+      <div class="computed-data">
+        <span>Total icons = {{ icons.length }},</span>
+        <span>Total versions = {{ totalFonts }},</span>
+        <span>Average versions per icon = {{ avgFonts }}</span>
       </div>
 
       <ul class="cbp-ig-grid">
-        <li ng-repeat="icon in icons | filter:search">
+        <li data-ng-repeat="icon in filtered = (icons | filter:search)">
           <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
             <i class="cbp-ig-icon devicon-{{icon.main}}"></i>
             <h3 class="cbp-ig-title">{{icon.name}}</h3>
