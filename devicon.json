@@ -7217,5 +7217,25 @@
         },
         "color": "#2c2255",
         "aliases": []
+    },
+    {
+        "name": "kibana",
+        "altnames": [],
+        "tags": [
+            "elastic",
+            "dashboard"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F04E98",
+        "aliases": []
     }
 ]
