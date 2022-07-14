@@ -7197,6 +7197,28 @@
         ]
     },
     {
+        "name": "eclipse",
+        "altnames": [
+            "Eclipse IDE"
+        ],
+        "tags": [
+            "editor",
+            "IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#2c2255",
+        "aliases": []
+    },
+    {
         "name": "kibana",
         "altnames": [],
         "tags": [
