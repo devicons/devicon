@@ -7199,7 +7199,9 @@
     {
         "name": "traefikproxy",
         "altnames": [
-            "traefik"
+            "traefik",
+            "træfik",
+            "træfikproxy"
         ],
         "tags": [
             "proxy",
