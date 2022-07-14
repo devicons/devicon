@@ -7204,7 +7204,8 @@
             "træfikmesh"
         ],
         "tags": [
-            "mesh"
+            "mesh",
+            "kubernetes"
         ],
         "versions": {
             "svg": [
