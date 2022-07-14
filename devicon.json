@@ -7199,7 +7199,9 @@
     {
         "name": "traefikmesh",
         "altnames": [
-            "traefik"
+            "traefik",
+            "træfik",
+            "træfikmesh"
         ],
         "tags": [
             "mesh"
