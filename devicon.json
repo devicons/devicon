@@ -7197,6 +7197,26 @@
         ]
     },
     {
+        "name": "logstash",
+        "altnames": [],
+        "tags": [
+            "logs",
+            "elastic"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#fec514",
+        "aliases": []
+    },
+    {
         "name": "beats",
         "altnames": [],
         "tags": [
