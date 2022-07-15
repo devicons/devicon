@@ -7214,7 +7214,9 @@
             ],
             "font": [
                 "original",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#24a1c1",
