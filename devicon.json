@@ -87,22 +87,17 @@
         ],
         "versions": {
             "svg": [
-                "original",
                 "original-wordmark",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line-wordmark"
             ]
         },
-        "color": "#F7A80D",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "color": "#f90",
+        "aliases": []
     },
     {
         "name": "anaconda",
