@@ -97,7 +97,20 @@
             ]
         },
         "color": "#f90",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "original"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "plain"
+            },
+            {
+                "base": "line-wordmark",
+                "alias": "line"
+            }
+        ]
     },
     {
         "name": "anaconda",
