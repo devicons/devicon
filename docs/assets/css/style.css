@@ -420,11 +420,18 @@ input[type='color']:hover {
 }
 
 .computed-data {
-  margin-bottom: 1rem;
   color: var(--primaryColor);
   font-weight: bold;
-  text-align: center;
+  list-style: none;
+  padding: 0;
+  width: 80%;
+  margin: 25px auto;
+  display: flex;
 }
+
+.computed-data li {
+  width: 33.33%;
+  text-align: center; }
 
 .search {
   text-align: center;

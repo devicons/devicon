@@ -206,11 +206,11 @@
         <input type="text" class="result" value="{{ filtered.length }}" disabled>
       </div>
 
-      <div class="computed-data">
-        <span>Total icons = {{ icons.length }},</span>
-        <span>Total versions = {{ totalFonts }},</span>
-        <span>Average versions per icon = {{ avgFonts }}</span>
-      </div>
+      <ul class="computed-data">
+        <li>Total logos = {{ icons.length }}</li>
+        <li>Total icons = {{ totalFonts }}</li>
+        <li>Average icons per logo = {{ avgFonts }}</li>
+      </ul>
 
       <ul class="cbp-ig-grid">
         <li data-ng-repeat="icon in filtered = (icons | filter:search)">
