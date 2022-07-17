@@ -7288,6 +7288,27 @@
         "aliases": []
     },
     {
+        "name": "capacitor",
+        "altnames": [],
+        "tags": [
+            "ionic",
+            "framework",
+            "universal"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#53B9FF",
+        "aliases": []
+    },
+    {
         "name": "kibana",
         "altnames": [],
         "tags": [
