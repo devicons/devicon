@@ -7200,8 +7200,13 @@
         "name": "nhibernate",
         "altnames": [],
         "tags": [
-            "framework",
-            "database"
+            "library",
+            "dotnet",
+            ".net",
+            "object-relational mapper",
+            "orm",
+            "C#",
+            "c-sharp"
         ],
         "versions": {
             "svg": [
