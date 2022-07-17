@@ -7211,7 +7211,9 @@
             ],
             "font": [
                 "original-wordmark",
-                "original"
+                "original",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#3A1AB6",
