@@ -7215,7 +7215,9 @@
             ],
             "font": [
                 "plain-wordmark",
-                "plain"
+                "plain",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#903a36",
