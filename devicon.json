@@ -7201,6 +7201,26 @@
         ]
     },
     {
+        "name": "postman",
+        "altnames": [],
+        "tags": [
+            "tool",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f37036",
+        "aliases": []
+    },
+    {
         "name": "traefikmesh",
         "altnames": [
             "traefik",
