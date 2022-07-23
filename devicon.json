@@ -7391,6 +7391,31 @@
         "aliases": []
     },
     {
+        "name": "capacitor",
+        "altnames": [
+            "capacitorjs"
+        ],
+        "tags": [
+            "javascript",
+            "js",
+            "ionic",
+            "framework",
+            "universal"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#53B9FF",
+        "aliases": []
+    },
+    {
         "name": "kibana",
         "altnames": [],
         "tags": [
