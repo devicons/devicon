@@ -1263,12 +1263,10 @@
             ],
             "font": [
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "line"
             ]
         },
-        "color": "#9c033a",
+        "color": "#004482",
         "aliases": [
             {
                 "base": "plain",
