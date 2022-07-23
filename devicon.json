@@ -7289,7 +7289,9 @@
     },
     {
         "name": "capacitor",
-        "altnames": [],
+        "altnames": [
+            "capacitorjs"
+        ],
         "tags": [
             "javascript",
             "js",
