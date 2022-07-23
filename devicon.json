@@ -7218,6 +7218,33 @@
         "aliases": []
     },
     {
+        "name": "nhibernate",
+        "altnames": [],
+        "tags": [
+            "library",
+            "dotnet",
+            ".net",
+            "object-relational mapper",
+            "orm",
+            "C#",
+            "c-sharp"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#903a36",
+        "aliases": []
+    },
+    {
         "name": "traefikproxy",
         "altnames": [
             "traefik",
