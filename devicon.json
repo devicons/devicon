@@ -7197,6 +7197,37 @@
         ]
     },
     {
+        "name": "traefikmesh",
+        "altnames": [
+            "traefik",
+            "træfik",
+            "træfikmesh"
+        ],
+        "tags": [
+            "mesh",
+            "kubernetes"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#9D0FB0",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "elasticsearch",
         "altnames": [],
         "tags": [
