@@ -7197,6 +7197,27 @@
         ]
     },
     {
+        "name": "elasticsearch",
+        "altnames": [],
+        "tags": [
+            "elastic",
+            "data",
+            "logs"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#00bfb3",
+        "aliases": []
+    },
+    {
         "name": "nhibernate",
         "altnames": [],
         "tags": [
