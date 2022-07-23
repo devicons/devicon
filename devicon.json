@@ -7217,6 +7217,176 @@
         "aliases": []
     },
     {
+        "name": "traefikmesh",
+        "altnames": [
+            "traefik",
+            "træfik",
+            "træfikmesh"
+        ],
+        "tags": [
+            "mesh",
+            "kubernetes"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#9D0FB0",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "elasticsearch",
+        "altnames": [],
+        "tags": [
+            "elastic",
+            "data",
+            "logs"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#00bfb3",
+        "aliases": []
+    },
+    {
+        "name": "nhibernate",
+        "altnames": [],
+        "tags": [
+            "library",
+            "dotnet",
+            ".net",
+            "object-relational mapper",
+            "orm",
+            "C#",
+            "c-sharp"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#903a36",
+        "aliases": []
+    },
+    {
+        "name": "traefikproxy",
+        "altnames": [
+            "traefik",
+            "træfik",
+            "træfikproxy"
+        ],
+        "tags": [
+            "proxy",
+            "router"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#24a1c1",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "logstash",
+        "altnames": [],
+        "tags": [
+            "logs",
+            "elastic"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#fec514",
+        "aliases": []
+    },
+    {
+        "name": "beats",
+        "altnames": [],
+        "tags": [
+            "elastic",
+            "data-transfer"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#07c",
+        "aliases": []
+    },
+    {
+        "name": "eclipse",
+        "altnames": [
+            "Eclipse IDE"
+        ],
+        "tags": [
+            "editor",
+            "IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#2c2255",
+        "aliases": []
+    },
+    {
         "name": "kibana",
         "altnames": [],
         "tags": [
