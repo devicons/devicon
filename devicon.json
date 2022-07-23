@@ -87,20 +87,28 @@
         ],
         "versions": {
             "svg": [
-                "original",
                 "original-wordmark",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line-wordmark"
             ]
         },
-        "color": "#F7A80D",
+        "color": "#f90",
         "aliases": [
             {
-                "base": "original",
+                "base": "original-wordmark",
+                "alias": "original"
+            },
+            {
+                "base": "plain-wordmark",
                 "alias": "plain"
+            },
+            {
+                "base": "line-wordmark",
+                "alias": "line"
             }
         ]
     },
