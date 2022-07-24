@@ -6530,6 +6530,8 @@
         "name": "unity",
         "altnames": [],
         "tags": [
+	    "C#",
+	    "c-sharp",
             "csharp",
             "engine",
             "game-engine"
@@ -6540,11 +6542,13 @@
                 "original-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#4d4d4d",
         "aliases": []
     },
     {
