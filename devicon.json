@@ -1463,6 +1463,27 @@
         "aliases": []
     },
     {
+        "name": "datagrip",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "ide"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#21d789",
+        "aliases": []
+    },
+    {
         "name": "denojs",
         "altnames": [],
         "tags": [
