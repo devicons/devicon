@@ -6524,6 +6524,8 @@
         "name": "unity",
         "altnames": [],
         "tags": [
+	    "C#",
+	    "c-sharp",
             "csharp",
             "engine",
             "game-engine"
