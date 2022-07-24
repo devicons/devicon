@@ -4947,6 +4947,31 @@
         "aliases": []
     },
     {
+        "name": "moleculer",
+        "altnames": [],
+        "tags": [
+            "nodejs",
+            "microservices",
+            "micro-services",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#3cafce",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "prometheus",
         "altnames": [],
         "tags": [
