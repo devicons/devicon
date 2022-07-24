@@ -958,7 +958,11 @@
         "altnames": [],
         "tags": [
             "jetbrains",
-            "editor"
+            "editor",
+            "c",
+            "c++",
+            "cpp",
+            "cplusplus"
         ],
         "versions": {
             "svg": [
@@ -971,7 +975,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#21d789",
         "aliases": []
     },
     {
