@@ -7341,6 +7341,32 @@
         ]
     },
     {
+        "name": "sonarqube",
+        "altnames": [
+            "sonar"
+        ],
+        "tags": [
+            "tool",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#4e9bcd",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "logstash",
         "altnames": [],
         "tags": [
