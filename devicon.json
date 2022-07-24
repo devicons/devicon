@@ -920,6 +920,30 @@
         "aliases": []
     },
     {
+        "name": "lumen",
+        "altnames": [],
+        "tags": [
+            "laravel",
+            "php",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#e54537",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "chrome",
         "altnames": [
             "googlechrome"
