@@ -4719,12 +4719,14 @@
         "altnames": [],
         "tags": [
             "jetbrains",
-            "editor"
+            "editor",
+            "php",
+            "web",
+            "html"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -4733,7 +4735,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#5058A6",
+        "color": "#b74af7",
         "aliases": []
     },
     {
