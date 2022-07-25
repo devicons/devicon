@@ -4383,7 +4383,32 @@
         "color": "#F18803",
         "aliases": []
     },
-	{
+    {
+        "name": "ohmyzsh",
+        "altnames": [
+            "omz",
+            "omzsh"
+        ],
+        "tags": [
+            "shell",
+            "script",
+            "scripting",
+            "language",
+            "command"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "openal",
         "altnames": [],
         "tags": [
