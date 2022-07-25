@@ -4948,9 +4948,14 @@
     },
     {
         "name": "moleculer",
-        "altnames": [],
+        "altnames": [
+             "moleculerjs"
+             "moleculer.js"
+         ],
         "tags": [
             "nodejs",
+            "javascript",
+            "js",
             "microservices",
             "micro-services",
             "framework"
