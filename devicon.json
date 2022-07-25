@@ -7341,6 +7341,26 @@
         ]
     },
     {
+        "name": "poetry",
+        "altnames": [
+            "python-poetry"
+        ],
+        "tags": [
+            "package-manager",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0080c5",
+        "aliases": []
+    },
+    {
         "name": "sonarqube",
         "altnames": [
             "sonar"
