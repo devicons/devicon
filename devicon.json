@@ -1018,6 +1018,38 @@
         "aliases": []
     },
     {
+        "name": "cloudflare",
+        "altnames": [],
+        "tags": [
+            "web",
+            "cdn",
+            "dns",
+            "proxy",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#f6821f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
