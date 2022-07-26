@@ -1441,6 +1441,29 @@
         "aliases": []
     },
     {
+        "name": "dataspell",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "ide",
+            "jupyter notebook",
+            "data science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#087cfa",
+        "aliases": []
+    },
+    {
         "name": "debian",
         "altnames": [],
         "tags": [
