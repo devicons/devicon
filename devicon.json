@@ -921,7 +921,12 @@
     },
     {
         "name": "lumen",
-        "altnames": [],
+        "altnames": [
+            "Laravel Lumen",
+            "Lumen Laravel",
+            "Laravel Lumen Framework",
+            "laravel.lumen"
+        ],
         "tags": [
             "laravel",
             "php",
