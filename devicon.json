@@ -1018,6 +1018,26 @@
         "aliases": []
     },
     {
+        "name": "azuredevops",
+        "altnames": [
+            "azure-devops"
+        ],
+        "tags": [
+            "azure",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0078d4",
+        "aliases": []
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
