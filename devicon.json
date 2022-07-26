@@ -4074,6 +4074,40 @@
         "aliases": []
     },
     {
+        "name": "nano",
+        "altnames": [
+            "gnu-nano",
+            "GNU nano"
+        ],
+        "tags": [
+            "text editor",
+            "editor",
+            "GNU",
+            "terminal"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#C8F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "neo4j",
         "altnames": [],
         "tags": [
