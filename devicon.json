@@ -3240,6 +3240,27 @@
         "aliases": []
     },
     {
+        "name": "json",
+        "altnames": [],
+        "tags": [
+            "format",
+            "standard",
+            "file-format",
+            "object-notation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#505050",
+        "aliases": []
+    },
+    {
         "name": "julia",
         "altnames": [
             "julialang"
