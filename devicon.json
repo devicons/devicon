@@ -1048,6 +1048,31 @@
         "aliases": []
     },
     {
+        "name": "cloudflare",
+        "altnames": [],
+        "tags": [
+            "web",
+            "cdn",
+            "dns",
+            "proxy",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F38020",
+        "aliases": []
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
