@@ -489,6 +489,35 @@
         ]
     },
     {
+        "name": "awk",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language",
+            "unix"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0a094d",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "original"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "axios",
         "altnames": [],
         "tags": [
