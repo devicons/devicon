@@ -5515,7 +5515,6 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -5524,7 +5523,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#C12C4C",
+        "color": "#FC801D",
         "aliases": []
     },
     {
