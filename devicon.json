@@ -4426,6 +4426,33 @@
         "aliases": []
     },
     {
+        "name": "opencl",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "language",
+            "heterogeneous-computing",
+            "cpp",
+            "api",
+            "khronos"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "opencv",
         "altnames": [],
         "tags": [
@@ -7434,7 +7461,6 @@
             "IDE"
         ],
         "versions": {
-            "svg": [
                 "original-wordmark",
                 "original"
             ],
