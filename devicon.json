@@ -490,7 +490,9 @@
     },
     {
         "name": "awk",
-        "altnames": [],
+        "altnames": [
+            "the awk programming language"
+        ],
         "tags": [
             "programming",
             "language",
