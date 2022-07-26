@@ -2440,6 +2440,28 @@
         "aliases": []
     },
     {
+        "name": "goland",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "ide",
+            "go"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#087cfa",
+        "aliases": []
+    },
+    {
         "name": "google",
         "altnames": [],
         "tags": [
