@@ -1456,6 +1456,28 @@
         "aliases": []
     },
     {
+        "name": "azuresqldatabase",
+        "altnames": [
+            "azure-sql-database"
+        ],
+        "tags": [
+            "azure",
+            "database",
+            "tool",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#005ba1",
+        "aliases": []
+    },
+    {
         "name": "d3js",
         "altnames": [],
         "tags": [],
