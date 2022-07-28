@@ -1541,28 +1541,6 @@
         "aliases": []
     },
     {
-        "name": "debian",
-        "altnames": [],
-        "tags": [
-            "os",
-            "server"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#A80030",
-        "aliases": []
-    },
-    {
         "name": "datagrip",
         "altnames": [],
         "tags": [
@@ -1583,6 +1561,28 @@
             ]
         },
         "color": "#21d789",
+        "aliases": []
+    },
+    {
+        "name": "debian",
+        "altnames": [],
+        "tags": [
+            "os",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#A80030",
         "aliases": []
     },
     {
