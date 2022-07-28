@@ -3097,6 +3097,26 @@
         "aliases": []
     },
     {
+        "name": "jaegertracing",
+        "altnames": ["jaeger"],
+        "tags": [
+            "monitoring",
+            "tracing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#67cfe3",
+        "aliases": []
+    },
+    {
         "name": "jamstack",
         "altnames": [],
         "tags": [
@@ -7435,26 +7455,6 @@
             ]
         },
         "color": "#903a36",
-        "aliases": []
-    },
-    {
-        "name": "jaegertracing",
-        "altnames": ["jaeger"],
-        "tags": [
-            "monitoring",
-            "tracing"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#67cfe3",
         "aliases": []
     },
     {
