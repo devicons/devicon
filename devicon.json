@@ -4010,6 +4010,42 @@
         "aliases": []
     },
     {
+        "name": "moleculer",
+        "altnames": [
+            "moleculerjs",
+            "moleculer.js"
+        ],
+        "tags": [
+            "nodejs",
+            "javascript",
+            "js",
+            "microservices",
+            "micro-services",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3cafce",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "mongodb",
         "altnames": [],
         "tags": [
@@ -5073,42 +5109,6 @@
         },
         "color": "#000000",
         "aliases": []
-    },
-    {
-        "name": "moleculer",
-        "altnames": [
-             "moleculerjs",
-             "moleculer.js"
-         ],
-        "tags": [
-            "nodejs",
-            "javascript",
-            "js",
-            "microservices",
-            "micro-services",
-            "framework"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#3cafce",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
     },
     {
         "name": "prometheus",
