@@ -1018,6 +1018,33 @@
         "aliases": []
     },
     {
+        "name": "cloudflareworkers",
+        "altnames": [
+            "Cloudflare Workers"
+        ],
+        "tags": [
+            "platform",
+            "serverless",
+            "Deploy",
+            "performance",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ea9344",
+        "aliases": []
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
