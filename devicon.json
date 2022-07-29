@@ -3241,7 +3241,9 @@
     },
     {
         "name": "json",
-        "altnames": [],
+        "altnames": [
+            "JavaScript Object Notation"
+        ],
         "tags": [
             "format",
             "standard",
