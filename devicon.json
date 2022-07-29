@@ -1829,6 +1829,28 @@
         ]
     },
     {
+        "name": "envoyproxy",
+        "altnames": [
+            "envoy"
+        ],
+        "tags": [
+            "middle proxy",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4a0d66",
+        "aliases": []
+    },
+    {
         "name": "erlang",
         "altnames": [],
         "tags": [],
@@ -7172,25 +7194,28 @@
         ]
     },
     {
-        "name": "envoyproxy",
-        "altnames": [
-            "envoy"
-        ],
+        "name": "liquibase",
+        "altnames": [],
         "tags": [
-            "middle proxy",
-            "cloud"
+            "tool",
+            "database"
         ],
         "versions": {
             "svg": [
-                "original",
-                "original-wordmark"
+                "original-wordmark",
+                "original"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "original-wordmark",
+                "original"
             ]
         },
-        "color": "#4a0d66",
-        "aliases": []
+        "color": "#FF3C00",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     }
 ]
