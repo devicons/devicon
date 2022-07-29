@@ -1572,6 +1572,29 @@
         "aliases": []
     },
     {
+        "name": "datagrip",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "ide",
+            "sql",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#21d789",
+        "aliases": []
+    },
+    {
         "name": "debian",
         "altnames": [],
         "tags": [
