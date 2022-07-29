@@ -7513,31 +7513,6 @@
             {
                 "base": "original",
                 "alias": "plain"
-            }
-        ]
-    },
-    {
-        "name": "liquibase",
-        "altnames": [],
-        "tags": [
-            "tool",
-            "database"
-        ],
-        "versions": {
-            "svg": [
-                "original-wordmark",
-                "original"
-            ],
-            "font": [
-                "original-wordmark",
-                "original"
-            ]
-        },
-        "color": "#FF3C00",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
             },
             {
                 "base": "original-wordmark",
