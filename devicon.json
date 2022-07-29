@@ -1989,12 +1989,12 @@
         ]
     },
     {
-        "name": "envoyproxy",
+        "name": "envoy",
         "altnames": [
-            "envoy"
+            "envoyproxy"
         ],
         "tags": [
-            "middle proxy",
+            "proxy",
             "cloud"
         ],
         "versions": {
@@ -2003,11 +2003,11 @@
                 "original-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ]
         },
-        "color": "#4a0d66",
+        "color": "#e13eaf",
         "aliases": []
     },
     {
