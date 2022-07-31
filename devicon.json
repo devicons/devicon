@@ -284,6 +284,7 @@
     },
     {
         "name": "apachespark",
+        "altnames": [],
         "tags": [
             "data-processing",
             "data-science",
