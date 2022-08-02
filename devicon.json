@@ -6657,9 +6657,12 @@
     {
         "name": "unifiedmodelinglanguage",
         "altnames": [
-            "uml"
+            "uml",
+            "unified modeling language"
         ],
         "tags": [
+            "modeling",
+            "design",
             "language"
         ],
         "versions": {
