@@ -5486,6 +5486,28 @@
         ]
     },
     {
+        "name": "qodana",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "code quality",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff318c",
+        "aliases": []
+    },
+    {
         "name": "qt",
         "altnames": [],
         "tags": [
