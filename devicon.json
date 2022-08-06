@@ -3701,27 +3701,6 @@
         "aliases": []
     },
     {
-        "name": "ktor",
-        "altnames": [],
-        "tags": [
-            "jetbrains",
-            "kotlin",
-            "framework"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#fc801d",
-        "aliases": []
-    },
-    {
         "name": "knockout",
         "altnames": [
             "knockoutjs"
@@ -3788,6 +3767,27 @@
             ]
         },
         "color": "#0081C2",
+        "aliases": []
+    },
+    {
+        "name": "ktor",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "kotlin",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fc801d",
         "aliases": []
     },
     {
