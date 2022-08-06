@@ -1,1 +1,1 @@
-# Code of Conduct has been moved to [this](https://github.com/devicons/devicon/wiki/Code-of-Conduct) wiki page
+# Code of Conduct has been moved to the [Code of Conduct](https://github.com/devicons/devicon/wiki/Code-of-Conduct) wiki page
