@@ -76,6 +76,37 @@
         "aliases": []
     },
     {
+        "name": "alpinejs",
+        "altnames": [
+            "Alpine"
+        ],
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2d3441",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "amazonwebservices",
         "altnames": [
             "aws"
@@ -187,6 +218,28 @@
             ]
         },
         "color": "#4285F4",
+        "aliases": []
+    },
+    {
+        "name": "angular",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FFFFFF",
         "aliases": []
     },
     {
@@ -1096,6 +1149,33 @@
         "aliases": []
     },
     {
+        "name": "cloudflareworkers",
+        "altnames": [
+            "Cloudflare Workers"
+        ],
+        "tags": [
+            "platform",
+            "serverless",
+            "deploy",
+            "performance",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ea9344",
+        "aliases": []
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
@@ -1541,6 +1621,29 @@
         "aliases": []
     },
     {
+        "name": "datagrip",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "ide",
+            "sql",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#21d789",
+        "aliases": []
+    },
+    {
         "name": "debian",
         "altnames": [],
         "tags": [
@@ -1933,6 +2036,28 @@
             "alias": "plain-wordmark"
           }
         ]
+    },
+    {
+        "name": "envoy",
+        "altnames": [
+            "envoyproxy"
+        ],
+        "tags": [
+            "proxy",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e13eaf",
+        "aliases": []
     },
     {
         "name": "erlang",
@@ -2540,6 +2665,28 @@
         "aliases": []
     },
     {
+        "name": "goland",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "ide",
+            "go"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#087cfa",
+        "aliases": []
+    },
+    {
         "name": "google",
         "altnames": [],
         "tags": [
@@ -3097,6 +3244,26 @@
         "aliases": []
     },
     {
+        "name": "jaegertracing",
+        "altnames": ["jaeger"],
+        "tags": [
+            "monitoring",
+            "tracing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#67cfe3",
+        "aliases": []
+    },
+    {
         "name": "jamstack",
         "altnames": [],
         "tags": [
@@ -3340,6 +3507,29 @@
         "aliases": []
     },
     {
+        "name": "json",
+        "altnames": [
+            "JavaScript Object Notation"
+        ],
+        "tags": [
+            "format",
+            "standard",
+            "file-format",
+            "object-notation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#505050",
+        "aliases": []
+    },
+    {
         "name": "julia",
         "altnames": [
             "julialang"
@@ -3572,7 +3762,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#7C6DB2",
+        "color": "#c711e1",
         "aliases": []
     },
     {
@@ -4028,6 +4218,42 @@
         },
         "color": "#00decc",
         "aliases": []
+    },
+    {
+        "name": "moleculer",
+        "altnames": [
+            "moleculerjs",
+            "moleculer.js"
+        ],
+        "tags": [
+            "nodejs",
+            "javascript",
+            "js",
+            "microservices",
+            "micro-services",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3cafce",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "mongodb",
@@ -4572,6 +4798,34 @@
         "aliases": []
     },
     {
+        "name": "opencl",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "language",
+            "heterogeneous-computing",
+            "cpp",
+            "api",
+            "khronos",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "opencv",
         "altnames": [],
         "tags": [
@@ -4660,6 +4914,25 @@
             ]
         },
         "color": "#73ba25",
+        "aliases": []
+    },
+    {
+        "name": "opentelemetry",
+        "altnames": [],
+        "tags": [
+            "telemetry"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f5a800",
         "aliases": []
     },
     {
@@ -5272,6 +5545,28 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "qodana",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "code quality",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff318c",
+        "aliases": []
     },
     {
         "name": "qt",
