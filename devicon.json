@@ -4897,6 +4897,25 @@
         "aliases": []
     },
     {
+        "name": "opentelemetry",
+        "altnames": [],
+        "tags": [
+            "telemetry"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f5a800",
+        "aliases": []
+    },
+    {
         "name": "opera",
         "altnames": [],
         "tags": [
