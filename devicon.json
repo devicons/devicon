@@ -2808,6 +2808,26 @@
         ]
     },
     {
+        "name": "hibernate",
+        "altnames": [],
+        "tags": [
+            "database",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#bcae79",
+        "aliases": []
+    },
+    {
         "name": "html5",
         "altnames": [
             "hypertextmarkdownlanguage5"
@@ -7307,26 +7327,6 @@
             ]
         },
         "color": "#903a36",
-        "aliases": []
-    },
-    {
-        "name": "hibernate",
-        "altnames": [],
-        "tags": [
-            "database",
-            "framework"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#bcae79",
         "aliases": []
     },
     {
