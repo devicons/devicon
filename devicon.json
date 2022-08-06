@@ -2199,6 +2199,31 @@
         "aliases": []
     },
     {
+        "name": "fastify",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "web",
+            "node.js",
+            "javascript",
+            "performance"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "feathersjs",
         "altnames": [],
         "tags": [
