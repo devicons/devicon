@@ -6998,6 +6998,30 @@
         "aliases": []
     },
     {
+        "name": "unifiedmodelinglanguage",
+        "altnames": [
+            "uml",
+            "unified modeling language"
+        ],
+        "tags": [
+            "modeling",
+            "design",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#452e7f",
+        "aliases": []
+    },
+    {
         "name": "unity",
         "altnames": [],
         "tags": [
