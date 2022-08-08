@@ -3766,6 +3766,26 @@
       ]
     },
     {
+        "name": "karatelabs",
+        "altnames": ["karate"],
+        "tags": [
+            "framework",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "karma",
         "altnames": [
             "karmarunner",
