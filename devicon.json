@@ -3702,6 +3702,19 @@
         "aliases": []
     },
     {
+        "name": "postman",
+        "tags": [
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ]
+        },
+        "color": "#EF5B25",
+        "aliases": ["halloween-orange"]
+    },
+    {
         "name": "premierepro",
         "tags": [
             "editor",
