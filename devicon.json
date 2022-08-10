@@ -6556,6 +6556,24 @@
         ]
     },
     {
+        "name": "sqldeveloper",
+        "altnames": [],
+        "tags": [
+            "tool",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#adadad",
+        "aliases": []
+    },
+    {
         "name": "sqlite",
         "altnames": [],
         "tags": [
