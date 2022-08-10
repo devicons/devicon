@@ -5670,6 +5670,26 @@
         ]
     },
     {
+        "name": "quasar",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#00b4ff",
+        "aliases": []
+    },
+    {
         "name": "r",
         "altnames": [
             "rlang"
