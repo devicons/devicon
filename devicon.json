@@ -3887,6 +3887,27 @@
         "aliases": []
     },
     {
+        "name": "ktor",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "kotlin",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fc801d",
+        "aliases": []
+    },
+    {
         "name": "kubernetes",
         "altnames": [],
         "tags": [
