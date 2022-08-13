@@ -3677,7 +3677,7 @@
         ],
         "versions": {
             "svg": [
-        "original",
+                "original",
                 "plain",
                 "plain-wordmark"
             ],
@@ -4839,8 +4839,8 @@
         "versions": {
             "svg": [
                 "original",
-            "plain"
-        ],
+                "plain"
+            ],
             "font": [ "plain" ]
         },
         "color": "#76c39b",
