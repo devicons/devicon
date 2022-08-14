@@ -4504,6 +4504,23 @@
         "aliases": []
     },
     {
+        "name": "neorg",
+        "tags": [
+            "note-taking",
+            "organization"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#4793af",
+        "aliases": []
+    },
+    {
         "name": "nestjs",
         "altnames": [],
         "tags": [
