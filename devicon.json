@@ -4504,23 +4504,6 @@
         "aliases": []
     },
     {
-        "name": "neorg",
-        "tags": [
-            "note-taking",
-            "organization"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#4793af",
-        "aliases": []
-    },
-    {
         "name": "nestjs",
         "altnames": [],
         "tags": [
@@ -4731,6 +4714,23 @@
             ]
         },
         "color": "#3d3b47",
+        "aliases": []
+    },
+    {
+        "name": "norg",
+        "tags": [
+            "note-taking",
+            "organization"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#4793af",
         "aliases": []
     },
     {
