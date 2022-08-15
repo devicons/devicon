@@ -4755,6 +4755,9 @@
     },
     {
         "name": "norg",
+        "altnames": [
+            "neorg"
+        ],
         "tags": [
             "note-taking",
             "organization"
