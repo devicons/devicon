@@ -4202,6 +4202,32 @@
         "aliases": []
     },
     {
+        "name": "matplotlib",
+        "altnames": [],
+        "tags": [
+            "plotting",
+            "library",
+            "math",
+            "visualization",
+            "python",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#11557C",
+        "aliases": []
+    },
+    {
         "name": "maven",
         "altnames": [
             "apachemaven",
