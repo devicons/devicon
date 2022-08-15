@@ -387,7 +387,7 @@
         },
         "color": "#e25a1c",
         "aliases": []
-    },  
+    },
     {
         "name": "appcelerator",
         "altnames": [],
@@ -2276,6 +2276,38 @@
         },
         "color": "#000000",
         "aliases": []
+    },
+    {
+        "name": "faunadb",
+        "altnames": [
+            "fauna"
+        ],
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "original-wordmark",
+                "original",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#3A1AB6",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "feathersjs",
