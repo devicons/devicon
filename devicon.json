@@ -5746,6 +5746,26 @@
         ]
     },
     {
+        "name": "quarkus",
+        "altnames": [],
+        "tags": [
+            "java",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4695EB",
+        "aliases": []
+    },
+    {
         "name": "quasar",
         "altnames": [],
         "tags": [
