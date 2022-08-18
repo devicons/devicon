@@ -166,7 +166,7 @@ Add css rules in your stylesheet
 
 <h2 id="discord-server">Discord server</h2>
 <p>
-We are running a Discord server. You can go here to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ.
+We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join today: https://discord.gg/hScy8KWACQ.
 <b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
 </p>
 
