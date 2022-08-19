@@ -282,21 +282,21 @@
     {
         "name": "appwrite",
         "tags": [
-            "cloud", 
-            "platform", 
+            "cloud",
+            "platform",
             "server"
         ],
         "versions": {
-          "svg": [
-            "original",
-            "original-wordmark",
-            "plain",
-            "plain-wordmark"
-          ],
-          "font": [
-            "plain",
-            "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#f02e65",
         "aliases": [
@@ -357,6 +357,27 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "astro",
+        "tags": [
+            "static site generator",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff5d01",
+        "aliases": []
     },
     {
         "name": "azure",
@@ -442,14 +463,14 @@
         },
         "color": "#1068e2",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -508,14 +529,14 @@
         },
         "color": "#205081",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -541,10 +562,17 @@
     },
     {
         "name": "bulma",
-        "tags": ["css", "framework"],
+        "tags": [
+            "css",
+            "framework"
+        ],
         "versions": {
-          "svg": ["plain"],
-          "font": ["plain"]
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#00d1b2",
         "aliases": []
@@ -707,10 +735,19 @@
     },
     {
         "name": "circleci",
-        "tags": ["integration", "platform"],
+        "tags": [
+            "integration",
+            "platform"
+        ],
         "versions": {
-          "svg": ["plain", "plain-wordmark"],
-          "font": ["plain", "plain-wordmark"]
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#343434",
         "aliases": []
@@ -777,10 +814,17 @@
     },
     {
         "name": "codecov",
-        "tags": ["platform", "integration"],
+        "tags": [
+            "platform",
+            "integration"
+        ],
         "versions": {
-          "svg": ["plain"],
-          "font": ["plain"]
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#e0225c",
         "aliases": []
@@ -906,14 +950,14 @@
         },
         "color": "#205081",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -1344,21 +1388,39 @@
         "aliases": []
     },
     {
-      "name": "eleventy",
-      "tags": ["ssg", "static site generator"],
-      "versions": {
-        "svg": ["original", "plain"],
-        "font": ["plain"]
-      },
-      "color": "#1f1f1f",
-      "aliases": []
+        "name": "eleventy",
+        "tags": [
+            "ssg",
+            "static site generator"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1f1f1f",
+        "aliases": []
     },
     {
         "name": "elixir",
-        "tags": ["language"],
+        "tags": [
+            "language"
+        ],
         "versions": {
-            "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-            "font": ["plain", "plain-wordmark"]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#380A4D",
         "aliases": []
@@ -1398,21 +1460,32 @@
         },
         "color": "#dd3f24",
         "aliases": [
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
-      "name": "embeddedc",
-      "tags": ["language", "programming"],
-      "versions": {
-        "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-        "font": ["plain", "plain-wordmark"]
-      },
-      "color": "#444444",
-      "aliases": []
+        "name": "embeddedc",
+        "tags": [
+            "language",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#444444",
+        "aliases": []
     },
     {
         "name": "erlang",
@@ -1517,7 +1590,7 @@
             ]
         },
         "color": "#333333",
-        "aliases": [        ]
+        "aliases": []
     },
     {
         "name": "figma",
@@ -1543,7 +1616,8 @@
         ],
         "versions": {
             "svg": [
-                "plain", "plain-wordmark"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -1612,14 +1686,14 @@
         },
         "color": "#010101",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -1718,11 +1792,11 @@
         "color": "#64328B",
         "aliases": []
     },
-	{
+    {
         "name": "rect",
         "tags": [
             "programming",
-			"language"
+            "language"
         ],
         "versions": {
             "svg": [
@@ -1755,12 +1829,12 @@
         "aliases": []
     },
     {
-        "name": "gentoo", 
+        "name": "gentoo",
         "tags": [
             "linux",
             "distribuition",
             "desktop"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "plain",
@@ -1769,10 +1843,10 @@
             "font": [
                 "plain-wordmark",
                 "plain"
-            ] 
+            ]
         },
-        "color": "#9991d9", 
-        "aliases": [] 
+        "color": "#9991d9",
+        "aliases": []
     },
     {
         "name": "gimp",
@@ -2481,10 +2555,17 @@
     },
     {
         "name": "jest",
-        "tags": ["testing", "javascript"],
+        "tags": [
+            "testing",
+            "javascript"
+        ],
         "versions": {
-          "svg": ["plain"],
-          "font": ["plain"]
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#99425b",
         "aliases": []
@@ -2619,33 +2700,41 @@
             "machine-learning"
         ],
         "versions": {
-          "svg": [
-              "original",
-              "original-wordmark"
+            "svg": [
+                "original",
+                "original-wordmark"
             ],
-          "font": [
-              "original",
-              "original-wordmark"
+            "font": [
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#20BEFF",
         "aliases": [
-          {
-              "base": "original",
-              "alias": "plain"
-          },
-          {
-              "base": "original-wordmark",
-              "alias": "plain-wordmark"
-          }
-      ]
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "karma",
-        "tags": ["testing", "test-runner"],
+        "tags": [
+            "testing",
+            "test-runner"
+        ],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#56c5a8",
         "aliases": []
@@ -2728,14 +2817,24 @@
         "aliases": []
     },
     {
-      "name": "labview",
-      "tags": ["language"],
-      "versions": {
-        "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
-        "font": ["plain", "plain-wordmark"]
-      },
-      "color": "#fed500",
-      "aliases": []
+        "name": "labview",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fed500",
+        "aliases": []
     },
     {
         "name": "laravel",
@@ -2884,19 +2983,19 @@
     {
         "name": "matlab",
         "tags": [
-          "programming",
-          "language"
+            "programming",
+            "language"
         ],
         "versions": {
-          "svg": [
-            "original",
-            "plain",
-            "line"
-          ],
-          "font": [
-            "plain",
-            "line"
-          ]
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
         },
         "color": "#6dd0c7",
         "aliases": []
@@ -2995,10 +3094,18 @@
     },
     {
         "name": "minitab",
-        "tags": ["package", "statistics"],
+        "tags": [
+            "package",
+            "statistics"
+        ],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#8dc63f",
         "aliases": []
@@ -3417,7 +3524,7 @@
             ],
             "font": [
                 "plain",
-        "plain-wordmark"
+                "plain-wordmark"
             ]
         },
         "color": "#f7192d",
@@ -3444,7 +3551,7 @@
         "color": "#F18803",
         "aliases": []
     },
-	{
+    {
         "name": "openal",
         "tags": [
             "library",
@@ -3464,7 +3571,7 @@
         "color": "#7e000d",
         "aliases": []
     },
-	{
+    {
         "name": "opengl",
         "tags": [
             "library",
@@ -3485,12 +3592,12 @@
         "aliases": []
     },
     {
-        "name": "opensuse", 
+        "name": "opensuse",
         "tags": [
             "linux",
             "distribuition",
             "desktop"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
@@ -3501,10 +3608,10 @@
             "font": [
                 "plain",
                 "plain-wordmark"
-            ] 
+            ]
         },
-        "color": "#73ba25", 
-        "aliases": [] 
+        "color": "#73ba25",
+        "aliases": []
     },
     {
         "name": "oracle",
@@ -3575,10 +3682,18 @@
     },
     {
         "name": "phalcon",
-        "tags": ["php", "framework"],
+        "tags": [
+            "php",
+            "framework"
+        ],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#76c39b",
         "aliases": []
@@ -3763,7 +3878,7 @@
         "color": "#b7111d",
         "aliases": []
     },
-	{
+    {
         "name": "putty",
         "tags": [
             "ssh",
@@ -3851,10 +3966,21 @@
     },
     {
         "name": "raspberrypi",
-        "tags": ["arm", "computer"],
+        "tags": [
+            "arm",
+            "computer"
+        ],
         "versions": {
-            "svg": ["original", "original-wordmark", "line", "line-wordmark"],
-            "font": ["line", "line-wordmark"]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
         },
         "color": "#c51850",
         "aliases": []
@@ -4165,10 +4291,19 @@
     },
     {
         "name": "rstudio",
-        "tags": ["editor", "package", "statistics"],
+        "tags": [
+            "editor",
+            "package",
+            "statistics"
+        ],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#75aadb",
         "aliases": []
@@ -4421,14 +4556,14 @@
         },
         "color": "#205081",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -4453,10 +4588,18 @@
     },
     {
         "name": "spss",
-        "tags": ["package", "statistics"],
+        "tags": [
+            "package",
+            "statistics"
+        ],
         "versions": {
-          "svg": ["original", "plain"],
-          "font": ["plain"]
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#cc1e4c",
         "aliases": []
@@ -4480,10 +4623,10 @@
         },
         "color": "#333333",
         "aliases": [
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -4500,10 +4643,10 @@
                 "plain",
                 "plain-wordmark"
             ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#0f80cc",
         "aliases": []
@@ -4566,14 +4709,14 @@
         },
         "color": "#231F20",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          },
-          {
-            "base": "original-wordmark",
-            "alias": "plain-wordmark"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
         ]
     },
     {
@@ -4665,20 +4808,20 @@
         "name": "storybook",
         "tags": [
             "framework",
-            "documentation", 
+            "documentation",
             "ui"
         ],
         "versions": {
-          "svg": [
-              "original", 
-              "original-wordmark",
-              "plain", 
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain", 
-              "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#FF4785",
         "aliases": []
@@ -4787,7 +4930,7 @@
         "color": "#D1A41A",
         "aliases": []
     },
-	{
+    {
         "name": "tortoisegit",
         "tags": [
             "git"
@@ -4795,8 +4938,8 @@
         "versions": {
             "svg": [
                 "original",
-				"plain",
-				"line"
+                "plain",
+                "line"
             ],
             "font": [
                 "plain",
@@ -4900,10 +5043,10 @@
         },
         "color": "#1da1f2",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            }
         ]
     },
     {
@@ -5337,17 +5480,17 @@
         "color": "#3498DB",
         "aliases": [
             {
-                "base":"original",
-                "alias":"plain"
+                "base": "original",
+                "alias": "plain"
             },
             {
-                "base":"original-wordmark",
-                "alias":"plain-wordmark"
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
     {
-	"name": "xcode",
+        "name": "xcode",
         "tags": [
             "application",
             "editor",
@@ -5356,7 +5499,7 @@
             "iphone",
             "mobile",
             "apple"
-	],
+        ],
         "versions": {
             "svg": [
                 "original",
@@ -5371,10 +5514,20 @@
     },
     {
         "name": "xd",
-        "tags": ["design", "editor", "ui"],
+        "tags": [
+            "design",
+            "editor",
+            "ui"
+        ],
         "versions": {
-            "svg": ["plain", "line"],
-            "font": ["plain", "line"]
+            "svg": [
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
         },
         "color": "#DD80BC",
         "aliases": []
@@ -5474,8 +5627,8 @@
         "color": "#f7a41d",
         "aliases": [
             {
-                "base":"original",
-                "alias":"plain"
+                "base": "original",
+                "alias": "plain"
             }
         ]
     },
@@ -5735,15 +5888,15 @@
         },
         "color": "#24265d",
         "aliases": []
-},
-{
-        "name": "vuetify", 
+    },
+    {
+        "name": "vuetify",
         "tags": [
             "css",
             "framework",
             "vuejs-library",
             "material-design"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
@@ -5753,18 +5906,18 @@
             "font": [
                 "line",
                 "plain"
-            ] 
+            ]
         },
-        "color": "#1697F6", 
-        "aliases": [] 
+        "color": "#1697F6",
+        "aliases": []
     },
     {
-        "name": "fedora", 
+        "name": "fedora",
         "tags": [
             "linux",
             "distribuition",
             "desktop"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
@@ -5772,10 +5925,9 @@
             ],
             "font": [
                 "plain"
-            ] 
+            ]
         },
-        "color": "#294172", 
-        "aliases": [] 
+        "color": "#294172",
+        "aliases": []
     }
-
 ]
