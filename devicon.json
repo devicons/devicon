@@ -7515,6 +7515,22 @@
         "color": "#41B883",
         "aliases": []
     },
+   {
+        "name": "v8",
+        "tags": [
+            "javascript-runtime"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00C4CC"
+        ]
+    },
     {
         "name": "vuestorefront",
         "altnames": [],
