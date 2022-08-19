@@ -1703,6 +1703,30 @@
         "aliases": []
     },
     {
+        "name": "dataspell",
+        "altnames": [],
+        "tags": [
+            "jetbrains",
+            "ide",
+            "jupyter notebook",
+            "data science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#087cfa",
+        "aliases": []
+    },
+    {
         "name": "dbeaver",
         "altnames": [],
         "tags": [
