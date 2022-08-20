@@ -7517,6 +7517,7 @@
     },
    {
         "name": "v8",
+	"altnames": [],
         "tags": [
             "javascript-runtime"
         ],
