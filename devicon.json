@@ -3213,6 +3213,27 @@
         ]
     },
     {
+        "name": "hibernate",
+        "altnames": [],
+        "tags": [
+            "database",
+            "framework",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#bcae79",
+        "aliases": []
+    },
+    {
         "name": "html5",
         "altnames": [
             "hypertextmarkdownlanguage5"
