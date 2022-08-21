@@ -4859,6 +4859,27 @@
         "aliases": []
     },
     {
+        "name": "norg",
+        "altnames": [
+            "neorg"
+        ],
+        "tags": [
+            "note-taking",
+            "organization"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#4878be",
+        "aliases": []
+    },
+    {
         "name": "npm",
         "altnames": [
             "npmjs",
