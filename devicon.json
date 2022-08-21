@@ -2159,6 +2159,24 @@
         "aliases": []
     },
     {
+        "name": "hardhat",
+        "tags": [
+            "ide",
+            "editor",
+            "development-environment"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#fef04c",
+        "aliases": []
+    },
+    {
         "name": "haxe",
         "tags": [
             "language"
