@@ -3213,6 +3213,27 @@
         ]
     },
     {
+        "name": "hibernate",
+        "altnames": [],
+        "tags": [
+            "database",
+            "framework",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#bcae79",
+        "aliases": []
+    },
+    {
         "name": "html5",
         "altnames": [
             "hypertextmarkdownlanguage5"
@@ -4570,6 +4591,40 @@
         "aliases": []
     },
     {
+        "name": "nano",
+        "altnames": [
+            "gnu-nano",
+            "GNU nano"
+        ],
+        "tags": [
+            "text editor",
+            "editor",
+            "GNU",
+            "terminal"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#C8F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "neo4j",
         "altnames": [],
         "tags": [
@@ -4801,6 +4856,27 @@
             ]
         },
         "color": "#3d3b47",
+        "aliases": []
+    },
+    {
+        "name": "norg",
+        "altnames": [
+            "neorg"
+        ],
+        "tags": [
+            "note-taking",
+            "organization"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#4878be",
         "aliases": []
     },
     {
