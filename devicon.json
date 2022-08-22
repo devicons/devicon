@@ -537,6 +537,29 @@
         "aliases": []
     },
     {
+        "name": "astro",
+        "altnames": [],
+        "tags": [
+            "static site generator",
+            "framework",
+            "web-development"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff5d01",
+        "aliases": []
+    },
+    {
         "name": "atom",
         "altnames": [],
         "tags": [
