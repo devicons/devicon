@@ -43,7 +43,12 @@
             ]
         },
         "color": "#1F0740",
-        "aliases": []
+        "aliases": [
+	            {
+	                "base": "original",
+	                "alias": "plain"
+	            }
+	        ]
     },
     {
         "name": "amazonwebservices",
