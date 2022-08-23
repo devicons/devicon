@@ -8338,24 +8338,6 @@
         },
         "color": "#F04E98",
         "aliases": []
-    },
-	{
-        "name": "wxwidget",
-        "altnames": [],
-        "tags": [
-            "gui",
-            "library"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-            ],
-            "font": [
-                "original",
-            ]
-        },
-        "color": "#F04E98",
-        "aliases": []
     }
     
 ]
