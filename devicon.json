@@ -4249,6 +4249,29 @@
         "aliases": []
     },
     {
+        "name": "materializecss",
+        "altnames": [
+            "materialize",
+            "materialize-css",
+            "materialize css"
+        ],
+        "tags": [
+            "css framework",
+            "css",
+            "design",
+            "material-design",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#EB7077",
+        "aliases": []
+    },
+    {
         "name": "matlab",
         "altnames": [],
         "tags": [
