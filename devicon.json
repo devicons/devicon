@@ -7618,7 +7618,11 @@
         "name": "v8",
 	"altnames": [],
         "tags": [
-            "javascript-runtime"
+            "javascript-runtime",
+            "framework",
+            "javascript",
+            "web",
+            "cpp"
         ],
         "versions": {
             "svg": [
