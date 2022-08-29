@@ -76,37 +76,6 @@
         "aliases": []
     },
     {
-        "name": "alpinejs",
-        "altnames": [
-            "Alpine"
-        ],
-        "tags": [
-            "framework",
-            "javascript"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#2d3441",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "amazonwebservices",
         "altnames": [
             "aws"
@@ -218,28 +187,6 @@
             ]
         },
         "color": "#4285F4",
-        "aliases": []
-    },
-    {
-        "name": "angular",
-        "altnames": [],
-        "tags": [
-            "framework",
-            "javascript"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#FFFFFF",
         "aliases": []
     },
     {
@@ -364,29 +311,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-    },
-    {
-        "name": "apachespark",
-        "altnames": [],
-        "tags": [
-            "data-processing",
-            "data-science",
-            "machine-learning"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#e25a1c",
-        "aliases": []
     },
     {
         "name": "appcelerator",
@@ -537,29 +461,6 @@
         "aliases": []
     },
     {
-        "name": "astro",
-        "altnames": [],
-        "tags": [
-            "static site generator",
-            "framework",
-            "web-development"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#ff5d01",
-        "aliases": []
-    },
-    {
         "name": "atom",
         "altnames": [],
         "tags": [
@@ -584,37 +485,6 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
-        "name": "awk",
-        "altnames": [
-            "the awk programming language"
-        ],
-        "tags": [
-            "programming",
-            "language",
-            "unix"
-        ],
-        "versions": {
-            "svg": [
-                "original-wordmark",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain-wordmark"
-            ]
-        },
-        "color": "#0a094d",
-        "aliases": [
-            {
-                "base": "original-wordmark",
-                "alias": "original"
-            },
-            {
-                "base": "plain-wordmark",
-                "alias": "plain"
             }
         ]
     },
@@ -1130,16 +1000,11 @@
         "altnames": [],
         "tags": [
             "jetbrains",
-            "editor",
-            "c",
-            "c++",
-            "cpp",
-            "cplusplus"
+            "editor"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -1148,7 +1013,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#21d789",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -1240,33 +1105,6 @@
             ]
         },
         "color": "#F38020",
-        "aliases": []
-    },
-    {
-        "name": "cloudflareworkers",
-        "altnames": [
-            "Cloudflare Workers"
-        ],
-        "tags": [
-            "platform",
-            "serverless",
-            "deploy",
-            "performance",
-            "javascript"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#ea9344",
         "aliases": []
     },
     {
@@ -1718,71 +1556,6 @@
         "aliases": []
     },
     {
-        "name": "datagrip",
-        "altnames": [],
-        "tags": [
-            "jetbrains",
-            "ide",
-            "sql",
-            "database"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#21d789",
-        "aliases": []
-    },
-    {
-        "name": "dataspell",
-        "altnames": [],
-        "tags": [
-            "jetbrains",
-            "ide",
-            "jupyter notebook",
-            "data science"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#087cfa",
-        "aliases": []
-    },
-    {
-        "name": "dbeaver",
-        "altnames": [],
-        "tags": [
-            "tool",
-            "database"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#382a24",
-        "aliases": []
-    },
-    {
         "name": "debian",
         "altnames": [],
         "tags": [
@@ -2202,28 +1975,6 @@
         ]
     },
     {
-        "name": "envoy",
-        "altnames": [
-            "envoyproxy"
-        ],
-        "tags": [
-            "proxy",
-            "cloud"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#e13eaf",
-        "aliases": []
-    },
-    {
         "name": "erlang",
         "altnames": [],
         "tags": [],
@@ -2338,63 +2089,6 @@
         },
         "color": "#009688",
         "aliases": []
-    },
-    {
-        "name": "fastify",
-        "altnames": [],
-        "tags": [
-            "framework",
-            "web",
-            "node.js",
-            "javascript",
-            "performance"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#000000",
-        "aliases": []
-    },
-    {
-        "name": "faunadb",
-        "altnames": [
-            "fauna"
-        ],
-        "tags": [
-            "database"
-        ],
-        "versions": {
-            "svg": [
-                "original-wordmark",
-                "original"
-            ],
-            "font": [
-                "original-wordmark",
-                "original",
-                "line",
-                "line-wordmark"
-            ]
-        },
-        "color": "#3A1AB6",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
     },
     {
         "name": "feathersjs",
@@ -2887,28 +2581,6 @@
         "aliases": []
     },
     {
-        "name": "goland",
-        "altnames": [],
-        "tags": [
-            "jetbrains",
-            "ide",
-            "go"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#087cfa",
-        "aliases": []
-    },
-    {
         "name": "google",
         "altnames": [],
         "tags": [
@@ -3277,27 +2949,6 @@
         ]
     },
     {
-        "name": "hibernate",
-        "altnames": [],
-        "tags": [
-            "database",
-            "framework",
-            "java"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#bcae79",
-        "aliases": []
-    },
-    {
         "name": "html5",
         "altnames": [
             "hypertextmarkdownlanguage5"
@@ -3484,26 +3135,6 @@
             ]
         },
         "color": "#4e8ef7",
-        "aliases": []
-    },
-    {
-        "name": "jaegertracing",
-        "altnames": ["jaeger"],
-        "tags": [
-            "monitoring",
-            "tracing"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#67cfe3",
         "aliases": []
     },
     {
@@ -3753,29 +3384,6 @@
         "aliases": []
     },
     {
-        "name": "json",
-        "altnames": [
-            "JavaScript Object Notation"
-        ],
-        "tags": [
-            "format",
-            "standard",
-            "file-format",
-            "object-notation"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#505050",
-        "aliases": []
-    },
-    {
         "name": "julia",
         "altnames": [
             "julialang"
@@ -3933,26 +3541,6 @@
       ]
     },
     {
-        "name": "karatelabs",
-        "altnames": ["karate"],
-        "tags": [
-            "framework",
-            "testing"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#000000",
-        "aliases": []
-    },
-    {
         "name": "karma",
         "altnames": [
             "karmarunner",
@@ -4014,7 +3602,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#c711e1",
+        "color": "#7C6DB2",
         "aliases": []
     },
     {
@@ -4039,27 +3627,6 @@
             ]
         },
         "color": "#0081C2",
-        "aliases": []
-    },
-    {
-        "name": "ktor",
-        "altnames": [],
-        "tags": [
-            "jetbrains",
-            "kotlin",
-            "framework"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#fc801d",
         "aliases": []
     },
     {
@@ -4328,32 +3895,6 @@
         "aliases": []
     },
     {
-        "name": "matplotlib",
-        "altnames": [],
-        "tags": [
-            "plotting",
-            "library",
-            "math",
-            "visualization",
-            "python",
-            "api"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#11557C",
-        "aliases": []
-    },
-    {
         "name": "maven",
         "altnames": [
             "apachemaven",
@@ -4533,42 +4074,6 @@
         "aliases": []
     },
     {
-        "name": "moleculer",
-        "altnames": [
-            "moleculerjs",
-            "moleculer.js"
-        ],
-        "tags": [
-            "nodejs",
-            "javascript",
-            "js",
-            "microservices",
-            "micro-services",
-            "framework"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#3cafce",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "mongodb",
         "altnames": [],
         "tags": [
@@ -4676,40 +4181,6 @@
         },
         "color": "#00618a",
         "aliases": []
-    },
-    {
-        "name": "nano",
-        "altnames": [
-            "gnu-nano",
-            "GNU nano"
-        ],
-        "tags": [
-            "text editor",
-            "editor",
-            "GNU",
-            "terminal"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#C8F",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
     },
     {
         "name": "neo4j",
@@ -4946,27 +4417,6 @@
         "aliases": []
     },
     {
-        "name": "norg",
-        "altnames": [
-            "neorg"
-        ],
-        "tags": [
-            "note-taking",
-            "organization"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#4878be",
-        "aliases": []
-    },
-    {
         "name": "npm",
         "altnames": [
             "npmjs",
@@ -5166,34 +4616,6 @@
         "aliases": []
     },
     {
-        "name": "opencl",
-        "altnames": [],
-        "tags": [
-            "framework",
-            "language",
-            "heterogeneous-computing",
-            "cpp",
-            "api",
-            "khronos",
-            "programming"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "original"
-            ]
-        },
-        "color": "#010101",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
-    },
-    {
         "name": "opencv",
         "altnames": [],
         "tags": [
@@ -5282,25 +4704,6 @@
             ]
         },
         "color": "#73ba25",
-        "aliases": []
-    },
-    {
-        "name": "opentelemetry",
-        "altnames": [],
-        "tags": [
-            "telemetry"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#f5a800",
         "aliases": []
     },
     {
@@ -5844,7 +5247,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#21D789",
+        "color": "#4D8548",
         "aliases": []
     },
     {
@@ -5921,28 +5324,6 @@
         ]
     },
     {
-        "name": "qodana",
-        "altnames": [],
-        "tags": [
-            "jetbrains",
-            "code quality",
-            "security"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#ff318c",
-        "aliases": []
-    },
-    {
         "name": "qt",
         "altnames": [],
         "tags": [
@@ -5963,46 +5344,6 @@
                 "alias": "plain"
             }
         ]
-    },
-    {
-        "name": "quarkus",
-        "altnames": [],
-        "tags": [
-            "java",
-            "framework"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#4695EB",
-        "aliases": []
-    },
-    {
-        "name": "quasar",
-        "altnames": [],
-        "tags": [
-            "framework",
-            "javascript"
-        ],
-        "versions": {
-            "svg": [
-                "original-wordmark",
-                "original"
-            ],
-            "font": [
-                "plain-wordmark",
-                "plain"
-            ]
-        },
-        "color": "#00b4ff",
-        "aliases": []
     },
     {
         "name": "r",
@@ -6258,7 +5599,6 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -6267,7 +5607,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#dd1265",
+        "color": "#DD1866",
         "aliases": []
     },
     {
@@ -6400,7 +5740,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#FC801D",
+        "color": "#C12C4C",
         "aliases": []
     },
     {
@@ -6876,24 +6216,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-    },
-    {
-        "name": "sqldeveloper",
-        "altnames": [],
-        "tags": [
-            "tool",
-            "database"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#adadad",
-        "aliases": []
     },
     {
         "name": "sqlite",
@@ -7427,30 +6749,6 @@
         "aliases": []
     },
     {
-        "name": "unifiedmodelinglanguage",
-        "altnames": [
-            "uml",
-            "unified modeling language"
-        ],
-        "tags": [
-            "modeling",
-            "design",
-            "language"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#452e7f",
-        "aliases": []
-    },
-    {
         "name": "unity",
         "altnames": [],
         "tags": [
@@ -7831,7 +7129,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#07c3f2",
+        "color": "#2788B5",
         "aliases": []
     },
     {
