@@ -3701,6 +3701,24 @@
         "color": "#336791",
         "aliases": []
     },
+       {
+        "name": "powershell",
+        "tags": [
+            "microsoft",
+            "powershell",
+            "windows"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#339fff",
+        "aliases": []
+    },
     {
         "name": "premierepro",
         "tags": [
