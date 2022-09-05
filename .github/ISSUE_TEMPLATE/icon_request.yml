@@ -1,5 +1,5 @@
 name: Icon Request
-description: Requesting a new icon or changes to an existing icon
+description: Request a new icon or changes to an existing icon
 title: '[ICON REQUEST]: <icon name>'
 labels: ["request:icon"]
 body:
