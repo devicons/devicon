@@ -6605,6 +6605,38 @@
         ]
     },
     {
+        "name": "sema",
+        "altnames": ["Sema Software"],
+        "tags": [
+            "software",
+            "development",
+            "company",
+            "code-review",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "sequelize",
         "altnames": [
             "sequelizejs"
