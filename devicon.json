@@ -4266,7 +4266,9 @@
             "svg": [
                 "original"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
         "color": "#EB7077",
         "aliases": []
