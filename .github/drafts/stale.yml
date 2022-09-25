@@ -15,10 +15,10 @@ jobs:
           we would love to have it. It would be great if you can continue with this PR, but if you can't, we might fork your changes and merge the changes ourselves.
 
           Since GitHub tracks contributions by commits, you'll still be credited.
-          Let us know what do you think about this. :slight_smile:
+          Let us know what you think about this. :slight_smile:
 
 
-          Feel free to join our Discord server for support, hangouts, and more: https://discord.gg/hScy8KWACQ
+          Feel free to [join our Discord server](https://discord.gg/hScy8KWACQ) for support, hangouts, and more
           Thank you and have a nice day!"
         stale-pr-label: 'stale'
         days-before-pr-stale: 30
