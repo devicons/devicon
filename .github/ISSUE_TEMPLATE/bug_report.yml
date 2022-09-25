@@ -18,7 +18,7 @@ body:
     id: description
     attributes:
       label: Bug description
-      description: Short description of the bug you found. Provide images/code if applicable.
+      description: Short description of the bug. Provide images/code if applicable.
     validations:
       required: true
 
