@@ -6151,28 +6151,6 @@
         "aliases": []
     },
     {
-        "name": "reach",
-        "altnames": [
-            "Reach Lang"
-        ],
-        "tags": [
-            "web3",
-            "blockchain",
-            "development"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#6AC6E7",
-        "aliases": []
-    },
-    {
         "name": "react",
         "altnames": [
             "reactjs"
@@ -6291,6 +6269,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "renpy",
+        "altnames": [
+            "ren'py"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ff7f7f",
+        "aliases": []
     },
     {
         "name": "rider",
