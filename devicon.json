@@ -1126,6 +1126,25 @@
         "aliases": []
     },
     {
+        "name": "clarity",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#13171A",
+        "aliases": []
+    },
+    {
         "name": "clion",
         "altnames": [],
         "tags": [
