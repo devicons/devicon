@@ -1126,25 +1126,6 @@
         "aliases": []
     },
     {
-        "name": "clarity",
-        "altnames": [],
-        "tags": [
-            "programming",
-            "language"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#13171A",
-        "aliases": []
-    },
-    {
         "name": "clion",
         "altnames": [],
         "tags": [
@@ -6167,28 +6148,6 @@
             ]
         },
         "color": "#c51850",
-        "aliases": []
-    },
-    {
-        "name": "reach",
-        "altnames": [
-            "Reach Lang"
-        ],
-        "tags": [
-            "web3",
-            "blockchain",
-            "development"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#6AC6E7",
         "aliases": []
     },
     {
