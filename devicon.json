@@ -6271,6 +6271,27 @@
         ]
     },
     {
+        "name": "renpy",
+        "altnames": [
+            "ren'py"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ff7f7f",
+        "aliases": []
+    },
+    {
         "name": "rider",
         "altnames": [],
         "tags": [
