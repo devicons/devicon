@@ -389,6 +389,25 @@
         "aliases": []
     },
     {
+        "name": "apl",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#24a148",
+        "aliases": []
+    },
+    {
         "name": "appcelerator",
         "altnames": [],
         "tags": [
