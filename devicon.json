@@ -7828,6 +7828,28 @@
         "aliases": []
     },
     {
+        "name": "vyper",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language",
+            "python",
+            "blockchain",
+            "ethereum"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "webflow",
         "altnames": [],
         "tags": [
