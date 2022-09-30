@@ -7642,6 +7642,27 @@
         "aliases": []
     },
     {
+        "name": "vala",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#a56de2",
+        "aliases": []
+    },
+    {
         "name": "vertx",
         "altnames": [
             "eclipsevertx"
