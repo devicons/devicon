@@ -5872,6 +5872,27 @@
         "aliases": []
     },
     {
+        "name": "pyscript",
+        "altnames": [],
+        "tags": [
+            "browser",
+            "python",
+            "html",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fda703",
+        "aliases": []
+    },
+    {
         "name": "pytest",
         "altnames": [],
         "tags": [
