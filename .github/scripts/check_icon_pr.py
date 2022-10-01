@@ -123,10 +123,35 @@ def check_devicon_object(icon: dict):
 
     try:
         if type(icon["aliases"]) != list:
-            err_msgs.append("- 'aliases' must be an array.")
+            err_msgs.append("- 'aliases' must be an array of objects.")
     except KeyError:
         err_msgs.append("- missing key: 'aliases'.")
-    
+
+    try:
+        for alias_objects in icon["aliases"]:
+            if type(alias_objects) != dict:
+                raise TypeError()
+    except TypeError:
+        err_msgs.append("- 'aliases' must be an array of objects, not: " + str(icon["aliases"]))
+
+    try:
+        for alias_objects in icon["aliases"]:
+            if type(alias_objects["base"]) != str:
+                err_msgs.append("- must contain at least 1 base in aliases.")
+            if not util.is_svg_version_valid(alias_objects['base']):
+                err_msgs.append(f"- Invalid base name in aliases['base']: '{alias_objects['base']}'. Must match regexp: (original|plain|line)(-wordmark)?")
+    except KeyError:
+        err_msgs.append("- missing key: 'base' in 'aliases'.")
+
+    try:
+        for alias_objects in icon["aliases"]:
+            if type(alias_objects["alias"]) != str:
+                err_msgs.append("- must contain at least 1 alias in aliases.")
+            if not util.is_svg_version_valid(alias_objects['alias']):
+                err_msgs.append(f"- Invalid alias name in aliases['alias']: '{alias_objects['alias']}'. Must match regexp: (original|plain|line)(-wordmark)?")
+    except KeyError:
+        err_msgs.append("- missing key: 'alias' in 'aliases'.")
+
     if len(err_msgs) > 0:
         message = "Error found in 'devicon.json' for '{}' entry: \n{}".format(icon["name"], "\n".join(err_msgs))
         return message
