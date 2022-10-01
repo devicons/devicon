@@ -7829,7 +7829,7 @@
     },
     {
         "name": "vyper",
-        "altnames": [],
+        "altnames": ["vyperlang"],
         "tags": [
             "programming",
             "language",
