@@ -62,6 +62,13 @@ def check_devicon_object(icon: dict):
     :return a string containing the error messages if any.
     """
     err_msgs = []
+
+    try:
+        if type(icon["name"]) != str:
+            err_msgs.append("- 'name' must be a string")
+    except KeyError:
+        err_msgs.append("- missing key: 'name'.")
+
     try:
         for tag in icon["tags"]:
             if type(tag) != str:
