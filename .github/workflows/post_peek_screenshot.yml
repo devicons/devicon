@@ -152,7 +152,7 @@ jobs:
             Make sure that:
 
             - Your SVGs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/wiki/Organizing-SVGs).
-            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/wiki/Updating-the-%60devicon.json%60)
+            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)
             - Your PR title follows the format seen [here](https://github.com/devicons/devicon/wiki/Overview-on-Submitting-Icons)
 
             I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate. 
