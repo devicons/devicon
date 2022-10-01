@@ -70,6 +70,17 @@ def check_devicon_object(icon: dict):
         err_msgs.append("- missing key: 'name'.")
 
     try:
+        for altname in icon["altnames"]:
+            if type(altname) != str:
+                raise TypeError()
+            if altname == icon["name"]:
+                err_msgs.append(f"- 'altnames' should not contain the same name as 'name'. please remove {altname} from 'altnames'")
+    except TypeError:
+        err_msgs.append("- 'altnames' must be an array of strings, not: " + str(icon["altnames"]))
+    except KeyError:
+        err_msgs.append("- missing key: 'altnames'.")
+
+    try:
         for tag in icon["tags"]:
             if type(tag) != str:
                 raise TypeError()
