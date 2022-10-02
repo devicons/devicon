@@ -8247,6 +8247,28 @@
         ]
     },
     {
+        "name": "livewire",
+        "altnames": ["laravel-livewire"],
+        "tags": [
+            "framework",
+            "laravel",
+            "php",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#FB70A9",
+        "aliases": []
+    },
+    {
         "name": "postman",
         "altnames": [],
         "tags": [
