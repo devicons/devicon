@@ -6203,6 +6203,27 @@
         ]
     },
     {
+        "name": "reactbootstrap",
+        "altnames": [
+            "React-Bootstrap"
+        ],
+        "tags": [
+            "framework",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#41e0fd",
+        "aliases": []
+    },
+    {
         "name": "rect",
         "altnames": [
             "rectlang"
