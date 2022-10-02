@@ -15,12 +15,20 @@ body:
           required: true
 
   - type: textarea
-    id: currentproblem
+    id: description
     attributes:
-      label: Problem
-      description: Tell us about the problem and its negative impacts.
+      label: Description
+      description: Write down a detailed description of the feature.
     validations:
       required: true
+
+    - type: textarea
+      id: context
+      attributes:
+        label: Context
+        description: Why is this change important to you? How would you use it? How can it benefit other users?
+      validations:
+        required: true
 
   - type: textarea
     id: possiblesolution
