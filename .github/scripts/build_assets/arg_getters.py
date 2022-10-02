@@ -82,7 +82,7 @@ def get_in_develop_labeler_args():
                         help="The GitHub token to access the GitHub REST API.",
                         type=str)
 
-    parser.add_argument("body",
-                        help="The PR's initial comment by the author AKA the `body` attribute of the `pull_request` API object.",
+    parser.add_argument("pr_num",
+                        help="The PR's number",
                         type=str)
     return parser.parse_args()
