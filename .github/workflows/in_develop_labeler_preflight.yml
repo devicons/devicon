@@ -1,7 +1,8 @@
-name: On PR Merge
+name: On Develop PR Merge
 on: 
   pull_request:
     types: [closed]
+    branches: [develop]
 jobs:
   save_pr_num_in_artifact:
     name: Preflight Label Issue In Develop

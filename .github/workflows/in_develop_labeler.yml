@@ -1,7 +1,7 @@
 name: Label Issue In Develop
 on:
   workflow_run:
-    workflows: ['On PR Merge']
+    workflows: ['On Develop PR Merge']
     types: 
       - completed
 jobs:
