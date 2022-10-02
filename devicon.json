@@ -1479,6 +1479,30 @@
         "aliases": []
     },
     {
+        "name": "cosmosdb",
+        "altnames": [
+            "azurecosmosdb"
+        ],
+        "tags": [
+            "database",
+            "nosql",
+            "cloud",
+            "azure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#59B3D8",
+        "aliases": []
+    },
+    {
         "name": "couchdb",
         "altnames": [
             "apachecouchdb"
