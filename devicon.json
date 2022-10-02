@@ -6203,6 +6203,29 @@
         ]
     },
     {
+        "name": "realm",
+        "altnames": [],
+        "tags": [
+            "sql",
+            "database",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#6e60f9",
+        "aliases": []
+    },
+    {
         "name": "rect",
         "altnames": [
             "rectlang"
