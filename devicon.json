@@ -7733,6 +7733,37 @@
         "aliases": []
     },
     {
+        "name": "vercel",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "platform",
+            "deployment",
+            "git"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "vertx",
         "altnames": [
             "eclipsevertx"
