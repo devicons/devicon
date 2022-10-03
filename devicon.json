@@ -1127,7 +1127,7 @@
     },
     {
         "name": "clarity",
-        "altnames": [],
+        "altnames": ["clarity-lang"],
         "tags": [
             "programming",
             "language",
