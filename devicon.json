@@ -1126,6 +1126,29 @@
         "aliases": []
     },
     {
+        "name": "clarity",
+        "altnames": ["clarity-lang"],
+        "tags": [
+            "programming",
+            "language",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#13171a",
+        "aliases": []
+    },
+    {
         "name": "clion",
         "altnames": [],
         "tags": [
