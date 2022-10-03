@@ -966,7 +966,7 @@
     },
     {
         "name": "cairo",
-        "altnames": [],
+        "altnames": ["cairographics"],
         "tags": [
             "graphic",
             "library"
