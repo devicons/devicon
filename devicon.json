@@ -5195,6 +5195,27 @@
         "aliases": []
     },
     {
+        "name": "okta",
+        "altnames": [
+            "okta developer"
+        ],
+        "tags": [
+            "auth"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0f82c2",
+        "aliases": []
+    },
+    {
         "name": "openal",
         "altnames": [],
         "tags": [
