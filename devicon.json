@@ -1126,6 +1126,29 @@
         "aliases": []
     },
     {
+        "name": "clarity",
+        "altnames": ["clarity-lang"],
+        "tags": [
+            "programming",
+            "language",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#13171a",
+        "aliases": []
+    },
+    {
         "name": "clion",
         "altnames": [],
         "tags": [
@@ -1476,6 +1499,30 @@
             ]
         },
         "color": "#f47c00",
+        "aliases": []
+    },
+    {
+        "name": "cosmosdb",
+        "altnames": [
+            "azurecosmosdb"
+        ],
+        "tags": [
+            "database",
+            "nosql",
+            "cloud",
+            "azure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#59B3D8",
         "aliases": []
     },
     {
@@ -5872,6 +5919,27 @@
         "aliases": []
     },
     {
+        "name": "pyscript",
+        "altnames": [],
+        "tags": [
+            "browser",
+            "python",
+            "html",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fda703",
+        "aliases": []
+    },
+    {
         "name": "pytest",
         "altnames": [],
         "tags": [
@@ -6291,6 +6359,29 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "renpy",
+        "altnames": [
+            "Ren'Py"
+        ],
+        "tags": [
+            "programming",
+            "game-engine",
+            "engine",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ff7f7f",
+        "aliases": []
     },
     {
         "name": "rider",
@@ -7662,6 +7753,37 @@
         },
         "color": "#a56de2",
         "aliases": []
+    },
+    {
+        "name": "vercel",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "platform",
+            "deployment",
+            "git"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "vertx",
