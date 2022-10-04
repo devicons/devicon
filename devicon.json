@@ -4280,6 +4280,24 @@
         "aliases": []
     },
     {
+        "name": "llvm",
+        "altnames": [],
+        "tags": [
+            "compiler",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "lua",
         "altnames": [
             "lualang"
