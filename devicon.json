@@ -7733,6 +7733,28 @@
         "aliases": []
     },
     {
+        "name": "vala",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#a56de2",
+        "aliases": []
+    },
+    {
         "name": "vercel",
         "altnames": [],
         "tags": [
