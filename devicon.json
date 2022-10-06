@@ -7045,7 +7045,12 @@
             ]
         },
         "color": "#195f92",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "storybook",
