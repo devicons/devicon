@@ -393,7 +393,9 @@
         "altnames": ["A Programming Language"],
         "tags": [
             "programming",
-            "language"
+            "language",
+            "open-source",
+            "cross-platform"
         ],
         "versions": {
             "svg": [
