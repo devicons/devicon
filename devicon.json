@@ -969,7 +969,9 @@
         "altnames": ["cairographics"],
         "tags": [
             "graphic",
-            "library"
+            "library",
+            "c",
+            "open-source"
         ],
         "versions": {
             "svg": [
