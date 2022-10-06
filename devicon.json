@@ -4281,7 +4281,7 @@
     },
     {
         "name": "llvm",
-        "altnames": [],
+        "altnames": ["Low Level Virtual Machine"],
         "tags": [
             "compiler",
             "framework"
