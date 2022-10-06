@@ -76,6 +76,23 @@
         "aliases": []
     },
     {
+        "name": "akka",
+        "altnames": ["akka-framework"],
+        "tags": [
+            "framework",
+            "java",
+            "scala"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ]
+        },
+        "color": "#0b5567",
+        "aliases": []
+    },
+    {
         "name": "alpinejs",
         "altnames": [
             "Alpine"
