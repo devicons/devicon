@@ -4284,7 +4284,9 @@
         "altnames": ["Low Level Virtual Machine"],
         "tags": [
             "compiler",
-            "framework"
+            "framework",
+            "c++",
+            "open-source"
         ],
         "versions": {
             "svg": [
