@@ -2652,6 +2652,30 @@
         "aliases": []
     },
     {
+        "name": "freecodecamp",
+        "altnames": [
+            "free code camp",
+            "fcc"
+        ],
+        "tags": [
+            "learning",
+            "platform",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
         "name": "fsharp",
         "altnames": [
             "f#"
