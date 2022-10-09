@@ -2140,6 +2140,30 @@
         "color": "#5E5185",
         "aliases": []
     },
+    
+    {
+       "name": "hadoop",
+       "altnames": [],
+       "tags": [
+	  "framework",
+	  "big data"
+  	],
+  	"versions": {
+	    "svg": [ 
+	      "original",
+	      "original-wordmark",
+	      "line"
+	    ],
+	    "font": [ 
+	      "original",
+	      "original-wordmark"
+	    ]
+	  },
+  	"color": "#fdeb4f", 
+  	"aliases": [] 
+    },
+    
+    
     {
         "name": "handlebars",
         "tags": [
