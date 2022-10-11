@@ -415,6 +415,27 @@
         "aliases": []
     },
     {
+        "name": "apl",
+        "altnames": ["A Programming Language"],
+        "tags": [
+            "programming",
+            "language",
+            "open-source",
+            "cross-platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#24a148",
+        "aliases": []
+    },
+    {
         "name": "appcelerator",
         "altnames": [],
         "tags": [
