@@ -1012,6 +1012,30 @@
         ]
     },
     {
+        "name": "cairo",
+        "altnames": ["cairographics"],
+        "tags": [
+            "graphic",
+            "library",
+            "c",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f39914",
+        "aliases": []
+    },
+    {
         "name": "cakephp",
         "altnames": [],
         "tags": [
