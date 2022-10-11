@@ -86,12 +86,12 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
-                "original"
-            ],
-            "font": [
                 "original",
                 "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#0b5567",
