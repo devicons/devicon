@@ -6188,6 +6188,28 @@
         "aliases": []
     },
     {
+        "name": "qwik",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#18B6F6",
+        "aliases": []
+    },
+    {
         "name": "r",
         "altnames": [
             "rlang"
