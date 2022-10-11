@@ -4351,6 +4351,26 @@
         "aliases": []
     },
     {
+        "name": "llvm",
+        "altnames": ["Low Level Virtual Machine"],
+        "tags": [
+            "compiler",
+            "framework",
+            "c++",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5A90B6",
+        "aliases": []
+    },
+    {
         "name": "lua",
         "altnames": [
             "lualang"
