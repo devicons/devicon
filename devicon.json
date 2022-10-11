@@ -6209,19 +6209,25 @@
         ],
         "tags": [
             "framework",
-            "library"
+            "library",
+            "frontend",
+            "reactjs"
         ],
         "versions": {
             "svg": [
-                "original",
-                "plain"
+                "original"
             ],
             "font": [
-                "plain"
+                "original"
             ]
         },
         "color": "#41e0fd",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "rect",
