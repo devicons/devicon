@@ -7558,6 +7558,30 @@
         "aliases": []
     },
     {
+        "name": "tex",
+        "altnames": [],
+        "tags": [
+            "typesetting-system",
+            "markup",
+            "tex"
+        ],
+        "versions": {
+            "svg": [
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases":[
+            {
+                "base": "plain-wordmark",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "thealgorithms",
         "altnames": [],
         "tags": [
