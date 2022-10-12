@@ -4137,6 +4137,30 @@
         "aliases": []
     },
     {
+        "name": "knexjs",
+        "altnames": [],
+        "tags": [
+            "database",
+            "query",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#e16426",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "knockout",
         "altnames": [
             "knockoutjs"
