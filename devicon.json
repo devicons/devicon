@@ -76,6 +76,28 @@
         "aliases": []
     },
     {
+        "name": "akka",
+        "altnames": ["akka-framework"],
+        "tags": [
+            "framework",
+            "java",
+            "scala",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#15a9ce",
+        "aliases": []
+    },
+    {
         "name": "alpinejs",
         "altnames": [
             "Alpine"
@@ -337,6 +359,32 @@
         "aliases": []
     },
     {
+        "name": "apacheairflow",
+        "altnames": [
+            "Airflow"
+        ],
+        "tags": [
+            "platform",
+            "pipeline",
+            "orchestrator",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#017cee",
+        "aliases": []
+    },
+    {
         "name": "apachekafka",
         "altnames": [],
         "tags": [
@@ -386,6 +434,27 @@
             ]
         },
         "color": "#e25a1c",
+        "aliases": []
+    },
+    {
+        "name": "apl",
+        "altnames": ["A Programming Language"],
+        "tags": [
+            "programming",
+            "language",
+            "open-source",
+            "cross-platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#24a148",
         "aliases": []
     },
     {
@@ -965,6 +1034,30 @@
         ]
     },
     {
+        "name": "cairo",
+        "altnames": ["cairographics"],
+        "tags": [
+            "graphic",
+            "library",
+            "c",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f39914",
+        "aliases": []
+    },
+    {
         "name": "cakephp",
         "altnames": [],
         "tags": [
@@ -1123,6 +1216,29 @@
             ]
         },
         "color": "#343434",
+        "aliases": []
+    },
+    {
+        "name": "clarity",
+        "altnames": ["clarity-lang"],
+        "tags": [
+            "programming",
+            "language",
+            "blockchain"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#13171a",
         "aliases": []
     },
     {
@@ -1476,6 +1592,30 @@
             ]
         },
         "color": "#f47c00",
+        "aliases": []
+    },
+    {
+        "name": "cosmosdb",
+        "altnames": [
+            "azurecosmosdb"
+        ],
+        "tags": [
+            "database",
+            "nosql",
+            "cloud",
+            "azure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#59B3D8",
         "aliases": []
     },
     {
@@ -4233,6 +4373,26 @@
         "aliases": []
     },
     {
+        "name": "llvm",
+        "altnames": ["Low Level Virtual Machine"],
+        "tags": [
+            "compiler",
+            "framework",
+            "c++",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5A90B6",
+        "aliases": []
+    },
+    {
         "name": "lua",
         "altnames": [
             "lualang"
@@ -5556,6 +5716,25 @@
         "aliases": []
     },
     {
+        "name": "playwright",
+        "altnames": [],
+        "tags": [
+            "testing",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2EAD33",
+        "aliases": []
+    },
+    {
         "name": "plotly",
         "altnames": [],
         "tags": [
@@ -5872,6 +6051,27 @@
         "aliases": []
     },
     {
+        "name": "pyscript",
+        "altnames": [],
+        "tags": [
+            "browser",
+            "python",
+            "html",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fda703",
+        "aliases": []
+    },
+    {
         "name": "pytest",
         "altnames": [],
         "tags": [
@@ -6026,6 +6226,28 @@
             ]
         },
         "color": "#00b4ff",
+        "aliases": []
+    },
+    {
+        "name": "qwik",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#18B6F6",
         "aliases": []
     },
     {
@@ -6230,6 +6452,29 @@
         ]
     },
     {
+        "name": "realm",
+        "altnames": [],
+        "tags": [
+            "sql",
+            "database",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#6e60f9",
+        "aliases": []
+    },
+    {
         "name": "rect",
         "altnames": [
             "rectlang"
@@ -6318,6 +6563,29 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "renpy",
+        "altnames": [
+            "Ren'Py"
+        ],
+        "tags": [
+            "programming",
+            "game-engine",
+            "engine",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ff7f7f",
+        "aliases": []
     },
     {
         "name": "rider",
@@ -7054,6 +7322,32 @@
         ]
     },
     {
+        "name": "stata",
+        "altnames": [],
+        "tags": [
+            "analysis",
+            "data",
+            "data-science",
+            "software",
+            "statistics"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": [
+                "original-wordmark"
+            ]
+        },
+        "color": "#195f92",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "storybook",
         "altnames": [
             "storybookjs"
@@ -7669,6 +7963,59 @@
         "aliases": []
     },
     {
+        "name": "vala",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#a56de2",
+        "aliases": []
+    },
+    {
+        "name": "vercel",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "platform",
+            "deployment",
+            "git"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "vertx",
         "altnames": [
             "eclipsevertx"
@@ -7852,6 +8199,31 @@
             ]
         },
         "color": "#1697F6",
+        "aliases": []
+    },
+    {
+        "name": "vyper",
+        "altnames": ["vyperlang"],
+        "tags": [
+            "programming",
+            "language",
+            "python",
+            "blockchain",
+            "ethereum"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -8248,6 +8620,28 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "livewire",
+        "altnames": ["laravel-livewire"],
+        "tags": [
+            "framework",
+            "laravel",
+            "php",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#FB70A9",
+        "aliases": []
     },
     {
         "name": "postman",
