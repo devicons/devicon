@@ -8457,6 +8457,27 @@
         "aliases": []
     },
     {
+        "name": "yaml",
+        "altnames": [
+            "YAML Ain't Markup Language"
+        ],
+        "tags": [
+            "data",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#cb171e",
+        "aliases": []
+    },
+    {
         "name": "yarn",
         "altnames": [],
         "tags": [
