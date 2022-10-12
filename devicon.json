@@ -2935,6 +2935,28 @@
         ]
     },
     {
+        "name": "githubcodespaces",
+        "altnames": [],
+        "tags": [
+            "development",
+            "remote-development",
+            "editor",
+            "browser",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
         "name": "gitlab",
         "altnames": [],
         "tags": [
