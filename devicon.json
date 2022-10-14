@@ -4143,7 +4143,8 @@
             "database",
             "query",
             "sql",
-            "javascript"
+            "javascript",
+            "library"
         ],
         "versions": {
             "svg": [
