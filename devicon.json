@@ -7510,6 +7510,29 @@
         "aliases": []
     },
     {
+        "name": "tauri",
+        "altnames": [],
+        "tags": [
+            "rust",
+            "electron",
+            "desktop"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": []
+    },
+    {
         "name": "tensorflow",
         "altnames": [],
         "tags": [
