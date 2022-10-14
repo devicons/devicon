@@ -2936,7 +2936,7 @@
     },
     {
         "name": "githubcodespaces",
-        "altnames": [],
+        "altnames": ["GitHub Codespaces"],
         "tags": [
             "development",
             "remote-development",
