@@ -4227,28 +4227,6 @@
         ]
     },
     {
-        "name": "materialui",
-        "altnames": [
-            "mui"
-        ],
-        "tags": [
-            "framework",
-            "design",
-            "ui"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#1FA6CA",
-        "aliases": []
-    },
-    {
         "name": "materializecss",
         "altnames": [
             "materialize",
@@ -4271,6 +4249,28 @@
             ]
         },
         "color": "#EB7077",
+        "aliases": []
+    },
+    {
+        "name": "materialui",
+        "altnames": [
+            "mui"
+        ],
+        "tags": [
+            "framework",
+            "design",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1FA6CA",
         "aliases": []
     },
     {
