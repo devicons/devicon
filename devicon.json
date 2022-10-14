@@ -8477,12 +8477,12 @@
         "color": "#cb171e",
         "aliases": [
             {
-                "base": original,
-                "alias": original-wordmark
+                "base": "original",
+                "alias": "original-wordmark"
             },
             {
-                "base": plain,
-                "alias": plain-wordmark
+                "base": "plain",
+                "alias": "plain-wordmark"
             }
         ]
     },
