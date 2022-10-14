@@ -6434,7 +6434,8 @@
             "framework",
             "library",
             "frontend",
-            "reactjs"
+            "reactjs",
+            "javascript"
         ],
         "versions": {
             "svg": [
