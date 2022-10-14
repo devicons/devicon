@@ -8467,15 +8467,24 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
-                "plain-wordmark"
+                "original",
+                "plain"
             ],
             "font": [
-                "plain-wordmark"
+                "plain"
             ]
         },
         "color": "#cb171e",
-        "aliases": []
+        "aliases": [
+            {
+                "base": original,
+                "alias": original-wordmark
+            },
+            {
+                "base": plain,
+                "alias": plain-wordmark
+            }
+        ]
     },
     {
         "name": "yarn",
