@@ -3309,19 +3309,18 @@
   	"versions": {
 	    "svg": [ 
 	      "original",
-	      "original-wordmark",
-	      "line"
+	      "plain"
 	    ],
 	    "font": [ 
 	      "original",
-	      "original-wordmark"
+	      "plain"
 	    ]
 	  },
   	"color": "#fdeb4f", 
   	"aliases": [
   	   {
   	   	"base": "plain",
-                "alias": "line"
+        "alias": "line"
   	   }	
   	] 
     },
