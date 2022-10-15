@@ -14,8 +14,8 @@ jobs:
 
       - name: Run the check_svg script
         env:
-          PR_TITLE: ${{ github.event.pull_request.title }}
-        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
+          PR_DATA: ${{ github.event.pull_request }}
+        run: python ./.github/scripts/check_icon_pr.py "$PR_DATA" ./icons ./devicon.json
 
       - name: Upload the err messages
         uses: actions/upload-artifact@v2

@@ -5,7 +5,7 @@ from pathlib import Path
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
-from build_assets import filehandler, arg_getters, util
+from build_assets import filehandler, arg_getters, util, api_handler
 
 
 def main():
@@ -16,10 +16,17 @@ def main():
     """
     args = arg_getters.get_check_icon_pr_args()
     try:
+        pr_title = args.pr_data["title"]
+        # check that the base branch of the PR is develop
+        pr_err_msg = ""
+        pr_base_branch = api_handler.pr_base_branch(args.pr_data)
+        if not pr_base_branch != "develop":
+            pr_err_msg.append(f"The PR's base branch is `{pr_base_branch}`, but should be `develop`, please change the PR so that it's based on, and merged into `develop`")
+        
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
-        filtered_icon = util.find_object_added_in_pr(all_icons, args.pr_title)
+        filtered_icon = util.find_object_added_in_pr(all_icons, pr_title)
         print("Checking devicon.json object: " + str(filtered_icon))
         devicon_err_msg = check_devicon_object(filtered_icon)
 
@@ -40,6 +47,9 @@ def main():
             svg_err_msg = check_svgs(svgs)
 
         err_msg = []
+        if pr_err_msg != "":
+            err_msg.append(pr_err_msg)
+            
         if devicon_err_msg != "":
             err_msg.append(devicon_err_msg)
 

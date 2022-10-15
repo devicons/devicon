@@ -49,8 +49,8 @@ def get_check_icon_pr_args():
     """
     parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run whenever a PR is opened")
 
-    parser.add_argument("pr_title",
-                        help="The title of the PR that we are peeking at")
+    parser.add_argument("pr_data",
+                        help="The data of the PR that we are peeking at")
 
     parser.add_argument("icons_folder_path",
                         help="The path to the icons folder",

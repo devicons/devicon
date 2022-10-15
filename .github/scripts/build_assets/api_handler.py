@@ -65,6 +65,15 @@ def get_merged_pull_reqs(token, page, log_output: FileIO=sys.stdout):
         if merged_pull_req["merged_at"] is not None]
 
 
+def pr_base_branch(pull_req_data):
+    """
+    Check whether the PR's base is develop. Meaning, if the PR is being committed to develop
+    :param pull_req_data - the data on a specific pull request from GitHub.
+    :return the base ref of the pull_req_data
+    """
+    return pull_req_data["base"]["ref"]
+
+
 def is_feature_icon(pull_req_data):
     """
     Check whether the pullData is a feature:icon PR.
