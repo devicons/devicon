@@ -1003,6 +1003,25 @@
         "aliases": []
     },
     {
+        "name": "bun",
+        "altnames": [],
+        "tags": [
+            "javascript",
+            "zig",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#FBF0DF",
+        "aliases": []
+    },
+    {
         "name": "c",
         "altnames": [],
         "tags": [
