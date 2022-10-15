@@ -5,7 +5,7 @@ from pathlib import Path
 
 # pycharm complains that build_assets is an unresolved ref
 # don't worry about it, the script still runs
-from build_assets import filehandler, arg_getters, util
+from build_assets import filehandler, arg_getters, util, api_handler
 
 
 def main():
@@ -16,6 +16,13 @@ def main():
     """
     args = arg_getters.get_check_icon_pr_args()
     try:
+        # check that the base branch of the PR is develop
+        pr_err_msg = ""
+        pr_data = api_handler.get_pull_req(args.token, args.pr_number)
+        pr_base_branch = api_handler.get_pr_base_branch(pr_data)
+        if pr_base_branch != "develop":
+            pr_err_msg = f"The PR's base branch is `{pr_base_branch}`, but should be `develop`, please change the PR so that it's based on, and merged into `develop`"
+        
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
@@ -40,6 +47,9 @@ def main():
             svg_err_msg = check_svgs(svgs)
 
         err_msg = []
+        if pr_err_msg != "":
+            err_msg.append(pr_err_msg)
+            
         if devicon_err_msg != "":
             err_msg.append(devicon_err_msg)
 

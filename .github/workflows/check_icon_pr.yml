@@ -12,10 +12,17 @@ jobs:
         with: 
           python-version: 3.8
 
+      - name: Install dependencies 
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ./.github/scripts/requirements.txt
+
       - name: Run the check_svg script
         env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_TITLE: ${{ github.event.pull_request.title }}
-        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
+          PR_NUMBER: ${{ github.event.number }}
+        run: python ./.github/scripts/check_icon_pr.py "$TOKEN" "$PR_TITLE" "$PR_NUMBER" ./icons ./devicon.json
 
       - name: Upload the err messages
         uses: actions/upload-artifact@v2
