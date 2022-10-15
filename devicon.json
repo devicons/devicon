@@ -3317,7 +3317,12 @@
 	    ]
 	  },
   	"color": "#fdeb4f", 
-  	"aliases": [] 
+  	"aliases": [
+  	   {
+  	   	"base": "plain",
+                "alias": "line"
+  	   }	
+  	] 
     },
     
     
