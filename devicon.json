@@ -8945,5 +8945,14 @@
         },
         "color": "#F04E98",
         "aliases": []
+    },
+    {
+      "name": "githubactions",
+      "versions": {
+        "svg": ["original", "plain"],
+        "font": ["plain"]
+      },
+      "color": "#2088FF",
+      "aliases": []
     }
 ]
