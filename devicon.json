@@ -8213,16 +8213,20 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#004eef",
+        "aliases": [
+            {
+                "base": "original"
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "webflow",
