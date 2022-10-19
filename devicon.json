@@ -8945,5 +8945,19 @@
         },
         "color": "#F04E98",
         "aliases": []
+    },
+    {
+        "name": "jiraalign",
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#F04E98",
+        "aliases": []
     }
 ]
