@@ -8093,6 +8093,24 @@
         "aliases": []
     },
     {
+        "name": "vitejs",
+        "tags": [
+            "react", 
+            "compiler", 
+            "esbuild"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffdd35",
+        "aliases": []
+    },
+    {
         "name": "vscode",
         "altnames": [
             "visualstudiocode"
