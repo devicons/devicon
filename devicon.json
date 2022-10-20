@@ -7513,6 +7513,7 @@
         "name": "tauri",
         "altnames": [],
         "tags": [
+            "nodejs",
             "rust",
             "desktop",
             "framework",
