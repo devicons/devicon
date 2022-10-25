@@ -8950,9 +8950,9 @@
         "name": "p5js",
         "versions": {
             "svg": ["original-wordmark"],
-            "font": ["plain"]
+            "font": ["original-wordmark"]
         },
-        "color": "#2088FF",
+        "color": "#ED225D",
         "aliases": [
             {
                 "base": "original-wordmark",
