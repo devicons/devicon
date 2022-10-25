@@ -8956,10 +8956,11 @@
                 "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
-        "color": "#F04E98",
+        "color": "#2684FF",
         "aliases": []
     }
 ]

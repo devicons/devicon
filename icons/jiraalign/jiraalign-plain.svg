@@ -23,29 +23,18 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="3.1507139"
-     inkscape:cx="105.69033"
-     inkscape:cy="49.829977"
+     inkscape:cx="54.590802"
+     inkscape:cy="50.147365"
      inkscape:window-width="1920"
      inkscape:window-height="947"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg59" />
-  <g
-     id="Icon"
-     style="fill:#000000;fill-opacity:1"
-     transform="matrix(6.4633538,0,0,6.4633538,0.62202477,-36.908857)">
-    <path
-       id="Vector"
-       d="m 0,5.78784 c 0,3.72909 3.0354,6.77026 6.75738,6.77026 h 6.25152 v 6.2997 h 6.7573 V 6.91019 c 0,-0.57928 -0.4697,-1.08614 -1.0479,-1.08614 z"
-       fill="url(#paint0_linear)"
-       style="fill:#000000;fill-opacity:1" />
-    <path
-       id="Vector_2"
-       d="m 19.7301,25.5918 c 0,-3.7291 -3.0354,-6.7341 -6.7574,-6.7341 H 6.75738 V 12.5581 H 0 v 11.9476 c 0,0.5793 0.469764,1.0861 1.04794,1.0861 z"
-       fill="url(#paint1_linear)"
-       style="fill:#000000;fill-opacity:1" />
-  </g>
+  <path
+     id="Vector"
+     style="fill:#000000;fill-opacity:1;stroke-width:6.46335"
+     d="M 0.62109375 0.5 C 0.62109375 24.602404 20.240426 44.257813 44.296875 44.257812 L 84.703125 44.257812 L 84.703125 84.976562 L 128.37891 84.976562 L 128.37891 7.7539062 C 128.37891 4.0098184 125.34258 0.734375 121.60547 0.734375 L 0.62109375 0.5 z M 44.296875 44.257812 L 0.62109375 44.257812 L 0.62109375 121.48047 C 0.62109375 125.22469 3.6575789 128.5 7.3945312 128.5 L 128.14453 128.5 C 128.14453 104.39753 108.52533 84.974609 84.46875 84.974609 L 44.296875 84.974609 L 44.296875 44.257812 z " />
   <defs
      id="defs57">
     <linearGradient
