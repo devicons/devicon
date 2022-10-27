@@ -8948,6 +8948,14 @@
     },
     {
         "name": "p5js",
+        "altnames": [
+            "p5.js"
+        ],
+        "tags": [
+           "javascript",
+           "js",
+           "library"
+        ],
         "versions": {
             "svg": ["original-wordmark"],
             "font": ["original-wordmark"]
