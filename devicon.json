@@ -8948,6 +8948,12 @@
     },
     {
         "name": "jiraalign",
+        "altnames": [],
+        "tags":[
+            "development",
+            "integration",
+            "software"
+        ],
         "versions": {
             "svg": [
                 "original",
