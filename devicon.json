@@ -3300,28 +3300,30 @@
     
 
     {
-       "name": "hadoop",
-       "altnames": ["Apache Hadoop"],
-       "tags": [
-      "framework",
-      "big data"
-      ],
-      "versions": {
-        "svg": [ 
-          "original",
-          "plain"
+        "name": "hadoop",
+        "altnames": [
+            "Apache Hadoop"
         ],
-        "font": [ 
-          "plain"
+        "tags": [
+            "framework", 
+            "big data"
+        ],
+        "versions": {
+            "svg": [
+                "original", 
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffff00",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "line"
+            }
         ]
-      },
-      "color": "#ffff00", 
-      "aliases": [
-        {
-          "base": "plain",
-          "alias": "line"
-        }	
-      ] 
     },
     
     
