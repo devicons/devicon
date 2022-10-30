@@ -37,7 +37,7 @@ def main():
             print("No SVGs to check, ending script.")
             svg_err_msg = "Error checking SVGs: no SVGs to check. Might be caused by above issues."
         else:
-            svg_err_msg = check_svgs(svgs)
+            svg_err_msg = check_svgs(svgs, filtered_icon)
 
         err_msg = []
         if devicon_err_msg != "":
@@ -115,7 +115,7 @@ def check_devicon_object(icon: dict):
     return "" 
 
 
-def check_svgs(svg_file_paths: List[Path]):
+def check_svgs(svg_file_paths: List[Path], devicon_object: dict):
     """
     Check the width, height, viewBox and style of each svgs passed in.
     The viewBox must be '0 0 128 128'.
@@ -147,10 +147,11 @@ def check_svgs(svg_file_paths: List[Path]):
                 err_msg.append("- 'viewBox' is not '0 0 128 128' -> Set it or scale the file using https://www.iloveimg.com/resize-image/resize-svg.")
 
             # goes through all elems and check for strokes
-            for child in tree.iter():
-                if child.get("stroke") != None:
-                    err_msg.append("- SVG contains `stroke` property. This will get ignored by Icomoon. Please convert them to fills.")
-                    break
+            if util.is_svg_in_font_attribute(svg_path, devicon_object):
+                for child in tree.iter():
+                    if child.get("stroke") != None:
+                        err_msg.append("- SVG contains `stroke` property. This will get ignored by Icomoon. Please convert them to fills.")
+                        break
 
             if len(err_msg) > 1:
                 err_msgs.append("\n".join(err_msg))
