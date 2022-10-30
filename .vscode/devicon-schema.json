@@ -28,7 +28,7 @@
         "type": "string",
         "title": "The official name of the technology.",
         "description": "Pattern: Only lower-case letters and digits.",
-        "pattern": "^[0-9a-z-]+$"
+        "pattern": "^(dot-net|[0-9a-z]+)$"
       },
       "altnames": {
         "type": "array",
