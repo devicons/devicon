@@ -78,6 +78,7 @@
       },
       "aliases": {
         "title": "Keeps track of the aliases for the font versions ONLY.",
+        "description": "Can be empty, or contain objects, each with an alias and a base version. More info here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60#aliases-and-aliasobj",
         "type": "array",
         "items": {
           "type": "object",
