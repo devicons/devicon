@@ -8948,6 +8948,13 @@
     },
     {
       "name": "githubactions",
+      "altnames": [
+          "GitHub Actions"
+      ],
+      "tags": [
+          "devops",
+          "integration"
+      ], 
       "versions": {
         "svg": ["original", "plain"],
         "font": ["plain"]
