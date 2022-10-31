@@ -45,7 +45,7 @@
         "$ref": "./tags-enum.json/#/definitions/Tags"
       },
       "versions": {
-        "title": "Keep tracks of the different versions that you have.",
+        "title": "Keeps track of the different versions that you have.",
         "type": "object",
         "additionalProperties": false,
         "properties": {
