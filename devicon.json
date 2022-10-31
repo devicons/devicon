@@ -1939,12 +1939,15 @@
             "svg": [
                 "original",
                 "plain",
+                "line",
                 "original-wordmark",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line-wordmark"
             ]
         },
         "color": "#a30000",
