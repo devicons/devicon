@@ -8094,8 +8094,13 @@
     },
     {
         "name": "vitejs",
+        "altnames": [
+            "vite.js",
+            "Vite"
+        ],
         "tags": [
-            "react", 
+            "javascript",
+            "build"
             "compiler", 
             "esbuild"
         ],
