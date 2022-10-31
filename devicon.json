@@ -8948,7 +8948,9 @@
     },
     {
         "name": "jiraalign",
-        "altnames": [],
+        "altnames": [
+            "Jira Align"
+        ],
         "tags":[
             "development",
             "integration",
