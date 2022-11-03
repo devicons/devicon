@@ -6664,6 +6664,27 @@
         "aliases": []
     },
     {
+        "name": "rollup",
+        "altnames": [
+            "rollupjs"
+        ],
+        "tags": [
+            "bundler",
+            "build"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ff3333",
+        "aliases": []
+    },
+    {
         "name": "ros",
         "altnames": [
             "robotoperatingsystem"
