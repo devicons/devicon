@@ -7946,6 +7946,37 @@
         "aliases": []
     },
     {
+        "name": "v8",
+	    "altnames": [],
+        "tags": [
+            "javascript-runtime",
+            "framework",
+            "javascript",
+            "web",
+            "cpp"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#00C4CC",
+	    "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+	    ]
+    },
+    {
         "name": "vagrant",
         "altnames": [],
         "tags": [
@@ -8164,37 +8195,7 @@
         "color": "#41B883",
         "aliases": []
     },
-   {
-        "name": "v8",
-	    "altnames": [],
-        "tags": [
-            "javascript-runtime",
-            "framework",
-            "javascript",
-            "web",
-            "cpp"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "original"
-            ]
-        },
-        "color": "#00C4CC",
-	    "aliases": [
-            {
-                "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            },
-	    ]
-    },
+   
     {
         "name": "vuestorefront",
         "altnames": [],
