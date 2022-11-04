@@ -8936,5 +8936,26 @@
         },
         "color": "#F04E98",
         "aliases": []
+    },
+    {
+        "name": "photon",
+        "altnames": [],
+        "tags": [
+            "game",
+            "game-engine"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#67caf1",
+        "aliases": [
+          "Photon Engine"
+        ]
     }
 ]
