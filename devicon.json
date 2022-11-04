@@ -7947,7 +7947,9 @@
     },
     {
         "name": "v8",
-	    "altnames": [],
+	    "altnames": [
+            "v8 engine"
+        ],
         "tags": [
             "javascript-runtime",
             "framework",
