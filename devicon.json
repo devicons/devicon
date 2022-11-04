@@ -8938,24 +8938,32 @@
         "aliases": []
     },
     {
-        "name": "photon",
-        "altnames": [],
+        "name": "photonengine",
+        "altnames": [
+          "photon"
+        ],
         "tags": [
             "game",
             "game-engine"
         ],
         "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
+            "svg": ["original"],
+            "font": ["original"]
         },
         "color": "#67caf1",
         "aliases": [
-          "Photon Engine"
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            }
         ]
     }
 ]
