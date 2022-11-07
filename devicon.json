@@ -6666,7 +6666,8 @@
     {
         "name": "rollup",
         "altnames": [
-            "rollupjs"
+            "rollupjs",
+            "rollup.js"
         ],
         "tags": [
             "bundler",
