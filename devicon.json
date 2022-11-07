@@ -8948,20 +8948,16 @@
         ],
         "versions": {
             "svg": ["original"],
-            "font": ["original"]
+            "font": ["plain"]
         },
-        "color": "#67caf1",
+        "color": "#004480",
         "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
             {
                 "base": "original",
                 "alias": "original-wordmark"
             },
             {
-                "base": "original",
+                "base": "plain",
                 "alias": "plain-wordmark"
             }
         ]
