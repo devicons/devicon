@@ -8657,6 +8657,31 @@
         "aliases": []
     },
     {
+        "name": "photonengine",
+        "altnames": [
+          "photon"
+        ],
+        "tags": [
+            "game",
+            "game-engine"
+        ],
+        "versions": {
+            "svg": ["original"],
+            "font": ["plain"]
+        },
+        "color": "#004480",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "postman",
         "altnames": [],
         "tags": [
@@ -8936,30 +8961,5 @@
         },
         "color": "#F04E98",
         "aliases": []
-    },
-    {
-        "name": "photonengine",
-        "altnames": [
-          "photon"
-        ],
-        "tags": [
-            "game",
-            "game-engine"
-        ],
-        "versions": {
-            "svg": ["original"],
-            "font": ["plain"]
-        },
-        "color": "#004480",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            }
-        ]
     }
 ]
