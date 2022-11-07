@@ -6671,7 +6671,8 @@
         ],
         "tags": [
             "bundler",
-            "build"
+            "build",
+            "javascript",
         ],
         "versions": {
             "svg": [
