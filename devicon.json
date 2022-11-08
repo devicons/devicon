@@ -6677,12 +6677,17 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
-                "line"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
-                "line"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#ff3333",
