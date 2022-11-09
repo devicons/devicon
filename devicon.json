@@ -8958,5 +8958,30 @@
         },
         "color": "#F04E98",
         "aliases": []
+    },
+    {
+        "name": "jiraalign",
+        "altnames": [
+            "Jira Align"
+        ],
+        "tags":[
+            "development",
+            "integration",
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2684FF",
+        "aliases": []
     }
 ]
