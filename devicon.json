@@ -8957,8 +8957,12 @@
            "library"
         ],
         "versions": {
-            "svg": ["original"],
-            "font": ["original"]
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
         },
         "color": "#ED225D",
         "aliases": [
