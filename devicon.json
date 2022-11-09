@@ -8666,8 +8666,12 @@
             "game-engine"
         ],
         "versions": {
-            "svg": ["original"],
-            "font": ["plain"]
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
         },
         "color": "#004480",
         "aliases": [
