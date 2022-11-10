@@ -5348,6 +5348,28 @@
         "aliases": []
     },
     {
+        "name": "okta",
+        "altnames": [
+            "okta developer"
+        ],
+        "tags": [
+            "auth",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0f82c2",
+        "aliases": []
+    },
+    {
         "name": "openal",
         "altnames": [],
         "tags": [
@@ -8968,6 +8990,31 @@
             ]
         },
         "color": "#F04E98",
+        "aliases": []
+    },
+    {
+        "name": "jiraalign",
+        "altnames": [
+            "Jira Align"
+        ],
+        "tags":[
+            "development",
+            "integration",
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#2684FF",
         "aliases": []
     }
 ]
