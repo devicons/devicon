@@ -3270,20 +3270,21 @@
         "aliases": []
     },
     {
-        "name": "gulp",
+        "name": "gtk",
         "altnames": [
-            "gulpjs"
+            "gtk+",
+            "gimp toolkit"
         ],
         "tags": [
-            "task-runner",
-            "nodejs"
+            "gimp toolkit",
+            "library"
         ],
         "versions": {
             "svg": [
-                "plain"
+                "original"
             ],
             "font": [
-                "plain"
+                "original"
             ]
         },
         "color": "#eb4a4b",
