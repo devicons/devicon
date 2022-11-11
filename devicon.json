@@ -5595,6 +5595,40 @@
         ]
     },
     {
+        "name": "p5js",
+        "altnames": [
+            "p5.js"
+        ],
+        "tags": [
+           "javascript",
+           "js",
+           "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#ED225D",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "packer",
         "altnames": [],
         "tags": [
