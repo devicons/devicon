@@ -8201,7 +8201,9 @@
     },
     {
         "name": "wasm",
-        "altnames": ["WebAssembly"],
+        "altnames": [
+            "WebAssembly"
+        ],
         "tags": [
             "binary",
             "programming",
