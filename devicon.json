@@ -9111,5 +9111,37 @@
         },
         "color": "#2684FF",
         "aliases": []
+    },
+    {
+        "name": "pfsense",
+        "altnames": [
+            "pfsense"
+        ],
+        "tags": [
+           "network"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#FFFFFF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            }
+        ]
     }
 ]
