@@ -2932,7 +2932,16 @@
             ]
         },
         "color": "#346ddb",
-        "altnames": []
+        "altnames": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "github",
