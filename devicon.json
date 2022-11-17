@@ -7335,6 +7335,29 @@
         ]
     },
     {
+        "name": "stackoverflow",
+        "altnames": [],
+        "tags": [
+            "website",
+            "development",
+            "community"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F58025",
+        "aliases": []
+    },
+    {
         "name": "stata",
         "altnames": [],
         "tags": [
