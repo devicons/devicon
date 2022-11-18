@@ -9115,7 +9115,7 @@
     {
         "name": "pfsense",
         "altnames": [
-            "pfsense"
+            "pfSense"
         ],
         "tags": [
            "network"
@@ -9126,7 +9126,8 @@
                 "original-wordmark"
             ],
             "font": [
-                "original"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#000000",
