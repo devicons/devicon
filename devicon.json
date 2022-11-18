@@ -9122,24 +9122,21 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark"
             ],
             "font": [
                 "original"
             ]
         },
-        "color": "#FFFFFF",
+        "color": "#000000",
         "aliases": [
             {
                 "base": "original",
                 "alias": "plain"
             },
             {
-                "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "original",
+                "base": "original-wordmark",
                 "alias": "plain-wordmark"
             }
         ]
