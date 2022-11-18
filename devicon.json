@@ -1595,6 +1595,38 @@
         "aliases": []
     },
     {
+        "name": "core-js",
+        "altnames": [
+            "corejs",
+            "core.js"
+        ],
+        "tags": [
+            "javascript",
+            "polyfill"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "cosmosdb",
         "altnames": [
             "azurecosmosdb"
