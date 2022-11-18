@@ -5776,6 +5776,25 @@
         },
         "color": "#294172", 
         "aliases": [] 
+    },
+    {
+        "name": "insomnia", 
+        "tags": [
+            "Rest API",
+            "Soap API",
+            "JSON-XML"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ] 
+        },
+        "color": "#551bc5", 
+        "aliases": [] 
     }
 
 ]
