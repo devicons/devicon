@@ -7,7 +7,7 @@ jobs:
     if: | # only checks icon PR and when PR's are labeled with `feature:icon`
       startsWith(github.event.pull_request.title, 'new icon') ||
       startsWith(github.event.pull_request.title, 'update icon') || 
-      github.event.label.name == 'feature:icon' 
+      github.event.label.name == 'bot:check' 
     steps:
       - uses: actions/checkout@v2
       
