@@ -2915,7 +2915,9 @@
         "aliases": [],
         "tags": [
             "documentation",
-            "pages"
+            "pages",
+            "git",
+            "markup"
         ],
         "versions": {
             "svg": [
