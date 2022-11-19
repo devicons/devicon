@@ -2945,6 +2945,41 @@
         "aliases": []
     },
     {
+        "name": "gitbook",
+        "aliases": [],
+        "tags": [
+            "documentation",
+            "pages",
+            "git",
+            "markup"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#346ddb",
+        "altnames": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "github",
         "altnames": [],
         "tags": [
