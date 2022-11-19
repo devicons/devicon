@@ -1595,9 +1595,9 @@
         "aliases": []
     },
     {
-        "name": "core-js",
+        "name": "corejs",
         "altnames": [
-            "corejs",
+            "core-js",
             "core.js"
         ],
         "tags": [
