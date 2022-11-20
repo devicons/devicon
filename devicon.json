@@ -943,7 +943,10 @@
         "altnames": [],
         "tags": [
             "css",
-            "framework"
+            "framework",
+            "html",
+            "javascript",
+            "library"
         ],
         "versions": {
             "svg": [
@@ -957,7 +960,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#59407f",
+        "color": "#712cf9",
         "aliases": []
     },
     {
