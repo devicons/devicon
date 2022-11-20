@@ -3250,9 +3250,15 @@
     },
     {
         "name": "grails",
-        "altnames": [],
+        "altnames": [
+            "Grails® Framework"
+        ],
         "tags": [
-            "framework"
+            "framework",
+            "groovy",
+            "web-application",
+            "jvm",
+            "build"
         ],
         "versions": {
             "svg": [
@@ -3263,7 +3269,7 @@
                 "plain"
             ]
         },
-        "color": "#feb672",
+        "color": "#feb571",
         "aliases": []
     },
     {
