@@ -2354,20 +2354,26 @@
     {
         "name": "ember",
         "altnames": [
-            "emberjs"
+            "ember.js"
         ],
         "tags": [
-            "framework"
+            "framework",
+            "javascript",
+            "web-application",
+            "build"
         ],
         "versions": {
             "svg": [
-                "original-wordmark"
+                "original",
+                "original-wordmark",
+                "plain"
             ],
             "font": [
-                "original-wordmark"
+                "original-wordmark",
+                "plain"
             ]
         },
-        "color": "#dd3f24",
+        "color": "#E04E39",
         "aliases": [
             {
                 "base": "original-wordmark",
