@@ -5707,6 +5707,26 @@
         "aliases": []
     },
     {
+        "name": "pfsense",
+        "altnames": ["pfSense"],
+        "tags": ["network"],
+        "versions": {
+            "svg": ["original", "original-wordmark"],
+            "font": ["original", "original-wordmark"]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+            "base": "original",
+            "alias": "plain"
+            },
+            {
+            "base": "original-wordmark",
+            "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "phalcon",
         "altnames": [],
         "tags": [
@@ -9111,35 +9131,5 @@
         },
         "color": "#2684FF",
         "aliases": []
-    },
-    {
-        "name": "pfsense",
-        "altnames": [
-            "pfSense"
-        ],
-        "tags": [
-           "network"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#000000",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
     }
 ]
