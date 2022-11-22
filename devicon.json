@@ -5779,6 +5779,40 @@
         "aliases": []
     },
     {
+        "name": "pfsense",
+        "altnames": [
+            "pfSense"
+        ],
+        "tags": [
+            "cloud",
+            "network",
+            "open-source",
+            "security",
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "phalcon",
         "altnames": [],
         "tags": [
