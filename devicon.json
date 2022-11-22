@@ -2354,7 +2354,8 @@
     {
         "name": "ember",
         "altnames": [
-            "ember.js"
+            "ember.js",
+            "emberjs"
         ],
         "tags": [
             "framework",
