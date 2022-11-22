@@ -5831,24 +5831,35 @@
     },
     {
         "name": "phoenix",
-        "altnames": [],
+        "altnames": [
+            "Phoenix Framework"
+        ],
         "tags": [
-            "framework"
+            "framework",
+            "build",
+            "web",
+            "web-development",
+            "development",
+            "elixir"
         ],
         "versions": {
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
-        "color": "#F15524",
-        "aliases": []
+        "color": "#FD4F00",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "photoshop",
