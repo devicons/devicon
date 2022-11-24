@@ -12,22 +12,6 @@ module.exports = {
       }
     },
     {
-      name: 'convertStyleToAttrs',
-      params: {
-        overrides: {
-          convertStyleToAttrs: true,
-        }
-      }
-    },
-    {
-      name: 'removeRasterImages',
-      params: {
-        overrides: {
-          removeRasterImages: true,
-        }
-      }
-    },
-    {
       name: 'removeScriptElement',
       params: {
         overrides: {
@@ -39,15 +23,9 @@ module.exports = {
       name: "removeAttrs",
       params: {
         attrs: [
-          'path:fill:none',
-          'xml.space',
-          'enable-background',
-          '^data.+',
-          'stroke.*',
-          'fill-rule',
-          'clip-rule'
+          'path:fill:none'
         ]
       }
     }
-  ],
+  ]
 };
