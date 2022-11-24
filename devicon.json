@@ -2069,20 +2069,16 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "original-wordmark",
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#0c0c14",
-        "aliases": [
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "django",
