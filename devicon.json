@@ -5217,6 +5217,28 @@
         "aliases": []
     },
     {
+        "name": "nodemon",
+        "altnames": [
+            "nodemonjs"
+        ],
+        "tags": [
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#76d04b",
+        "aliases": []
+    },
+    {
         "name": "nodewebkit",
         "altnames": [
             "nwjs"
