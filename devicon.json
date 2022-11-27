@@ -9244,13 +9244,11 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark"
             ],
-            "font": [
-                "plain"
-            ] 
+            "font": [] 
         },
-        "color": "#551bc5", 
+        "color": "#5849be", 
         "aliases": []
     }
 ]
