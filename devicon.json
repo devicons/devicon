@@ -5779,6 +5779,10 @@
     },
     {
         "name": "insomnia", 
+        "altnames": [
+            "Insomnia Rest",
+            "Insomnia Rest Client"
+        ],
         "tags": [
             "Rest API",
             "Soap API",
