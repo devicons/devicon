@@ -7361,6 +7361,36 @@
         "color": "#383838",
         "aliases": []
     },
+	{
+		"name": "solidjs",
+		"altnames": [],
+		"tags": [
+			"javascript",
+			"framework",
+			"frontend"
+		],
+		"versions": {
+			"svg": [
+				"original",
+				"original-wordmark"
+			],
+			"font": [
+				"plain",
+				"plain-wordmark"
+			]
+		},
+        "color": "#518ac8",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+	},
     {
         "name": "sourcetree",
         "altnames": [],
