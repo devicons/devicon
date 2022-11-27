@@ -9226,7 +9226,6 @@
                 "plain-wordmark"
             ]
         },
-
         "color": "#294172", 
         "aliases": [] 
     },
@@ -9237,6 +9236,7 @@
             "Insomnia Rest Client"
         ],
         "tags": [
+        "open-source",
             "Rest API",
             "Soap API",
             "JSON-XML"
