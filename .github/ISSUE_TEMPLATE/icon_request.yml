@@ -57,4 +57,4 @@ body:
       label: Additional information
       description: |
         Is there anything else we should know about this icon?
-        Recommended tags, altnames, color to be added to [devicon.json](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60) can also be added here
+        Recommended tags, altnames, and color to be added to [`devicon.json`](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60) can also be added here
