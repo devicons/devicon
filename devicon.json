@@ -795,20 +795,27 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
-                "plain-wordmark",
                 "line",
                 "line-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark",
+                "original",
+                "original-wordmark",
                 "line",
                 "line-wordmark"
             ]
         },
         "color": "#46C0BC",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "bamboo",
