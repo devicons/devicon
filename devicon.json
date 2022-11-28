@@ -5222,7 +5222,9 @@
             "nodemonjs"
         ],
         "tags": [
-            "nodejs"
+            "nodejs",
+            "tool",
+            "javascript"
         ],
         "versions": {
             "svg": [
