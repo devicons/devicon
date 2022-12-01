@@ -8428,6 +8428,35 @@
         "aliases": []
     },
     {
+        "name": "vite",
+        "tags": [
+            "web3", 
+            "blockchain", 
+            "DAG"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#006BFF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "vscode",
         "altnames": [
             "visualstudiocode"
