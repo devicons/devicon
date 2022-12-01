@@ -2935,6 +2935,27 @@
         ]
     },
     {
+        "name": "githubactions",
+        "altnames": [
+            "GitHub Actions"
+        ],
+        "tags": [
+            "devops",
+            "integration"
+        ], 
+        "versions": {
+          "svg": [
+              "original",
+              "plain"
+          ],
+          "font": [
+              "plain"
+          ]
+        },
+        "color": "#2088FF",
+        "aliases": []
+    },
+    {
         "name": "gitlab",
         "altnames": [],
         "tags": [
@@ -8945,26 +8966,5 @@
         },
         "color": "#F04E98",
         "aliases": []
-    },
-    {
-      "name": "githubactions",
-      "altnames": [
-          "GitHub Actions"
-      ],
-      "tags": [
-          "devops",
-          "integration"
-      ], 
-      "versions": {
-        "svg": [
-            "original",
-            "plain"
-        ],
-        "font": [
-            "plain"
-        ]
-      },
-      "color": "#2088FF",
-      "aliases": []
     }
 ]
