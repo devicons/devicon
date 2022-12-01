@@ -8956,8 +8956,13 @@
           "integration"
       ], 
       "versions": {
-        "svg": ["original", "plain"],
-        "font": ["plain"]
+        "svg": [
+            "original",
+            "plain"
+        ],
+        "font": [
+            "plain"
+        ]
       },
       "color": "#2088FF",
       "aliases": []
