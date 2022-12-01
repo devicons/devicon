@@ -7758,21 +7758,32 @@
     },
     {
        "name": "swagger",
-       "altnames": ["Swagger"],
-       "tags": ["development"],
+       "altnames": [],
+       "tags": [
+           "development",
+           "api",
+           "documentation",
+           "tool"
+       ],
        "versions": {
-       "svg": ["original", "plain"],
-       "font": ["original", "plain"]
+           "svg": [
+               "original",
+               "plain"
+           ],
+           "font": [
+               "original",
+               "plain"
+           ]
        },
        "color": "#173647",
        "aliases": [
            {
-           "base": "original",
-           "alias": "original-wordmark"
+               "base": "original",
+               "alias": "original-wordmark"
            },
            {
-           "base": "plain",
-           "alias": "plain-wordmark"
+               "base": "plain",
+               "alias": "plain-wordmark"
            }
        ]
     },
