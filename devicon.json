@@ -7757,6 +7757,26 @@
         "aliases": []
     },
     {
+       "name": "swagger",
+       "altnames": ["Swagger"],
+       "tags": ["development"],
+       "versions": {
+       "svg": ["original", "plain"],
+       "font": ["original", "plain"]
+       },
+       "color": "#173647",
+       "aliases": [
+           {
+           "base": "original",
+           "alias": "original-wordmark"
+           },
+           {
+           "base": "plain",
+           "alias": "plain-wordmark"
+           }
+       ]
+    },
+    {
         "name": "symfony",
         "altnames": [],
         "tags": [
