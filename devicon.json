@@ -335,7 +335,9 @@
     },
     {
         "name": "apache",
-        "altnames": [],
+        "altnames": [
+            "The Apache Software Foundation"
+        ],
         "tags": [
             "php"
         ],
@@ -355,7 +357,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#303284",
+        "color": "#cb2533",
         "aliases": []
     },
     {
