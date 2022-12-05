@@ -7764,7 +7764,9 @@
             "Swagger"
         ],
         "tags": [
-            "development"
+            "development",
+            "software",
+            "tool"
         ],
         "versions": {
             "svg": [
