@@ -7761,20 +7761,11 @@
        "altnames": ["Swagger"],
        "tags": ["development"],
        "versions": {
-       "svg": ["original", "plain"],
+       "svg": ["original", "plain", "original-wordmark", "plain-wordmark"],
        "font": ["original", "plain"]
        },
-       "color": "#173647",
-       "aliases": [
-           {
-           "base": "original",
-           "alias": "original-wordmark"
-           },
-           {
-           "base": "plain",
-           "alias": "plain-wordmark"
-           }
-       ]
+       "color": "#85ea2d",
+       "aliases": []
     },
     {
         "name": "symfony",
