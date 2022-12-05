@@ -7769,13 +7769,13 @@
         "versions": {
             "svg": [
                 "original",
-                "plain",
                 "original-wordmark",
+                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "original",
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#85ea2d",
