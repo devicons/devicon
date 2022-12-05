@@ -209,7 +209,7 @@
             ],
             "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
         },
-        "color": "#303284",
+        "color": "#cb2533",
         "aliases": []
     },
     {
@@ -1707,6 +1707,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "githubactions",
+        "altnames": [
+            "GitHub Actions"
+        ],
+        "tags": [
+            "devops",
+            "integration"
+        ], 
+        "versions": {
+          "svg": [
+              "original",
+              "plain"
+          ],
+          "font": [
+              "plain"
+          ]
+        },
+        "color": "#2088FF",
+        "aliases": []
     },
     {
         "name": "gitlab",
@@ -4450,6 +4471,31 @@
         "aliases": []
     },
     {
+        "name": "tauri",
+        "altnames": [],
+        "tags": [
+            "nodejs",
+            "rust",
+            "desktop",
+            "framework",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FFC131",
+        "aliases": []
+    },
+    {
         "name": "tensorflow",
         "altnames": [],
         "tags": ["library", "machine-learning", "deep-learning"],
@@ -4762,6 +4808,59 @@
         "aliases": []
     },
     {
+        "name": "vite",
+        "tags": [
+            "web3", 
+            "blockchain", 
+            "DAG"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#006BFF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "vitejs",
+        "altnames": [
+            "vite.js",
+            "Vite"
+        ],
+        "tags": [
+            "javascript",
+            "build",
+            "compiler", 
+            "esbuild"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffdd35",
+        "aliases": []
+    },
+    {
         "name": "vscode",
         "altnames": ["visualstudiocode"],
         "tags": ["editor", "ide"],
@@ -5044,7 +5143,7 @@
             "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
             "font": ["plain", "plain-wordmark"]
         },
-        "color": "#0073bb",
+        "color": "#40b3d8",
         "aliases": []
     },
     {
