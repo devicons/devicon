@@ -3303,16 +3303,24 @@
             "Apache Hadoop"
         ],
         "tags": [
-            "framework", 
-            "big data"
+            "framework",
+            "big data",
+            "open-source",
+            "software",
+            "library",
+            "framework",
+            "java"
         ],
         "versions": {
             "svg": [
-                "original", 
-                "plain"
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#ffff00",
@@ -3320,6 +3328,10 @@
             {
                 "base": "plain",
                 "alias": "line"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "line-wordmark"
             }
         ]
     },
