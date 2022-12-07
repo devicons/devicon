@@ -3734,9 +3734,11 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "plain"
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
         "color": "#5849be",
         "aliases": []
