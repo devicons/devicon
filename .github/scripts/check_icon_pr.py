@@ -45,8 +45,8 @@ def main():
             svg_err_msg = check_svgs(svgs)
 
         err_msg = []
-        if devicon_err_msg != "":
-            err_msg += devicon_err_msg
+        if devicon_err_msg != []:
+            err_ms.extend(devicon_err_msg)
 
         if filename_err_msg != "":
             err_msg.append(filename_err_msg)
