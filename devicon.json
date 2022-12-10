@@ -3054,6 +3054,27 @@
         ]
     },
     {
+        "name": "githubactions",
+        "altnames": [
+            "GitHub Actions"
+        ],
+        "tags": [
+            "devops",
+            "integration"
+        ],
+        "versions": {
+          "svg": [
+              "original",
+              "plain"
+          ],
+          "font": [
+              "plain"
+          ]
+        },
+        "color": "#2088FF",
+        "aliases": []
+    },
+    {
         "name": "githubcodespaces",
         "altnames": [
             "GitHub Codespaces"
@@ -3075,27 +3096,6 @@
             ]
         },
         "color": "#24292e",
-        "aliases": []
-    },
-    {
-        "name": "githubactions",
-        "altnames": [
-            "GitHub Actions"
-        ],
-        "tags": [
-            "devops",
-            "integration"
-        ],
-        "versions": {
-          "svg": [
-              "original",
-              "plain"
-          ],
-          "font": [
-              "plain"
-          ]
-        },
-        "color": "#2088FF",
         "aliases": []
     },
     {
