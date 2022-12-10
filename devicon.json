@@ -3467,6 +3467,31 @@
         ]
     },
     {
+        "name": "hardhat",
+        "altnames": [],
+        "tags": [
+            "ethereum",
+            "development",
+            "solidity",
+            "javascript",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fff100",
+        "aliases": []
+    },
+    {
         "name": "harvester",
         "altnames": [
             "harvesterhci"
