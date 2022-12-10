@@ -6779,6 +6779,35 @@
         ]
     },
     {
+        "name": "reactbootstrap",
+        "altnames": [
+            "React-Bootstrap",
+            "react bootstrap"
+        ],
+        "tags": [
+            "framework",
+            "library",
+            "frontend",
+            "reactjs",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#41e0fd",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "realm",
         "altnames": [],
         "tags": [
