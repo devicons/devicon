@@ -3507,6 +3507,44 @@
         "aliases": []
     },
     {
+        "name": "hadoop",
+        "altnames": [
+            "Apache Hadoop"
+        ],
+        "tags": [
+            "framework",
+            "big data",
+            "open-source",
+            "software",
+            "library",
+            "framework",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffff00",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "line"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "haxe",
         "altnames": [],
         "tags": [
