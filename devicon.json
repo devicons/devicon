@@ -9631,6 +9631,31 @@
         "aliases": []
     },
     {
+        "name": "cassandra",
+        "altnames": [
+            "Apache Cassandra"
+        ],
+        "tags": [
+            "nosql",
+            "database",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1185b0",
+        "aliases": []
+    },
+    {
         "name": "kibana",
         "altnames": [],
         "tags": [
