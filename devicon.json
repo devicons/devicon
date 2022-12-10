@@ -4256,6 +4256,37 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#5f7389",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "julia",
+        "altnames": [
+            "julialang"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
                 "original-wordmark",
                 "plain",
                 "plain-wordmark"
@@ -7982,6 +8013,27 @@
             "development",
             "software",
             "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#85ea2d",
+        "aliases": []
+    },
+    {
+        "name": "swift",
+        "altnames": [],
+        "tags": [
+            "language"
         ],
         "versions": {
             "svg": [
