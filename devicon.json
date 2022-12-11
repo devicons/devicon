@@ -1012,10 +1012,13 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain",
+                "line"
             ],
             "font": [
-                "original"
+                "plain",
+                "line"
             ]
         },
         "color": "#FBF0DF",
