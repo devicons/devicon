@@ -28,10 +28,8 @@ jobs:
       - name: Run the check_svg script
         if: ${{ !env.wrong_branch }}
         env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_TITLE: ${{ github.event.pull_request.title }}
-          PR_NUMBER: ${{ github.event.number }}
-        run: python ./.github/scripts/check_icon_pr.py "$TOKEN" "$PR_TITLE" "$PR_NUMBER" ./icons ./devicon.json
+        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
 
       - name: Upload the err messages
         uses: actions/upload-artifact@v2

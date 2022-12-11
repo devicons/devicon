@@ -4,7 +4,7 @@ from build_assets.PathResolverAction import PathResolverAction
 
 def get_selenium_runner_args(peek_mode=False):
     """
-    Get the commandline arguments for icomoon_peek.py and 
+    Get the commandline arguments for the icomoon_peek.py and 
     icomoon_build.py.
     """
     parser = ArgumentParser(description="Upload svgs to Icomoon to create icon files.")
@@ -45,18 +45,12 @@ def get_selenium_runner_args(peek_mode=False):
 
 def get_check_icon_pr_args():
     """
-    Get the commandline arguments for check_icon_pr.py.
+    Get the commandline arguments for the check_icon_pr.py.
     """
     parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run whenever a PR is opened")
 
-    parser.add_argument("token",
-                        help="The GitHub token to access the GitHub REST API.")
-
     parser.add_argument("pr_title",
                         help="The title of the PR that we are peeking at")
-
-    parser.add_argument("pr_number",
-                        help="The number of the PR that we are peeking at")
 
     parser.add_argument("icons_folder_path",
                         help="The path to the icons folder",
