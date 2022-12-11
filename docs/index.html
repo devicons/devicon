@@ -203,13 +203,13 @@
 
       <div class="search">
         <input type="text" placeholder="Search for icons" ng-model="search">
-        <input type="text" class="result" value="{{ filtered.length }}" disabled>
+        <input type="text" class="result" value="{{ filtered.length }}" title="Number of icons in the current search" disabled>
       </div>
 
       <ul class="computed-data">
-        <li>Total logos = {{ icons.length }}</li>
-        <li>Total icons = {{ totalFonts }}</li>
-        <li>Average icons per logo = {{ avgFonts }}</li>
+        <li title="The number of icons. For example: devicon">Total icons = {{ icons.length }}</li>
+        <li title="The number of icon versions. For example: devicon-plain">Total icon version = {{ totalFonts }}</li>
+        <li title="The number of icon versions per icon. Calculated by dividing icon version by icons">Average icon versions per icon = {{ avgFonts }}</li>
       </ul>
 
       <ul class="cbp-ig-grid">
