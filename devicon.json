@@ -3123,7 +3123,7 @@
     },
     {
         "name": "gitbook",
-        "aliases": [],
+        "altnames": [],
         "tags": [
             "documentation",
             "pages",
@@ -3145,7 +3145,7 @@
             ]
         },
         "color": "#346ddb",
-        "altnames": [
+        "aliases": [
             {
                 "base": "original",
                 "alias": "plain"
@@ -9191,6 +9191,7 @@
     },
     {
         "name": "vite",
+        "altnames": [],
         "tags": [
             "web3",
             "blockchain",
