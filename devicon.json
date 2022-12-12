@@ -6509,7 +6509,8 @@
     {
         "name": "php",
         "altnames": [
-            "phphypertextpreprocessor"
+            "PHP Hypertext Preprocessor",
+            "Personal Home Page"
         ],
         "tags": [
             "programming",
@@ -6524,7 +6525,7 @@
                 "plain"
             ]
         },
-        "color": "#6181b6",
+        "color": "#777bb3",
         "aliases": []
     },
     {
