@@ -8484,16 +8484,21 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "plain",
+                "original",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
         "color": "#38bdf8",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "tauri",
