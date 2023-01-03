@@ -100,6 +100,37 @@
         "aliases": []
     },
     {
+        "name": "algolia",
+        "altnames": [],
+        "tags": [
+            "algorithms",
+            "api",
+            "documentation",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#003dff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "alpinejs",
         "altnames": [
             "Alpine"
