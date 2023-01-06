@@ -4606,6 +4606,27 @@
         "aliases": []
     },
     {
+        "name": "keras",
+        "altnames": [],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain", 
+                "line"
+            ]
+        },
+        "tags": ["machine-learning", "python"],
+        "color": "#d00000",
+        "aliases": []
+    },    
+    {
         "name": "kibana",
         "altnames": [],
         "tags": [
