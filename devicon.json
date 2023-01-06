@@ -1281,6 +1281,22 @@
         "aliases": []
     },
     {
+        "name": "dynamodb",
+        "tags": [
+            "cms"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2d72b8",
+        "aliases": []
+    },
+    {
         "name": "digitalocean",
         "tags": [
             "cloud",
