@@ -7815,6 +7815,34 @@
         "aliases": []
     },
     {
+        "name": "scikitlearn",
+        "altnames": [
+            "scikit-learn",
+            "scikit",
+            "sklearn"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain", 
+                "line"
+            ]
+        },
+        "tags": [
+            "machine-learning",
+            "python"
+        ],
+        "color": "#f89939",
+        "aliases": []
+    },
+    {
         "name": "sdl",
         "altnames": [
             "simpledirectmedialayer"
