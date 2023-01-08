@@ -7631,7 +7631,7 @@
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark"                
             ]
         },
         "color": "#d91404",
@@ -7823,16 +7823,13 @@
         ],
         "versions": {
             "svg": [
-                "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark",
-                "line",
                 "line-wordmark"
             ],
             "font": [
-                "plain", 
-                "line"
+                "plain-wordmark",
+                "line-wordmark"
             ]
         },
         "tags": [
