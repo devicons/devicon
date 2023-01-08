@@ -4608,6 +4608,10 @@
     {
         "name": "keras",
         "altnames": [],
+        "tags": [
+            "machine-learning",
+            "python"
+        ],
         "versions": {
             "svg": [
                 "original",
@@ -4618,11 +4622,12 @@
                 "line-wordmark"
             ],
             "font": [
-                "plain", 
-                "line"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "tags": ["machine-learning", "python"],
         "color": "#d00000",
         "aliases": []
     },    
