@@ -9101,6 +9101,7 @@
         "name": "vault",
         "altnames": [],
         "tags": [
+            "tool",
             "security",
             "infrastructure"
         ],
@@ -9108,16 +9109,20 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
         "color": "#ffd814",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "vercel",
