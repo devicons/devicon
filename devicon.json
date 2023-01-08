@@ -7821,6 +7821,10 @@
             "scikit",
             "sklearn"
         ],
+        "tags": [
+            "machine-learning",
+            "python"
+        ],
         "versions": {
             "svg": [
                 "original-wordmark",
@@ -7832,10 +7836,6 @@
                 "line-wordmark"
             ]
         },
-        "tags": [
-            "machine-learning",
-            "python"
-        ],
         "color": "#f89939",
         "aliases": []
     },
