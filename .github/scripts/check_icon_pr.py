@@ -65,20 +65,20 @@ def check_devicon_object(icon: dict):
 
     try:
         if type(icon["name"]) != str:
-            err_msgs.append("- 'name' must be a string")
+            err_msgs.append("- Property \"name\" value must be type string.")
     except KeyError:
-        err_msgs.append("- missing key: 'name'.")
+        err_msgs.append("- Missing property key: \"name\".")
 
     try:
         for altname in icon["altnames"]:
             if type(altname) != str:
                 raise TypeError()
             if altname == icon["name"]:
-                err_msgs.append(f"- 'altnames' should not contain the same name as 'name'. please remove {altname} from 'altnames'")
+                err_msgs.append(f"- \"altnames\" should not contain the same name as \"name\" property. Please remove \"{altname}\" from \"altnames\"")
     except TypeError:
-        err_msgs.append("- 'altnames' must be an array of strings, not: " + str(icon["altnames"]))
+        err_msgs.append("- \"altnames\" must be an array of strings, not: " + str(icon["altnames"]))
     except KeyError:
-        err_msgs.append("- missing key: 'altnames'.")
+        err_msgs.append("- Missing property key: \"altnames\".")
 
     try:
         for tag in icon["tags"]:
@@ -123,7 +123,7 @@ def check_devicon_object(icon: dict):
 
     try:
         if type(icon["aliases"]) != list:
-            err_msgs.append("- 'aliases' must be an array of objects.")
+            err_msgs.append("- \"aliases\" must be an array of objects.")
     except KeyError:
         err_msgs.append("- missing key: 'aliases'.")
 
