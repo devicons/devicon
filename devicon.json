@@ -8663,7 +8663,12 @@
             ]
         },
         "color": "#bd222b",
-        "aliases": []
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          }
+        ]
     },
     {
         "name": "tomcat",
