@@ -7631,7 +7631,7 @@
             ],
             "font": [
                 "plain",
-                "plain-wordmark"                
+                "plain-wordmark"
             ]
         },
         "color": "#d91404",
@@ -7834,7 +7834,8 @@
         },
         "tags": [
             "machine-learning",
-            "python"
+            "python",
+            "library"
         ],
         "color": "#f89939",
         "aliases": []
