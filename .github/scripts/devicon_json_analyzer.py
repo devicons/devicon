@@ -136,7 +136,9 @@ def remove_multicolor_font_versions(icons_dir: str, icon: dict, issues: dict = {
             colors = re.findall(r"fill=\"[#]([A-Fa-f0-9]{6})\"", svg_content)
             colors = [color.lower() for color in colors]
             unique_colors = set(colors)
-            if len(unique_colors) > 1 or "gradient" in svg_content:
+            if (
+                len(unique_colors) > 1 or "gradient" in svg_content
+            ):  # FIXME: regular expression for gradient
                 update_issues(
                     icon["name"], {"multicolor_font_version": [version]}, issues
                 )
@@ -157,6 +159,7 @@ def sort_json(icons: list):
         icon["versions"]["svg"] = sorted(icon["versions"]["svg"])
         icon["versions"]["font"] = sorted(icon["versions"]["font"])
         icon["aliases"] = sorted(icon["aliases"], key=lambda k: k["base"])
+        icon["tags"] = sorted(icon["tags"])
 
 
 def generate_markdown_report(issues: dict):
