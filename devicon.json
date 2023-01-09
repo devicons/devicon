@@ -9099,7 +9099,9 @@
     },
     {
         "name": "vault",
-        "altnames": ["HashiCorp Vault"],
+        "altnames": [
+            "HashiCorp Vault"
+        ],
         "tags": [
             "tool",
             "security",
