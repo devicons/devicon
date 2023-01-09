@@ -22,13 +22,13 @@ body:
     validations:
       required: true
 
-    - type: textarea
-      id: context
-      attributes:
-        label: Context
-        description: Why is this change important to you? How would you use it? How can it benefit other users?
-      validations:
-        required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this change important to you? How would you use it? How can it benefit other users?
+    validations:
+      required: true
 
   - type: textarea
     id: possiblesolution
