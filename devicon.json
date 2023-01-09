@@ -1691,7 +1691,7 @@
     },
     {
         "name": "consul",
-        "altnames": [],
+        "altnames": ["HashiCorp Consul"],
         "tags": [
             "networking",
             "infrastructure",
