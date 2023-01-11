@@ -1,14 +1,21 @@
 import json
 import os
 import re
+from math import isclose
 from pprint import pprint
 from typing import Any, Dict
 
 import click
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
+from tqdm import tqdm
 
 DEVICON_JSON_PATH = "devicon.json"
+GECKO_DRIVER_PATH = ".github/scripts/build_assets/geckodriver"
 
-
+# Functions
+## Utility functions
 def update_issues(key: str, value: Any, issues: dict):
     """Utility function to update dictionary or add new key."""
     if key in issues:
@@ -22,6 +29,38 @@ def get_all_version_refs(icon: dict):
     versions = icon["versions"]["svg"].copy()
     versions.extend(icon["versions"]["font"])
     return set(versions)
+
+
+def get_icon_filename(icons_dir, icon_name, version):
+    if os.path.exists(f"{icons_dir}/{icon_name}"):
+        filename = f"{icons_dir}/{icon_name}/{icon_name}-{version}.svg"
+    else:
+        filename = f"{icons_dir}/{icon_name}-{version}.svg"
+    return filename
+
+
+def read_icon_svg(icons_dir: str, icon_name: str, version: str):
+    filename = get_icon_filename(icons_dir, icon_name, version)
+    with open(filename, "r") as svg_file:
+        svg_content = svg_file.read()
+    return svg_content
+
+
+def get_webdriver(gecko_driver_path):
+    service = Service(executable_path=gecko_driver_path)
+    options = Options()
+    options.headless = True
+    return webdriver.Firefox(service=service, options=options)
+
+
+def get_bbox(driver, svg_path):
+    """
+    Get the bounding box of an svg file.
+    Couldn't find a reliable Python SVG library for Python so I used Selenium.
+    """
+    path = os.path.abspath(svg_path)
+    driver.get(f"file://{path}")
+    return driver.execute_script("return document.rootElement.getBBox();")
 
 
 def get_svg_file_versions(icons_dir: str, icon_name: str):
@@ -41,6 +80,17 @@ def get_svg_file_versions(icons_dir: str, icon_name: str):
     )
 
 
+def sort_json(icons: list):
+    """Sort the json files contents."""
+    icons = sorted(icons, key=lambda k: k["name"])
+    for icon in icons:
+        icon["versions"]["svg"] = sorted(icon["versions"]["svg"])
+        icon["versions"]["font"] = sorted(icon["versions"]["font"])
+        icon["aliases"] = sorted(icon["aliases"], key=lambda k: k["base"])
+        icon["tags"] = sorted(icon["tags"])
+
+
+## Process Step Functions
 def fix_svg_versions(icon: dict, svg_versions: list, issues: dict = {}):
     """Fix missing and extra `svg` versions in devicon.json for an icon."""
     missing_versions = []
@@ -124,42 +174,62 @@ def fix_aliases(icon: dict, issues: dict = {}):
 
 
 def remove_multicolor_font_versions(icons_dir: str, icon: dict, issues: dict = {}):
-    """Remove multicolor font versions from devicon.json."""
+    """
+    Remove multicolor font versions from devicon.json.
+
+    Note: Currently it does not remove anything it just reports it.
+    """
+    multicolor_versions = []
     for version in icon["versions"]["font"]:
-        if os.path.exists(f"{icons_dir}/{icon['name']}"):
-            # If the icons_dir is the root icons dir
-            filename = f"{icons_dir}/{icon['name']}/{icon['name']}-{version}.svg"
-        else:
-            filename = f"{icons_dir}/{icon['name']}-{version}.svg"
-        with open(filename, "r") as svg_file:
-            svg_content = svg_file.read()
-            colors = re.findall(r"fill=\"[#]([A-Fa-f0-9]{6})\"", svg_content)
-            colors = [color.lower() for color in colors]
-            unique_colors = set(colors)
-            if (
-                len(unique_colors) > 1 or "gradient" in svg_content
-            ):  # FIXME: regular expression for gradient
-                update_issues(
-                    icon["name"], {"multicolor_font_version": [version]}, issues
-                )
-                # TODO: Ask the team if theses versions should be removed.
-                # icon["versions"]["font"].remove(version)
+        svg_content = read_icon_svg(icons_dir, icon["name"], version)
+        colors = re.findall(r"fill=\"[#]([A-Fa-f0-9]{6})\"", svg_content)
+        colors = [color.lower() for color in colors]
+        unique_colors = set(colors)
+        if len(unique_colors) > 1 or re.search(r"[gG]radient", svg_content):
+            multicolor_versions.append(version)
+            # TODO: Ask the team if theses versions should be removed.
+            # icon["versions"]["font"].remove(version)
+
+    if len(multicolor_versions) > 0:
+        update_issues(
+            icon["name"], {"multicolor_font_version": multicolor_versions}, issues
+        )
     return icon
 
 
-def check_view_port(icon: dict, issues: dict):
+def check_view_port(icons_dir: str, icon: dict, issues: dict):
     """Check if the view port is set to 0 0 128 128"""
-    pass  # FIXME: Implement this function.
+    bad_view_port = []
+    for version in icon["versions"]["svg"]:
+        svg_content = read_icon_svg(icons_dir, icon["name"], version)
+        if not re.search(r"viewBox=\"0 0 128 128\"", svg_content):
+            bad_view_port.append(version)
+
+    if len(bad_view_port) > 0:
+        update_issues(icon["name"], {"bad_view_port": bad_view_port}, issues)
 
 
-def sort_json(icons: list):
-    """Sort the json files contents."""
-    icons = sorted(icons, key=lambda k: k["name"])
-    for icon in icons:
-        icon["versions"]["svg"] = sorted(icon["versions"]["svg"])
-        icon["versions"]["font"] = sorted(icon["versions"]["font"])
-        icon["aliases"] = sorted(icon["aliases"], key=lambda k: k["base"])
-        icon["tags"] = sorted(icon["tags"])
+def check_icon_bbox(icons_dir, icon: dict, issues: dict, driver):
+    """Check if the maximum height and width of the icon is 128."""
+    larger = []
+    smaller = []
+    for version in icon["versions"]["svg"]:
+        filename = get_icon_filename(icons_dir, icon["name"], version)
+        bbox = get_bbox(driver, filename)
+        if bbox["width"] > 128.0 or bbox["height"] > 128.0:
+            larger.append(version)
+            continue
+
+        width_in_tol = isclose(bbox["width"], 128.0, abs_tol=2.0)
+        height_in_tol = isclose(bbox["height"], 128.0, abs_tol=2.0)
+        if not width_in_tol and not height_in_tol:
+            smaller.append(version)
+
+    if len(larger) > 0:
+        update_issues(icon["name"], {"larger_bbox": larger}, issues)
+
+    if len(smaller) > 0:
+        update_issues(icon["name"], {"smaller_bbox": smaller}, issues)
 
 
 def generate_markdown_report(issues: dict):
@@ -181,10 +251,24 @@ def generate_markdown_report(issues: dict):
 @click.option("--print-issues", "-p", is_flag=True, help="Print issues.")
 @click.option("--generate-report", "-g", is_flag=True, help="Generate markdown report.")
 @click.option(
+    "--check-bbox",
+    "-b",
+    is_flag=True,
+    default=False,
+    help="Check the bounding box. This requires a selenium driver and it's a slow process",
+)
+@click.option(
     "--devicon-json-path",
     "-d",
     default=DEVICON_JSON_PATH,
     help="Path to devicon.json file.",
+)
+@click.option(
+    "--gecko-driver-path",
+    "-g",
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    default=GECKO_DRIVER_PATH,
+    help="Path to gecko driver.",
 )
 @click.argument(
     "icons_dir",
@@ -200,12 +284,14 @@ def main(
     update_json: bool,
     print_issues: bool,
     generate_report: bool,
+    check_bbox: bool,
+    gecko_driver_path: str,
 ):
     with open(devicon_json_path) as devicon_json_file:
         devicon_json = json.load(devicon_json_file)
 
     issues: Dict[Any, Any] = {}
-    for i, icon in enumerate(devicon_json):
+    for i, icon in enumerate(tqdm(devicon_json)):
         if not any(
             [
                 True if filesindir.startswith(icon["name"]) else False
@@ -232,6 +318,14 @@ def main(
         # Remove multicolor font versions from devicon.json.
         icon = remove_multicolor_font_versions(icons_dir, icon, issues)
         devicon_json[i] = icon
+
+        # Check if the view port is set to 0 0 128 128
+        check_view_port(icons_dir, icon, issues)
+
+        # Check Bounding Box
+        if check_bbox:
+            with get_webdriver(gecko_driver_path) as driver:
+                check_icon_bbox(icons_dir, icon, issues, driver)
 
     if print_issues:
         pprint(issues)
