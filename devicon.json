@@ -7336,6 +7336,37 @@
         ]
     },
     {
+        "name": "readthedocs",
+        "altnames": [
+            "read the docs",
+            "Read The Docs"
+        ],
+        "tags": [
+            "documentation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#32322A",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "realm",
         "altnames": [],
         "tags": [
