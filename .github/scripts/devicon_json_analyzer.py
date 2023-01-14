@@ -6,13 +6,15 @@ from pprint import pprint
 from typing import Any, Dict
 
 import click
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.service import Service
+
+from logging import ERROR
+
 from tqdm import tqdm
+from svglib.svglib import svg2rlg, logger as svglib_logger
 
 DEVICON_JSON_PATH = "devicon.json"
-GECKO_DRIVER_PATH = ".github/scripts/build_assets/geckodriver"
+
+svglib_logger.setLevel(ERROR)
 
 # Functions
 ## Utility functions
@@ -46,21 +48,14 @@ def read_icon_svg(icons_dir: str, icon_name: str, version: str):
     return svg_content
 
 
-def get_webdriver(gecko_driver_path):
-    service = Service(executable_path=gecko_driver_path)
-    options = Options()
-    options.headless = True
-    return webdriver.Firefox(service=service, options=options)
-
-
-def get_bbox(driver, svg_path):
-    """
-    Get the bounding box of an svg file.
-    Couldn't find a reliable Python SVG library for Python so I used Selenium.
-    """
-    path = os.path.abspath(svg_path)
-    driver.get(f"file://{path}")
-    return driver.execute_script("return document.rootElement.getBBox();")
+def get_bbox(svg_path):
+    svg = svg2rlg(
+        svg_path,
+    )
+    bounds = svg.getBounds()
+    width = bounds[2] - bounds[0]
+    height = bounds[3] - bounds[1]
+    return {"width": width, "height": height}
 
 
 def get_svg_file_versions(icons_dir: str, icon_name: str):
@@ -209,13 +204,13 @@ def check_view_port(icons_dir: str, icon: dict, issues: dict):
         update_issues(icon["name"], {"bad_view_port": bad_view_port}, issues)
 
 
-def check_icon_bbox(icons_dir, icon: dict, issues: dict, driver):
+def check_icon_bbox(icons_dir, icon: dict, issues: dict):
     """Check if the maximum height and width of the icon is 128."""
     larger = []
     smaller = []
     for version in icon["versions"]["svg"]:
         filename = get_icon_filename(icons_dir, icon["name"], version)
-        bbox = get_bbox(driver, filename)
+        bbox = get_bbox(filename)
         if bbox["width"] > 128.0 or bbox["height"] > 128.0:
             larger.append(version)
             continue
@@ -251,24 +246,10 @@ def generate_markdown_report(issues: dict):
 @click.option("--print-issues", "-p", is_flag=True, help="Print issues.")
 @click.option("--generate-report", "-g", is_flag=True, help="Generate markdown report.")
 @click.option(
-    "--check-bbox",
-    "-b",
-    is_flag=True,
-    default=False,
-    help="Check the bounding box. This requires a selenium driver and it's a slow process",
-)
-@click.option(
     "--devicon-json-path",
     "-d",
     default=DEVICON_JSON_PATH,
     help="Path to devicon.json file.",
-)
-@click.option(
-    "--gecko-driver-path",
-    "-g",
-    type=click.Path(exists=True, file_okay=True, dir_okay=False),
-    default=GECKO_DRIVER_PATH,
-    help="Path to gecko driver.",
 )
 @click.argument(
     "icons_dir",
@@ -284,8 +265,6 @@ def main(
     update_json: bool,
     print_issues: bool,
     generate_report: bool,
-    check_bbox: bool,
-    gecko_driver_path: str,
 ):
     with open(devicon_json_path) as devicon_json_file:
         devicon_json = json.load(devicon_json_file)
@@ -322,10 +301,8 @@ def main(
         # Check if the view port is set to 0 0 128 128
         check_view_port(icons_dir, icon, issues)
 
-        # Check Bounding Box
-        if check_bbox:
-            with get_webdriver(gecko_driver_path) as driver:
-                check_icon_bbox(icons_dir, icon, issues, driver)
+        # Check if the maximum height or width of the icon is 128.
+        check_icon_bbox(icons_dir, icon, issues)
 
     if print_issues:
         pprint(issues)
