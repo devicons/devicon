@@ -2346,16 +2346,14 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "plain"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "plain"
             ]
         },
-        "color": "#136BA2",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -5776,25 +5774,6 @@
         },
         "color": "#294172", 
         "aliases": [] 
-    },
-    {
-        
-            "name": "intellijidea",
-            "tags": [
-                "editor"
-            ],
-            "versions": {
-                "svg": [
-                    "original"                 
-                ],
-                "font": [
-                    "original"           
-                ]
-            },
-            "color": "#000000",
-            "aliases": []
-        }
+    }
     
-    
-
 ]
