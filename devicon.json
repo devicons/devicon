@@ -8538,14 +8538,45 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "plain"
+                "original",
+                "plain-wordmark"
             ],
             "font": [
-                "original-wordmark",
-                "plain"
+                "original",
+                "plain-wordmark"
             ]
         },
-        "color": "#2298BD",
+        "color": "#38bdf8",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "tauri",
+        "altnames": [],
+        "tags": [
+            "nodejs",
+            "rust",
+            "desktop",
+            "framework",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FFC131",
         "aliases": []
     },
     {
