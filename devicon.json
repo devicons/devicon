@@ -5776,6 +5776,25 @@
         },
         "color": "#294172", 
         "aliases": [] 
-    }
+    },
+    {
+        
+            "name": "intellijidea",
+            "tags": [
+                "editor"
+            ],
+            "versions": {
+                "svg": [
+                    "original"                 
+                ],
+                "font": [
+                    "original"           
+                ]
+            },
+            "color": "#000000",
+            "aliases": []
+        }
+    
+    
 
 ]
