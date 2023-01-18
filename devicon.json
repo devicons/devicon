@@ -3764,13 +3764,15 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "line"
             ],
             "font": [
-                "original"
+                "original",
+                "line"
             ]
         },
-        "color": "#277a9f",
+        "color": "#0F1689",
         "aliases": [
             {
                 "base": "original",
