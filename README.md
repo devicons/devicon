@@ -15,7 +15,7 @@
         <img alt="GitHub issues by-label" src="https://img.shields.io/github/issues/devicons/devicon/request:icon?color=%2360be86&label=icon%20requests&style=for-the-badge">
     </a>
     <a href="https://github.com/devicons/devicon/stargazers">
-        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/devicons/devicon?color=%2360be86&label=github%20stars&style=for-the-badge">
+        <img alt="GitHub repository stars" src="https://img.shields.io/github/stars/devicons/devicon?color=%2360be86&label=github%20stars&style=for-the-badge">
     </a>
 </p>
 <br />
@@ -51,7 +51,7 @@
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#request-icon">Requesting Icon</a></li>
     <li><a href="#contribute">Contributing</a></li>
-    <li><a href="#discord-server">Discord Server</a></li>
+    <li><a href="#discord-community">Discord Community</a></li>
     <li><a href="#develop-vs-master"><code>develop</code> vs <code>master</code></a></li>
     <li><a href="#stale-prs">Stale Pull Requests</a></li>
     <li><a href="#build-yourself">Go Build Yourself</a></li>
@@ -97,9 +97,9 @@ yarn add devicon
 ```
 
 <p>
-    If you don't want to use a package manager you can also download
+    If you don't want to use a package manager, you can also download
     and include <a href="/devicon.min.css">devicon.min.css</a> next to the <a href="/fonts">font files</a> to your project.
-    See <a href="https://devicon.dev">devicon.dev</a> for details about how to add devicon to your project via
+    See <a href="https://devicon.dev">devicon.dev</a> for details about how to add Devicon to your project via
     a CDN.
 </p>
 <p>
@@ -139,6 +139,7 @@ yarn add devicon
 ```
 
 Add the following CSS rules in your stylesheet:
+
 ```css
 .devicon-devicon-plain {
   max-width: 2em;
@@ -156,7 +157,7 @@ Add the following CSS rules in your stylesheet:
 <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg'>
 ```
 
-<h2 id="request-icon">Requesting Icon</h2>
+<h2 id="request-icon">Requesting an icon</h2>
 <p>
     When you want to request an icon please feel free to create an issue. Check out our <a href="https://github.com/devicons/devicon/wiki/Requesting-an-Icon">Wiki</a> for more information.
 </p>
@@ -166,9 +167,9 @@ Add the following CSS rules in your stylesheet:
     We are happy with every contribution, whether it's new icons, features, or maintainers. Please have a look at our <a href="https://github.com/devicons/devicon/wiki">Wiki</a> to see how you can contribute to this project.
 </p>
 
-<h2 id="discord-server">Discord server</h2>
+<h2 id="discord-community">Discord community</h2>
 <p>
-We are running a Discord server. You can go there to talk, discuss, and more with the maintainers and other people, too. Here's the invitation: https://discord.gg/hScy8KWACQ.</p>
+We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join today: https://discord.gg/hScy8KWACQ.</p>
 <p><b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
 </p>
 
@@ -209,7 +210,7 @@ After a pull request has been open for over 30 days with no activity or response
     by yourself.
 </p>
 <h5>Prerequisites</h5>
-<p>Install gulp (and gulp plugins)</p>
+<p>Install <code>gulp</code> (and <code>gulp</code> plugins)</p>
 
 ```bash
 npm install
