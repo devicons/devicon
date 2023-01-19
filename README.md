@@ -82,7 +82,7 @@
 <h2 id="getting-started">Getting Started</h2>
 <p>
     For a super fast setup go check <a href="https://devicon.dev">devicon.dev</a>.<br />
-    You can either use the<a href="#getting-started-svg"> raw SVG</a> icons or our <a href="#getting-started-font">devicon font</a> (which is 
+    You can either use the<a href="#getting-started-svg">raw SVG</a> icons or our <a href="#getting-started-font">devicon font</a> (which is 
     also available via CDN).
 </p>
 
