@@ -8580,31 +8580,6 @@
         "aliases": []
     },
     {
-        "name": "tauri",
-        "altnames": [],
-        "tags": [
-            "nodejs",
-            "rust",
-            "desktop",
-            "framework",
-            "programming"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#FFC131",
-        "aliases": []
-    },
-    {
         "name": "tensorflow",
         "altnames": [],
         "tags": [
