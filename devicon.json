@@ -3023,7 +3023,8 @@
         "name": "gazebo",
         "altnames": [],
         "tags": [
-            "robotics"
+            "robotics",
+            "3d"
         ],
         "versions": {
             "svg": [
