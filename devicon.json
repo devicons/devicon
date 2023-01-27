@@ -1712,6 +1712,36 @@
         ]
     },
     {
+        "name": "consul",
+        "altnames": [
+            "HashiCorp Consul"
+        ],
+        "tags": [
+            "networking",
+            "infrastructure",
+            "security",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e03875",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "contao",
         "altnames": [],
         "tags": [
