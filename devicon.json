@@ -1,5 +1,23 @@
 [
     {
+        "name": "zsh",
+        "tags": [
+            "shell",
+            "command"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#060708",
+        "aliases": []
+    },
+    {
         "name": "adonisjs",
         "tags": [
             "nodejs",
