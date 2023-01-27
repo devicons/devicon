@@ -9215,6 +9215,35 @@
         "aliases": []
     },
     {
+        "name": "vault",
+        "altnames": [
+            "HashiCorp Vault"
+        ],
+        "tags": [
+            "tool",
+            "security",
+            "infrastructure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffd814",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "vercel",
         "altnames": [],
         "tags": [
