@@ -157,7 +157,7 @@ Add the following CSS rules in your stylesheet:
 <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg'>
 ```
 
-<h2 id="request-icon">Requesting Icon</h2>
+<h2 id="request-icon">Requesting an icon</h2>
 <p>
     When you want to request an icon please feel free to create an issue. Check out our <a href="https://github.com/devicons/devicon/wiki/Requesting-an-Icon">Wiki</a> for more information.
 </p>
@@ -167,7 +167,7 @@ Add the following CSS rules in your stylesheet:
     We are happy with every contribution, whether it's new icons, features, or maintainers. Please have a look at our <a href="https://github.com/devicons/devicon/wiki">Wiki</a> to see how you can contribute to this project.
 </p>
 
-<h2 id="discord-community">Discord Community</h2>
+<h2 id="discord-community">Discord community</h2>
 <p>
 We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join the official Discord Server <a href="https://discord.gg/hScy8KWACQ">here!</a>
 </p>
