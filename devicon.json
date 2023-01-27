@@ -3072,6 +3072,28 @@
         "aliases": []
     },
     {
+        "name": "gazebo",
+        "altnames": [],
+        "tags": [
+            "robotics",
+            "3d"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f58113",
+        "aliases": []
+    },
+    {
         "name": "gcc",
         "altnames": [
             "gnucompilercollection"
