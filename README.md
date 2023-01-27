@@ -169,8 +169,7 @@ Add the following CSS rules in your stylesheet:
 
 <h2 id="discord-community">Discord community</h2>
 <p>
-We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join today: https://discord.gg/hScy8KWACQ.</p>
-<p><b>Note that the Discord server is unofficial, and Devicons is still being maintained via GitHub.</b>
+We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join the official Discord Server <a href="https://discord.gg/hScy8KWACQ">here!</a>
 </p>
 
 <h2 id="develop-vs-master"><code>develop</code> vs <code>master</code></h2>
