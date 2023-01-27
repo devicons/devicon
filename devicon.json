@@ -7351,7 +7351,9 @@
                 "line"
             ],
             "font": [
-                "original"
+                "original",
+                "original-wordmark",
+                "line"
             ]
         },
         "color": "#32322A",
