@@ -1,6 +1,6 @@
 <h1>Contributing to Devicon</h1>
 
-<h2>This guide has been converted to a <a href="https://github.com/devicons/devicon/wiki">Wiki</a>! This document will eventually be removed, please use the Wiki instead.</h2>
+<h2>This guide has been moved to the <a href="https://github.com/devicons/devicon/wiki">Wiki</a> and won't be updated any longer.</h2>
 <br>
 <p>
 First of all, thanks for taking the time to contribute! This project can only grow and live by your countless contributions. To keep this project maintainable, we have developed some guidelines for our contributors.
