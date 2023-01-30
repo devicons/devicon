@@ -6690,14 +6690,16 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ]
         },
-        "color": "#3f4f75",
+        "color": "#3d4c73",
         "aliases": []
     },
     {
