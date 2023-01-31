@@ -3549,7 +3549,6 @@
     {
         "name": "grails",
         "altnames": [
-            "Grails\u00c2\u00ae Framework",
             "Grails Framework"
         ],
         "tags": [
@@ -8876,11 +8875,7 @@
     },
     {
         "name": "traefikmesh",
-        "altnames": [
-            "traefik",
-            "tr\u00c3\u00a6fik",
-            "tr\u00c3\u00a6fikmesh"
-        ],
+        "altnames": [],
         "tags": [
             "mesh",
             "kubernetes"
@@ -8907,11 +8902,7 @@
     },
     {
         "name": "traefikproxy",
-        "altnames": [
-            "traefik",
-            "tr\u00c3\u00a6fik",
-            "tr\u00c3\u00a6fikproxy"
-        ],
+        "altnames": [],
         "tags": [
             "proxy",
             "router"
