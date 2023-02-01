@@ -31,7 +31,6 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="./logos/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon/devicon.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <meta property="og:title" content="Devicon" />
   <meta property="og:image" content="https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original-wordmark.svg" />
@@ -39,11 +38,45 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:description" content="Devicon aims to gather all logos representing development languages and tools in one font. 🚀" />
+  <script>
+    function addCss(href) {
+      var link = document.createElement('link');
+
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = `${href}`;
+
+      document.body.appendChild(link);
+      document.head.appendChild(link);
+    }
+
+    var path = '/devicon.min.css';
+    var baseUrl
+  
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', path, false);
+    xhr.send();
+
+    // Make sure the file exists, otherwise, use CDN link.
+    if (xhr.status == "404") {
+      baseUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/`;
+    } else {
+      baseUrl = `/`;
+    }
+
+    // Temporary solution.
+    var counter = 0
+    var timer = setInterval(function() {
+          ++counter;
+          addCss(`${baseUrl}devicon.min.css`);
+          if (counter == 1) {
+            clearInterval(timer);
+          }
+        }, 0);
+  </script>
 </head>
 
 <body ng-app="devicon" ng-controller="IconListCtrl">
-  <link rel="stylesheet" ng-if="latestReleaseTagging" ng-href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css">
-
   <!--[if lt IE 7]>
   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
   <![endif]-->
@@ -88,9 +121,10 @@
             </span>
           </p>
           <div class="cde" id='headerLinkCode'>
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@{{ latestReleaseTagging }}/devicon.min.css"&gt;
+            &lt;link rel="stylesheet" href="/devicon.min.css"&gt;
           </div>
 
+          <!-- Aquí esta mal el código ._. -->
           <ul class="icons-list">
             <div ng-repeat="fontVersion in selectedIcon.font">
               <li ng-click="selectFont(fontVersion, false, $index)" ng-class="{'selected-version' : ($index == selectedFontIndex && !colored)}" ng-style="{'background-color': fontBackground}">
@@ -137,7 +171,7 @@
           <ul class="icons-list">
             <li ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}" ng-style="{'background-color': svgBackground}">
               <img src="assets/img/checkerboard.png" ng-style="{'visibility': svgDisplayCheckerboard ? 'visible' : 'hidden'}">
-              <img class='svgLogo' ng-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
+              <img class='svgLogo' ng-src="../icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
           <p>
@@ -148,7 +182,7 @@
             </span>
           </p>
           <div class="cde" id='imgCode'>
-            &lt;img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
+            &lt;img src="./icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
           </div>
           <p><i>*To change the size, change the &lt;img&gt;'s <code>`height`</code> and <code>`width`</code>.</i></p>
 

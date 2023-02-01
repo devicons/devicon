@@ -81,7 +81,7 @@ function createAliasStatement(fontObj) {
   return aliases
     .map(aliasObj => {
       return `.devicon-${name}-${aliasObj.alias} {
-            @extend .devicon-${name}-${aliasObj.base};
+            @extend .devicon-${name}-${aliasObj.base} !optional;
         }`;
     })
     .join(" ");
