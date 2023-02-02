@@ -1,10 +1,1 @@
-<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-<polygon transform="matrix(.0625 0 0 .0625 3.75e-7 8.5744)" points="1280 1330.2 1024 886.81 768 1330.2 1024 1773.6" opacity=".8"/>
-<polygon transform="matrix(.0625 0 0 .0625 3.75e-7 8.5744)" points="1536 886.81 1280 443.41 1024 886.81 1280 1330.2" opacity=".6"/>
-<polygon transform="matrix(.0625 0 0 .0625 3.75e-7 8.5744)" points="1024 886.81 768 443.41 512 886.81 768 1330.2" opacity=".6"/>
-<polygon transform="matrix(.0625 0 0 .0625 3.75e-7 8.5744)" points="1792 443.41 1536 0 1280 443.41 1536 886.81" opacity=".45"/>
-<polygon transform="matrix(.0625 0 0 .0625 3.75e-7 8.5744)" points="768 443.41 1024 886.81 1280 443.41 1152 221.7 896 221.7" opacity=".45"/>
-<polygon transform="matrix(.0625 0 0 .0625 3.75e-7 8.5744)" points="768 443.41 512 0 256 443.41 512 886.81" opacity=".45"/>
-<polygon transform="matrix(.0625 0 0 .0625 3.75e-7 8.5744)" points="2048 0 1536 0 1792 443.4" opacity=".3"/>
-<polygon transform="matrix(.0625 0 0 .0625 3.75e-7 8.5744)" points="512 0 0 0 256 443.4" opacity=".3"/>
-</svg>
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path opacity=".8" d="M80 91.712L64 64 48 91.712l16 27.712z"/><path opacity=".6" d="M96 64L80 36.288 64 64l16 27.712zM64 64L48 36.288 32 64l16 27.712z"/><path opacity=".45" d="M112 36.288L96 8.574 80 36.288 96 64zM48 36.288L64 64l16-27.712-8-13.857H56zM48 36.288L32 8.574 16 36.288 32 64z"/><path opacity=".3" d="M128 8.574H96l16 27.713zM32 8.574H0l16 27.713z"/></svg>
