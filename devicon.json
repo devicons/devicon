@@ -4710,7 +4710,7 @@
         },
         "color": "#d00000",
         "aliases": []
-    },    
+    },
     {
         "name": "kibana",
         "altnames": [],
@@ -6699,6 +6699,30 @@
         "aliases": []
     },
     {
+        "name": "pnpm",
+        "altnames": [],
+        "tags": [
+            "package",
+            "manager",
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "original",
+                "original-wordmark",
+            ]
+        },
+        "color": "#f9ad00",
+        "aliases": []
+    },
+    {
         "name": "podman",
         "altnames": [],
         "tags": [
@@ -8178,16 +8202,16 @@
             "frontend"
         ],
         "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#2c4f7c",
         "aliases": []
@@ -8825,10 +8849,10 @@
         },
         "color": "#bd222b",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            }
         ]
     },
     {
