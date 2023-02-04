@@ -6708,11 +6708,13 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
+                "plain-wordmark",
             ],
             "font": [
                 "plain",
-                "original",
+                "plain-wordmark",
             ]
         },
         "color": "#f9ad00",
