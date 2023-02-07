@@ -17,7 +17,6 @@ jobs:
           npm install
 
       - name: Executing build and create fonts via icomoon
-        shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
