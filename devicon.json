@@ -7336,7 +7336,9 @@
     },
     {
         "name": "stackoverflow",
-        "altnames": [],
+        "altnames": [
+            "Stack Overflow"
+        ],
         "tags": [
             "website",
             "development",
