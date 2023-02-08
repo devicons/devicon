@@ -22,7 +22,7 @@ jobs:
         run: >
           python ./.github/scripts/icomoon_build.py 
           ./.github/scripts/build_assets/geckodriver-v0.32.1-linux64/geckodriver ./icomoon.json 
-          ./devicon.json ./icons ./ %GITHUB_TOKEN% --headless
+          ./devicon.json ./icons ./ "$GITHUB_TOKEN" --headless
 
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
@@ -50,7 +50,7 @@ jobs:
           # will have "new_icons.png" and "new_svgs.png"
           # in that order (cause sorted alphabetically)
           path: ./screenshots/*.png
-          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+          client_id: ${{ secrets.IMGUR_CLIENT_ID }}
 
       - name: Get the release message from file
         id: release_message_step
