@@ -9720,6 +9720,25 @@
         "aliases": []
     },
     {
+        "name": "windows11",
+        "altnames": [],
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#0078d4",
+        "aliases": []
+    },
+    {
         "name": "windows8",
         "altnames": [],
         "tags": [
@@ -9746,25 +9765,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-    },
-    {
-        "name": "windows11",
-        "altnames": [],
-        "tags": [
-            "os"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#0078d4",
-        "aliases": []
     },
     {
         "name": "woocommerce",
