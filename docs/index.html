@@ -39,6 +39,9 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:description" content="Devicon aims to gather all logos representing development languages and tools in one font. 🚀" />
   <script>
+    /////////////////////////////
+    // Basic helper functions //
+    /////////////////////////////
     function addCss(href) {
       var link = document.createElement('link');
 
@@ -50,6 +53,24 @@
       document.head.appendChild(link);
     }
 
+    function addImage(src, id, img_class) {
+      var img = document.createElement("img");
+
+      img.src = src;
+      img.alt = "{{selectedIcon.name}}-{{svgVersion}}";
+      img.classList.add(img_class);
+
+      document.getElementById(id).appendChild(img);
+    }
+
+    // Unused. May be useful in the future.
+    function addElement(content, id) {
+      document.getElementById(id).innerHTML = content;
+    }
+
+    ///////////////////////
+    // Path management //
+    /////////////////////
     var path = '/devicon.min.css';
     var baseUrl
   
@@ -57,7 +78,7 @@
     xhr.open('HEAD', path, false);
     xhr.send();
 
-    // Make sure the file exists, otherwise, use CDN link.
+    // Make sure the file exists, otherwise, use latest CDN link.
     if (xhr.status == "404") {
       baseUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/`;
     } else {
@@ -68,7 +89,10 @@
     var counter = 0
     var timer = setInterval(function() {
           ++counter;
+
           addCss(`${baseUrl}devicon.min.css`);
+          addImage(`${baseUrl}icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg`, "svg-list", 'svgLogo');
+
           if (counter == 1) {
             clearInterval(timer);
           }
@@ -121,10 +145,9 @@
             </span>
           </p>
           <div class="cde" id='headerLinkCode'>
-            &lt;link rel="stylesheet" href="/devicon.min.css"&gt;
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"&gt;
           </div>
 
-          <!-- Aquí esta mal el código ._. -->
           <ul class="icons-list">
             <div ng-repeat="fontVersion in selectedIcon.font">
               <li ng-click="selectFont(fontVersion, false, $index)" ng-class="{'selected-version' : ($index == selectedFontIndex && !colored)}" ng-style="{'background-color': fontBackground}">
@@ -169,9 +192,13 @@
             </span>
           </h4>
           <ul class="icons-list">
-            <li ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}" ng-style="{'background-color': svgBackground}">
-              <img src="assets/img/checkerboard.png" ng-style="{'visibility': svgDisplayCheckerboard ? 'visible' : 'hidden'}">
-              <img class='svgLogo' ng-src="../icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
+            <li id="svg-list" ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}" ng-style="{'background-color': svgBackground}">
+              <img src="./assets/img/checkerboard.png" ng-style="{'visibility': svgDisplayCheckerboard ? 'visible' : 'hidden'}">
+
+              <!--
+                The image is added in the JS script above. This is needed for the correct location link.
+                <img class='svgLogo' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
+              -->
             </li>
           </ul>
           <p>
@@ -182,7 +209,7 @@
             </span>
           </p>
           <div class="cde" id='imgCode'>
-            &lt;img src="./icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
+            &lt;img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
           </div>
           <p><i>*To change the size, change the &lt;img&gt;'s <code>`height`</code> and <code>`width`</code>.</i></p>
 
@@ -206,6 +233,7 @@
 
       <h3>GitHub repository</h3>
       <h5>If you prefer a local install, you can download all the files on the GitHub repository.</h5>
+      <h5>Check out our <a href=https://github.com/devicons/devicon#building-devicon>ultimate guide</a> in order to compile Devicon locally.</h5>
       <p class="buttonLink">
         <a href="https://github.com/devicons/devicon/archive/master.zip"><i class="devicon-github-original"></i>DOWNLOAD</a>
       </p>
@@ -216,18 +244,18 @@
         <a href="https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md" target="blank"><i class="devicon-github-original"></i>CONTRIBUTE</a>
       </p>
       <p class="buttonLink">
-        <a href="https://discord.gg/hScy8KWACQ" target="blank"><i class="discord-logo"></i>DISCORD SERVER</a>
+        <a href="https://discord.gg/hScy8KWACQ" target="blank"><i class="discord-logo"></i>DISCORD COMMUNITY</a>
       </p>
 
       <h3>Contact</h3>
-      <h5>If you have any legal concerns regarding copyrights or want to report an abuse, please reach out to us at <b><a href="mailto:info@devicon.dev">info@devicon.dev</a></b>. Any code/logo contributions should be made through our GitHub repository listed above.</h5>
+      <h5>If you have any legal concerns regarding copyrights or want to report an abuse, please reach out to us via <b><a href="mailto:info@devicon.dev">info@devicon.dev</a> or our <a href="https://discord.gg/hScy8KWACQ" target="blank">Discord community</a></b>. Any code/logo contributions should be made through our GitHub repository listed above.</h5>
 
       <footer>
-        Originally created by <a href="https://github.com/konpa">Konpa</a> (under <a href="https://github.com/devicons/devicon/blob/master/LICENSE">MIT License</a>) and <br />
-        supported by various <a href="https://github.com/devicons/devicon/graphs/contributors">contributors</a>.<br />
+        Originally created by <a href="https://github.com/konpa">Konpa</a> (under the <a href="https://github.com/devicons/devicon/blob/master/LICENSE">MIT License</a>) and <br />
+        supported by many <a href="https://github.com/devicons/devicon/graphs/contributors">contributors</a>.<br />
         Copyright &copy; 2015 <a href="https://github.com/konpa">Konpa</a><br />
         <br />
-        Final font build with <a href="https://icomoon.io/">Icomoon</a><br />
+        Final font built with <a href="https://icomoon.io/">IcoMoon</a><br />
         <br>
         <i>*All product names, logos, and brandsare property of their respective owners.  All company, product and service names used in this website are for identification purposes only.  Usage of these names, logos, and brands does not imply endorsement of Devicon or its members. All icons/SVGs in this project are not monetized in anyway. It is up to the user to use the logo properly according to the company/group's brand policy. Usage of this site or any icons/SVGs from Devicon means acknowledgement of these conditions.</i>
       </footer>

@@ -217,13 +217,12 @@ Follow these steps to build the website and icons either locally or using <a hre
     <li><a href="#web-server">Setting up the web server</a></li>
 </ol>
 
-<h4 id="using-gitpod">Using Gitpod.io</h4>
-<p>By using <a href=https://www.gitpod.io)>Gitpod.io</a>, you can easily build the icons<br>and install the required dependencies in one single click. No extra setup is required.</p>
+<h3 id="using-gitpod">Using Gitpod.io</h3>
+<p>By using <a href=https://www.gitpod.io)>Gitpod.io</a>, you can easily build the icons and install the<br>required dependencies in one single click. No extra setup is required.</p>
 
 <a href=https://gitpod.io/#https://github.com/devicons/devicon/tree/develop><img src=https://gitpod.io/button/open-in-gitpod.svg alt="Open in Gitpod"></img></a>
 
-<h4 id="installation">Installation</h4>
-<h5>Forking and cloning the repository</5>
+<h3 id="installation">Installation</h3>
 
 <p><a href=https://github.com/devicons/devicon/fork>Fork</a> the repository and clone the forked repository.</p>
 
@@ -233,7 +232,7 @@ git clone https://github.com/<your-github-username>/devicon.git
 
 <p>In case you don't have Git installed, check the <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official guide</a> to install Git on your operating system.</p>
 
-<h5>Install all the necessary NPM dependencies</h5>
+<h4>Install all the necessary NPM dependencies</h4>
 
 <p>In case you don't have NPM installed, check this <a href=https://kinsta.com/blog/how-to-install-node-js/><b>ultimate guide</b></a> on installing Node.js and NPM. These tools are required in order to build Devicon properly.<p>
 
@@ -241,9 +240,9 @@ git clone https://github.com/<your-github-username>/devicon.git
 npm install
 ```
 
-<h5>Installing Mozilla Firefox</h5>
+<h4>Installing Mozilla Firefox</h4>
 
-<p>Install on Linux-based systems using <icode>sudo</icode></p>
+<p>Install on Linux-based systems using <code>sudo</code></p>
 
 ```bash
 sudo apt-get install firefox
@@ -251,9 +250,9 @@ sudo apt-get install firefox
 
 <p>Install Mozilla Firefox on Windows: https://support.mozilla.org/en-US/kb/how-install-firefox-windows</p>
 
-<h5>Installing Python3</h5>
+<h4>Installing Python3</h4>
 
-<p>Install Python3 using the <icode>sudo</icode> command.</p>
+<p>Install Python3 using the <code>sudo</code> command.</p>
 
 ```bash
 sudo apt-get install python3
@@ -263,7 +262,7 @@ sudo apt-get install python3
 </br>
 For a more detailed guide on installing Python, check <a href="https://www.digitalocean.com/community/tutorials/install-python-windows-10">this tutorial</a> built by the DigitalOcean community.</p>
 
-<h5>Setting up Selenium</h5>
+<h4>Setting up Selenium</h4>
 
 <p>Install Selenium in both Linux-based and Windows sytems.</p>
 
@@ -271,7 +270,7 @@ For a more detailed guide on installing Python, check <a href="https://www.digit
 python3 -m pip install --upgrade pip && pip install selenium==4.1.0 requests==2.25.1
 ```
 
-<h4 id="building-icons">Build the new icons</h4>
+<h3 id="building-icons">Build the new icons</h3>
 
 <p>Once all the dependencies are installed, you can proceed to build the newest icons.<br>
 Usually, this is done on each release, but you can have a sneak peek before a release.</p>
@@ -291,7 +290,7 @@ python3 ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_as
 <i>The process might take a while, depending on your operating system's speed and the amount of icons.</i>
 <p>If there are any errors shown, please let us know by <a href=https://github.com/devicons/devicon/issues/new/choose>creating an issue</a> or contacting us on our <a href=https://discord.gg/hScy8KWACQ>Discord community</a>.</p>
 
-<h4 id="build-css">Build the CSS stylesheet</h4>
+<h3 id="build-css">Build the CSS stylesheet</h3>
 
 <p>Run the following command to build the new CSS stylesheet.<br>
 This file is used to show all the new icons previously built.</p>
@@ -300,19 +299,21 @@ This file is used to show all the new icons previously built.</p>
 npm run build-css
 ```
 
-<h4 id="web-server">Setting up the web server</h4>
+<h3 id="web-server">Setting up the web server</h3>
 
-<p>Feel free to either open the `docs/index.html` file, or run the following command to run the Python web server.</p>
+<p>Run the following command to start the web server with Python.</p>
 
 ```bash
 npm run dev # Will run on port 8000
 ```
 
-<p>Or this command, which does exactly the same, but the port can be customized</p>.
+<p>Or this command, which does exactly the same, but the port can be customized.</p>
 
 ```bash
 python3 -m http.server <port>
 ```
+
+<p>You're done now! :tada: Your build of Devicons should be available at <code>https://localhost:8000</code>.</p>
 
 <br/>
 <div align="center">
