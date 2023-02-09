@@ -1,6 +1,7 @@
 name: Optimize icons
 on:
   - pull_request
+permissions: write-all
 
 jobs:
   optimize:
