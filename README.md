@@ -211,10 +211,12 @@ Follow these steps to build the website and icons either locally or using <a hre
 <h3>Table of contents</h3>
 <ol>
     <li><a href="#using-gitpod">Using Gitpod to build</a></li>
-    <li><a href="#installation">Installation (Linux/Windows)</a></li>
-    <li><a href="#building-icons">Build the icons</a></li>
-    <li><a href="#build-css">Build the CSS stylesheet</a></li>
-    <li><a href="#web-server">Setting up the web server</a></li>
+    <li><a href="#local-installation">Local Installation (Linux/Windows)</a></li>
+    <ol>
+      <li><a href="#building-icons">Build the icons</a></li>
+      <li><a href="#build-css">Build the CSS stylesheet</a></li>
+      <li><a href="#web-server">Setting up the web server</a></li>
+    </ol>
 </ol>
 
 <h3 id="using-gitpod">Using Gitpod.io</h3>
@@ -222,7 +224,7 @@ Follow these steps to build the website and icons either locally or using <a hre
 
 <a href=https://gitpod.io/#https://github.com/devicons/devicon/tree/develop><img src=https://gitpod.io/button/open-in-gitpod.svg alt="Open in Gitpod"></img></a>
 
-<h3 id="installation">Installation</h3>
+<h3 id="local-installation">Local Installation</h3>
 
 <p><a href=https://github.com/devicons/devicon/fork>Fork</a> the repository and clone the forked repository.</p>
 
