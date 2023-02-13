@@ -5,7 +5,7 @@
   "main": "devicon.min.css",
   "scripts": {
     "build-css": "gulp updateCss && gulp clean",
-    "peek-test": "python3 ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.32.1-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./  --pr_title \"%PR_TITLE%\"",
+    "peek-test": "python3 ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.32.1-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./  --pr_title \"$PR_TITLE\"",
     "build-test": "python3 ./.github/scripts/icomoon_build.py ./.github/scripts/build_assets/geckodriver-v0.32.1-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./",
     "optimize-svg": "gulp optimizeSvg",
     "bump": "gulp bumpVersion",
@@ -35,8 +35,5 @@
     "gulp-svgmin": "^3.0.0",
     "sass": "^1.26.10",
     "yargs": "^17.0.0"
-  },
-  "dependencies": {
-    "selenium": "^2.20.0"
   }
 }
