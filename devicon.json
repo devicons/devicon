@@ -3734,13 +3734,16 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
-        "color": "#5849be",
+        "color": "#4000bf",
         "aliases": []
     },
     {
