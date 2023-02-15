@@ -4710,7 +4710,7 @@
         },
         "color": "#d00000",
         "aliases": []
-    },    
+    },
     {
         "name": "kibana",
         "altnames": [],
@@ -8427,11 +8427,15 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#F58025",
