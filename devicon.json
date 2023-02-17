@@ -4090,6 +4090,32 @@
         "aliases": []
     },
     {
+        "name": "insomnia",
+        "altnames": [
+            "Insomnia Rest Client"
+        ],
+        "tags": [
+            "open-source",
+            "Rest API",
+            "Soap API",
+            "JSON-XML"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4000bf",
+        "aliases": []
+    },
+    {
         "name": "intellij",
         "altnames": [
             "intellijidea"
