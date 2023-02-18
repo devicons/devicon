@@ -11,16 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Python v3.8
-        uses: actions/setup-python@v2
-        with: 
-          python-version: 3.8
-
-      - name: Install dependencies 
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r ./.github/scripts/requirements.txt
-          
       - name: Save the PR number in an artifact
         shell: bash
         env:
