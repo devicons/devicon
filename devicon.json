@@ -3913,6 +3913,35 @@
         "aliases": []
     },
     {
+        "name": "homebrew",
+        "altnames": [],
+        "tags": [
+            "package",
+            "manager",
+            "linux",
+            "apple",
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fbb040",
+        "aliases": []
+    },
+    {
         "name": "html5",
         "altnames": [
             "hypertextmarkdownlanguage5"
