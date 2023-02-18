@@ -18,10 +18,15 @@ def main():
     try:
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
+        devicon_err_msg = []
+        #First check if devicon.json is sorted
+        if sorted(all_icons, key=lambda d: d['name']) != all_icons:
+            devicon_err_msg.append(f"devicon.json is not sorted correctly.\nPlease make sure that your icon is added in the `devicon.json` file at the correct alphabetic position\nas seen here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60")
+
         # get only the icon object that has the name matching the pr title
         filtered_icon = util.find_object_added_in_pr(all_icons, args.pr_title)
         print("Checking devicon.json object: " + str(filtered_icon))
-        devicon_err_msg = check_devicon_object(filtered_icon)
+        devicon_err_msg.append(check_devicon_object(filtered_icon))
 
         # check the file names
         filename_err_msg = ""
@@ -40,8 +45,8 @@ def main():
             svg_err_msg = check_svgs(svgs, filtered_icon)
 
         err_msg = []
-        if devicon_err_msg != "":
-            err_msg.append(devicon_err_msg)
+        if devicon_err_msg != []:
+            err_msg.extend(devicon_err_msg)
 
         if filename_err_msg != "":
             err_msg.append(filename_err_msg)
