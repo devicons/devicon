@@ -4105,6 +4105,32 @@
         "aliases": []
     },
     {
+        "name": "insomnia",
+        "altnames": [
+            "Insomnia Rest Client"
+        ],
+        "tags": [
+            "open-source",
+            "Rest API",
+            "Soap API",
+            "JSON-XML"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4000bf",
+        "aliases": []
+    },
+    {
         "name": "intellij",
         "altnames": [
             "intellijidea"
@@ -4725,7 +4751,7 @@
         },
         "color": "#d00000",
         "aliases": []
-    },    
+    },
     {
         "name": "kibana",
         "altnames": [],
@@ -8426,6 +8452,35 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "stackoverflow",
+        "altnames": [
+            "Stack Overflow"
+        ],
+        "tags": [
+            "website",
+            "development",
+            "community"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#F58025",
+        "aliases": []
     },
     {
         "name": "stata",
