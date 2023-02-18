@@ -1,6 +1,6 @@
 name: Bug Report
-description: Report a bug/issue that you found in the SVGs, CSS files, etc.
-title: '[BUG] <bug name>'
+description: Report a bug/issue that you found in the SVGs, CSS files, or any other bug you encounter.
+title: '[BUG]: bug name'
 labels: [bug]
 body:
   - type: markdown
@@ -18,7 +18,7 @@ body:
     id: description
     attributes:
       label: Bug description
-      description: Short description of the bug that you found. Provide images/code if applicable.
+      description: Short description of the bug. Provide images/code if applicable.
     validations:
       required: true
 

@@ -1,6 +1,6 @@
 name: Icon Request
-description: Requesting a new icon or changes to an existing icon
-title: '[ICON REQUEST]: <icon name>'
+description: Request a new icon, or changes to an existing icon
+title: '[ICON REQUEST]: icon name'
 labels: ["request:icon"]
 body:
   - type: markdown
@@ -31,7 +31,30 @@ body:
       required: true
 
   - type: textarea
+    id: icons
+    attributes:
+      label: Icon links and previews
+      description: | 
+        Provide previews and links to official icons (preferably SVG's). 
+        *If there are no offical icons, or if you feel unofficial ones should be used instead, please add them here.*
+        
+        Example:
+        ```md
+        #### jule-original
+        <img alt="Git" width="100px" src="https://raw.githubusercontent.com/julelang/resources/6b1f4e68a8258435d87f29b9b2206b20a321f54e/jule.svg" ></img>
+        https://github.com/julelang/resources/blob/main/jule.svg
+        ```
+      value: |
+        #### iconname-version-name
+        <img width="100px" src="previewable_link_to_icon" ></img>
+        link_to_icon
+    validations:
+      required: true
+
+  - type: textarea
     id: extrainformation
     attributes:
       label: Additional information
-      description: Is there anything else we should know about this icon?
+      description: |
+        Is there anything else we should know about this icon?
+        Recommended tags, altnames, and color to be added to [`devicon.json`](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60) can also be added here

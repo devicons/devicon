@@ -1,6 +1,6 @@
 name: Feature Request
 description: Requesting a new feature or changes to an existing feature
-title: '[FEATURE REQUEST] <feature name>'
+title: '[FEATURE REQUEST]: feature name'
 labels: [enhancement]
 body:
   - type: markdown
@@ -9,16 +9,24 @@ body:
 
   - type: checkboxes
     attributes:
-      label: I have searched through the issues and didn't find my problem.
+      label: "I have searched through the issues and didn't find my problem."
       options:
         - label: Confirm
           required: true
 
   - type: textarea
-    id: currentproblem
+    id: description
     attributes:
-      label: Problem
-      description: Tell us about the problem and its negative impacts.
+      label: Description
+      description: Write down a detailed description of the feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this change important to you? How would you use it? How can it benefit other users?
     validations:
       required: true
 
