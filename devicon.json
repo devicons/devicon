@@ -1092,6 +1092,34 @@
         "aliases": []
     },
     {
+        "name": "browserstack",
+        "altnames": [],
+        "tags": [
+            "website",
+            "app",
+            "testing",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#0070f0",
+        "aliases": []
+    },
+    {
         "name": "bulma",
         "altnames": [
             "bulmacss"
