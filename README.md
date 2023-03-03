@@ -232,11 +232,13 @@ Follow these steps to build the website and icons either locally or using <a hre
 git clone https://github.com/<your-github-username>/devicon.git
 ```
 
-<p>In case you don't have Git installed, check the <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official guide</a> to install Git on your operating system.</p>
+> **Note**
+> In case you don't have Git installed, check the <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official guide</a> to install Git on your operating system.
 
 <h4>Install all the necessary NPM dependencies</h4>
 
-<p>In case you don't have NPM installed, check this <a href=https://kinsta.com/blog/how-to-install-node-js/><b>ultimate guide</b></a> on installing Node.js and NPM. These tools are required in order to build Devicon properly.<p>
+> **Note**
+> In case you don't have NPM installed, check this <a href=https://kinsta.com/blog/how-to-install-node-js/><b>ultimate guide</b></a> on installing Node.js and NPM. These tools are required in order to build Devicon properly.
 
 ```bash
 npm install
