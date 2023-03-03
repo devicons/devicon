@@ -40,7 +40,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
 
     // background color related stuff
     // default is the default site background color
-    $scope.DEFAULT_BACKGROUND = "#60be86";
+    $scope.DEFAULT_BACKGROUND = "#3D9561";
     $scope.fontBackground = $scope.DEFAULT_BACKGROUND;
     $scope.svgBackground = $scope.DEFAULT_BACKGROUND;
 
