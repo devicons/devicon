@@ -85,7 +85,7 @@
     also available via <a href=https://www.jsdelivr.com/package/npm/devicon>CDN</a>), or by <a href=#building-devicon>building Devicon</a> yourself.
 </p>
 
-<h4 id="getting-started-font">Use the <code>devicon</code> font (recommended)</h4>
+<h3 id="getting-started-font">Use the <code>devicon</code> font (recommended)</h3>
 <p>
     You can install devicon as a dependency to your project either with <code>npm</code> or <code>yarn</code>:
 </p>
@@ -130,7 +130,7 @@ yarn add devicon
     An alternate way to use <code>devicon</code> is by copy/pasting the raw SVG code
     to your project.
 </p>
-<h4 id="getting-started-svg">Copy/paste SVG code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">SVG folder</a> or the <a href="https://devicon.dev">project page</a>):</h4>
+<h3 id="getting-started-svg">Copy/paste SVG code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">SVG folder</a> or the <a href="https://devicon.dev">project page</a>):</h3>
 
 ```html
 <!--  for devicon plain version -->
@@ -211,20 +211,23 @@ Follow these steps to build the website and icons either locally or using <a hre
 <h3>Table of contents</h3>
 <ol>
     <li><a href="#using-gitpod">Using Gitpod to build</a></li>
-    <li><a href="#local-installation">Local Installation (Linux/Windows)</a></li>
+    <li><a href="#local-installation">Local Installation</a></li>
     <ol>
+      <li><a href="#install-dependencies">Install dependencies</a></li>
       <li><a href="#building-icons">Build the icons</a></li>
       <li><a href="#build-css">Build the CSS stylesheet</a></li>
       <li><a href="#web-server">Setting up the web server</a></li>
     </ol>
 </ol>
 
-<h3 id="using-gitpod">Using Gitpod.io</h3>
+<h2 id="using-gitpod">Using Gitpod.io</h2>
 <p>By using <a href=https://www.gitpod.io)>Gitpod.io</a>, you can easily build the icons and install the<br>required dependencies in one single click. No extra setup is required.</p>
 
 <a href=https://gitpod.io/#https://github.com/devicons/devicon/tree/develop><img src=https://gitpod.io/button/open-in-gitpod.svg alt="Open in Gitpod"></img></a>
 
-<h3 id="local-installation">Local Installation</h3>
+<h2 id="local-installation">Local Installation</h3>
+
+<h3 id="install-dependencies">Install dependencies</h3>
 
 <p><a href=https://github.com/devicons/devicon/fork>Fork</a> the repository and clone the forked repository.</p>
 
@@ -235,41 +238,25 @@ git clone https://github.com/<your-github-username>/devicon.git
 > **Note**
 > In case you don't have Git installed, check the <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official guide</a> to install Git on your operating system.
 
-<h4>Install all the necessary NPM dependencies</h4>
-
-> **Note**
-> In case you don't have NPM installed, check this <a href=https://kinsta.com/blog/how-to-install-node-js/><b>ultimate guide</b></a> on installing Node.js and NPM. These tools are required in order to build Devicon properly.
+<h3>Install all the necessary NPM dependencies</h3>
 
 ```bash
 npm install
 ```
 
-<h4>Installing Mozilla Firefox</h4>
+> **Note**
+> In case you don't have NPM installed, check this <a href=https://kinsta.com/blog/how-to-install-node-js/><b>ultimate guide</b></a> on installing Node.js and NPM. These tools are required in order to build Devicon properly.
 
-<p>Install on Linux-based systems using <code>sudo</code></p>
+### Install Firefox
+https://www.mozilla.org/en-US/firefox/new/
 
-```bash
-sudo apt-get install firefox
-```
+### Install Python 3.8
+https://www.python.org/downloads/
 
-<p>Install Mozilla Firefox on Windows: https://support.mozilla.org/en-US/kb/how-install-firefox-windows</p>
+> **Note**
+> Make sure your Python install includes [pip](https://pypi.org/project/pip/)
 
-<h4>Installing Python3</h4>
-
-<p>Install Python3 using the <code>sudo</code> command.</p>
-
-```bash
-sudo apt-get install python3
-```
-
-<p>Install <a href="https://www.python.org/downloads/release/python-3816/">Python 3.8.16</a>. Make sure PIP is installed as well.
-</br>
-For a more detailed guide on installing Python, check <a href="https://www.digitalocean.com/community/tutorials/install-python-windows-10">this tutorial</a> built by the DigitalOcean community.</p>
-
-<h4>Setting up Selenium</h4>
-
-<p>Install Selenium in both Linux-based and Windows sytems.</p>
-
+### Install Selenium
 ```bash
 python3 -m pip install --upgrade pip && pip install selenium==4.1.0 requests==2.25.1
 ```
@@ -280,14 +267,10 @@ python3 -m pip install --upgrade pip && pip install selenium==4.1.0 requests==2.
 Usually, this is done on each release, but you can have a sneak peek before a release.</p>
 
 ```bash
+#linux
 npm run build-icons
-```
 
-<b>Please note that this command only works for Linux-based systems.
-<br>
-If you're on Windows, run the command directly with Python using the Windows Geckodriver.</b>
-
-```bash
+#windows
 python3 ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_assets/geckodriver-v0.32.1-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./ --headless
 ```
 
