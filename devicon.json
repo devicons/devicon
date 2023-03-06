@@ -1092,6 +1092,34 @@
         "aliases": []
     },
     {
+        "name": "browserstack",
+        "altnames": [],
+        "tags": [
+            "website",
+            "app",
+            "testing",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#0070f0",
+        "aliases": []
+    },
+    {
         "name": "bulma",
         "altnames": [
             "bulmacss"
@@ -3109,14 +3137,29 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#ffcfab",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "gentoo",
@@ -3913,6 +3956,35 @@
         "aliases": []
     },
     {
+        "name": "homebrew",
+        "altnames": [],
+        "tags": [
+            "package",
+            "manager",
+            "linux",
+            "apple",
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fbb040",
+        "aliases": []
+    },
+    {
         "name": "html5",
         "altnames": [
             "hypertextmarkdownlanguage5"
@@ -4087,6 +4159,32 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "insomnia",
+        "altnames": [
+            "Insomnia Rest Client"
+        ],
+        "tags": [
+            "open-source",
+            "Rest API",
+            "Soap API",
+            "JSON-XML"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4000bf",
         "aliases": []
     },
     {
@@ -8435,6 +8533,35 @@
         ]
     },
     {
+        "name": "stackoverflow",
+        "altnames": [
+            "Stack Overflow"
+        ],
+        "tags": [
+            "website",
+            "development",
+            "community"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#F58025",
+        "aliases": []
+    },
+    {
         "name": "stata",
         "altnames": [],
         "tags": [
@@ -9740,6 +9867,34 @@
         },
         "color": "#07c3f2",
         "aliases": []
+    },
+    {
+        "name": "windows11",
+        "altnames": [],
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#0078d4",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "windows8",
