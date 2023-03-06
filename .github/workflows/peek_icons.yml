@@ -41,7 +41,7 @@ jobs:
         shell: cmd
         run: >
           python ./.github/scripts/icomoon_peek.py 
-          ./.github/scripts/build_assets/geckodriver-v0.30.0-win64/geckodriver.exe ./icomoon.json 
+          ./.github/scripts/build_assets/geckodriver-v0.32.2-win64/geckodriver.exe ./icomoon.json 
           ./devicon.json ./icons ./ --headless "%PR_TITLE%"
 
       - name: Upload the err messages (created by icomoon_peek.py)
