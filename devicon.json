@@ -7158,6 +7158,23 @@
         "aliases": []
     },
     {
+        "name": "pypi",
+        "tags": [
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#009fe3",
+        "aliases": []
+    },
+    {
         "name": "pytest",
         "altnames": [],
         "tags": [
