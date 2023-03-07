@@ -7137,6 +7137,27 @@
         "aliases": []
     },
     {
+        "name": "pypi",
+        "tags": [
+            "python"
+        ],
+        "versions": {
+            "svg": [ 
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark" 
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#009fe3",
+        "aliases": []  
+    },
+    {
         "name": "pyscript",
         "altnames": [],
         "tags": [
@@ -7155,23 +7176,6 @@
             ]
         },
         "color": "#fda703",
-        "aliases": []
-    },
-    {
-        "name": "pypi",
-        "tags": [
-            "python"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#009fe3",
         "aliases": []
     },
     {
