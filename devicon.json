@@ -7138,6 +7138,9 @@
     },
     {
         "name": "pypi",
+        "altnames": [
+            "Python Package Index"
+        ],
         "tags": [
             "python"
         ],
