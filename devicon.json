@@ -6798,7 +6798,9 @@
     },
     {
         "name": "pnpm",
-        "altnames": [],
+        "altnames": [
+            "performant npm"
+        ],
         "tags": [
             "package",
             "manager",
