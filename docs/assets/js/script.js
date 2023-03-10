@@ -102,7 +102,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.selectedSvgIndex = 0;
 
     // Computes miscellaneous data
-    $scope.avgFonts = ($scope.totalFonts / $scope.icons.length).toFixed(2); // Avg number of fonts and SVGs combined
+    $scope.avgFonts = $scope.totalFonts / $scope.icons.length // Avg number of fonts and SVGs combined
 
     /*------ End of "Re-format devicon.json" ------*/
   });
