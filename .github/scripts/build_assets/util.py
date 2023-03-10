@@ -75,3 +75,7 @@ valid_svg_filename_pattern = re.compile(r"-(original|plain|line)(-wordmark)?\.sv
 def is_svg_name_valid(filename: str):
     return valid_svg_filename_pattern.search(filename) is not None
 
+valid_svg_version_pattern = re.compile(r"^(original|plain|line)(-wordmark)?$")
+def is_svg_version_valid(version):
+    return valid_svg_version_pattern.search(version) is not None
+
