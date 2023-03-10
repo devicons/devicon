@@ -7677,6 +7677,17 @@
         "aliases": []
     },
     {
+        "name": "restapi",
+        "altnames": [],
+        "tags": ["server", "api"],
+        "versions": {
+            "svg": ["original", "line"],
+            "font": ["original", "line"]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "rider",
         "altnames": [],
         "tags": [
