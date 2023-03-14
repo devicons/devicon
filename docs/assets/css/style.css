@@ -464,3 +464,67 @@ input[type='color']:hover {
 footer {
   margin-top: 6rem;
   text-align: center; }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+
+
+  }
+
+  .dark-mode .cde {
+    background-color: #1e1e1e;
+    color: white;
+  }
+
+  .dark-mode .cde-ind {
+    color: white;
+  }
+
+  .dark-mode .cde-com {
+    color: white;
+    opacity: .5;
+  }
+
+  .dark-mode .search input {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+
+  .dark-mode .search input::placeholder {
+    color: white;
+  }
+
+  .dark-mode .search input:focus {
+    border-bottom: 2px solid white;
+  }
+
+  .dark-mode .search input:focus::placeholder {
+    color: white;
+  }
+
+  
+  .dark-mode {
+    --primaryColor: #0d1410;
+    --primaryColorDark: #4cd7d7;
+    --primaryColorLight: #dca2a2;
+    --grey: #4c6857;
+  }
+
+  .dark-mode .main{
+    background-color: #868181;
+  }
+
+ .container .clearfix .darkbutton{
+      margin-top: 10px;
+      font-size: 10px;
+      color:black;
+      display: inline;  
+  }
+
+  .darkbutton .image{
+     width:30px;
+     height:30px;    
+     display: inline;  
+    
+}

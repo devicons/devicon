@@ -55,6 +55,14 @@
 
   <div class="container">
     <header class="clearfix">
+      <br>
+      <div class="darkbutton">
+        <button onclick="darkMode()">
+          <img src="/devicon/docs/assets/img/moon.svg" class="image">
+         <div style="font-size:x-small ;" ><b>Dark Mode</b>
+        </div>
+             </button>
+      </div>
       <h1>Devicon <span><a href="https://github.com/devicons/devicon/releases">{{ latestReleaseTagging }}</a></span></h1>
       <h2>Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.</h2>
       <i>*Please read the legal conditions of using the logos here at the bottom of this header</i>
@@ -240,6 +248,14 @@
     ga('create', 'UA-45588276-4', 'devicon.fr');
     ga('send', 'pageview');
   </script>
+
+<script>
+  function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    
+  }
+</script>
 </body>
 
 </html>
