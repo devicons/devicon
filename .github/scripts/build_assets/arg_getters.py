@@ -36,7 +36,7 @@ def get_selenium_runner_args(has_token=True, peek_mode=False):
     if peek_mode:
         parser.add_argument("pr_title",
                             help="The title of the PR that we are peeking at")
-    if has_token != False:
+    if not has_token:
         parser.add_argument("token",
                             help="The GitHub token to access the GitHub REST API.")
 
