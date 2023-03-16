@@ -7341,7 +7341,9 @@
             "Read The Docs"
         ],
         "tags": [
-            "documentation"
+            "documentation",
+            "python",
+            "open-source"
         ],
         "versions": {
             "svg": [
