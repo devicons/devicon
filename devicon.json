@@ -8967,6 +8967,24 @@
         "aliases": []
     },
     {
+        "name": "thymeleaf",
+        "altnames": [],
+        "tags": [
+            "java",
+            "template",
+            "engine",
+            "server",
+            "side"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ]
+        },
+        "color": "#005f0f",
+        "aliases": []
+    },
+    {
         "name": "titaniumsdk",
         "altnames": [],
         "tags": [
