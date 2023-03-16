@@ -1092,6 +1092,34 @@
         "aliases": []
     },
     {
+        "name": "browserstack",
+        "altnames": [],
+        "tags": [
+            "website",
+            "app",
+            "testing",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#0070f0",
+        "aliases": []
+    },
+    {
         "name": "bulma",
         "altnames": [
             "bulmacss"
@@ -3109,14 +3137,29 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#ffcfab",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "gentoo",
@@ -3910,6 +3953,35 @@
             ]
         },
         "color": "#bcae79",
+        "aliases": []
+    },
+    {
+        "name": "homebrew",
+        "altnames": [],
+        "tags": [
+            "package",
+            "manager",
+            "linux",
+            "apple",
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fbb040",
         "aliases": []
     },
     {
