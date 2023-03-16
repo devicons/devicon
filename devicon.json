@@ -8034,13 +8034,13 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
-                "plain-wordmark",
-                "line-wordmark"
+                "original",
+                "plain",
+                "line"
             ],
             "font": [
-                "plain-wordmark",
-                "line-wordmark"
+                "plain",
+                "line"
             ]
         },
         "color": "#f89939",
