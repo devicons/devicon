@@ -1357,6 +1357,28 @@
         "aliases": []
     },
     {
+        "name": "chakraui",
+        "altnames": [],
+        "tags": [
+            "ui",
+            "modular",
+            "component",
+            "library",
+            "react"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#52c8c5",
+        "aliases": []
+    },
+    {
         "name": "chrome",
         "altnames": [
             "googlechrome"
