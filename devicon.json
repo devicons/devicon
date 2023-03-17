@@ -9020,6 +9020,9 @@
             "svg": [
                 "original",
                 "plain"
+            ],
+            "font": [
+                "plain"
             ]
         },
         "color": "#005f0f",
