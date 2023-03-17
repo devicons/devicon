@@ -8978,7 +8978,8 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ]
         },
         "color": "#005f0f",
