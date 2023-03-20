@@ -2395,7 +2395,9 @@
     },
     {
         "name": "dreamweaver",
-        "altnames": [],
+        "altnames": [
+            "Adobe Dreamweaver"
+        ],
         "tags": [
             "web-development",
             "editor",
