@@ -2456,6 +2456,27 @@
         "aliases": []
     },
     {
+        "name": "ecto",
+        "altnames": [],
+        "tags": [
+            "data",
+            "elixir",
+            "integration",
+            "query"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#77bf43",
+        "aliases": []
+    },
+    {
         "name": "elasticsearch",
         "altnames": [],
         "tags": [
