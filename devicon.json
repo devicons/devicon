@@ -1358,13 +1358,12 @@
     },
     {
         "name": "chakraui",
-        "altnames": [],
+        "altnames": [
+            "chakra ui"
+        ],
         "tags": [
             "ui",
-            "modular",
-            "component",
-            "library",
-            "react"
+            "library"
         ],
         "versions": {
             "svg": [
