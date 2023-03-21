@@ -9010,11 +9010,10 @@
         "name": "thymeleaf",
         "altnames": [],
         "tags": [
-            "java",
-            "template",
             "engine",
-            "server",
-            "side"
+            "html",
+            "java",
+            "server"
         ],
         "versions": {
             "svg": [
