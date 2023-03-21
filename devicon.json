@@ -2467,14 +2467,21 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "original",
+                "plain-wordmark"
             ]
         },
         "color": "#77bf43",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "elasticsearch",
