@@ -2394,6 +2394,31 @@
         "aliases": []
     },
     {
+        "name": "dreamweaver",
+        "altnames": [
+            "Adobe Dreamweaver"
+        ],
+        "tags": [
+            "web-development",
+            "editor",
+            "software",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#470137",
+        "aliases": []
+    },
+    {
         "name": "dropwizard",
         "altnames": [],
         "tags": [
