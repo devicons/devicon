@@ -38,6 +38,9 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.icons = [];
     $scope.selectedIcon = {};
 
+    // Miscellaneous stuff
+    $scope.totalFonts = 0; // Total fonts and SVGs combined
+
     // background color related stuff
     // default is the default site background color
     $scope.DEFAULT_BACKGROUND = "#3D9561";
@@ -60,6 +63,8 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
         font: devicon.versions.font,
         main: ""
       };
+
+      $scope.totalFonts += devicon.versions.font.length + devicon.versions.svg.length;
 
       // Loop through devicon.json icons
       for (var i = 0; i < devicon.versions.font.length; i++) {
@@ -95,6 +100,9 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.selectedSvgIcon = $scope.selectSvg($scope.icons[0].svg[0], 0);
     $scope.selectedFontIndex = 0;
     $scope.selectedSvgIndex = 0;
+
+    // Computes miscellaneous data
+    $scope.avgFonts = $scope.totalFonts / $scope.icons.length // Avg number of fonts and SVGs combined
 
     /*------ End of "Re-format devicon.json" ------*/
   });

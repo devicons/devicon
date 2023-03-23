@@ -17,6 +17,9 @@
     <a href="https://github.com/devicons/devicon/stargazers">
         <img alt="GitHub repository stars" src="https://img.shields.io/github/stars/devicons/devicon?color=%2360be86&label=github%20stars&style=for-the-badge">
     </a>
+    <a href="https://devicon.dev/">
+        <img alt="Registered logos" src="https://img.shields.io/github/directory-file-count/devicons/devicon/icons?color=%2360be86&label=registered%20logos&style=for-the-badge">
+    </a>
 </p>
 <br />
 <div align="center">

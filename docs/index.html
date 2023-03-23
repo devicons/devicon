@@ -203,10 +203,17 @@
 
       <div class="search">
         <input type="text" placeholder="Search for icons" ng-model="search">
+        <input type="text" class="result" value="{{ filtered.length }}" title="Number of icons in the current search" disabled>
       </div>
 
+      <ul class="computed-data">
+        <li title="The number of icons.&#xA;For example: devicon">Total icons: {{ icons.length }}</li>
+        <li title="The number of icon versions.&#xA;For example: devicon-plain">Total icon version: {{ totalFonts }}</li>
+        <li title="The number of icon versions per icon.&#xA;Calculated by dividing icon version by icons: {{ avgFonts.toFixed(2) }}">Average icon versions per icon: {{ avgFonts.toFixed(0) }}</li>
+      </ul>
+
       <ul class="cbp-ig-grid">
-        <li ng-repeat="icon in icons | filter:search">
+        <li data-ng-repeat="icon in filtered = (icons | filter:search)">
           <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
             <i class="cbp-ig-icon devicon-{{icon.main}}"></i>
             <h3 class="cbp-ig-title">{{icon.name}}</h3>
