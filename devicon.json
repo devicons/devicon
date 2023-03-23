@@ -1,9 +1,14 @@
 [
     {
-        "name": "zsh",
+        "name": "aarch64",
+        "altnames": [
+            "arm64"
+        ],
         "tags": [
-            "shell",
-            "command"
+            "architecture",
+            "programming",
+            "language",
+            "ARM"
         ],
         "versions": {
             "svg": [
@@ -14,28 +19,6 @@
                 "plain"
             ]
         },
-        "color": "#060708",
-        "aliases": []
-    },
-    {
-        "name": "aarch64",
-        "altnames": [
-            "arm64"
-        ],
-        "tags": [
-            "architecture",
-            "programming",
-            "language",
-            "ARM"],
-            "versions": {
-                "svg": [
-                    "original",
-                    "plain"
-                ],
-                "font": [
-                    "plain"
-                ]
-            },
         "color": "#16358C",
         "aliases": []
     },
@@ -10309,5 +10292,24 @@
                 "alias": "plain"
             }
         ]
-    }
+    },
+    {
+        "name": "zsh",
+        "altnames": [],
+        "tags": [
+            "shell",
+            "command"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#060708",
+        "aliases": []
+  }
 ]
