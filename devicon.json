@@ -7149,11 +7149,12 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark" 
+                "plain-wordmark"
             ],
-            "font": []
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#3775a9",
         "aliases": []  
