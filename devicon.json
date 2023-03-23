@@ -6828,18 +6828,18 @@
         ],
         "tags": [
             "package",
-            "manager",
+            "manager"
         ],
         "versions": {
             "svg": [
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark",
+                "plain-wordmark"
             ]
         },
         "color": "#f9ad00",
