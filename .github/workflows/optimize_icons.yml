@@ -1,6 +1,7 @@
 name: Optimize icons
 on:
   - pull_request
+  - pull_request_target
   - workflow_dispatch
 permissions: write-all
 
@@ -11,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.head_ref }}
+          # ref: ${{ github.event.pull_request.head.sha }}
 
       - uses: ericcornelissen/svgo-action@v3
         with:
