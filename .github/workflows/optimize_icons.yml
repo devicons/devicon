@@ -9,6 +9,8 @@ jobs:
     name: Optimize icons with SVGO
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - uses: ericcornelissen/svgo-action@v3
         with:
