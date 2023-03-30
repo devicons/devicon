@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Optimize icons with SVGO
     steps:
+      - name: Print message
+        run: echo "Optimizing icons with SVGO..."
+
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
