@@ -9628,6 +9628,7 @@
     },
 	{
 		"name": "vitess",
+        "altnames": [],
 		"tags": [
 			"sharding",
 			"databases",
