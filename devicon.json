@@ -9626,26 +9626,6 @@
         "color": "#68217A",
         "aliases": []
     },
-	{
-		"name": "vitess",
-        "altnames": [],
-		"tags": [
-			"sharding",
-			"databases",
-			"mysql"
-		],
-		"versions": {
-			"svg": [
-				"original",
-				"plain"
-			],
-			"font": [
-				"plain"
-			]
-		},
-		"color": "#283593",
-		"aliases": []
-	},
     {
         "name": "vite",
         "altnames": [],
@@ -9700,6 +9680,26 @@
         "color": "#ffdd35",
         "aliases": []
     },
+	{
+		"name": "vitess",
+        "altnames": [],
+		"tags": [
+			"sharding",
+			"databases",
+			"mysql"
+		],
+		"versions": {
+			"svg": [
+				"original",
+				"plain"
+			],
+			"font": [
+				"plain"
+			]
+		},
+		"color": "#283593",
+		"aliases": []
+	},
     {
         "name": "vscode",
         "altnames": [
