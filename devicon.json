@@ -7533,6 +7533,24 @@
         "color": "#68217A",
         "aliases": []
     },
+	{
+		"name": "vitess",
+		"tags": [
+			"sharding",
+			"databases",
+			"mysql"
+		],
+		"versions": {
+			"svg": [
+				"original",
+				"plain"
+			],
+			"font": [
+				"plain"
+			]
+		},
+		"color": "#283593"
+	},
     {
         "name": "vscode",
         "altnames": [
