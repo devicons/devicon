@@ -9642,7 +9642,8 @@
 				"plain"
 			]
 		},
-		"color": "#283593"
+		"color": "#283593",
+		"aliases": []
 	},
     {
         "name": "vite",
