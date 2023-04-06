@@ -516,15 +516,15 @@ footer {
   }
 
  .container .clearfix .darkbutton{
-      margin-top: 10px;
+      margin-top: 5px;
       font-size: 10px;
       color:black;
       display: inline;  
   }
 
   .darkbutton .image{
-     width:30px;
-     height:30px;    
+     width:70px;
+     height:70px;    
      display: inline;  
     
 }
