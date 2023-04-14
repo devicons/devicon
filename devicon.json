@@ -1092,6 +1092,34 @@
         "aliases": []
     },
     {
+        "name": "browserstack",
+        "altnames": [],
+        "tags": [
+            "website",
+            "app",
+            "testing",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#0070f0",
+        "aliases": []
+    },
+    {
         "name": "bulma",
         "altnames": [
             "bulmacss"
@@ -2366,6 +2394,31 @@
         "aliases": []
     },
     {
+        "name": "dreamweaver",
+        "altnames": [
+            "Adobe Dreamweaver"
+        ],
+        "tags": [
+            "web-development",
+            "editor",
+            "software",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#470137",
+        "aliases": []
+    },
+    {
         "name": "dropwizard",
         "altnames": [],
         "tags": [
@@ -2426,6 +2479,34 @@
         },
         "color": "#2c2255",
         "aliases": []
+    },
+    {
+        "name": "ecto",
+        "altnames": [],
+        "tags": [
+            "data",
+            "elixir",
+            "integration",
+            "query"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#77bf43",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "elasticsearch",
@@ -3109,14 +3190,29 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#ffcfab",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "gentoo",
@@ -3910,6 +4006,35 @@
             ]
         },
         "color": "#bcae79",
+        "aliases": []
+    },
+    {
+        "name": "homebrew",
+        "altnames": [],
+        "tags": [
+            "package",
+            "manager",
+            "linux",
+            "apple",
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fbb040",
         "aliases": []
     },
     {
@@ -7469,6 +7594,40 @@
         ]
     },
     {
+        "name": "readthedocs",
+        "altnames": [
+            "Read The Docs"
+        ],
+        "tags": [
+            "documentation",
+            "python",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line"
+            ]
+        },
+        "color": "#32322A",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "realm",
         "altnames": [],
         "tags": [
@@ -7946,6 +8105,46 @@
         },
         "color": "#173aee",
         "aliases": []
+    },
+    {
+        "name": "scikitlearn",
+        "altnames": [
+            "scikit-learn",
+            "scikit",
+            "sklearn"
+        ],
+        "tags": [
+            "machine-learning",
+            "python",
+            "tool",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#f89939",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "sdl",
