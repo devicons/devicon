@@ -8427,16 +8427,16 @@
             "frontend"
         ],
         "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
+          "svg": [
+              "original",
+              "original-wordmark",
+              "plain",
+              "plain-wordmark"
+          ],
+          "font": [
+              "plain",
+              "plain-wordmark"
+          ]
         },
         "color": "#2c4f7c",
         "aliases": []
