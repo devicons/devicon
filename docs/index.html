@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" ng-app="devicon" ng-controller="IconListCtrl">
 <!--<![endif]-->
 
 <head>
@@ -31,6 +31,7 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="./logos/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" type='text/css' ng-href="{{baseUrl}}devicon.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <meta property="og:title" content="Devicon" />
   <meta property="og:image" content="https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original-wordmark.svg" />
@@ -38,72 +39,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:description" content="Devicon aims to gather all logos representing development languages and tools in one font. 🚀" />
-  <script>
-    /////////////////////////////
-    // Basic helper functions //
-    /////////////////////////////
-    function addCss(href) {
-      var link = document.createElement('link');
-
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = `${href}`;
-
-      document.body.appendChild(link);
-      document.head.appendChild(link);
-    }
-
-    function addImage(src, id, img_class) {
-      var img = document.createElement("img");
-
-      img.src = src;
-      img.alt = "{{selectedIcon.name}}-{{svgVersion}}";
-      img.classList.add(img_class);
-
-      document.getElementById(id).appendChild(img);
-    }
-
-    // Unused. May be useful in the future.
-    function addElement(content, id) {
-      document.getElementById(id).innerHTML = content;
-    }
-
-    ///////////////////////
-    // Path management //
-    /////////////////////
-    var path = '/devicon.min.css';
-    var baseUrl
-  
-    var xhr = new XMLHttpRequest();
-    xhr.open('HEAD', path, false);
-    xhr.send();
-
-    // Make sure the file exists, otherwise, use latest CDN link.
-    if (xhr.status == "404") {
-      baseUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/`;
-    } else {
-      baseUrl = `/`;
-    }
-
-    // Temporary solution.
-    var counter = 0
-    var timer = setInterval(function() {
-          ++counter;
-
-          addCss(`${baseUrl}devicon.min.css`);
-          addImage(`${baseUrl}icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg`, "svg-list", 'svgLogo');
-
-          if (counter == 1) {
-            clearInterval(timer);
-          }
-        }, 0);
-  </script>
 </head>
 
-<body ng-app="devicon" ng-controller="IconListCtrl">
-  <!--[if lt IE 7]>
-  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-  <![endif]-->
+<body>
   <noscript style="color:red; text-align:center;">
     <h1>To use this website, JavaScript needs to be enabled.</h1>
     <p>You can come back when you turn it on though :)</p>
@@ -145,7 +83,7 @@
             </span>
           </p>
           <div class="cde" id='headerLinkCode'>
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"&gt;
+            &lt;link rel="stylesheet" type='text/css' href="{{baseUrl}}devicon.min.css" /&gt;
           </div>
 
           <ul class="icons-list">
@@ -192,13 +130,9 @@
             </span>
           </h4>
           <ul class="icons-list">
-            <li id="svg-list" ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}" ng-style="{'background-color': svgBackground}">
+            <li ng-repeat="svgVersion in selectedIcon.svg" ng-click="selectSvg(svgVersion, $index)" ng-class="{'selected-version' : $index == selectedSvgIndex}" ng-style="{'background-color': svgBackground}">
               <img src="./assets/img/checkerboard.png" ng-style="{'visibility': svgDisplayCheckerboard ? 'visible' : 'hidden'}">
-
-              <!--
-                The image is added in the JS script above. This is needed for the correct location link.
-                <img class='svgLogo' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
-              -->
+              <img class='svgLogo' ng-src="{{baseUrl}}icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{svgVersion}}.svg">
             </li>
           </ul>
           <p>
@@ -209,7 +143,7 @@
             </span>
           </p>
           <div class="cde" id='imgCode'>
-            &lt;img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
+            &lt;img src="{{baseUrl}}icons/{{selectedIcon.name}}/{{selectedIcon.name}}-{{selectedIcon.svg[selectedSvgIndex]}}.svg" /&gt;<br />
           </div>
           <p><i>*To change the size, change the &lt;img&gt;'s <code>`height`</code> and <code>`width`</code>.</i></p>
 

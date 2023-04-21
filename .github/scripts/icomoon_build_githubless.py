@@ -41,13 +41,16 @@ def main():
 
         runner = BuildSeleniumRunner(args.download_path,
             args.geckodriver_path, args.headless, log_output=logfile)
+        print("Building icons...", file=logfile)
         runner.build_icons(args.icomoon_json_path, zip_path,
             icon_svgs, screenshot_folder)
 
+        print("Extracting files...", file=logfile)
         filehandler.extract_files(str(zip_path), args.download_path, logfile)
+        print("Renaming extracted files...", file=logfile)
         filehandler.rename_extracted_files(args.download_path, logfile)
 
-        print("Task completed.", file=logfile)
+        print("Task completed!", file=logfile)
     except TimeoutException as e:
         util.exit_with_err(Exception("Selenium Time Out Error: \n" + str(e)), logfile)
     except Exception as e:

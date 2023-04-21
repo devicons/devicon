@@ -228,6 +228,10 @@ Follow these steps to build the website and icons either locally or using <a hre
 
 <a href=https://gitpod.io/#https://github.com/devicons/devicon/tree/develop><img src=https://gitpod.io/button/open-in-gitpod.svg alt="Open in Gitpod"></img></a>
 
+> **Note**
+> In case some of the commands are not properly ran, you can\
+> follow the steps below and run the same commands on Gitpod.io
+
 <h2 id="local-installation">Local Installation</h3>
 
 <h3 id="install-dependencies">Install dependencies</h3>
@@ -251,18 +255,15 @@ npm install
 > In case you don't have NPM installed, check this <a href=https://kinsta.com/blog/how-to-install-node-js/><b>ultimate guide</b></a> on installing Node.js and NPM. These tools are required in order to build Devicon properly.
 
 <h3>Install Firefox</h3>
-
 https://www.mozilla.org/en-US/firefox/new/
 
 <h3>Install Python 3.8</h3>
-
 https://www.python.org/downloads/
 
 > **Note**
 > Make sure your Python install includes [pip](https://pypi.org/project/pip/)
 
 <h3>Install Selenium</h3>
-
 ```bash
 python3 -m pip install --upgrade pip && pip install selenium==4.1.0 requests==2.25.1
 ```
@@ -306,7 +307,7 @@ npm run dev # Will run on port 8000
 python3 -m http.server <port>
 ```
 
-<p>You're done now! :tada: Your build of Devicons should be available at <code>https://localhost:8000</code>.</p>
+<p>You're done now! :tada: Your build of Devicons should be available at <code>https://localhost:8000</code> (or the desired port).</p>
 
 <br/>
 <div align="center">
