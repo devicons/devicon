@@ -14,7 +14,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   var gitHubPath = 'devicons/devicon';
   var url = 'https://api.github.com/repos/' + gitHubPath + '/tags';
 
-  $scope.latestReleaseTagging = 'master';
+  $scope.latestReleaseTagging = 'latest';
   $http.get(url).success(function (data) {
     if(data.length > 0) {
       $scope.latestReleaseTagging = data[0].name;
@@ -24,7 +24,20 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   });
 
   var versionStr = '@' + $scope.latestReleaseTagging;
-  var baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}${versionStr}/`
+  var baseUrl
+
+  // Make sure one of the files exist, otherwise, use fallback link.
+  var path = '/devicon.json';
+  var xhr = new XMLHttpRequest();
+  xhr.open('HEAD', path, false);
+  xhr.send();
+  if (xhr.status == "404") {
+    baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}${versionStr}/`
+  } else {
+    baseUrl = `/`;
+  }
+
+  $scope.baseUrl = baseUrl
 
   // Get devicon.json
   $http.get(baseUrl + 'devicon.json').success(function(data) {
