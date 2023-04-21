@@ -2,7 +2,7 @@ name: "Code Scanning - Action"
 
 on:
   push:
-    branches: [master]
+    branches: [master, develop]
   pull_request:
     branches: [master, develop]
   schedule:
