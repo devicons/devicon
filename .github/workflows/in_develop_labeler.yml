@@ -5,7 +5,7 @@ on:
 jobs:
   label:
     name: Label Issue In Develop
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v3
