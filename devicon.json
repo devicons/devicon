@@ -1,5 +1,33 @@
 [
     {
+        "name": "trpc",
+        "tags": [
+            "typescript",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3398db",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "adonisjs",
         "tags": [
             "nodejs",
@@ -5777,5 +5805,6 @@
         "color": "#294172", 
         "aliases": [] 
     }
+
 
 ]
