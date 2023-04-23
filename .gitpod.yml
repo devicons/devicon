@@ -1,0 +1,22 @@
+image:
+  file: .gitpod.dockerfile
+
+tasks:
+  - name: Setup & build
+    init: chmod +x ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver
+    command: npm install && npm run build-icons
+  - name: Build CSS & run web server
+    init: npm run build-css && npm run dev
+
+github:
+  prebuilds:
+    addBadge: true
+    addComment: false
+    addCheck: true
+    master: true
+    branches: true
+    pullRequestsFromForks: true
+
+ports:
+  - port: 8000
+    onOpen: open-preview

@@ -4,9 +4,9 @@
 @import url(https://fonts.googleapis.com/css?family=Damion);
 :root {
   /* color */
-  --primaryColor: #60be86;
+  --primaryColor: #3D9561;
   --primaryColorDark: #2D804E;
-  --primaryColorLight: #65d693;
+  --primaryColorLight: #4AB475;
   --grey: #4c6857;
 
   /* sizing */
@@ -415,11 +415,29 @@ input[type='color']:hover {
 .main {
   margin: 0 0 0 480px; }
 
-.search {
+.result {
+  max-width: 75px;
+}
+
+.computed-data {
+  color: var(--primaryColor);
+  font-weight: bold;
+  list-style: none;
+  padding: 0;
+  width: 80%;
+  margin: 25px auto;
+  display: flex;
+}
+
+.computed-data li {
+  width: 33.33%;
   text-align: center; }
+
+.search {
+  text-align: center;
+  margin: 4rem 0 1rem 0; }
+
   .search input {
-    width: 300px;
-    margin: 4rem;
     padding: .5rem 1rem;
     border: 0;
     border-bottom: 2px solid var(--primaryColor);
