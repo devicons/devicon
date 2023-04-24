@@ -14,7 +14,7 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   var gitHubPath = 'devicons/devicon';
   var url = 'https://api.github.com/repos/' + gitHubPath + '/tags';
 
-  $scope.latestReleaseTagging = 'master';
+  $scope.latestReleaseTagging = 'latest';
   $http.get(url).success(function (data) {
     if(data.length > 0) {
       $scope.latestReleaseTagging = data[0].name;
@@ -24,7 +24,20 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
   });
 
   var versionStr = '@' + $scope.latestReleaseTagging;
-  var baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}${versionStr}/`
+  var baseUrl
+
+  // Make sure one of the files exist, otherwise, use fallback link.
+  var path = '/devicon.json';
+  var xhr = new XMLHttpRequest();
+  xhr.open('HEAD', path, false);
+  xhr.send();
+  if (xhr.status == "404") {
+    baseUrl = `https://cdn.jsdelivr.net/gh/${gitHubPath}${versionStr}/`
+  } else {
+    baseUrl = `/`;
+  }
+
+  $scope.baseUrl = baseUrl
 
   // Get devicon.json
   $http.get(baseUrl + 'devicon.json').success(function(data) {
@@ -38,9 +51,12 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.icons = [];
     $scope.selectedIcon = {};
 
+    // Miscellaneous stuff
+    $scope.totalFonts = 0; // Total fonts and SVGs combined
+
     // background color related stuff
     // default is the default site background color
-    $scope.DEFAULT_BACKGROUND = "#60be86";
+    $scope.DEFAULT_BACKGROUND = "#3D9561";
     $scope.fontBackground = $scope.DEFAULT_BACKGROUND;
     $scope.svgBackground = $scope.DEFAULT_BACKGROUND;
 
@@ -55,10 +71,13 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
       // New icon format
       var icon = {
         name: devicon.name,
+        altnames: devicon.altnames,
         svg: devicon.versions.svg,
         font: devicon.versions.font,
         main: ""
       };
+
+      $scope.totalFonts += devicon.versions.font.length + devicon.versions.svg.length;
 
       // Loop through devicon.json icons
       for (var i = 0; i < devicon.versions.font.length; i++) {
@@ -94,6 +113,9 @@ devicon.controller('IconListCtrl', function($scope, $http, $compile) {
     $scope.selectedSvgIcon = $scope.selectSvg($scope.icons[0].svg[0], 0);
     $scope.selectedFontIndex = 0;
     $scope.selectedSvgIndex = 0;
+
+    // Computes miscellaneous data
+    $scope.avgFonts = $scope.totalFonts / $scope.icons.length // Avg number of fonts and SVGs combined
 
     /*------ End of "Re-format devicon.json" ------*/
   });
