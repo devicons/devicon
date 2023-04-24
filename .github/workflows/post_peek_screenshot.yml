@@ -109,6 +109,7 @@ jobs:
             1. The number of Glyphs matches the number of SVGs that were selected. 
             2. The icons (second group of pictures) look the same as the SVGs (first group of pictures). 
             3. The icons are of high quality (legible, matches the official logo, etc.)
+            4. A new object is added in the `devicon.json` file at the correct alphabetic position as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)
 
             In case of font issues, it might be caused by Icomoon not accepting strokes in the SVGs.  Check this [doc](https://icomoon.io/#faq/importing) for more details and fix the issues as instructed by Icomoon and update this PR once you are done.
 
@@ -150,9 +151,9 @@ jobs:
 
             Make sure that:
 
-            - Your svgs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#orgGuidelines).
-            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#updateDevicon)
-            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/blob/master/CONTRIBUTING.md#overview)
+            - Your SVGs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/wiki/Organizing-SVGs).
+            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)
+            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/wiki/Overview-on-Submitting-Icons)
 
             I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate. 
 
