@@ -3720,6 +3720,26 @@
         "aliases": []
     },
     {
+        "name": "prisma",
+        "tags": [
+            "orm",
+            "nodejs",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#0c344b",
+        "aliases": []
+    },
+    {
         "name": "processing",
         "tags": [
             "java",
