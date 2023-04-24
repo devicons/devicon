@@ -4886,6 +4886,26 @@
         "aliases": []
     },
     {
+        "name": "trpc",
+        "tags": [
+            "typescript",
+            "typesafe",
+            "api",
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3398db",
+        "aliases": []
+    },
+    {
         "name": "twitter",
         "tags": [
             "auth"
