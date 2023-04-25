@@ -9258,14 +9258,16 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ]
         },
-        "color": "#3398db",
+        "color": "#398ccb",
         "aliases": []
     },
     {
