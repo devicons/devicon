@@ -9249,10 +9249,11 @@
     },
     {
         "name": "trpc",
+        "altnames": [],
         "tags": [
             "typescript",
             "typesafe",
-            "api",
+            "api"
         ],
         "versions": {
             "svg": [
