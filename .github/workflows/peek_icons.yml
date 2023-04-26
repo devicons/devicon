@@ -38,7 +38,6 @@ jobs:
       - name: Run icomoon_peek.py
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: >
           python ./.github/scripts/icomoon_peek.py 
