@@ -9249,7 +9249,9 @@
     },
     {
         "name": "trpc",
-        "altnames": [],
+        "altnames": [
+            "Typescript Remote Procedure Call"
+        ],
         "tags": [
             "typescript",
             "typesafe",
