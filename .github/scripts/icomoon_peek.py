@@ -5,7 +5,7 @@ from build_assets import filehandler, arg_getters, util
 def main():
     runner = None
     try:
-        args = arg_getters.get_selenium_runner_args(peek_mode=True)
+        args = arg_getters.get_selenium_runner_args(has_token=False, peek_mode=True)
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
         # get only the icon object that has the name matching the pr title
