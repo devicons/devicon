@@ -9681,25 +9681,25 @@
         "aliases": []
     },
 	{
-		"name": "vitess",
+        "name": "vitess",
         "altnames": [],
-		"tags": [
-			"sharding",
-			"databases",
-			"mysql"
-		],
-		"versions": {
-			"svg": [
-				"original",
-				"plain"
-			],
-			"font": [
-				"plain"
-			]
-		},
-		"color": "#283593",
-		"aliases": []
-	},
+        "tags": [
+            "sharding",
+            "database",
+            "mysql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#283593",
+        "aliases": []
+    },
     {
         "name": "vscode",
         "altnames": [
