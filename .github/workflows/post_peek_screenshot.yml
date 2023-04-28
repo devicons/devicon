@@ -20,7 +20,7 @@ jobs:
         run: echo $PEEK_STATUS
 
       - name: Download workflow artifact
-        uses: dawidd6/action-download-artifact@v2.26.1
+        uses: dawidd6/action-download-artifact@v2.27.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: peek_icons.yml
