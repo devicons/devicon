@@ -7080,6 +7080,36 @@
         "aliases": []
     },
     {
+        "name": "prisma",
+        "altnames": [],
+        "tags": [
+            "orm",
+            "nodejs",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2D3748",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "processing",
         "altnames": [
             "processingpy"
@@ -9294,6 +9324,32 @@
             ]
         },
         "color": "#23719f",
+        "aliases": []
+    },
+    {
+        "name": "trpc",
+        "altnames": [
+            "Typescript Remote Procedure Call"
+        ],
+        "tags": [
+            "typescript",
+            "javascript",
+            "typesafe",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#398ccb",
         "aliases": []
     },
     {
