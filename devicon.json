@@ -7098,7 +7098,16 @@
             ]
         },
         "color": "#2D3748",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "processing",
