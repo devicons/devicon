@@ -14,7 +14,7 @@ jobs:
         uses: cutenode/action-always-fail@v1.0.1
 
       - name: Download workflow artifact
-        uses: dawidd6/action-download-artifact@v2.26.1
+        uses: dawidd6/action-download-artifact@v2.27.0
         if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
