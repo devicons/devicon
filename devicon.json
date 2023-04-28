@@ -9327,6 +9327,32 @@
         "aliases": []
     },
     {
+        "name": "trpc",
+        "altnames": [
+            "Typescript Remote Procedure Call"
+        ],
+        "tags": [
+            "typescript",
+            "javascript",
+            "typesafe",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#398ccb",
+        "aliases": []
+    },
+    {
         "name": "twitter",
         "altnames": [],
         "tags": [
