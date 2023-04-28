@@ -7057,6 +7057,7 @@
     },
     {
         "name": "prisma",
+        "altnames": [],
         "tags": [
             "orm",
             "nodejs",
@@ -7072,7 +7073,7 @@
                 "original-wordmark"
             ]
         },
-        "color": "#2d3748",
+        "color": "#2D3748",
         "aliases": []
     },
     {
