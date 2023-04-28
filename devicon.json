@@ -7214,6 +7214,31 @@
         "aliases": []
     },
     {
+        "name": "pypi",
+        "altnames": [
+            "Python Package Index"
+        ],
+        "tags": [
+            "python",
+            "package",
+            "programming"
+        ],
+        "versions": {
+            "svg": [ 
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3775a9",
+        "aliases": []  
+    },
+    {
         "name": "pyscript",
         "altnames": [],
         "tags": [
