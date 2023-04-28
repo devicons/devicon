@@ -9,12 +9,12 @@ jobs:
     # fail due to system, skipped
     name: Peek Icons
     if: github.event.label.name == 'bot:peek'
-    runs-on: windows-2019
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Python v3.8
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with: 
           python-version: 3.8
 
@@ -38,11 +38,11 @@ jobs:
       - name: Run icomoon_peek.py
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
-        shell: cmd
+        shell: bash
         run: >
           python ./.github/scripts/icomoon_peek.py 
-          ./.github/scripts/build_assets/geckodriver-v0.30.0-win64/geckodriver.exe ./icomoon.json 
-          ./devicon.json ./icons ./ --headless "%PR_TITLE%"
+          ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json 
+          ./devicon.json ./icons ./ --headless "$PR_TITLE"
 
       - name: Upload the err messages (created by icomoon_peek.py)
         uses: actions/upload-artifact@v2.2.4

@@ -2,7 +2,7 @@ from argparse import ArgumentParser
 from build_assets.PathResolverAction import PathResolverAction
 
 
-def get_selenium_runner_args(peek_mode=False):
+def get_selenium_runner_args(has_token=True, peek_mode=False):
     """
     Get the commandline arguments for the icomoon_peek.py and 
     icomoon_build.py.
@@ -36,7 +36,7 @@ def get_selenium_runner_args(peek_mode=False):
     if peek_mode:
         parser.add_argument("pr_title",
                             help="The title of the PR that we are peeking at")
-    else:
+    if has_token != False:
         parser.add_argument("token",
                             help="The GitHub token to access the GitHub REST API.")
 
@@ -82,7 +82,7 @@ def get_in_develop_labeler_args():
                         help="The GitHub token to access the GitHub REST API.",
                         type=str)
 
-    parser.add_argument("body",
-                        help="The PR's initial comment by the author AKA the `body` attribute of the `pull_request` API object.",
+    parser.add_argument("pr_num",
+                        help="The PR's number",
                         type=str)
     return parser.parse_args()

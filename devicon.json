@@ -2481,6 +2481,34 @@
         "aliases": []
     },
     {
+        "name": "ecto",
+        "altnames": [],
+        "tags": [
+            "data",
+            "elixir",
+            "integration",
+            "query"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#77bf43",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "elasticsearch",
         "altnames": [],
         "tags": [
@@ -6822,6 +6850,30 @@
         "aliases": []
     },
     {
+        "name": "pnpm",
+        "altnames": [
+            "performant npm"
+        ],
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f9ad00",
+        "aliases": []
+    },
+    {
         "name": "podman",
         "altnames": [],
         "tags": [
@@ -7160,6 +7212,31 @@
         },
         "color": "#21D789",
         "aliases": []
+    },
+    {
+        "name": "pypi",
+        "altnames": [
+            "Python Package Index"
+        ],
+        "tags": [
+            "python",
+            "package",
+            "programming"
+        ],
+        "versions": {
+            "svg": [ 
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3775a9",
+        "aliases": []  
     },
     {
         "name": "pyscript",
