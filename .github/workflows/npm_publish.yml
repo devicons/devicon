@@ -7,13 +7,13 @@ jobs:
     environment: release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           # "ref" specifies the branch to check out.
           # "github.event.release.target_commitish" is a global variable and specifies the branch the release targeted
           ref: ${{ github.event.release.target_commitish }}
       - name: Use Node.js v16
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/ # Specifies the registry, this field is required!
