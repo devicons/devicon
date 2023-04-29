@@ -1,6 +1,9 @@
 [
     {
-        "name": "3DSMax",
+        "name": "3dsmax",
+        "altnames": [
+            "Autodesk 3ds Max"
+        ],
         "tags": [
             "3d",
             "programming",
@@ -12,15 +15,24 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "plain"
             ]
         },
-        "color": "#149B9A",
-        "aliases": []
+        "color": "#37a5cc",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "adonisjs",
