@@ -35,6 +35,29 @@
         ]
     },
     {
+        "name": "aarch64",
+        "altnames": [
+            "arm64"
+        ],
+        "tags": [
+            "architecture",
+            "programming",
+            "language",
+            "ARM"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#16358C",
+        "aliases": []
+    },
+    {
         "name": "adonisjs",
         "altnames": [
             "adonis"
