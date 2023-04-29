@@ -1,17 +1,24 @@
 name: Label Issue In Develop
-on: 
-  pull_request:
-    types: [closed]
+on:
+  workflow_run:
+    workflows: ['On Develop PR Merge']
+    types: 
+      - completed
 jobs:
-  label:
-    name: Label Issue In Develop
-    runs-on: ubuntu-18.04
-    if: github.event.pull_request.merged == true
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
-      - uses: actions/checkout@v2
+      - run: echo "First workflow was a failure"
+  label_preflight:
+    name: Label Issue In Develop
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v3
 
       - name: Setup Python v3.8
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with: 
           python-version: 3.8
 
@@ -19,9 +26,22 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
+          
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.11.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: peek_icons.yml
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Read the pr_num file
+        id: pr_num_reader
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ./pr_num/pr_num.txt
 
       - name: Run in_develop_labeler.py
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BODY: ${{ github.event.pull_request.body }}
-        run: python ./.github/scripts/in_develop_labeler.py $TOKEN "$BODY"
+          PR_NUM: ${{ steps.pr_num_reader.outputs.content }}
+        run: python ./.github/scripts/in_develop_labeler.py $TOKEN "$PR_NUM"
