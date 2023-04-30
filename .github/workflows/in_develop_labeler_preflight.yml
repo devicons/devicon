@@ -6,10 +6,10 @@ on:
 jobs:
   save_pr_num_in_artifact:
     name: Preflight Label Issue In Develop
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Save the PR number in an artifact
         shell: bash
