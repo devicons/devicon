@@ -3750,6 +3750,31 @@
         "aliases": []
     },
     {
+        "name": "grpc",
+        "altnames": [
+            "grpcio"
+        ],
+        "tags": [
+            "programming",
+            "c++",
+            "java",
+            "python",
+            "go",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5FC6C5",
+        "aliases": []
+    },
+    {
         "name": "grunt",
         "altnames": [
             "gruntjs"
@@ -7289,7 +7314,7 @@
             "programming"
         ],
         "versions": {
-            "svg": [ 
+            "svg": [
                 "original",
                 "original-wordmark",
                 "plain",
@@ -7301,7 +7326,7 @@
             ]
         },
         "color": "#3775a9",
-        "aliases": []  
+        "aliases": []
     },
     {
         "name": "pyscript",
