@@ -1,0 +1,24 @@
+name: On Develop PR Merge
+on: 
+  pull_request:
+    types: [closed]
+    branches: [develop]
+jobs:
+  save_pr_num_in_artifact:
+    name: Preflight Label Issue In Develop
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Save the PR number in an artifact
+        shell: bash
+        env:
+          PR_NUM: ${{ github.event.number }}
+        run: echo $PR_NUM > pr_num.txt
+
+      - name: Upload the PR number
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: pr_num
+          path: ./pr_num.txt

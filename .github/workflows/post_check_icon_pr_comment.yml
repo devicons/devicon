@@ -7,14 +7,14 @@ on:
 jobs: 
   post_result_of_svg_check:
     name: Post the result of the Check SVG Action
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check if the trigger run worked. If it failed, fail the current run.
         if: github.event.workflow_run.conclusion != 'success' 
         uses: cutenode/action-always-fail@v1.0.1
 
       - name: Download workflow artifact
-        uses: dawidd6/action-download-artifact@v2.11.0
+        uses: dawidd6/action-download-artifact@v2.27.0
         if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -24,19 +24,19 @@ jobs:
       - name: Read the pr_num file
         if: success()
         id: pr_num_reader
-        uses: juliangruber/read-file-action@v1.0.0
+        uses: juliangruber/read-file-action@v1.1.6
         with:
           path: ./pr_num/pr_num.txt
 
       - name: Read the err message file
         if: success()
         id: err_message_reader
-        uses: juliangruber/read-file-action@v1.0.0
+        uses: juliangruber/read-file-action@v1.1.6
         with:
           path: ./err_messages/err_messages.txt
 
       - name: Comment on the PR about the result - SVG Error
-        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
         if: success() && (steps.err_message_reader.outputs.content != '')
         env:
           MESSAGE: |
@@ -48,7 +48,7 @@ jobs:
             {0}
             ```
 
-            Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/blob/develop/CONTRIBUTING.md#svgStandards) for more details regarding these errors.
+            Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/wiki/SVG-Standards) for more details regarding these errors.
 
             Please address these issues. When you update this PR, I will check your SVGs again.
 
@@ -61,7 +61,7 @@ jobs:
           body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
 
       - name: Comment on the PR about the result - Failure
-        uses: jungwinter/comment@v1 # let us comment on a specific PR
+        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
         if: failure() 
         env:
           MESSAGE: |
