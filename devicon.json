@@ -3240,6 +3240,26 @@
         ]
     },
     {
+        "name": "ngrx",
+        "tags": [
+            "state-management",
+            "angular",
+            "redux",
+            "store"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain",
+            ]
+        },
+        "color": "#412846",
+        "aliases": []
+    },
+    {
         "name": "nixos",
         "tags": [
             "os"
