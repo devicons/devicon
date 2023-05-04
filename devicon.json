@@ -5959,6 +5959,7 @@
     },
         {
         "name": "ngrx",
+        "altnames": [],
         "tags": [
             "state-management",
             "angular",
