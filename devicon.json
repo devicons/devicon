@@ -3456,6 +3456,26 @@
         "aliases": []
     },
     {
+        "name": "gitlabci",
+        "altnames": [],
+        "tags": [
+            "continuous-delivery",
+            "devops",
+            "integration"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#d72d20",
+        "aliases": []
+    },
+    {
         "name": "gitpod",
         "altnames": [
             "gitpod-io"
