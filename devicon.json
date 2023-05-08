@@ -346,6 +346,24 @@
         "aliases": []
     },
     {
+        "name": "angularmaterial",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffa726",
+        "aliases": []
+    },
+    {
         "name": "ansible",
         "altnames": [],
         "tags": [
