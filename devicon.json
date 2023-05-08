@@ -6231,6 +6231,33 @@
         "aliases": []
     },
     {
+        "name": "oauth",
+        "altnames": [],
+        "tags": [
+            "auth",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "objectivec",
         "altnames": [],
         "tags": [
