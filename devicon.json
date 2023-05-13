@@ -3752,7 +3752,8 @@
     {
         "name": "grpc",
         "altnames": [
-            "grpcio"
+            "grpcio",
+            "Google Remote Procedure Call"
         ],
         "tags": [
             "programming",
