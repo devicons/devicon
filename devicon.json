@@ -7311,7 +7311,7 @@
             "programming"
         ],
         "versions": {
-            "svg": [ 
+            "svg": [
                 "original",
                 "original-wordmark",
                 "plain",
@@ -7323,7 +7323,7 @@
             ]
         },
         "color": "#3775a9",
-        "aliases": []  
+        "aliases": []
     },
     {
         "name": "pyscript",
@@ -8921,6 +8921,24 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "supabase",
+        "altnames": [],
+        "tags": [
+            "cloud-computing-platform",
+            "database",
+            "authentication",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#3ecf8e",
+        "aliases": []
     },
     {
         "name": "svelte",
