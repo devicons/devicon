@@ -6234,7 +6234,7 @@
         "name": "oauth",
         "altnames": [],
         "tags": [
-            "auth",
+            "authentication",
             "security"
         ],
         "versions": {
