@@ -5977,6 +5977,28 @@
         ]
     },
     {
+        "name": "ngrx",
+        "altnames": [],
+        "tags": [
+            "state-management",
+            "angular",
+            "redux",
+            "store",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#412846",
+        "aliases": []
+    },
+    {
         "name": "nhibernate",
         "altnames": [],
         "tags": [
