@@ -8926,19 +8926,30 @@
         "name": "supabase",
         "altnames": [],
         "tags": [
+            "authentication",
             "cloud-computing-platform",
             "database",
-            "authentication",
             "storage"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#3ecf8e",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "svelte",
