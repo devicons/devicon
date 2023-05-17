@@ -3966,6 +3966,26 @@
         ]
     },
     {
+        "name": "reactrouter", 
+        "tags": [
+            "framework"
+        ], 
+        "versions": {
+            "SVG": [
+                "reactrouter-original",
+                "reactrouter-original-wordmark",
+                "reactrouter-plain",
+                "reactrouter-plain-wordmark"
+            ], 
+            "font": [
+                "original",
+                "original-wordmark"
+            ] 
+        },
+        "color": "#f44250", 
+        "aliases": [] 
+    },
+    {
         "name": "redhat",
         "tags": [
             "server",
