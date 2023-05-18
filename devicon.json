@@ -8944,12 +8944,7 @@
             ]
         },
         "color": "#3ecf8e",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "svelte",
