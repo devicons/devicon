@@ -3769,6 +3769,32 @@
         "aliases": []
     },
     {
+        "name": "grpc",
+        "altnames": [
+            "grpcio",
+            "Google Remote Procedure Call"
+        ],
+        "tags": [
+            "programming",
+            "c++",
+            "java",
+            "python",
+            "go",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00b0ad",
+        "aliases": []
+    },
+    {
         "name": "grunt",
         "altnames": [
             "gruntjs"
