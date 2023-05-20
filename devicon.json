@@ -8383,11 +8383,10 @@
     },
     {
         "name": "reactrouter", 
-        "altnames": [
-            "reactrouter"
-        ],
+        "altnames": [],
         "tags": [
             "framework"
+            "react"
         ], 
         "versions": {
             "SVG": [
@@ -8397,8 +8396,8 @@
                 "plain-wordmark"
             ], 
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ] 
         },
         "color": "#f44250", 
