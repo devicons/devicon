@@ -6186,6 +6186,35 @@
         "aliases": []
     },
     {
+        "name": "nomad",
+        "altnames": [
+            "HashiCorp Nomad"
+        ],
+        "tags": [
+            "container",
+            "virtual machine",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00ca8e",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "norg",
         "altnames": [
             "neorg"
