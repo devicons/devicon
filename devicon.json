@@ -346,6 +346,25 @@
         "aliases": []
     },
     {
+        "name": "angularmaterial",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffa726",
+        "aliases": []
+    },
+    {
         "name": "ansible",
         "altnames": [],
         "tags": [
@@ -3750,6 +3769,32 @@
         "aliases": []
     },
     {
+        "name": "grpc",
+        "altnames": [
+            "grpcio",
+            "Google Remote Procedure Call"
+        ],
+        "tags": [
+            "programming",
+            "c++",
+            "java",
+            "python",
+            "go",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00b0ad",
+        "aliases": []
+    },
+    {
         "name": "grunt",
         "altnames": [
             "gruntjs"
@@ -5956,6 +6001,28 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "ngrx",
+        "altnames": [],
+        "tags": [
+            "state-management",
+            "angular",
+            "redux",
+            "store",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#412846",
+        "aliases": []
     },
     {
         "name": "nhibernate",
