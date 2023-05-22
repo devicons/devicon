@@ -346,6 +346,25 @@
         "aliases": []
     },
     {
+        "name": "angularmaterial",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffa726",
+        "aliases": []
+    },
+    {
         "name": "ansible",
         "altnames": [],
         "tags": [
@@ -3747,6 +3766,32 @@
             ]
         },
         "color": "#619cbc",
+        "aliases": []
+    },
+    {
+        "name": "grpc",
+        "altnames": [
+            "grpcio",
+            "Google Remote Procedure Call"
+        ],
+        "tags": [
+            "programming",
+            "c++",
+            "java",
+            "python",
+            "go",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00b0ad",
         "aliases": []
     },
     {
