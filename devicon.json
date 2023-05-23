@@ -8436,6 +8436,28 @@
         ]
     },
     {
+        "name": "reactrouter", 
+        "altnames": [],
+        "tags": [
+            "framework",
+            "react"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ], 
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ] 
+        },
+        "color": "#f44250", 
+        "aliases": [] 
+    },
+    {
         "name": "sequelize",
         "altnames": [
             "sequelizejs"
