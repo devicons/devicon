@@ -1141,6 +1141,22 @@
         ]
     },
     {
+        "name": "dev", 
+        "tags": [
+            "blog",
+            "platform"
+        ], 
+        "versions": {
+            "SVG": [
+                "original"
+            ], 
+            "font": [
+                "original"
+            ] 
+        },
+        "color": "#000000"
+    },
+    {
         "name": "devicon",
         "tags": [
             "iconset"
