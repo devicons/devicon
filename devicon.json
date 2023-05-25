@@ -2667,6 +2667,19 @@
         "aliases": []
     },
     {
+        "name": "kdeneon", 
+        "tags": [
+            "linux",
+            "operating system",
+            "open-source"
+        ], 
+        "versions": {
+            "SVG": ["original"], 
+            "font": ["original"] 
+        },
+        "color": "#21769a"
+    },
+    {
         "name": "kotlin",
         "tags": [
             "language"
