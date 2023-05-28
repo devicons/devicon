@@ -2658,10 +2658,11 @@
             "open-source"
         ], 
         "versions": {
-            "SVG": ["original"], 
+            "svg": ["original"], 
             "font": ["original"] 
         },
-        "color": "#21769a"
+        "color": "#21769a",
+        "aliases": []
     },
     {
         "name": "kotlin",
