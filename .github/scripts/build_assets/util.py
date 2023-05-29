@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import re
 from typing import List
 import platform
@@ -71,7 +72,23 @@ def find_object_added_in_pr(icons: List[dict], pr_title: str):
         raise Exception(message)
 
 
+def is_svg_in_font_attribute(svg_file_path: Path, devicon_object: dict): 
+    """
+    Check if svg is in devicon.json's font attribute.
+    :param svg_file_path, the path to a single svg icon
+    :devicon_object, an object for a single icon inside devicon.json
+    :return true if the svg exists in the devicon_object's font attribute, false if it doesn't
+    """
+    icon_version = Path(svg_file_path).stem.split('-', 1)[1]
+    font_object = devicon_object["versions"]["font"]
+    return icon_version in font_object
+
+
 valid_svg_filename_pattern = re.compile(r"-(original|plain|line)(-wordmark)?\.svg$")
 def is_svg_name_valid(filename: str):
     return valid_svg_filename_pattern.search(filename) is not None
 
+
+valid_svg_version_pattern = re.compile(r"^(original|plain|line)(-wordmark)?$")
+def is_svg_version_valid(version):
+    return valid_svg_version_pattern.search(version) is not None
