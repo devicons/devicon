@@ -6796,7 +6796,10 @@
             "open-source"
         ], 
         "versions": {
-            "svg": ["original"], 
+            "svg": [
+                "original",
+                "plain"
+            ], 
             "font": ["original"] 
         },
         "color": "#21769a",
