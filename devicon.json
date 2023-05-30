@@ -6800,7 +6800,9 @@
                 "original",
                 "plain"
             ], 
-            "font": ["original"] 
+            "font": [
+                "plain"
+            ] 
         },
         "color": "#21769a",
         "aliases": []
