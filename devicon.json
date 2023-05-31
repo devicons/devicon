@@ -7268,6 +7268,30 @@
         "aliases": []
     },
     {
+        "name": "prolog",
+        "altnames": [
+            "swi-prolog"
+        ],
+        "tags": [
+            "programming",
+            "logic"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F46C30",
+        "aliases": []
+    },
+    {
         "name": "prometheus",
         "altnames": [],
         "tags": [
@@ -9987,6 +10011,29 @@
             ]
         },
         "color": "#ffdd35",
+        "aliases": []
+    },
+    {
+        "name": "vitess",
+        "altnames": [],
+        "tags": [
+            "sharding",
+            "database",
+            "mysql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f16827",
         "aliases": []
     },
     {
