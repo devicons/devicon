@@ -2512,12 +2512,12 @@
         "color": "#0073BA",
         "aliases": []
     },
-	{
+    {
         "name": "dynamodb",
         "altnames": [],
         "tags": [
-			"key-value",
-			"database"
+            "key-value",
+            "database"
         ],
         "versions": {
             "svg": [
@@ -2530,7 +2530,7 @@
         },
         "color": "#2d72b8",
         "aliases": []
-	},
+    },
     {
         "name": "eclipse",
         "altnames": [
