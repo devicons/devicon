@@ -6317,6 +6317,34 @@
         "aliases": []
     },
     {
+        "name": "oauth",
+        "altnames": [],
+        "tags": [
+            "authentication",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "objectivec",
         "altnames": [],
         "tags": [
@@ -8427,6 +8455,28 @@
         ]
     },
     {
+        "name": "reactrouter", 
+        "altnames": [],
+        "tags": [
+            "framework",
+            "react"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ], 
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ] 
+        },
+        "color": "#f44250", 
+        "aliases": [] 
+    },
+    {
         "name": "sequelize",
         "altnames": [
             "sequelizejs"
@@ -8985,6 +9035,30 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "supabase",
+        "altnames": [],
+        "tags": [
+            "authentication",
+            "cloud-computing-platform",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3ecf8e",
+        "aliases": []
     },
     {
         "name": "svelte",
@@ -9932,6 +10006,29 @@
             ]
         },
         "color": "#ffdd35",
+        "aliases": []
+    },
+    {
+        "name": "vitess",
+        "altnames": [],
+        "tags": [
+            "sharding",
+            "database",
+            "mysql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f16827",
         "aliases": []
     },
     {
