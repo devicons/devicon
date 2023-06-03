@@ -3165,7 +3165,8 @@
                 "plain-wordmark"
             ], 
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ] 
         },
         "color": "#ee350f",
