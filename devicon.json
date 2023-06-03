@@ -3160,7 +3160,9 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
             ], 
             "font": [
                 "plain"
