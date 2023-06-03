@@ -3160,17 +3160,24 @@
         "versions": {
             "svg": [
                 "original",
-                "plain",
                 "original-wordmark",
-                "plain-wordmark"
             ], 
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ] 
         },
         "color": "#ee350f",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "fsharp",
