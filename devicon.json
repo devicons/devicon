@@ -3155,7 +3155,8 @@
             "development",
             "mobile",
             "android",
-            "ios"
+            "ios",
+            "open-source"
         ], 
         "versions": {
             "svg": [
