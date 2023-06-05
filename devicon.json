@@ -3161,7 +3161,7 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
+                "original-wordmark"
             ], 
             "font": [
                 "original",
@@ -4947,6 +4947,26 @@
             ]
         },
         "color": "#56c5a8",
+        "aliases": []
+    },
+    {
+        "name": "kdeneon", 
+        "altnames": [],
+        "tags": [
+            "linux",
+            "operating system",
+            "open-source"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ], 
+            "font": [
+                "plain"
+            ] 
+        },
+        "color": "#21769a",
         "aliases": []
     },
     {
