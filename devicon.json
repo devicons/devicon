@@ -3147,6 +3147,31 @@
         "aliases": []
     },
     {
+        "name": "framermotion",
+        "altnames": [
+            "framer-motion",
+            "framer"            
+        ],
+        "tags": [
+            "library",
+            "open-source",
+            "react",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": []
+    },
+    {
         "name": "fsharp",
         "altnames": [
             "f#"
