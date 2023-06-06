@@ -4916,6 +4916,26 @@
         "aliases": []
     },
     {
+        "name": "kdeneon", 
+        "altnames": [],
+        "tags": [
+            "linux",
+            "operating system",
+            "open-source"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ], 
+            "font": [
+                "plain"
+            ] 
+        },
+        "color": "#21769a",
+        "aliases": []
+    },
+    {
         "name": "keras",
         "altnames": [],
         "tags": [
@@ -5404,6 +5424,36 @@
         },
         "color": "#f26322",
         "aliases": []
+    },
+    {
+        "name": "mariadb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "sql",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#003545",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "markdown",
@@ -6325,6 +6375,34 @@
         },
         "color": "#00c48d",
         "aliases": []
+    },
+    {
+        "name": "oauth",
+        "altnames": [],
+        "tags": [
+            "authentication",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "objectivec",
@@ -7266,6 +7344,32 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "prolog",
+        "altnames": [
+            "swi-prolog"
+        ],
+        "tags": [
+            "programming",
+            "logic",
+            "language",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F46C30",
         "aliases": []
     },
     {
@@ -8437,6 +8541,28 @@
         ]
     },
     {
+        "name": "reactrouter", 
+        "altnames": [],
+        "tags": [
+            "framework",
+            "react"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ], 
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ] 
+        },
+        "color": "#f44250", 
+        "aliases": [] 
+    },
+    {
         "name": "sequelize",
         "altnames": [
             "sequelizejs"
@@ -8995,6 +9121,30 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "supabase",
+        "altnames": [],
+        "tags": [
+            "authentication",
+            "cloud-computing-platform",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3ecf8e",
+        "aliases": []
     },
     {
         "name": "svelte",
@@ -9942,6 +10092,29 @@
             ]
         },
         "color": "#ffdd35",
+        "aliases": []
+    },
+    {
+        "name": "vitess",
+        "altnames": [],
+        "tags": [
+            "sharding",
+            "database",
+            "mysql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f16827",
         "aliases": []
     },
     {
