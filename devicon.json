@@ -4936,6 +4936,26 @@
         "aliases": []
     },
     {
+        "name": "kdeneon", 
+        "altnames": [],
+        "tags": [
+            "linux",
+            "operating system",
+            "open-source"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ], 
+            "font": [
+                "plain"
+            ] 
+        },
+        "color": "#21769a",
+        "aliases": []
+    },
+    {
         "name": "keras",
         "altnames": [],
         "tags": [
@@ -7315,6 +7335,32 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "prolog",
+        "altnames": [
+            "swi-prolog"
+        ],
+        "tags": [
+            "programming",
+            "logic",
+            "language",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F46C30",
         "aliases": []
     },
     {
