@@ -3169,7 +3169,12 @@
             ]
         },
         "color": "#000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            }
+        ]
     },
     {
         "name": "fsharp",
