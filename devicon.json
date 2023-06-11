@@ -3167,6 +3167,40 @@
         "aliases": []
     },
     {
+        "name": "framework7",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "cross-platform",
+            "development",
+            "mobile",
+            "android",
+            "ios",
+            "open-source"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ], 
+            "font": [
+                "original",
+                "original-wordmark"
+            ] 
+        },
+        "color": "#ee350f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "fsharp",
         "altnames": [
             "f#"
