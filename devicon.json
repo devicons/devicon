@@ -8320,5 +8320,36 @@
         },
         "color": "#F04E98",
         "aliases": []
-    }
+    },
+	{
+		"name": "yogabytedb",
+		"altnames": [
+			"yogabyte"
+		],
+		"tags": [
+			"database", 
+			"sql",
+			"postgresql",
+			"hybrid",
+			"multi-cloud",
+			"open-source",
+			"rdbms",
+			"scale"
+		],
+		"versions": {
+			"svg": [
+				"original",
+				"original-wordmark"
+			],
+			"font": [
+				"plain",
+				"plain-wordmark"
+			]
+		},
+		"color": "#FF5F3B",
+		"aliases": [
+			"YogaByte",
+			"YogaByteDB"
+		]
+	}
 ]
