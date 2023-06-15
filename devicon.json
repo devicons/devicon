@@ -3172,7 +3172,11 @@
         "aliases": [
             {
                 "base": "original",
-                "alias": "original-wordmark"
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
