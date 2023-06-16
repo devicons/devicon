@@ -9763,19 +9763,21 @@
         "name": "ubuntu",
         "altnames": [],
         "tags": [
-            "os"
+            "os",
+            "open-source",
+            "linux"
         ],
         "versions": {
             "svg": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
-        "color": "#dd4814",
+        "color": "#e95420",
         "aliases": []
     },
     {
