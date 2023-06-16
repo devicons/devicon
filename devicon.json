@@ -2513,6 +2513,26 @@
         "aliases": []
     },
     {
+        "name": "dynamodb",
+        "altnames": [],
+        "tags": [
+            "key-value",
+            "database",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#527fff",
+        "aliases": []
+    },
+    {
         "name": "eclipse",
         "altnames": [
             "Eclipse IDE"
@@ -3169,6 +3189,40 @@
             ]
         },
         "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "framework7",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "cross-platform",
+            "development",
+            "mobile",
+            "android",
+            "ios",
+            "open-source"
+        ], 
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ], 
+            "font": [
+                "original",
+                "original-wordmark"
+            ] 
+        },
+        "color": "#ee350f",
         "aliases": [
             {
                 "base": "original",
@@ -6268,6 +6322,35 @@
         },
         "color": "#3d3b47",
         "aliases": []
+    },
+    {
+        "name": "nomad",
+        "altnames": [
+            "HashiCorp Nomad"
+        ],
+        "tags": [
+            "container",
+            "virtual machine",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00ca8e",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "norg",
