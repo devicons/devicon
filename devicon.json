@@ -9778,7 +9778,16 @@
             ]
         },
         "color": "#e95420",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "unifiedmodelinglanguage",
