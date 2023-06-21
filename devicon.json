@@ -5747,6 +5747,31 @@
         "aliases": []
     },
     {
+        "name": "miro",
+        "altnames": [
+            "RealtimeBoard"
+        ],
+        "tags": [
+            "software",
+            "whiteboarding-platform",
+            "project-management"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#050038",
+        "aliases": []
+    },
+    {
         "name": "mobx",
         "altnames": [
             "mobxjs"
