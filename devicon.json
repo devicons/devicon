@@ -9763,10 +9763,14 @@
         "name": "ubuntu",
         "altnames": [],
         "tags": [
-            "os"
+            "os",
+            "open-source",
+            "linux"
         ],
         "versions": {
             "svg": [
+                "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -9775,8 +9779,9 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#dd4814",
-        "aliases": []
+        "color": "#e95420",
+        "aliases": [
+        ]
     },
     {
         "name": "unifiedmodelinglanguage",
