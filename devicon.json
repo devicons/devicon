@@ -7962,6 +7962,27 @@
         ]
     },
     {
+        "name": "reactnavigation",
+        "altnames": [],
+        "tags": [
+            "routing",
+            "navigation",
+            "react native",
+            "app"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#7b61c1",
+        "aliases": []
+    },
+    {
         "name": "readthedocs",
         "altnames": [
             "Read The Docs"
