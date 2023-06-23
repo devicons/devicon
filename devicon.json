@@ -7471,6 +7471,27 @@
         "aliases": []
     },
     {
+        "name": "puppeteer",
+        "altnames": [],
+        "tags": [
+            "open-source",
+            "devtools protocol",
+            "testing",
+            "extension"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "plain-wordmark"            
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00d8a2",
+        "aliases": []
+    },
+    {
         "name": "purescript",
         "altnames": [],
         "tags": [
