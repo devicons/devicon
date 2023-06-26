@@ -9301,6 +9301,29 @@
         ]
     },
     {
+        "name": "tableau",
+        "altnames": [],
+        "tags": [
+            "data visualization",
+            "software",
+            "business intelligence"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1f447e",
+        "aliases": []
+    },
+    {
         "name": "tailwindcss",
         "altnames": [],
         "tags": [
