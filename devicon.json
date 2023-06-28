@@ -7481,15 +7481,24 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
-                "plain-wordmark"            
+                "original",
+                "plain"
             ],
             "font": [
-                "plain-wordmark"
+                "plain"
             ]
         },
         "color": "#00d8a2",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "purescript",
