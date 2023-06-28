@@ -7972,15 +7972,19 @@
         ],
         "versions": {
             "svg": [
-                "original",
-                "plain"
+                "original"
             ],
             "font": [
-                "plain"
+                "original"
             ]
         },
         "color": "#7b61c1",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "readthedocs",
