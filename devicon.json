@@ -3167,6 +3167,40 @@
         "aliases": []
     },
     {
+        "name": "framermotion",
+        "altnames": [
+            "framer-motion",
+            "framer"            
+        ],
+        "tags": [
+            "library",
+            "open-source",
+            "react",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "framework7",
         "altnames": [],
         "tags": [
@@ -9787,10 +9821,14 @@
         "name": "ubuntu",
         "altnames": [],
         "tags": [
-            "os"
+            "os",
+            "open-source",
+            "linux"
         ],
         "versions": {
             "svg": [
+                "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -9799,7 +9837,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#dd4814",
+        "color": "#e95420",
         "aliases": []
     },
     {
