@@ -10236,6 +10236,27 @@
         "aliases": []
     },
     {
+        "name": "vitest",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "open-source",
+            "testing",
+            "vite"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#fcc72b",
+        "aliases": []
+    },
+    {
         "name": "vscode",
         "altnames": [
             "visualstudiocode"
