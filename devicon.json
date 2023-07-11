@@ -10783,6 +10783,30 @@
         "color": "#40b3d8",
         "aliases": []
     },
+	{
+		"name": "yugabytedb",
+		"tags": [
+			"database",
+			"relational",
+			"sql",
+			"scale"
+		],
+		"versions": {
+			"svg": [
+				"original",
+				"original-wordmark",
+				"plain",
+				"plain-wordmark"
+			],
+			"font": [
+				"plain",
+				"plain-wordmark"
+			]
+		},
+		"color": "#ff5f3b",
+        "aliases": []
+
+	},
     {
         "name": "yunohost",
         "altnames": [],
