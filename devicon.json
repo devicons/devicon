@@ -10558,10 +10558,31 @@
     },
     {
         "name": "wolfram",
+        "altnames": [],
         "tags": [
             "organization",
+            "data-science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#dd1100",
+        "aliases": []
+    },
+    {
+        "name": "wolframlanguage",
+        "altnames": [],
+        "tags": [
             "data-science",
-            "computation"
+            "functional",
+            "programming"
         ],
         "versions": {
             "svg": [
