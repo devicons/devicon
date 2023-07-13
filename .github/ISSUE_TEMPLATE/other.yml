@@ -1,6 +1,6 @@
 name: Other
-description: Use this for any other issues. Do not create blank issues
-title: "[OTHER] <description>"
+description: Use this for any other issues. Please do NOT create blank issues
+title: "[OTHER]: description"
 labels: ["awaiting triage"]
 body:
   - type: markdown
