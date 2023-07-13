@@ -6929,6 +6929,26 @@
         ]
     },
     {
+        "name": "wolfram",
+        "tags": [
+            "organization",
+            "data-science",
+            "computation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#dd1100",
+        "aliases": []
+    },
+    {
         "name": "woocommerce",
         "altnames": [],
         "tags": [
