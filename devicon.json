@@ -10557,26 +10557,6 @@
         ]
     },
     {
-        "name": "wolfram",
-        "altnames": [],
-        "tags": [
-            "organization",
-            "data-science"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#dd1100",
-        "aliases": []
-    },
-    {
         "name": "wolframlanguage",
         "altnames": [],
         "tags": [
@@ -10587,11 +10567,13 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#dd1100",
