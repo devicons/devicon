@@ -3,13 +3,13 @@ on: workflow_dispatch
 jobs:
   build:
     name: Get Fonts From Icomoon
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with: 
-          python-version: 3.8
+          python-version: '3.10'
 
       - name: Install dependencies (python, pip, npm)
         run: |
@@ -44,15 +44,15 @@ jobs:
         if: success() 
         run: npm run build-css
 
-      - name: Upload screenshot of the newly made icons
-        id: imgur_step
-        uses: devicons/public-upload-to-imgur@v2.2.2
-        if: success()
-        with:
-          # will have "new_icons.png" and "new_svgs.png"
-          # in that order (cause sorted alphabetically)
-          path: ./screenshots/*.png
-          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+      # - name: Upload screenshot of the newly made icons
+      #   id: imgur_step
+      #   uses: devicons/public-upload-to-imgur@v2.2.2
+      #   if: success()
+      #   with:
+      #     # will have "new_icons.png" and "new_svgs.png"
+      #     # in that order (cause sorted alphabetically)
+      #     path: ./screenshots/*.png
+      #     client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Get the release message from file
         id: release_message_step
@@ -70,14 +70,6 @@ jobs:
 
             I'm Devicon's Build Bot and I just built some new font files and devicon.min.css file.
 
-            Here are all the **SVGs** that were uploaded (the new ones are those with highlight):
-
-            {0}
-
-            Here is what they look like as icons:
-
-            {1}
-
             The devicon.min.css file contains:
             -The icon content
             -The aliases
@@ -85,7 +77,7 @@ jobs:
 
             I also compiled a list of new features and icons that were added since last release.
             ```
-            {2}
+            {0}
             ```
 
             More information can be found in the GitHub Action logs for this workflow.
@@ -100,8 +92,6 @@ jobs:
             ${{ 
               format(
                 env.MESSAGE,
-                fromJSON(steps.imgur_step.outputs.markdown_urls)[1],  
-                fromJSON(steps.imgur_step.outputs.markdown_urls)[0],
                 steps.release_message_step.outputs.content
               )
             }}
