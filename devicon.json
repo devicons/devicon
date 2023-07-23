@@ -2528,6 +2528,27 @@
         "aliases": []
     },
     {
+        "name": "jetpackcompose", 
+
+        "altnames": ["jetpack","compose"], 
+
+        "tags": "language", 
+
+        "versions": {
+            
+            "svg": ["original",
+            "original-wordmark"], 
+
+            
+            "font":["original",
+            "original-wordmark"] 
+        },
+
+        "color": "#3DDC84", 
+
+        "aliases": [] 
+    },
+    {
         "name": "jira",
         "tags": [
             "platform",
