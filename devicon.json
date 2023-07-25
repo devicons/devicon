@@ -4684,34 +4684,36 @@
         },
         "color": "#FDCC21",
         "aliases": []
-    },{
-        "name": "jetpackcompose", 
-
-        "altnames": ["jetpack","compose"], 
-
-        "tags": ["framework","language","kotlin","android"], 
-
+    },
+    {
+        "name": "jetpackcompose",
+        "altnames": [
+            "jetpack",
+            "compose"
+        ],
+        "tags": [
+            "framework",
+            "language",
+            "kotlin",
+            "android"
+        ],
         "versions": {
-
-            "svg": ["original",
-            "original-wordmark",
-            "plain",
-            "plain-wordmark",
-            "line",
-            "line-wordmark"], 
-
-
-            "font":["original",
-            "original-wordmark",
-            "plain",
-            "plain-wordmark",
-            "line",
-            "line-wordmark"] 
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain",
+                "line"
+            ]
         },
-
-        "color": "#4285F4", 
-
-        "aliases": [] 
+        "color": "#4285f4",
+        "aliases": []
     },
     {
         "name": "jira",
