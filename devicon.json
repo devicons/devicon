@@ -4707,9 +4707,10 @@
                 "line-wordmark"
             ],
             "font": [
-                "original",
+                "plain-wordmark",
                 "plain",
-                "line"
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#4285f4",
