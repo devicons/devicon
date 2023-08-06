@@ -3528,6 +3528,34 @@
         ]
     },
     {
+        "name": "ory",
+        "tags": [
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#5528ff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+
+    },
+    {
         "name": "pandas",
         "tags": [
             "library",
