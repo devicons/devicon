@@ -3211,16 +3211,16 @@
             "android",
             "ios",
             "open-source"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
                 "original-wordmark"
-            ], 
+            ],
             "font": [
                 "original",
                 "original-wordmark"
-            ] 
+            ]
         },
         "color": "#ee350f",
         "aliases": [
@@ -3740,20 +3740,30 @@
             "gradlebuildtool"
         ],
         "tags": [
+            "open-source",
             "task-runner"
         ],
         "versions": {
             "svg": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#02303a",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "grafana",
@@ -5004,21 +5014,21 @@
         "aliases": []
     },
     {
-        "name": "kdeneon", 
+        "name": "kdeneon",
         "altnames": [],
         "tags": [
             "linux",
             "operating system",
             "open-source"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
                 "plain"
-            ], 
+            ],
             "font": [
                 "plain"
-            ] 
+            ]
         },
         "color": "#21769a",
         "aliases": []
@@ -7505,6 +7515,36 @@
         "aliases": []
     },
     {
+        "name": "puppeteer",
+        "altnames": [],
+        "tags": [
+            "open-source",
+            "devtools protocol",
+            "testing",
+            "extension"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00d8a2",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "purescript",
         "altnames": [],
         "tags": [
@@ -7577,7 +7617,7 @@
             "programming"
         ],
         "versions": {
-            "svg": [ 
+            "svg": [
                 "original",
                 "original-wordmark",
                 "plain",
@@ -7589,7 +7629,7 @@
             ]
         },
         "color": "#3775a9",
-        "aliases": []  
+        "aliases": []
     },
     {
         "name": "pyscript",
@@ -8655,26 +8695,26 @@
         ]
     },
     {
-        "name": "reactrouter", 
+        "name": "reactrouter",
         "altnames": [],
         "tags": [
             "framework",
             "react"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
                 "original-wordmark",
                 "plain",
                 "plain-wordmark"
-            ], 
+            ],
             "font": [
                 "plain",
                 "plain-wordmark"
-            ] 
+            ]
         },
-        "color": "#f44250", 
-        "aliases": [] 
+        "color": "#f44250",
+        "aliases": []
     },
     {
         "name": "sequelize",
