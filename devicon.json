@@ -2239,6 +2239,26 @@
         ]
     },
     {
+        "name": "detaspace",
+        "altnames": [
+            "Deta Space"
+        ],
+        "tags": [
+            "cloud",
+            "hosting",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": []
+        },
+        "color": "#ef39a8",
+        "aliases": []
+    },
+    {
         "name": "devicon",
         "altnames": [],
         "tags": [
