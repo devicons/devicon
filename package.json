@@ -9,7 +9,7 @@
     "optimize-svg": "gulp optimizeSvg",
     "bump": "gulp bumpVersion",
     "build-icons": "python3 ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./ --headless",
-    "dev": "python3 -m http.server 8000"
+    "dev": "python3 -m http.server 8000 -d ./docs/"
   },
   "repository": {
     "type": "git",
