@@ -10276,6 +10276,22 @@
         "aliases": []
     },
     {
+        "name": "visualbasic",
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#880b8a",
+        "aliases": []
+    },
+    {
         "name": "vscode",
         "altnames": [
             "visualstudiocode"
