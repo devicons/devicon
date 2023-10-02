@@ -4028,6 +4028,19 @@
         ]
     },
     {
+        "name": "replit",
+        "tags": [
+            "editor"
+        ],
+        "versions":{
+            "svg":[
+                "original"
+            ]
+        },
+        "color": "#F26207",
+        "aliases": []
+    },
+    {
         "name": "rocksdb",
         "tags": [
             "database"
