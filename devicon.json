@@ -3303,6 +3303,19 @@
         "aliases": []
     },
     {
+        "name":"notion",
+        "tags":[
+            "project-management"
+        ],
+        "versions":{
+            "svg":[
+                "original"
+            ]
+        },
+        "color":"#ffffff",
+        "aliases":[]
+    },
+    {
         "name": "npm",
         "tags": [
             "package",
