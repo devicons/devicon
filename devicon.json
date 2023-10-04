@@ -5448,6 +5448,25 @@
         "aliases": []
     },
     {
+        "name": "lodash",
+        "altnames": [],
+        "tags": [
+            "javascript",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000",
+        "aliases": []
+    },
+    {
         "name": "logstash",
         "altnames": [],
         "tags": [
