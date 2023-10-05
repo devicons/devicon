@@ -8440,6 +8440,28 @@
         "aliases": []
     },
     {
+        "name": "rxjs",
+        "altnames": [
+            "Reactive Extensions for JavaScript"
+        ],
+        "tags": [
+            "javascript",
+            "library",
+            "observability"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#df1c85",
+        "aliases": []
+    },
+    {
         "name": "safari",
         "altnames": [
             "applesafari"
