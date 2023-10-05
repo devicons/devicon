@@ -7515,6 +7515,20 @@
         "aliases": []
     },
     {
+        "name": "pulumi",
+        "altnames": [],
+        "tags": [
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ]
+        },
+        "color": "#FF0000",
+        "aliases": []
+    },
+    {
         "name": "puppeteer",
         "altnames": [],
         "tags": [
