@@ -8273,6 +8273,29 @@
         "aliases": []
     },
     {
+        "name": "rockylinux",
+        "altnames": ["rocky"],
+        "tags": [
+            "os",
+            "open-source",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#10b982",
+        "aliases": []
+    },
+    {
         "name": "rollup",
         "altnames": [
             "rollupjs",
