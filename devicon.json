@@ -10880,6 +10880,28 @@
                 "plain-wordmark"
             ]
         },
+        "color": "#294172", 
+        "aliases": [] 
+    },
+    {
+        "name": "elasticsearch",
+        "tags": [
+            "Database",
+            "Search Engine",
+            "Search"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#010101",
+        "aliases": [
         "color": "#f7a41d",
         "aliases": [
             {
