@@ -10456,6 +10456,25 @@
         ]
     },
     {
+        "name": "web3js",
+        "altnames": [],
+        "tags": [
+            "blockchain",
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
         "name": "webflow",
         "altnames": [],
         "tags": [
