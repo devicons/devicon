@@ -157,6 +157,31 @@
         "aliases": []
     },
     {
+        "name": "almalinux",
+        "altnames": [
+            "AlmaLinux OS"
+        ],
+        "tags": [
+            "linux",
+            "os",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
         "name": "alpinejs",
         "altnames": [
             "Alpine"
