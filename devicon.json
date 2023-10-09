@@ -7596,6 +7596,36 @@
         "aliases": []
     },
     {
+        "name": "pulsar",
+        "altnames": ["Pulsar Edit"],
+        "tags": [
+            "open-source",
+            "cross-platform",
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2c3e50",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "pulumi",
         "altnames": [],
         "tags": [
@@ -7616,7 +7646,7 @@
         },
         "color": "#f6bf29",
         "aliases": []
-    },    
+    },
     {
         "name": "puppeteer",
         "altnames": [],
