@@ -7445,6 +7445,7 @@
         "aliases": []
     },
     {
+<<<<<<< Updated upstream
         "name": "prolog",
         "altnames": [
             "swi-prolog"
@@ -7489,6 +7490,26 @@
             ]
         },
         "color": "#e75225",
+=======
+        "name": "processwire",
+        "tags": [
+            "cms",
+            "php",
+            "framework"
+        ],
+        "versions":
+        {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e81d60",
+>>>>>>> Stashed changes
         "aliases": []
     },
     {
