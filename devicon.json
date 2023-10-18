@@ -5776,6 +5776,27 @@
         },
         "color": "#294172", 
         "aliases": [] 
+    },
+    {
+        "name": "ros",
+        "tags": [
+            "auth"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#22314E",
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          }
+        ]
     }
 
 ]
