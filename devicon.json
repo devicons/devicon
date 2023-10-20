@@ -9789,7 +9789,7 @@
     },
     {
         "name": "twitter",
-        "altnames":["x"],
+        "altnames": ["x"],
         "tags": [
             "auth"
         ],
@@ -9801,7 +9801,7 @@
                 "original"
             ]
         },
-        "color": "#000000,
+        "color": "#000",
         "aliases": [
             {
                 "base": "original",
