@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "definitions": {
+    "IconVersions": {
+      "type": "string",
+      "enum": [
+        "original",
+        "plain",
+        "line",
+        "original-wordmark",
+        "plain-wordmark",
+        "line-wordmark"
+      ]
+    },
+    "IconVersionsArray": { 
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/IconVersions"
+      }
+    }
+  },
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "The official name of the technology.",
+        "description": "Pattern: Only lower-case letters and digits.",
+        "pattern": "^(dot-net|[0-9a-z]+)$"
+      },
+      "altnames": {
+        "type": "array",
+        "title": "List of alternative names for this technology.",
+        "description": "Used for the searchbar on the Devicon website. https://devicon.dev",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "tags": {
+        "type": "array",
+        "title": "List of tags relating to the technology for categorization/search purpose.",
+        "$ref": "./tags-enum.json/#/definitions/Tags"
+      },
+      "versions": {
+        "title": "Keeps track of the different versions that you have.",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "svg": {
+            "title": "List all the SVGs that you have.",
+            "contains": {
+              "$ref": "#/definitions/IconVersions"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "$ref": "#/definitions/IconVersionsArray"
+          },
+          "font": {
+            "title": "List only the SVGs that can be converted to fonts. Usually refers to \"plain\" and \"line\" versions but \"original\" can be accepted.",
+            "description": "DO NOT list aliases here! In this case use \"aliases\" property!",
+            "contains": {
+              "$ref": "#/definitions/IconVersions"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "$ref": "#/definitions/IconVersionsArray"
+          }
+        }
+      },
+      "color": {
+        "title": "The official/main hexadecimal color of the logo. [Case insensitive]",
+        "description": "Pattern example: #FFFFFF",
+        "type": "string",
+        "pattern": "^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$"
+      },
+      "aliases": {
+        "title": "Keeps track of the aliases for the font versions ONLY.",
+        "description": "Can be empty, or contain objects, each with an alias and a base version. More info here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60#aliases-and-aliasobj",
+        "type": "array",
+        "items": {
+          "title": "AliasObj, an object containing an alias and a base version",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "base": {
+              "title": "The SVG file you are using as source for the alias.",
+              "$ref": "#/definitions/IconVersions"
+            },
+            "alias": {
+              "title": "The new name (alias) that you want to generate.",
+              "$ref": "#/definitions/IconVersions"
+            }
+          },
+          "required": [
+            "base",
+            "alias"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "base": {
+                    "const": "original"
+                  }
+                }
+              },
+              "then": {
+                "not": {
+                  "properties": {
+                    "alias": {
+                      "const": "original"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "base": {
+                    "const": "plain"
+                  }
+                }
+              },
+              "then": {
+                "not": {
+                  "properties": {
+                    "alias": {
+                      "const": "plain"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "base": {
+                    "const": "line"
+                  }
+                }
+              },
+              "then": {
+                "not": {
+                  "properties": {
+                    "alias": {
+                      "const": "line"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "base": {
+                    "const": "original-wordmark"
+                  }
+                }
+              },
+              "then": {
+                "not": {
+                  "properties": {
+                    "alias": {
+                      "const": "original-wordmark"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "base": {
+                    "const": "plain-wordmark"
+                  }
+                }
+              },
+              "then": {
+                "not": {
+                  "properties": {
+                    "alias": {
+                      "const": "plain-wordmark"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "base": {
+                    "const": "line-wordmark"
+                  }
+                }
+              },
+              "then": {
+                "not": {
+                  "properties": {
+                    "alias": {
+                      "const": "line-wordmark"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "required": [
+      "name",
+      "altnames",
+      "tags",
+      "versions",
+      "color",
+      "aliases"
+    ]
+  }
+}
