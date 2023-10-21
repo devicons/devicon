@@ -4545,6 +4545,28 @@
         ]
     },
     {
+        "name": "microsoft 365",
+        "altnames":["365"],
+        "tags": [
+            "cloud-based services"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0078D4",
+        "aliases": [
+          {
+            "base": "original",
+            "alias": "plain"
+          }
+        ]
+    },
+    {
         "name": "microsoftsqlserver",
         "tags": [
             "database"
