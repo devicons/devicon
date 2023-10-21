@@ -6384,17 +6384,26 @@
         "aliases": []
     },
     {
-        "name":"notion",
-        "tags":[
+        "name": "notion",
+        "altnames": [],
+        "tags": [
             "project-management"
         ],
-        "versions":{
-            "svg":[
+        "versions": {
+            "svg": [
                 "original"
-            ]
+            ],
+            "font": [
+                "original"
+            ],
         },
-        "color":"#ffffff",
-        "aliases":[]
+        "color": "#fff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "npm",
