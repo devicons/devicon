@@ -4687,10 +4687,7 @@
     },
     {
         "name": "jetpackcompose",
-        "altnames": [
-            "jetpack",
-            "compose"
-        ],
+        "altnames": [],
         "tags": [
             "framework",
             "language",
