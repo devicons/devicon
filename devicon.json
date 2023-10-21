@@ -6390,12 +6390,20 @@
             "project-management"
         ],
         "versions": {
-            "svg":[
+            "svg": [
                 "original"
-            ]
+            ],
+            "font": [
+                "original"
+            ],
         },
         "color": "#fff",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "npm",
