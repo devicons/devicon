@@ -8987,6 +8987,28 @@
         ]
     },
     {
+        "name": "spack",
+        "altnames": [],
+        "tags": [
+            "package-manager",
+            "package",
+            "manager",
+            "python",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0F3A80",
+        "aliases": []
+    },
+    {
         "name": "splunk",
         "altnames": [],
         "tags": [
