@@ -6067,6 +6067,31 @@
         "aliases": []
     },
     {
+        "name": "netlify",
+        "altnames": [],
+        "tags": [
+            "cloud hosting",
+            "serverless",
+            "dynamic websites",
+            "web applications",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#05BDBA",
+        "aliases": []
+    },
+    {
         "name": "networkx",
         "altnames": [],
         "tags": [
