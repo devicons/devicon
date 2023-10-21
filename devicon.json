@@ -8232,6 +8232,21 @@
         "aliases": []
     },
     {
+        "name": "replit",
+        "altnames": [],
+        "tags": [
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#F26207",
+        "aliases": []
+    },
+    {
         "name": "rider",
         "altnames": [],
         "tags": [
