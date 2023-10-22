@@ -7596,6 +7596,28 @@
         "aliases": []
     },
     {
+        "name": "pulumi",
+        "altnames": [],
+        "tags": [
+            "infrastructure-as-code",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f6bf29",
+        "aliases": []
+    },    
+    {
         "name": "puppeteer",
         "altnames": [],
         "tags": [
