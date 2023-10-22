@@ -8239,8 +8239,9 @@
         ],
         "versions": {
             "svg": [
-                "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "original"
@@ -8249,7 +8250,7 @@
         "color": "#F26207",
         "aliases": [
             {
-                "base": "original,
+                "base": "original",
                 "alias": "plain"
             }
         ]
