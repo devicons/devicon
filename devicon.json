@@ -3170,7 +3170,7 @@
         "name": "framermotion",
         "altnames": [
             "framer-motion",
-            "framer"            
+            "framer"
         ],
         "tags": [
             "library",
@@ -4932,6 +4932,31 @@
             ]
         },
         "color": "#ffc519",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "k6",
+        "altnames": [],
+        "tags": [
+            "testing",
+            "performance",
+            "load"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+
+        "color": "#7D64FF",
         "aliases": [
             {
                 "base": "original",
