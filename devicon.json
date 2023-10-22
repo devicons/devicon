@@ -3170,7 +3170,7 @@
         "name": "framermotion",
         "altnames": [
             "framer-motion",
-            "framer"            
+            "framer"
         ],
         "tags": [
             "library",
@@ -6392,15 +6392,17 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#fff",
         "aliases": []
-        },
+    },
     {
         "name": "npm",
         "altnames": [
@@ -8911,16 +8913,16 @@
             "frontend"
         ],
         "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#2c4f7c",
         "aliases": []
@@ -9611,10 +9613,10 @@
         },
         "color": "#bd222b",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            }
         ]
     },
     {
