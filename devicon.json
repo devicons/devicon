@@ -3170,7 +3170,7 @@
         "name": "framermotion",
         "altnames": [
             "framer-motion",
-            "framer"            
+            "framer"
         ],
         "tags": [
             "library",
@@ -3211,16 +3211,16 @@
             "android",
             "ios",
             "open-source"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
                 "original-wordmark"
-            ], 
+            ],
             "font": [
                 "original",
                 "original-wordmark"
-            ] 
+            ]
         },
         "color": "#ee350f",
         "aliases": [
@@ -3740,20 +3740,30 @@
             "gradlebuildtool"
         ],
         "tags": [
+            "open-source",
             "task-runner"
         ],
         "versions": {
             "svg": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#02303a",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "grafana",
@@ -4930,6 +4940,31 @@
         ]
     },
     {
+        "name": "k6",
+        "altnames": [],
+        "tags": [
+            "testing",
+            "performance",
+            "load"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+
+        "color": "#7D64FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "kaggle",
         "altnames": [],
         "tags": [
@@ -5004,21 +5039,21 @@
         "aliases": []
     },
     {
-        "name": "kdeneon", 
+        "name": "kdeneon",
         "altnames": [],
         "tags": [
             "linux",
             "operating system",
             "open-source"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
                 "plain"
-            ], 
+            ],
             "font": [
                 "plain"
-            ] 
+            ]
         },
         "color": "#21769a",
         "aliases": []
@@ -6083,6 +6118,31 @@
         "aliases": []
     },
     {
+        "name": "netlify",
+        "altnames": [],
+        "tags": [
+            "cloud hosting",
+            "serverless",
+            "dynamic websites",
+            "web applications",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#05BDBA",
+        "aliases": []
+    },
+    {
         "name": "networkx",
         "altnames": [],
         "tags": [
@@ -6836,6 +6896,37 @@
         ]
     },
     {
+        "name": "ory",
+        "altnames": [],
+        "tags": [
+            "library",
+            "open-source",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#5528ff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+
+    },
+    {
         "name": "p5js",
         "altnames": [
             "p5.js"
@@ -7531,6 +7622,58 @@
         "aliases": []
     },
     {
+        "name": "pulumi",
+        "altnames": [],
+        "tags": [
+            "infrastructure-as-code",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f6bf29",
+        "aliases": []
+    },    
+    {
+        "name": "puppeteer",
+        "altnames": [],
+        "tags": [
+            "open-source",
+            "devtools protocol",
+            "testing",
+            "extension"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00d8a2",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "purescript",
         "altnames": [],
         "tags": [
@@ -7603,7 +7746,7 @@
             "programming"
         ],
         "versions": {
-            "svg": [ 
+            "svg": [
                 "original",
                 "original-wordmark",
                 "plain",
@@ -7615,7 +7758,7 @@
             ]
         },
         "color": "#3775a9",
-        "aliases": []  
+        "aliases": []
     },
     {
         "name": "pyscript",
@@ -8218,6 +8361,30 @@
         "aliases": []
     },
     {
+        "name": "replit",
+        "altnames": [],
+        "tags": [
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#F26207",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "rider",
         "altnames": [],
         "tags": [
@@ -8681,26 +8848,26 @@
         ]
     },
     {
-        "name": "reactrouter", 
+        "name": "reactrouter",
         "altnames": [],
         "tags": [
             "framework",
             "react"
-        ], 
+        ],
         "versions": {
             "svg": [
                 "original",
                 "original-wordmark",
                 "plain",
                 "plain-wordmark"
-            ], 
+            ],
             "font": [
                 "plain",
                 "plain-wordmark"
-            ] 
+            ]
         },
-        "color": "#f44250", 
-        "aliases": [] 
+        "color": "#f44250",
+        "aliases": []
     },
     {
         "name": "sequelize",
@@ -8946,6 +9113,28 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "spack",
+        "altnames": [],
+        "tags": [
+            "package-manager",
+            "package",
+            "manager",
+            "python",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0F3A80",
+        "aliases": []
     },
     {
         "name": "splunk",
@@ -10259,6 +10448,27 @@
             ]
         },
         "color": "#f16827",
+        "aliases": []
+    },
+    {
+        "name": "vitest",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "open-source",
+            "testing",
+            "vite"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#fcc72b",
         "aliases": []
     },
     {
