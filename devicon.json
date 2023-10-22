@@ -8242,10 +8242,17 @@
                 "original",
                 "original-wordmark"
             ],
-            "font": []
+            "font": [
+                "original"
+            ]
         },
         "color": "#F26207",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original,
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "rider",
