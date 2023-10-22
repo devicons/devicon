@@ -37,7 +37,7 @@ html {
   box-sizing: border-box; }
   
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 20px;
 }
 *::-webkit-scrollbar-track {
   background: var(--primaryColor);
