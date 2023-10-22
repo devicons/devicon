@@ -8335,6 +8335,30 @@
         "aliases": []
     },
     {
+        "name": "replit",
+        "altnames": [],
+        "tags": [
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#F26207",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "rider",
         "altnames": [],
         "tags": [
