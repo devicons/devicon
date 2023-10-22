@@ -6399,13 +6399,8 @@
             ]
         },
         "color": "#fff",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
-    },
+        "aliases": []
+        },
     {
         "name": "npm",
         "altnames": [
