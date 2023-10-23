@@ -9031,6 +9031,30 @@
         "aliases": []
     },
     {
+        "name": "spyder",
+        "altnames": [],
+        "tags": [
+            "python",
+            "ide",
+            "editor",
+            "data-science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#8c0000",
+        "aliases": []
+    },
+    {
         "name": "sqlalchemy",
         "altnames": [],
         "tags": [
