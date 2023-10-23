@@ -5776,6 +5776,25 @@
         "aliases": []
     },
     {
+        "name": "microsoft365",
+        "altnames": [
+            "365"
+        ],
+        "tags": [
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0078D4",
+        "aliases": []
+    },
+    {
         "name": "microsoftsqlserver",
         "altnames": [
             "msql"
