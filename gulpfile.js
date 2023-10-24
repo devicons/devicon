@@ -5,7 +5,7 @@ const footer = require("gulp-footer");
 const yargs = require("yargs");
 const fsPromise = require("fs").promises;
 const path = require("path");
-const {execSync} = require("child_process")
+const {execSync} = require("child_process");
 
 // global const
 const deviconBaseCSSName = "devicon-base.css"
@@ -26,7 +26,7 @@ async function createDeviconMinCSS() {
   let deviconMinPath = path.join(__dirname, finalMinSCSSName);
   // recall that devicon-alias.scss imported the devicon-base.css => don't need
   // to reimport that file.
-  const fileContent = `@use "${aliasSCSSName}";@use "${colorsCSSName}";`;
+  const fileContent = `@use "${aliasSCSSName}";@use "${colorsCSSName}";
   await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
 
   return gulp
@@ -82,7 +82,7 @@ function createAliasStatement(fontObj) {
     .map(aliasObj => {
       return `.devicon-${name}-${aliasObj.alias} {
             @extend .devicon-${name}-${aliasObj.base};
-        }`;
+        };
     })
     .join(" ");
 }
