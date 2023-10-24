@@ -10039,7 +10039,7 @@
     },
     {
         "name": "twitter",
-        "altnames": [],
+        "altnames": ["x"],
         "tags": [
             "auth"
         ],
@@ -10051,7 +10051,7 @@
                 "original"
             ]
         },
-        "color": "#1d9bf0",
+        "color": "#000",
         "aliases": [
             {
                 "base": "original",
