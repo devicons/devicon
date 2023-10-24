@@ -4711,6 +4711,34 @@
         "aliases": []
     },
     {
+        "name": "jetpackcompose",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "language",
+            "kotlin",
+            "android"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#4285f4",
+        "aliases": []
+    },
+    {
         "name": "jira",
         "altnames": [
             "atlassianjira"
@@ -6478,6 +6506,26 @@
         "aliases": []
     },
     {
+        "name": "notion",
+        "altnames": [],
+        "tags": [
+            "project-management"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#fff",
+        "aliases": []
+    },
+    {
         "name": "npm",
         "altnames": [
             "npmjs",
@@ -7640,6 +7688,36 @@
         "aliases": []
     },
     {
+        "name": "pulsar",
+        "altnames": ["Pulsar Edit"],
+        "tags": [
+            "open-source",
+            "cross-platform",
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2c3e50",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "pulumi",
         "altnames": [],
         "tags": [
@@ -7660,7 +7738,7 @@
         },
         "color": "#f6bf29",
         "aliases": []
-    },    
+    },
     {
         "name": "puppeteer",
         "altnames": [],
@@ -8866,6 +8944,36 @@
         ]
     },
     {
+        "name": "sentry",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "analytics",
+            "metrics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#362d59",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "reactrouter",
         "altnames": [],
         "tags": [
@@ -9064,16 +9172,16 @@
             "frontend"
         ],
         "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#2c4f7c",
         "aliases": []
@@ -9221,6 +9329,30 @@
             ]
         },
         "color": "#cc1e4c",
+        "aliases": []
+    },
+    {
+        "name": "spyder",
+        "altnames": [],
+        "tags": [
+            "python",
+            "ide",
+            "editor",
+            "data-science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#8c0000",
         "aliases": []
     },
     {
@@ -9565,6 +9697,30 @@
         "aliases": []
     },
     {
+        "name": "swiper",
+        "altnames": [],
+        "tags": [
+            "library",
+            "javascript",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0080FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "symfony",
         "altnames": [],
         "tags": [
@@ -9786,10 +9942,10 @@
         },
         "color": "#bd222b",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            }
         ]
     },
     {
@@ -9982,7 +10138,7 @@
     },
     {
         "name": "twitter",
-        "altnames": [],
+        "altnames": ["x"],
         "tags": [
             "auth"
         ],
@@ -9994,7 +10150,7 @@
                 "original"
             ]
         },
-        "color": "#1d9bf0",
+        "color": "#000",
         "aliases": [
             {
                 "base": "original",
