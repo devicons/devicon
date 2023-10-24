@@ -1930,6 +1930,25 @@
         "aliases": []
     },
     {
+        "name": "couchbase",
+        "altnames": [],
+        "tags": [
+            "database",
+            "nosql",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#EA2328",
+        "aliases": []
+    },
+    {
         "name": "couchdb",
         "altnames": [
             "apachecouchdb"
