@@ -1341,6 +1341,31 @@
         "aliases": []
     },
     {
+        "name": "carbon",
+        "altnames": [
+            "Carbon Language"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "cassandra",
         "altnames": [
             "Apache Cassandra"
@@ -4683,6 +4708,34 @@
             ]
         },
         "color": "#FDCC21",
+        "aliases": []
+    },
+    {
+        "name": "jetpackcompose",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "language",
+            "kotlin",
+            "android"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#4285f4",
         "aliases": []
     },
     {
@@ -9210,6 +9263,30 @@
         "aliases": []
     },
     {
+        "name": "spyder",
+        "altnames": [],
+        "tags": [
+            "python",
+            "ide",
+            "editor",
+            "data-science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#8c0000",
+        "aliases": []
+    },
+    {
         "name": "sqlalchemy",
         "altnames": [],
         "tags": [
@@ -9549,6 +9626,30 @@
         },
         "color": "#F05138",
         "aliases": []
+    },
+    {
+        "name": "swiper",
+        "altnames": [],
+        "tags": [
+            "library",
+            "javascript",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0080FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "symfony",
@@ -9968,7 +10069,7 @@
     },
     {
         "name": "twitter",
-        "altnames": [],
+        "altnames": ["x"],
         "tags": [
             "auth"
         ],
@@ -9980,7 +10081,7 @@
                 "original"
             ]
         },
-        "color": "#1d9bf0",
+        "color": "#000",
         "aliases": [
             {
                 "base": "original",
