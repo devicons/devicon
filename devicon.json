@@ -7494,6 +7494,24 @@
         "color": "#f37036",
         "aliases": []
     },
+    
+    {
+        "name": "powerpages",
+        "altnames": [],
+        "tags": [
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#A392E7",
+        "aliases": []
+    },
     {
         "name": "powershell",
         "altnames": [
