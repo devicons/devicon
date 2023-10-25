@@ -7497,7 +7497,9 @@
     
     {
         "name": "powerpages",
-        "altnames": [],
+        "altnames": [
+            "Microsoft Power Pages",
+        ],
         "tags": [
             "software"
         ],
