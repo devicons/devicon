@@ -11197,6 +11197,31 @@
         "aliases": []
     },
     {
+        "name": "yugabytedb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "relational",
+            "sql",
+            "scale",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff5f3b",
+        "aliases": []
+    },
+    {
         "name": "yunohost",
         "altnames": [],
         "tags": [
