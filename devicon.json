@@ -5870,19 +5870,25 @@
     },
     {
         "name": "mithril",
-        "altnames": [],
+        "altnames": [
+            "mithril.js"
+    ],
         "tags": [
-            "framework"
+            "javascript",
+            "framework",
+            "frontend",
+            "js"
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "line"
             ],
             "font": [
                 "original"
             ]
         },
-        "color": "#000",
+        "color": "#010002",
         "aliases": [
             {
                 "base": "original",
