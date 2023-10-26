@@ -5869,6 +5869,28 @@
         "aliases": []
     },
     {
+        "name": "mithril",
+        "altnames": [],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "mobx",
         "altnames": [
             "mobxjs"
