@@ -5776,6 +5776,22 @@
         },
         "color": "#294172", 
         "aliases": [] 
+    },
+    {
+        "name": "stackblitz",
+        "tags": [
+            "IDE",
+            "FullStack Development Online"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#587dbd",
+        "aliases": [ ]
     }
-
 ]
