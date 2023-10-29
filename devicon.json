@@ -5698,6 +5698,29 @@
         "aliases": []
     },
     {
+        "name": "mattermost",
+        "altnames": [],
+        "tags": [
+            "app",
+            "chat", 
+            "collaboration",
+            "open-source",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#19191c",
+        "aliases": []
+    },
+    {
         "name": "maven",
         "altnames": [
             "apachemaven",
