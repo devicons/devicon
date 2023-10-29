@@ -180,3 +180,19 @@ def get_issues_by_labels(token: str, labels: List[str]):
             issues.extend(issues_only)
 
     return issues
+
+
+def get_pr_by_number(token: str, pr_num: str):
+    url = base_url + "pulls/" + pr_num
+    headers = {
+        "Authorization": f"token {token}"
+    }
+
+    print(f"Querying the GitHub API for requests")
+    response = requests.get(url, headers=headers)
+    if not response:
+        print(f"Can't query the GitHub API. Status code is {response.status_code}. Message is {response.text}")
+        sys.exit(1)
+
+    pr = response.json()
+    return pr

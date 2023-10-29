@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-python@v4
         with: 
           python-version: '3.10'
@@ -25,6 +24,7 @@ jobs:
           python ./.github/scripts/icomoon_build.py 
           ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json 
           ./devicon.json ./icons ./ $GITHUB_TOKEN --headless
+
 
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v2
