@@ -11285,7 +11285,8 @@
         "name": "stackblitz",
         "tags": [
             "IDE",
-            "FullStack Development Online"
+            "FullStack Development Online",
+            "online ide"
         ],
         "versions": {
             "svg": [
@@ -11296,7 +11297,7 @@
             ]
         },
         "color": "#587dbd",
-        "aliases": [ ]
+        "aliases": ["stack-blitz"]
     }
 ]
 
