@@ -1,8 +1,9 @@
 [
     {
-        "name": "3dsmax",
+        "name": "threedsmax",
         "altnames": [
-            "Autodesk 3ds Max"
+            "Autodesk 3ds Max",
+            "3dsmax"
         ],
         "tags": [
             "3d",
@@ -5008,7 +5009,6 @@
                 "original"
             ]
         },
-
         "color": "#7D64FF",
         "aliases": [
             {
@@ -6971,7 +6971,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-
     },
     {
         "name": "p5js",
@@ -7670,7 +7669,9 @@
     },
     {
         "name": "pulsar",
-        "altnames": ["Pulsar Edit"],
+        "altnames": [
+            "Pulsar Edit"
+        ],
         "tags": [
             "open-source",
             "cross-platform",
@@ -10141,7 +10142,9 @@
     },
     {
         "name": "twitter",
-        "altnames": ["x"],
+        "altnames": [
+            "x"
+        ],
         "tags": [
             "auth"
         ],
