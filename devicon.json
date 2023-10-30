@@ -11278,12 +11278,26 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#f7a41d",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "color": "#294172", 
+        "aliases": [] 
+    },
+    {
+        "name": "stackblitz",
+        "tags": [
+            "IDE",
+            "FullStack Development Online",
+            "online ide"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#587dbd",
+        "aliases": ["stack-blitz"]
     }
 ]
+
