@@ -9456,6 +9456,30 @@
         ]
     },
     {
+        "name": "stackblitz",
+        "altnames": [],
+        "tags": [
+            "Full-Stack-Development",
+            "Online-IDE",
+            "IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#1389fd",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "stackoverflow",
         "altnames": [
             "Stack Overflow"
@@ -11289,24 +11313,5 @@
                 "alias": "plain"
             }
         ]
-    },
-    {
-        "name": "stackblitz",
-        "altnames": [],
-        "tags": [
-            "Full-Stack-Development",
-            "Online-IDE",
-            "IDE"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "original"
-            ]
-        },
-        "color": "#1389fd",
-        "aliases": []
-    }
+    }   
 ]
