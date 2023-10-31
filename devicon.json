@@ -11285,5 +11285,23 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "stackblitz",
+        "altnames": [],
+        "tags": [
+            "Full-Stack-Development",
+            "Online-IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#68b604",
+        "aliases": []
     }
 ]
