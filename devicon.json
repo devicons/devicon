@@ -7497,9 +7497,12 @@
     
     {
         "name": "powerpages",
-        "altnames": [],
+        "altnames": [
+            "Microsoft Power Pages",
+        ],
         "tags": [
-            "software"
+            "software",
+            "low-code"
         ],
         "versions": {
             "svg": [
