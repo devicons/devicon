@@ -1,8 +1,9 @@
 [
     {
-        "name": "3dsmax",
+        "name": "threedsmax",
         "altnames": [
-            "Autodesk 3ds Max"
+            "Autodesk 3ds Max",
+            "3dsmax"
         ],
         "tags": [
             "3d",
@@ -1943,6 +1944,33 @@
         },
         "color": "#59B3D8",
         "aliases": []
+    },
+    {
+        "name": "couchbase",
+        "altnames": [],
+        "tags": [
+            "database",
+            "nosql",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#EA2328",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "couchdb",
@@ -4029,11 +4057,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#000000",
@@ -5023,7 +5055,6 @@
                 "original"
             ]
         },
-
         "color": "#7D64FF",
         "aliases": [
             {
@@ -5884,6 +5915,35 @@
         "aliases": []
     },
     {
+        "name": "mithril",
+        "altnames": [
+            "mithril.js"
+        ],
+        "tags": [
+            "javascript",
+            "framework",
+            "frontend",
+            "js"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#010002",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "mobx",
         "altnames": [
             "mobxjs"
@@ -6138,6 +6198,36 @@
             ]
         },
         "color": "#018BFF",
+        "aliases": []
+    },
+    {
+        "name": "neovim",
+        "altnames": [],
+        "tags": [
+            "text editor",
+            "editor",
+            "ide",
+            "IDE",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#5fb950",
         "aliases": []
     },
     {
@@ -6986,7 +7076,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-
     },
     {
         "name": "p5js",
@@ -7685,7 +7774,9 @@
     },
     {
         "name": "pulsar",
-        "altnames": ["Pulsar Edit"],
+        "altnames": [
+            "Pulsar Edit"
+        ],
         "tags": [
             "open-source",
             "cross-platform",
@@ -8123,6 +8214,40 @@
         "aliases": []
     },
     {
+        "name": "railway",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "platform",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "rancher",
         "altnames": [],
         "tags": [
@@ -8516,6 +8641,33 @@
         },
         "color": "#f5be17",
         "aliases": []
+    },
+    {
+        "name": "rockylinux",
+        "altnames": ["rocky"],
+        "tags": [
+            "os",
+            "open-source",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#10b982",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "rollup",
@@ -10156,7 +10308,9 @@
     },
     {
         "name": "twitter",
-        "altnames": ["x"],
+        "altnames": [
+            "x"
+        ],
         "tags": [
             "auth"
         ],
@@ -10286,7 +10440,11 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
@@ -11163,16 +11321,22 @@
         "altnames": [],
         "tags": [
             "package",
-            "manager"
+            "manager",
+            "javascript",
+            "js"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#2c8ebb",
