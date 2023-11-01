@@ -1,8 +1,9 @@
 [
     {
-        "name": "3dsmax",
+        "name": "threedsmax",
         "altnames": [
-            "Autodesk 3ds Max"
+            "Autodesk 3ds Max",
+            "3dsmax"
         ],
         "tags": [
             "3d",
@@ -4014,11 +4015,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#000000",
@@ -5008,7 +5013,6 @@
                 "original"
             ]
         },
-
         "color": "#7D64FF",
         "aliases": [
             {
@@ -6971,7 +6975,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-
     },
     {
         "name": "p5js",
@@ -7670,7 +7673,9 @@
     },
     {
         "name": "pulsar",
-        "altnames": ["Pulsar Edit"],
+        "altnames": [
+            "Pulsar Edit"
+        ],
         "tags": [
             "open-source",
             "cross-platform",
@@ -10141,7 +10146,9 @@
     },
     {
         "name": "twitter",
-        "altnames": ["x"],
+        "altnames": [
+            "x"
+        ],
         "tags": [
             "auth"
         ],
@@ -10271,7 +10278,11 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
