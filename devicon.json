@@ -4014,11 +4014,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#000000",
@@ -5008,7 +5012,6 @@
                 "original"
             ]
         },
-
         "color": "#7D64FF",
         "aliases": [
             {
@@ -6971,7 +6974,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-
     },
     {
         "name": "p5js",
@@ -7670,7 +7672,9 @@
     },
     {
         "name": "pulsar",
-        "altnames": ["Pulsar Edit"],
+        "altnames": [
+            "Pulsar Edit"
+        ],
         "tags": [
             "open-source",
             "cross-platform",
@@ -10141,7 +10145,9 @@
     },
     {
         "name": "twitter",
-        "altnames": ["x"],
+        "altnames": [
+            "x"
+        ],
         "tags": [
             "auth"
         ],
