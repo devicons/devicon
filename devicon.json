@@ -11159,16 +11159,22 @@
         "altnames": [],
         "tags": [
             "package",
-            "manager"
+            "manager",
+            "javascript",
+            "js"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#2c8ebb",
