@@ -10113,10 +10113,12 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "line"
             ],
             "font": [
-                "original"
+                "original",
+                "line"
             ]
         },
         "color": "#04c971",
