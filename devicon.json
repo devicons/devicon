@@ -1,8 +1,9 @@
 [
     {
-        "name": "3dsmax",
+        "name": "threedsmax",
         "altnames": [
-            "Autodesk 3ds Max"
+            "Autodesk 3ds Max",
+            "3dsmax"
         ],
         "tags": [
             "3d",
