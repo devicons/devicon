@@ -1,8 +1,9 @@
 [
     {
-        "name": "3dsmax",
+        "name": "threedsmax",
         "altnames": [
-            "Autodesk 3ds Max"
+            "Autodesk 3ds Max",
+            "3dsmax"
         ],
         "tags": [
             "3d",
@@ -4014,11 +4015,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#000000",
@@ -5008,7 +5013,6 @@
                 "original"
             ]
         },
-
         "color": "#7D64FF",
         "aliases": [
             {
@@ -5869,6 +5873,35 @@
         "aliases": []
     },
     {
+        "name": "mithril",
+        "altnames": [
+            "mithril.js"
+        ],
+        "tags": [
+            "javascript",
+            "framework",
+            "frontend",
+            "js"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#010002",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "mobx",
         "altnames": [
             "mobxjs"
@@ -6123,6 +6156,36 @@
             ]
         },
         "color": "#018BFF",
+        "aliases": []
+    },
+    {
+        "name": "neovim",
+        "altnames": [],
+        "tags": [
+            "text editor",
+            "editor",
+            "ide",
+            "IDE",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#5fb950",
         "aliases": []
     },
     {
@@ -6971,7 +7034,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-
     },
     {
         "name": "p5js",
@@ -7670,7 +7732,9 @@
     },
     {
         "name": "pulsar",
-        "altnames": ["Pulsar Edit"],
+        "altnames": [
+            "Pulsar Edit"
+        ],
         "tags": [
             "open-source",
             "cross-platform",
@@ -10168,7 +10232,9 @@
     },
     {
         "name": "twitter",
-        "altnames": ["x"],
+        "altnames": [
+            "x"
+        ],
         "tags": [
             "auth"
         ],
@@ -11179,16 +11245,22 @@
         "altnames": [],
         "tags": [
             "package",
-            "manager"
+            "manager",
+            "javascript",
+            "js"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#2c8ebb",
