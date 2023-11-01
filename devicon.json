@@ -5873,6 +5873,35 @@
         "aliases": []
     },
     {
+        "name": "mithril",
+        "altnames": [
+            "mithril.js"
+        ],
+        "tags": [
+            "javascript",
+            "framework",
+            "frontend",
+            "js"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#010002",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "mobx",
         "altnames": [
             "mobxjs"
