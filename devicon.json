@@ -6159,10 +6159,12 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "line"
             ],
             "font": [
-                "original"
+                "original",
+                "line"
             ]
         },
         "color": "#02228e",
@@ -6178,6 +6180,10 @@
             {
                 "base": "original",
                 "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
             }
         ]
     },
