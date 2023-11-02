@@ -7507,10 +7507,10 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "line"
             ],
             "font": [
-                "original"
+                "line"
             ]
         },
         "color": "#A392E7",
