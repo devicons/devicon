@@ -10944,6 +10944,46 @@
         "aliases": []
     },
     {
+        "name": "vulkan",
+        "altnames": [],
+        "tags": [
+            "api",
+            "3d",
+            "library",
+            "graphics",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#ac162c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "vyper",
         "altnames": [
             "vyperlang"
