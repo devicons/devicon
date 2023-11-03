@@ -9821,6 +9821,33 @@
         "aliases": []
     },
     {
+        "name": "svgo",
+        "altnames": [],
+        "tags": [
+            "svg",
+            "optimization",
+            "tool"       
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": []
+    },
+    {
         "name": "swagger",
         "altnames": [
             "Swagger"
