@@ -10178,6 +10178,27 @@
         "aliases": []
     },
     {
+        "name": "visualbasic",
+        "altnames": [
+            "vb"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#004e8c",
+        "aliases": []
+    },
+    {
         "name": "visualstudio",
         "altnames": [
             "vs"
@@ -10273,22 +10294,6 @@
             ]
         },
         "color": "#f16827",
-        "aliases": []
-    },
-    {
-        "name": "visualbasic",
-        "tags": [
-            "language"
-        ],
-        "versions": {
-            "svg": [
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#880b8a",
         "aliases": []
     },
     {
