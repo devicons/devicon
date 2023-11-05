@@ -1,5 +1,41 @@
 [
     {
+        "name": "threedsmax",
+        "altnames": [
+            "Autodesk 3ds Max",
+            "3dsmax"
+        ],
+        "tags": [
+            "3d",
+            "programming",
+            "vfx",
+            "graphic",
+            "graphics",
+            "game",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#37a5cc",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "aarch64",
         "altnames": [
             "arm64"
@@ -13,14 +49,29 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#16358C",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "adonisjs",
@@ -308,6 +359,25 @@
             ]
         },
         "color": "#c4473a",
+        "aliases": []
+    },
+    {
+        "name": "angularmaterial",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffa726",
         "aliases": []
     },
     {
@@ -1287,6 +1357,31 @@
         "aliases": []
     },
     {
+        "name": "carbon",
+        "altnames": [
+            "Carbon Language"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "cassandra",
         "altnames": [
             "Apache Cassandra"
@@ -1849,6 +1944,33 @@
         },
         "color": "#59B3D8",
         "aliases": []
+    },
+    {
+        "name": "couchbase",
+        "altnames": [],
+        "tags": [
+            "database",
+            "nosql",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#EA2328",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "couchdb",
@@ -2459,6 +2581,26 @@
         "aliases": []
     },
     {
+        "name": "dynamodb",
+        "altnames": [],
+        "tags": [
+            "key-value",
+            "database",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#527fff",
+        "aliases": []
+    },
+    {
         "name": "eclipse",
         "altnames": [
             "Eclipse IDE"
@@ -2479,6 +2621,34 @@
         },
         "color": "#2c2255",
         "aliases": []
+    },
+    {
+        "name": "ecto",
+        "altnames": [],
+        "tags": [
+            "data",
+            "elixir",
+            "integration",
+            "query"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#77bf43",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "elasticsearch",
@@ -3065,6 +3235,74 @@
         "aliases": []
     },
     {
+        "name": "framermotion",
+        "altnames": [
+            "framer-motion",
+            "framer"
+        ],
+        "tags": [
+            "library",
+            "open-source",
+            "react",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "framework7",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "cross-platform",
+            "development",
+            "mobile",
+            "android",
+            "ios",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ee350f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "fsharp",
         "altnames": [
             "f#"
@@ -3570,20 +3808,30 @@
             "gradlebuildtool"
         ],
         "tags": [
+            "open-source",
             "task-runner"
         ],
         "versions": {
             "svg": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#02303a",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "grafana",
@@ -3687,6 +3935,32 @@
         "aliases": []
     },
     {
+        "name": "grpc",
+        "altnames": [
+            "grpcio",
+            "Google Remote Procedure Call"
+        ],
+        "tags": [
+            "programming",
+            "c++",
+            "java",
+            "python",
+            "go",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00b0ad",
+        "aliases": []
+    },
+    {
         "name": "grunt",
         "altnames": [
             "gruntjs"
@@ -3783,11 +4057,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#000000",
@@ -4480,6 +4758,34 @@
         "aliases": []
     },
     {
+        "name": "jetpackcompose",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "language",
+            "kotlin",
+            "android"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#4285f4",
+        "aliases": []
+    },
+    {
         "name": "jira",
         "altnames": [
             "atlassianjira"
@@ -4734,6 +5040,30 @@
         ]
     },
     {
+        "name": "k6",
+        "altnames": [],
+        "tags": [
+            "testing",
+            "performance",
+            "load"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#7D64FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "kaggle",
         "altnames": [],
         "tags": [
@@ -4805,6 +5135,26 @@
             ]
         },
         "color": "#56c5a8",
+        "aliases": []
+    },
+    {
+        "name": "kdeneon",
+        "altnames": [],
+        "tags": [
+            "linux",
+            "operating system",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#21769a",
         "aliases": []
     },
     {
@@ -5298,6 +5648,36 @@
         "aliases": []
     },
     {
+        "name": "mariadb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "sql",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#003545",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "markdown",
         "altnames": [
             "md"
@@ -5533,6 +5913,35 @@
         },
         "color": "#8dc63f",
         "aliases": []
+    },
+    {
+        "name": "mithril",
+        "altnames": [
+            "mithril.js"
+        ],
+        "tags": [
+            "javascript",
+            "framework",
+            "frontend",
+            "js"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#010002",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "mobx",
@@ -5792,6 +6201,36 @@
         "aliases": []
     },
     {
+        "name": "neovim",
+        "altnames": [],
+        "tags": [
+            "text editor",
+            "editor",
+            "ide",
+            "IDE",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#5fb950",
+        "aliases": []
+    },
+    {
         "name": "nestjs",
         "altnames": [],
         "tags": [
@@ -5808,6 +6247,31 @@
             ]
         },
         "color": "#DF234F",
+        "aliases": []
+    },
+    {
+        "name": "netlify",
+        "altnames": [],
+        "tags": [
+            "cloud hosting",
+            "serverless",
+            "dynamic websites",
+            "web applications",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#05BDBA",
         "aliases": []
     },
     {
@@ -5893,6 +6357,28 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "ngrx",
+        "altnames": [],
+        "tags": [
+            "state-management",
+            "angular",
+            "redux",
+            "store",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#412846",
+        "aliases": []
     },
     {
         "name": "nhibernate",
@@ -6056,6 +6542,35 @@
         "aliases": []
     },
     {
+        "name": "nomad",
+        "altnames": [
+            "HashiCorp Nomad"
+        ],
+        "tags": [
+            "container",
+            "virtual machine",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00ca8e",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "norg",
         "altnames": [
             "neorg"
@@ -6074,6 +6589,26 @@
             ]
         },
         "color": "#4878be",
+        "aliases": []
+    },
+    {
+        "name": "notion",
+        "altnames": [],
+        "tags": [
+            "project-management"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#fff",
         "aliases": []
     },
     {
@@ -6166,6 +6701,34 @@
         },
         "color": "#00c48d",
         "aliases": []
+    },
+    {
+        "name": "oauth",
+        "altnames": [],
+        "tags": [
+            "authentication",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "objectivec",
@@ -6481,6 +7044,36 @@
             {
                 "base": "original",
                 "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "ory",
+        "altnames": [],
+        "tags": [
+            "library",
+            "open-source",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#5528ff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
@@ -6822,6 +7415,30 @@
         "aliases": []
     },
     {
+        "name": "pnpm",
+        "altnames": [
+            "performant npm"
+        ],
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f9ad00",
+        "aliases": []
+    },
+    {
         "name": "podman",
         "altnames": [],
         "tags": [
@@ -7028,6 +7645,36 @@
         "aliases": []
     },
     {
+        "name": "prisma",
+        "altnames": [],
+        "tags": [
+            "orm",
+            "nodejs",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2D3748",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "processing",
         "altnames": [
             "processingpy"
@@ -7053,6 +7700,32 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "prolog",
+        "altnames": [
+            "swi-prolog"
+        ],
+        "tags": [
+            "programming",
+            "logic",
+            "language",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F46C30",
         "aliases": []
     },
     {
@@ -7098,6 +7771,90 @@
         },
         "color": "#b7111d",
         "aliases": []
+    },
+    {
+        "name": "pulsar",
+        "altnames": [
+            "Pulsar Edit"
+        ],
+        "tags": [
+            "open-source",
+            "cross-platform",
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2c3e50",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "pulumi",
+        "altnames": [],
+        "tags": [
+            "infrastructure-as-code",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f6bf29",
+        "aliases": []
+    },
+    {
+        "name": "puppeteer",
+        "altnames": [],
+        "tags": [
+            "open-source",
+            "devtools protocol",
+            "testing",
+            "extension"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00d8a2",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "purescript",
@@ -7159,6 +7916,31 @@
             ]
         },
         "color": "#21D789",
+        "aliases": []
+    },
+    {
+        "name": "pypi",
+        "altnames": [
+            "Python Package Index"
+        ],
+        "tags": [
+            "python",
+            "package",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3775a9",
         "aliases": []
     },
     {
@@ -7432,6 +8214,40 @@
         "aliases": []
     },
     {
+        "name": "railway",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "platform",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "rancher",
         "altnames": [],
         "tags": [
@@ -7558,6 +8374,32 @@
             ]
         },
         "color": "#41e0fd",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "reactnavigation",
+        "altnames": [],
+        "tags": [
+            "routing",
+            "navigation",
+            "react native",
+            "app",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#7b61c1",
         "aliases": [
             {
                 "base": "original",
@@ -7736,6 +8578,30 @@
         "aliases": []
     },
     {
+        "name": "replit",
+        "altnames": [],
+        "tags": [
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#F26207",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "rider",
         "altnames": [],
         "tags": [
@@ -7775,6 +8641,33 @@
         },
         "color": "#f5be17",
         "aliases": []
+    },
+    {
+        "name": "rockylinux",
+        "altnames": ["rocky"],
+        "tags": [
+            "os",
+            "open-source",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#10b982",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "rollup",
@@ -7941,6 +8834,28 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "rxjs",
+        "altnames": [
+            "Reactive Extensions for JavaScript"
+        ],
+        "tags": [
+            "javascript",
+            "library",
+            "observability"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#df1c85",
         "aliases": []
     },
     {
@@ -8199,6 +9114,58 @@
         ]
     },
     {
+        "name": "sentry",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "analytics",
+            "metrics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#362d59",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "reactrouter",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "react"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f44250",
+        "aliases": []
+    },
+    {
         "name": "sequelize",
         "altnames": [
             "sequelizejs"
@@ -8375,16 +9342,16 @@
             "frontend"
         ],
         "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#2c4f7c",
         "aliases": []
@@ -8442,6 +9409,28 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "spack",
+        "altnames": [],
+        "tags": [
+            "package-manager",
+            "package",
+            "manager",
+            "python",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0F3A80",
+        "aliases": []
     },
     {
         "name": "splunk",
@@ -8510,6 +9499,30 @@
             ]
         },
         "color": "#cc1e4c",
+        "aliases": []
+    },
+    {
+        "name": "spyder",
+        "altnames": [],
+        "tags": [
+            "python",
+            "ide",
+            "editor",
+            "data-science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#8c0000",
         "aliases": []
     },
     {
@@ -8759,6 +9772,30 @@
         ]
     },
     {
+        "name": "supabase",
+        "altnames": [],
+        "tags": [
+            "authentication",
+            "cloud-computing-platform",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#3ecf8e",
+        "aliases": []
+    },
+    {
         "name": "svelte",
         "altnames": [
             "sveltejs"
@@ -8828,6 +9865,30 @@
         },
         "color": "#F05138",
         "aliases": []
+    },
+    {
+        "name": "swiper",
+        "altnames": [],
+        "tags": [
+            "library",
+            "javascript",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0080FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "symfony",
@@ -9072,10 +10133,10 @@
         },
         "color": "#bd222b",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            }
         ]
     },
     {
@@ -9241,8 +10302,36 @@
         "aliases": []
     },
     {
+        "name": "trpc",
+        "altnames": [
+            "Typescript Remote Procedure Call"
+        ],
+        "tags": [
+            "typescript",
+            "javascript",
+            "typesafe",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#398ccb",
+        "aliases": []
+    },
+    {
         "name": "twitter",
-        "altnames": [],
+        "altnames": [
+            "x"
+        ],
         "tags": [
             "auth"
         ],
@@ -9254,7 +10343,7 @@
                 "original"
             ]
         },
-        "color": "#1d9bf0",
+        "color": "#000",
         "aliases": [
             {
                 "base": "original",
@@ -9316,10 +10405,14 @@
         "name": "ubuntu",
         "altnames": [],
         "tags": [
-            "os"
+            "os",
+            "open-source",
+            "linux"
         ],
         "versions": {
             "svg": [
+                "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -9328,7 +10421,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#dd4814",
+        "color": "#e95420",
         "aliases": []
     },
     {
@@ -9368,7 +10461,11 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
@@ -9699,6 +10796,50 @@
             ]
         },
         "color": "#ffdd35",
+        "aliases": []
+    },
+    {
+        "name": "vitess",
+        "altnames": [],
+        "tags": [
+            "sharding",
+            "database",
+            "mysql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f16827",
+        "aliases": []
+    },
+    {
+        "name": "vitest",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "open-source",
+            "testing",
+            "vite"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#fcc72b",
         "aliases": []
     },
     {
@@ -10201,16 +11342,22 @@
         "altnames": [],
         "tags": [
             "package",
-            "manager"
+            "manager",
+            "javascript",
+            "js"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#2c8ebb",
@@ -10247,6 +11394,31 @@
             ]
         },
         "color": "#40b3d8",
+        "aliases": []
+    },
+    {
+        "name": "yugabytedb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "relational",
+            "sql",
+            "scale",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff5f3b",
         "aliases": []
     },
     {

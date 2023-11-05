@@ -4,8 +4,12 @@ from build_assets import arg_getters, api_handler
 def main():
 	args = arg_getters.get_in_develop_labeler_args()
 	try:
+		#get pr body
+		pr_body = api_handler.get_pr_by_number(args.token, args.pr_num)["body"]
+
 		# find the issue closing line
-		issue_line = [line for line in args.body.split("\n") if line.startswith("**This PR closes")][0]
+		print(pr_body.split("\n"))
+		issue_line = [line for line in pr_body.split("\n") if line.startswith("**This PR closes")][0]
 
 		print("Issue Line is " + issue_line)
 		issue_pattern = re.compile(r"\d+")
