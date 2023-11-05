@@ -10104,10 +10104,13 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#005f0f",
