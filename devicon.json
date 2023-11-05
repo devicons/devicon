@@ -10597,8 +10597,10 @@
         ]
     },
     {
-        "name": "wolframlanguage",
-        "altnames": [],
+        "name": "wolfram",
+        "altnames": [
+            "wolframlanguage"
+        ],
         "tags": [
             "data-science",
             "functional",
