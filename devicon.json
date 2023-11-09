@@ -10457,7 +10457,9 @@
     },
     {
         "name": "web3js",
-        "altnames": [],
+        "altnames": [
+            "web3.js"
+        ],
         "tags": [
             "blockchain",
             "ecommerce"
@@ -10471,7 +10473,7 @@
                 "original"
             ]
         },
-        "color": "#ffffff",
+        "color": "#f16822",
         "aliases": []
     },
     {
