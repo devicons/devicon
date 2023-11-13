@@ -10454,16 +10454,20 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
         "color": "#f49700",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            }
+        ]
     },
     {
         "name": "ubuntu",
