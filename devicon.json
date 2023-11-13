@@ -1495,11 +1495,13 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#ff6384",
