@@ -1483,6 +1483,29 @@
         "aliases": []
     },
     {
+        "name": "chartjs",
+        "altnames": [
+            "chart.js"
+        ],
+        "tags": [
+            "javascript",
+            "chart",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff6384",
+        "aliases": []
+    },
+    {
         "name": "chrome",
         "altnames": [
             "googlechrome"
