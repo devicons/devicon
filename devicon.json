@@ -5399,7 +5399,7 @@
         ],
         "versions": {
             "svg": [
-                "original",   
+                "original",
                 "original-wordmark",
                 "line",
                 "line-wordmark"
@@ -7010,17 +7010,24 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#73ba25",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "opentelemetry",
