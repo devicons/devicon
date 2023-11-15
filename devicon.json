@@ -2241,6 +2241,7 @@
     {
         "name": "detaspace",
         "altnames": [
+            "Deta",
             "Deta Space"
         ],
         "tags": [
@@ -2251,12 +2252,26 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
-            "font": []
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
         },
         "color": "#ef39a8",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "line",
+                "alias": "plain"
+            },
+            {
+                "base": "line-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "devicon",
