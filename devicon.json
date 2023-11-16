@@ -10932,6 +10932,26 @@
         "aliases": []
     },
     {
+        "name": "vscodium",
+        "altnames": [],
+        "tags": [
+            "editor",
+            "ide",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#3C99D4",
+        "aliases": []
+    },
+    {
         "name": "vsphere",
         "altnames": [
             "vmwarevsphere"
