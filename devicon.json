@@ -6874,17 +6874,28 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain",
+                "line"
             ],
             "font": [
-                "original"
+                "plain",
+                "line"
             ]
         },
         "color": "#010101",
         "aliases": [
             {
                 "base": "original",
-                "alias": "plain"
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
             }
         ]
     },
