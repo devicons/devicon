@@ -1,8 +1,9 @@
 [
     {
-        "name": "3dsmax",
+        "name": "threedsmax",
         "altnames": [
-            "Autodesk 3ds Max"
+            "Autodesk 3ds Max",
+            "3dsmax"
         ],
         "tags": [
             "3d",
@@ -48,14 +49,29 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#16358C",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "adonisjs",
@@ -1330,7 +1346,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -1339,6 +1357,31 @@
         },
         "color": "#53B9FF",
         "aliases": []
+    },
+    {
+        "name": "carbon",
+        "altnames": [
+            "Carbon Language"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "cassandra",
@@ -1688,19 +1731,27 @@
         ],
         "versions": {
             "svg": [
-                "plain",
-                "original-wordmark"
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#231F20",
+        "color": "#000",
         "aliases": [
             {
-                "base": "plain",
-                "alias": "original"
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
@@ -1905,6 +1956,33 @@
         "aliases": []
     },
     {
+        "name": "couchbase",
+        "altnames": [],
+        "tags": [
+            "database",
+            "nosql",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#EA2328",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "couchdb",
         "altnames": [
             "apachecouchdb"
@@ -1971,15 +2049,28 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "csharp",
@@ -2275,17 +2366,24 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#0080FF",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "discordjs",
@@ -2592,8 +2690,10 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "original-wordmark",
-                "original"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain-wordmark",
@@ -3170,7 +3270,7 @@
         "name": "framermotion",
         "altnames": [
             "framer-motion",
-            "framer"            
+            "framer"
         ],
         "tags": [
             "library",
@@ -3407,10 +3507,15 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#716955",
@@ -3989,11 +4094,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#000000",
@@ -4148,20 +4257,18 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain-wordmark"
             ]
         },
         "color": "#6762a6",
         "aliases": [
             {
-                "base": "line",
-                "alias": "original"
+                "base": "original",
+                "alias": "line"
             },
             {
-                "base": "line-wordmark",
-                "alias": "original-wordmark"
+                "base": "original-wordmark",
+                "alias": "line-wordmark"
             }
         ]
     },
@@ -4176,7 +4283,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -4473,7 +4582,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -4683,6 +4794,34 @@
             ]
         },
         "color": "#FDCC21",
+        "aliases": []
+    },
+    {
+        "name": "jetpackcompose",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "language",
+            "kotlin",
+            "android"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#4285f4",
         "aliases": []
     },
     {
@@ -4940,6 +5079,30 @@
         ]
     },
     {
+        "name": "k6",
+        "altnames": [],
+        "tags": [
+            "testing",
+            "performance",
+            "load"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#7D64FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "kaggle",
         "altnames": [],
         "tags": [
@@ -4981,7 +5144,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -5070,7 +5235,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -5189,7 +5356,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -5250,16 +5419,28 @@
         "versions": {
             "svg": [
                 "original",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#fd4f31",
-        "aliases": []
+        "color": "#f0513f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "latex",
@@ -5390,7 +5571,9 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original"
+                "original",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain-wordmark",
@@ -5413,7 +5596,8 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
                 "plain"
@@ -5432,7 +5616,9 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original"
+                "original",
+                "plain-wordmark",
+                "plain"
             ],
             "font": [
                 "plain-wordmark",
@@ -5791,6 +5977,35 @@
         "aliases": []
     },
     {
+        "name": "mithril",
+        "altnames": [
+            "mithril.js"
+        ],
+        "tags": [
+            "javascript",
+            "framework",
+            "frontend",
+            "js"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#010002",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "mobx",
         "altnames": [
             "mobxjs"
@@ -5969,10 +6184,11 @@
                 "line"
             ],
             "font": [
+                "plain",
                 "line"
             ]
         },
-        "color": "#ff0000",
+        "color": "#000",
         "aliases": []
     },
     {
@@ -6048,6 +6264,36 @@
         "aliases": []
     },
     {
+        "name": "neovim",
+        "altnames": [],
+        "tags": [
+            "text editor",
+            "editor",
+            "ide",
+            "IDE",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#5fb950",
+        "aliases": []
+    },
+    {
         "name": "nestjs",
         "altnames": [],
         "tags": [
@@ -6064,6 +6310,31 @@
             ]
         },
         "color": "#DF234F",
+        "aliases": []
+    },
+    {
+        "name": "netlify",
+        "altnames": [],
+        "tags": [
+            "cloud hosting",
+            "serverless",
+            "dynamic websites",
+            "web applications",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#05BDBA",
         "aliases": []
     },
     {
@@ -6128,10 +6399,7 @@
                 "original"
             ],
             "font": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original"
             ]
         },
         "color": "#090",
@@ -6187,7 +6455,11 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original"
+                "original",
+                "plain-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain-wordmark",
@@ -6381,6 +6653,26 @@
             ]
         },
         "color": "#4878be",
+        "aliases": []
+    },
+    {
+        "name": "notion",
+        "altnames": [],
+        "tags": [
+            "project-management"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#fff",
         "aliases": []
     },
     {
@@ -6580,7 +6872,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -6743,17 +7037,24 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#73ba25",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "opentelemetry",
@@ -6764,7 +7065,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -6816,6 +7119,36 @@
             {
                 "base": "original",
                 "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "ory",
+        "altnames": [],
+        "tags": [
+            "library",
+            "open-source",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#5528ff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
@@ -7330,7 +7663,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -7512,6 +7847,60 @@
             ]
         },
         "color": "#b7111d",
+        "aliases": []
+    },
+    {
+        "name": "pulsar",
+        "altnames": [
+            "Pulsar Edit"
+        ],
+        "tags": [
+            "open-source",
+            "cross-platform",
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#2c3e50",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "pulumi",
+        "altnames": [],
+        "tags": [
+            "infrastructure-as-code",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f6bf29",
         "aliases": []
     },
     {
@@ -7779,7 +8168,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -7798,8 +8189,10 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "original-wordmark",
-                "original"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain-wordmark",
@@ -7900,6 +8293,40 @@
         },
         "color": "#CC0000",
         "aliases": []
+    },
+    {
+        "name": "railway",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "platform",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "rancher",
@@ -8232,6 +8659,30 @@
         "aliases": []
     },
     {
+        "name": "replit",
+        "altnames": [],
+        "tags": [
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#F26207",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "rider",
         "altnames": [],
         "tags": [
@@ -8271,6 +8722,33 @@
         },
         "color": "#f5be17",
         "aliases": []
+    },
+    {
+        "name": "rockylinux",
+        "altnames": ["rocky"],
+        "tags": [
+            "os",
+            "open-source",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#10b982",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "rollup",
@@ -8437,6 +8915,28 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "rxjs",
+        "altnames": [
+            "Reactive Extensions for JavaScript"
+        ],
+        "tags": [
+            "javascript",
+            "library",
+            "observability"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#df1c85",
         "aliases": []
     },
     {
@@ -8695,6 +9195,36 @@
         ]
     },
     {
+        "name": "sentry",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "analytics",
+            "metrics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#362d59",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "reactrouter",
         "altnames": [],
         "tags": [
@@ -8893,16 +9423,16 @@
             "frontend"
         ],
         "versions": {
-          "svg": [
-              "original",
-              "original-wordmark",
-              "plain",
-              "plain-wordmark"
-          ],
-          "font": [
-              "plain",
-              "plain-wordmark"
-          ]
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#2c4f7c",
         "aliases": []
@@ -8919,13 +9449,19 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original"
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#4e9bcd",
+        "color": "#549dd0",
         "aliases": [
             {
                 "base": "original",
@@ -8960,6 +9496,28 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "spack",
+        "altnames": [],
+        "tags": [
+            "package-manager",
+            "package",
+            "manager",
+            "python",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0F3A80",
+        "aliases": []
     },
     {
         "name": "splunk",
@@ -9031,6 +9589,30 @@
         "aliases": []
     },
     {
+        "name": "spyder",
+        "altnames": [],
+        "tags": [
+            "python",
+            "ide",
+            "editor",
+            "data-science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#8c0000",
+        "aliases": []
+    },
+    {
         "name": "sqlalchemy",
         "altnames": [],
         "tags": [
@@ -9065,7 +9647,8 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
                 "plain"
@@ -9372,6 +9955,30 @@
         "aliases": []
     },
     {
+        "name": "swiper",
+        "altnames": [],
+        "tags": [
+            "library",
+            "javascript",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0080FF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "symfony",
         "altnames": [],
         "tags": [
@@ -9593,10 +10200,10 @@
         },
         "color": "#bd222b",
         "aliases": [
-          {
-            "base": "original",
-            "alias": "plain"
-          }
+            {
+                "base": "original",
+                "alias": "plain"
+            }
         ]
     },
     {
@@ -9673,7 +10280,10 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
@@ -9700,7 +10310,10 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
@@ -9789,7 +10402,9 @@
     },
     {
         "name": "twitter",
-        "altnames": [],
+        "altnames": [
+            "x"
+        ],
         "tags": [
             "auth"
         ],
@@ -9801,7 +10416,7 @@
                 "original"
             ]
         },
-        "color": "#1d9bf0",
+        "color": "#000",
         "aliases": [
             {
                 "base": "original",
@@ -9896,7 +10511,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -9919,7 +10536,11 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
@@ -10115,11 +10736,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#000",
@@ -10273,6 +10898,27 @@
             ]
         },
         "color": "#f16827",
+        "aliases": []
+    },
+    {
+        "name": "vitest",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "open-source",
+            "testing",
+            "vite"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#fcc72b",
         "aliases": []
     },
     {
@@ -10800,16 +11446,22 @@
         "altnames": [],
         "tags": [
             "package",
-            "manager"
+            "manager",
+            "javascript",
+            "js"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#2c8ebb",
@@ -10846,6 +11498,31 @@
             ]
         },
         "color": "#40b3d8",
+        "aliases": []
+    },
+    {
+        "name": "yugabytedb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "relational",
+            "sql",
+            "scale",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff5f3b",
         "aliases": []
     },
     {
