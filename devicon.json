@@ -5636,16 +5636,24 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "line"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark",
-                "line"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#f26322",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "mariadb",
