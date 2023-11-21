@@ -3331,16 +3331,26 @@
         ],
         "versions": {
             "svg": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#E77500",
-        "aliases": []
+        "color": "#f78557",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "gatsby",
