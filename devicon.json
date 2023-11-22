@@ -8675,12 +8675,13 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
                 "original",
+                "original-wordmark",
                 "plain-wordmark"
             ],
             "font": [
-                "original"
+                "original",
+                "plain-wordmark"
             ]
         },
         "color": "#F26207",
