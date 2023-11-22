@@ -1346,7 +1346,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -2364,17 +2366,24 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#0080FF",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "discordjs",
@@ -2681,8 +2690,10 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "original-wordmark",
-                "original"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain-wordmark",
@@ -2905,24 +2916,21 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#4b32c3",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "express",
@@ -4246,20 +4254,18 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain-wordmark"
             ]
         },
         "color": "#6762a6",
         "aliases": [
             {
-                "base": "line",
-                "alias": "original"
+                "base": "original",
+                "alias": "line"
             },
             {
-                "base": "line-wordmark",
-                "alias": "original-wordmark"
+                "base": "original-wordmark",
+                "alias": "line-wordmark"
             }
         ]
     },
@@ -4274,7 +4280,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -4571,7 +4579,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -5131,7 +5141,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -5220,7 +5232,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -5339,7 +5353,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -5399,7 +5415,7 @@
         ],
         "versions": {
             "svg": [
-                "original",   
+                "original",
                 "original-wordmark",
                 "line",
                 "line-wordmark"
@@ -5552,7 +5568,9 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original"
+                "original",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain-wordmark",
@@ -5575,7 +5593,8 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
                 "plain"
@@ -5613,7 +5632,9 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original"
+                "original",
+                "plain-wordmark",
+                "plain"
             ],
             "font": [
                 "plain-wordmark",
@@ -6296,16 +6317,29 @@
         ],
         "versions": {
             "svg": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#DF234F",
-        "aliases": []
+        "color": "#df234f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "netlify",
@@ -6394,10 +6428,7 @@
                 "original"
             ],
             "font": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original"
             ]
         },
         "color": "#090",
@@ -6453,7 +6484,11 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original"
+                "original",
+                "plain-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain-wordmark",
@@ -6720,20 +6755,21 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#4DABCF",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "color": "#4dabcf",
+        "aliases": []
     },
     {
         "name": "nuxtjs",
@@ -6866,7 +6902,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -7029,17 +7067,24 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#73ba25",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "opentelemetry",
@@ -7050,7 +7095,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -7209,24 +7256,21 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#130754",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "perl",
@@ -7646,7 +7690,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -8149,7 +8195,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -8168,8 +8216,10 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "original-wordmark",
-                "original"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain-wordmark",
@@ -8315,11 +8365,16 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#2453FF",
@@ -8327,10 +8382,6 @@
             {
                 "base": "original",
                 "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
             }
         ]
     },
@@ -9624,7 +9675,8 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
                 "plain"
@@ -10487,7 +10539,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
