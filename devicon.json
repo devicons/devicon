@@ -1447,8 +1447,7 @@
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "plain"
             ]
         },
         "color": "#AB710A",
@@ -3035,9 +3034,7 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original",
-                "line",
-                "line-wordmark"
+                "original"
             ],
             "font": [
                 "original-wordmark",
