@@ -1447,7 +1447,8 @@
                 "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#AB710A",
