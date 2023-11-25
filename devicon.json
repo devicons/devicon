@@ -2154,7 +2154,7 @@
     {
         "name": "cypressio",
         "altnames": [
-            "crystallang"
+            "cypress"
         ],
         "tags": [
             "testing",
@@ -2163,14 +2163,20 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#4a4a4d",
+        "color": "#1b1e2e",
         "aliases": []
     },
     {
