@@ -8948,14 +8948,21 @@
         ],
         "versions": {
             "svg": [
-                "plain"
+                "original",
+                "line"
             ],
             "font": [
-                "plain"
+                "original",
+                "line"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "rxjs",
