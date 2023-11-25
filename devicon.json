@@ -3836,6 +3836,31 @@
         "aliases": []
     },
     {
+        "name": "googlecolab",
+        "altnames": [
+            "googlecolaboratory"
+        ],
+        "tags": [
+            "cloud-computing-platform",
+            "data science",
+            "google",
+            "machine-learning",
+            "python",
+            "virtual machine"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffb300",
+        "aliases": []
+    },
+    {
         "name": "gradle",
         "altnames": [
             "apachegradle",
