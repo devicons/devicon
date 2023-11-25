@@ -3383,18 +3383,22 @@
         ],
         "versions": {
             "svg": [
-                "plain",
                 "original",
                 "original-wordmark",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
         "color": "#64328B",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "gazebo",
@@ -6202,16 +6206,20 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
         "color": "#00618a",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "nano",
@@ -7630,16 +7638,20 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
-        "color": "#dd3735",
-        "aliases": []
+        "color": "#DD3A0A",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "postgresql",
@@ -9565,17 +9577,24 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#5FB832",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "spss",
