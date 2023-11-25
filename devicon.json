@@ -3035,7 +3035,9 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original"
+                "original",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original-wordmark",
