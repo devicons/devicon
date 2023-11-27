@@ -6284,13 +6284,21 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#2C7FB8",
+        "color": "#2c7fb8",
         "aliases": []
     },
     {
