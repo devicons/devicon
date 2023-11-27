@@ -7315,6 +7315,7 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "plain",
                 "line"
             ],
@@ -7323,7 +7324,7 @@
                 "line"
             ]
         },
-        "color": "#80b5e2",
+        "color": "#001e36",
         "aliases": []
     },
     {
