@@ -8289,15 +8289,19 @@
             "svg": [
                 "original",
                 "original-wordmark",
+                "plain",
+                "plain-wordmark",
                 "line",
                 "line-wordmark"
             ],
             "font": [
+                "plain",
+                "plain-wordmark",
                 "line",
                 "line-wordmark"
             ]
         },
-        "color": "#c51850",
+        "color": "#231f20",
         "aliases": []
     },
     {
