@@ -8633,13 +8633,16 @@
         ],
         "versions": {
             "svg": [
-                "plain"
+                "original",
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
-        "color": "#f5be17",
+        "color": "#ffbe00",
         "aliases": []
     },
     {
