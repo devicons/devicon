@@ -3112,15 +3112,21 @@
         ],
         "versions": {
             "svg": [
+                "original",
+                "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#f58220",
+        "color": "#ffcc2e",
         "aliases": []
     },
     {
