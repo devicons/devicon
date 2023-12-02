@@ -7848,6 +7848,7 @@
     },
     {
         "name": "processwire",
+        "altnames": [],
         "tags": [
             "cms",
             "php",
@@ -7865,7 +7866,12 @@
             ]
         },
         "color": "#e81d60",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "prolog",
