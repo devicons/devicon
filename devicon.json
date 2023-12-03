@@ -8315,14 +8315,15 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "original",
-                "plain"
+                "plain",
+                "line"
             ]
         },
-        "color": "#2369bc",
+        "color": "#1f65b7",
         "aliases": []
     },
     {
