@@ -5084,22 +5084,23 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#FD824E",
+        "color": "#fd824e",
         "aliases": [
             {
                 "base": "original",
                 "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
             }
         ]
     },
