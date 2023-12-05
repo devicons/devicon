@@ -9767,20 +9767,16 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
-                "original-wordmark"
+                "plain-wordmark"
             ]
         },
         "color": "#333333",
-        "aliases": [
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "sqldeveloper",
