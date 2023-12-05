@@ -3511,12 +3511,18 @@
         ],
         "versions": {
             "svg": [
+                "original",
+                "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
+                "plain",
                 "plain-wordmark",
-                "plain"
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#9991d9",
