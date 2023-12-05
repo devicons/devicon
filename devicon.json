@@ -11539,6 +11539,7 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "plain",
                 "line"
             ],
@@ -11547,7 +11548,7 @@
                 "line"
             ]
         },
-        "color": "#DD80BC",
+        "color": "#470137",
         "aliases": []
     },
     {
