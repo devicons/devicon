@@ -6386,7 +6386,6 @@
                 "plain-wordmark",
                 "line",
                 "line-wordmark"
-
             ],
             "font": [
                 "plain",
@@ -7971,10 +7970,10 @@
                 "line-wordmark"
             ],
             "font": [
-               "original",
-               "plain-wordmark",
-               "line",
-               "line-wordmark"
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#e75225",
@@ -8890,7 +8889,9 @@
     },
     {
         "name": "rockylinux",
-        "altnames": ["rocky"],
+        "altnames": [
+            "rocky"
+        ],
         "tags": [
             "os",
             "open-source",
@@ -10994,6 +10995,27 @@
             ]
         },
         "color": "#179a33",
+        "aliases": []
+    },
+    {
+        "name": "visualbasic",
+        "altnames": [
+            "vb"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#004e8c",
         "aliases": []
     },
     {
