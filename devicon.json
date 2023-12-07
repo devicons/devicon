@@ -10673,12 +10673,13 @@
             "svg": [
                 "original",
                 "original-wordmark",
+                "plain",
                 "plain-wordmark",
                 "line",
                 "line-wordmark"
             ],
             "font": [
-                "original",
+                "plain",
                 "plain-wordmark",
                 "line",
                 "line-wordmark"
