@@ -6538,20 +6538,20 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain-wordmark"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "plain-wordmark"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#83CD29",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "color": "#5fa04e",
+        "aliases": []
     },
     {
         "name": "nodemon",
