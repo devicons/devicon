@@ -6818,10 +6818,12 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark"
+                "original-wordmark",
+                "plain"
             ],
             "font": [
-                "original-wordmark"
+                "original-wordmark",
+                "plain"
             ]
         },
         "color": "#cb3837",
