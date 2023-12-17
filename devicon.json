@@ -6051,7 +6051,9 @@
             "Microsoft SQL Server"
         ],
         "tags": [
-            "database"
+            "database",
+            "sql",
+            "db"
         ],
         "versions": {
             "svg": [
