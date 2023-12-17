@@ -6496,23 +6496,20 @@
         "versions": {
             "svg": [
                 "original",
-                "line",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
+                "original-wordmark",
                 "plain",
                 "line",
+                "line-wordmark"
+            ],
+            "font": [
                 "original-wordmark",
-                "plain-wordmark"
+                "plain",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#000",
         "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
