@@ -6053,6 +6053,8 @@
         ],
         "versions": {
             "svg": [
+                "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -6061,8 +6063,17 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#909DAA",
-        "aliases": []
+        "color": "#ee352c",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "line"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "minitab",
