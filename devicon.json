@@ -6818,10 +6818,12 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "original-wordmark",
                 "plain"
             ],
             "font": [
+                "original",
                 "original-wordmark",
                 "plain"
             ]
