@@ -6677,14 +6677,18 @@
                 "original",
                 "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#83CD29",
+        "color": "#5fa04e",
         "aliases": []
     },
     {
