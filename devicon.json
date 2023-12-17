@@ -6046,7 +6046,9 @@
     {
         "name": "microsoftsqlserver",
         "altnames": [
-            "msql"
+            "msql",
+            "mssql",
+            "Microsoft SQL Server"
         ],
         "tags": [
             "database"
