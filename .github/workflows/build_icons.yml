@@ -103,3 +103,4 @@ jobs:
                 steps.release_message_step.outputs.content
               )
             }}
+          delete-branch: true
