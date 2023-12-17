@@ -6819,11 +6819,13 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain"
             ]
         },
         "color": "#cb3837",
