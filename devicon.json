@@ -105,6 +105,33 @@
         ]
     },
     {
+        "name": "aerospike",
+        "altnames": [
+            "aerospike"
+        ],
+        "tags": [
+            "data",
+            "database",
+            "nosql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "plain"
+            ]
+        },
+        "color": "#C31618",
+        "aliases": []
+    },
+    {
         "name": "aftereffects",
         "altnames": [
             "adobeaftereffects",
