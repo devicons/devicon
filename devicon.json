@@ -11078,15 +11078,16 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "plain",
-                "plain-wordmark"
+                "line"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "line"
             ]
         },
-        "color": "#68217A",
+        "color": "#52218a",
         "aliases": []
     },
     {
