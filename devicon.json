@@ -6218,7 +6218,6 @@
                 "plain-wordmark",
                 "line",
                 "line-wordmark"
-
             ],
             "font": [
                 "plain",
@@ -8644,7 +8643,9 @@
     },
     {
         "name": "rockylinux",
-        "altnames": ["rocky"],
+        "altnames": [
+            "rocky"
+        ],
         "tags": [
             "os",
             "open-source",
@@ -9632,10 +9633,17 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original"
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#1389fd",
