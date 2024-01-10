@@ -1463,6 +1463,23 @@
         ]
     },
     {
+        "name": "espressif",
+        "tags": [
+            "microcontroller",
+            "hardware"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+            ],
+            "font": [
+                "plain",
+            ]
+        },
+        "color": "#9e0500",
+        "aliases": []
+    },
+    {
         "name": "express",
         "tags": [
             "framework"
