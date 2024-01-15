@@ -22,7 +22,12 @@
             ]
         },
         "color": "#c21417",
-        "aliases": []
+        "aliases": [
+            {
+               "base": "original",
+               "alias": "plain"
+            }
+        ]
     },
     {
         "name": "threedsmax",
