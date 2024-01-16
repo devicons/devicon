@@ -1,9 +1,7 @@
 [
     {
         "name": "aerospike",
-        "altnames": [
-            "aerospike"
-        ],
+        "altnames": [],
         "tags": [
             "data",
             "database",
