@@ -5443,6 +5443,33 @@
         "aliases": []
     },
     {
+        "name": "kubeflow",
+        "altnames": [],
+        "tags": [
+            "kubernetes",
+            "deployment",
+            "machine-learning"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#72a1e5",
+        "aliases": []
+    },
+    {
         "name": "kubernetes",
         "altnames": [],
         "tags": [
