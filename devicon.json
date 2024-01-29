@@ -1537,6 +1537,23 @@
         "aliases": []
     },
     {
+        "name": "filamentphp",
+        "tags": [
+            "framework",
+            "laravel"
+        ],
+        "versions": {
+            "svg": [
+                "plain-wordmark",
+            ],
+            "font": [
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "filezilla",
         "tags": [
             "ftp"
