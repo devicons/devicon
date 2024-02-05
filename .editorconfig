@@ -1,0 +1,14 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[**.json]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[**.svg]
+trim_trailing_whitespace = false

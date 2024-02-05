@@ -1,14 +1,15 @@
 {
   "name": "devicon",
-  "version": "2.15.1",
+  "version": "2.16.0",
   "description": "Programming related icons collection",
   "main": "devicon.min.css",
   "scripts": {
     "build-css": "gulp updateCss && gulp clean",
-    "peek-test": "python ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./  --pr_title \"%PR_TITLE%\"",
-    "build-test": "python ./.github/scripts/icomoon_build.py ./.github/scripts/build_assets/geckodriver-v0.27.0-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./",
+    "peek-test": "python ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./  --pr_title \"$PR_TITLE\"",
     "optimize-svg": "gulp optimizeSvg",
-    "bump": "gulp bumpVersion"
+    "bump": "gulp bumpVersion",
+    "build-icons": "python3 ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./ --headless",
+    "dev": "python3 -m http.server 8000 -d ./docs/"
   },
   "repository": {
     "type": "git",
@@ -28,10 +29,10 @@
   "homepage": "https://devicon.dev",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-footer": "^2.0.2",
     "gulp-sass": "^5.0.0",
     "gulp-svgmin": "^3.0.0",
     "sass": "^1.26.10",
-    "yargs": "^17.0.0",
-    "gulp-footer": "^2.0.2"
+    "yargs": "^17.0.0"
   }
 }
