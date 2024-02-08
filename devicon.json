@@ -3731,6 +3731,35 @@
         "aliases": []
     },
     {
+        "name": "gitlabci",
+        "altnames": [],
+        "tags": [
+            "continuous-delivery",
+            "devops",
+            "integration"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#251B3F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "gitpod",
         "altnames": [
             "gitpod-io"
