@@ -3270,6 +3270,26 @@
         "aliases": []
     },
     {
+        "name": "forgejo",
+        "altnames": [],
+        "tags": [
+            "software"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#FF5500",
+        "aliases": []
+    },
+    {
         "name": "fortran",
         "altnames": [],
         "tags": [
