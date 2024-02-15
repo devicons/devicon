@@ -3273,7 +3273,9 @@
         "name": "forgejo",
         "altnames": [],
         "tags": [
-            "software"
+            "software",
+            "git",
+            "version-control"
         ],
         "versions": {
             "svg": [
@@ -3283,7 +3285,8 @@
                 "plain-wordmark"
             ],
             "font": [
-                "original"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#FF5500",
