@@ -8835,6 +8835,32 @@
         ]
     },
     {
+        "name": "remix",
+        "altnames": [
+            "remix.run"
+        ],
+        "tags": [
+            "framework",
+            "fullstack",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark",
+            ],
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            }
+        ]
+    },
+    {
         "name": "renpy",
         "altnames": [
             "Ren'Py"
