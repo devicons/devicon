@@ -20,6 +20,12 @@
     <a href="https://devicon.dev/">
         <img alt="Registered logos" src="https://img.shields.io/github/directory-file-count/devicons/devicon/icons?color=%2360be86&label=registered%20logos&style=for-the-badge">
     </a>
+    <a href="https://www.npmjs.com/package/devicon">
+        <img alt="Devicons npm downloads" src="https://img.shields.io/npm/dt/devicon?color=%2360be86&style=for-the-badge">
+    </a>
+    <a href="https://www.npmjs.com/package/devicon">
+        <img alt="Devicons npm downloads/month" src="https://img.shields.io/npm/dm/devicon?color=%2360be86&style=for-the-badge">
+    </a>
 </p>
 <br />
 <div align="center">
