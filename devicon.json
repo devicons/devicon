@@ -1,35 +1,5 @@
 [
     {
-        "name": "aerospike",
-        "altnames": [],
-        "tags": [
-            "data",
-            "database",
-            "nosql"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#c21417",
-        "aliases": [
-            {
-               "base": "original",
-               "alias": "plain"
-            },
-            {
-               "base": "original-wordmark",
-               "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "threedsmax",
         "altnames": [
             "Autodesk 3ds Max",
@@ -131,6 +101,36 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "aerospike",
+        "altnames": [],
+        "tags": [
+            "data",
+            "database",
+            "nosql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#c21417",
+        "aliases": [
+            {
+               "base": "original",
+               "alias": "plain"
+            },
+            {
+               "base": "original-wordmark",
+               "alias": "plain-wordmark"
             }
         ]
     },
