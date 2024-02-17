@@ -5549,6 +5549,28 @@
         ]
     },
     {
+        "name": "leetcode",
+        "altnames": [],
+        "tags": [
+            "online-platform",
+            "coding-platform",
+            "platform",
+            "coding",
+            "dsa",
+            "interview-preparation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": []
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "less",
         "altnames": [
             "lesscss"
