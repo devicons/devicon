@@ -8851,6 +8851,12 @@
                 "line",
                 "line-wordmark",
             ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark",
+            ]
         },
         "color": "#121212",
         "aliases": [
