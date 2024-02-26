@@ -162,7 +162,7 @@ Add the following CSS rules in your stylesheet:
 <h4>You can also use the <code>img</code> tag and reference an SVG directly from the repository:</h4>
 
 ```html
-<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg'>
+<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg' />
 ```
 
 <h2 id="request-icon">Requesting an icon</h2>
