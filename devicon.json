@@ -9999,11 +9999,15 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#FFFFFF",
