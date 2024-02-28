@@ -1,1 +1,49 @@
-<svg width="128" height="128" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M587.947 527.768C592.201 582.418 592.201 608.036 592.201 636H465.756C465.756 629.909 465.865 624.337 465.975 618.687C466.317 601.123 466.674 582.807 463.828 545.819C460.067 491.667 436.748 479.634 393.871 479.634H355.883H195V381.109H399.889C454.049 381.109 481.13 364.633 481.13 321.011C481.13 282.654 454.049 259.41 399.889 259.41H195V163H422.456C545.069 163 606 220.912 606 313.42C606 382.613 563.123 427.739 505.201 435.26C554.096 445.037 582.681 472.865 587.947 527.768Z" fill="#121212"/><path d="M195 636V562.553H328.697C351.029 562.553 355.878 579.116 355.878 588.994V636H195Z" fill="#121212"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   fill="none"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="remix-plain.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="5.4942197"
+     inkscape:cx="74.714887"
+     inkscape:cy="67.252498"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     id="g2"
+     transform="matrix(0.27061311,0,0,0.27061311,-44.380551,-44.109937)">
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 587.947,527.768 c 4.254,54.65 4.254,80.268 4.254,108.232 H 465.756 c 0,-6.091 0.109,-11.663 0.219,-17.313 0.342,-17.564 0.699,-35.88 -2.147,-72.868 -3.761,-54.152 -27.08,-66.185 -69.957,-66.185 H 355.883 195 v -98.525 h 204.889 c 54.16,0 81.241,-16.476 81.241,-60.098 0,-38.357 -27.081,-61.601 -81.241,-61.601 H 195 V 163 H 422.456 C 545.069,163 606,220.912 606,313.42 c 0,69.193 -42.877,114.319 -100.799,121.84 48.895,9.777 77.48,37.605 82.746,92.508 z"
+       fill="#121212"
+       id="path1" />
+    <path
+       d="m 195,636 v -73.447 h 133.697 c 22.332,0 27.181,16.563 27.181,26.441 V 636 Z"
+       fill="#121212"
+       id="path2" />
+  </g>
+</svg>
