@@ -10004,13 +10004,11 @@
                 "plain-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ]
         },
-        "color": "#FFFFFF",
+        "color": "#000",
         "aliases": []
     },
     {
