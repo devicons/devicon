@@ -7944,10 +7944,11 @@
                 "plain-wordmark"
             ],
             "font": [
+                "original",
                 "plain-wordmark"
             ]
         },
-        "color": "#e81d60",
+        "color": "#1e87f0",
         "aliases": [
             {
                 "base": "original",
