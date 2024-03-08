@@ -3163,12 +3163,16 @@
         "aliases": [
             {
                 "base": "original",
-                "alias": [
-                    "original-wordmark",
-                    "plain",
-                    "plain-wordmark"
-                ]
-            }
+                "alias": "original-wordmark"
+            }, 
+             {
+                "base": "original",
+                "alias": "plain"
+            },
+             {
+                "base": "original",
+                "alias": "plain-wordmark"
+            } 
         ]
     },
     {
