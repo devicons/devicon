@@ -3153,14 +3153,23 @@
         ],
         "versions": {
             "svg": [
-                "plain-wordmark",
+                "original"
             ],
             "font": [
-                "plain-wordmark"
+                "original"
             ]
         },
         "color": "#000000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": [
+                    "original-wordmark",
+                    "plain",
+                    "plain-wordmark"
+                ]
+            }
+        ]
     },
     {
         "name": "filezilla",
