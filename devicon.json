@@ -3147,6 +3147,7 @@
     },
     {
         "name": "filamentphp",
+        "altnames": [],
         "tags": [
             "framework",
             "laravel"
