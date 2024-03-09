@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <defs>
+        <linearGradient id="a" x1="75.543" x2="81.2" y1="145.986" y2="143.227"
+            gradientTransform="translate(-108.807 -290.41) scale(2.73219)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" stop-opacity=".365" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="b" x1="105.834" x2="80.209" y1="15.354" y2="30.531"
+            gradientTransform="translate(-217.579 44.246) scale(2.73219)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-opacity=".102" />
+            <stop offset="1" stop-opacity=".306" />
+        </linearGradient>
+        <linearGradient id="c" x1="70.725" x2="87.092" y1="12.292" y2="26.895"
+            gradientTransform="translate(-135.66 5.379) scale(2.73219)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-opacity=".102" />
+            <stop offset="1" stop-opacity=".306" />
+        </linearGradient>
+        <linearGradient id="d" x1="70.725" x2="81.158" y1="12.292" y2="19.324"
+            gradientTransform="translate(-95.643 74.865) scale(2.73219)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-opacity=".102" />
+            <stop offset="1" stop-opacity=".306" />
+        </linearGradient>
+        <linearGradient id="e" x1="70.513" x2="55.281" y1="62.847" y2="56.394"
+            gradientTransform="translate(-121.073 -85.514) scale(2.73219)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" stop-opacity=".365" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="f" x1="70.513" x2="63.044" y1="62.847" y2="59.204"
+            gradientTransform="matrix(-2.73219 0 0 2.73219 250.227 -132.747)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" stop-opacity=".365" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        </linearGradient>
+    </defs>
+    <path fill="#10a0cc"
+        d="M63.832 0 41.879 45.012l60.414 33.847ZM35.246 58.61l-33.68 69.054 99.938-41.289Zm73.649 33.788-31.52 18.094 48.719 17.172Zm0 0" />
+    <path fill="url(#a)" d="m97.59 108.45 11.305-16.055 17.199 35.27Zm0 0" />
+    <path fill="url(#b)" d="m1.566 127.664 70.016-41.469 29.922.18Zm0 0" />
+    <path fill="url(#c)" d="M102.293 78.86 41.879 45.007l15.695-6.043Zm0 0" />
+    <path fill="url(#d)" d="m126.094 127.664-48.719-17.172 20.215-2.043Zm0 0" />
+    <path fill="url(#e)" d="m1.566 127.664 70.016-41.469L35.246 58.61Zm0 0" />
+    <path fill="url(#f)" d="M102.293 78.86 57.574 38.964 63.832 0Zm0 0" />
+</svg>
