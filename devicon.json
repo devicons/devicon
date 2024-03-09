@@ -5573,6 +5573,41 @@
         ]
     },
     {
+        "name": "leetcode",
+        "altnames": [],
+        "tags": [
+            "online-platform",
+            "coding-platform",
+            "platform",
+            "coding",
+            "dsa",
+            "interview-preparation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": []
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "less",
         "altnames": [
             "lesscss"
