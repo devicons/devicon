@@ -3801,6 +3801,34 @@
         "aliases": []
     },
     {
+        "name": "glitch",
+        "altnames": [],
+        "tags": [
+            "web-apps",
+            "online-platform",
+            "programming-environment",
+            "collaborative-environment",
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+            ],
+            "font": []
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+        ]
+    },
+    {
         "name": "go",
         "altnames": [
             "golang"
