@@ -2386,6 +2386,41 @@
         ]
     },
     {
+        "name": "detaspace",
+        "altnames": [
+            "Deta",
+            "Deta Space"
+        ],
+        "tags": [
+            "cloud",
+            "hosting",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#ef39a8",
+        "aliases": [
+            {
+                "base": "line",
+                "alias": "plain"
+            },
+            {
+                "base": "line-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "devicon",
         "altnames": [],
         "tags": [
