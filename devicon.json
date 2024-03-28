@@ -8067,6 +8067,27 @@
         "aliases": []
     },
     {
+        "name": "pug",
+        "altnames": [
+            "pugjs"
+        ],
+        "tags": [
+            "framework",
+            "javascript",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-plain"
+
+            ],
+            "font": []
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "pulsar",
         "altnames": [
             "Pulsar Edit"
