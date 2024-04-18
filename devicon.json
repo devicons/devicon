@@ -2245,6 +2245,29 @@
         "aliases": []
     },
     {
+        "name": "databricks",
+        "altnames": [],
+        "tags": [
+            "data intelligence platform",
+            "unified data analytics platform",
+            "delta lake",
+            "lakehouse"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F0562C",
+        "aliases": []
+    },
+    {
         "name": "datagrip",
         "altnames": [],
         "tags": [
