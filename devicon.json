@@ -6537,6 +6537,10 @@
             {
                 "base": "plain",
                 "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
             }
         ]
     },
