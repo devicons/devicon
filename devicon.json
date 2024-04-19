@@ -6510,6 +6510,35 @@
         "aliases": []
     },
     {
+        "name": "newrelic",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "observability",
+            "analysis"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2c7fb8",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "nextjs",
         "altnames": [],
         "tags": [
