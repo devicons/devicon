@@ -20,6 +20,12 @@
     <a href="https://devicon.dev/">
         <img alt="Registered logos" src="https://img.shields.io/github/directory-file-count/devicons/devicon/icons?color=%2360be86&label=registered%20logos&style=for-the-badge">
     </a>
+    <a href="https://www.npmjs.com/package/devicon">
+        <img alt="Devicons npm downloads" src="https://img.shields.io/npm/dt/devicon?color=%2360be86&style=for-the-badge">
+    </a>
+    <a href="https://www.npmjs.com/package/devicon">
+        <img alt="Devicons npm downloads/month" src="https://img.shields.io/npm/dm/devicon?color=%2360be86&style=for-the-badge">
+    </a>
 </p>
 <br />
 <div align="center">
@@ -156,7 +162,7 @@ Add the following CSS rules in your stylesheet:
 <h4>You can also use the <code>img</code> tag and reference an SVG directly from the repository:</h4>
 
 ```html
-<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg'>
+<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg' />
 ```
 
 <h2 id="request-icon">Requesting an icon</h2>
@@ -264,6 +270,7 @@ https://www.python.org/downloads/
 > Make sure your Python install includes [pip](https://pypi.org/project/pip/)
 
 <h3>Install Selenium</h3>
+
 ```bash
 python3 -m pip install --upgrade pip && pip install selenium==4.1.0 requests==2.25.1
 ```
