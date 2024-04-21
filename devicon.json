@@ -2596,8 +2596,21 @@
                 "line"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#54bbab",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "line-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "dreamweaver",
