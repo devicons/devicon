@@ -1520,6 +1520,30 @@
         "aliases": []
     },
     {
+        "name": "chakraui",
+        "altnames": [
+            "chakra ui"
+        ],
+        "tags": [
+            "ui",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#52c8c5",
+        "aliases": []
+    },
+    {
         "name": "chrome",
         "altnames": [
             "googlechrome"
