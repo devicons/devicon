@@ -1060,7 +1060,10 @@
     },
     {
         "name": "bevyengine",
-        "altnames": ["bevy engine"],
+        "altnames": [
+            "bevy engine",
+            "bevy"
+        ],
         "tags": [
             "game-engine",
             "game",
