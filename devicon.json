@@ -8079,10 +8079,12 @@
         "versions": {
             "svg": [
                 "original",
-                "original-plain"
+                "plain"
 
             ],
-            "font": []
+            "font": [
+                "plain"
+            ]
         },
         "color": "#000000",
         "aliases": []
