@@ -7968,17 +7968,25 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "line"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "line"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#1f34ab",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "prolog",
