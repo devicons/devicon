@@ -1,15 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg width="128px" height="128px" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" style="background-color: transparent;">
-  <defs>
-    <style>.cls-1{fill:#4285f4;}</style>
-  </defs>
-  <title>CloudRun_plain_icon</title>
-  <g data-name="Product Icons" transform="translate(48, 48)">
-    <g>
-      <polygon class="cls-1" points="8.9 2.63 12.02 12 21.38 12 8.9 2.63"/>
-      <polygon class="cls-1" points="21.38 12 12.02 12 8.9 21.38 21.38 12"/>
-      <polygon class="cls-1" points="3.44 21.38 6.57 19.81 8.9 12 5.78 12 3.44 21.38"/>
-      <polygon class="cls-1" points="3.44 2.63 5.78 12 8.9 12 6.57 4.19 3.44 2.63"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" style="background-color:transparent" version="1.1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <style>.cls-1{fill:#4285f4;}</style>
+ </defs>
+ <title>CloudRun_plain_icon</title>
+ <g transform="matrix(7.1349 0 0 6.8267 -24.722 -17.954)" data-name="Product Icons">
+  <polygon class="cls-1" points="21.38 12 8.9 2.63 12.02 12"/>
+  <polygon class="cls-1" points="8.9 21.38 21.38 12 12.02 12"/>
+  <polygon class="cls-1" points="5.78 12 3.44 21.38 6.57 19.81 8.9 12"/>
+  <polygon class="cls-1" points="6.57 4.19 3.44 2.63 5.78 12 8.9 12"/>
+ </g>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:title>CloudRun_plain_icon</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
 </svg>
