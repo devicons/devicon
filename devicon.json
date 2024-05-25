@@ -1059,6 +1059,43 @@
         "aliases": []
     },
     {
+        "name": "biome",
+        "altnames": [
+            "biomejs"
+        ],
+        "tags": [
+            "linter",
+            "javascript",
+            "typescript",
+            "code-quality",
+            "coding-style",
+            "format",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#60a5fa",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "bitbucket",
         "altnames": [
             "atlassianbitbucket"
@@ -1480,6 +1517,30 @@
             ]
         },
         "color": "#AB710A",
+        "aliases": []
+    },
+    {
+        "name": "chakraui",
+        "altnames": [
+            "chakra ui"
+        ],
+        "tags": [
+            "ui",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#52c8c5",
         "aliases": []
     },
     {
@@ -8835,6 +8896,42 @@
         ]
     },
     {
+        "name": "remix",
+        "altnames": [
+            "remix.run"
+        ],
+        "tags": [
+            "framework",
+            "fullstack",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#121212",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "renpy",
         "altnames": [
             "Ren'Py"
@@ -9933,6 +10030,37 @@
         ]
     },
     {
+        "name": "stackblitz",
+        "altnames": [],
+        "tags": [
+            "IDE",
+            "editor",
+            "remote-development"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#1389fd",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "stackoverflow",
         "altnames": [
             "Stack Overflow"
@@ -10426,6 +10554,30 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "thymeleaf",
+        "altnames": [],
+        "tags": [
+            "engine",
+            "html",
+            "java",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#005f0f",
         "aliases": []
     },
     {
@@ -11244,6 +11396,26 @@
         "aliases": []
     },
     {
+        "name": "vscodium",
+        "altnames": [],
+        "tags": [
+            "editor",
+            "ide",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#3C99D4",
+        "aliases": []
+    },
+    {
         "name": "vsphere",
         "altnames": [
             "vmwarevsphere"
@@ -11395,6 +11567,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "web3js",
+        "altnames": [
+            "web3.js"
+        ],
+        "tags": [
+            "blockchain",
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f16822",
+        "aliases": []
     },
     {
         "name": "webflow",
