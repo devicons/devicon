@@ -1059,6 +1059,43 @@
         "aliases": []
     },
     {
+        "name": "biome",
+        "altnames": [
+            "biomejs"
+        ],
+        "tags": [
+            "linter",
+            "javascript",
+            "typescript",
+            "code-quality",
+            "coding-style",
+            "format",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#60a5fa",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "bitbucket",
         "altnames": [
             "atlassianbitbucket"
