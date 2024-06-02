@@ -1059,6 +1059,43 @@
         "aliases": []
     },
     {
+        "name": "biome",
+        "altnames": [
+            "biomejs"
+        ],
+        "tags": [
+            "linter",
+            "javascript",
+            "typescript",
+            "code-quality",
+            "coding-style",
+            "format",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#60a5fa",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "bitbucket",
         "altnames": [
             "atlassianbitbucket"
@@ -5231,6 +5268,39 @@
         ]
     },
     {
+        "name": "kalilinux",
+        "altnames": [
+            "kali"
+        ],
+        "tags": [
+            "linux",
+            "operating-system",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#2777ff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "karatelabs",
         "altnames": [
             "karate"
@@ -8859,6 +8929,42 @@
         ]
     },
     {
+        "name": "remix",
+        "altnames": [
+            "remix.run"
+        ],
+        "tags": [
+            "framework",
+            "fullstack",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#121212",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "renpy",
         "altnames": [
             "Ren'Py"
@@ -10043,6 +10149,30 @@
         ]
     },
     {
+        "name": "stenciljs",
+        "altnames": [
+            "stencil"
+        ],
+        "tags": [
+            "framework",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": []
+    },
+    {
         "name": "storybook",
         "altnames": [
             "storybookjs"
@@ -11040,6 +11170,32 @@
             ]
         },
         "color": "#ffd814",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "veevalidate",
+        "altnames": [],
+        "tags": [
+            "vuejs",
+            "vuejs-library",
+            "package"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#04c971",
         "aliases": [
             {
                 "base": "original",
