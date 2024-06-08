@@ -6633,6 +6633,29 @@
         ]
     },
     {
+        "name": "neatbeans",
+        "altnames": [],
+        "tags": [
+            "ide",
+            "java",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1e6abf",
+        "aliases": []
+    },
+    {
         "name": "nginx",
         "altnames": [],
         "tags": [
