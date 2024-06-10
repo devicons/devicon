@@ -3037,20 +3037,27 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
-                "plain-wordmark",
                 "line",
                 "line-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark",
+                "original",
+                "original-wordmark",
                 "line",
                 "line-wordmark"
             ]
         },
         "color": "#000000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "express",
