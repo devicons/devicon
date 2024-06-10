@@ -9819,6 +9819,25 @@
         ]
     },
     {
+        "name": "sourceengine",
+        "altnames": [],
+        "tags": [
+            "game-engine",
+            "valve"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f79a10",
+        "aliases": []
+    },
+    {
         "name": "sourcetree",
         "altnames": [],
         "tags": [
