@@ -6470,6 +6470,31 @@
         "aliases": []
     },
     {
+        "name": "nasm",
+        "altnames": [
+            "netwideassembler"
+        ],
+        "tags": [
+            "assembler",
+            "language",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#113b6a",
+        "aliases": []
+    },
+    {
         "name": "neo4j",
         "altnames": [],
         "tags": [
