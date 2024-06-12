@@ -5584,6 +5584,35 @@
         "aliases": []
     },
     {
+        "name": "langchain",
+        "tags": [
+            "framework",
+            "python",
+            "llm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#c6d45a",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "laravel",
         "altnames": [],
         "tags": [
