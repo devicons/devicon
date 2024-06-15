@@ -5703,6 +5703,28 @@
         "aliases": []
     },
     {
+        "name": "linuxmint",
+        "altnames": [],
+        "tags": [
+            "os",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#69b53f",
+        "aliases": []
+    },
+    {
         "name": "liquibase",
         "altnames": [],
         "tags": [
