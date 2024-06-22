@@ -2446,16 +2446,7 @@
             ]
         },
         "color": "#f73b95",
-        "aliases": [
-            {
-                "base": "line",
-                "alias": "plain"
-            },
-            {
-                "base": "line-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "devicon",
