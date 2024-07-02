@@ -5585,6 +5585,7 @@
     },
     {
         "name": "langchain",
+        "altnames": [],
         "tags": [
             "framework",
             "python",
@@ -5596,8 +5597,7 @@
                 "original-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "original"
             ]
         },
         "color": "#c6d45a",
