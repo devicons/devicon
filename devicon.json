@@ -1059,6 +1059,43 @@
         "aliases": []
     },
     {
+        "name": "biome",
+        "altnames": [
+            "biomejs"
+        ],
+        "tags": [
+            "linter",
+            "javascript",
+            "typescript",
+            "code-quality",
+            "coding-style",
+            "format",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#60a5fa",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "bitbucket",
         "altnames": [
             "atlassianbitbucket"
@@ -2384,6 +2421,32 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "detaspace",
+        "altnames": [
+            "Deta",
+            "Deta Space"
+        ],
+        "tags": [
+            "cloud",
+            "hosting",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#f73b95",
+        "aliases": []
     },
     {
         "name": "devicon",
@@ -5231,6 +5294,39 @@
         ]
     },
     {
+        "name": "kalilinux",
+        "altnames": [
+            "kali"
+        ],
+        "tags": [
+            "linux",
+            "operating-system",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#2777ff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "karatelabs",
         "altnames": [
             "karate"
@@ -6589,6 +6685,43 @@
             {
                 "base": "original",
                 "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "ngrok",
+        "altnames": [],
+        "tags": [
+            "networking",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#02228e",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
             }
         ]
     },
@@ -8883,6 +9016,42 @@
         ]
     },
     {
+        "name": "remix",
+        "altnames": [
+            "remix.run"
+        ],
+        "tags": [
+            "framework",
+            "fullstack",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#121212",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "renpy",
         "altnames": [
             "Ren'Py"
@@ -9981,6 +10150,37 @@
         ]
     },
     {
+        "name": "stackblitz",
+        "altnames": [],
+        "tags": [
+            "IDE",
+            "editor",
+            "remote-development"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#1389fd",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "stackoverflow",
         "altnames": [
             "Stack Overflow"
@@ -10034,6 +10234,30 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "stenciljs",
+        "altnames": [
+            "stencil"
+        ],
+        "tags": [
+            "framework",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": []
     },
     {
         "name": "storybook",
@@ -10450,6 +10674,30 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "thymeleaf",
+        "altnames": [],
+        "tags": [
+            "engine",
+            "html",
+            "java",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#005f0f",
         "aliases": []
     },
     {
@@ -11017,6 +11265,32 @@
         ]
     },
     {
+        "name": "veevalidate",
+        "altnames": [],
+        "tags": [
+            "vuejs",
+            "vuejs-library",
+            "package"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#04c971",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "vercel",
         "altnames": [],
         "tags": [
@@ -11268,6 +11542,26 @@
         "aliases": []
     },
     {
+        "name": "vscodium",
+        "altnames": [],
+        "tags": [
+            "editor",
+            "ide",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#3C99D4",
+        "aliases": []
+    },
+    {
         "name": "vsphere",
         "altnames": [
             "vmwarevsphere"
@@ -11419,6 +11713,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "web3js",
+        "altnames": [
+            "web3.js"
+        ],
+        "tags": [
+            "blockchain",
+            "ecommerce"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f16822",
+        "aliases": []
     },
     {
         "name": "webflow",
