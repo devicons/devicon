@@ -8217,7 +8217,8 @@
 
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#efcca3",
