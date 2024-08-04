@@ -5490,6 +5490,42 @@
         "aliases": []
     },
     {
+        "name": "laminas",
+        "altnames": [
+            "Laminas Project",
+            "Zend Framework"
+        ],
+        "tags": [
+            "php",
+            "framework",
+            "web",
+            "mvc",
+            "middleware"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#013755",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "laravel",
         "altnames": [],
         "tags": [
