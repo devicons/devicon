@@ -5510,18 +5510,21 @@
                 "line-wordmark"
             ],
             "font": [
-                "original"
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#013755",
         "aliases": [
             {
                 "base": "original",
-                "alias": "original-wordmark"
+                "alias": "plain"
             },
             {
-                "base": "line",
-                "alias": "line-wordmark"
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
