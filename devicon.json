@@ -7430,12 +7430,11 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "plain"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ]
         },
         "color": "#35df79",
