@@ -9826,7 +9826,10 @@
         "tags": [
             "svg",
             "optimization",
-            "tool"       
+            "tool",
+            "javascript",
+            "library",
+            "node.js"
         ],
         "versions": {
             "svg": [
