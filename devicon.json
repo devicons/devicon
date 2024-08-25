@@ -173,6 +173,31 @@
         "aliases": []
     },
     {
+        "name": "almalinux",
+        "altnames": [
+            "AlmaLinux OS"
+        ],
+        "tags": [
+            "linux",
+            "os",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
         "name": "alpinejs",
         "altnames": [
             "Alpine"
@@ -2421,6 +2446,32 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "detaspace",
+        "altnames": [
+            "Deta",
+            "Deta Space"
+        ],
+        "tags": [
+            "cloud",
+            "hosting",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#f73b95",
+        "aliases": []
     },
     {
         "name": "devicon",
@@ -6663,6 +6714,43 @@
         ]
     },
     {
+        "name": "ngrok",
+        "altnames": [],
+        "tags": [
+            "networking",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#02228e",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "ngrx",
         "altnames": [],
         "tags": [
@@ -6941,10 +7029,14 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark"
+                "original",
+                "original-wordmark",
+                "plain"
             ],
             "font": [
-                "original-wordmark"
+                "original",
+                "original-wordmark",
+                "plain"
             ]
         },
         "color": "#cb3837",
