@@ -264,6 +264,7 @@ https://www.python.org/downloads/
 > Make sure your Python install includes [pip](https://pypi.org/project/pip/)
 
 <h3>Install Selenium</h3>
+
 ```bash
 python3 -m pip install --upgrade pip && pip install selenium==4.1.0 requests==2.25.1
 ```
