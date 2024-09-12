@@ -3240,6 +3240,43 @@
         "aliases": []
     },
     {
+        "name": "fiber",
+        "altnames": [
+            "GoFiber"
+        ],
+        "tags": [
+            "framework",
+            "go",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#00acd7",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "figma",
         "altnames": [],
         "tags": [
