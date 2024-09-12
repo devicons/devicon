@@ -3258,6 +3258,37 @@
         "aliases": []
     },
     {
+        "name": "filamentphp",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "laravel"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            }, 
+             {
+                "base": "original",
+                "alias": "plain"
+            },
+             {
+                "base": "original",
+                "alias": "plain-wordmark"
+            } 
+        ]
+    },
+    {
         "name": "filezilla",
         "altnames": [],
         "tags": [
