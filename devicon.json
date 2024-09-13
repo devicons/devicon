@@ -11760,26 +11760,33 @@
             "vyperlang"
         ],
         "tags": [
-            "programming",
-            "language",
-            "python",
             "blockchain",
-            "ethereum"
+            "ethereum",
+            "language",
+            "programming",
+            "python"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#9F4CF2",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "wasm",
