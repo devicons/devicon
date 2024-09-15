@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg27"
+   sodipodi:docname="Batchfile.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview27"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="58.813675"
+     inkscape:cy="59.987601"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg27" />
+  <defs
+     id="defs3">
+    <radialGradient
+       id="a"
+       cx="22.737"
+       cy="22.737"
+       r="3.628"
+       gradientTransform="matrix(0.14780941,-0.98901586,1.059236,0.15830388,-4.708,41.626)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#bedcdc"
+         id="stop1" />
+      <stop
+         offset="0.5"
+         stop-color="#8e9e9e"
+         stop-opacity="0.74"
+         id="stop2" />
+      <stop
+         offset="1"
+         stop-color="#404f5c"
+         stop-opacity="0.84"
+         id="stop3" />
+    </radialGradient>
+    <radialGradient
+       id="b"
+       cx="11.336"
+       cy="11.336"
+       r="5.2010002"
+       gradientTransform="matrix(0.67570016,-4.5212154,4.8422217,0.72367488,-19.84,85.760001)"
+       xlink:href="#a" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#a"
+       id="radialGradient27"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.67570016,-4.5212154,4.8422217,0.72367488,-30.633143,181.17943)"
+       cx="22.737"
+       cy="22.737"
+       r="3.628" />
+  </defs>
+  <title
+     id="title3">file_type_bat</title>
+  <polygon
+     points="27.215,24.914 28.417,27.318 27.215,28.52 24.811,27.318 "
+     style="fill:#c0c0c0"
+     id="polygon3"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="24.365,27.443 23.515,29.993 21.815,29.993 20.964,27.443 "
+     style="fill:#c0c0c0"
+     id="polygon4"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="20.561,27.215 18.157,28.417 16.954,27.215 18.157,24.811 "
+     style="fill:#c0c0c0"
+     id="polygon5"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="18.032,24.365 15.482,23.515 15.482,21.815 18.032,20.964 "
+     style="fill:#c0c0c0"
+     id="polygon6"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="18.26,20.561 17.058,18.157 18.26,16.954 20.664,18.157 "
+     style="fill:#c0c0c0"
+     id="polygon7"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="21.11,18.032 21.96,15.482 23.66,15.482 24.51,18.032 "
+     style="fill:#c0c0c0"
+     id="polygon8"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="24.914,18.26 27.318,17.058 28.52,18.26 27.318,20.664 "
+     style="fill:#c0c0c0"
+     id="polygon9"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="27.443,21.11 29.993,21.96 29.993,23.66 27.443,24.51 "
+     style="fill:#c0c0c0"
+     id="polygon10"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <path
+     d="m 117.86514,94.829714 a 23.035429,23.035429 0 1 1 -6.74743,-16.283428 22.962286,22.962286 0 0 1 6.74743,16.283428 z M 94.829714,86.144 A 8.6857143,8.6857143 0 1 0 100.97371,88.690286 8.6582857,8.6582857 0 0 0 94.829714,86.144 Z"
+     style="fill:#c0c0c0;stroke-width:4.57143"
+     id="path10" />
+  <path
+     d="M 94.459429,73.513143 A 21.321143,21.321143 0 1 0 116.14629,94.459429 21.321143,21.321143 0 0 0 94.459429,73.513143 Z m 0.685714,39.359997 A 18.043429,18.043429 0 1 1 112.86857,94.518857 18.043429,18.043429 0 0 1 95.145143,112.87314 Z"
+     style="fill:#a9a9a9;stroke-width:4.57143"
+     id="path11" />
+  <path
+     d="M 94.541714,78.249143 A 16.585143,16.585143 0 1 0 111.41029,94.541714 16.585143,16.585143 0 0 0 94.541714,78.249143 Z m 0.457143,26.057147 a 9.4765714,9.4765714 0 1 1 9.312003,-9.645719 9.4765714,9.4765714 0 0 1 -9.312003,9.645719 z"
+     style="fill:url(#radialGradient27);stroke-width:4.57143"
+     id="path12" />
+  <path
+     d="m 94.660571,85.357714 a 9.4765714,9.4765714 0 1 0 9.645719,9.302857 9.4765714,9.4765714 0 0 0 -9.645719,-9.302857 z M 94.966857,102.848 a 8.0182857,8.0182857 0 1 1 7.876573,-8.155429 8.0182857,8.0182857 0 0 1 -7.872001,8.155429 z"
+     style="fill:#a9a9a9;stroke-width:4.57143"
+     id="path13" />
+  <polygon
+     points="8.838,18.238 7.374,19.806 6.009,19.049 6.563,16.976 "
+     style="fill:#c0c0c0"
+     id="polygon13"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="5.722,16.064 3.67,16.69 2.866,15.352 4.382,13.834 "
+     style="fill:#c0c0c0"
+     id="polygon14"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="4.11,12.624 2.02,12.14 1.993,10.579 4.065,10.023 "
+     style="fill:#c0c0c0"
+     id="polygon15"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="4.434,8.838 2.866,7.374 3.623,6.009 5.696,6.563 "
+     style="fill:#c0c0c0"
+     id="polygon16"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="6.608,5.722 5.982,3.67 7.32,2.866 8.838,4.382 "
+     style="fill:#c0c0c0"
+     id="polygon17"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="10.048,4.11 10.532,2.02 12.093,1.993 12.65,4.065 "
+     style="fill:#c0c0c0"
+     id="polygon18"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="13.834,4.434 15.298,2.866 16.663,3.623 16.109,5.696 "
+     style="fill:#c0c0c0"
+     id="polygon19"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="16.95,6.608 19.002,5.982 19.806,7.32 18.29,8.838 "
+     style="fill:#c0c0c0"
+     id="polygon20"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="18.562,10.048 20.652,10.532 20.679,12.093 18.607,12.65 "
+     style="fill:#c0c0c0"
+     id="polygon21"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="18.238,13.834 19.806,15.298 19.049,16.663 16.976,16.109 "
+     style="fill:#c0c0c0"
+     id="polygon22"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="16.064,16.95 16.69,19.002 15.352,19.806 13.834,18.29 "
+     style="fill:#c0c0c0"
+     id="polygon23"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <polygon
+     points="12.624,18.562 12.14,20.652 10.579,20.679 10.023,18.607 "
+     style="fill:#c0c0c0"
+     id="polygon24"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1108576,-9.1108576)" />
+  <path
+     d="M 43.309714,76.973714 A 34.285714,34.285714 0 1 1 67.36,66.514286 34.162286,34.162286 0 0 1 43.309714,76.973714 Z M 55.570286,42.486857 a 12.864,12.864 0 1 0 -3.606857,9.142857 12.8,12.8 0 0 0 3.606857,-9.142857 z"
+     style="fill:#c0c0c0;stroke-width:4.57143"
+     id="path24" />
+  <path
+     d="M 42.171429,11.917714 A 30.797714,30.797714 0 1 0 73.504,42.176 30.797714,30.797714 0 0 0 42.171429,11.917714 Z m 0.992,56.850286 a 26.057143,26.057143 0 1 1 25.6,-26.514286 A 26.057143,26.057143 0 0 1 43.168,68.768 Z"
+     style="fill:#a9a9a9;stroke-width:4.57143"
+     id="path25" />
+  <path
+     d="M 42.294857,18.939429 A 23.771429,23.771429 0 1 0 66.477714,42.294857 23.771429,23.771429 0 0 0 42.294857,18.939429 Z m 0.64,36.736 a 12.969143,12.969143 0 1 1 12.740572,-13.193143 12.969143,12.969143 0 0 1 -12.736,13.193143 z"
+     style="fill:url(#b);stroke-width:4.57143"
+     id="path26" />
+  <path
+     d="M 42.464,28.498286 A 14.212571,14.212571 0 1 0 56.923429,42.464 14.212571,14.212571 0 0 0 42.464,28.498286 Z m 0.457143,26.24 A 12.027429,12.027429 0 1 1 54.738286,42.500571 12.027429,12.027429 0 0 1 42.921143,54.738286 Z"
+     style="fill:#a9a9a9;stroke-width:4.57143"
+     id="path27" />
+  <metadata
+     id="metadata27">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_bat</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg17"
+   sodipodi:docname="PostScript.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview17"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="59.752816"
+     inkscape:cy="67.73551"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg17" />
+  <defs
+     id="defs6">
+    <linearGradient
+       id="a"
+       x1="-403.54599"
+       y1="-337.03101"
+       x2="-403.37601"
+       y2="-337.03101"
+       gradientTransform="matrix(442.944,-693.48572,-693.48572,-442.944,-54942.217,-429009.55)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#e6e6e6"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="b"
+       x1="-403.54599"
+       y1="-337.03299"
+       x2="-403.37601"
+       y2="-337.03299"
+       gradientTransform="matrix(96.894,-151.7,-151.7,-96.894,-12016.61,-93843.838)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#949494"
+         id="stop3" />
+      <stop
+         offset="1"
+         stop-color="#8c8c8c"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="c"
+       x1="-403.54599"
+       y1="-336.987"
+       x2="-403.37601"
+       y2="-336.987"
+       xlink:href="#b" />
+    <linearGradient
+       id="d"
+       x1="-405.673"
+       y1="-336.64001"
+       x2="-405.50299"
+       y2="-336.64001"
+       gradientTransform="matrix(-251.12229,-253.80114,-253.80114,251.12229,-187207.09,-18316.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#b3b3b3"
+         id="stop5" />
+      <stop
+         offset="1"
+         stop-color="#f2f2f2"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#b"
+       id="linearGradient17"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(96.894,-151.7,-151.7,-96.894,-12016.61,-93843.838)"
+       x1="-403.54599"
+       y1="-337.03299"
+       x2="-403.37601"
+       y2="-337.03299" />
+  </defs>
+  <title
+     id="title6">file_type_eps</title>
+  <polyline
+     points="24.037 2.072 24.034 2.072 29.598 7.873 29.598 29.928 8.814 29.928 8.814 30 29.67 30 29.67 7.945 24.037 2.072"
+     style="fill:#949494"
+     id="polyline6"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428574,-9.1428576)" />
+  <path
+     d="M 100.08228,27.177143 V 0.32914245 L 125.83314,27.177143 H 100.08228 M 100.41143,-4.5e-7 H 30.820571 V 6.5462852 H 93.536 V 37.778286 H 30.820571 V 127.67086 H 126.17143 V 26.848 L 100.736,0.33371385 100.41143,-4.5e-7"
+     style="fill:url(#a);stroke-width:4.57143"
+     id="path6" />
+  <polyline
+     points="23.893 2.072 23.893 7.945 29.526 7.945 23.893 2.072"
+     style="fill:url(#linearGradient17)"
+     id="polyline7"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428574,-9.1428576)" />
+  <polygon
+     points="23.965,2 23.965,7.873 29.598,7.873 "
+     style="fill:#ffffff"
+     id="polygon7"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428574,-9.1428576)" />
+  <polyline
+     points="8.742 3.432 2.384 3.432 2.384 10.264 8.742 10.264 8.742 3.432"
+     style="fill:#949494"
+     id="polyline8"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428574,-9.1428576)" />
+  <polyline
+     points="22.461 3.432 8.742 3.432 8.742 10.264 22.461 10.264 22.461 3.432"
+     style="fill:url(#c)"
+     id="polyline9"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428574,-9.1428576)" />
+  <rect
+     x="1.5085708"
+     y="6.2994285"
+     width="91.780571"
+     height="31.231998"
+     style="fill:#030100;stroke-width:4.57143"
+     id="rect9" />
+  <polygon
+     points="8.779,5.594 8.779,6.327 10.003,6.327 10.003,7.309 8.779,7.309 8.779,8.143 10.15,8.143 10.15,9.138 7.863,9.138 7.863,4.605 10.079,4.605 10.079,5.594 "
+     style="fill:#fe7814"
+     id="polygon9"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428574,-9.1428576)" />
+  <path
+     d="m 41.888,12.187429 a 24.918857,24.918857 0 0 1 5.161143,-0.429715 6.5462857,6.5462857 0 0 1 4.928,1.627429 7.1177143,7.1177143 0 0 1 1.782857,5.028571 8.0777143,8.0777143 0 0 1 -1.504,5.101715 6.5005714,6.5005714 0 0 1 -5.206857,2.153142 8.6537143,8.6537143 0 0 1 -1.019429,-0.064 v 7.04 H 41.888 Z m 4.141714,9.142857 a 6.688,6.688 0 0 0 0.946286,0.064 2.5782857,2.5782857 0 0 0 2.660571,-2.889143 2.2857143,2.2857143 0 0 0 -2.358857,-2.582857 4.8457143,4.8457143 0 0 0 -1.248,0.123428 z"
+     style="fill:#fe7814;stroke-width:4.57143"
+     id="path9" />
+  <path
+     d="m 58.409143,27.099429 a 7.6617143,7.6617143 0 0 0 4.050285,1.293714 c 1.435429,0 2.130286,-0.644572 2.130286,-1.691429 0,-1.046857 -0.694857,-1.6 -2.450286,-2.4 a 6.6194286,6.6194286 0 0 1 -4.374857,-6.24 A 6.0388571,6.0388571 0 0 1 64,11.570286 a 7.9908571,7.9908571 0 0 1 4.233143,1.074285 l -0.877715,4.425143 a 6.5417143,6.5417143 0 0 0 -3.401142,-0.982857 c -1.270858,0 -1.965715,0.617143 -1.965715,1.536 0,1.046857 0.832,1.476572 2.797715,2.459429 a 6.4,6.4 0 0 1 4.073142,6.24 6.2034286,6.2034286 0 0 1 -6.665142,6.642285 8.7954286,8.7954286 0 0 1 -4.571429,-1.293714 z"
+     style="fill:#fe7814;stroke-width:4.57143"
+     id="path10" />
+  <path
+     d="m 48.493714,71.232 c 0,0 24.649143,-19.574857 43.698286,-0.685714 19.04914,18.889143 0.822857,44.521144 0.822857,44.521144 z"
+     style="fill:url(#d);stroke-width:4.57143"
+     id="path11" />
+  <path
+     d="m 93.348571,115.30514 -0.672,-0.45714 c 0.178286,-0.25143 17.791999,-25.554286 -0.777143,-43.990857 -18.569142,-18.436572 -42.912,0.521143 -43.154285,0.713143 l -0.512,-0.644572 C 48.484571,70.729143 73.376,51.328 92.475428,70.272 c 19.099432,18.944 1.056,44.77714 0.873143,45.03314 z"
+     style="fill:#666666;stroke-width:4.57143"
+     id="path12" />
+  <rect
+     x="14.738729"
+     y="87.686691"
+     width="0.8228572"
+     height="54.244572"
+     transform="rotate(-45.103)"
+     style="fill:#999999;stroke-width:4.57143"
+     id="rect12" />
+  <rect
+     x="90.477715"
+     y="68.836571"
+     width="3.424"
+     height="3.424"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect13" />
+  <path
+     d="M 94.592,72.950857 H 89.787428 V 68.146286 H 94.592 Z m -3.424,-1.371428 h 2.043428 V 69.536 H 91.168 Z"
+     style="fill:#808080;stroke-width:4.57143"
+     id="path13" />
+  <rect
+     x="46.779427"
+     y="69.522285"
+     width="3.424"
+     height="3.424"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect14" />
+  <path
+     d="M 50.893714,73.636571 H 46.089143 V 68.832 h 4.804571 z m -3.424,-1.371428 h 2.043429 v -2.043429 h -2.043429 z"
+     style="fill:#808080;stroke-width:4.57143"
+     id="path14" />
+  <rect
+     x="91.300575"
+     y="113.35772"
+     width="3.424"
+     height="3.424"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect15" />
+  <path
+     d="m 95.414857,117.48571 h -4.804571 v -4.81828 h 4.804571 z m -3.424,-1.37142 h 2.043429 v -2.04343 h -2.043429 z"
+     style="fill:#808080;stroke-width:4.57143"
+     id="path15" />
+  <rect
+     x="71.094856"
+     y="49.453712"
+     width="3.424"
+     height="3.424"
+     style="fill:#999999;stroke-width:4.57143"
+     id="rect16" />
+  <rect
+     x="109.52229"
+     y="87.739433"
+     width="3.424"
+     height="3.424"
+     style="fill:#999999;stroke-width:4.57143"
+     id="rect17" />
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_eps</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

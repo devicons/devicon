@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg32"
+   sodipodi:docname="AutoHotkey.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview34"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="3.21875"
+     inkscape:cx="84.970874"
+     inkscape:cy="48.31068"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg32" />
+  <defs
+     id="defs14">
+    <linearGradient
+       id="a"
+       x1="54.604"
+       y1="168.388"
+       x2="54.604"
+       y2="194.88499"
+       gradientTransform="matrix(4.5714286,0,0,4.5714286,-185.61829,-766.336)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#d8d8d8"
+         id="stop2" />
+      <stop
+         offset="1"
+         stop-color="#a3a3a3"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="b"
+       x1="68.755997"
+       y1="209.15199"
+       x2="91.638"
+       y2="209.15199"
+       gradientTransform="matrix(3.8034286,0,0,3.8262857,-240.46172,-738.05258)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#d7d7d7"
+         id="stop7" />
+      <stop
+         offset="0.5"
+         stop-color="#e7e7e7"
+         id="stop9" />
+      <stop
+         offset="1"
+         stop-color="#d7d7d7"
+         id="stop11" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title16">file_type_autohotkey</title>
+  <rect
+     x="0"
+     y="3.7668567"
+     width="128"
+     height="120.47086"
+     rx="14.116571"
+     ry="14.116571"
+     style="fill:url(#a);stroke-width:4.57143"
+     id="rect18" />
+  <path
+     d="M 113.62743,124.256 H 14.372571 A 14.390857,14.390857 0 0 1 0,109.88343 V 18.116571 A 14.390857,14.390857 0 0 1 14.372571,3.744 H 113.62743 A 14.390857,14.390857 0 0 1 128,18.116571 V 109.88343 A 14.390857,14.390857 0 0 1 113.62743,124.256 Z M 14.372571,4.4022857 A 13.714286,13.714286 0 0 0 0.6582857,18.116571 v 0 91.766859 a 13.714286,13.714286 0 0 0 13.7142853,13.71428 h 99.254859 a 13.714286,13.714286 0 0 0 13.71428,-13.71428 V 18.116571 A 13.714286,13.714286 0 0 0 113.62743,4.4022857 Z"
+     style="fill:#8d8d8d;stroke-width:4.57143"
+     id="path20" />
+  <rect
+     x="10.573715"
+     y="12.073142"
+     width="105.91543"
+     height="100.29714"
+     rx="11.753143"
+     ry="11.753143"
+     style="fill:url(#b);stroke-width:4.57143"
+     id="rect22" />
+  <path
+     d="M 104.736,112.64457 H 22.326857 A 12.041143,12.041143 0 0 1 10.299429,100.61714 V 23.826286 A 12.041143,12.041143 0 0 1 22.326857,11.798857 H 104.736 a 12.041143,12.041143 0 0 1 12.02743,12.027429 V 100.62629 A 12.041143,12.041143 0 0 1 104.736,112.64457 Z M 22.326857,12.342857 A 11.492571,11.492571 0 0 0 10.848,23.826286 v 76.800004 a 11.492571,11.492571 0 0 0 11.478857,11.47885 H 104.736 a 11.492571,11.492571 0 0 0 11.47886,-11.47885 V 23.826286 A 11.492571,11.492571 0 0 0 104.736,12.342857 Z"
+     style="fill:#f8f8f8;stroke-width:4.57143"
+     id="path24" />
+  <path
+     d="M 18.948571,100.11429 29.659429,72.228571 h 3.977142 L 45.065143,100.11429 H 40.859429 L 37.604571,91.666286 H 25.933714 l -3.076571,8.448004 z m 8.022858,-11.428576 h 9.481142 l -2.912,-7.771428 q -1.330285,-3.52 -1.979428,-5.782857 a 35.547429,35.547429 0 0 1 -1.499429,5.325714 z"
+     id="path26"
+     style="stroke-width:4.57143" />
+  <path
+     d="M 53.060571,100.11429 V 72.228571 h 3.689143 v 11.428572 h 14.496 V 72.228571 h 3.689143 V 100.11429 H 71.245714 V 86.953143 H 56.754286 v 13.161147 z"
+     id="path28"
+     style="stroke-width:4.57143" />
+  <path
+     d="M 84.470857,100.11429 V 72.228571 H 88.16 v 13.828572 l 13.85143,-13.828572 h 5.00114 L 95.314286,83.506286 107.52914,100.11429 H 102.656 l -9.929143,-14.116576 -4.571428,4.452572 v 9.664004 z"
+     id="path30"
+     style="stroke-width:4.57143" />
+  <metadata
+     id="metadata36">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_autohotkey</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

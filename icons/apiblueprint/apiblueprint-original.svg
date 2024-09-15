@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg14"
+   sodipodi:docname="API Blueprint.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="4.5519999"
+     inkscape:cx="45.804043"
+     inkscape:cy="72.825133"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg14" />
+  <title
+     id="title2">file_type_apib</title>
+  <path
+     d="m 73.521987,46.976476 21.705478,34.049328 1.70087,2.553586 5.107165,-2.977663 -1.70087,-2.553586 -21.705472,-34.049329 -1.70087,-2.982223 -5.107172,2.977663 1.700871,2.977664 z m -23.834986,-3.406301 -21.705478,34.049329 -1.700871,2.553585 5.107172,2.977663 1.70087,-2.129508 21.705478,-34.049328 1.700871,-2.553586 -5.102612,-3.401741 -1.70087,2.553586 z"
+     style="fill:#a0b3c1;stroke-width:4.55997"
+     id="path4" />
+  <path
+     d="M 64.16036,50.806854 A 22.704112,22.704112 0 0 0 86.718553,28.248661 23.07803,23.07803 0 0 0 64.16036,5.26639 22.704112,22.704112 0 0 0 41.602166,27.824583 23.07803,23.07803 0 0 0 64.16036,50.806854 Z m 0,-5.959886 a 16.616547,16.616547 0 0 1 -16.598307,-16.598307 16.598307,16.598307 0 1 1 33.196613,0 16.616547,16.616547 0 0 1 -16.598306,16.598307 z"
+     style="fill:#a0b3c1;stroke-width:4.55997"
+     id="path6" />
+  <path
+     d="M 105.4418,122.73133 A 22.558193,22.558193 0 1 0 82.883614,100.17314 22.704112,22.704112 0 0 0 105.4418,122.73133 Z m 0,-5.95989 a 16.616547,16.616547 0 0 1 -16.598299,-16.5983 16.598307,16.598307 0 1 1 33.196609,0 16.616547,16.616547 0 0 1 -16.59831,16.5983 z"
+     style="fill:#a0b3c1;stroke-width:4.55997"
+     id="path8" />
+  <path
+     d="m 22.878911,122.73133 a 22.558193,22.558193 0 1 0 0,-45.111826 22.558193,22.558193 0 1 0 0,45.111826 z m 0,-5.95989 a 16.616547,16.616547 0 0 1 -16.598306,-16.5983 16.899265,16.899265 0 0 1 16.598306,-16.59831 16.899265,16.899265 0 0 1 16.598307,16.59831 16.616547,16.616547 0 0 1 -16.598307,16.5983 z"
+     style="fill:#a0b3c1;stroke-width:4.55997"
+     id="path10" />
+  <circle
+     cx="22.878912"
+     cy="100.17313"
+     r="7.6607566"
+     style="fill:#5e9cff;stroke-width:4.55997"
+     id="circle12" />
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_apib</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

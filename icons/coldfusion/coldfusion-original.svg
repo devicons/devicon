@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ColdFusion.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="79.709552"
+     inkscape:cy="60.691956"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">file_type_cf</title>
+  <rect
+     x="5.3348575"
+     y="6.9348569"
+     width="117.33485"
+     height="114.13485"
+     style="fill:#26424e;stroke-width:4.57143"
+     id="rect1" />
+  <path
+     d="M 0,1.6 V 126.4 H 128 V 1.6 Z M 5.3348571,6.9348571 H 122.66971 V 121.06514 H 5.3348571 Z M 67.702857,87.158857 A 0.88685714,0.88685714 0 0 1 67.085714,88.128 27.556571,27.556571 0 0 1 57.371429,89.444571 c -13.714286,0 -25.842286,-8.964571 -25.842286,-30.061714 0,-18.107428 10.724571,-30.24 27.072,-30.24 a 23.926857,23.926857 0 0 1 9.101714,1.229714 c 0.457143,0.173715 0.525714,0.457143 0.525714,0.969143 v 7.561143 c 0,0.704 -0.352,0.704 -0.617142,0.617143 a 20.704,20.704 0 0 0 -8.928,-1.668571 c -10.285715,0 -17.142858,7.821714 -17.142858,21.270857 0,16.612571 9.403429,21.536 17.142858,21.536 a 23.949714,23.949714 0 0 0 8.393142,-1.142857 c 0.352,-0.173715 0.617143,-0.173715 0.617143,0.457142 v 7.209143 z m 3.410286,-31.885714 c -0.352,0 -0.347429,-0.173714 -0.347429,-0.617143 v -7.245714 c 0,-0.457143 0.08686,-0.525715 0.457143,-0.525715 h 4.886857 v -2.742857 a 18.038857,18.038857 0 0 1 1.76,-8.420571 11.524571,11.524571 0 0 1 11.341715,-6.505143 9.7188571,9.7188571 0 0 1 3.552,0.457143 0.68571429,0.68571429 0 0 1 0.525714,0.790857 v 7.021714 c 0,0.457143 -0.173714,0.617143 -0.617143,0.525715 a 11.2,11.2 0 0 0 -2.404571,-0.265143 c -3.076572,0 -4.571429,2.198857 -4.571429,6.4 v 2.710857 h 6.966857 c 0.457143,0 0.608,0.08686 0.608,0.457143 v 7.314285 c 0,0.457143 -0.08686,0.525715 -0.525714,0.617143 h -7.062857 v 32.836572 c 0,0.352 -0.08686,0.589714 -0.617143,0.589714 H 76.708571 A 0.55314286,0.55314286 0 0 1 76.091429,88.054857 V 55.273143 Z"
+     style="fill:#e5f3fc;stroke-width:4.57143"
+     id="path1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_cf</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
