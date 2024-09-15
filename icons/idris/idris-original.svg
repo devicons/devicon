@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="Idris.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="43.317857"
+     inkscape:cy="57.404964"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <title
+     id="title1">file_type_idris</title>
+  <path
+     d="M 52.00527,19.2 C 68.462413,24.228571 72.576698,28.342857 78.519556,42.971429 77.148127,24.685714 69.833841,17.371429 52.00527,19.2 Z"
+     style="fill:#8a0819;stroke-width:4.57143"
+     id="path1" />
+  <path
+     d="M 29.148127,47.542857 C 39.662413,50.742857 52.00527,53.485714 56.576698,73.6 58.40527,48.457143 46.519556,47.085714 29.148127,47.542857 Z"
+     style="fill:#8a0819;stroke-width:4.57143"
+     id="path2" />
+  <path
+     d="m 36.462413,31.085714 c 16,3.2 26.057143,7.771429 32,28.342857 1.371428,-26.514285 -13.257143,-29.257142 -32,-28.342857 z"
+     style="fill:#8a0819;stroke-width:4.57143"
+     id="path3" />
+  <path
+     d="m 57.490984,0 c 87.314286,56.685714 -19.2,58.057143 3.657143,123.88571 L 74.862413,128 C 36.919556,76.8 158.9767,50.285714 57.490984,0 Z"
+     style="fill:#8a0819;stroke-width:4.57143"
+     id="path4" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_idris</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,1 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 128 128"><linearGradient id="a" x1="96.306" x2="25.454" y1="35.144" y2="98.431" gradientTransform="matrix(1 0 0 -1 0 128)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a9c8ff"/><stop offset="1" stop-color="#c7e6ff"/></linearGradient><path fill="url(#a)" fill-rule="evenodd" d="M7.2 110.5c-1.7 0-3.1-.7-4.1-1.9-1-1.2-1.3-2.9-.9-4.6l18.6-80.5c.8-3.4 4-6 7.4-6h92.6c1.7 0 3.1.7 4.1 1.9 1 1.2 1.3 2.9.9 4.6l-18.6 80.5c-.8 3.4-4 6-7.4 6H7.2z" clip-rule="evenodd" opacity=".8"/><linearGradient id="b" x1="25.336" x2="94.569" y1="98.33" y2="36.847" gradientTransform="matrix(1 0 0 -1 0 128)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2d4664"/><stop offset=".169" stop-color="#29405b"/><stop offset=".445" stop-color="#1e2f43"/><stop offset=".79" stop-color="#0c131b"/><stop offset="1"/></linearGradient><path fill="url(#b)" fill-rule="evenodd" d="M120.3 18.5H28.5c-2.9 0-5.7 2.3-6.4 5.2L3.7 104.3c-.7 2.9 1.1 5.2 4 5.2h91.8c2.9 0 5.7-2.3 6.4-5.2l18.4-80.5c.7-2.9-1.1-5.3-4-5.3z" clip-rule="evenodd"/><path fill="#2C5591" fill-rule="evenodd" d="M64.2 88.3h22.3c2.6 0 4.7 2.2 4.7 4.9s-2.1 4.9-4.7 4.9H64.2c-2.6 0-4.7-2.2-4.7-4.9s2.1-4.9 4.7-4.9zM78.7 66.5c-.4.8-1.2 1.6-2.6 2.6L34.6 98.9c-2.3 1.6-5.5 1-7.3-1.4-1.7-2.4-1.3-5.7.9-7.3l37.4-27.1v-.6l-23.5-25c-1.9-2-1.7-5.3.4-7.4 2.2-2 5.5-2 7.4 0l28.2 30c1.7 1.9 1.8 4.5.6 6.4z" clip-rule="evenodd"/><path fill="#FFF" fill-rule="evenodd" d="M77.6 65.5c-.4.8-1.2 1.6-2.6 2.6L33.6 97.9c-2.3 1.6-5.5 1-7.3-1.4-1.7-2.4-1.3-5.7.9-7.3l37.4-27.1v-.6l-23.5-25c-1.9-2-1.7-5.3.4-7.4 2.2-2 5.5-2 7.4 0l28.2 30c1.7 1.8 1.8 4.4.5 6.4zM63.5 87.8h22.3c2.6 0 4.7 2.1 4.7 4.6 0 2.6-2.1 4.6-4.7 4.6H63.5c-2.6 0-4.7-2.1-4.7-4.6 0-2.6 2.1-4.6 4.7-4.6z" clip-rule="evenodd"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="PowerShell.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="79.474767"
+     inkscape:cy="67.73551"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="a"
+       x1="23.325001"
+       y1="-118.543"
+       x2="7.2600002"
+       y2="-104.193"
+       gradientTransform="matrix(1,0,0,-1,0,-96)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5391fe"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#3e6dbf"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="b"
+       x1="7.0999999"
+       y1="-104.002"
+       x2="23.000999"
+       y2="-118.292"
+       xlink:href="#a"
+       gradientTransform="matrix(4.570388,0,0,4.570388,-9.1260075,-9.1251152)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#a"
+       id="linearGradient7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.570388,0,0,-4.570388,-9.1260075,-447.88236)"
+       x1="23.325001"
+       y1="-118.543"
+       x2="7.2600002"
+       y2="-104.193" />
+  </defs>
+  <title
+     id="title2">file_type_powershell</title>
+  <path
+     d="M 5.3804042,112.39693 A 5.2742277,5.2742277 0 0 1 1.1390841,110.46366 5.6398589,5.6398589 0 0 1 0.17930263,105.65561 L 19.361221,21.862116 a 8.2266984,8.2266984 0 0 1 7.682823,-6.261432 H 122.62 a 5.287939,5.287939 0 0 1 4.24132,1.933274 5.6444292,5.6444292 0 0 1 0.95979,4.808049 l -19.19564,83.798063 a 8.2266984,8.2266984 0 0 1 -7.68282,6.26143 H 5.3804042 Z"
+     style="fill:url(#linearGradient7);fill-rule:evenodd;stroke-width:4.57039"
+     id="path2" />
+  <path
+     d="M 27.044044,16.679296 H 122.62 a 4.1727643,4.1727643 0 0 1 4.14991,5.42505 l -19.19562,83.793494 a 7.1983611,7.1983611 0 0 1 -6.63164,5.42506 H 5.3804042 A 4.1727643,4.1727643 0 0 1 1.2304919,105.89784 L 20.426122,22.104346 a 7.1937908,7.1937908 0 0 1 6.617922,-5.42505 z"
+     style="fill:url(#b);fill-rule:evenodd;stroke-width:4.57039"
+     id="path3" />
+  <path
+     d="m 64.183017,89.339325 h 23.244994 a 5.1096939,5.1096939 0 0 1 0,10.210247 H 64.183017 a 5.1096939,5.1096939 0 0 1 0,-10.210247 z"
+     style="fill:#2c5591;fill-rule:evenodd;stroke-width:4.57039"
+     id="path4" />
+  <path
+     d="m 79.260727,66.642778 a 8.0530237,8.0530237 0 0 1 -2.701099,2.742233 L 33.419735,100.34939 A 5.594155,5.594155 0 0 1 26.847517,91.313732 L 65.75066,63.141861 v -0.57587 L 41.308225,36.578765 a 5.594155,5.594155 0 0 1 8.144432,-7.641689 l 29.33275,31.20204 a 5.3290724,5.3290724 0 0 1 0.47532,6.503662 z"
+     style="fill:#2c5591;fill-rule:evenodd;stroke-width:4.57039"
+     id="path5" />
+  <path
+     d="m 78.168405,65.564166 a 7.9936086,7.9936086 0 0 1 -2.69653,2.742233 L 32.345694,99.275348 A 5.5987253,5.5987253 0 0 1 25.768906,90.239691 L 64.676619,62.06782 V 61.48738 L 40.234183,35.486442 a 5.594155,5.594155 0 0 1 8.149002,-7.641688 l 29.328181,31.202039 a 5.3107909,5.3107909 0 0 1 0.457039,6.517373 z"
+     style="fill:#ffffff;fill-rule:evenodd;stroke-width:4.57039"
+     id="path6" />
+  <path
+     d="m 63.543163,88.736033 h 23.244994 a 4.8400415,4.8400415 0 1 1 0,9.680083 H 63.543163 a 4.8400415,4.8400415 0 1 1 0,-9.680083 z"
+     style="fill:#ffffff;fill-rule:evenodd;stroke-width:4.57039"
+     id="path7" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_powershell</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
