@@ -1,41 +1,5 @@
 [
     {
-        "name": "threedsmax",
-        "altnames": [
-            "Autodesk 3ds Max",
-            "3dsmax"
-        ],
-        "tags": [
-            "3d",
-            "programming",
-            "vfx",
-            "graphic",
-            "graphics",
-            "game",
-            "animation"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#37a5cc",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "aarch64",
         "altnames": [
             "arm64"
@@ -8967,6 +8931,28 @@
         ]
     },
     {
+        "name": "reactrouter",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "react"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f44250",
+        "aliases": []
+    },
+    {
         "name": "readthedocs",
         "altnames": [
             "Read The Docs"
@@ -9753,28 +9739,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-    },
-    {
-        "name": "reactrouter",
-        "altnames": [],
-        "tags": [
-            "framework",
-            "react"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#f44250",
-        "aliases": []
     },
     {
         "name": "sequelize",
@@ -10753,6 +10717,42 @@
         },
         "color": "#00BCB4",
         "aliases": []
+    },
+    {
+        "name": "threedsmax",
+        "altnames": [
+            "Autodesk 3ds Max",
+            "3dsmax"
+        ],
+        "tags": [
+            "3d",
+            "programming",
+            "vfx",
+            "graphic",
+            "graphics",
+            "game",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#37a5cc",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "threejs",
@@ -11926,34 +11926,6 @@
         "aliases": []
     },
     {
-        "name": "windows11",
-        "altnames": [],
-        "tags": [
-            "os"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#0078d4",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "windows8",
         "altnames": [],
         "tags": [
@@ -11970,6 +11942,34 @@
             ]
         },
         "color": "#00adef",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "windows11",
+        "altnames": [],
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#0078d4",
         "aliases": [
             {
                 "base": "original",
