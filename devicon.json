@@ -3240,6 +3240,43 @@
         "aliases": []
     },
     {
+        "name": "fiber",
+        "altnames": [
+            "GoFiber"
+        ],
+        "tags": [
+            "framework",
+            "go",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#00acd7",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "figma",
         "altnames": [],
         "tags": [
@@ -3256,6 +3293,37 @@
         },
         "color": "#f24e1e",
         "aliases": []
+    },
+    {
+        "name": "filamentphp",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "laravel"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            }, 
+             {
+                "base": "original",
+                "alias": "plain"
+            },
+             {
+                "base": "original",
+                "alias": "plain-wordmark"
+            } 
+        ]
     },
     {
         "name": "filezilla",
@@ -6794,7 +6862,7 @@
                 "plain"
             ]
         },
-        "color": "#412846",
+        "color": "#ba2bd2",
         "aliases": []
     },
     {
@@ -11716,26 +11784,33 @@
             "vyperlang"
         ],
         "tags": [
-            "programming",
-            "language",
-            "python",
             "blockchain",
-            "ethereum"
+            "ethereum",
+            "language",
+            "programming",
+            "python"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#9F4CF2",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "wasm",
