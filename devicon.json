@@ -7438,7 +7438,12 @@
             ]
         },
         "color": "#35df79",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "perl",
