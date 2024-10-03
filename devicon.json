@@ -9642,6 +9642,28 @@
         ]
     },
     {
+        "name": "scrum",
+        "altnames": [],
+        "tags": [
+            "framework",
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#444444",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "sdl",
         "altnames": [
             "simpledirectmedialayer"
