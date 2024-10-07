@@ -10331,6 +10331,27 @@
         "aliases": []
     },
     {
+        "name": "terramate",
+        "altnames": [],
+        "tags": [
+            "deployment",
+            "devops",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": []
+    },
+    {
         "name": "tex",
         "altnames": [],
         "tags": [
