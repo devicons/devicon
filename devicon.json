@@ -3311,7 +3311,7 @@
             {
                 "base": "original",
                 "alias": "original-wordmark"
-            },
+            }, 
              {
                 "base": "original",
                 "alias": "plain"
@@ -3319,7 +3319,7 @@
              {
                 "base": "original",
                 "alias": "plain-wordmark"
-            }
+            } 
         ]
     },
     {
@@ -11493,26 +11493,6 @@
         "aliases": []
     },
     {
-        "name": "virtualbox",
-        "altnames": [
-            "vbox"
-        ],
-        "tags": [
-            "virtualization",
-            "vm",
-            "hosting",
-            "platform"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ]
-        },
-        "color": "#183a61",
-        "aliases": []
-    },
-    {
         "name": "visualbasic",
         "altnames": [
             "vb"
@@ -11533,6 +11513,26 @@
             ]
         },
         "color": "#004e8c",
+        "aliases": []
+    },
+    {
+        "name": "virtualbox",
+        "altnames": [
+            "vbox"
+        ],
+        "tags": [
+            "virtualization",
+            "vm",
+            "hosting",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#183a61",
         "aliases": []
     },
     {
