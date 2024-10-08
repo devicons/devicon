@@ -6267,6 +6267,25 @@
         "aliases": []
     },
     {
+        "name": "memcached",
+        "altnames": [],
+        "tags": [
+            "data",
+            "database",
+            "nosql"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#2A9790",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "altnames": [
             "meteorjs"
