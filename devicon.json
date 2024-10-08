@@ -11516,6 +11516,30 @@
         "aliases": []
     },
     {
+        "name": "virtualbox",
+        "altnames": [
+            "vbox"
+        ],
+        "tags": [
+            "virtualization",
+            "vm",
+            "hosting",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#183a61",
+        "aliases": []
+    },
+    {
         "name": "visualstudio",
         "altnames": [
             "vs"
