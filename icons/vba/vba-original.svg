@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="VBA.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="65.622444"
+     inkscape:cy="77.831271"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12" />
+  <title
+     id="title1">file_type_vba</title>
+  <polygon
+     points="16.014,13.839 16.014,18.307 10.457,15.382 10.457,11.092 "
+     style="fill:#6483c0"
+     id="polygon1"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 64.914286,75.954285 37.824,61.691429 V 40.237715 L 64.914286,53.604572 Z M 39.506286,60.672001 63.222857,73.152 V 54.651429 L 39.506286,42.930286 Z"
+     id="path1"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="16.371,18.307 21.315,15.814 21.315,11.354 16.371,13.839 "
+     style="fill:#6483c0"
+     id="polygon2"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 64.850286,75.926858 V 53.609143 l 24.288,-12.205714 v 22.276572 z m 1.686857,-21.28 V 73.184 L 87.451429,62.637715 V 44.137143 Z"
+     id="path2"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="16.186,13.58 21.082,11.064 15.777,8.389 10.703,10.797 "
+     style="fill:#6483c0"
+     id="polygon3"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 64.854857,53.897143 37.883429,40.182858 63.026286,28.260572 89.124571,41.421715 Z M 41.700571,40.237715 64.850286,51.986286 85.376,41.435428 62.976,30.139429 Z"
+     id="path3"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="24.515,18.575 24.515,23.043 18.957,20.118 18.957,15.829 "
+     style="fill:#952781"
+     id="polygon4"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 103.77143,97.604572 76.681143,83.341714 V 61.856001 L 103.77143,75.254858 Z M 78.368,82.322286 102.08457,94.806858 V 76.301715 L 78.368,64.580572 Z"
+     id="path4"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="24.871,23.043 29.815,20.55 29.815,16.09 24.871,18.575 "
+     style="fill:#952781"
+     id="polygon5"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 103.712,97.577143 V 75.259429 L 128,63.053715 v 22.276571 z m 1.68686,-21.28 V 94.834286 L 126.31314,84.283428 V 65.787429 Z"
+     id="path5"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="24.687,18.329 29.583,15.812 24.364,13.346 19.203,15.546 "
+     style="fill:#952781"
+     id="polygon6"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 103.712,75.602286 76.649143,61.865143 102.24914,50.953143 128,63.117715 Z M 80.64,61.997715 103.70743,73.705143 124.18286,63.190858 102.21257,52.813715 Z"
+     id="path6"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="7.748,18.243 7.748,22.711 2.19,19.786 2.19,15.496 "
+     style="fill:#d87b30"
+     id="polygon7"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 27.117714,96.086858 0.0274286,81.837715 V 60.352001 L 27.117714,73.741714 Z M 1.7142857,80.804572 25.430857,93.289143 V 74.784001 L 1.7142857,63.062858 Z"
+     id="path7"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="8.104,22.711 13.048,20.218 13.048,15.758 8.104,18.243 "
+     style="fill:#d87b30"
+     id="polygon8"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 27.062857,96.059429 V 73.741714 l 24.288,-12.205713 v 22.276571 z m 1.686857,-21.28 V 93.316572 L 49.664,82.752001 V 64.269715 Z"
+     id="path8"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="7.92,17.997 12.816,15.48 7.597,13.014 2.436,15.213 "
+     style="fill:#d87b30"
+     id="polygon9"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 27.062857,74.066286 0,60.352001 25.6,49.440001 51.346286,61.604572 Z M 3.9908571,60.480001 27.058286,72.187429 47.533714,61.673143 25.563429,51.296001 Z"
+     id="path9"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="16.432,19.042 16.432,23.511 10.875,20.585 10.875,16.296 "
+     style="fill:#e0d400"
+     id="polygon10"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 66.820571,99.739429 39.730286,85.494858 V 64.009142 L 66.820571,77.398858 Z M 41.417143,84.461714 65.133714,96.946286 V 78.441143 L 41.417143,66.72 Z"
+     id="path10"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="16.789,23.511 21.733,21.017 21.733,16.557 16.789,19.042 "
+     style="fill:#e0d400"
+     id="polygon11"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 66.742857,99.716571 V 77.398858 l 24.288,-12.205715 v 22.276572 z m 1.686857,-21.28 V 96.973714 L 89.366857,86.409143 V 67.926858 Z"
+     id="path11"
+     style="stroke-width:4.57143" />
+  <polygon
+     points="16.605,18.784 21.501,16.267 16.196,13.593 11.121,16.001 "
+     style="fill:#e0d400"
+     id="polygon12"
+     transform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1337145)" />
+  <path
+     d="M 66.765714,77.682286 39.794286,63.968001 64.937143,52.045715 91.035429,65.206858 Z M 43.611429,64.036572 66.761143,75.785143 87.286857,65.234285 l -22.4,-11.295999 z"
+     id="path12"
+     style="stroke-width:4.57143" />
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_vba</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

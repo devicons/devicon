@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="HTML+EEX.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="61.396312"
+     inkscape:cy="72.665998"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <defs
+     id="defs7">
+    <linearGradient
+       id="a"
+       x1="17.243999"
+       y1="367.59698"
+       x2="14.968"
+       y2="341.99399"
+       gradientTransform="translate(0,-338)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop1" />
+      <stop
+         offset="0.01"
+         stop-color="#e44f26"
+         stop-opacity="0.04"
+         id="stop2" />
+      <stop
+         offset="0.09"
+         stop-color="#e44f26"
+         stop-opacity="0.39"
+         id="stop3" />
+      <stop
+         offset="0.2"
+         stop-color="#e44f26"
+         stop-opacity="0.66"
+         id="stop4" />
+      <stop
+         offset="0.32"
+         stop-color="#e44f26"
+         stop-opacity="0.86"
+         id="stop5" />
+      <stop
+         offset="0.5"
+         stop-color="#e44f26"
+         stop-opacity="0.97"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="#e44f26"
+         id="stop7" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title7">file_type_eex</title>
+  <path
+     d="M 72.245938,30.129839 C 81.749797,51.084956 107.17113,59.843683 104.89002,87.152992 102.22949,119.23023 79.514401,127.30782 66.874589,127.87924 A 40.296544,40.296544 0 0 1 23.903799,93.662609 C 16.557623,59.637972 48.726287,7.460462 67.258583,1.3799377e-6 A 68.949833,68.949833 0 0 0 72.245938,30.129839 Z m -0.758846,86.202151 a 1.9336856,1.9336856 0 0 0 -0.260568,-1.49484 c -2.710817,-5.0285 -26.559605,-7.51989 -31.574388,-8.00902 a 37.814295,37.814295 0 0 0 7.474175,5.94277 35.501187,35.501187 0 0 0 12.863809,4.75878 c 3.657088,0.55314 10.733555,1.01942 11.501543,-1.20227 z"
+     style="fill:#7c648f;stroke-width:4.57136"
+     id="path7" />
+  <g
+     style="opacity:0.25"
+     id="g8"
+     transform="matrix(4.5713606,0,0,4.5713606,-9.1242816,-9.1427199)">
+    <path
+       d="m 18.248,10.618 c 4.47,4.823 6.445,4.979 6.237,10.478 -0.249,6.476 -4.543,8.191 -7.058,8.42 C 13.227,30.067 9.932,27.988 9.069,23.83 7.312,17.063 12.978,6.023 16.637,4.36 a 15.323,15.323 0 0 0 1.621,6.24 z"
+       style="fill:#26003d"
+       id="path8" />
+  </g>
+  <g
+     style="opacity:0.75"
+     id="g9"
+     transform="matrix(4.5713606,0,0,4.5713606,-9.1242816,-9.1427199)">
+    <path
+       d="M 17.385,9.921 C 20.369,14 24.319,13.7 25,19.641 c 0.094,6.923 -3.6,9.283 -6.237,9.948 -4.5,1.279 -8.514,-0.645 -10.094,-5 -3.035,-7 2.651,-18.514 6.31,-20.915 a 15.083,15.083 0 0 0 2.37,6.237 z"
+       style="fill:url(#a)"
+       id="path9" />
+  </g>
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_eex</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

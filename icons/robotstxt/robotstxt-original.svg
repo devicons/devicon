@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="robots.txt.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.0117188"
+     inkscape:cx="67.237354"
+     inkscape:cy="65.577172"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <title
+     id="title1">file_type_robots</title>
+  <path
+     d="M 35.491127,13.073177 A 35.415544,35.415544 0 0 1 64.123415,0.04603433 c 0,11.96211667 0.09142,24.38589667 -0.03657,36.35258467 -10.142887,-0.02285 -33.980273,0.08228 -33.980273,0.08228 a 31.941639,31.941639 0 0 1 5.384552,-23.407718 m 10.99308,3.49676 a 7.5831682,7.5831682 0 0 0 0.173699,12.14952 7.7157251,7.7157251 0 1 0 -0.173696,-12.149524 z"
+     style="fill:#ed6a54;stroke-width:4.57093"
+     id="path1" />
+  <path
+     d="m 64.141699,118.98613 a 57.200583,57.200583 0 0 1 -9.987476,-0.77249 c 0,0.4571 -0.03657,1.31186 -0.05485,1.75067 C 54.003383,122.51489 53.943962,128 53.943962,128 H 31.235594 c 0,0 0.08685,-12.84888 -0.06856,-19.26189 0.105132,-1.67753 -1.279859,-2.78369 -2.248896,-3.94471 A 36.38001,36.38001 0 0 1 19.77628,80.160676 c 0,-12.862589 0,-25.68404 0,-38.546629 h 44.337994 q -0.04114,38.679186 0.02743,77.372083 z"
+     style="fill:#ed6a54;stroke-width:4.57093"
+     id="path2" />
+  <path
+     d="m 16.192673,48.666987 v 30.16812 H 8.019855 v -30.16812 z"
+     style="fill:#ed6a54;stroke-width:4.57093"
+     id="path3" />
+  <path
+     d="m 64.100561,0.01403783 a 36.320588,36.320588 0 0 1 25.062394,9.09157377 28.796841,28.796841 0 0 1 7.660874,11.9986844 55.043105,55.043105 0 0 1 1.261576,15.367458 l -34.007699,-0.08228 c 0,0 0.02285,-24.417893 0,-36.38001007 M 72.23224,16.249972 a 7.6014519,7.6014519 0 0 0 -0.626217,12.259226 7.5008915,7.5008915 0 0 0 9.484674,0.287969 7.596881,7.596881 0 0 0 1.782662,-10.284586 7.468895,7.468895 0 0 0 -10.618264,-2.248897 z"
+     style="fill:#d7433f;stroke-width:4.57093"
+     id="path4" />
+  <path
+     d="m 64.100561,41.609476 h 44.337999 c 0,12.862589 0,25.68404 0,38.546629 A 36.38001,36.38001 0 0 1 99.2967,104.78883 c -0.969036,1.16102 -2.354027,2.28546 -2.248896,3.94471 C 96.910676,115.15112 96.988384,128 96.988384,128 H 74.266303 c 0,0 -0.04571,-5.48511 -0.137128,-8.03569 0,-0.45709 -0.04571,-1.31643 -0.05485,-1.75067 a 57.200583,57.200583 0 0 1 -9.987476,0.77249 q 0.109702,-38.697468 0.01371,-77.376654 z"
+     style="fill:#d7433f;stroke-width:4.57093"
+     id="path5" />
+  <path
+     d="m 111.47823,48.662416 h 8.50191 v 30.16812 h -8.58876 z"
+     style="fill:#d7433f;stroke-width:4.57093"
+     id="path6" />
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_robots</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

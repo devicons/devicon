@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="RAML.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="59.987601"
+     inkscape:cy="53.883187"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">file_type_raml</title>
+  <path
+     d="M 78.834871,-1.737656e-6 H 9.4520545 L 16.373421,11.104357 h 62.068294 a 27.886617,27.886617 0 0 1 20.096651,8.55342 29.125514,29.125514 0 0 1 8.311124,20.430376 27.11402,27.11402 0 0 1 -8.164834,19.634921 34.460544,34.460544 0 0 1 -19.973218,9.362588 h -7.59796 l -20.951535,-0.169148 6.048196,10.473482 h 9.184297 l 0.498302,0.800026 h 0.07314 l 27.050018,45.670048 0.123433,0.2103 0.17372,0.17372 a 6.1030547,6.1030547 0 0 0 10.386621,-4.31557 3.2686772,3.2686772 0 0 0 -0.94174,-2.48237 6.8573648,6.8573648 0 0 1 -0.86403,-1.20232 L 79.534322,80.18545 A 39.338416,39.338416 0 0 0 106.96378,68.473071 40.229873,40.229873 0 0 0 78.834871,-1.737656e-6 Z"
+     style="fill:#73cfee;stroke-width:4.57158"
+     id="path1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_raml</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

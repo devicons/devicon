@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="Jsonnet.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="55.291898"
+     inkscape:cy="64.918089"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <title
+     id="title1">file_type_jsonnet</title>
+  <path
+     d="M 128,64 A 64,64 0 1 1 64,0 64,64 0 0 1 128,64 Z"
+     style="fill:#0064bd;stroke-width:4.57143"
+     id="path1" />
+  <path
+     d="M 82.678857,93.883429 67.734857,86.4 V 71.469714 l 14.944,7.469715 z"
+     style="fill:#ffffff;fill-rule:evenodd;stroke-width:4.57143"
+     id="path2" />
+  <path
+     d="M 22.912,49.060571 37.851429,41.6 l 14.944,7.474286 -14.944,7.456 z M 37.851429,41.6 52.795429,34.130286 67.734857,41.6 52.795429,49.074286 Z m 14.944,22.4 14.939428,-7.469714 14.944,7.469714 -14.944,7.469714 z M 67.734857,41.6 82.678857,34.130286 97.618286,41.6 82.678857,49.074286 Z m 0,29.883429 L 82.678857,64 97.618286,71.469714 82.678857,78.939429 Z"
+     style="fill:#bfbfbf;fill-rule:evenodd;stroke-width:4.57143"
+     id="path3" />
+  <path
+     d="m 52.795429,93.883429 v -14.944 L 67.734857,71.469714 V 86.4 Z M 82.678857,64 V 49.060571 L 97.618286,41.6 v 14.944 z m 0,29.883429 v -14.944 L 97.618286,71.469714 V 86.4 Z M 67.734857,86.4 V 71.469714 L 82.678857,64 V 78.939429 Z M 52.795429,64 V 49.060571 L 67.734857,41.6 v 14.944 z"
+     style="fill:#808080;fill-rule:evenodd;stroke-width:4.57143"
+     id="path4" />
+  <path
+     d="m 22.912,64 14.939429,7.469714 V 86.4 l 14.944,7.469714 V 78.939429 L 67.734857,86.4 V 71.469714 L 52.795429,64 V 49.060571 L 37.851429,41.6 V 56.544 L 22.912,49.060571 Z m 59.766857,0 -14.944,-7.469714 V 41.6 l 14.944,7.474286 z"
+     style="fill:#ffffff;fill-rule:evenodd;stroke-width:4.57143"
+     id="path5" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_jsonnet</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

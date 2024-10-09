@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="Stata.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="90.040098"
+     inkscape:cy="62.335452"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="a"
+       x1="16"
+       y1="2"
+       x2="16"
+       y2="30"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.5714286,0,0,4.5714286,-9.1428571,-9.1428571)">
+      <stop
+         offset="0"
+         stop-color="#8aa7c0"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#3c6e8f"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title2">file_type_stata</title>
+  <rect
+     x="0"
+     y="0"
+     width="128"
+     height="128"
+     rx="7.113143"
+     ry="7.113143"
+     style="fill:url(#a);stroke-width:4.57143"
+     id="rect2" />
+  <rect
+     x="51.067425"
+     y="18.354284"
+     width="26.313143"
+     height="26.313143"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect3" />
+  <rect
+     x="83.776001"
+     y="18.354284"
+     width="26.313143"
+     height="26.313143"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect4" />
+  <rect
+     x="83.776001"
+     y="51.067425"
+     width="26.313143"
+     height="26.313143"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect5" />
+  <rect
+     x="51.067425"
+     y="51.067425"
+     width="26.313143"
+     height="26.313143"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect6" />
+  <rect
+     x="18.354284"
+     y="51.067425"
+     width="26.313143"
+     height="26.313143"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect7" />
+  <rect
+     x="18.354284"
+     y="83.776001"
+     width="26.313143"
+     height="26.313143"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect8" />
+  <rect
+     x="51.067425"
+     y="83.776001"
+     width="26.313143"
+     height="26.313143"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="rect9" />
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_stata</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
