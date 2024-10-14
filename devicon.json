@@ -3311,7 +3311,7 @@
             {
                 "base": "original",
                 "alias": "original-wordmark"
-            }, 
+            },
              {
                 "base": "original",
                 "alias": "plain"
@@ -3319,7 +3319,7 @@
              {
                 "base": "original",
                 "alias": "plain-wordmark"
-            } 
+            }
         ]
     },
     {
@@ -3897,18 +3897,20 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ]
         },
         "color": "#179287",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "gitlab",
