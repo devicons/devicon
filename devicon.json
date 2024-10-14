@@ -4215,18 +4215,20 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
                 "original",
-                "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ]
         },
         "color": "#179287",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "gitlab",
