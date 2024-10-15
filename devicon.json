@@ -8632,6 +8632,31 @@
             }
         ]
     },
+
+     {
+        "name": "reactnative",
+        "altnames": [
+            "react-native"
+        ],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": [
+                "original-wordmark"
+            ]
+        },
+        "color": "#61dafb",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
     {
         "name": "reactbootstrap",
         "altnames": [
