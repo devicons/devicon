@@ -9328,8 +9328,7 @@
             }
         ]
     },
-
-     {
+    {
         "name": "reactnative",
         "altnames": [
             "react-native"
@@ -9339,10 +9338,14 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark"
+                "original-wordmark",
+                "original",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "original-wordmark"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#61dafb",
