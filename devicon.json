@@ -633,10 +633,6 @@
             {
                 "base": "plain",
                 "alias": "original"
-            },
-            {
-                "base": "plain-wordmark",
-                "alias": "original-wordmark"
             }
         ]
     },
