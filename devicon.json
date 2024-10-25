@@ -12353,5 +12353,22 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "delphi",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#b21f24",
+        "aliases": []
     }
 ]
