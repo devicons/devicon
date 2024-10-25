@@ -2415,6 +2415,23 @@
         "aliases": []
     },
     {
+        "name": "delphi",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#b21f24",
+        "aliases": []
+    },
+    {
         "name": "denojs",
         "altnames": [],
         "tags": [
@@ -12353,22 +12370,5 @@
                 "alias": "plain"
             }
         ]
-    },
-    {
-        "name": "delphi",
-        "altnames": [],
-        "tags": [
-            "language"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "original"
-            ]
-        },
-        "color": "#b21f24",
-        "aliases": []
     }
 ]
