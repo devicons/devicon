@@ -2416,7 +2416,9 @@
     },
     {
         "name": "delphi",
-        "altnames": [],
+        "altnames": [
+            "embarcadero"
+        ],
         "tags": [
             "language"
         ],
