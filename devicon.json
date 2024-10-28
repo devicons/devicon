@@ -6781,10 +6781,13 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark",
+                "plain"
             ],
             "font": [
-                "original"
+                "original",
+                "plain"
             ]
         },
         "color": "#090",
