@@ -173,6 +173,31 @@
         "aliases": []
     },
     {
+        "name": "almalinux",
+        "altnames": [
+            "AlmaLinux OS"
+        ],
+        "tags": [
+            "linux",
+            "os",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
         "name": "alpinejs",
         "altnames": [
             "Alpine"
@@ -770,6 +795,7 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "original-wordmark",
                 "plain-wordmark"
             ],
@@ -780,11 +806,7 @@
         "color": "#0a094d",
         "aliases": [
             {
-                "base": "original-wordmark",
-                "alias": "original"
-            },
-            {
-                "base": "plain-wordmark",
+                "base": "original",
                 "alias": "plain"
             }
         ]
@@ -2423,6 +2445,32 @@
         ]
     },
     {
+        "name": "detaspace",
+        "altnames": [
+            "Deta",
+            "Deta Space"
+        ],
+        "tags": [
+            "cloud",
+            "hosting",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#f73b95",
+        "aliases": []
+    },
+    {
         "name": "devicon",
         "altnames": [],
         "tags": [
@@ -3189,6 +3237,43 @@
         "aliases": []
     },
     {
+        "name": "fiber",
+        "altnames": [
+            "GoFiber"
+        ],
+        "tags": [
+            "framework",
+            "go",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#00acd7",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "figma",
         "altnames": [],
         "tags": [
@@ -3205,6 +3290,37 @@
         },
         "color": "#f24e1e",
         "aliases": []
+    },
+    {
+        "name": "filamentphp",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "laravel"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            }, 
+             {
+                "base": "original",
+                "alias": "plain"
+            },
+             {
+                "base": "original",
+                "alias": "plain-wordmark"
+            } 
+        ]
     },
     {
         "name": "filezilla",
@@ -3960,6 +4076,31 @@
             ]
         },
         "color": "#557ebf",
+        "aliases": []
+    },
+    {
+        "name": "googlecolab",
+        "altnames": [
+            "googlecolaboratory"
+        ],
+        "tags": [
+            "cloud-computing-platform",
+            "data science",
+            "google",
+            "machine-learning",
+            "python",
+            "virtual machine"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffb300",
         "aliases": []
     },
     {
@@ -6663,6 +6804,43 @@
         ]
     },
     {
+        "name": "ngrok",
+        "altnames": [],
+        "tags": [
+            "networking",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#02228e",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "ngrx",
         "altnames": [],
         "tags": [
@@ -6681,7 +6859,7 @@
                 "plain"
             ]
         },
-        "color": "#412846",
+        "color": "#ba2bd2",
         "aliases": []
     },
     {
@@ -6941,10 +7119,14 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark"
+                "original",
+                "original-wordmark",
+                "plain"
             ],
             "font": [
-                "original-wordmark"
+                "original",
+                "original-wordmark",
+                "plain"
             ]
         },
         "color": "#cb3837",
@@ -10312,6 +10494,29 @@
         "aliases": []
     },
     {
+        "name": "surrealdb",
+        "altnames": [],
+        "tags": [
+            "db",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#c900d1",
+        "aliases": []
+    },
+    {
         "name": "svelte",
         "altnames": [
             "sveltejs"
@@ -11594,26 +11799,33 @@
             "vyperlang"
         ],
         "tags": [
-            "programming",
-            "language",
-            "python",
             "blockchain",
-            "ethereum"
+            "ethereum",
+            "language",
+            "programming",
+            "python"
         ],
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#9F4CF2",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "wasm",
