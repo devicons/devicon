@@ -39,10 +39,17 @@ jobs:
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         shell: bash
-        run: >
-          python ./.github/scripts/icomoon_peek.py
-          ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json
-          ./devicon.json ./icons ./ --headless "$PR_TITLE"
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          CHANGED_ICONS=$(git diff --name-only origin/${{ github.base_ref }} ${{ github.sha }} | grep -E 'icons/.*\.svg')
+          python ./.github/scripts/icomoon_peek.py \
+            ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver \
+            ./icomoon.json \
+            ./devicon.json \
+            ./icons \
+            ./ \
+            --headless \
+            ${CHANGED_ICONS}
 
       - name: Upload the err messages (created by icomoon_peek.py)
         uses: actions/upload-artifact@v4

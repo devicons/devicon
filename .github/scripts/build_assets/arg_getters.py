@@ -2,9 +2,9 @@ from argparse import ArgumentParser
 from build_assets.PathResolverAction import PathResolverAction
 
 
-def get_selenium_runner_args(has_token=True, peek_mode=False):
+def get_selenium_runner_args(has_token=True):
     """
-    Get the commandline arguments for the icomoon_peek.py and 
+    Get the commandline arguments for the icomoon_peek.py and
     icomoon_build.py.
     """
     parser = ArgumentParser(description="Upload svgs to Icomoon to create icon files.")
@@ -33,12 +33,13 @@ def get_selenium_runner_args(has_token=True, peek_mode=False):
                         help="The download destination of the Icomoon files",
                         action=PathResolverAction)
 
-    if peek_mode:
-        parser.add_argument("pr_title",
-                            help="The title of the PR that we are peeking at")
     if has_token != False:
         parser.add_argument("token",
                             help="The GitHub token to access the GitHub REST API.")
+
+    parser.add_argument("changed_files",
+                        help="List of SVG files changed since the last release/tag",
+                        nargs="+")
 
     return parser.parse_args()
 
@@ -49,9 +50,6 @@ def get_check_icon_pr_args():
     """
     parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run whenever a PR is opened")
 
-    parser.add_argument("pr_title",
-                        help="The title of the PR that we are peeking at")
-
     parser.add_argument("icons_folder_path",
                         help="The path to the icons folder",
                         action=PathResolverAction)
@@ -59,6 +57,10 @@ def get_check_icon_pr_args():
     parser.add_argument("devicon_json_path",
                         help="The path to the devicon.json",
                         action=PathResolverAction)
+
+    parser.add_argument("changed_files",
+                        help="List of SVG files changed in the PR",
+                        nargs="+")
 
     return parser.parse_args()
 
