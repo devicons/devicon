@@ -7805,6 +7805,34 @@
         "aliases": []
     },
     {
+        "name": "passport",
+        "altnames": [
+            "passportjs"
+        ],
+        "tags": [
+            "authentication",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#35df79",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "perl",
         "altnames": [],
         "tags": [
