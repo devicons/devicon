@@ -105,6 +105,36 @@
         ]
     },
     {
+        "name": "aerospike",
+        "altnames": [],
+        "tags": [
+            "data",
+            "database",
+            "nosql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#c21417",
+        "aliases": [
+            {
+               "base": "original",
+               "alias": "plain"
+            },
+            {
+               "base": "original-wordmark",
+               "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "aftereffects",
         "altnames": [
             "adobeaftereffects",
@@ -2527,6 +2557,34 @@
         ]
     },
     {
+        "name": "discloud",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "hosting",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#57f287",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "discordjs",
         "altnames": [],
         "tags": [
@@ -4606,6 +4664,36 @@
             ]
         },
         "color": "#e54d26",
+        "aliases": []
+    },
+    {
+        "name": "htmx",
+        "altnames": [
+            "html ui framework"
+        ],
+        "tags": [
+            "framework",
+            "web",
+            "html",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#333333",
         "aliases": []
     },
     {
@@ -6772,6 +6860,29 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "netbeans",
+        "altnames": [],
+        "tags": [
+            "ide",
+            "java",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1e6abf",
+        "aliases": []
     },
     {
         "name": "nginx",
@@ -10503,6 +10614,29 @@
         "aliases": []
     },
     {
+        "name": "surrealdb",
+        "altnames": [],
+        "tags": [
+            "db",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#c900d1",
+        "aliases": []
+    },
+    {
         "name": "svelte",
         "altnames": [
             "sveltejs"
@@ -11316,6 +11450,31 @@
         ]
     },
     {
+        "name": "vaadin",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "java",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#00b4f0",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "vagrant",
         "altnames": [],
         "tags": [
@@ -11881,6 +12040,33 @@
             ]
         },
         "color": "#4353ff",
+        "aliases": []
+    },
+    {
+        "name": "webgpu",
+        "altnames": [],
+        "tags": [
+            "graphics",
+            "framework",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#005a9c",
         "aliases": []
     },
     {
