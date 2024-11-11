@@ -105,6 +105,36 @@
         ]
     },
     {
+        "name": "aerospike",
+        "altnames": [],
+        "tags": [
+            "data",
+            "database",
+            "nosql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#c21417",
+        "aliases": [
+            {
+               "base": "original",
+               "alias": "plain"
+            },
+            {
+               "base": "original-wordmark",
+               "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "aftereffects",
         "altnames": [
             "adobeaftereffects",
@@ -1755,6 +1785,31 @@
         "aliases": []
     },
     {
+        "name": "cloudrun",
+        "altnames": [
+            "Cloud Run"
+        ],
+        "tags": [
+            "platform",
+            "serverless",
+            "deploy",
+            "cloud-computing-platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#4285f4",
+        "aliases": []
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
@@ -2523,6 +2578,34 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "discloud",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "hosting",
+            "database",
+            "storage"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#57f287",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
             }
         ]
     },
@@ -4609,6 +4692,36 @@
         "aliases": []
     },
     {
+        "name": "htmx",
+        "altnames": [
+            "html ui framework"
+        ],
+        "tags": [
+            "framework",
+            "web",
+            "html",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#333333",
+        "aliases": []
+    },
+    {
         "name": "hugo",
         "altnames": [
             "gohugo"
@@ -5804,6 +5917,43 @@
         "aliases": []
     },
     {
+        "name": "libgdx",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "java",
+            "game-development",
+            "cross-platform",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#e74a45",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "linkedin",
         "altnames": [],
         "tags": [
@@ -6774,6 +6924,29 @@
         ]
     },
     {
+        "name": "netbeans",
+        "altnames": [],
+        "tags": [
+            "ide",
+            "java",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1e6abf",
+        "aliases": []
+    },
+    {
         "name": "nginx",
         "altnames": [],
         "tags": [
@@ -7694,6 +7867,34 @@
         "aliases": []
     },
     {
+        "name": "passport",
+        "altnames": [
+            "passportjs"
+        ],
+        "tags": [
+            "authentication",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#35df79",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "perl",
         "altnames": [],
         "tags": [
@@ -8220,17 +8421,25 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
                 "plain",
-                "plain-wordmark"
+                "line"
             ],
             "font": [
                 "plain",
-                "plain-wordmark"
+                "line"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#1f34ab",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "prolog",
@@ -10546,6 +10755,36 @@
         "aliases": []
     },
     {
+        "name": "svgo",
+        "altnames": [],
+        "tags": [
+            "svg",
+            "optimization",
+            "tool",
+            "javascript",
+            "library",
+            "node.js"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": []
+    },
+    {
         "name": "swagger",
         "altnames": [
             "Swagger"
@@ -11334,6 +11573,31 @@
         ]
     },
     {
+        "name": "vaadin",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "java",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#00b4f0",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "vagrant",
         "altnames": [],
         "tags": [
@@ -11832,6 +12096,29 @@
         ]
     },
     {
+        "name": "waku",
+        "altnames": [],
+        "tags": [
+            "react",
+            "javascript",
+            "framework",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#dd2e44",
+        "aliases": []
+    },
+    {
         "name": "wasm",
         "altnames": [
             "WebAssembly"
@@ -11899,6 +12186,33 @@
             ]
         },
         "color": "#4353ff",
+        "aliases": []
+    },
+    {
+        "name": "webgpu",
+        "altnames": [],
+        "tags": [
+            "graphics",
+            "framework",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#005a9c",
         "aliases": []
     },
     {
