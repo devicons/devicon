@@ -12073,6 +12073,29 @@
         ]
     },
     {
+        "name": "waku",
+        "altnames": [],
+        "tags": [
+            "react",
+            "javascript",
+            "framework",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#dd2e44",
+        "aliases": []
+    },
+    {
         "name": "wasm",
         "altnames": [
             "WebAssembly"
