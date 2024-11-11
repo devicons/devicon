@@ -5892,6 +5892,43 @@
         "aliases": []
     },
     {
+        "name": "libgdx",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "java",
+            "game-development",
+            "cross-platform",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#e74a45",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "linkedin",
         "altnames": [],
         "tags": [
