@@ -3394,7 +3394,7 @@
             {
                 "base": "original",
                 "alias": "original-wordmark"
-            }, 
+            },
              {
                 "base": "original",
                 "alias": "plain"
@@ -3402,7 +3402,7 @@
              {
                 "base": "original",
                 "alias": "plain-wordmark"
-            } 
+            }
         ]
     },
     {
@@ -9318,6 +9318,29 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "reflex",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "python",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#664ec6",
+        "aliases": []
     },
     {
         "name": "remix",
