@@ -1785,6 +1785,31 @@
         "aliases": []
     },
     {
+        "name": "cloudrun",
+        "altnames": [
+            "Cloud Run"
+        ],
+        "tags": [
+            "platform",
+            "serverless",
+            "deploy",
+            "cloud-computing-platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#4285f4",
+        "aliases": []
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
