@@ -1785,6 +1785,31 @@
         "aliases": []
     },
     {
+        "name": "cloudrun",
+        "altnames": [
+            "Cloud Run"
+        ],
+        "tags": [
+            "platform",
+            "serverless",
+            "deploy",
+            "cloud-computing-platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#4285f4",
+        "aliases": []
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
@@ -3369,7 +3394,7 @@
             {
                 "base": "original",
                 "alias": "original-wordmark"
-            }, 
+            },
              {
                 "base": "original",
                 "alias": "plain"
@@ -3377,7 +3402,7 @@
              {
                 "base": "original",
                 "alias": "plain-wordmark"
-            } 
+            }
         ]
     },
     {
@@ -9316,6 +9341,29 @@
         ]
     },
     {
+        "name": "reflex",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "python",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#664ec6",
+        "aliases": []
+    },
+    {
         "name": "remix",
         "altnames": [
             "remix.run"
@@ -10728,6 +10776,36 @@
         "aliases": []
     },
     {
+        "name": "svgo",
+        "altnames": [],
+        "tags": [
+            "svg",
+            "optimization",
+            "tool",
+            "javascript",
+            "library",
+            "node.js"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": []
+    },
+    {
         "name": "swagger",
         "altnames": [
             "Swagger"
@@ -12037,6 +12115,29 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "waku",
+        "altnames": [],
+        "tags": [
+            "react",
+            "javascript",
+            "framework",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#dd2e44",
+        "aliases": []
     },
     {
         "name": "wasm",
