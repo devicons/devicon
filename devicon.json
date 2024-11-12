@@ -8161,6 +8161,35 @@
         "aliases": []
     },
     {
+        "name": "pm2",
+        "altnames": [],
+        "tags": [
+            "nodejs",
+            "javascript",
+            "js",
+            "manager",
+            "monitoring"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": []
+    },
+    {
         "name": "pnpm",
         "altnames": [
             "performant npm"
