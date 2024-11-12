@@ -6684,6 +6684,38 @@
         "aliases": []
     },
     {
+        "name": "monogame",
+        "altnames": [],
+        "tags": [
+            "engine",
+            "game-engine",
+            "C#",
+            "c-sharp",
+            "csharp"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#e73c00",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "moodle",
         "altnames": [],
         "tags": [
