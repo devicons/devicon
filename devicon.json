@@ -8120,6 +8120,7 @@
                 "plain"
             ],
             "font": [
+                "original",
                 "plain"
             ]
         },
@@ -8150,6 +8151,28 @@
         "color": "#b74af7",
         "aliases": []
     },
+    {
+        "name": "pinia",
+        "altnames": [],
+        "tags": [
+            "vuejs",
+            "state-management",
+            "javascript",
+            "web",
+            "frontend"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffe267",
+        "aliases": []
+    },    
     {
         "name": "playwright",
         "altnames": [],
