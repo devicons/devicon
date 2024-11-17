@@ -8625,6 +8625,34 @@
         ]
     },
     {
+        "name": "processwire",
+        "altnames": [],
+        "tags": [
+            "cms",
+            "php",
+            "framework"
+        ],
+        "versions":
+        {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1e87f0",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "prolog",
         "altnames": [
             "swi-prolog"
