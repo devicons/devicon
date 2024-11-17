@@ -1785,6 +1785,31 @@
         "aliases": []
     },
     {
+        "name": "cloudrun",
+        "altnames": [
+            "Cloud Run"
+        ],
+        "tags": [
+            "platform",
+            "serverless",
+            "deploy",
+            "cloud-computing-platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#4285f4",
+        "aliases": []
+    },
+    {
         "name": "cmake",
         "altnames": [],
         "tags": [
@@ -3369,7 +3394,7 @@
             {
                 "base": "original",
                 "alias": "original-wordmark"
-            }, 
+            },
              {
                 "base": "original",
                 "alias": "plain"
@@ -3377,7 +3402,7 @@
              {
                 "base": "original",
                 "alias": "plain-wordmark"
-            } 
+            }
         ]
     },
     {
@@ -3657,6 +3682,27 @@
             ]
         },
         "color": "#378BBA",
+        "aliases": []
+    },
+    {
+        "name": "gardener",
+        "altnames": [],
+        "tags": [
+            "kubernetes",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#009f76",
         "aliases": []
     },
     {
@@ -5919,6 +5965,43 @@
         "aliases": []
     },
     {
+        "name": "libgdx",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "java",
+            "game-development",
+            "cross-platform",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#e74a45",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "linkedin",
         "altnames": [],
         "tags": [
@@ -6626,6 +6709,38 @@
         },
         "color": "#860000",
         "aliases": []
+    },
+    {
+        "name": "monogame",
+        "altnames": [],
+        "tags": [
+            "engine",
+            "game-engine",
+            "C#",
+            "c-sharp",
+            "csharp"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#e73c00",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "moodle",
@@ -8105,6 +8220,35 @@
         "aliases": []
     },
     {
+        "name": "pm2",
+        "altnames": [],
+        "tags": [
+            "nodejs",
+            "javascript",
+            "js",
+            "manager",
+            "monitoring"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": []
+    },
+    {
         "name": "pnpm",
         "altnames": [
             "performant npm"
@@ -9283,6 +9427,29 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "reflex",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "python",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#664ec6",
+        "aliases": []
     },
     {
         "name": "remix",
@@ -10697,6 +10864,36 @@
         "aliases": []
     },
     {
+        "name": "svgo",
+        "altnames": [],
+        "tags": [
+            "svg",
+            "optimization",
+            "tool",
+            "javascript",
+            "library",
+            "node.js"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": []
+    },
+    {
         "name": "swagger",
         "altnames": [
             "Swagger"
@@ -12006,6 +12203,29 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "waku",
+        "altnames": [],
+        "tags": [
+            "react",
+            "javascript",
+            "framework",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#dd2e44",
+        "aliases": []
     },
     {
         "name": "wasm",
