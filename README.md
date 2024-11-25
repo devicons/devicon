@@ -224,7 +224,7 @@ Follow these steps to build the website and icons either locally or using <a hre
 </ol>
 
 <h2 id="using-gitpod">Using Gitpod.io</h2>
-<p>By using <a href=https://www.gitpod.io)>Gitpod.io</a>, you can easily build the icons and install the<br>required dependencies in one single click. No extra setup is required.</p>
+<p>By using <a href=https://www.gitpod.io>Gitpod.io</a>, you can easily build the icons and install the<br>required dependencies in one single click. No extra setup is required.</p>
 
 <a href=https://gitpod.io/#https://github.com/devicons/devicon/tree/develop><img src=https://gitpod.io/button/open-in-gitpod.svg alt="Open in Gitpod"></img></a>
 
