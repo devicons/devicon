@@ -3549,6 +3549,33 @@
         "aliases": []
     },
     {
+        "name": "forgejo",
+        "altnames": [],
+        "tags": [
+            "software",
+            "git",
+            "version-control"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#FF5500",
+        "aliases": []
+    },
+    {
         "name": "fortran",
         "altnames": [],
         "tags": [
@@ -5878,6 +5905,45 @@
         "aliases": []
     },
     {
+        "name": "laminas",
+        "altnames": [
+            "Laminas Project",
+            "Zend Framework"
+        ],
+        "tags": [
+            "php",
+            "framework",
+            "web",
+            "mvc",
+            "middleware"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#013755",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "laravel",
         "altnames": [],
         "tags": [
@@ -6965,6 +7031,41 @@
         },
         "color": "#2c7fb8",
         "aliases": []
+    },
+    {
+        "name": "newrelic",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "observability",
+            "analysis"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#1d252c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "nextjs",
@@ -8539,6 +8640,34 @@
             {
                 "base": "plain",
                 "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "processwire",
+        "altnames": [],
+        "tags": [
+            "cms",
+            "php",
+            "framework"
+        ],
+        "versions":
+        {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1e87f0",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
             }
         ]
     },
@@ -11082,6 +11211,36 @@
         },
         "color": "#5c4ee5",
         "aliases": []
+    },
+    {
+        "name": "terramate",
+        "altnames": [],
+        "tags": [
+            "deployment",
+            "devops",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#fff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "tex",
