@@ -1075,6 +1075,37 @@
         "aliases": []
     },
     {
+        "name": "bevyengine",
+        "altnames": [
+            "bevy engine",
+            "bevy"
+        ],
+        "tags": [
+            "game-engine",
+            "game",
+            "rust",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#282828",
+        "aliases": []
+    },
+    {
         "name": "biome",
         "altnames": [
             "biomejs"
