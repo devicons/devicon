@@ -2424,13 +2424,14 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
-        "color": "#b21f24",
+        "color": "#aa1e22",
         "aliases": []
     },
     {
