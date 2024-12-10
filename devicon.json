@@ -3351,7 +3351,7 @@
         "name": "firebase",
         "altnames": [],
         "tags": [
-            "auth",
+            "database",
             "hosting",
             "storage",
             "cloud"
@@ -3370,6 +3370,24 @@
                 "plain-wordmark",
                 "line",
                 "line-wordmark"
+            ]
+        },
+        "color": "#ffa000",
+        "aliases": []
+    },
+    {
+        "name": "firebird",
+        "altnames": [],
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
             ]
         },
         "color": "#ffa000",
