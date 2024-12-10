@@ -3351,8 +3351,7 @@
         "name": "firebase",
         "altnames": [],
         "tags": [
-            "auth",
-            "database",
+            "auth",            
             "hosting",
             "storage",
             "cloud"
