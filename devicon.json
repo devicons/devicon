@@ -9338,23 +9338,16 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
                 "original",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#61dafb",
-        "aliases": [
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "reactbootstrap",
