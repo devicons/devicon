@@ -1,41 +1,5 @@
 [
     {
-        "name": "threedsmax",
-        "altnames": [
-            "Autodesk 3ds Max",
-            "3dsmax"
-        ],
-        "tags": [
-            "3d",
-            "programming",
-            "vfx",
-            "graphic",
-            "graphics",
-            "game",
-            "animation"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#37a5cc",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "plain",
-                "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "aarch64",
         "altnames": [
             "arm64"
@@ -1111,6 +1075,37 @@
         "aliases": []
     },
     {
+        "name": "bevyengine",
+        "altnames": [
+            "bevy engine",
+            "bevy"
+        ],
+        "tags": [
+            "game-engine",
+            "game",
+            "rust",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#282828",
+        "aliases": []
+    },
+    {
         "name": "biome",
         "altnames": [
             "biomejs"
@@ -1593,6 +1588,31 @@
             ]
         },
         "color": "#52c8c5",
+        "aliases": []
+    },
+    {
+        "name": "chartjs",
+        "altnames": [
+            "chart.js"
+        ],
+        "tags": [
+            "javascript",
+            "chart",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff6384",
         "aliases": []
     },
     {
@@ -9405,6 +9425,28 @@
         ]
     },
     {
+        "name": "reactrouter",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "react"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f44250",
+        "aliases": []
+    },
+    {
         "name": "readthedocs",
         "altnames": [
             "Read The Docs"
@@ -10216,28 +10258,6 @@
         ]
     },
     {
-        "name": "reactrouter",
-        "altnames": [],
-        "tags": [
-            "framework",
-            "react"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#f44250",
-        "aliases": []
-    },
-    {
         "name": "sequelize",
         "altnames": [
             "sequelizejs"
@@ -10915,6 +10935,39 @@
         ]
     },
     {
+        "name": "sulu",
+        "altnames": [],
+        "tags": [
+            "cms",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#112a46",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "supabase",
         "altnames": [],
         "tags": [
@@ -11297,6 +11350,42 @@
         },
         "color": "#00BCB4",
         "aliases": []
+    },
+    {
+        "name": "threedsmax",
+        "altnames": [
+            "Autodesk 3ds Max",
+            "3dsmax"
+        ],
+        "tags": [
+            "3d",
+            "programming",
+            "vfx",
+            "graphic",
+            "graphics",
+            "game",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#37a5cc",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "threejs",
@@ -12324,6 +12413,46 @@
         "aliases": []
     },
     {
+        "name": "vulkan",
+        "altnames": [],
+        "tags": [
+            "api",
+            "3d",
+            "library",
+            "graphics",
+            "game"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#ac162c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "vyper",
         "altnames": [
             "vyperlang"
@@ -12545,34 +12674,6 @@
         "aliases": []
     },
     {
-        "name": "windows11",
-        "altnames": [],
-        "tags": [
-            "os"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#0078d4",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "windows8",
         "altnames": [],
         "tags": [
@@ -12589,6 +12690,34 @@
             ]
         },
         "color": "#00adef",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "windows11",
+        "altnames": [],
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#0078d4",
         "aliases": [
             {
                 "base": "original",
