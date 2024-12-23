@@ -11199,6 +11199,42 @@
         "aliases": []
     },
     {
+        "name": "teleport",
+        "altnames": [],
+        "tags": [
+            "ssh",
+            "security",
+            "auth",
+            "authentication",
+            "infrastructure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#512fc9",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "tensorflow",
         "altnames": [],
         "tags": [
