@@ -639,23 +639,18 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
-        "color": "#f02e65",
+        "color": "#fd366e",
         "aliases": [
             {
-                "base": "plain",
-                "alias": "original"
-            },
-            {
-                "base": "plain-wordmark",
-                "alias": "original-wordmark"
+                "base": "original",
+                "alias": "plain"
             }
         ]
     },
