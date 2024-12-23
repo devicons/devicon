@@ -722,6 +722,32 @@
         "aliases": []
     },
     {
+        "name": "artixlinux",
+        "altnames": [
+            "artix"
+        ],
+        "tags": [
+            "linux",
+            "os",
+            "distribution",
+            "desktop"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#10a0cc",
+        "aliases": []
+    },
+    {
         "name": "astro",
         "altnames": [],
         "tags": [
