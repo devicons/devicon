@@ -3500,6 +3500,24 @@
         "aliases": []
     },
     {
+        "name": "firebird",
+        "altnames": [],
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f4790e",
+        "aliases": []
+    },
+    {
         "name": "firefox",
         "altnames": [
             "mozillafirefox"
