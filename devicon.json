@@ -5702,7 +5702,7 @@
         "altnames": [],
         "tags": [
             "app",
-            "chat", 
+            "chat",
             "collaboration",
             "open-source",
             "platform"
@@ -5718,7 +5718,16 @@
             ]
         },
         "color": "#19191c",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "maven",
@@ -7639,7 +7648,7 @@
         },
         "color": "#f6bf29",
         "aliases": []
-    },    
+    },
     {
         "name": "puppeteer",
         "altnames": [],
