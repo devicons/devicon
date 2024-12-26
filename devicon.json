@@ -639,23 +639,18 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
                 "plain-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
-        "color": "#f02e65",
+        "color": "#fd366e",
         "aliases": [
             {
-                "base": "plain",
-                "alias": "original"
-            },
-            {
-                "base": "plain-wordmark",
-                "alias": "original-wordmark"
+                "base": "original",
+                "alias": "plain"
             }
         ]
     },
@@ -724,6 +719,32 @@
             ]
         },
         "color": "#ef7b4d",
+        "aliases": []
+    },
+    {
+        "name": "artixlinux",
+        "altnames": [
+            "artix"
+        ],
+        "tags": [
+            "linux",
+            "os",
+            "distribution",
+            "desktop"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#10a0cc",
         "aliases": []
     },
     {
@@ -8290,6 +8311,33 @@
         "aliases": []
     },
     {
+        "name": "pixijs",
+        "altnames": [],
+        "tags": [
+            "animation",
+            "graphics",
+            "html",
+            "javascript",
+            "library",
+            "visualization",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e72264",
+        "aliases": []
+    },
+    {
         "name": "playwright",
         "altnames": [],
         "tags": [
@@ -9365,6 +9413,27 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "reactnative",
+        "altnames": [
+            "react-native"
+        ],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#61dafb",
+        "aliases": []
     },
     {
         "name": "reactbootstrap",
@@ -11215,6 +11284,42 @@
         },
         "color": "#FFC131",
         "aliases": []
+    },
+    {
+        "name": "teleport",
+        "altnames": [],
+        "tags": [
+            "ssh",
+            "security",
+            "auth",
+            "authentication",
+            "infrastructure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#512fc9",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "tensorflow",
