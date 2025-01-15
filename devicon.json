@@ -6044,6 +6044,37 @@
         ]
     },
     {
+        "name": "laraveljetstream",
+        "altnames": [
+            "jetstream",
+            "Laravel Jetstream"
+        ],
+        "tags": [
+            "php",
+            "laravel",
+            "tailwind",
+            "scaffolding"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#6875f5",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "latex",
         "altnames": [],
         "tags": [
