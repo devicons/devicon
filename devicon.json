@@ -9853,6 +9853,27 @@
         ]
     },
     {
+        "name": "rexx",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#d81511",
+        "aliases": []
+    },
+    {
         "name": "rider",
         "altnames": [],
         "tags": [
