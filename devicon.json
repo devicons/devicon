@@ -6449,6 +6449,25 @@
         ]
     },
     {
+        "name": "mapbox",
+        "altnames": [],
+        "tags": [
+            "map",
+            "navigation",
+            "data"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": [
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "mariadb",
         "altnames": [],
         "tags": [
