@@ -659,7 +659,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -3388,7 +3388,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -3928,7 +3928,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -8000,7 +8000,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -11388,6 +11388,26 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "talos",
+        "altnames": [],
+        "tags": [
+            "container",
+            "linux",
+            "distribution"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f92a20",
+        "aliases": []
     },
     {
         "name": "tauri",
