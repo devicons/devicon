@@ -659,7 +659,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -1731,6 +1731,27 @@
         "aliases": []
     },
     {
+        "name": "clickhouse",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "column-oriented",
+            "database",
+            "warehouse"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f9ff69",
+        "aliases": []
+    },
+    {
         "name": "clojure",
         "altnames": [],
         "tags": [
@@ -1870,6 +1891,28 @@
         },
         "color": "#0e8a16",
         "aliases": []
+    },
+    {
+        "name": "cobol",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "codeac",
@@ -3345,7 +3388,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -3497,6 +3540,24 @@
             ]
         },
         "color": "#ffa000",
+        "aliases": []
+    },
+    {
+        "name": "firebird",
+        "altnames": [],
+        "tags": [
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f4790e",
         "aliases": []
     },
     {
@@ -3867,7 +3928,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -5899,6 +5960,33 @@
         "aliases": []
     },
     {
+        "name": "kubeflow",
+        "altnames": [],
+        "tags": [
+            "kubernetes",
+            "deployment",
+            "machine-learning"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#72a1e5",
+        "aliases": []
+    },
+    {
         "name": "kubernetes",
         "altnames": [],
         "tags": [
@@ -6510,6 +6598,38 @@
         "aliases": []
     },
     {
+        "name": "mattermost",
+        "altnames": [],
+        "tags": [
+            "app",
+            "chat",
+            "collaboration",
+            "open-source",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#19191c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "maven",
         "altnames": [
             "apachemaven",
@@ -6561,6 +6681,33 @@
             ]
         },
         "color": "#149B9A",
+        "aliases": []
+    },
+    {
+        "name": "memcached",
+        "altnames": [],
+        "tags": [
+            "data",
+            "database",
+            "nosql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#2A9790",
         "aliases": []
     },
     {
@@ -7872,7 +8019,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -11260,6 +11407,26 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "talos",
+        "altnames": [],
+        "tags": [
+            "container",
+            "linux",
+            "distribution"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f92a20",
+        "aliases": []
     },
     {
         "name": "tauri",
