@@ -6458,14 +6458,27 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark"
+                "original"
             ],
             "font": [
-                "original-wordmark"
+                "original"
             ]
         },
         "color": "#000000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "mariadb",
