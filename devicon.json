@@ -11865,5 +11865,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "zustand",
+        "altnames": [],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#443e38",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     }
 ]
