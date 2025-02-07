@@ -32,7 +32,7 @@ jobs:
         run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
 
       - name: Upload the err messages
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: err_messages
@@ -46,7 +46,7 @@ jobs:
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the pr num
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: pr_num
