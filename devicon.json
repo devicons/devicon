@@ -7087,6 +7087,31 @@
         "aliases": []
     },
     {
+        "name": "nats",
+        "altnames": [
+            "nats-io",
+            "nats.io",
+            "NATS-io",
+            "NATS.io"
+        ],
+        "tags": [
+            "streaming",
+            "open-source",
+            "go"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#27aae1",
+        "aliases": []
+    },
+    {
         "name": "neo4j",
         "altnames": [],
         "tags": [
