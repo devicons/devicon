@@ -1,7 +1,7 @@
 name: Peek Icons
 on:
   pull_request:
-      types: [labeled]
+    types: [labeled]
 jobs:
   peek:
     # four outcomes: successful check and upload,
@@ -11,14 +11,14 @@ jobs:
     if: github.event.label.name == 'bot:peek'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Python v3.8
-        uses: actions/setup-python@v4
-        with: 
+        uses: actions/setup-python@v5
+        with:
           python-version: 3.8
 
-      - name: Install dependencies 
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
@@ -30,7 +30,7 @@ jobs:
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the PR number
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v4
         with:
           name: pr_num
           path: ./pr_num.txt
@@ -40,26 +40,26 @@ jobs:
           PR_TITLE: ${{ github.event.pull_request.title }}
         shell: bash
         run: >
-          python ./.github/scripts/icomoon_peek.py 
-          ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json 
+          python ./.github/scripts/icomoon_peek.py
+          ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json
           ./devicon.json ./icons ./ --headless "$PR_TITLE"
 
       - name: Upload the err messages (created by icomoon_peek.py)
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: err_messages
           path: ./err_messages.txt
 
       - name: Upload screenshots for comments
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: screenshots
           path: ./screenshots/*.png
 
       - name: Upload geckodriver.log for debugging purposes
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: geckodriver-log
