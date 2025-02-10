@@ -659,7 +659,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -1731,6 +1731,27 @@
         "aliases": []
     },
     {
+        "name": "clickhouse",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "column-oriented",
+            "database",
+            "warehouse"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f9ff69",
+        "aliases": []
+    },
+    {
         "name": "clojure",
         "altnames": [],
         "tags": [
@@ -1870,6 +1891,28 @@
         },
         "color": "#0e8a16",
         "aliases": []
+    },
+    {
+        "name": "cobol",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "codeac",
@@ -3345,7 +3388,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -3885,7 +3928,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -4141,6 +4184,25 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "gleam",
+        "altnames": [],
+        "tags": [
+            "language",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ffaff3",
         "aliases": []
     },
     {
@@ -6387,6 +6449,38 @@
         ]
     },
     {
+        "name": "mapbox",
+        "altnames": [],
+        "tags": [
+            "map",
+            "navigation",
+            "data"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "mariadb",
         "altnames": [],
         "tags": [
@@ -7022,6 +7116,31 @@
             ]
         },
         "color": "#C8F",
+        "aliases": []
+    },
+    {
+        "name": "nats",
+        "altnames": [
+            "nats-io",
+            "nats.io",
+            "NATS-io",
+            "NATS.io"
+        ],
+        "tags": [
+            "streaming",
+            "open-source",
+            "go"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#27aae1",
         "aliases": []
     },
     {
@@ -7957,7 +8076,7 @@
         "altnames": [],
         "tags": [
             "linux",
-            "distribuition",
+            "distribution",
             "desktop"
         ],
         "versions": {
@@ -11366,6 +11485,26 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "talos",
+        "altnames": [],
+        "tags": [
+            "container",
+            "linux",
+            "distribution"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f92a20",
+        "aliases": []
     },
     {
         "name": "tauri",
