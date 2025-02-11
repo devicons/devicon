@@ -9065,6 +9065,29 @@
         "aliases": []
     },
     {
+        "name": "proxmox",
+        "altnames": [],
+        "tags": [
+            "container",
+            "lxc",
+            "virtual machine"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e57000",
+        "aliases": []
+    },
+    {
         "name": "pulsar",
         "altnames": [
             "Pulsar Edit"
