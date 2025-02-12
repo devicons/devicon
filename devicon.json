@@ -2854,6 +2854,41 @@
         "aliases": []
     },
     {
+        "name": "dovecot",
+        "altnames": [],
+        "tags": [
+            "imap",
+            "pop3",
+            "e-mail"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#54bbab",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "line-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "dreamweaver",
         "altnames": [
             "Adobe Dreamweaver"
@@ -2917,6 +2952,34 @@
         },
         "color": "#0073BA",
         "aliases": []
+    },
+    {
+        "name": "dyalog",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff6600",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "dynamodb",
@@ -6471,6 +6534,38 @@
         ]
     },
     {
+        "name": "mapbox",
+        "altnames": [],
+        "tags": [
+            "map",
+            "navigation",
+            "data"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "mariadb",
         "altnames": [],
         "tags": [
@@ -7106,6 +7201,31 @@
             ]
         },
         "color": "#C8F",
+        "aliases": []
+    },
+    {
+        "name": "nats",
+        "altnames": [
+            "nats-io",
+            "nats.io",
+            "NATS-io",
+            "NATS.io"
+        ],
+        "tags": [
+            "streaming",
+            "open-source",
+            "go"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#27aae1",
         "aliases": []
     },
     {
@@ -9935,6 +10055,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "rexx",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#d81511",
+        "aliases": []
     },
     {
         "name": "rider",
