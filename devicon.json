@@ -10637,6 +10637,24 @@
         "aliases": []
     },
     {
+        "name": "turbo",
+        "altnames": [],
+        "tags": [
+            "spa",
+            "js"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#5cd8e5",
+        "aliases": []
+    },
+    {
         "name": "twitter",
         "altnames": [
             "x"
