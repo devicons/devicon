@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg22"
+   sodipodi:docname="ASP.NET.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs26" />
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="4.5519999"
+     inkscape:cx="53.492971"
+     inkscape:cy="78.317225"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg22" />
+  <title
+     id="title2">file_type_aspx</title>
+  <polygon
+     points="22.75,2 6.35,2 6.35,30 29.65,30 29.65,9 "
+     style="fill:#c5c5c5"
+     id="polygon4"
+     transform="matrix(4.4147065,0,0,4.4147065,-3.6686212,-8.829413)" />
+  <polygon
+     points="27.45,11.3 27.45,27.7 27.35,27.7 8.75,27.7 8.75,4.3 20.45,4.3 20.45,11.3 "
+     style="fill:#f5f5f5"
+     id="polygon6"
+     transform="matrix(4.4147065,0,0,4.4147065,-3.6686212,-8.829413)" />
+  <path
+     d="M 49.749327,128 A 48.976754,48.976754 0 1 1 98.726081,79.023246 49.02973,49.02973 0 0 1 49.749327,128 Z m 0,-89.618542 a 40.6153,40.6153 0 1 0 40.6153,40.641788 40.685935,40.685935 0 0 0 -40.6153,-40.6153 z"
+     style="fill:#33a9dc;stroke-width:4.41471"
+     id="path8" />
+  <rect
+     x="5.5978475"
+     y="77.058701"
+     width="88.307373"
+     height="3.9290888"
+     style="fill:#33a9dc;stroke:#33a9dc;stroke-width:4.41471;stroke-miterlimit:10"
+     id="rect10" />
+  <path
+     d="m 50.742636,60.759605 a 140.96158,140.96158 0 0 1 -37.45437,-4.900324 l 1.068359,-3.562668 a 138.507,138.507 0 0 0 70.599986,0 l 1.055115,3.562668 a 123.9473,123.9473 0 0 1 -35.26909,4.900324 z"
+     style="fill:#33a9dc;stroke:#33a9dc;stroke-width:4.41471;stroke-miterlimit:10"
+     id="path12" />
+  <path
+     d="m 14.431675,104.7345 -1.055115,-3.56267 a 139.73429,139.73429 0 0 1 72.719045,0 l -1.068359,3.56267 a 138.53349,138.53349 0 0 0 -70.595571,0 z"
+     style="fill:#33a9dc;stroke:#33a9dc;stroke-width:4.41471;stroke-miterlimit:10"
+     id="path14" />
+  <path
+     d="M 34.015313,119.43988 A 112.3013,112.3013 0 0 1 31.64903,38.001793 l 3.425812,1.461268 a 108.41636,108.41636 0 0 0 2.353039,78.506729 z"
+     style="fill:#33a9dc;stroke:#33a9dc;stroke-width:4.41471;stroke-miterlimit:10"
+     id="path16" />
+  <path
+     d="m 65.2008,119.43988 -3.425813,-1.47009 a 108.42078,108.42078 0 0 0 2.344209,-78.506729 l 3.425813,-1.461268 A 112.32338,112.32338 0 0 1 65.2008,119.43988 Z"
+     style="fill:#33a9dc;stroke:#33a9dc;stroke-width:4.41471;stroke-miterlimit:10"
+     id="path18" />
+  <rect
+     x="47.784782"
+     y="34.867352"
+     width="3.924674"
+     height="89.931984"
+     style="fill:#33a9dc;stroke:#33a9dc;stroke-width:4.41471;stroke-miterlimit:10"
+     id="rect20" />
+  <metadata
+     id="metadata28">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_aspx</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

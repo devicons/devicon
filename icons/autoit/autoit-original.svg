@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="AutoIt.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="3.21875"
+     inkscape:cx="110.13592"
+     inkscape:cy="46.757281"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <title
+     id="title2">file_type_autoit</title>
+  <circle
+     cx="64"
+     cy="64"
+     r="57.375999"
+     style="fill:#5d83ac;stroke-width:4.57143"
+     id="circle4" />
+  <path
+     d="M 0,64 A 64,64 0 1 1 64,128 64,64 0 0 1 0,64 Z M 64,12.749714 A 51.250286,51.250286 0 1 0 115.25029,64 51.250286,51.250286 0 0 0 64,12.749714 Z"
+     style="fill:#f0f0f0;stroke-width:4.57143"
+     id="path6" />
+  <path
+     d="M 103.20457,82.998857 73.947429,40.649143 a 14.313143,14.313143 0 0 0 -3.744,-3.744 A 10.788571,10.788571 0 0 0 59.04,37.010286 16.196571,16.196571 0 0 0 55.328,40.667429 L 25.293714,82.998857 h 17.152 l 21.979429,-31.085714 8.402286,12.388571 q 1.188571,1.682286 2.486857,3.606857 1.298285,1.924572 2.285714,3.2 -1.682286,-0.141714 -3.954286,-0.141714 H 57.508571 L 48.758857,83.008 Z"
+     style="fill:#f0f0f0;stroke-width:4.57143"
+     id="path8" />
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_autoit</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

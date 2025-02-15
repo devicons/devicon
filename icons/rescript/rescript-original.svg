@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="ReScript.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2592135"
+     inkscape:cx="79.239982"
+     inkscape:cy="85.344395"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs3">
+    <linearGradient
+       id="a"
+       x1="11.421"
+       y1="-221.705"
+       x2="21.509001"
+       y2="-248.79201"
+       gradientTransform="matrix(4.5714286,0,0,-4.5714286,-9.1428571,-1005.7143)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e84f4f"
+         id="stop1" />
+      <stop
+         offset="0.409"
+         stop-color="#db4646"
+         id="stop2" />
+      <stop
+         offset="0.999"
+         stop-color="#cb3939"
+         id="stop3" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title3">file_type_rescript</title>
+  <path
+     d="m 0,41.005714 c 0,-17.088 0,-25.6 4.352,-31.616 A 22.820571,22.820571 0 0 1 9.380571,4.3611429 C 15.378286,0 23.922286,0 41.001143,0 H 86.994286 C 104.08229,0 112.61714,0 118.61029,4.3474286 A 22.820571,22.820571 0 0 1 123.63886,9.376 C 128,15.378286 128,23.917714 128,41.005714 v 45.988572 c 0,17.083424 0,25.622854 -4.352,31.616004 a 22.701714,22.701714 0 0 1 -5.02857,5.02857 C 112.62171,128 104.08229,128 86.994286,128 H 41.001143 c -17.078857,0 -25.6,0 -31.611429,-4.352 A 22.701714,22.701714 0 0 1 4.3611429,118.61943 C 0,112.62171 0,104.07771 0,86.994286 Z"
+     style="fill:url(#a);stroke-width:4.57143"
+     id="path3" />
+  <path
+     d="m 86.738286,61.961143 a 15.2,15.2 0 1 0 -15.195429,-15.2 15.2,15.2 0 0 0 15.195429,15.2 z"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="path4" />
+  <path
+     d="M 33.444571,44.841143 A 21.376,21.376 0 0 1 34.386286,35.757714 8.6217143,8.6217143 0 0 1 38.148571,32 21.485714,21.485714 0 0 1 47.232,31.062857 h 12.068571 v 56 a 21.421714,21.421714 0 0 1 -0.658285,7.606857 8.6491429,8.6491429 0 0 1 -4.662857,4.662856 21.577143,21.577143 0 0 1 -7.606858,0.65372 21.563429,21.563429 0 0 1 -7.606857,-0.65372 8.6491429,8.6491429 0 0 1 -4.662857,-4.662856 21.577143,21.577143 0 0 1 -0.653714,-7.606857 z"
+     style="fill:#ffffff;stroke-width:4.57143"
+     id="path5" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_rescript</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
