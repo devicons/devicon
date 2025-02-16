@@ -3564,11 +3564,11 @@
                 "base": "original",
                 "alias": "original-wordmark"
             },
-             {
+            {
                 "base": "original",
                 "alias": "plain"
             },
-             {
+            {
                 "base": "original",
                 "alias": "plain-wordmark"
             }
@@ -4203,6 +4203,32 @@
         },
         "color": "#24292e",
         "aliases": []
+    },
+    {
+        "name": "gitkraken",
+        "altnames": [],
+        "tags": [
+            "git",
+            "version-control"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#179287",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "gitlab",
