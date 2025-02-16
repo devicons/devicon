@@ -10645,14 +10645,21 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark"
             ],
             "font": [
-                "original"
+                "original",
+                "plain-wordmark"
             ]
         },
         "color": "#5cd8e5",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "twitter",
