@@ -13254,6 +13254,31 @@
         ]
     },
     {
+        "name": "wolfram",
+        "altnames": [
+            "wolframlanguage"
+        ],
+        "tags": [
+            "data-science",
+            "functional",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#dd1100",
+        "aliases": []
+    },
+    {
         "name": "woocommerce",
         "altnames": [],
         "tags": [
