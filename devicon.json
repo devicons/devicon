@@ -556,6 +556,28 @@
         ]
     },
     {
+        "name": "apex",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0d9dda",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "apl",
         "altnames": [
             "A Programming Language"
