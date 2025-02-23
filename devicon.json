@@ -556,6 +556,28 @@
         ]
     },
     {
+        "name": "apex",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0d9dda",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "apl",
         "altnames": [
             "A Programming Language"
@@ -2514,6 +2536,36 @@
         "aliases": []
     },
     {
+        "name": "datatables",
+        "altnames": [],
+        "tags": [
+            "css",
+            "framework",
+            "html",
+            "javascript",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "line"
+            }
+        ]
+    },
+    {
         "name": "dbeaver",
         "altnames": [],
         "tags": [
@@ -2952,6 +3004,34 @@
         },
         "color": "#0073BA",
         "aliases": []
+    },
+    {
+        "name": "dyalog",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff6600",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "dynamodb",
@@ -3514,11 +3594,11 @@
                 "base": "original",
                 "alias": "original-wordmark"
             },
-             {
+            {
                 "base": "original",
                 "alias": "plain"
             },
-             {
+            {
                 "base": "original",
                 "alias": "plain-wordmark"
             }
@@ -4153,6 +4233,32 @@
         },
         "color": "#24292e",
         "aliases": []
+    },
+    {
+        "name": "gitkraken",
+        "altnames": [],
+        "tags": [
+            "git",
+            "version-control"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#179287",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "gitlab",
@@ -4872,6 +4978,26 @@
         "aliases": []
     },
     {
+        "name": "hoppscotch",
+        "altnames": [],
+        "tags": [
+            "rest",
+            "testing",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00d196",
+        "aliases": []
+    },
+    {
         "name": "html5",
         "altnames": [
             "hypertextmarkdownlanguage5"
@@ -5014,6 +5140,7 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "plain",
                 "line"
             ],
@@ -5022,7 +5149,7 @@
                 "line"
             ]
         },
-        "color": "#faa625",
+        "color": "#330000",
         "aliases": []
     },
     {
@@ -5408,6 +5535,33 @@
             ]
         },
         "color": "#4285f4",
+        "aliases": []
+    },
+    {
+        "name": "jhipster",
+        "altnames": [],
+        "tags": [
+            "development",
+            "framework",
+            "java",
+            "platform",
+            "web",
+            "web-application",
+            "web-development"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4289c7",
         "aliases": []
     },
     {
@@ -6261,6 +6415,28 @@
             ]
         },
         "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "linuxmint",
+        "altnames": [],
+        "tags": [
+            "os",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#69b53f",
         "aliases": []
     },
     {
@@ -7639,6 +7815,29 @@
         "aliases": []
     },
     {
+        "name": "nodered",
+        "altnames": [
+			"node-red"
+        ],
+        "tags": [
+            "programming",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#8f0000",
+        "aliases": []
+    },
+    {
         "name": "nodewebkit",
         "altnames": [
             "nwjs"
@@ -8882,6 +9081,28 @@
             ]
         },
         "color": "#2A0634",
+        "aliases": []
+    },
+    {
+        "name": "primeng",
+        "altnames": [],
+        "tags": [
+            "angular",
+            "ui",
+            "component",
+            "library",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000",
         "aliases": []
     },
     {
@@ -13134,6 +13355,31 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "wolfram",
+        "altnames": [
+            "wolframlanguage"
+        ],
+        "tags": [
+            "data-science",
+            "functional",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#dd1100",
+        "aliases": []
     },
     {
         "name": "woocommerce",
