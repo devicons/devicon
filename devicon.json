@@ -2536,6 +2536,36 @@
         "aliases": []
     },
     {
+        "name": "datatables",
+        "altnames": [],
+        "tags": [
+            "css",
+            "framework",
+            "html",
+            "javascript",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "line"
+            }
+        ]
+    },
+    {
         "name": "dbeaver",
         "altnames": [],
         "tags": [
@@ -4317,6 +4347,27 @@
         "aliases": []
     },
     {
+        "name": "glitch",
+        "altnames": [],
+        "tags": [
+            "web-apps",
+            "online-platform",
+            "programming-environment",
+            "collaborative-environment"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "go",
         "altnames": [
             "golang"
@@ -5505,6 +5556,33 @@
             ]
         },
         "color": "#4285f4",
+        "aliases": []
+    },
+    {
+        "name": "jhipster",
+        "altnames": [],
+        "tags": [
+            "development",
+            "framework",
+            "java",
+            "platform",
+            "web",
+            "web-application",
+            "web-development"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4289c7",
         "aliases": []
     },
     {
@@ -7758,6 +7836,29 @@
         "aliases": []
     },
     {
+        "name": "nodered",
+        "altnames": [
+			"node-red"
+        ],
+        "tags": [
+            "programming",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#8f0000",
+        "aliases": []
+    },
+    {
         "name": "nodewebkit",
         "altnames": [
             "nwjs"
@@ -9203,6 +9304,29 @@
             ]
         },
         "color": "#d51c2f",
+        "aliases": []
+    },
+    {
+        "name": "proxmox",
+        "altnames": [],
+        "tags": [
+            "container",
+            "lxc",
+            "virtual machine"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e57000",
         "aliases": []
     },
     {
