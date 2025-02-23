@@ -11479,6 +11479,35 @@
         "aliases": []
     },
     {
+        "name": "styledcomponents",
+        "altnames": [
+            "Styled Components",
+            "styled-components"
+        ],
+        "tags": [
+            "css",
+            "javascript",
+            "js",
+            "library",
+            "nodejs",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#d268a7",
+        "aliases": []
+    },
+    {
         "name": "stylus",
         "altnames": [
             "styluslang"
