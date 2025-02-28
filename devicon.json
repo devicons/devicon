@@ -14170,15 +14170,9 @@
                 "original"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
-        "color": "#443e38",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "color": "#443e38"
     }
 ]
