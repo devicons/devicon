@@ -11127,6 +11127,27 @@
         "aliases": []
     },
     {
+        "name": "spicedb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "authorization",
+            "access-control",
+            "Zanzibar"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#FB5B62",
+        "aliases": []
+    },
+    {
         "name": "splunk",
         "altnames": [],
         "tags": [
