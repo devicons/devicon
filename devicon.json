@@ -3006,6 +3006,26 @@
         "aliases": []
     },
     {
+        "name": "duckdb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#fff100",
+        "aliases": []
+    },
+    {
         "name": "dyalog",
         "altnames": [],
         "tags": [
