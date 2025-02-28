@@ -4794,6 +4794,34 @@
         ]
     },
     {
+        "name": "harbor",
+        "altnames": [],
+        "tags": [
+            "docker",
+            "artifact",
+            "oci",
+            "registry"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#666666",
+        "aliases": []
+    },
+    {
         "name": "hardhat",
         "altnames": [],
         "tags": [
