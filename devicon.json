@@ -1915,6 +1915,33 @@
         "aliases": []
     },
     {
+        "name": "cmd",
+        "altnames": [
+            "command-prompt"
+        ],
+        "tags": [
+            "command-line",
+            "shell",
+            "terminal",
+            "cli",
+            "windows",
+            "cmdlets"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "cobol",
         "altnames": [],
         "tags": [
