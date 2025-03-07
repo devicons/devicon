@@ -5101,6 +5101,31 @@
         "aliases": []
     },
     {
+        "name": "hyperv",
+        "altnames": [
+            "hyper-v"
+        ],
+        "tags": [
+            "hypervisor",
+            "operating-system"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#00188f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "ie10",
         "altnames": [
             "internetexplorer10"
