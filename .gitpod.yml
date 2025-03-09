@@ -8,15 +8,6 @@ tasks:
   - name: Build CSS & run web server
     init: npm run build-css && npm run dev
 
-github:
-  prebuilds:
-    addBadge: true
-    addComment: false
-    addCheck: true
-    master: true
-    branches: true
-    pullRequestsFromForks: true
-
 ports:
   - port: 8000
     onOpen: open-preview
