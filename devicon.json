@@ -3128,6 +3128,33 @@
         "aliases": []
     },
     {
+        "name": "dynatrace",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "performance",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "eclipse",
         "altnames": [
             "Eclipse IDE"
