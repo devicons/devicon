@@ -6818,6 +6818,29 @@
         "color": "#fec514",
         "aliases": []
     },
+     {
+        "name": "love2d",
+        "altnames": [
+            "löve"
+        ],
+        "tags": [
+            "programming",
+            "game-engine"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#fff",
+        "aliases": []
+    },
     {
         "name": "lua",
         "altnames": [
