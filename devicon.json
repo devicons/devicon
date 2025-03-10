@@ -8197,6 +8197,22 @@
         "aliases": []
     },
     {
+        "name": "npss",
+        "altnames": [],
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0a37b2",
+        "aliases": []
+    },
+    {
         "name": "nuget",
         "altnames": [],
         "tags": [
