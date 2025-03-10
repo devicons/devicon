@@ -5729,13 +5729,25 @@
     },
      {
         "name": "love2d",
-        "altnames": ["löve"],
-        "tags": ["programming", "game-engine"],
+        "altnames": [
+            "löve"
+        ],
+        "tags": [
+            "programming",
+            "game-engine"
+        ],
         "versions": {
-            "svg": ["original", "plain"],
-            "font": ["original"]
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
         },
-        "color": "#27ABE1",
+        "color": "#fff",
         "aliases": []
     },
     {
