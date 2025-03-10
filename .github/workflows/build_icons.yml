@@ -5,9 +5,9 @@ jobs:
     name: Get Fonts From Icomoon
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with: 
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
           python-version: '3.10'
 
       - name: Install dependencies (python, pip, npm)
@@ -21,26 +21,26 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
-          python ./.github/scripts/icomoon_build.py 
-          ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json 
+          python ./.github/scripts/icomoon_build.py
+          ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json
           ./devicon.json ./icons ./ $GITHUB_TOKEN --headless
 
       - name: Upload geckodriver.log for debugging purposes
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: geckodriver-log
           path: ./geckodriver.log
 
       - name: Upload log file for debugging purposes
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: logfile
           path: ./log.txt
 
       - name: Build devicon.min.css
-        if: success() 
+        if: success()
         run: npm run build-css
 
       # - name: Upload screenshot of the newly made icons
@@ -58,11 +58,11 @@ jobs:
         uses: juliangruber/read-file-action@v1.0.0
         with:
           # taken from icomoon_build.py's get_release_message()
-          path: ./release_message.txt  
+          path: ./release_message.txt
 
       - name: Create Pull Request
-        if: success() 
-        uses: peter-evans/create-pull-request@v3
+        if: success()
+        uses: peter-evans/create-pull-request@v7
         env:
           MESSAGE: |
             Hello,
@@ -81,14 +81,14 @@ jobs:
 
             More information can be found in the GitHub Action logs for this workflow.
 
-            Adios, 
+            Adios,
             Build Bot :sunglasses:
         with:
           branch: 'bot/build-result'
           commit-message: 'Built new icons, icomoon.json and devicon.css'
           title: 'bot:build new icons, icomoon.json and devicon.css'
           body: >
-            ${{ 
+            ${{
               format(
                 env.MESSAGE,
                 steps.release_message_step.outputs.content

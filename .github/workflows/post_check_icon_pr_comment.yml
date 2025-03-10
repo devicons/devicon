@@ -2,19 +2,19 @@ name: Post the result of the check_icon_pr workflow into its PR.
 on:
   workflow_run:
     workflows: ['Check Icon PR']
-    types: 
+    types:
       - completed
-jobs: 
+jobs:
   post_result_of_svg_check:
     name: Post the result of the Check SVG Action
     runs-on: ubuntu-latest
     steps:
       - name: Check if the trigger run worked. If it failed, fail the current run.
-        if: github.event.workflow_run.conclusion != 'success' 
+        if: github.event.workflow_run.conclusion != 'success'
         uses: cutenode/action-always-fail@v1.0.1
 
       - name: Download workflow artifact
-        uses: dawidd6/action-download-artifact@v2.27.0
+        uses: dawidd6/action-download-artifact@v7
         if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -62,7 +62,7 @@ jobs:
 
       - name: Comment on the PR about the result - Failure
         uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
-        if: failure() 
+        if: failure()
         env:
           MESSAGE: |
             Hi!
