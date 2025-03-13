@@ -5111,17 +5111,20 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark",
+                "plain"
             ],
             "font": [
-                "original"
+                "original-wordmark",
+                "plain"
             ]
         },
         "color": "#00188f",
         "aliases": [
             {
-                "base": "original",
-                "alias": "plain"
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
