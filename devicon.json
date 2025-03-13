@@ -10074,6 +10074,27 @@
         "aliases": []
     },
     {
+        "name": "radstudio",
+        "altnames": [
+            "RAD Studio"
+        ],
+        "tags": [
+            "editor",
+            "IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f42434",
+        "aliases": []
+    },
+    {
         "name": "rails",
         "altnames": [
             "rubyonrails"
