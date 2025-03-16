@@ -4058,6 +4058,27 @@
         "aliases": []
     },
     {
+        "name": "fusion",
+        "altnames": [
+            "Autodesk Fusion",
+            "Autodesk Fusion 360"
+        ],
+        "tags": [
+            "design"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#FF6A00",
+        "aliases": []
+    },
+    {
         "name": "gardener",
         "altnames": [],
         "tags": [
@@ -4357,10 +4378,13 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#2088FF",
@@ -7234,6 +7258,27 @@
             ]
         },
         "color": "#2A9790",
+        "aliases": []
+    },
+    {
+        "name": "mercurial",
+        "altnames": [],
+        "tags": [
+            "version-control"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#999",
         "aliases": []
     },
     {
@@ -12672,6 +12717,36 @@
         ]
     },
     {
+        "name": "twilio",
+        "altnames": [],
+        "tags": [
+            "api",
+            "automation",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#f22f46",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "twitter",
         "altnames": [
             "x"
@@ -14142,6 +14217,24 @@
             ]
         },
         "color": "#000",
+        "aliases": []
+    },
+    {
+        "name": "zustand",
+        "altnames": [],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#443e38",
         "aliases": []
     }
 ]
