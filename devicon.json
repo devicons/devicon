@@ -14179,5 +14179,23 @@
         },
         "color": "#000",
         "aliases": []
+    },
+    {
+        "name": "zustand",
+        "altnames": [],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#443e38",
+        "aliases": []
     }
 ]
