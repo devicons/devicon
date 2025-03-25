@@ -622,6 +622,42 @@
         "aliases": []
     },
     {
+        "name": "apollographql",
+        "altnames": [
+            "Apollo"
+        ],
+        "tags": [
+            "platform",
+            "graphql",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#112B49",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "appcelerator",
         "altnames": [],
         "tags": [
@@ -4378,10 +4414,13 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#2088FF",
@@ -12729,6 +12768,36 @@
         ]
     },
     {
+        "name": "twilio",
+        "altnames": [],
+        "tags": [
+            "api",
+            "automation",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#f22f46",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "twitter",
         "altnames": [
             "x"
@@ -14199,6 +14268,24 @@
             ]
         },
         "color": "#000",
+        "aliases": []
+    },
+    {
+        "name": "zustand",
+        "altnames": [],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#443e38",
         "aliases": []
     }
 ]
