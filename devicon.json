@@ -2799,6 +2799,37 @@
         "aliases": []
     },
     {
+        "name": "devpost",
+        "altnames": [],
+        "tags": [
+            "platform",
+            "hackathon"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#221e24",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "line"
+            },
+            {
+                "base": "plain-wordmark",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
         "name": "digitalocean",
         "altnames": [],
         "tags": [
