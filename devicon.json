@@ -3445,6 +3445,32 @@
         ]
     },
     {
+        "name": "entityframeworkcore",
+        "altnames": [
+            "ef core",
+            "entity framework core"
+        ],
+        "tags": [
+            "dotnet",
+            ".net",
+            "framework",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#512bd4",
+        "aliases": []
+    },
+    {
         "name": "envoy",
         "altnames": [
             "envoyproxy"
