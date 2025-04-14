@@ -2418,6 +2418,25 @@
         ]
     },
     {
+        "name": "discord",
+        "altnames": [],
+        "tags": [
+            "chat",
+            "gaming",
+            "voice"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5865F2",
+        "aliases": []
+    },
+    {
         "name": "discordjs",
         "altnames": [],
         "tags": [
