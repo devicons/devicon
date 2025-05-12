@@ -99,6 +99,37 @@
         ]
     },
     {
+        "name": "aframe",
+        "altnames": [
+            "a-frame"
+        ],
+        "tags": [
+            "framework",
+            "html",
+            "javascript",
+            "js",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#ee295f",
+        "aliases": [
+            {
+               "base": "original-wordmark",
+               "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "aftereffects",
         "altnames": [
             "adobeaftereffects",
