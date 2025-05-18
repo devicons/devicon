@@ -99,6 +99,37 @@
         ]
     },
     {
+        "name": "aframe",
+        "altnames": [
+            "a-frame"
+        ],
+        "tags": [
+            "framework",
+            "html",
+            "javascript",
+            "js",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#ee295f",
+        "aliases": [
+            {
+               "base": "original-wordmark",
+               "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "aftereffects",
         "altnames": [
             "adobeaftereffects",
@@ -1020,6 +1051,32 @@
                 "alias": "original"
             }
         ]
+    },
+    {
+        "name": "babylonjs",
+        "altnames": [
+            "babylon.js"
+        ],
+        "tags": [
+            "3d",
+            "javascript",
+            "library",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#bb464b",
+        "aliases": []
     },
     {
         "name": "backbonejs",
