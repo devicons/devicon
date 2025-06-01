@@ -1534,17 +1534,14 @@
         "versions": {
             "svg": [
                 "original",
-                "plain",
                 "line"
             ],
             "font": [
-                "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "original",
+                "line"
             ]
         },
-        "color": "#03599c",
+        "color": "#a9bacd",
         "aliases": [
             {
                 "base": "plain",
