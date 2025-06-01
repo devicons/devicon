@@ -8093,22 +8093,14 @@
                 "plain"
             ],
             "font": [
-                "original",
+                "original-wordmark",
                 "plain"
             ]
         },
-        "color": "#090",
+        "color": "#019639",
         "aliases": [
             {
-                "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original",
+                "base": "original-wordmark",
                 "alias": "plain-wordmark"
             }
         ]
