@@ -3,23 +3,23 @@ on: pull_request
 jobs:
   check:
     name: Check the `devicon.json` and the SVGs' quality
-    runs-on: ubuntu-18.04
-    if: | # only checks icon PR and when PR's are labeled with `feature:icon`
+    runs-on: ubuntu-latest
+    if: | # only checks icon PR and when PR's start with new/update icon or have the both:ckeck label applied
       startsWith(github.event.pull_request.title, 'new icon') ||
       startsWith(github.event.pull_request.title, 'update icon') || 
-      github.event.label.name == 'bot:check' 
+      github.event.label.name == 'bot:check'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Check if PR is develop
         if: ${{ github.base_ref != 'develop' }}
         run: |
           echo -e "The PR's base branch is \`${{ github.base_ref }}\`, but should be \`develop\`\nPlease change the PR so that it's based on, and merged into \`develop\`" > ./err_messages.txt
           echo "wrong_branch=true" >> $GITHUB_ENV
-      
-      - uses: actions/setup-python@v2
+
+      - uses: actions/setup-python@v5
         if: ${{ !env.wrong_branch }}
-        with: 
+        with:
           python-version: 3.8
 
       - name: Install dependencies
@@ -35,7 +35,7 @@ jobs:
         run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
 
       - name: Upload the err messages
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: err_messages
@@ -49,7 +49,7 @@ jobs:
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the pr num
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: pr_num
