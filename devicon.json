@@ -2414,6 +2414,37 @@
         "aliases": []
     },
     {
+        "name": "cpanel",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "web hosting",
+            "server",
+            "control panel"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff6c2c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "cplusplus",
         "altnames": [
             "c++",
