@@ -2805,26 +2805,6 @@
         "aliases": []
     },
     {
-        "name": "delphi",
-        "altnames": [
-            "embarcadero"
-        ],
-        "tags": [
-            "language"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#aa1e22",
-        "aliases": []
-    },
-    {
         "name": "denojs",
         "altnames": [],
         "tags": [
