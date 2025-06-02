@@ -11719,6 +11719,31 @@
         ]
     },
     {
+        "name": "sourceengine",
+        "altnames": [
+            "source engine"
+        ],
+        "tags": [
+            "game-engine",
+            "valve",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f79a10",
+        "aliases": []
+    },
+    {
         "name": "sourcetree",
         "altnames": [],
         "tags": [
