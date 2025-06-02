@@ -6472,7 +6472,8 @@
     {
         "name": "nasm",
         "altnames": [
-            "netwideassembler"
+            "netwideassembler",
+            "net wide assembler
         ],
         "tags": [
             "assembler",
