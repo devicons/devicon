@@ -99,6 +99,37 @@
         ]
     },
     {
+        "name": "aframe",
+        "altnames": [
+            "a-frame"
+        ],
+        "tags": [
+            "framework",
+            "html",
+            "javascript",
+            "js",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#ee295f",
+        "aliases": [
+            {
+               "base": "original-wordmark",
+               "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "aftereffects",
         "altnames": [
             "adobeaftereffects",
@@ -1022,6 +1053,32 @@
         ]
     },
     {
+        "name": "babylonjs",
+        "altnames": [
+            "babylon.js"
+        ],
+        "tags": [
+            "3d",
+            "javascript",
+            "library",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#bb464b",
+        "aliases": []
+    },
+    {
         "name": "backbonejs",
         "altnames": [],
         "tags": [
@@ -1477,17 +1534,14 @@
         "versions": {
             "svg": [
                 "original",
-                "plain",
                 "line"
             ],
             "font": [
-                "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "original",
+                "line"
             ]
         },
-        "color": "#03599c",
+        "color": "#a9bacd",
         "aliases": [
             {
                 "base": "plain",
@@ -2297,7 +2351,9 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
                 "plain",
@@ -2356,6 +2412,37 @@
         },
         "color": "#e42528",
         "aliases": []
+    },
+    {
+        "name": "cpanel",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "web hosting",
+            "server",
+            "control panel"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff6c2c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "cplusplus",
@@ -2715,6 +2802,26 @@
             ]
         },
         "color": "#A80030",
+        "aliases": []
+    },
+    {
+        "name": "delphi",
+        "altnames": [
+            "embarcadero"
+        ],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#a81c21",
         "aliases": []
     },
     {
@@ -3443,6 +3550,32 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "entityframeworkcore",
+        "altnames": [
+            "ef core",
+            "entity framework core"
+        ],
+        "tags": [
+            "dotnet",
+            ".net",
+            "framework",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#512bd4",
+        "aliases": []
     },
     {
         "name": "envoy",
@@ -5010,6 +5143,34 @@
         ]
     },
     {
+        "name": "harbor",
+        "altnames": [],
+        "tags": [
+            "docker",
+            "artifact",
+            "oci",
+            "registry"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#666666",
+        "aliases": []
+    },
+    {
         "name": "hardhat",
         "altnames": [],
         "tags": [
@@ -5315,6 +5476,34 @@
         },
         "color": "#FF4088",
         "aliases": []
+    },
+    {
+        "name": "hyperv",
+        "altnames": [
+            "hyper-v"
+        ],
+        "tags": [
+            "hypervisor",
+            "operating-system"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#00188f",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "ie10",
@@ -10022,6 +10211,34 @@
         ]
     },
     {
+        "name": "qtest",
+        "altnames": [],
+        "tags": [
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#1a62b3",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "quarkus",
         "altnames": [],
         "tags": [
@@ -10155,6 +10372,27 @@
             ]
         },
         "color": "#9f1d20",
+        "aliases": []
+    },
+    {
+        "name": "radstudio",
+        "altnames": [
+            "RAD Studio"
+        ],
+        "tags": [
+            "editor",
+            "IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f42434",
         "aliases": []
     },
     {
@@ -11531,6 +11769,29 @@
         "aliases": []
     },
     {
+        "name": "spicedb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "authorization",
+            "access-control",
+            "Zanzibar"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#FB5B62",
+        "aliases": []
+    },
+    {
         "name": "splunk",
         "altnames": [],
         "tags": [
@@ -12537,6 +12798,29 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "tmux",
+        "altnames": [],
+        "tags": [
+            "cli",
+            "terminal",
+            "multiplexer"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1bb91f",
+        "aliases": []
     },
     {
         "name": "tomcat",
