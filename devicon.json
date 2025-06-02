@@ -1534,17 +1534,14 @@
         "versions": {
             "svg": [
                 "original",
-                "plain",
                 "line"
             ],
             "font": [
-                "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "original",
+                "line"
             ]
         },
-        "color": "#03599c",
+        "color": "#a9bacd",
         "aliases": [
             {
                 "base": "plain",
@@ -2417,6 +2414,37 @@
         "aliases": []
     },
     {
+        "name": "cpanel",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "web hosting",
+            "server",
+            "control panel"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff6c2c",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "cplusplus",
         "altnames": [
             "c++",
@@ -2774,6 +2802,26 @@
             ]
         },
         "color": "#A80030",
+        "aliases": []
+    },
+    {
+        "name": "delphi",
+        "altnames": [
+            "embarcadero"
+        ],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#a81c21",
         "aliases": []
     },
     {
@@ -9855,6 +9903,30 @@
         "aliases": []
     },
     {
+        "name": "pug",
+        "altnames": [
+            "pugjs"
+        ],
+        "tags": [
+            "framework",
+            "javascript",
+            "nodejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#56332b",
+        "aliases": []
+    },
+    {
         "name": "pulsar",
         "altnames": [
             "Pulsar Edit"
@@ -11670,6 +11742,31 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "sourceengine",
+        "altnames": [
+            "source engine"
+        ],
+        "tags": [
+            "game-engine",
+            "valve",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f79a10",
+        "aliases": []
     },
     {
         "name": "sourcetree",
