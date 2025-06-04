@@ -2,14 +2,14 @@ name: Post the screenshots into a comment from Peek Icons workflow
 on:
   workflow_run:
     workflows: ['Peek Icons']
-    types: 
+    types:
       - completed
-jobs: 
+jobs:
   post_screenshots_in_comment:
     name: Post the screenshot
     runs-on: ubuntu-latest
     if: github.event.action == 'completed' && github.event.workflow_run.conclusion != 'skipped'
-    env: 
+    env:
       # three possible values: 'skipped', 'success', 'failure'
       # have to print github.event to console to see these values
       # note: can't use this env variable up in the if statement above for some reason.
@@ -20,7 +20,7 @@ jobs:
         run: echo $PEEK_STATUS
 
       - name: Download workflow artifact
-        uses: dawidd6/action-download-artifact@v2.27.0
+        uses: dawidd6/action-download-artifact@v7
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: peek_icons.yml
@@ -48,7 +48,7 @@ jobs:
           path: ./screenshots/new_svgs.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
-      - name: Upload zoomed in screenshot of the SVGs gotten from the artifacts 
+      - name: Upload zoomed in screenshot of the SVGs gotten from the artifacts
         id: svgs_detailed_img_step
         uses: devicons/public-upload-to-imgur@v2.2.2
         if: env.PEEK_STATUS == 'success' && success()
@@ -106,8 +106,8 @@ jobs:
             {5}
 
             The maintainers will now check for:
-            1. The number of Glyphs matches the number of SVGs that were selected. 
-            2. The icons (second group of pictures) look the same as the SVGs (first group of pictures). 
+            1. The number of Glyphs matches the number of SVGs that were selected.
+            2. The icons (second group of pictures) look the same as the SVGs (first group of pictures).
             3. The icons are of high quality (legible, matches the official logo, etc.)
             4. A new object is added in the `devicon.json` file at the correct alphabetic position as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)
 
@@ -117,23 +117,23 @@ jobs:
 
             Note: If the images don't show up, it has been autodeleted by Imgur after 6 months due to our API choice.
 
-            Cheers, 
+            Cheers,
             Peek Bot :blush:
         with:
           type: create
           issue_number: ${{ steps.pr_num_reader.outputs.content }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: >
-            ${{ 
+            ${{
               format(
-                env.MESSAGE, 
+                env.MESSAGE,
                 fromJSON(steps.svgs_overview_img_step.outputs.markdown_urls)[0],
                 join(fromJSON(steps.svgs_detailed_img_step.outputs.markdown_urls), '  '),
                 fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0],
                 join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '  '),
                 join(fromJSON(steps.colored_icons_detailed_img_step.outputs.markdown_urls), '  '),
                 steps.err_message_reader.outputs.content
-              ) 
+              )
             }}
 
       - name: Comment on the PR about the result - Failure
@@ -155,9 +155,9 @@ jobs:
             - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)
             - Your PR title follows the format seen [here](https://github.com/devicons/devicon/wiki/Overview-on-Submitting-Icons)
 
-            I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate. 
+            I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate.
 
-            Best of luck, 
+            Best of luck,
             Peek Bot :relaxed:
         with:
           type: create
@@ -174,7 +174,7 @@ jobs:
             I'm Devicons' Peek Bot and we've ran into a problem with the `post_peek_screenshot` workflow.
             The maintainers will take a look and fix the issue. Please wait for further instructions.
 
-            Thank you, 
+            Thank you,
             Peek Bot :relaxed:
         with:
           type: create
