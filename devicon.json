@@ -4594,14 +4594,20 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "plain",
+                "line",
+                "original-wordmark",
+                "plain-wordmark",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "line",
+                "plain-wordmark",
+                "line-wordmark"
             ]
         },
-        "color": "#181616",
+        "color": "#000",
         "aliases": []
     },
     {
