@@ -7,6 +7,7 @@
         "enum": [
           ".net",
           "3d",
+          "AI",
           "ARM",
           "C#",
           "CMS",
@@ -50,6 +51,7 @@
           "cloud-computing-platform",
           "cmdlets",
           "cms",
+          "code-completion",
           "code quality",
           "code-quality",
           "code-review",
