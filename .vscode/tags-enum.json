@@ -148,6 +148,7 @@
           "linux",
           "localization",
           "logs",
+          "low-code",
           "machine-learning",
           "manager",
           "markup",
@@ -168,6 +169,7 @@
           "multimedia",
           "network",
           "networking",
+          "no-code",
           "node.js",
           "nodejs",
           "nosql",
@@ -274,6 +276,7 @@
           "websockets",
           "wiki",
           "windows",
+          "workflow",
           "wrapper",
           "zig"
         ]
