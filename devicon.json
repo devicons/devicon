@@ -4412,6 +4412,27 @@
         "aliases": []
     },
     {
+        "name": "ghidra",
+        "altnames": [],
+        "tags": [
+            "binary-analysis",
+            "reverse-engineering"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#df241a",
+        "aliases": []
+    },
+    {
         "name": "ghost",
         "altnames": [],
         "tags": [
