@@ -8159,6 +8159,34 @@
         "aliases": []
     },
     {
+        "name": "netbox",
+        "altnames": [],
+        "tags": [
+            "network",
+            "automation",
+            "infrastructure",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#00857d",
+        "aliases": []
+    },
+    {
         "name": "nginx",
         "altnames": [],
         "tags": [
