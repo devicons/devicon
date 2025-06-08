@@ -7047,10 +7047,12 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#5A90B6",
