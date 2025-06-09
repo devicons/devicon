@@ -1,0 +1,24 @@
+---
+# This is the configuration file for https://github.com/Ezard/semantic-prs
+
+enabled: true
+titleOnly: true  # We only use the PR title as we squash and merge
+commitsOnly: false
+titleAndCommits: false
+anyCommit: false
+allowMergeCommits: false
+allowRevertCommits: true
+targetUrl: 'https://github.com/devicons/devicon/blob/master/.github/semantic.yml'
+types:
+  # default conventional commit types (for non icon PRs)
+  - 'chore'
+  - 'ci'
+  - 'docs'
+  - 'feat'
+  - 'fix'
+  - 'refactor'
+  - 'style'
+  - 'test'
+  # custom devicon types (for icon PRs)
+  - 'new icon'
+  - 'update icon'
