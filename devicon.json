@@ -3252,24 +3252,14 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "plain"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain"
             ]
         },
-        "color": "#ff6600",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "color": "#ff6a13",
+        "aliases": []
     },
     {
         "name": "dynamodb",
