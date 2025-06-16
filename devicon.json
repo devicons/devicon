@@ -1544,7 +1544,15 @@
         "color": "#a9bacd",
         "aliases": [
             {
-                "base": "plain",
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
                 "alias": "plain-wordmark"
             },
             {
