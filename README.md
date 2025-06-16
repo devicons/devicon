@@ -158,7 +158,59 @@ Add the following CSS rules in your stylesheet:
 ```html
 <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg'>
 ```
+<h2 id="faq">Frequently Asked Questions</h2>
 
+<h3>How do I use Devicon with React?</h3>
+<p>Install devicon and import the CSS in your React component:</p>
+
+```javascript
+// Install devicon
+npm install devicon
+
+// Import in your component
+import 'devicon/devicon.min.css';
+
+function MyComponent() {
+  return (
+    <div>
+      <i className="devicon-react-original colored"></i>
+      <i className="devicon-javascript-plain colored"></i>
+    </div>
+  );
+}
+<h3>How do I use Devicon with Vue.js?</h3>
+vue<template>
+  <div>
+    <i class="devicon-vuejs-plain colored"></i>
+    <i class="devicon-typescript-plain colored"></i>
+  </div>
+</template>
+
+<style>
+@import 'devicon/devicon.min.css';
+</style>
+<h3>How do I customize icon colors?</h3>
+css/* Override default colors */
+.devicon-javascript-plain {
+  color: #f7df1e !important;
+}
+
+/* Or use CSS custom properties */
+.custom-icon {
+  --devicon-color: #your-color;
+  color: var(--devicon-color);
+}
+<h3>Can I use Devicon with Angular?</h3>
+typescript// In your angular.json
+"styles": [
+  "node_modules/devicon/devicon.min.css"
+]
+
+// In your component template
+<i class="devicon-angular-plain colored"></i>
+<h3>How do I find the correct class name for an icon?</h3>
+<p>Visit <a href="https://devicon.dev">devicon.dev</a> to browse all available icons and copy their class names directly.</p>
+```
 <h2 id="request-icon">Requesting an icon</h2>
 <p>
     When you want to request an icon please feel free to create an issue. Check out our <a href="https://github.com/devicons/devicon/wiki/Requesting-an-Icon">Wiki</a> for more information.
