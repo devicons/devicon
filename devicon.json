@@ -12690,6 +12690,41 @@
         "aliases": []
     },
     {
+        "name": "tenzir",
+        "altnames": [],
+        "tags": [
+            "security",
+            "logs",
+            "monitoring",
+            "pipeline"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#0e1017",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "terraform",
         "altnames": [],
         "tags": [
