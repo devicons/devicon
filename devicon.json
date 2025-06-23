@@ -1544,7 +1544,15 @@
         "color": "#a9bacd",
         "aliases": [
             {
-                "base": "plain",
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
                 "alias": "plain-wordmark"
             },
             {
@@ -3240,7 +3248,7 @@
                 "plain"
             ]
         },
-        "color": "#000",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -8560,7 +8568,6 @@
                 "plain"
             ],
             "font": [
-                "original",
                 "original-wordmark",
                 "plain"
             ]
