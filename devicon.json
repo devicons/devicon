@@ -89,12 +89,12 @@
         "color": "#c21417",
         "aliases": [
             {
-               "base": "original",
-               "alias": "plain"
+                "base": "original",
+                "alias": "plain"
             },
             {
-               "base": "original-wordmark",
-               "alias": "plain-wordmark"
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
@@ -124,8 +124,8 @@
         "color": "#ee295f",
         "aliases": [
             {
-               "base": "original-wordmark",
-               "alias": "plain-wordmark"
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
@@ -1871,6 +1871,27 @@
         "aliases": []
     },
     {
+        "name": "clickhouse",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "column-oriented",
+            "database",
+            "warehouse"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#f9ff69",
+        "aliases": []
+    },
+    {
         "name": "clion",
         "altnames": [],
         "tags": [
@@ -1894,27 +1915,6 @@
             ]
         },
         "color": "#21d789",
-        "aliases": []
-    },
-    {
-        "name": "clickhouse",
-        "altnames": [],
-        "tags": [
-            "cloud",
-            "column-oriented",
-            "database",
-            "warehouse"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "plain"
-            ],
-            "font": [
-                "plain"
-            ]
-        },
-        "color": "#f9ff69",
         "aliases": []
     },
     {
@@ -3260,24 +3260,14 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "plain"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain"
             ]
         },
-        "color": "#ff6600",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "color": "#ff6a13",
+        "aliases": []
     },
     {
         "name": "dynamodb",
@@ -7055,10 +7045,12 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#5A90B6",
@@ -7105,7 +7097,7 @@
         "color": "#fec514",
         "aliases": []
     },
-     {
+    {
         "name": "love2d",
         "altnames": [
             "löve"
@@ -8028,6 +8020,57 @@
         ]
     },
     {
+        "name": "netbeans",
+        "altnames": [],
+        "tags": [
+            "ide",
+            "java",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1e6abf",
+        "aliases": []
+    },
+    {
+        "name": "netbox",
+        "altnames": [],
+        "tags": [
+            "network",
+            "automation",
+            "infrastructure",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#00857d",
+        "aliases": []
+    },
+    {
         "name": "netlify",
         "altnames": [],
         "tags": [
@@ -8142,57 +8185,6 @@
                 "alias": "plain-wordmark"
             }
         ]
-    },
-    {
-        "name": "netbeans",
-        "altnames": [],
-        "tags": [
-            "ide",
-            "java",
-            "open-source"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark"
-            ]
-        },
-        "color": "#1e6abf",
-        "aliases": []
-    },
-    {
-        "name": "netbox",
-        "altnames": [],
-        "tags": [
-            "network",
-            "automation",
-            "infrastructure",
-            "open-source"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
-            ],
-            "font": [
-                "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
-            ]
-        },
-        "color": "#00857d",
-        "aliases": []
     },
     {
         "name": "nginx",
@@ -8436,7 +8428,7 @@
     {
         "name": "nodered",
         "altnames": [
-			"node-red"
+            "node-red"
         ],
         "tags": [
             "programming",
@@ -8636,6 +8628,35 @@
         },
         "color": "#4dabcf",
         "aliases": []
+    },
+    {
+        "name": "nuxt",
+        "altnames": [],
+        "tags": [
+            "js",
+            "javascript",
+            "framework",
+            "fullstack",
+            "vuejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00dc82",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "nuxtjs",
@@ -9813,8 +9834,7 @@
             "php",
             "framework"
         ],
-        "versions":
-        {
+        "versions": {
             "svg": [
                 "original",
                 "original-wordmark",
@@ -10627,27 +10647,6 @@
         ]
     },
     {
-        "name": "reactnative",
-        "altnames": [
-            "react-native"
-        ],
-        "tags": [
-            "framework"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#61dafb",
-        "aliases": []
-    },
-    {
         "name": "reactbootstrap",
         "altnames": [
             "React-Bootstrap",
@@ -10675,6 +10674,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "reactnative",
+        "altnames": [
+            "react-native"
+        ],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#61dafb",
+        "aliases": []
     },
     {
         "name": "reactnavigation",
@@ -14185,34 +14205,6 @@
         "aliases": []
     },
     {
-        "name": "windows8",
-        "altnames": [],
-        "tags": [
-            "os"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#00adef",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "windows11",
         "altnames": [],
         "tags": [
@@ -14229,6 +14221,34 @@
             ]
         },
         "color": "#0078d4",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "windows8",
+        "altnames": [],
+        "tags": [
+            "os"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#00adef",
         "aliases": [
             {
                 "base": "original",
