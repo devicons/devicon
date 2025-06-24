@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devicon';
-  src:  url('fonts/devicon.eot?hja375');
-  src:  url('fonts/devicon.eot?hja375#iefix') format('embedded-opentype'),
-    url('fonts/devicon.ttf?hja375') format('truetype'),
-    url('fonts/devicon.woff?hja375') format('woff'),
-    url('fonts/devicon.svg?hja375#devicon') format('svg');
+  src:  url('fonts/devicon.eot?qd25fp');
+  src:  url('fonts/devicon.eot?qd25fp#iefix') format('embedded-opentype'),
+    url('fonts/devicon.ttf?qd25fp') format('truetype'),
+    url('fonts/devicon.woff?qd25fp') format('woff'),
+    url('fonts/devicon.svg?qd25fp#devicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,528 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-teleport-line-wordmark:before {
+  content: "\e913";
+}
+.devicon-teleport-line:before {
+  content: "\e914";
+}
+.devicon-teleport-original-wordmark:before {
+  content: "\e971";
+}
+.devicon-teleport-original:before {
+  content: "\e993";
+}
+.devicon-cosmosdb-plain-wordmark:before {
+  content: "\e998";
+}
+.devicon-cosmosdb-plain:before {
+  content: "\ea27";
+}
+.devicon-forgejo-line-wordmark:before {
+  content: "\ea6d";
+}
+.devicon-forgejo-line:before {
+  content: "\eace";
+}
+.devicon-forgejo-plain-wordmark:before {
+  content: "\eb16";
+}
+.devicon-forgejo-plain:before {
+  content: "\eb25";
+}
+.devicon-remix-line-wordmark:before {
+  content: "\eb31";
+}
+.devicon-remix-line:before {
+  content: "\ecca";
+}
+.devicon-remix-original-wordmark:before {
+  content: "\eccb";
+}
+.devicon-remix-original:before {
+  content: "\ecd2";
+}
+.devicon-leetcode-line-wordmark:before {
+  content: "\ecd3";
+}
+.devicon-leetcode-plain-wordmark:before {
+  content: "\ecd8";
+}
+.devicon-leetcode-line:before {
+  content: "\ecd9";
+}
+.devicon-leetcode-plain:before {
+  content: "\ecda";
+}
+.devicon-stenciljs-plain-wordmark:before {
+  content: "\ecdb";
+}
+.devicon-stenciljs-plain:before {
+  content: "\ecdc";
+}
+.devicon-glitch-plain:before {
+  content: "\ecdd";
+}
+.devicon-nuxt-plain-wordmark:before {
+  content: "\ecde";
+}
+.devicon-nuxt-original:before {
+  content: "\ecdf";
+}
+.devicon-kalilinux-line-wordmark:before {
+  content: "\ecec";
+}
+.devicon-kalilinux-line:before {
+  content: "\ecf0";
+}
+.devicon-kalilinux-plain-wordmark:before {
+  content: "\ecf1";
+}
+.devicon-kalilinux-original:before {
+  content: "\ecfe";
+}
+.devicon-waku-line:before {
+  content: "\ecff";
+}
+.devicon-waku-plain:before {
+  content: "\ed00";
+}
+.devicon-newrelic-line:before {
+  content: "\ed01";
+}
+.devicon-newrelic-plain:before {
+  content: "\ed0a";
+}
+.devicon-racket-line:before {
+  content: "\ed0b";
+}
+.devicon-racket-plain:before {
+  content: "\ed0c";
+}
+.devicon-bevyengine-line-wordmark:before {
+  content: "\ed0d";
+}
+.devicon-bevyengine-line:before {
+  content: "\ed0e";
+}
+.devicon-bevyengine-plain-wordmark:before {
+  content: "\ed26";
+}
+.devicon-bevyengine-plain:before {
+  content: "\ed27";
+}
+.devicon-cloudrun-line:before {
+  content: "\ed28";
+}
+.devicon-cloudrun-plain:before {
+  content: "\ed29";
+}
+.devicon-processing-line:before {
+  content: "\ed2a";
+}
+.devicon-processing-plain:before {
+  content: "\ed2b";
+}
+.devicon-vaadin-original:before {
+  content: "\ed2c";
+}
+.devicon-appwrite-plain-wordmark:before {
+  content: "\ed2d";
+}
+.devicon-appwrite-original:before {
+  content: "\ed2e";
+}
+.devicon-discloud-plain-wordmark:before {
+  content: "\ed2f";
+}
+.devicon-discloud-original:before {
+  content: "\ed30";
+}
+.devicon-netbeans-plain-wordmark:before {
+  content: "\ed31";
+}
+.devicon-netbeans-plain:before {
+  content: "\ed32";
+}
+.devicon-primeng-plain:before {
+  content: "\ed33";
+}
+.devicon-dynatrace-line-wordmark:before {
+  content: "\ed34";
+}
+.devicon-dynatrace-line:before {
+  content: "\ed35";
+}
+.devicon-dynatrace-plain-wordmark:before {
+  content: "\ed36";
+}
+.devicon-dynatrace-plain:before {
+  content: "\ed37";
+}
+.devicon-expo-line-wordmark:before {
+  content: "\ed38";
+}
+.devicon-expo-line:before {
+  content: "\ed39";
+}
+.devicon-expo-original-wordmark:before {
+  content: "\ed3a";
+}
+.devicon-expo-original:before {
+  content: "\ed3b";
+}
+.devicon-sourceengine-plain-wordmark:before {
+  content: "\ed3c";
+}
+.devicon-sourceengine-plain:before {
+  content: "\ed3d";
+}
+.devicon-linuxmint-plain-wordmark:before {
+  content: "\ed3e";
+}
+.devicon-linuxmint-plain:before {
+  content: "\ed3f";
+}
+.devicon-sulu-line-wordmark:before {
+  content: "\ed40";
+}
+.devicon-sulu-line:before {
+  content: "\ed41";
+}
+.devicon-sulu-original-wordmark:before {
+  content: "\ed42";
+}
+.devicon-sulu-original:before {
+  content: "\ed43";
+}
+.devicon-gardener-line:before {
+  content: "\ed44";
+}
+.devicon-gardener-plain:before {
+  content: "\ed45";
+}
+.devicon-datadog-original-wordmark:before {
+  content: "\ed46";
+}
+.devicon-datadog-original:before {
+  content: "\ed47";
+}
+.devicon-vyper-original-wordmark:before {
+  content: "\ed48";
+}
+.devicon-vyper-original:before {
+  content: "\ed49";
+}
+.devicon-web3js-plain:before {
+  content: "\ed4a";
+}
+.devicon-laminas-line-wordmark:before {
+  content: "\ed4b";
+}
+.devicon-laminas-line:before {
+  content: "\ed4c";
+}
+.devicon-laminas-original-wordmark:before {
+  content: "\ed4d";
+}
+.devicon-laminas-original:before {
+  content: "\ed4e";
+}
+.devicon-passport-original-wordmark:before {
+  content: "\ed4f";
+}
+.devicon-passport-plain:before {
+  content: "\ed50";
+}
+.devicon-surrealdb-plain-wordmark:before {
+  content: "\ed51";
+}
+.devicon-surrealdb-plain:before {
+  content: "\ed52";
+}
+.devicon-angularjs-plain-wordmark:before {
+  content: "\ed53";
+}
+.devicon-angularjs-plain:before {
+  content: "\ed54";
+}
+.devicon-bash-plain:before {
+  content: "\ed55";
+}
+.devicon-llvm-line:before {
+  content: "\ed56";
+}
+.devicon-llvm-plain:before {
+  content: "\ed57";
+}
+.devicon-ngrx-plain:before {
+  content: "\ed58";
+}
+.devicon-memcached-line-wordmark:before {
+  content: "\ed59";
+}
+.devicon-memcached-line:before {
+  content: "\ed5a";
+}
+.devicon-memcached-plain-wordmark:before {
+  content: "\ed5b";
+}
+.devicon-memcached-plain:before {
+  content: "\ed5c";
+}
+.devicon-reflex-plain-wordmark:before {
+  content: "\ed5d";
+}
+.devicon-reflex-plain:before {
+  content: "\ed5e";
+}
+.devicon-terramate-original-wordmark:before {
+  content: "\ed5f";
+}
+.devicon-terramate-original:before {
+  content: "\ed60";
+}
+.devicon-gitkraken-plain-wordmark:before {
+  content: "\ed61";
+}
+.devicon-gitkraken-original:before {
+  content: "\ed62";
+}
+.devicon-hoppscotch-plain:before {
+  content: "\ed63";
+}
+.devicon-reactnative-original-wordmark:before {
+  content: "\ed64";
+}
+.devicon-reactnative-original:before {
+  content: "\ed65";
+}
+.devicon-illustrator-line:before {
+  content: "\ed66";
+}
+.devicon-illustrator-plain:before {
+  content: "\ed67";
+}
+.devicon-firebird-plain:before {
+  content: "\ed68";
+}
+.devicon-gleam-plain:before {
+  content: "\ed69";
+}
+.devicon-githubactions-plain-wordmark:before {
+  content: "\ed6a";
+}
+.devicon-githubactions-plain:before {
+  content: "\ed6b";
+}
+.devicon-bazel-plain-wordmark:before {
+  content: "\ed6c";
+}
+.devicon-bazel-plain:before {
+  content: "\ed6d";
+}
+.devicon-laraveljetstream-plain-wordmark:before {
+  content: "\ed6e";
+}
+.devicon-laraveljetstream-original:before {
+  content: "\ed6f";
+}
+.devicon-cobol-original:before {
+  content: "\ed70";
+}
+.devicon-rexx-plain-wordmark:before {
+  content: "\ed71";
+}
+.devicon-rexx-plain:before {
+  content: "\ed72";
+}
+.devicon-clickhouse-plain:before {
+  content: "\ed73";
+}
+.devicon-love2d-line:before {
+  content: "\ed74";
+}
+.devicon-love2d-plain:before {
+  content: "\ed75";
+}
+.devicon-talos-plain:before {
+  content: "\ed76";
+}
+.devicon-mapbox-original:before {
+  content: "\ed77";
+}
+.devicon-nats-plain:before {
+  content: "\ed78";
+}
+.devicon-apex-original:before {
+  content: "\ed79";
+}
+.devicon-proxmox-plain-wordmark:before {
+  content: "\ed7a";
+}
+.devicon-proxmox-plain:before {
+  content: "\ed7b";
+}
+.devicon-zustand-plain:before {
+  content: "\ed7c";
+}
+.devicon-turbo-plain-wordmark:before {
+  content: "\ed7d";
+}
+.devicon-turbo-original:before {
+  content: "\ed7e";
+}
+.devicon-jhipster-plain-wordmark:before {
+  content: "\ed7f";
+}
+.devicon-jhipster-plain:before {
+  content: "\ed80";
+}
+.devicon-duckdb-plain:before {
+  content: "\ed81";
+}
+.devicon-spicedb-line:before {
+  content: "\ed82";
+}
+.devicon-spicedb-plain:before {
+  content: "\ed83";
+}
+.devicon-harbor-line-wordmark:before {
+  content: "\ed84";
+}
+.devicon-harbor-line:before {
+  content: "\ed85";
+}
+.devicon-harbor-plain-wordmark:before {
+  content: "\ed86";
+}
+.devicon-harbor-plain:before {
+  content: "\ed87";
+}
+.devicon-hyperv-plain:before {
+  content: "\ed88";
+}
+.devicon-hyperv-original-wordmark:before {
+  content: "\ed89";
+}
+.devicon-npss-plain:before {
+  content: "\ed8a";
+}
+.devicon-ansys-plain-wordmark:before {
+  content: "\ed8b";
+}
+.devicon-ansys-plain:before {
+  content: "\ed8c";
+}
+.devicon-inertiajs-plain-wordmark:before {
+  content: "\ed8d";
+}
+.devicon-inertiajs-plain:before {
+  content: "\ed8e";
+}
+.devicon-fusion-plain:before {
+  content: "\ed8f";
+}
+.devicon-radstudio-plain:before {
+  content: "\ed90";
+}
+.devicon-mercurial-plain-wordmark:before {
+  content: "\ed91";
+}
+.devicon-mercurial-plain:before {
+  content: "\ed92";
+}
+.devicon-pug-line:before {
+  content: "\ed93";
+}
+.devicon-pug-plain:before {
+  content: "\ed94";
+}
+.devicon-entityframeworkcore-line:before {
+  content: "\ed95";
+}
+.devicon-entityframeworkcore-plain:before {
+  content: "\ed96";
+}
+.devicon-wolfram-plain-wordmark:before {
+  content: "\ed97";
+}
+.devicon-wolfram-plain:before {
+  content: "\ed98";
+}
+.devicon-cpanel-original-wordmark:before {
+  content: "\ed99";
+}
+.devicon-cpanel-original:before {
+  content: "\ed9a";
+}
+.devicon-nodejs-line-wordmark:before {
+  content: "\ed9b";
+}
+.devicon-nodejs-line:before {
+  content: "\ed9c";
+}
+.devicon-nodejs-plain-wordmark:before {
+  content: "\ed9d";
+}
+.devicon-nodejs-plain:before {
+  content: "\ed9e";
+}
+.devicon-qtest-original-wordmark:before {
+  content: "\ed9f";
+}
+.devicon-qtest-original:before {
+  content: "\eda0";
+}
+.devicon-aframe-plain:before {
+  content: "\eda1";
+}
+.devicon-aframe-original-wordmark:before {
+  content: "\eda2";
+}
+.devicon-babylonjs-plain-wordmark:before {
+  content: "\eda3";
+}
+.devicon-babylonjs-plain:before {
+  content: "\eda4";
+}
+.devicon-delphi-plain:before {
+  content: "\eda5";
+}
+.devicon-netbox-line-wordmark:before {
+  content: "\eda6";
+}
+.devicon-netbox-line:before {
+  content: "\eda7";
+}
+.devicon-netbox-plain-wordmark:before {
+  content: "\eda8";
+}
+.devicon-netbox-plain:before {
+  content: "\eda9";
+}
+.devicon-dyalog-plain:before {
+  content: "\edaa";
+}
+.devicon-tmux-plain-wordmark:before {
+  content: "\edab";
+}
+.devicon-tmux-plain:before {
+  content: "\edac";
+}
+.devicon-c-line:before {
+  content: "\edad";
+}
+.devicon-c-original:before {
+  content: "\edae";
+}
+.devicon-npm-plain:before {
+  content: "\edaf";
+}
+.devicon-npm-original-wordmark:before {
+  content: "\edb0";
+}
 .devicon-zsh-line-wordmark:before {
   content: "\e92a";
 }
@@ -37,12 +559,6 @@
 .devicon-zsh-plain:before {
   content: "\e992";
 }
-.devicon-wolfram-plain-wordmark:before {
-  content: "\e993";
-}
-.devicon-wolfram-plain:before {
-  content: "\ea6d";
-}
 .devicon-webgpu-line-wordmark:before {
   content: "\ea6e";
 }
@@ -54,9 +570,6 @@
 }
 .devicon-webgpu-plain:before {
   content: "\eb24";
-}
-.devicon-web3js-plain:before {
-  content: "\eb25";
 }
 .devicon-vulkan-line:before {
   content: "\eb81";
@@ -85,12 +598,6 @@
 .devicon-thymeleaf-plain:before {
   content: "\ecc9";
 }
-.devicon-terramate-original-wordmark:before {
-  content: "\ecca";
-}
-.devicon-terramate-original:before {
-  content: "\eccb";
-}
 .devicon-svgo-line-wordmark:before {
   content: "\eccc";
 }
@@ -109,12 +616,6 @@
 .devicon-styledcomponents-plain:before {
   content: "\ecd1";
 }
-.devicon-stenciljs-plain-wordmark:before {
-  content: "\ecd2";
-}
-.devicon-stenciljs-plain:before {
-  content: "\ecd3";
-}
 .devicon-stackblitz-line-wordmark:before {
   content: "\ecd4";
 }
@@ -126,30 +627,6 @@
 }
 .devicon-stackblitz-original:before {
   content: "\ecd7";
-}
-.devicon-rexx-plain-wordmark:before {
-  content: "\ecd8";
-}
-.devicon-rexx-plain:before {
-  content: "\ecd9";
-}
-.devicon-remix-line-wordmark:before {
-  content: "\ecda";
-}
-.devicon-remix-line:before {
-  content: "\ecdb";
-}
-.devicon-remix-original-wordmark:before {
-  content: "\ecdc";
-}
-.devicon-remix-original:before {
-  content: "\ecdd";
-}
-.devicon-reflex-plain-wordmark:before {
-  content: "\ecde";
-}
-.devicon-reflex-plain:before {
-  content: "\ecdf";
 }
 .devicon-processwire-plain-wordmark:before {
   content: "\ece0";
@@ -187,9 +664,6 @@
 .devicon-ngrok-original:before {
   content: "\eceb";
 }
-.devicon-nats-plain:before {
-  content: "\ecec";
-}
 .devicon-monogame-line-wordmark:before {
   content: "\eced";
 }
@@ -198,12 +672,6 @@
 }
 .devicon-monogame-original:before {
   content: "\ecef";
-}
-.devicon-mercurial-plain-wordmark:before {
-  content: "\ecf0";
-}
-.devicon-mercurial-plain:before {
-  content: "\ecf1";
 }
 .devicon-mattermost-original-wordmark:before {
   content: "\ecf2";
@@ -241,18 +709,6 @@
 .devicon-kaldi-plain:before {
   content: "\ecfd";
 }
-.devicon-jhipster-plain-wordmark:before {
-  content: "\ecfe";
-}
-.devicon-jhipster-plain:before {
-  content: "\ecff";
-}
-.devicon-inertiajs-plain-wordmark:before {
-  content: "\ed00";
-}
-.devicon-inertiajs-plain:before {
-  content: "\ed01";
-}
 .devicon-htmx-line-wordmark:before {
   content: "\ed02";
 }
@@ -276,21 +732,6 @@
 }
 .devicon-fiber-plain:before {
   content: "\ed09";
-}
-.devicon-entityframeworkcore-line:before {
-  content: "\ed0a";
-}
-.devicon-entityframeworkcore-plain:before {
-  content: "\ed0b";
-}
-.devicon-dyalog-original-wordmark:before {
-  content: "\ed0c";
-}
-.devicon-dyalog-original:before {
-  content: "\ed0d";
-}
-.devicon-duckdb-plain:before {
-  content: "\ed0e";
 }
 .devicon-dovecot-line:before {
   content: "\ed0f";
@@ -361,411 +802,6 @@
 .devicon-aerospike-original:before {
   content: "\ed25";
 }
-.devicon-teleport-line-wordmark:before {
-  content: "\ed26";
-}
-.devicon-teleport-line:before {
-  content: "\ed27";
-}
-.devicon-teleport-original-wordmark:before {
-  content: "\ed28";
-}
-.devicon-teleport-original:before {
-  content: "\ed29";
-}
-.devicon-cosmosdb-plain-wordmark:before {
-  content: "\ed2a";
-}
-.devicon-cosmosdb-plain:before {
-  content: "\ed2b";
-}
-.devicon-forgejo-line-wordmark:before {
-  content: "\ed2c";
-}
-.devicon-forgejo-line:before {
-  content: "\ed2d";
-}
-.devicon-forgejo-plain-wordmark:before {
-  content: "\ed2e";
-}
-.devicon-forgejo-plain:before {
-  content: "\ed2f";
-}
-.devicon-leetcode-line-wordmark:before {
-  content: "\ed30";
-}
-.devicon-leetcode-plain-wordmark:before {
-  content: "\ed31";
-}
-.devicon-leetcode-line:before {
-  content: "\ed32";
-}
-.devicon-leetcode-plain:before {
-  content: "\ed33";
-}
-.devicon-glitch-plain:before {
-  content: "\ed34";
-}
-.devicon-kalilinux-line-wordmark:before {
-  content: "\ed35";
-}
-.devicon-kalilinux-line:before {
-  content: "\ed36";
-}
-.devicon-kalilinux-plain-wordmark:before {
-  content: "\ed37";
-}
-.devicon-kalilinux-original:before {
-  content: "\ed38";
-}
-.devicon-waku-line:before {
-  content: "\ed39";
-}
-.devicon-waku-plain:before {
-  content: "\ed3a";
-}
-.devicon-newrelic-line:before {
-  content: "\ed3b";
-}
-.devicon-newrelic-plain:before {
-  content: "\ed3c";
-}
-.devicon-racket-line:before {
-  content: "\ed3d";
-}
-.devicon-racket-plain:before {
-  content: "\ed3e";
-}
-.devicon-bevyengine-line-wordmark:before {
-  content: "\ed3f";
-}
-.devicon-bevyengine-line:before {
-  content: "\ed40";
-}
-.devicon-bevyengine-plain-wordmark:before {
-  content: "\ed41";
-}
-.devicon-bevyengine-plain:before {
-  content: "\ed42";
-}
-.devicon-cloudrun-line:before {
-  content: "\ed43";
-}
-.devicon-cloudrun-plain:before {
-  content: "\ed44";
-}
-.devicon-processing-line:before {
-  content: "\ed45";
-}
-.devicon-processing-plain:before {
-  content: "\ed46";
-}
-.devicon-vaadin-original:before {
-  content: "\ed47";
-}
-.devicon-appwrite-plain-wordmark:before {
-  content: "\ed48";
-}
-.devicon-appwrite-original:before {
-  content: "\ed49";
-}
-.devicon-discloud-plain-wordmark:before {
-  content: "\ed4a";
-}
-.devicon-discloud-original:before {
-  content: "\ed4b";
-}
-.devicon-netbeans-plain-wordmark:before {
-  content: "\ed4c";
-}
-.devicon-netbeans-plain:before {
-  content: "\ed4d";
-}
-.devicon-primeng-plain:before {
-  content: "\ed4e";
-}
-.devicon-dynatrace-line-wordmark:before {
-  content: "\ed4f";
-}
-.devicon-dynatrace-line:before {
-  content: "\ed50";
-}
-.devicon-dynatrace-plain-wordmark:before {
-  content: "\ed51";
-}
-.devicon-dynatrace-plain:before {
-  content: "\ed52";
-}
-.devicon-expo-line-wordmark:before {
-  content: "\ed53";
-}
-.devicon-expo-line:before {
-  content: "\ed54";
-}
-.devicon-expo-original-wordmark:before {
-  content: "\ed55";
-}
-.devicon-expo-original:before {
-  content: "\ed56";
-}
-.devicon-sourceengine-plain-wordmark:before {
-  content: "\ed57";
-}
-.devicon-sourceengine-plain:before {
-  content: "\ed58";
-}
-.devicon-linuxmint-plain-wordmark:before {
-  content: "\ed59";
-}
-.devicon-linuxmint-plain:before {
-  content: "\ed5a";
-}
-.devicon-sulu-line-wordmark:before {
-  content: "\ed5b";
-}
-.devicon-sulu-line:before {
-  content: "\ed5c";
-}
-.devicon-sulu-original-wordmark:before {
-  content: "\ed5d";
-}
-.devicon-sulu-original:before {
-  content: "\ed5e";
-}
-.devicon-gardener-line:before {
-  content: "\ed5f";
-}
-.devicon-gardener-plain:before {
-  content: "\ed60";
-}
-.devicon-datadog-original-wordmark:before {
-  content: "\ed61";
-}
-.devicon-datadog-original:before {
-  content: "\ed62";
-}
-.devicon-vyper-original-wordmark:before {
-  content: "\ed63";
-}
-.devicon-vyper-original:before {
-  content: "\ed64";
-}
-.devicon-laminas-line-wordmark:before {
-  content: "\ed65";
-}
-.devicon-laminas-line:before {
-  content: "\ed66";
-}
-.devicon-laminas-original-wordmark:before {
-  content: "\ed67";
-}
-.devicon-laminas-original:before {
-  content: "\ed68";
-}
-.devicon-passport-original-wordmark:before {
-  content: "\ed69";
-}
-.devicon-passport-plain:before {
-  content: "\ed6a";
-}
-.devicon-surrealdb-plain-wordmark:before {
-  content: "\ed6b";
-}
-.devicon-surrealdb-plain:before {
-  content: "\ed6c";
-}
-.devicon-bash-plain:before {
-  content: "\ed6d";
-}
-.devicon-memcached-line-wordmark:before {
-  content: "\ed6e";
-}
-.devicon-memcached-line:before {
-  content: "\ed6f";
-}
-.devicon-memcached-plain-wordmark:before {
-  content: "\ed70";
-}
-.devicon-memcached-plain:before {
-  content: "\ed71";
-}
-.devicon-gitkraken-plain-wordmark:before {
-  content: "\ed72";
-}
-.devicon-gitkraken-original:before {
-  content: "\ed73";
-}
-.devicon-hoppscotch-plain:before {
-  content: "\ed74";
-}
-.devicon-reactnative-original-wordmark:before {
-  content: "\ed75";
-}
-.devicon-reactnative-original:before {
-  content: "\ed76";
-}
-.devicon-illustrator-line:before {
-  content: "\ed77";
-}
-.devicon-illustrator-plain:before {
-  content: "\ed78";
-}
-.devicon-firebird-plain:before {
-  content: "\ed79";
-}
-.devicon-gleam-plain:before {
-  content: "\ed7a";
-}
-.devicon-bazel-plain-wordmark:before {
-  content: "\ed7b";
-}
-.devicon-bazel-plain:before {
-  content: "\ed7c";
-}
-.devicon-laraveljetstream-plain-wordmark:before {
-  content: "\ed7d";
-}
-.devicon-laraveljetstream-original:before {
-  content: "\ed7e";
-}
-.devicon-cobol-original:before {
-  content: "\ed7f";
-}
-.devicon-clickhouse-plain:before {
-  content: "\ed80";
-}
-.devicon-love2d-line:before {
-  content: "\ed81";
-}
-.devicon-love2d-plain:before {
-  content: "\ed82";
-}
-.devicon-talos-plain:before {
-  content: "\ed83";
-}
-.devicon-mapbox-original:before {
-  content: "\ed84";
-}
-.devicon-apex-original:before {
-  content: "\ed85";
-}
-.devicon-proxmox-plain-wordmark:before {
-  content: "\ed86";
-}
-.devicon-proxmox-plain:before {
-  content: "\ed87";
-}
-.devicon-zustand-plain:before {
-  content: "\ed88";
-}
-.devicon-turbo-plain-wordmark:before {
-  content: "\ed89";
-}
-.devicon-turbo-original:before {
-  content: "\ed8a";
-}
-.devicon-spicedb-line:before {
-  content: "\ed8b";
-}
-.devicon-spicedb-plain:before {
-  content: "\ed8c";
-}
-.devicon-harbor-line-wordmark:before {
-  content: "\ed8d";
-}
-.devicon-harbor-line:before {
-  content: "\ed8e";
-}
-.devicon-harbor-plain-wordmark:before {
-  content: "\ed8f";
-}
-.devicon-harbor-plain:before {
-  content: "\ed90";
-}
-.devicon-hyperv-plain:before {
-  content: "\ed91";
-}
-.devicon-hyperv-original-wordmark:before {
-  content: "\ed92";
-}
-.devicon-npss-plain:before {
-  content: "\ed93";
-}
-.devicon-ansys-plain-wordmark:before {
-  content: "\ed94";
-}
-.devicon-ansys-plain:before {
-  content: "\ed95";
-}
-.devicon-fusion-plain:before {
-  content: "\ed96";
-}
-.devicon-radstudio-plain:before {
-  content: "\ed97";
-}
-.devicon-pug-line:before {
-  content: "\ed98";
-}
-.devicon-pug-plain:before {
-  content: "\ed99";
-}
-.devicon-cpanel-original-wordmark:before {
-  content: "\ed9a";
-}
-.devicon-cpanel-original:before {
-  content: "\ed9b";
-}
-.devicon-nodejs-line-wordmark:before {
-  content: "\ed9c";
-}
-.devicon-nodejs-line:before {
-  content: "\ed9d";
-}
-.devicon-nodejs-plain-wordmark:before {
-  content: "\ed9e";
-}
-.devicon-nodejs-plain:before {
-  content: "\ed9f";
-}
-.devicon-qtest-original-wordmark:before {
-  content: "\eda0";
-}
-.devicon-qtest-original:before {
-  content: "\eda1";
-}
-.devicon-aframe-plain:before {
-  content: "\eda2";
-}
-.devicon-aframe-original-wordmark:before {
-  content: "\eda3";
-}
-.devicon-babylonjs-plain-wordmark:before {
-  content: "\eda4";
-}
-.devicon-babylonjs-plain:before {
-  content: "\eda5";
-}
-.devicon-tmux-plain-wordmark:before {
-  content: "\eda6";
-}
-.devicon-tmux-plain:before {
-  content: "\eda7";
-}
-.devicon-delphi-plain:before {
-  content: "\eda8";
-}
-.devicon-netbox-line-wordmark:before {
-  content: "\eda9";
-}
-.devicon-netbox-line:before {
-  content: "\edaa";
-}
-.devicon-netbox-plain-wordmark:before {
-  content: "\edab";
-}
-.devicon-netbox-plain:before {
-  content: "\edac";
-}
 .devicon-aarch64-line:before {
   content: "\e900";
 }
@@ -822,12 +858,6 @@
 }
 .devicon-androidstudio-plain-wordmark:before {
   content: "\e912";
-}
-.devicon-angularjs-plain:before {
-  content: "\e913";
-}
-.devicon-angularjs-plain-wordmark:before {
-  content: "\e914";
 }
 .devicon-angularmaterial-plain:before {
   content: "\e915";
@@ -1096,9 +1126,6 @@
 .devicon-clarity-plain-wordmark:before {
   content: "\e970";
 }
-.devicon-c-line:before {
-  content: "\e971";
-}
 .devicon-clion-plain:before {
   content: "\e972";
 }
@@ -1206,9 +1233,6 @@
 }
 .devicon-couchdb-plain-wordmark:before {
   content: "\e997";
-}
-.devicon-c-plain:before {
-  content: "\e998";
 }
 .devicon-cplusplus-line:before {
   content: "\e999";
@@ -1635,9 +1659,6 @@
 }
 .devicon-gitbook-original-wordmark:before {
   content: "\ea26";
-}
-.devicon-githubactions-plain:before {
-  content: "\ea27";
 }
 .devicon-githubcodespaces-plain:before {
   content: "\ea28";
@@ -2131,9 +2152,6 @@
 .devicon-livewire-plain-wordmark:before {
   content: "\eacd";
 }
-.devicon-llvm-plain:before {
-  content: "\eace";
-}
 .devicon-lodash-plain:before {
   content: "\eacf";
 }
@@ -2347,9 +2365,6 @@
 .devicon-nginx-original:before {
   content: "\eb15";
 }
-.devicon-ngrx-plain:before {
-  content: "\eb16";
-}
 .devicon-nhibernate-line:before {
   content: "\eb17";
 }
@@ -2415,9 +2430,6 @@
 }
 .devicon-notion-plain:before {
   content: "\eb30";
-}
-.devicon-npm-original-wordmark:before {
-  content: "\eb31";
 }
 .devicon-nuget-original:before {
   content: "\eb32";
