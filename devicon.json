@@ -11483,6 +11483,29 @@
         "aliases": []
     },
     {
+        "name": "seaborn",
+        "altnames": [],
+        "tags": [
+            "python",
+            "library",
+            "visualization"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#444876",
+        "aliases": []
+    },
+    {
         "name": "selenium",
         "altnames": [],
         "tags": [
