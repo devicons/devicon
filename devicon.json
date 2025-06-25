@@ -9033,6 +9033,35 @@
         "aliases": []
     },
     {
+        "name": "opnsense",
+        "altnames": [],
+        "tags": [
+            "FreeBSD",
+            "firewall"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line"
+            ]
+        },
+        "color": "#de3c06",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "oracle",
         "altnames": [
             "oracledatabase"
