@@ -9988,6 +9988,26 @@
         ]
     },
     {
+        "name": "stimulus",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript",
+            "js",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#78e8b9",
+        "aliases": []
+    },
+    {
         "name": "storybook",
         "altnames": [
             "storybookjs"
