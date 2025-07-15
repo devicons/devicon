@@ -1,38 +1,46 @@
 {
-  "name": "devicon",
-  "version": "2.16.0",
-  "description": "Programming related icons collection",
-  "main": "devicon.min.css",
-  "scripts": {
-    "build-css": "gulp updateCss && gulp clean",
-    "peek-test": "python ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./  --pr_title \"$PR_TITLE\"",
-    "optimize-svg": "gulp optimizeSvg",
-    "bump": "gulp bumpVersion",
-    "build-icons": "python3 ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./ --headless",
-    "dev": "python3 -m http.server 8000 -d ./docs/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/devicons/devicon.git"
-  },
-  "keywords": [
-    "programming",
-    "icons",
-    "svg",
-    "font"
-  ],
-  "author": "devicons",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/devicons/devicon/issues"
-  },
-  "homepage": "https://devicon.dev",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-footer": "^2.0.2",
-    "gulp-sass": "^5.0.0",
-    "gulp-svgmin": "^3.0.0",
-    "sass": "^1.26.10",
-    "yargs": "^17.0.0"
-  }
+    "name": "devicon",
+    "version": "2.17.0",
+    "description": "Programming related icons collection",
+    "main": "devicon.min.css",
+    "scripts": {
+        "build-css": "gulp updateCss && gulp clean",
+        "peek-test": "python ./.github/scripts/icomoon_peek.py ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./  --pr_title \"$PR_TITLE\"",
+        "optimize-svg": "gulp optimizeSvg",
+        "bump": "gulp bumpVersion",
+        "build-icons": "run-script-os",
+        "build-icons:linux:macOS": "python ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./ --headless",
+        "build-icons:windows": "python ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_assets/geckodriver-v0.32.2-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./ --headless",
+        "build-icons:default": "echo 'Unsupported OS' && exit 1",
+        "dev": "concurrently \"npm:open-browser\" \"npm:start-local-server\"",
+        "start-local-server": "python -m http.server 8000",
+        "open-browser": "node -e \"import('open').then(pkg => pkg.default('http://localhost:8000/docs'))\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/devicons/devicon.git"
+    },
+    "keywords": [
+        "programming",
+        "icons",
+        "svg",
+        "font"
+    ],
+    "author": "devicons",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/devicons/devicon/issues"
+    },
+    "homepage": "https://devicon.dev",
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "gulp": "^4.0.2",
+        "gulp-footer": "^2.0.2",
+        "gulp-sass": "^5.0.0",
+        "gulp-svgmin": "^3.0.0",
+        "open": "^10.0.3",
+        "run-script-os": "^1.1.6",
+        "sass": "^1.26.10",
+        "yargs": "^17.0.0"
+    }
 }
