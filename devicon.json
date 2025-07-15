@@ -12206,6 +12206,26 @@
         "aliases": []
     },
     {
+        "name": "stimulus",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript",
+            "js",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#78e8b9",
+        "aliases": []
+    },
+    {
         "name": "storybook",
         "altnames": [
             "storybookjs"
