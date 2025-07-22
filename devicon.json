@@ -10158,6 +10158,28 @@
         "aliases": []
     },
     {
+        "name": "pyinstaller",
+        "altnames": [],
+        "tags": [
+            "python",
+            "packaging",
+            "deployment",
+            "executable"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#4B8BBE",
+        "aliases": []
+    },
+    {
         "name": "pyscript",
         "altnames": [],
         "tags": [
