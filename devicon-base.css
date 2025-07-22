@@ -2734,6 +2734,12 @@
 .devicon-pypi-plain-wordmark:before {
   content: "\eb98";
 }
+.devicon-pyinstaller-original:before {
+  content: "\ecc5";
+}
+.devicon-pyinstaller-plain:before {
+  content: "\ecc6";
+}
 .devicon-pyscript-plain-wordmark:before {
   content: "\eb99";
 }
