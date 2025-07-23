@@ -982,6 +982,34 @@
         "aliases": []
     },
     {
+        "name": "azuredatafactory",
+        "altnames": [
+            "azure data factory"
+        ],
+        "tags": [
+            "azure",
+            "ETL",
+            "cloud",
+            "big data",
+            "data-processing",
+            "data science",
+            "data-transfer"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#095ca2",
+        "aliases": []
+    },
+    {
         "name": "azuredevops",
         "altnames": [
             "azure-devops"
@@ -1544,7 +1572,15 @@
         "color": "#a9bacd",
         "aliases": [
             {
-                "base": "plain",
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
                 "alias": "plain-wordmark"
             },
             {
@@ -3240,7 +3276,7 @@
                 "plain"
             ]
         },
-        "color": "#000",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -5694,7 +5730,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#087cfa",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -8553,7 +8589,6 @@
                 "plain"
             ],
             "font": [
-                "original",
                 "original-wordmark",
                 "plain"
             ]
