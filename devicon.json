@@ -13431,6 +13431,33 @@
         ]
     },
     {
+        "name": "uv",
+        "altnames": [],
+        "tags": [
+            "python",
+            "environment",
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#de5fe9",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "uwsgi",
         "altnames": [
             "uwebservergatewayinterface"
