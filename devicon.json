@@ -11248,7 +11248,8 @@
         "altnames": [],
         "tags": [
             "jetbrains",
-            "editor"
+            "editor",
+            "IDE"
         ],
         "versions": {
             "svg": [
@@ -11262,7 +11263,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#FC801D",
+        "color": "#000000",
         "aliases": []
     },
     {
