@@ -1,0 +1,27 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seaborn Plain Logo - Single color version -->
+  <circle cx="64" cy="64" r="60" fill="none" stroke="#4472C4" stroke-width="3"/>
+  
+  <!-- Simplified wave patterns -->
+  <path d="M20 64 Q32 44, 44 64 T68 64" fill="none" stroke="#4472C4" stroke-width="4"/>
+  <path d="M20 74 Q32 54, 44 74 T68 74" fill="none" stroke="#4472C4" stroke-width="4"/>
+  <path d="M20 54 Q32 34, 44 54 T68 54" fill="none" stroke="#4472C4" stroke-width="4"/>
+  
+  <!-- Data points -->
+  <circle cx="28" cy="64" r="4" fill="#4472C4"/>
+  <circle cx="44" cy="44" r="4" fill="#4472C4"/>
+  <circle cx="60" cy="64" r="4" fill="#4472C4"/>
+  
+  <circle cx="28" cy="74" r="4" fill="#4472C4"/>
+  <circle cx="44" cy="54" r="4" fill="#4472C4"/>
+  <circle cx="60" cy="74" r="4" fill="#4472C4"/>
+  
+  <circle cx="28" cy="54" r="4" fill="#4472C4"/>
+  <circle cx="44" cy="34" r="4" fill="#4472C4"/>
+  <circle cx="60" cy="54" r="4" fill="#4472C4"/>
+  
+  <!-- Bar chart representation -->
+  <rect x="76" y="40" width="8" height="24" fill="#4472C4"/>
+  <rect x="86" y="50" width="8" height="14" fill="#4472C4"/>
+  <rect x="96" y="30" width="8" height="34" fill="#4472C4"/>
+</svg>

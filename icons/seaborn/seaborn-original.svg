@@ -1,0 +1,30 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seaborn Original Logo - Based on the official cubehelix color scheme -->
+  <circle cx="64" cy="64" r="60" fill="#ffffff" stroke="#4A4A4A" stroke-width="2"/>
+  
+  <!-- Wave patterns representing data visualization -->
+  <path d="M20 64 Q32 44, 44 64 T68 64" fill="none" stroke="#1f77b4" stroke-width="3"/>
+  <path d="M20 74 Q32 54, 44 74 T68 74" fill="none" stroke="#ff7f0e" stroke-width="3"/>
+  <path d="M20 54 Q32 34, 44 54 T68 54" fill="none" stroke="#2ca02c" stroke-width="3"/>
+  
+  <!-- Data points -->
+  <circle cx="28" cy="64" r="4" fill="#1f77b4"/>
+  <circle cx="44" cy="44" r="4" fill="#1f77b4"/>
+  <circle cx="60" cy="64" r="4" fill="#1f77b4"/>
+  
+  <circle cx="28" cy="74" r="4" fill="#ff7f0e"/>
+  <circle cx="44" cy="54" r="4" fill="#ff7f0e"/>
+  <circle cx="60" cy="74" r="4" fill="#ff7f0e"/>
+  
+  <circle cx="28" cy="54" r="4" fill="#2ca02c"/>
+  <circle cx="44" cy="34" r="4" fill="#2ca02c"/>
+  <circle cx="60" cy="54" r="4" fill="#2ca02c"/>
+  
+  <!-- Bar chart representation -->
+  <rect x="76" y="40" width="8" height="24" fill="#d62728"/>
+  <rect x="86" y="50" width="8" height="14" fill="#9467bd"/>
+  <rect x="96" y="30" width="8" height="34" fill="#8c564b"/>
+  
+  <!-- Seaborn text -->
+  <text x="64" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4A4A4A">seaborn</text>
+</svg>

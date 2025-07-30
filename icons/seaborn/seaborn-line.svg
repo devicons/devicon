@@ -1,0 +1,27 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seaborn Line Logo - Minimalist outline version -->
+  <circle cx="64" cy="64" r="58" fill="none" stroke="#4472C4" stroke-width="2"/>
+  
+  <!-- Simplified wave patterns as lines -->
+  <path d="M25 64 Q35 48, 45 64 T65 64" fill="none" stroke="#4472C4" stroke-width="2"/>
+  <path d="M25 72 Q35 56, 45 72 T65 72" fill="none" stroke="#4472C4" stroke-width="2"/>
+  <path d="M25 56 Q35 40, 45 56 T65 56" fill="none" stroke="#4472C4" stroke-width="2"/>
+  
+  <!-- Data points as small circles -->
+  <circle cx="30" cy="64" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  <circle cx="45" cy="48" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  <circle cx="60" cy="64" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  
+  <circle cx="30" cy="72" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  <circle cx="45" cy="56" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  <circle cx="60" cy="72" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  
+  <circle cx="30" cy="56" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  <circle cx="45" cy="40" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  <circle cx="60" cy="56" r="2" fill="none" stroke="#4472C4" stroke-width="1.5"/>
+  
+  <!-- Bar chart as outlines -->
+  <rect x="75" y="42" width="6" height="20" fill="none" stroke="#4472C4" stroke-width="2"/>
+  <rect x="83" y="52" width="6" height="10" fill="none" stroke="#4472C4" stroke-width="2"/>
+  <rect x="91" y="32" width="6" height="30" fill="none" stroke="#4472C4" stroke-width="2"/>
+</svg>

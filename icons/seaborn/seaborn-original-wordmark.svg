@@ -1,0 +1,30 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seaborn Original Wordmark - Icon with text -->
+  <circle cx="64" cy="48" r="35" fill="#ffffff" stroke="#4A4A4A" stroke-width="1.5"/>
+  
+  <!-- Wave patterns representing data visualization -->
+  <path d="M35 48 Q42 35, 49 48 T63 48" fill="none" stroke="#1f77b4" stroke-width="2"/>
+  <path d="M35 54 Q42 41, 49 54 T63 54" fill="none" stroke="#ff7f0e" stroke-width="2"/>
+  <path d="M35 42 Q42 29, 49 42 T63 42" fill="none" stroke="#2ca02c" stroke-width="2"/>
+  
+  <!-- Data points -->
+  <circle cx="38" cy="48" r="2.5" fill="#1f77b4"/>
+  <circle cx="49" cy="35" r="2.5" fill="#1f77b4"/>
+  <circle cx="60" cy="48" r="2.5" fill="#1f77b4"/>
+  
+  <circle cx="38" cy="54" r="2.5" fill="#ff7f0e"/>
+  <circle cx="49" cy="41" r="2.5" fill="#ff7f0e"/>
+  <circle cx="60" cy="54" r="2.5" fill="#ff7f0e"/>
+  
+  <circle cx="38" cy="42" r="2.5" fill="#2ca02c"/>
+  <circle cx="49" cy="29" r="2.5" fill="#2ca02c"/>
+  <circle cx="60" cy="42" r="2.5" fill="#2ca02c"/>
+  
+  <!-- Bar chart representation -->
+  <rect x="70" y="35" width="5" height="13" fill="#d62728"/>
+  <rect x="76" y="40" width="5" height="8" fill="#9467bd"/>
+  <rect x="82" y="30" width="5" height="18" fill="#8c564b"/>
+  
+  <!-- Seaborn text -->
+  <text x="64" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#4A4A4A">seaborn</text>
+</svg>

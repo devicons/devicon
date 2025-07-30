@@ -1,4 +1,4 @@
-[
+﻿[
     {
         "name": "aarch64",
         "altnames": [
@@ -11466,6 +11466,37 @@
             }
         ]
     },
+    },
+    {
+        "name": "seaborn",
+        "altnames": [
+            "sns"
+        ],
+        "tags": [
+            "python",
+            "data-visualization",
+            "statistics",
+            "matplotlib",
+            "library",
+            "data-science",
+            "analytics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line"
+            ]
+        },
+        "color": "#4472C4",
+        "aliases": []
     {
         "name": "scala",
         "altnames": [
