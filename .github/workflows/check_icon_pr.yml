@@ -27,9 +27,10 @@ jobs:
 
       - name: Run the check_svg script
         if: ${{ !env.wrong_branch }}
-        env:
-          PR_TITLE: ${{ github.event.pull_request.title }}
-        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          CHANGED_ICONS=$(git diff --name-only origin/${{ github.base_ref }} ${{ github.sha }} | grep -E 'icons/.*\.svg')
+          python ./.github/scripts/check_icon_pr.py ./icons ./devicon.json ${CHANGED_ICONS}
 
       - name: Upload the err messages
         uses: actions/upload-artifact@v4

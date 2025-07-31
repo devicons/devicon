@@ -22,11 +22,11 @@ def main():
     logfile = open("log.txt", "w")
     try:
         args = arg_getters.get_selenium_runner_args()
-        new_icons = get_icons_for_building(args.icomoon_json_path, args.devicon_json_path, args.token, logfile)
+        new_icons = get_icons_for_building(args.devicon_json_path, args.changed_files)
         if len(new_icons) == 0:
             sys.exit("No files need to be uploaded. Ending script...")
 
-        print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n", file=logfile)
+        print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep="\n", file=logfile)
 
         print("Begin optimizing files...", file=logfile)
         optimize_svgs(new_icons, args.icons_folder_path, logfile=logfile)
@@ -39,7 +39,7 @@ def main():
             new_icons, args.icons_folder_path, icon_versions_only=True)
         zip_name = "devicon-v1.0.zip"
         zip_path = Path(args.download_path, zip_name)
-        screenshot_folder = filehandler.create_screenshot_folder("./") 
+        screenshot_folder = filehandler.create_screenshot_folder("./")
 
         runner = BuildSeleniumRunner(args.download_path,
             args.geckodriver_path, args.headless, log_output=logfile)
@@ -65,43 +65,24 @@ def main():
     finally:
         print("Exiting", file=logfile)
         if runner is not None:
-            runner.close() 
+            runner.close()
         logfile.close()
 
 
-def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token: str, logfile: FileIO):
+def get_icons_for_building(devicon_json_path: str, changed_files: List[str]) -> List[dict]:
     """
     Get the icons for building.
-    :param icomoon_json_path - the path to the `icomoon.json`.
     :param devicon_json_path - the path to the `devicon.json`.
-    :param token - the token to access the GitHub API.
-    :param logfile.
-    :return a list of dict containing info on the icons. These are 
+    :param changed_files - the list of changed files since the last release/tag.
+
+    :return a list of dict containing info on the icons. These are
     from the `devicon.json`.
     """
     devicon_json = filehandler.get_json_file_content(devicon_json_path)
-    pull_reqs = api_handler.get_merged_pull_reqs_since_last_release(token, logfile)
-    new_icons = []
-
-    for pull_req in pull_reqs:
-        if api_handler.is_feature_icon(pull_req):
-            filtered_icon = util.find_object_added_in_pr(devicon_json, pull_req["title"])
-            if filtered_icon not in new_icons:
-                new_icons.append(filtered_icon)
-
-    # get any icons that might not have been found by the API
-    # sometimes happen due to the PR being opened before the latest build release
-    new_icons_from_devicon_json = filehandler.find_new_icons_in_devicon_json(
-        devicon_json_path, icomoon_json_path)
-
-    for icon in new_icons_from_devicon_json:
-        if icon not in new_icons:
-            new_icons.append(icon)
-
-    return new_icons
+    return util.find_changed_icons(devicon_json, changed_files)
 
 
-def optimize_svgs(new_icons: List[str], icons_folder_path: str, logfile: FileIO):
+def optimize_svgs(new_icons: List[dict], icons_folder_path: str, logfile: FileIO):
     """
     Optimize the newly added svgs. This is done in batches
     since the command line has a limit on characters allowed.
@@ -118,7 +99,7 @@ def optimize_svgs(new_icons: List[str], icons_folder_path: str, logfile: FileIO)
         subprocess.run(["npm", "run", "optimize-svg", "--", f"--svgFiles={json.dumps(batch)}"], shell=True)
 
 
-def update_icomoon_json(new_icons: List[str], icomoon_json_path: str, logfile: FileIO):
+def update_icomoon_json(new_icons: List[dict], icomoon_json_path: str, logfile: FileIO):
     """
     Update the `icomoon.json` if it contains any icons
     that needed to be updated. This will remove the icons
@@ -129,7 +110,7 @@ def update_icomoon_json(new_icons: List[str], icomoon_json_path: str, logfile: F
     cur_len = len(icomoon_json["icons"])
     messages = []
 
-    wrapper_function = lambda icomoon_icon : find_icomoon_icon_not_in_new_icons(
+    wrapper_function = lambda icomoon_icon: find_icomoon_icon_not_in_new_icons(
         icomoon_icon, new_icons, messages)
     icons_to_keep = filter(wrapper_function, icomoon_json["icons"])
     icomoon_json["icons"] = list(icons_to_keep)
@@ -137,7 +118,7 @@ def update_icomoon_json(new_icons: List[str], icomoon_json_path: str, logfile: F
     new_len = len(icomoon_json["icons"])
     print(f"Update completed. Removed {cur_len - new_len} icons:", *messages, sep='\n', file=logfile)
     filehandler.write_to_file(icomoon_json_path, json.dumps(icomoon_json))
-  
+
 
 def find_icomoon_icon_not_in_new_icons(icomoon_icon: Dict, new_icons: List, messages: List):
     """
@@ -145,7 +126,7 @@ def find_icomoon_icon_not_in_new_icons(icomoon_icon: Dict, new_icons: List, mess
     This also add logging for which icons were removed.
     :param icomoon_icon - a dict object from the icomoon.json's `icons` attribute.
     :param new_icons - a list of new icons. Each element is an object from the `devicon.json`.
-    :param messages - an empty list where the function can attach logging on which 
+    :param messages - an empty list where the function can attach logging on which
     icon were removed.
     """
     for new_icon in new_icons:
@@ -182,7 +163,7 @@ def get_release_message(token, logfile: FileIO):
     thankYou = "A huge thanks to all our maintainers and contributors for making this release possible!"
     iconTitle = f"**{len(newIcons)} New Icons**"
     featureTitle = f"**{len(features)} New Features**"
-    finalString = "{0}\n\n {1}\n{2}\n\n {3}\n{4}".format(thankYou, 
+    finalString = "{0}\n\n {1}\n{2}\n\n {3}\n{4}".format(thankYou,
         iconTitle, "\n".join(newIcons),
         featureTitle, "\n".join(features))
 

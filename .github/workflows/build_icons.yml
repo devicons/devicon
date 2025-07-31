@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+          fetch-tags: 'true'
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
@@ -20,10 +24,28 @@ jobs:
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: >
-          python ./.github/scripts/icomoon_build.py
-          ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json
-          ./devicon.json ./icons ./ $GITHUB_TOKEN --headless
+        run: |
+          echo "Getting the latest tags"
+          git fetch --tags
+          LATEST_TAG=$(git describe --tags --abbrev=0)
+          echo "Latest tag: $LATEST_TAG"
+          SECOND_LATEST_TAG=$(git describe --tags --abbrev=0 $LATEST_TAG^)
+          echo "Second latest tag: $SECOND_LATEST_TAG"
+
+          echo "Getting the changed icons"
+          CHANGED_ICONS=$(git diff --name-only $SECOND_LATEST_TAG..$LATEST_TAG | grep -E 'icons/.*\.svg')
+          echo "Changed icons: $CHANGED_ICONS"
+
+          echo "Building the icons"
+          python ./.github/scripts/icomoon_build.py \
+            ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver \
+            ./icomoon.json \
+            ./devicon.json \
+            ./icons \
+            ./ \
+            $GITHUB_TOKEN \
+            --headless \
+            ${CHANGED_ICONS}
 
       - name: Upload geckodriver.log for debugging purposes
         uses: actions/upload-artifact@v4
