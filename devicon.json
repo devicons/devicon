@@ -13677,6 +13677,30 @@
         "aliases": []
     },
     {
+        "name": "vapor",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "server",
+            "backend",
+            "swift"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#141416",
+        "aliases": []
+    },
+    {
         "name": "vault",
         "altnames": [
             "HashiCorp Vault"
