@@ -5500,6 +5500,33 @@
         "aliases": []
     },
     {
+        "name": "huggingface",
+        "altnames": [],
+        "tags": [
+            "machinelearning",
+            "ML",
+            "AI"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#000b1b",
+        "aliases": []
+    },
+    {
         "name": "hugo",
         "altnames": [
             "gohugo"
