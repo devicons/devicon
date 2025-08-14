@@ -18,42 +18,45 @@ def main():
     try:
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
 
-        devicon_err_msg = []
-        #First check if devicon.json is sorted
+        err_msg = []
+        # First check if devicon.json is sorted
         if sorted(all_icons, key=lambda d: d['name']) != all_icons:
-            devicon_err_msg.append(f"devicon.json is not sorted correctly.\nPlease make sure that your icon is added in the `devicon.json` file at the correct alphabetic position\nas seen here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60")
+            err_msg.append("devicon.json is not sorted correctly.\nPlease make sure that your icon is added in the `devicon.json` file at the correct alphabetic position\nas seen here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60")
 
         # get only the icon object that has the name matching the pr title
-        filtered_icon = util.find_object_added_in_pr(all_icons, args.pr_title)
-        print("Checking devicon.json object: " + str(filtered_icon))
-        devicon_err_msg.append(check_devicon_object(filtered_icon))
+        filtered_icons = util.find_changed_icons(all_icons, args.changed_files)
+        for filtered_icon in filtered_icons:
+            devicon_err_msg = []
+            print("Checking devicon.json object: " + str(filtered_icon))
+            devicon_err_msg.append(check_devicon_object(filtered_icon))
 
-        # check the file names
-        filename_err_msg = ""
-        svgs = None
-        try:
-            svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, as_str=False)
-            print("SVGs to check: ", *svgs, sep='\n')
-        except ValueError as e:
-            filename_err_msg = "Error found regarding filenames:\n- " + e.args[0]
+            # check the file names
+            filename_err_msg = ""
+            svgs = None
+            try:
+                svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, as_str=False)
+                print("SVGs to check: ", *svgs, sep='\n')
+            except ValueError as e:
+                filename_err_msg = "Error found regarding filenames:\n- " + e.args[0]
 
-        # check the svgs
-        if svgs is None or len(svgs) == 0:
-            print("No SVGs to check, ending script.")
-            svg_err_msg = "Error checking SVGs: no SVGs to check. Might be caused by above issues."
-        else:
-            svg_err_msg = check_svgs(svgs, filtered_icon)
+            # check the svgs
+            if svgs is None or len(svgs) == 0:
+                print("No SVGs to check for this icon.")
+                svg_err_msg = "Error checking SVGs: no SVGs to check. Might be caused by above issues."
+            else:
+                svg_err_msg = check_svgs(svgs, filtered_icon)
 
-        err_msg = []
-        if devicon_err_msg != []:
-            err_msg.extend(devicon_err_msg)
+            if devicon_err_msg:
+                err_msg.extend(devicon_err_msg)
 
-        if filename_err_msg != "":
-            err_msg.append(filename_err_msg)
+            if filename_err_msg:
+                err_msg.append(filename_err_msg)
 
-        if svg_err_msg != "":
-            err_msg.append(svg_err_msg)
+            if svg_err_msg:
+                err_msg.append(svg_err_msg)
 
+        err_msg = list(filter(None, err_msg))  # remove empty strings from err_msg
+        print("Error messages: ", err_msg)
         filehandler.write_to_file("./err_messages.txt", "\n\n".join(err_msg))
         print("Task completed.")
     except Exception as e:
@@ -109,7 +112,7 @@ def check_devicon_object(icon: dict):
                 err_msgs.append(f"- Invalid version name in versions['svg']: '{version}'. Must match regexp: (original|plain|line)(-wordmark)?")
     except KeyError:
         err_msgs.append("- missing key: 'svg' in 'versions'.")
-    
+
     try:
         if type(icon["versions"]["font"]) != list or len(icon["versions"]["svg"]) == 0:
             err_msgs.append("- must contain at least 1 font version in a list.")
@@ -160,7 +163,7 @@ def check_devicon_object(icon: dict):
     if len(err_msgs) > 0:
         message = "Error found in \"devicon.json\" for \"{}\" entry: \n{}".format(icon["name"], "\n".join(err_msgs))
         return message
-    return "" 
+    return ""
 
 
 def check_svgs(svg_file_paths: List[Path], devicon_object: dict):

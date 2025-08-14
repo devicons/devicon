@@ -50,29 +50,26 @@ def set_env_var(key: str, value: str, delimiter: str='~'):
         raise Exception("This function doesn't support this platform: " + platform.system())
 
 
-def find_object_added_in_pr(icons: List[dict], pr_title: str):
+def find_changed_icons(icons: List[dict], changed_files: List[str]) -> List[dict]:
     """
-    Find the icon name from the PR title. 
+    Find the changed icons provided in the changed_files list.
     :param icons, a list of the font objects found in the devicon.json.
-    :pr_title, the title of the PR that this workflow was called on.
-    :return a dictionary with the "name"
-    entry's value matching the name in the pr_title.
-    :raise If no object can be found, raise an Exception.
+    :param changed_files, SVG files changed in the PR or since the last release/tag.
+    :return a list of dictionaries with the "name"
+    entry values matching the name of changed icons.
     """
-    try:
-        pattern = re.compile(r"(?<=^new icon: )\w+ (?=\(.+\))|(?<=^update icon: )\w+ (?=\(.+\))", re.I)
-        icon_name_index = 0
-        icon_name = pattern.findall(pr_title)[icon_name_index].lower().strip()  # should only have one match
-        icon = [icon for icon in icons if icon["name"] == icon_name][0]
-        return icon
-    except IndexError as e:  # there are no match in the findall()
-        print(e)
-        message = "util.find_object_added_in_pr: Couldn't find an icon matching the name in the PR title.\n" \
-            f"PR title is: '{pr_title}'"
-        raise Exception(message)
+    filtered_icons = []
+    icon_names = []
+    for file in changed_files:
+        icon_name = Path(file).parent.name
+        icon = [icon for icon in icons if icon["name"] == icon_name]
+        if len(icon) > 0 and icon_name not in icon_names:
+            icon_names.append(icon_name)
+            filtered_icons.extend(icon)
+    return filtered_icons
 
 
-def is_svg_in_font_attribute(svg_file_path: Path, devicon_object: dict): 
+def is_svg_in_font_attribute(svg_file_path: Path, devicon_object: dict):
     """
     Check if svg is in devicon.json's font attribute.
     :param svg_file_path, the path to a single svg icon
