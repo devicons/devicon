@@ -1,0 +1,40 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "08:00"
+    target-branch: "develop"
+    open-pull-requests-limit: 10
+    groups:
+      github-actions:
+        applies-to: version-updates
+        patterns:
+          - "actions/*"
+          - "github/*"
+      devicon-actions:
+        applies-to: version-updates
+        patterns:
+          - "devicons/*"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "09:00"
+    target-branch: "develop"
+    open-pull-requests-limit: 10
+    groups:
+      dev-dependencies:
+        applies-to: version-updates
+        dependency-type: "development"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "10:00"
+    target-branch: "develop"
+    open-pull-requests-limit: 10
