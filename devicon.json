@@ -1577,6 +1577,35 @@
         "aliases": []
     },
     {
+        "name": "burpsuite",
+        "altnames": [
+            "burp suite"
+        ],
+        "tags": [
+            "application",
+            "security",
+            "testing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#00a2b9",
+        "aliases": []
+    },
+    {
         "name": "c",
         "altnames": [],
         "tags": [
