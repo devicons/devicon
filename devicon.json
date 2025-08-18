@@ -6245,6 +6245,34 @@
         "aliases": []
     },
     {
+        "name": "junie",
+        "altnames": [
+            "junie"
+        ],
+        "tags": [
+            "ai",
+            "coding",
+            "agent"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#47e054",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "junit",
         "altnames": [],
         "tags": [
