@@ -4794,6 +4794,35 @@
         "aliases": []
     },
     {
+        "name": "gnuradio",
+        "altnames": [
+            "gnu radio"
+        ],
+        "tags": [
+            "open-source",
+            "software-radio",
+            "signal-processing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff6905",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "go",
         "altnames": [
             "golang"
