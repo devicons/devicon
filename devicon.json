@@ -14786,6 +14786,29 @@
         "aliases": []
     },
     {
+        "name": "zed",
+        "altnames": [],
+        "tags": [
+            "editor",
+            "IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#084CCF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "zend",
         "altnames": [],
         "tags": [
