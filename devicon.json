@@ -4589,6 +4589,32 @@
         ]
     },
     {
+        "name": "gitea",
+        "altnames": [],
+        "tags": [
+            "version-control",
+            "git"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#73a952",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "github",
         "altnames": [],
         "tags": [
