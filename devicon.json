@@ -8313,24 +8313,19 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark",
+                "plain"
             ],
             "font": [
-                "original"
+                "original-wordmark",
+                "plain"
             ]
         },
-        "color": "#090",
+        "color": "#009639",
         "aliases": [
             {
-                "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original",
+                "base": "original-wordmark",
                 "alias": "plain-wordmark"
             }
         ]
