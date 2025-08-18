@@ -552,6 +552,36 @@
         "aliases": []
     },
     {
+        "name": "apacheignite",
+        "altnames": [
+            "Ignite"
+        ],
+        "tags": [
+            "distributed",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "line"
+            ]
+        },
+        "color": "#ed1c24",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "apachekafka",
         "altnames": [],
         "tags": [
