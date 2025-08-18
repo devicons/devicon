@@ -9859,6 +9859,40 @@
         "aliases": []
     },
     {
+        "name": "prestashop",
+        "altnames": [],
+        "tags": [
+            "ecommerce",
+            "cms",
+            "php"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#E03C31",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "primeng",
         "altnames": [],
         "tags": [
