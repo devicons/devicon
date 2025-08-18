@@ -1033,6 +1033,32 @@
         "aliases": []
     },
     {
+        "name": "azurelogicapps",
+        "altnames": [
+            "azure logic apps"
+        ],
+        "tags": [
+            "azure",
+            "cloud",
+            "low-code",
+            "no-code",
+            "workflow"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#005ba1",
+        "aliases": []
+    },
+    {
         "name": "azuresqldatabase",
         "altnames": [
             "azure-sql-database"
