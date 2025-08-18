@@ -12906,6 +12906,25 @@
         ]
     },
     {
+        "name": "testrail", 
+        "altnames": [], 
+        "tags": [
+            "testing",
+            "tool"
+        ], 
+        "versions": {
+            "svg": [
+                "plain",
+                "plain-wordmark"
+            ], 
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#50d18d", 
+        "aliases":[] 
+    },
+    {
         "name": "tex",
         "altnames": [],
         "tags": [
