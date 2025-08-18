@@ -8921,6 +8921,29 @@
         "aliases": []
     },
     {
+        "name": "ollama",
+        "altnames": [],
+        "tags": [
+            "llm",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "openal",
         "altnames": [],
         "tags": [
