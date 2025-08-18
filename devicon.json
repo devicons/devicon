@@ -14468,6 +14468,34 @@
         ]
     },
     {
+        "name": "wireguard",
+        "altnames": [],
+        "tags": [
+            "linux",
+            "vpn"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#dd1100",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "wolfram",
         "altnames": [
             "wolframlanguage"
