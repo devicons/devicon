@@ -4661,6 +4661,33 @@
         "aliases": []
     },
     {
+        "name": "githubcopilot",
+        "altnames": ["github copilot"],
+        "tags": [
+            "automation",
+            "AI",
+            "code-completion"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line",
+                "original-wordmark",
+                "plain-wordmark",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "line",
+                "plain-wordmark",
+                "line-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": []
+    },
+    {
         "name": "gitkraken",
         "altnames": [],
         "tags": [
