@@ -4,7 +4,10 @@ jobs:
   check:
     name: Check the `devicon.json` and the SVGs' quality
     runs-on: ubuntu-latest
-    if: startsWith(github.event.pull_request.title, 'new icon') || startsWith(github.event.pull_request.title, 'update icon')  # only checks icon PR
+    if: | # only checks icon PR and when PR's start with new/update icon or have the both:ckeck label applied
+      startsWith(github.event.pull_request.title, 'new icon') ||
+      startsWith(github.event.pull_request.title, 'update icon') || 
+      github.event.label.name == 'bot:check'
     steps:
       - uses: actions/checkout@v4
 
