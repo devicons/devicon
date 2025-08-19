@@ -1,0 +1,48 @@
+name: Optimize icons
+on: 
+  pull_request:
+    types:
+      - labeled
+      - synchronize
+permissions: write-all
+env:
+  SVGO: off
+jobs:
+  optimize:
+    name: Optimize icons with SVGO
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: SVGO icon optimizer
+        if: github.event.label.name == 'feature:icon'
+        uses: ericcornelissen/svgo-action@v3
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          svgo-config: ./.github/scripts/svgo.config.js
+          svgo-version: 3
+      
+      - name: Check if there are some icon to be optimized
+        if: github.event.label.name == 'feature:icon'
+        run: echo "SVGO=on" >> $GITHUB_ENV 
+
+      - name: Get paths of added and modified files
+        uses: jitterbit/get-changed-files@v1
+        id: pr-files
+        with:
+          format: json
+
+      - name: Save paths added and modified files
+        run: echo '${{ steps.pr-files.outputs.added_modified }}' > pr-files.json
+
+      - name: Setup Python v3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Add newline
+        run: python ./.github/scripts/newliner.py ${{ env.SVGO }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: ${{ env.commit_msg }}
