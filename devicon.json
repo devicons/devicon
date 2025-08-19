@@ -2391,6 +2391,30 @@
         "aliases": []
     },
     {
+        "name": "cordova",
+        "altnames": [
+            "apache cordova"
+        ],
+        "tags": [
+            "mobile",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#444",
+        "aliases": []
+    },
+    {
         "name": "corejs",
         "altnames": [
             "core-js",
