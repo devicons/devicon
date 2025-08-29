@@ -2152,6 +2152,34 @@
         "aliases": []
     },
     {
+        "name": "codeberg",
+        "altnames": [],
+        "tags": [
+            "non-profit",
+            "git",
+            "hosting",
+            "forgejo"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#2185d0",
+        "aliases": []
+    },
+    {
         "name": "codecov",
         "altnames": [],
         "tags": [
@@ -9484,6 +9512,7 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -9492,7 +9521,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#b74af7",
+        "color": "#000000",
         "aliases": []
     },
     {
