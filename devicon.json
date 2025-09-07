@@ -9981,9 +9981,9 @@
         ]
     },
     {
-        "name": "payload",
+        "name": "payloadcms",
         "altnames": [
-            "payloadcms"
+            "payload"
         ],
         "tags": [
             "cms",
