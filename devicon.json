@@ -2830,6 +2830,30 @@
         "color": "#00a818",
         "aliases": []
     },
+     {
+        "name": "cursor",
+        "altnames": [
+            "cursorai"
+        ],
+        "tags": [
+            "ide",
+            "ai",
+            "code",
+            "editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#0f111a",
+        "aliases": []
+    },
     {
         "name": "cypressio",
         "altnames": [
