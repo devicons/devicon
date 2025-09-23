@@ -2198,6 +2198,12 @@
         "aliases": []
     },
     {
+        "name": "codecompanion",
+        "tags": ["editor", "ide", "open-source"],
+        "versions": { "svg": ["original"], "font": ["original"] },
+        "color": "#000000"
+    },
+    {
         "name": "codeigniter",
         "altnames": [],
         "tags": [
