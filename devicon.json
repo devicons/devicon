@@ -12903,6 +12903,15 @@
         "aliases": []
     },
     {
+        "name": "starship",
+        "tags": ["shell", "terminal", "tool"],
+        "versions": {
+            "svg": ["original", "original-wordmark"],
+            "font": ["original", "original-workdmark"]
+        },
+        "color": "#dd0b78"
+    },
+    {
         "name": "stata",
         "altnames": [],
         "tags": [
