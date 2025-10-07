@@ -8066,6 +8066,32 @@
         "aliases": []
     },
     {
+        "name": "nasm",
+        "altnames": [
+            "netwideassembler",
+            "net wide assembler"
+        ],
+        "tags": [
+            "assembler",
+            "language",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#113b6a",
+        "aliases": []
+    },
+    {
         "name": "nats",
         "altnames": [
             "nats-io",
