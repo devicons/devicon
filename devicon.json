@@ -4127,9 +4127,23 @@
     },
     {
         "name": "fish",
-        "tags": ["shell", "programming", "language", "unix"],
-        "versions": { "svg": ["original"], "font": ["original"] },
-        "color": "#4CA9F9"
+        "tags": [
+            "shell",
+            "programming",
+            "language",
+            "unix"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#4CA9F9",
+        "aliases": []
     },
     {
         "name": "flask",
