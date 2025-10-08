@@ -11603,8 +11603,8 @@
     {
         "name": "sfml",
         "altnames": [
-            "simpleandfastmultimedia",
-            "simpleandfastmultimedialibrary"
+            "Simple and Fast Multimedia",
+            "Simple and Fast Multimedia Library"
         ],
         "tags": [
             "graphics",
@@ -11614,11 +11614,11 @@
         ],
         "versions": {
             "svg": [
-            "original",
-            "plain"
+                "original",
+                "plain"
             ],
             "font": [
-            "plain"
+                "plain"
             ]
         },
         "color": "#8cc445",
