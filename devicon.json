@@ -12904,12 +12904,24 @@
     },
     {
         "name": "starship",
-        "tags": ["shell", "terminal", "tool"],
+        "altnames": [],
+        "tags": [
+            "shell",
+            "terminal",
+            "tool"
+        ],
         "versions": {
-            "svg": ["original", "original-wordmark"],
-            "font": ["original", "original-workdmark"]
+            "svg": [
+                "original",
+                "plain",
+                "original-wordmark"
+            ],
+            "font": [
+                "plain"
+            ]
         },
-        "color": "#dd0b78"
+        "color": "#dd0b78",
+        "aliases": []
     },
     {
         "name": "stata",
