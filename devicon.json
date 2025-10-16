@@ -10042,6 +10042,23 @@
         ]
     },
     {
+        "name": "projectidx",
+        "altnames": [],
+        "tags": [
+            "ide",
+            "cloud",
+            "google"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#8964e8",
+        "aliases": []
+    },
+    {
         "name": "prolog",
         "altnames": [
             "swi-prolog"
