@@ -2830,7 +2830,7 @@
         "color": "#00a818",
         "aliases": []
     },
-     {
+    {
         "name": "cursor",
         "altnames": [
             "cursorai"
@@ -2852,7 +2852,12 @@
             ]
         },
         "color": "#0f111a",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "cypressio",
