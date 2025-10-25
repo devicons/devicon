@@ -38,6 +38,17 @@
         ]
     },
     {
+    "name": "chatgpt",
+    "altnames": ["openaichatgpt","gpt"],
+    "tags": ["ai","chatbot","openai"],
+    "versions": {
+        "svg": ["original"],
+        "font": []
+    },
+    "color": "#10A37F",
+    "aliases": []
+},
+    {
         "name": "adonisjs",
         "altnames": [
             "adonis"
