@@ -5416,6 +5416,28 @@
         "aliases": []
     },
     {
+        "name": "hono",
+        "altnames": [
+            "honojs"
+        ],
+        "tags": [
+            "framework",
+            "web",
+            "typescript",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#FF8444",
+        "aliases": []
+    },
+    {
         "name": "html5",
         "altnames": [
             "hypertextmarkdownlanguage5"
