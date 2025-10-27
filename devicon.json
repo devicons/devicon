@@ -3478,6 +3478,28 @@
         "aliases": []
     },
     {
+        "name": "elysiajs",
+        "altnames": [
+            "elysia"
+        ],
+        "tags": [
+            "framework",
+            "web",
+            "typescript",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#333333",
+        "aliases": []
+    },
+    {
         "name": "emacs",
         "altnames": [
             "editingmacros"
@@ -5391,6 +5413,28 @@
             ]
         },
         "color": "#00d196",
+        "aliases": []
+    },
+    {
+        "name": "hono",
+        "altnames": [
+            "honojs"
+        ],
+        "tags": [
+            "framework",
+            "web",
+            "typescript",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#FF8444",
         "aliases": []
     },
     {
