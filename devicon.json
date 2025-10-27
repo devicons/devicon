@@ -8972,6 +8972,27 @@
         "aliases": []
     },
     {
+        "name": "openai",
+        "altnames": [
+            "chatgpt"
+        ],
+        "tags": [
+            "ai"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "openal",
         "altnames": [],
         "tags": [
