@@ -3478,6 +3478,28 @@
         "aliases": []
     },
     {
+        "name": "elysiajs",
+        "altnames": [
+            "elysia"
+        ],
+        "tags": [
+            "framework",
+            "web",
+            "typescript",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#333333",
+        "aliases": []
+    },
+    {
         "name": "emacs",
         "altnames": [
             "editingmacros"
