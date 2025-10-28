@@ -14379,6 +14379,25 @@
         "aliases": []
     },
     {
+        "name": "typer",
+        "altnames": [
+            "fastapi"
+        ],
+        "tags": [
+            "cli"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
         "name": "typescript",
         "altnames": [
             "ts"
