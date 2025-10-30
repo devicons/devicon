@@ -4137,40 +4137,6 @@
         "aliases": []
     },
     {
-        "name": "framermotion",
-        "altnames": [
-            "framer-motion",
-            "framer"
-        ],
-        "tags": [
-            "library",
-            "open-source",
-            "react",
-            "animation"
-        ],
-        "versions": {
-            "svg": [
-                "original",
-                "original-wordmark"
-            ],
-            "font": [
-                "original",
-                "original-wordmark"
-            ]
-        },
-        "color": "#000",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
-    },
-    {
         "name": "framework7",
         "altnames": [],
         "tags": [
@@ -7834,6 +7800,37 @@
         },
         "color": "#F7931E",
         "aliases": []
+    },
+     {
+        "name": "motion",
+        "altnames": [
+            "framer-motion",
+            "framer",
+            "framermotion"
+        ],
+        "tags": [
+            "library",
+            "open-source",
+            "reactjs",
+            "vuejs",
+            "js",
+            "animation"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "msdos",
