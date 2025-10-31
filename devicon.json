@@ -7962,8 +7962,9 @@
         ],
         "versions": {
             "svg": [
-                "original",
-                "original-wordmark"
+                "original"
+            ],"font": [
+                "original"
             ]
         },
         "color": "#000",
