@@ -2391,6 +2391,30 @@
         "aliases": []
     },
     {
+        "name": "cordova",
+        "altnames": [
+            "apache cordova"
+        ],
+        "tags": [
+            "mobile",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#444",
+        "aliases": []
+    },
+    {
         "name": "corejs",
         "altnames": [
             "core-js",
@@ -2786,6 +2810,7 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
                 "plain-wordmark"
             ],
@@ -2794,7 +2819,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#21d789",
+        "color": "#000000",
         "aliases": []
     },
     {
@@ -8029,6 +8054,32 @@
             ]
         },
         "color": "#C8F",
+        "aliases": []
+    },
+    {
+        "name": "nasm",
+        "altnames": [
+            "netwideassembler",
+            "net wide assembler"
+        ],
+        "tags": [
+            "assembler",
+            "language",
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#113b6a",
         "aliases": []
     },
     {
@@ -14810,6 +14861,29 @@
         },
         "color": "#ffffff",
         "aliases": []
+    },
+    {
+        "name": "zed",
+        "altnames": [],
+        "tags": [
+            "editor",
+            "IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#084CCF",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "zend",
