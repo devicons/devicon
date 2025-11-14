@@ -37,7 +37,7 @@
         "gulp": "^4.0.2",
         "gulp-footer": "^2.0.2",
         "gulp-sass": "^5.0.0",
-        "gulp-svgmin": "^3.0.0",
+        "gulp-svgmin": "^4.1.0",
         "open": "^10.0.3",
         "run-script-os": "^1.1.6",
         "sass": "^1.26.10",
