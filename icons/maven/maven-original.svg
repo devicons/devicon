@@ -210,10 +210,10 @@
     d="M23.902 10.133a38.039 38.039 0 0 0-1.597 10.62l5.707 2.763a72.4 72.4 0 0 1 .398-10.164c.024-.23.047-.368.047-.368 0 .125-.035.243-.047.368a64.129 64.129 0 0 0-.012 10.027 110.54 110.54 0 0 0 8.457-8 12.174 12.174 0 0 0-6.37-6.805s-5.055-2.039-6.583 1.559Zm0 0" />
   <path style="stroke:none;fill-rule:nonzero;fill:#be202e;fill-opacity:1"
     d="M43.695 53.98c-.265.293-.543.567-.824.844.145-.133.293-.289.43-.433.14-.13.27-.266.394-.41Zm0 0" />
-  <use xlink:href="#j" mask="url(#maven-original-k)" />
+  <use xlink:href="#maven-original-j" mask="url(#maven-original-k)" />
   <path style="stroke:none;fill-rule:nonzero;fill:#be202e;fill-opacity:1"
     d="M41.602 49.426c.046-.04.082-.086.125-.121.18-.18.363-.36.511-.543-.199.218-.425.43-.64.664Zm0 0" />
-  <use xlink:href="#l" mask="url(#maven-original-m)" />
+  <use xlink:href="#maven-original-l" mask="url(#maven-original-m)" />
   <path style="stroke:none;fill-rule:nonzero;fill:url(#maven-original-n)"
     d="M29.52 40.367a231.874 231.874 0 0 1-.72-5.597 112.17 112.17 0 0 1-.523-5.633c0-.114-.02-.227 0-.325a89.502 89.502 0 0 1-.277-5.3l-5.7-2.746c0 .343-.038.699-.054 1.074-.055 1.363-.098 2.8-.11 4.34 0 1.718 0 3.511.032 5.386.039 1.73.113 3.532.203 5.364.094 1.566.195 3.148.324 4.765v.184l7.625 3.86c-.254-1.801-.53-3.594-.8-5.372Zm0 0" />
   <path style="stroke:none;fill-rule:nonzero;fill:url(#maven-original-o)"
@@ -228,22 +228,22 @@
     d="M28.398 23.379c.09 1.601.23 3.394.403 5.379.004.101.015.207.035.308.164 1.735.375 3.602.648 5.637.23 1.758.489 3.602.801 5.602.258 1.73.578 3.543.906 5.468l7.282-6.668a11.974 11.974 0 0 0 1.828-6.59c0-.57-.043-1.171-.09-1.788A56.41 56.41 0 0 0 39.578 25a49.186 49.186 0 0 0-1.082-5.148 28.214 28.214 0 0 0-.836-2.614 32.462 32.462 0 0 0-.8-1.812 115.46 115.46 0 0 1-8.462 7.953Zm0 0" />
   <path style="stroke:none;fill-rule:nonzero;fill:#be202e;fill-opacity:1"
     d="M43.309 54.398c-.133.149-.282.278-.43.434a5.68 5.68 0 0 1 .43-.434Zm0 0" />
-  <use xlink:href="#t" mask="url(#maven-original-u)" />
+  <use xlink:href="#maven-original-t" mask="url(#maven-original-u)" />
   <path style="stroke:none;fill-rule:nonzero;fill:url(#maven-original-v)"
     d="M43.309 54.398c-.133.149-.282.278-.43.434a5.68 5.68 0 0 1 .43-.434Zm0 0" />
   <path style="stroke:none;fill-rule:nonzero;fill:#be202e;fill-opacity:1"
     d="M41.602 49.438c.046-.04.082-.086.14-.133-.047.035-.082.082-.14.133Zm0 0" />
-  <use xlink:href="#w" mask="url(#maven-original-x)" />
+  <use xlink:href="#maven-original-w" mask="url(#maven-original-x)" />
   <path style="stroke:none;fill-rule:nonzero;fill:url(#maven-original-y)"
     d="M41.602 49.438c.046-.04.082-.086.14-.133-.047.035-.082.082-.14.133Zm0 0" />
   <path style="stroke:none;fill-rule:nonzero;fill:url(#maven-original-z)"
     d="M98.508 11.563a43.16 43.16 0 0 0-9.707 7.289l2.398 6.761a80.326 80.326 0 0 1 8.403-7.86c.203-.167.328-.265.328-.265-.106.098-.227.168-.328.266a71.75 71.75 0 0 0-8 8.05c4.375.325 8.765.423 13.152.29a13.78 13.78 0 0 0 .281-10.559s-2.445-5.656-6.527-3.973Zm0 0" />
   <path style="stroke:none;fill-rule:nonzero;fill:#be202e;fill-opacity:1"
     d="M79.602 62.586c-.45.023-.895.023-1.336.023h.687c.215.004.43-.004.649-.023Zm0 0" />
-  <use xlink:href="#A" mask="url(#maven-original-B)" />
+  <use xlink:href="#maven-original-A" mask="url(#maven-original-B)" />
   <path style="stroke:none;fill-rule:nonzero;fill:#be202e;fill-opacity:1"
     d="M81.535 57.258h.2c.288 0 .578 0 .85-.035-.339 0-.69 0-1.046.023Zm0 0" />
-  <use xlink:href="#C" mask="url(#maven-original-D)" />
+  <use xlink:href="#maven-original-C" mask="url(#maven-original-D)" />
   <path style="stroke:none;fill-rule:nonzero;fill:url(#maven-original-E)"
     d="M79.004 40.363a318.718 318.718 0 0 1 3.871-5.086 138.623 138.623 0 0 1 4.055-4.949c.078-.101.164-.195.238-.277a135.156 135.156 0 0 1 4-4.465l-2.398-6.742c-.286.27-.59.535-.899.82a136.81 136.81 0 0 0-3.535 3.402 222.161 222.161 0 0 0-4.258 4.368 220.475 220.475 0 0 0-4.09 4.472 260.517 260.517 0 0 0-3.527 4.098l-.137.156 3.067 9.164c1.222-1.652 2.418-3.324 3.613-4.96Zm0 0" />
   <path style="stroke:none;fill-rule:nonzero;fill:url(#maven-original-F)"
@@ -258,7 +258,7 @@
     d="M91.602 25.809a161.424 161.424 0 0 0-3.946 4.656c-.082.086-.156.18-.219.277a178.511 178.511 0 0 0-3.957 5.055c-1.199 1.598-2.48 3.297-3.816 5.16-1.168 1.598-2.348 3.316-3.602 5.121l11.16.402a13.554 13.554 0 0 0 6.712-3.847 45.42 45.42 0 0 0 1.351-1.508A66.175 66.175 0 0 0 99.313 36a56.266 56.266 0 0 0 3.199-5.004 29.64 29.64 0 0 0 1.402-2.766c.309-.73.566-1.421.8-2.097-4.374.113-8.75.004-13.112-.324Zm0 0" />
   <path style="stroke:none;fill-rule:nonzero;fill:#be202e;fill-opacity:1"
     d="M78.953 62.621h-.687a6.56 6.56 0 0 1 .687 0Zm0 0" />
-  <use xlink:href="#K" mask="url(#maven-original-L)" />
+  <use xlink:href="#maven-original-K" mask="url(#maven-original-L)" />
   <path style="stroke:none;fill-rule:nonzero;fill:url(#maven-original-M)"
     d="M78.953 62.621h-.687a6.56 6.56 0 0 1 .687 0Zm0 0" />
 </svg>

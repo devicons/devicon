@@ -4,7 +4,7 @@
         <path id="angular-original-wordmark-a" d="M0 48.4h128v31.2H0z" />
     </defs>
     <clipPath id="angular-original-wordmark-b">
-        <use xlink:href="#a" overflow="visible" />
+        <use xlink:href="#angular-original-wordmark-a" overflow="visible" />
     </clipPath>
     <g clip-path="url(#angular-original-wordmark-b)">
         <linearGradient id="angular-original-wordmark-c" x1="0" x2="128" y1="65" y2="65"

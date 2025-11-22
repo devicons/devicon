@@ -17,7 +17,7 @@
             <stop stop-color="#00D196" />
             <stop offset="1" stop-color="#00B381" />
         </linearGradient>
-        <linearGradient xlink:href="#a" id="hoppscotch-original-c" x1="411.893" x2="411.893" y1="212" y2="612"
+        <linearGradient xlink:href="#hoppscotch-original-a" id="hoppscotch-original-c" x1="411.893" x2="411.893" y1="212" y2="612"
             gradientTransform="scale(.15534)" gradientUnits="userSpaceOnUse" />
     </defs>
     <rect width="128" height="128" fill="#08110f" rx="28.583" />

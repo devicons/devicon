@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 128 128">
     <defs>
-        <linearGradient xlink:href="#a" id="grpc-original-c" x1="64.014" x2="86.854" y1="34.66" y2="33.586"
-            gradientTransform="translate(-1.256 36.208) scale(.4556)" gradientUnits="userSpaceOnUse" />
+        <linearGradient xlink:href="#grpc-original-a" id="grpc-original-c" x1="64.014" x2="86.854" y1="34.66"
+            y2="33.586" gradientTransform="translate(-1.256 36.208) scale(.4556)" gradientUnits="userSpaceOnUse" />
         <linearGradient id="grpc-original-a">
             <stop offset="0" stop-color="#00b5b2" />
             <stop offset=".13" stop-color="#00b9b6" />
@@ -12,8 +12,8 @@
             <stop offset=".901" stop-color="#6cc9c8" />
             <stop offset="1" stop-color="#72cbca" />
         </linearGradient>
-        <linearGradient xlink:href="#b" id="grpc-original-d" x1="2.757" x2="41.697" y1="37.542" y2="41.545"
-            gradientTransform="translate(-1.256 29.83) scale(.4556)" gradientUnits="userSpaceOnUse" />
+        <linearGradient xlink:href="#grpc-original-b" id="grpc-original-d" x1="2.757" x2="41.697" y1="37.542"
+            y2="41.545" gradientTransform="translate(-1.256 29.83) scale(.4556)" gradientUnits="userSpaceOnUse" />
         <linearGradient id="grpc-original-b">
             <stop offset="0" stop-color="#71caca" />
             <stop offset=".122" stop-color="#66c7c7" />
