@@ -8722,7 +8722,11 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
             ]
         },
         "color": "#346598",
