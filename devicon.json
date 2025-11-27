@@ -11773,6 +11773,27 @@
         "aliases": []
     },
     {
+        "name": "shadcn",
+        "altnames": [],
+        "tags": [
+            "ui",
+            "components",
+            "reactjs",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "shopware",
         "altnames": [],
         "tags": [
