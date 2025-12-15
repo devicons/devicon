@@ -3730,6 +3730,25 @@
         "color": "#421f5f",
         "aliases": []
     },
+        {
+        "name": "emailjs",
+        "altnames": [],
+        "tags": [
+            "email",
+            "javascript",
+            "api",
+            "service",
+            "frontend",
+            "backend"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ]
+        },
+        "color": "#ff8434",
+        "aliases": []
+    },
     {
         "name": "embeddedc",
         "altnames": [],
