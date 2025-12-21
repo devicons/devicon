@@ -13165,6 +13165,31 @@
         ]
     },
     {
+        "name": "turborepo",
+        "altnames": [],
+        "tags": [
+            "build",
+            "task-runner",
+            "javascript",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark", "plain"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark",
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "twilio",
         "altnames": [],
         "tags": [
