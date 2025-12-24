@@ -3605,28 +3605,6 @@
         "aliases": []
     },
     {
-        "name": "eclipse",
-        "altnames": [
-            "Eclipse IDE"
-        ],
-        "tags": [
-            "editor",
-            "IDE"
-        ],
-        "versions": {
-            "svg": [
-                "original-wordmark",
-                "original"
-            ],
-            "font": [
-                "plain-wordmark",
-                "plain"
-            ]
-        },
-        "color": "#2c2255",
-        "aliases": []
-    },
-    {
         "name": "e1c",
         "altnames": [
             "1c",
@@ -3647,6 +3625,28 @@
             ]
         },
         "color": "#feec00",
+        "aliases": []
+    },
+    {
+        "name": "eclipse",
+        "altnames": [
+            "Eclipse IDE"
+        ],
+        "tags": [
+            "editor",
+            "IDE"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#2c2255",
         "aliases": []
     },
     {
