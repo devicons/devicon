@@ -14965,5 +14965,28 @@
         },
         "color": "#443e38",
         "aliases": []
+    },
+    {
+        "name": "e1c",
+        "altnames": [
+            "1c",
+            "1c-enterprise"
+        ],
+        "tags": [
+            "design",
+            "editor",
+            "enterprise",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#feec00",
+        "aliases": []
     }
 ]
