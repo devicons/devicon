@@ -12218,7 +12218,6 @@
         "aliases": []
     },
     {
-        "color": "#000000",
         "name": "sfml",
         "altnames": [
             "Simple and Fast Multimedia",
@@ -12245,6 +12244,7 @@
     {
         "name": "shadcn",
         "altnames": [],
+        "color":"#000000",
         "tags": [
             "ui",
             "components",
@@ -12258,7 +12258,8 @@
             "font": [
                 "original"
             ]
-        }
+        },
+        "aliases": []
     },
     {
         "name": "shopware",
