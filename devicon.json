@@ -12218,24 +12218,6 @@
         "aliases": []
     },
     {
-        "name": "shadcn",
-        "altnames": [],
-        "tags": [
-            "ui",
-            "components",
-            "reactjs",
-            "library"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "original"
-            ]
-        }
-    },
-    {
         "color": "#000000",
         "name": "sfml",
         "altnames": [
@@ -12259,6 +12241,24 @@
         },
         "color": "#8cc445",
         "aliases": []
+    },  
+    {
+        "name": "shadcn",
+        "altnames": [],
+        "tags": [
+            "ui",
+            "components",
+            "reactjs",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        }
     },
     {
         "name": "shopware",
