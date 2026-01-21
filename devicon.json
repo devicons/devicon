@@ -4715,6 +4715,27 @@
         "aliases": []
     },
     {
+        "name": "ghidra",
+        "altnames": [],
+        "tags": [
+            "binary-analysis",
+            "reverse-engineering"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#df241a",
+        "aliases": []
+    },
+    {
         "name": "ghost",
         "altnames": [],
         "tags": [
@@ -12532,6 +12553,26 @@
         },
         "color": "#8cc445",
         "aliases": []
+    },  
+    {
+        "name": "shadcn",
+        "altnames": [],
+        "color":"#000000",
+        "tags": [
+            "ui",
+            "components",
+            "reactjs",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "aliases": []
     },
     {
         "name": "shopware",
@@ -13160,6 +13201,34 @@
         },
         "color": "#000",
         "aliases": []
+    },
+    {
+        "name": "stimulus",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "javascript",
+            "js",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#77e8b9",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "storybook",
