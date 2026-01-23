@@ -3734,16 +3734,13 @@
         "name": "emailjs",
         "altnames": [],
         "tags": [
-            "email",
-            "javascript",
-            "api",
-            "service",
-            "frontend",
-            "backend"
+            "javascript"
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark",
+                "plain"
             ]
         },
         "color": "#ff8434",
