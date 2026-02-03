@@ -7681,9 +7681,14 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
-            "font": []
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#000000",
         "aliases": []
