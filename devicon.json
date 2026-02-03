@@ -9996,13 +9996,20 @@
             ],
             "font": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original-wordmark"
             ]
         },
         "color": "#000000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }           
+        ]
     },
     {
         "name": "perl",
