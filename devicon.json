@@ -2812,6 +2812,39 @@
         "color": "#A80030",
         "aliases": []
     },
+
+    {
+        "name": "deepseek",
+        "altnames": [],
+        "tags":[
+            "ai",
+            "open-source",
+            "DeepSeek-AI"
+        ],
+        "versions":{
+            "svg":[
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4D6BFE",
+        "aliases": [
+            {
+                "base":"original",
+                "alias": "plain"
+            },
+            {
+                "base":"original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+
+    },
+
     {
         "name": "delphi",
         "altnames": [
