@@ -7673,6 +7673,27 @@
         "aliases": []
     },
     {
+        "name": "lovable",
+        "altnames": [],
+        "tags": [
+            "ai"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "love2d",
         "altnames": [
             "löve"
@@ -9978,6 +9999,37 @@
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
             }
+        ]
+    },
+    {
+        "name": "payloadcms",
+        "altnames": [
+            "payload"
+        ],
+        "tags": [
+            "cms",
+            "headless-cms"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }           
         ]
     },
     {

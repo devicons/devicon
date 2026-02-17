@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.event.pull_request.title, 'new icon') || startsWith(github.event.pull_request.title, 'update icon')  # only checks icon PR
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Check if PR is develop
         if: ${{ github.base_ref != 'develop' }}
