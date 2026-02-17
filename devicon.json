@@ -2818,8 +2818,7 @@
         "altnames": [],
         "tags":[
             "ai",
-            "open-source",
-            "DeepSeek-AI"
+            "open-source"
         ],
         "versions":{
             "svg":[
@@ -2834,15 +2833,14 @@
         "color": "#4D6BFE",
         "aliases": [
             {
-                "base":"original",
+                "base": "original",
                 "alias": "plain"
             },
             {
-                "base":"original-wordmark",
+                "base": "original-wordmark",
                 "alias": "plain-wordmark"
             }
         ]
-
     },
 
     {
