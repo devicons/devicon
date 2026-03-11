@@ -176,6 +176,24 @@
         "aliases": []
     },
     {
+        "name": "alertmanager",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "alerting",
+            "devops",
+            "prometheus"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#DA4E31",
+        "aliases": []
+    },
+    {
         "name": "algolia",
         "altnames": [],
         "tags": [
@@ -4818,6 +4836,26 @@
         ]
     },
     {
+        "name": "googleappscript",
+        "altnames": [
+            "google-apps-script"
+        ],
+        "tags": [
+            "google",
+            "automation",
+            "scripting",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#4285F4",
+        "aliases": []
+    },
+    {
         "name": "googlecloud",
         "altnames": [],
         "tags": [
@@ -4924,6 +4962,27 @@
             ]
         },
         "color": "#f7a525",
+        "aliases": []
+    },
+    {
+        "name": "grafanaloki",
+        "altnames": [
+            "loki",
+            "grafana-loki"
+        ],
+        "tags": [
+            "logging",
+            "monitoring",
+            "devops",
+            "observability"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": []
+        },
+        "color": "#F5A623",
         "aliases": []
     },
     {
@@ -7100,7 +7159,7 @@
     {
         "name": "love2d",
         "altnames": [
-            "löve"
+            "l\u00f6ve"
         ],
         "tags": [
             "programming",
@@ -14475,6 +14534,26 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "yandexcloud",
+        "altnames": [
+            "yandex-cloud"
+        ],
+        "tags": [
+            "cloud",
+            "hosting",
+            "server",
+            "yandex"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": []
+        },
+        "color": "#FFCC00",
+        "aliases": []
     },
     {
         "name": "yarn",
