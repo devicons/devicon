@@ -4995,6 +4995,29 @@
         "aliases": []
     },
     {
+        "name": "groq",
+        "altnames": [],
+        "tags": [
+            "ai",
+            "inference",
+            "llm",
+            "hardware"
+
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "original",
+                "plain"
+            ]
+        }
+    },
+    {
         "name": "grpc",
         "altnames": [
             "grpcio",
