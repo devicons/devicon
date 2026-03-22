@@ -8300,6 +8300,31 @@
         ]
     },
     {
+        "name": "mlflow",
+        "altnames": [],
+        "tags": [
+            "machine-learning",
+            "python",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0194E2",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "mobx",
         "altnames": [
             "mobxjs"
