@@ -2666,6 +2666,34 @@
         "aliases": []
     },
     {
+        "name": "databricks",
+        "altnames": [],
+        "tags": [
+            "data",
+            "analytics",
+            "big-data",
+            "machine-learning",
+            "data-science",
+            "spark",
+            "cloud",
+            "platform",
+            "databricks"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": []
+        },
+        "color": "#FF3621",
+        "aliases": []
+    },
+    {
         "name": "datadog",
         "altnames": [],
         "tags": [
