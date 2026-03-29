@@ -16119,4 +16119,25 @@
         "color": "#443e38",
         "aliases": []
     }
+    {
+        "name": "gamemaker",
+        "altnames": [],
+        "tags": [
+            "gml",
+            "engine",
+            "game-engine"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+            ],
+            "font": [
+                "plain",
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    }
 ]
