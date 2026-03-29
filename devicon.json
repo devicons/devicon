@@ -7905,6 +7905,15 @@
         ]
     },
     {
+        "name": "mamba",
+        "tags": ["python", "package-manager"],
+        "versions": {
+            "svg": ["original"],
+            "font": ["original"]
+        },
+        "color": "#000000"
+    },
+    {
         "name": "mapbox",
         "altnames": [],
         "tags": [
