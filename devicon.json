@@ -9570,6 +9570,25 @@
         "aliases": []
     },
     {
+        "name": "odin",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#FFFFFF",
+        "aliases": []
+    },
+    {
         "name": "ohmyzsh",
         "altnames": [
             "omz",
