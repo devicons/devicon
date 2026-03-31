@@ -2331,6 +2331,12 @@
         "aliases": []
     },
     {
+        "name": "codecompanion",
+        "tags": ["editor", "ide", "open-source"],
+        "versions": { "svg": ["original"], "font": ["original"] },
+        "color": "#5d904a"
+    },
+    {
         "name": "codeigniter",
         "altnames": [],
         "tags": [
