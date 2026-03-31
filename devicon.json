@@ -14207,6 +14207,27 @@
         "aliases": []
     },
     {
+        "name": "torchvision",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "framework",
+            "machine-learning",
+            "python",
+            "computer-vision"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#2596be",
+        "aliases": []
+    },
+    {
         "name": "tortoisegit",
         "altnames": [],
         "tags": [
