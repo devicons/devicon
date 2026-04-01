@@ -3151,6 +3151,32 @@
         ]
     },
     {
+        "name": "dependabot",
+        "altnames": [],
+        "tags": [
+            "dependency",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#0366d6",
+        "aliases": []
+    },
+    {
         "name": "detaspace",
         "altnames": [
             "Deta",
