@@ -14207,6 +14207,23 @@
         "aliases": []
     },
     {
+        "name": "toml",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#9C4221",
+        "aliases": []
+    },
+    {
         "name": "tortoisegit",
         "altnames": [],
         "tags": [
