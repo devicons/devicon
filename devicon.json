@@ -11725,6 +11725,29 @@
         "aliases": []
     },
     {
+        "name": "reacttestinglibrary",
+        "altnames": [],
+        "tags": [
+            "testing",
+            "react"
+        ],
+        "versions": {
+            "SVG": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#F93F3D",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "readthedocs",
         "altnames": [
             "Read The Docs"
