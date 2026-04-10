@@ -2598,6 +2598,26 @@
         "aliases": []
     },
     {
+        "name": "cursor",
+        "tags": [
+            "cursor", 
+            "ai", 
+            "code editor", 
+            "ide", 
+            "vscode"
+        ],
+        "versions": {
+            "svg": [
+                "original", 
+                "original-wordmark", 
+                "plain", 
+                "plain-wordmark"
+            ],
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "cypressio",
         "altnames": [
             "cypress"
