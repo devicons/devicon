@@ -10098,7 +10098,7 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
-            }           
+            }
         ]
     },
     {
@@ -11219,6 +11219,31 @@
         },
         "color": "#ff318c",
         "aliases": []
+    },
+    {
+        "name": "qodo",
+        "altnames": [],
+        "tags": [
+            "qodo",
+            "ai",
+            "code review",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#7968FA",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "qt",
