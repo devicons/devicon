@@ -6032,26 +6032,29 @@
         ]
     },
     {
-        "name": "hyprland",
+        "name": "icinga",
         "altnames": [],
         "tags": [
-            "tiling",
-            "window manager",
-            "wayland"
+            "monitoring",
+            "observability",
+            "infrastructure",
+            "devops"
         ],
         "versions": {
             "svg": [
-                "original",
                 "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "original",
+                "plain-wordmark",
+                "plain"
             ],
             "font": [
+                "original-wordmark",
+                "original",
                 "plain-wordmark",
                 "plain"
             ]
         },
-        "color": "#00c6e2",
+        "color": "#06062C",
         "aliases": []
     },
     {
