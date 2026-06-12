@@ -7875,6 +7875,31 @@
         ]
     },
     {
+        "name": "lwc",
+        "altnames": [
+            "Lightning Web Components"
+        ],
+        "tags": [
+            "framework",
+            "frontend",
+            "html",
+            "javascript",
+            "css"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#14305c",
+        "aliases": []
+    },
+    {
         "name": "magento",
         "altnames": [],
         "tags": [
