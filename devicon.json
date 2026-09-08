@@ -5275,6 +5275,24 @@
         ]
     },
     {
+        "name": "googleappscript",
+        "altnames": [],
+        "tags": [
+            "google",
+            "javascript",
+            "automation",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#F9AB00",
+        "aliases": []
+    },
+    {
         "name": "googlecloud",
         "altnames": [],
         "tags": [
