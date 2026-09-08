@@ -15864,6 +15864,23 @@
         ]
     },
     {
+        "name": "yandexcloud",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "hosting",
+            "server"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": []
+        },
+        "color": "#0f4ce2",
+        "aliases": []
+    },
+    {
         "name": "yarn",
         "altnames": [],
         "tags": [
