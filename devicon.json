@@ -5384,6 +5384,25 @@
         "aliases": []
     },
     {
+        "name": "grafanaloki",
+        "altnames": [],
+        "tags": [
+            "loki",
+            "logging",
+            "monitoring",
+            "grafana"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": []
+        },
+        "color": "#F7A900",
+        "aliases": []
+    },
+    {
         "name": "grails",
         "altnames": [
             "Grails Framework"
