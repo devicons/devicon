@@ -200,6 +200,24 @@
         "aliases": []
     },
     {
+        "name": "alertmanager",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "alerting",
+            "devops",
+            "prometheus"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#DA4E31",
+        "aliases": []
+    },
+    {
         "name": "algolia",
         "altnames": [],
         "tags": [
