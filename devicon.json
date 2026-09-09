@@ -5276,7 +5276,9 @@
     },
     {
         "name": "googleappscript",
-        "altnames": [],
+        "altnames": [
+            "Apps Script"
+        ],
         "tags": [
             "google",
             "javascript",
