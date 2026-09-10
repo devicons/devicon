@@ -8220,6 +8220,26 @@
         "aliases": []
     },
     {
+        "name": "metabase",
+        "altnames": [],
+        "tags": [
+            "dashboard",
+            "data",
+            "analytics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#509ee3",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "altnames": [
             "meteorjs"
