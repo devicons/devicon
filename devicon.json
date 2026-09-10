@@ -2385,6 +2385,34 @@
         ]
     },
     {
+        "name": "codex",
+        "altnames": [
+            "openaicodex"
+        ],
+        "tags": [
+            "ai",
+            "agent",
+            "cli",
+            "assistant",
+            "code"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "coffeescript",
         "altnames": [],
         "tags": [
