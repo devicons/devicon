@@ -1745,6 +1745,30 @@
         "aliases": []
     },
     {
+        "name": "cake",
+        "altnames": [
+            "cakebuild"
+        ],
+        "tags": [
+            "programming",
+            "C#",
+            "c-sharp",
+            "automation",
+            "build"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#4a1700",
+        "aliases": []
+    },
+    {
         "name": "cakephp",
         "altnames": [],
         "tags": [
