@@ -15453,6 +15453,33 @@
         ]
     },
     {
+        "name": "wasp",
+        "altnames": [
+            "Wasp-lang"
+        ],
+        "tags": [
+            "framework",
+            "fullstack",
+            "web",
+            "react",
+            "nodejs",
+            "prisma",
+            "dsl"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#f5c842",
+        "aliases": []
+    },
+    {
         "name": "web3js",
         "altnames": [
             "web3.js"
