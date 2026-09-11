@@ -2398,19 +2398,15 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
-        "color": "#000000",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "color": "#5061F7",
+        "aliases": []
     },
     {
         "name": "coffeescript",
