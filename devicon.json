@@ -5395,9 +5395,14 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
-            "font": []
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
         },
         "color": "#F7A900",
         "aliases": []
@@ -10117,7 +10122,7 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
-            }           
+            }
         ]
     },
     {
