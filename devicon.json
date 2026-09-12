@@ -8650,12 +8650,10 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain-wordmark",
-                "plain"
+                "plain-wordmark"
             ],
             "font": [
-                "plain-wordmark",
-                "plain"
+                "plain-wordmark"
             ]
         },
         "color": "#EA4B71",
