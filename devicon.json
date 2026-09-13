@@ -14880,6 +14880,31 @@
         "aliases": []
     },
     {
+        "name": "vlang",
+        "altnames": [
+            "v"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#5d87bf",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "vapor",
         "altnames": [],
         "tags": [
