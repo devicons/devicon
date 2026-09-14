@@ -9715,10 +9715,13 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#FFFFFF",
@@ -10253,7 +10256,7 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
-            }           
+            }
         ]
     },
     {
