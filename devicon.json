@@ -1719,6 +1719,28 @@
         ]
     },
     {
+        "name": "cachyos",
+        "altnames": [
+            "Cachy OS"
+        ],
+        "tags": [
+            "arch",
+            "os",
+            "open-source",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00ccff",
+        "aliases": []
+    },
+    {
         "name": "cairo",
         "altnames": [
             "cairographics"
@@ -14287,6 +14309,32 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "tinygo",
+        "altnames": [],
+        "tags": [
+            "golang",
+            "compiler",
+            "microcontroller",
+            "hardware"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#1d1d1b",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "line"
             }
         ]
     },
