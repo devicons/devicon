@@ -1745,6 +1745,30 @@
         "aliases": []
     },
     {
+        "name": "cake",
+        "altnames": [
+            "cakebuild"
+        ],
+        "tags": [
+            "programming",
+            "C#",
+            "c-sharp",
+            "automation",
+            "build"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#4a1700",
+        "aliases": []
+    },
+    {
         "name": "cakephp",
         "altnames": [],
         "tags": [
@@ -2052,6 +2076,27 @@
             ]
         },
         "color": "#13171a",
+        "aliases": []
+    },
+    {
+        "name": "claude",
+        "altnames": [],
+        "tags": [
+            "ai",
+            "assistant",
+            "language-model",
+            "llm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#D97757",
         "aliases": []
     },
     {
@@ -5299,6 +5344,29 @@
         ]
     },
     {
+        "name": "googleappscript",
+        "altnames": [
+            "Apps Script"
+        ],
+        "tags": [
+            "google",
+            "javascript",
+            "automation",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#F9AB00",
+        "aliases": []
+    },
+    {
         "name": "googlecloud",
         "altnames": [],
         "tags": [
@@ -5405,6 +5473,30 @@
             ]
         },
         "color": "#f7a525",
+        "aliases": []
+    },
+    {
+        "name": "grafanaloki",
+        "altnames": [],
+        "tags": [
+            "loki",
+            "logging",
+            "monitoring",
+            "grafana"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F7A900",
         "aliases": []
     },
     {
@@ -8241,6 +8333,26 @@
             ]
         },
         "color": "#999",
+        "aliases": []
+    },
+    {
+        "name": "metabase",
+        "altnames": [],
+        "tags": [
+            "dashboard",
+            "data",
+            "analytics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#509ee3",
         "aliases": []
     },
     {
@@ -15475,6 +15587,27 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "web2py",
+        "altnames": [],
+        "tags": [
+            "python",
+            "programming",
+            "framework",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#eef6f3",
+        "aliases": []
     },
     {
         "name": "web3js",
