@@ -1719,6 +1719,28 @@
         ]
     },
     {
+        "name": "cachyos",
+        "altnames": [
+            "Cachy OS"
+        ],
+        "tags": [
+            "arch",
+            "os",
+            "open-source",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#00ccff",
+        "aliases": []
+    },
+    {
         "name": "cairo",
         "altnames": [
             "cairographics"
