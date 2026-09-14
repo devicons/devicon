@@ -2079,6 +2079,27 @@
         "aliases": []
     },
     {
+        "name": "claude",
+        "altnames": [],
+        "tags": [
+            "ai",
+            "assistant",
+            "language-model",
+            "llm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#D97757",
+        "aliases": []
+    },
+    {
         "name": "clickhouse",
         "altnames": [],
         "tags": [
@@ -2407,6 +2428,30 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "codex",
+        "altnames": [
+            "openaicodex"
+        ],
+        "tags": [
+            "ai",
+            "agent",
+            "cli",
+            "assistant",
+            "code"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5061F7",
+        "aliases": []
     },
     {
         "name": "coffeescript",
@@ -11215,6 +11260,28 @@
             ]
         },
         "color": "#EE4C2C",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "qiskit",
+        "altnames": [],
+        "tags": [
+            "programming"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
         "aliases": [
             {
                 "base": "original",
