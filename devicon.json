@@ -2101,9 +2101,30 @@
         "aliases": []
     },
     {
-        "name": "claudecode",
+        "name": "claude",
         "altnames": [],
         "tags": [
+            "ai",
+            "assistant",
+            "language-model",
+            "llm"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#D97757",
+        "aliases": []
+    },
+    {
+        "name":"claudecode",
+        "altnames": [],
+        "tags":[
             "ai",
             "coding",
             "assistant"
@@ -2114,7 +2135,7 @@
             ],
             "font": []
         },
-        "color": "#d97757",
+        "color": "#D97757",
         "aliases": []
     },
     {
