@@ -14858,31 +14858,6 @@
         "aliases": []
     },
     {
-        "name": "vlang",
-        "altnames": [
-            "v"
-        ],
-        "tags": [
-            "programming",
-            "language"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "original"
-            ]
-        },
-        "color": "#5d87bf",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
-    },
-    {
         "name": "vapor",
         "altnames": [],
         "tags": [
@@ -15186,6 +15161,28 @@
             ]
         },
         "color": "#fcc72b",
+        "aliases": []
+    },
+    {
+        "name": "vlang",
+        "altnames": [
+            "v"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#5d87bf",
         "aliases": []
     },
     {
