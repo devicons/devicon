@@ -15708,6 +15708,27 @@
         "aliases": []
     },
     {
+        "name": "web2py",
+        "altnames": [],
+        "tags": [
+            "python",
+            "programming",
+            "framework",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#eef6f3",
+        "aliases": []
+    },
+    {
         "name": "web3js",
         "altnames": [
             "web3.js"
