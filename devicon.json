@@ -2122,6 +2122,23 @@
         "aliases": []
     },
     {
+        "name":"claudecode",
+        "altnames": [],
+        "tags":[
+            "ai",
+            "coding",
+            "assistant"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#D97757",
+        "aliases": []
+    },
+    {
         "name": "clickhouse",
         "altnames": [],
         "tags": [
