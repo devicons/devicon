@@ -2122,6 +2122,23 @@
         "aliases": []
     },
     {
+        "name":"claudecode",
+        "altnames": [],
+        "tags":[
+            "ai",
+            "coding",
+            "assistant"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
+        },
+        "color": "#D97757",
+        "aliases": []
+    },
+    {
         "name": "clickhouse",
         "altnames": [],
         "tags": [
@@ -3830,7 +3847,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#380A4D",
+        "color": "#8847B9",
         "aliases": []
     },
     {
@@ -8827,6 +8844,7 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "original-wordmark",
                 "plain-wordmark"
             ],
@@ -9749,6 +9767,28 @@
         "aliases": []
     },
     {
+        "name": "odin",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FFFFFF",
+        "aliases": []
+    },
+    {
         "name": "ohmyzsh",
         "altnames": [
             "omz",
@@ -10277,7 +10317,7 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
-            }           
+            }
         ]
     },
     {
@@ -15391,6 +15431,28 @@
         "aliases": []
     },
     {
+        "name": "vlang",
+        "altnames": [
+            "v"
+        ],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#5d87bf",
+        "aliases": []
+    },
+    {
         "name": "vscode",
         "altnames": [
             "visualstudiocode"
@@ -15656,6 +15718,32 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "wasp",
+        "altnames": [
+            "Wasp-lang"
+        ],
+        "tags": [
+            "framework",
+            "fullstack",
+            "web",
+            "react",
+            "nodejs",
+            "prisma",
+            "dsl"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
     },
     {
         "name": "web2py",
