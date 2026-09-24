@@ -6210,6 +6210,32 @@
         "aliases": []
     },
     {
+        "name": "icinga",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "observability",
+            "infrastructure",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original",
+                "plain-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "original",
+                "plain-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#06062c",
+        "aliases": []
+    },
+    {
         "name": "ie10",
         "altnames": [
             "internetexplorer10"
