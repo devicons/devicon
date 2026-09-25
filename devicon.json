@@ -523,6 +523,32 @@
         "aliases": []
     },
     {
+        "name": "antigravity",
+        "altnames": [
+            "antigravityide",
+            "antigravity-agent"
+        ],
+        "tags": [
+            "ide",
+            "ai",
+            "coding-agent",
+            "tool",
+            "code",
+            "assistant"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font":[
+                "plain"
+            ]
+        },
+        "color": "#3581E5",
+        "aliases": []
+    },
+    {
         "name": "apache",
         "altnames": [
             "The Apache Software Foundation"
