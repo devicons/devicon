@@ -961,6 +961,28 @@
         "aliases": []
     },
     {
+        "name": "aspire",
+        "altnames": [],
+        "tags": [
+            "tool",
+            "development",
+            "orchestrator"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line",
+                "plain"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ]
+        },
+        "color": "#512BD4",
+        "aliases": []
+    },
+    {
         "name": "astro",
         "altnames": [],
         "tags": [
@@ -6233,6 +6255,28 @@
             ]
         },
         "color": "#00c6e2",
+        "aliases": []
+    },
+    {
+        "name": "icinga",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "observability",
+            "infrastructure",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "original-wordmark",
+                "original"
+            ]
+        },
+        "color": "#ffffff",
         "aliases": []
     },
     {
