@@ -936,14 +936,11 @@
     },
     {
         "name": "aspire",
-        "altnames": [
-            "dotnetaspire",
-            ".NET Aspire"
-        ],
+        "altnames": [],
         "tags": [
-            "framework",
-            "cloud",
-            "orchestration"
+            "tool",
+            "development",
+            "orchestrator"
         ],
         "versions": {
             "svg": [
