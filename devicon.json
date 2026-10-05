@@ -935,6 +935,31 @@
         "aliases": []
     },
     {
+        "name": "aspire",
+        "altnames": [
+            "dotnetaspire",
+            ".NET Aspire"
+        ],
+        "tags": [
+            "framework",
+            "cloud",
+            "orchestration"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line",
+                "plain"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ]
+        },
+        "color": "#512BD4",
+        "aliases": []
+    },
+    {
         "name": "astro",
         "altnames": [],
         "tags": [
