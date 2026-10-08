@@ -15876,6 +15876,23 @@
         "aliases": []
     },
     {
+        "name": "webgl",
+        "altnames": [],
+        "tags": [
+            "graphics",
+            "web",
+            "3d"
+         ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+           "font": []
+        },
+        "color": "#990000",
+        "aliases": []
+    },
+    {
         "name": "webgpu",
         "altnames": [],
         "tags": [
