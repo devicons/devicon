@@ -14010,6 +14010,34 @@
             }
         ]
     },
+        {
+        "name": "systemverilog",
+        "altnames": [
+            "system verilog",
+            "sv"
+        ],
+        "tags": [
+            "programming",
+            "language",
+            "hardware",
+            "fpga"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#248f4f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
     {
         "name": "tailwindcss",
         "altnames": [],
