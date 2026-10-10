@@ -15336,6 +15336,33 @@
             }
         ]
     },
+        {
+        "name": "verilog",
+        "altnames": [
+            "verilog hdl"
+        ],
+        "tags": [
+            "programming",
+            "language",
+            "hardware",
+            "fpga"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#248f4f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
     {
         "name": "vertx",
         "altnames": [
