@@ -523,6 +523,32 @@
         "aliases": []
     },
     {
+        "name": "antigravity",
+        "altnames": [
+            "antigravityide",
+            "antigravity-agent"
+        ],
+        "tags": [
+            "ide",
+            "ai",
+            "coding-agent",
+            "tool",
+            "code",
+            "assistant"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font":[
+                "plain"
+            ]
+        },
+        "color": "#3581E5",
+        "aliases": []
+    },
+    {
         "name": "apache",
         "altnames": [
             "The Apache Software Foundation"
@@ -932,6 +958,28 @@
             ]
         },
         "color": "#10a0cc",
+        "aliases": []
+    },
+    {
+        "name": "aspire",
+        "altnames": [],
+        "tags": [
+            "tool",
+            "development",
+            "orchestrator"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line",
+                "plain"
+            ],
+            "font": [
+                "line",
+                "plain"
+            ]
+        },
+        "color": "#512BD4",
         "aliases": []
     },
     {
@@ -2117,6 +2165,23 @@
             "font": [
                 "plain"
             ]
+        },
+        "color": "#D97757",
+        "aliases": []
+    },
+    {
+        "name":"claudecode",
+        "altnames": [],
+        "tags":[
+            "ai",
+            "coding",
+            "assistant"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": []
         },
         "color": "#D97757",
         "aliases": []
@@ -6216,6 +6281,28 @@
         ]
     },
     {
+        "name": "icinga",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "observability",
+            "infrastructure",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark",
+                "original"
+            ],
+            "font": [
+                "original-wordmark",
+                "original"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
+    },
+    {
         "name": "ie10",
         "altnames": [
             "internetexplorer10"
@@ -7697,6 +7784,27 @@
                 "alias": "line-wordmark"
             }
         ]
+    },
+    {
+        "name": "linear",
+        "altnames": [],
+        "tags": [
+            "project-management"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffffff",
+        "aliases": []
     },
     {
         "name": "linkedin",
@@ -13925,6 +14033,34 @@
             }
         ]
     },
+        {
+        "name": "systemverilog",
+        "altnames": [
+            "system verilog",
+            "sv"
+        ],
+        "tags": [
+            "programming",
+            "language",
+            "hardware",
+            "fpga"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#248f4f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
     {
         "name": "tailwindcss",
         "altnames": [],
@@ -15223,6 +15359,33 @@
             }
         ]
     },
+        {
+        "name": "verilog",
+        "altnames": [
+            "verilog hdl"
+        ],
+        "tags": [
+            "programming",
+            "language",
+            "hardware",
+            "fpga"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#248f4f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
     {
         "name": "vertx",
         "altnames": [
@@ -15788,6 +15951,23 @@
             ]
         },
         "color": "#4353ff",
+        "aliases": []
+    },
+    {
+        "name": "webgl",
+        "altnames": [],
+        "tags": [
+            "graphics",
+            "web",
+            "3d"
+         ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+           "font": []
+        },
+        "color": "#990000",
         "aliases": []
     },
     {
