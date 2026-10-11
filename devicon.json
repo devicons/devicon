@@ -6208,7 +6208,12 @@
 			]
         },
         "color": "#8a0819",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "ie10",
