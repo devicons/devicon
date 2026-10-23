@@ -12,7 +12,7 @@ jobs:
       - run: echo "First workflow was a failure"
   label_preflight:
     name: Label Issue In Develop
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v4
