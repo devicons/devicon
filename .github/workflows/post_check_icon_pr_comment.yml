@@ -72,13 +72,13 @@ jobs:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
 
-      - name: Rename the PR
+      - name: Validate the expected title
+        id: validate
         if: steps.title.outputs.expected != ''
         uses: actions/github-script@v7
         env:
           EXPECTED: ${{ steps.title.outputs.expected }}
           PR_NUM: ${{ steps.pr.outputs.number }}
-          BOT_TOKEN: ${{ steps.bot-token.outputs.token }}
         with:
           script: |
             const expected = process.env.EXPECTED;
@@ -88,32 +88,61 @@ jobs:
               core.setFailed(`Refusing to use an unexpected title: ${expected}`);
               return;
             }
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: parseInt(process.env.PR_NUM, 10)
+            });
+            core.setOutput('old_title', pr.title);
 
-            const pull_number = parseInt(process.env.PR_NUM, 10);
-            const repo = { owner: context.repo.owner, repo: context.repo.repo };
-            const { data: pr } = await github.rest.pulls.get({ ...repo, pull_number });
-            const oldTitle = pr.title;
+      # Its own step so it runs as the bot app (github-token), not GITHUB_TOKEN
+      - name: Rename the PR
+        if: steps.title.outputs.expected != '' && steps.bot-token.outputs.token != ''
+        uses: actions/github-script@v7
+        env:
+          EXPECTED: ${{ steps.title.outputs.expected }}
+          PR_NUM: ${{ steps.pr.outputs.number }}
+        with:
+          github-token: ${{ steps.bot-token.outputs.token }}
+          script: |
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: parseInt(process.env.PR_NUM, 10),
+              title: process.env.EXPECTED
+            });
 
-            if (!process.env.BOT_TOKEN) {
-              // Without the bot app a rename wouldn't re-run the check, so ask instead
-              await github.rest.issues.createComment({ ...repo, issue_number: pull_number, body: [
-                "Hi!", "",
-                "I'm the `check-bot`. This PR's title doesn't match the icon it changes. Please rename it to:", "",
-                "```", expected, "```", "",
-                "Thanks for your help,", "SVG-Checker Bot :smile:"
-              ].join('\n') });
-              return;
-            }
-
-            const bot = github.getOctokit(process.env.BOT_TOKEN);
-            await bot.rest.pulls.update({ ...repo, pull_number, title: expected });
-            await github.rest.issues.createComment({ ...repo, issue_number: pull_number, body: [
-              "Hi!", "",
-              "I'm the `check-bot`. The PR title didn't match the icon this PR changes, so I renamed it:", "",
-              "```", `from: ${oldTitle}`, `to:   ${expected}`, "```", "",
-              "The title becomes the commit message and the line in the release notes. I'll check the PR again with the new title.", "",
-              "Thanks for your help,", "SVG-Checker Bot :smile:"
-            ].join('\n') });
+      - name: Comment on the PR about the title
+        if: steps.title.outputs.expected != ''
+        uses: actions/github-script@v7
+        env:
+          EXPECTED: ${{ steps.title.outputs.expected }}
+          OLD_TITLE: ${{ steps.validate.outputs.old_title }}
+          PR_NUM: ${{ steps.pr.outputs.number }}
+          RENAMED: ${{ steps.bot-token.outputs.token != '' }}
+        with:
+          script: |
+            const body = process.env.RENAMED === 'true'
+              ? [
+                  "Hi!", "",
+                  "I'm the `check-bot`. The PR title didn't match the icon this PR changes, so I renamed it:", "",
+                  "```", `from: ${process.env.OLD_TITLE}`, `to:   ${process.env.EXPECTED}`, "```", "",
+                  "The title becomes the commit message and the line in the release notes. I'll check the PR again with the new title.", "",
+                  "Thanks for your help,", "SVG-Checker Bot :smile:"
+                ]
+              : [
+                  // Without the bot app a rename wouldn't re-run the check, so ask instead
+                  "Hi!", "",
+                  "I'm the `check-bot`. This PR's title doesn't match the icon it changes. Please rename it to:", "",
+                  "```", process.env.EXPECTED, "```", "",
+                  "Thanks for your help,", "SVG-Checker Bot :smile:"
+                ];
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt(process.env.PR_NUM, 10),
+              body: body.join('\n')
+            });
 
       - name: Comment on the PR about the result - SVG Error
         uses: actions/github-script@v7
