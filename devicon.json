@@ -12750,6 +12750,24 @@
         ]
     },
     {
+        "name": "testicon",
+        "altnames": [],
+        "tags": [
+            "test"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#7B42BC",
+        "aliases": []
+    },
+    {
         "name": "tex",
         "altnames": [],
         "tags": [
