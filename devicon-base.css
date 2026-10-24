@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devicon';
-  src:  url('fonts/devicon.eot?cz6qyc');
-  src:  url('fonts/devicon.eot?cz6qyc#iefix') format('embedded-opentype'),
-    url('fonts/devicon.ttf?cz6qyc') format('truetype'),
-    url('fonts/devicon.woff?cz6qyc') format('woff'),
-    url('fonts/devicon.svg?cz6qyc#devicon') format('svg');
+  src:  url('fonts/devicon.eot?wus5f0');
+  src:  url('fonts/devicon.eot?wus5f0#iefix') format('embedded-opentype'),
+    url('fonts/devicon.ttf?wus5f0') format('truetype'),
+    url('fonts/devicon.woff?wus5f0') format('woff'),
+    url('fonts/devicon.svg?wus5f0#devicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-testicon-plain:before {
+  content: "\edb1";
+}
 .devicon-angular-plain-wordmark:before {
   content: "\e916";
 }
