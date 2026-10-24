@@ -4,6 +4,12 @@ on:
     workflows: ['Check Icon PR']
     types:
       - completed
+
+permissions:
+  actions: read
+  issues: write
+  pull-requests: write
+
 jobs:
   post_result_of_svg_check:
     name: Post the result of the Check SVG Action
@@ -15,66 +21,141 @@ jobs:
     steps:
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v7
-        if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: check_icon_pr.yml
           run_id: ${{ github.event.workflow_run.id }}
 
-      - name: Read the pr_num file
-        if: success()
-        id: pr_num_reader
-        uses: juliangruber/read-file-action@v1.1.6
+      # For PRs from forks the check runs the fork's own workflow code, so its
+      # artifacts can't be trusted. Only act on the PR if its head is the commit
+      # that was checked.
+      - name: Verify the PR
+        id: pr
+        uses: actions/github-script@v7
         with:
-          path: ./pr_num/pr_num.txt
+          script: |
+            const fs = require('fs');
+            const num = parseInt(fs.readFileSync('./pr_num/pr_num.txt', 'utf8').trim(), 10);
+            if (!Number.isInteger(num) || num <= 0) {
+              core.setFailed('pr_num artifact is not a PR number');
+              return;
+            }
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: num
+            });
+            const checked = context.payload.workflow_run.head_sha;
+            if (pr.head.sha !== checked) {
+              core.setFailed(`PR #${num} is at ${pr.head.sha}, but the check ran on ${checked}. Not acting on it.`);
+              return;
+            }
+            core.setOutput('number', String(num));
 
-      - name: Read the err message file
-        if: success()
-        id: err_message_reader
-        uses: juliangruber/read-file-action@v1.1.6
+      - name: Read the expected title
+        id: title
+        run: |
+          TITLE=""
+          if [ -f ./err_messages/expected_title.txt ]; then
+            TITLE=$(head -c 300 ./err_messages/expected_title.txt | tr -d '\r\n')
+          fi
+          echo "expected=$TITLE" >> $GITHUB_OUTPUT
+
+      # Renaming with the bot app's token (not GITHUB_TOKEN) re-runs the check
+      # on the new title. See build_weekly.yml for the app setup; it also needs
+      # the "Pull requests: Read and write" permission for this.
+      - name: Get bot token
+        id: bot-token
+        if: steps.title.outputs.expected != '' && vars.BOT_APP_ID != ''
+        uses: actions/create-github-app-token@v2
         with:
-          path: ./err_messages/err_messages.txt
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+
+      - name: Rename the PR
+        if: steps.title.outputs.expected != ''
+        uses: actions/github-script@v7
+        env:
+          EXPECTED: ${{ steps.title.outputs.expected }}
+          PR_NUM: ${{ steps.pr.outputs.number }}
+          BOT_TOKEN: ${{ steps.bot-token.outputs.token }}
+        with:
+          script: |
+            const expected = process.env.EXPECTED;
+            const version = '(original|plain|line)(-wordmark)?';
+            const valid = new RegExp(`^(new|update) icon: [a-z0-9._-]+ \\(${version}(, ${version})*\\)$`);
+            if (expected.length > 200 || !valid.test(expected)) {
+              core.setFailed(`Refusing to use an unexpected title: ${expected}`);
+              return;
+            }
+
+            const pull_number = parseInt(process.env.PR_NUM, 10);
+            const repo = { owner: context.repo.owner, repo: context.repo.repo };
+            const { data: pr } = await github.rest.pulls.get({ ...repo, pull_number });
+            const oldTitle = pr.title;
+
+            if (!process.env.BOT_TOKEN) {
+              // Without the bot app a rename wouldn't re-run the check, so ask instead
+              await github.rest.issues.createComment({ ...repo, issue_number: pull_number, body: [
+                "Hi!", "",
+                "I'm the `check-bot`. This PR's title doesn't match the icon it changes. Please rename it to:", "",
+                "```", expected, "```", "",
+                "Thanks for your help,", "SVG-Checker Bot :smile:"
+              ].join('\n') });
+              return;
+            }
+
+            const bot = github.getOctokit(process.env.BOT_TOKEN);
+            await bot.rest.pulls.update({ ...repo, pull_number, title: expected });
+            await github.rest.issues.createComment({ ...repo, issue_number: pull_number, body: [
+              "Hi!", "",
+              "I'm the `check-bot`. The PR title didn't match the icon this PR changes, so I renamed it:", "",
+              "```", `from: ${oldTitle}`, `to:   ${expected}`, "```", "",
+              "The title becomes the commit message and the line in the release notes. I'll check the PR again with the new title.", "",
+              "Thanks for your help,", "SVG-Checker Bot :smile:"
+            ].join('\n') });
 
       - name: Comment on the PR about the result - SVG Error
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
-        if: success() && (steps.err_message_reader.outputs.content != '')
+        uses: actions/github-script@v7
         env:
-          MESSAGE: |
-            Hi!
-
-            I'm the `check-bot` and we have some issues with your PR:
-
-            ```
-            {0}
-            ```
-
-            Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/wiki/SVG-Standards) for more details regarding these errors.
-
-            Please address these issues. When you push new commits or edit the PR title, I will check your PR again.
-
-            Thanks for your help,
-            SVG-Checker Bot :smile:
+          PR_NUM: ${{ steps.pr.outputs.number }}
         with:
-          type: create
-          issue_number: ${{ steps.pr_num_reader.outputs.content }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
+          script: |
+            const fs = require('fs');
+            const file = './err_messages/err_messages.txt';
+            const errors = fs.existsSync(file) ? fs.readFileSync(file, 'utf8').trim() : '';
+            if (!errors) return;
 
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt(process.env.PR_NUM, 10),
+              body: [
+                "Hi!", "",
+                "I'm the `check-bot` and we have some issues with your PR:", "",
+                "```", errors, "```", "",
+                "Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/wiki/SVG-Standards) for more details regarding these errors.", "",
+                "Please address these issues. When you push new commits or edit the PR title, I will check your PR again.", "",
+                "Thanks for your help,", "SVG-Checker Bot :smile:"
+              ].join('\n')
+            });
+
+      # Only with a verified PR number: never comment on a PR named by an unverified artifact
       - name: Comment on the PR about the result - Failure
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
-        if: failure()
+        if: failure() && steps.pr.outputs.number != ''
+        uses: actions/github-script@v7
         env:
-          MESSAGE: |
-            Hi!
-
-            I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
-
-            Please let my maintainers know of the issues. They will take a look at my work and try to resolve the problem. Until then, please hang tight and sorry for the inconvenience.
-
-            Cheers,
-            SVG-Checker Bot :smile:
+          PR_NUM: ${{ steps.pr.outputs.number }}
         with:
-          type: create
-          issue_number: ${{ steps.pr_num_reader.outputs.content }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ env.MESSAGE }}
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt(process.env.PR_NUM, 10),
+              body: [
+                "Hi!", "",
+                "I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.", "",
+                "Please let my maintainers know of the issues. They will take a look at my work and try to resolve the problem. Until then, please hang tight and sorry for the inconvenience.", "",
+                "Cheers,", "SVG-Checker Bot :smile:"
+              ].join('\n')
+            });

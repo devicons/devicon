@@ -45,7 +45,7 @@ devicon/
 
 ### Repo setup the workflows depend on
 - Ruleset on `master`: require PR + 1 approval, squash only, block force-push/deletion. Bypass: the bot GitHub App (always).
-- Bot GitHub App with `Contents: Read and write`, installed on the repo; `vars.BOT_APP_ID` + `secrets.BOT_APP_PRIVATE_KEY`.
+- Bot GitHub App with `Contents: Read and write` (pushes to master) and `Pull requests: Read and write` (renames icon PRs), installed on the repo; `vars.BOT_APP_ID` + `secrets.BOT_APP_PRIVATE_KEY`.
 - Environments: `production` (required reviewers, gates releases), `release` (holds `NPM_AUTOMATION_TOKEN`). Forks run `npm publish --dry-run`.
 - Labels: `release: major`, `release: minor`.
 
@@ -69,11 +69,13 @@ devicon/
 Run `build_weekly.yml` via workflow_dispatch — it does exactly what the weekly run does (build if needed, release if anything changed). To build without releasing, reject the `production` approval. The `bump` input (`auto`/`patch`/`minor`/`major`) overrides the label-derived bump.
 
 ### PR titles
-Not used to find icons anywhere (bots, build, release all use changed files). Enforced by `check_icon_pr.yml` for PRs that change SVGs:
-- one icon per PR
+Not used to find icons anywhere (bots, build, release all use changed files). Enforced by `check_icon_pr.yml` for icon PRs (any change in `icons/`):
+- one icon per PR; only `icons/<name>/` and that icon's `devicon.json` entry may change — any other added/modified/deleted file or other `devicon.json` entry fails the check with a comment
 - title `new icon: <name> (<versions>)` (icon not in target branch's `devicon.json`) or `update icon: <name> (<versions>)`; versions = the SVGs the PR adds/changes; case and version order don't matter
-- on mismatch the check-bot comments the problems plus the expected title; editing the title re-runs the check
-- `devicon.json`-only PRs (aliases, tags…) have no title requirement
+- wrong title on an otherwise clean-scoped PR → check fails, writes `expected_title.txt`, and `post_check_icon_pr_comment.yml` renames the PR with the bot app token (which re-runs the check) and comments old → new title. Without the bot app it comments the expected title instead
+- wrong title on a PR with scope problems → no rename; the title issue is part of the error comment
+- `devicon.json`-only PRs (aliases, tags…) have no title or scope requirement
+- `post_check_icon_pr_comment.yml` only acts on a PR whose head SHA matches the checked commit (fork runs' artifacts are untrusted) and only accepts titles matching the icon-title format
 
 The title becomes the squash commit and the release-notes line.
 

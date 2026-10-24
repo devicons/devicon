@@ -81,18 +81,29 @@ def get_pr_icon_changes(devicon_json: List[dict], base: str="HEAD^1"):
     :param devicon_json, the devicon.json content of the PR.
     :param base, the commit to compare against.
     :return a dict with:
-        "svgs": {icon folder name: [SVG file names added/modified/renamed]}
-        "json": names of devicon.json entries that were added or changed
+        "svgs": {icon folder name: [SVG file names added/modified]}
+        "icon_folders": sorted names of the icons/<name>/ folders with any change
+            (added, modified or deleted files)
+        "other_files": changed paths outside icons/<name>/ and devicon.json
+        "json": names of devicon.json entries that were added, changed or removed
         "existing": names of devicon.json entries that already existed at `base`
     """
-    diff = subprocess.run(
-        ["git", "diff", "--name-only", "--diff-filter=d", base, "HEAD", "--", "icons"],
-        capture_output=True, text=True, check=True).stdout.splitlines()
-    svgs = {}
-    for path in diff:
-        parts = path.split("/")  # icons/<name>/<file>.svg
-        if len(parts) == 3 and parts[2].endswith(".svg"):
-            svgs.setdefault(parts[1], []).append(parts[2])
+    # -z: NUL-separated "status, path" pairs, so unusual file names parse safely.
+    # --no-renames: a rename shows up as a delete + add, so both paths count.
+    out = subprocess.run(
+        ["git", "diff", "--name-status", "-z", "--no-renames", base, "HEAD"],
+        capture_output=True, text=True, check=True).stdout.split("\0")
+    svgs, icon_folders, other_files = {}, set(), []
+    for status, path in zip(out[0::2], out[1::2]):
+        if path == "devicon.json":
+            continue
+        parts = path.split("/")  # icons/<name>/<file>
+        if len(parts) == 3 and parts[0] == "icons":
+            icon_folders.add(parts[1])
+            if status != "D" and parts[2].endswith(".svg"):
+                svgs.setdefault(parts[1], []).append(parts[2])
+        else:
+            other_files.append(path)
 
     try:
         base_json = json.loads(subprocess.run(["git", "show", f"{base}:devicon.json"],
@@ -100,9 +111,12 @@ def get_pr_icon_changes(devicon_json: List[dict], base: str="HEAD^1"):
     except subprocess.CalledProcessError:
         base_json = []
     base_icons = {icon["name"]: icon for icon in base_json}
+    current_names = {icon["name"] for icon in devicon_json}
     changed_json = [icon["name"] for icon in devicon_json if base_icons.get(icon["name"]) != icon]
+    changed_json += [name for name in base_icons if name not in current_names]
 
-    return {"svgs": svgs, "json": changed_json, "existing": set(base_icons)}
+    return {"svgs": svgs, "icon_folders": sorted(icon_folders), "other_files": other_files,
+            "json": changed_json, "existing": set(base_icons)}
 
 
 def get_svg_versions(icon: dict, svg_files: List[str]) -> Tuple[List[str], List[str]]:
@@ -136,7 +150,8 @@ def check_pr_title(pr_title: str, icon: dict, is_new: bool, versions: List[str])
     :param icon, the devicon.json object of the icon whose SVGs the PR changes.
     :param is_new, whether the icon is new (not in the target branch's devicon.json).
     :param versions, the SVG versions the PR adds/changes.
-    :return a string with the problems and the expected title, or "" if it's fine.
+    :return (problems, expected title): problems is a string with the issues and
+    the expected title, or "" if the title is fine.
     """
     kind = "new" if is_new else "update"
     expected = f"{kind} icon: {icon['name']} ({', '.join(versions)})"
@@ -158,8 +173,8 @@ def check_pr_title(pr_title: str, icon: dict, is_new: bool, versions: List[str])
             problems.append(f"the versions should be the SVGs this PR {verb}: {', '.join(versions)}")
 
     if problems:
-        return "PR title issues:\n" + "\n".join(f"- {p}" for p in problems) + f"\n\nExpected title:\n{expected}"
-    return ""
+        return "PR title issues:\n" + "\n".join(f"- {p}" for p in problems) + f"\n\nExpected title:\n{expected}", expected
+    return "", expected
 
 
 def is_svg_in_font_attribute(svg_file_path: Path, devicon_object: dict): 

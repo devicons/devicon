@@ -11,8 +11,14 @@ from build_assets import filehandler, arg_getters, util
 def main():
     """
     Check the icons touched by this PR, found from the changed files: the
-    `devicon.json` entries and the SVGs. If the PR changes SVGs, also check that
-    it covers a single icon and that the PR title describes it.
+    `devicon.json` entries and the SVGs.
+
+    An icon PR (one that changes anything in icons/) must only change one
+    icons/<name>/ folder and that icon's `devicon.json` entry, and its title must
+    describe it. If the title is the only thing wrong about the PR's scope, the
+    expected title is written to './expected_title.txt' so the bot can rename the
+    PR, instead of reporting it as an error.
+
     Error messages are written to './err_messages.txt' (empty if all is well).
     """
     args = arg_getters.get_check_icon_pr_args()
@@ -20,35 +26,51 @@ def main():
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
         icons_by_name = {icon["name"]: icon for icon in all_icons}
         changes = util.get_pr_icon_changes(all_icons, args.base)
+        print("Changed icon folders:", changes["icon_folders"])
         print("Changed SVGs:", changes["svgs"])
         print("Changed devicon.json entries:", changes["json"])
+        print("Other changed files:", changes["other_files"])
 
         err_msg = []
         #First check if devicon.json is sorted
         if sorted(all_icons, key=lambda d: d['name']) != all_icons:
             err_msg.append(f"devicon.json is not sorted correctly.\nPlease make sure that your icon is added in the `devicon.json` file at the correct alphabetic position\nas seen here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60")
 
-        # An icon PR changes the SVGs of exactly one icon, and its title says which
-        svg_icons = sorted(changes["svgs"])
-        if len(svg_icons) > 1:
-            err_msg.append(f"This PR changes the SVGs of several icons ({', '.join(svg_icons)}).\nPlease open a separate PR for each icon.")
-        for name in svg_icons:
-            if name not in icons_by_name:
+        # An icon PR only touches one icons/<name>/ folder and that icon's devicon.json entry
+        icon_folders = changes["icon_folders"]
+        if icon_folders:
+            if changes["other_files"]:
+                err_msg.append("Icon PRs should only change files in `icons/<icon name>/` and `devicon.json`, but this PR also changes:\n" +
+                    "\n".join(f"- {path}" for path in changes["other_files"]) +
+                    "\nPlease remove these changes from this PR (open a separate PR for them if they're needed).")
+            if len(icon_folders) > 1:
+                err_msg.append(f"This PR changes several icons ({', '.join(icon_folders)}).\nPlease open a separate PR for each icon.")
+
+        expected_title = ""
+        if len(icon_folders) == 1:
+            name = icon_folders[0]
+            other_entries = [n for n in changes["json"] if n != name]
+            if other_entries:
+                err_msg.append(f"Icon PRs should only change the `devicon.json` entry of their own icon (\"{name}\"), but this PR also changes: {', '.join(other_entries)}.")
+
+            if name in changes["svgs"] and name not in icons_by_name:
                 err_msg.append(f"`icons/{name}/` was changed, but `devicon.json` has no entry named \"{name}\".")
-        if len(svg_icons) == 1 and svg_icons[0] in icons_by_name:
-            name = svg_icons[0]
-            icon = icons_by_name[name]
-            versions, invalid_files = util.get_svg_versions(icon, changes["svgs"][name])
-            if invalid_files:
-                err_msg.append("These SVG file names don't match our pattern of `<name>-(original|plain|line)(-wordmark)?.svg`:\n" +
-                    "\n".join(f"- icons/{name}/{file}" for file in invalid_files))
-            if versions:
-                title_err = util.check_pr_title(args.pr_title, icon, name not in changes["existing"], versions)
-                if title_err:
-                    err_msg.append(title_err)
+            elif name in changes["svgs"]:
+                icon = icons_by_name[name]
+                versions, invalid_files = util.get_svg_versions(icon, changes["svgs"][name])
+                if invalid_files:
+                    err_msg.append("These SVG file names don't match our pattern of `<name>-(original|plain|line)(-wordmark)?.svg`:\n" +
+                        "\n".join(f"- icons/{name}/{file}" for file in invalid_files))
+                if versions:
+                    title_err, title = util.check_pr_title(args.pr_title, icon, name not in changes["existing"], versions)
+                    # Only rename automatically when the PR's scope is clean
+                    if title_err and not (changes["other_files"] or other_entries or invalid_files):
+                        expected_title = title
+                    elif title_err:
+                        err_msg.append(title_err)
 
         # Check every icon this PR touches
-        to_check = sorted(set(svg_icons) | set(changes["json"]))
+        to_check = sorted(set(icon_folders) | set(changes["json"]))
         for name in to_check:
             if name not in icons_by_name:
                 continue
@@ -73,6 +95,9 @@ def main():
                     err_msg.append(svg_err)
 
         filehandler.write_to_file("./err_messages.txt", "\n\n".join(err_msg))
+        filehandler.write_to_file("./expected_title.txt", expected_title)
+        if expected_title:
+            print(f"PR title should be: {expected_title}")
         print("Task completed.")
     except Exception as e:
         filehandler.write_to_file("./err_messages.txt", str(e))

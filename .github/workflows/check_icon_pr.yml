@@ -50,22 +50,32 @@ jobs:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
 
-      # Uploaded even if the script crashed: it writes the error to this file
+      # Uploaded even if the script crashed: it writes the error to err_messages.txt.
+      # expected_title.txt is set when the bot should rename the PR.
       - name: Upload the err messages
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: err_messages
-          path: ./err_messages.txt
+          path: |
+            ./err_messages.txt
+            ./expected_title.txt
           if-no-files-found: ignore
 
-      # Fail the check when issues were found, so the PR shows a red check.
-      # post_check_icon_pr_comment.yml posts the details as a comment.
+      # Fail the check when issues were found or the title is wrong, so the PR
+      # shows a red check. post_check_icon_pr_comment.yml posts the details and
+      # renames the PR; the rename re-runs this check.
       - name: Fail if issues were found
         shell: bash
         run: |
+          FAIL=0
+          if [ -s expected_title.txt ]; then
+            echo "::error::PR title should be: $(cat expected_title.txt) (the check-bot will rename the PR)"
+            FAIL=1
+          fi
           if [ -s err_messages.txt ]; then
             echo "::error::Issues found in this PR (details in the check-bot comment):"
             cat err_messages.txt
-            exit 1
+            FAIL=1
           fi
+          exit $FAIL
