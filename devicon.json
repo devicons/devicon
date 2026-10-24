@@ -2184,7 +2184,12 @@
             "font": []
         },
         "color": "#D97757",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "clickhouse",
@@ -6998,7 +7003,7 @@
                 "original-wordmark"
             ],
             "font": [
-                "plain",
+                "original",
                 "plain-wordmark"
             ]
         },
@@ -15750,8 +15755,8 @@
                 "line"
             ],
             "font": [
-                "line",
-                "plain"
+                "plain",
+                "line"
             ]
         },
         "color": "#1697F6",
@@ -15983,10 +15988,17 @@
             "svg": [
                 "original"
             ],
-           "font": []
+           "font": [
+                "original"
+           ]
         },
         "color": "#990000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "webgpu",
