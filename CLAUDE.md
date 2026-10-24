@@ -54,6 +54,7 @@ devicon/
 - Runs every Monday at 2 AM UTC
 - `build` job: if `icons/` or `devicon.json` changed since the last `build:` commit, runs the Icomoon build + CSS and commits with `build:` prefix. On failure: creates a `build-failed` issue
   - An icon's glyphs are (re)built when its non-alias font versions in `devicon.json` don't match its glyphs in `icomoon.json` (new icon / versions changed), or one of its font SVGs changed since the last build (updated icon). Detection is by file diff, not PR titles.
+  - Codepoints are fixed: icomoon.io assigns codepoints to whatever is selected when the Generate Font page opens, so the build only opens it after "Select All". `verify_glyph_codes` then fails the build (nothing committed) if any glyph that wasn't rebuilt changed codepoint or vanished, or two glyphs share one. Rebuilt glyphs get their codepoint from icomoon.io (logged as `old -> new`).
   - Ends by deciding `should_release`: anything shipped (`icons`, `devicon.json`, CSS, `fonts`) changed since the last `v*` tag
 - `release` job (only if `should_release`, gated by `production` environment approval): derives semver bump from labels of PRs merged since the last `v*` tag → `npm version` → pushes tag → creates GitHub release
 - `publish` job: calls `npm_publish.yml` as a reusable workflow (releases made with `GITHUB_TOKEN` don't trigger `release:` events)

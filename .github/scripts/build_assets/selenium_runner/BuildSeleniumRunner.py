@@ -15,13 +15,17 @@ class BuildSeleniumRunner(SeleniumRunner):
         zip_path: Path, svgs: List[str], screenshot_folder: str):
         self.upload_icomoon(icomoon_json_path)
         # Deselect all existing icons BEFORE uploading new SVGs. upload_svgs()
-        # then selects only the new icons, giving "new icons only" screenshots.
-        # download_icomoon_fonts() calls select_all before generating the font,
-        # so the full icon set is always used for font generation.
+        # then selects only the new icons for the "new icons only" screenshot.
+        # download_icomoon_fonts() calls select_all before opening the Generate
+        # Font page, so the full icon set is always used for font generation.
+        #
+        # Never open the Generate Font page with only some icons selected:
+        # icomoon.io assigns codepoints to the selection when the page opens, so
+        # a partial selection would give the new icons the first codepoints and
+        # shift existing glyphs. icomoon_build_githubless.py verifies this.
         self.deselect_all_icons_in_top_set()
         self.upload_svgs(svgs, screenshot_folder)
-        self.take_icon_screenshot(screenshot_folder)
-        self.download_icomoon_fonts(zip_path)
+        self.download_icomoon_fonts(zip_path, screenshot_folder)
 
     def upload_icomoon(self, icomoon_json_path: str):
         """
@@ -92,9 +96,9 @@ class BuildSeleniumRunner(SeleniumRunner):
             message = "BuildSeleniumRunner - Issues found when uploading SVGs:\n"
             raise Exception(message + '\n'.join(err_messages))
 
-        # Select only the newly uploaded SVGs, so the screenshots below and in
-        # take_icon_screenshot() show just those. icomoon.io doesn't select
-        # uploaded icons by itself; new icons are the first ones in the top set.
+        # Select only the newly uploaded SVGs, so the screenshot below shows just
+        # those. icomoon.io doesn't select uploaded icons by itself; new icons
+        # are the first ones in the top set.
         self.switch_toolbar_option(IcomoonOptionState.SELECT)
         self.click_latest_icons_in_top_set(len(svgs))
         print(f"Selected the {len(svgs)} new icon(s).", file=self.log_output)
@@ -102,28 +106,6 @@ class BuildSeleniumRunner(SeleniumRunner):
         self.driver.save_screenshot(new_svgs_path)
 
         print("Finished uploading the svgs...", file=self.log_output)
-
-    def take_icon_screenshot(self, screenshot_folder: str):
-        """
-        Take the overview icon screenshot of the uploaded icons.
-        :param svgs: a list of svg Paths that we'll upload to icomoon.
-        :param screenshot_folder: the name of the screenshot_folder. 
-        """
-        # take pictures
-        print("Taking screenshot of the new icons...", file=self.log_output)
-        self.go_to_generate_font_page()
-
-        # take an overall screenshot of the icons that were just added
-        # also include the glyph count
-        new_icons_path = str(Path(screenshot_folder, "new_icons.png").resolve())
-        main_content_xpath = "/html/body/div[4]/div[2]/div/div[1]"
-        main_content = self.driver.find_element_by_xpath(main_content_xpath)
-
-        # wait a bit for all the icons to load before we take a pic
-        time.sleep(SeleniumRunner.MED_WAIT_IN_SEC)
-        # Use full-page screenshot to avoid canvas taint restrictions
-        self.driver.save_screenshot(new_icons_path)
-        print("Saved screenshot of the new icons...", file=self.log_output)
 
     def go_to_generate_font_page(self):
         """
@@ -140,11 +122,12 @@ class BuildSeleniumRunner(SeleniumRunner):
         else:
             raise Exception(f"Unexpected alert found: {alert}")
 
-    def download_icomoon_fonts(self, zip_path: Path):
+    def download_icomoon_fonts(self, zip_path: Path, screenshot_folder: str):
         """
-        Download the icomoon.zip from icomoon.io. Also take a picture of 
-        what the icons look like.
+        Download the icomoon.zip from icomoon.io. Also take a screenshot of
+        the Generate Font page, which shows the total glyph count.
         :param zip_path: the path to the zip file after it's downloaded.
+        :param screenshot_folder: the name of the screenshot_folder.
         """
         print("Downloading Font files...", file=self.log_output)
         if self.current_page != IcomoonPage.SELECTION:
@@ -152,9 +135,17 @@ class BuildSeleniumRunner(SeleniumRunner):
 
         # select_all is required here — after deselect_all + new SVG uploads,
         # only the new icons are selected. We must select everything before
-        # generating the font or the existing icons will be missing from the output.
+        # opening the Generate Font page, or the existing icons would be missing
+        # from the output and get new codepoints (see build_icons).
         self.select_all_icons_in_top_set()
         self.go_to_generate_font_page()
+
+        # wait a bit for the glyphs to render; full-page screenshot to avoid
+        # canvas taint restrictions
+        time.sleep(SeleniumRunner.MED_WAIT_IN_SEC)
+        font_glyphs_path = str(Path(screenshot_folder, "font_glyphs.png").resolve())
+        self.driver.save_screenshot(font_glyphs_path)
+        print("Saved screenshot of the Generate Font page.", file=self.log_output)
 
         download_btn = WebDriverWait(self.driver, SeleniumRunner.LONG_WAIT_IN_SEC).until(
             ec.presence_of_element_located((By.CSS_SELECTOR, "button.btn4 span"))

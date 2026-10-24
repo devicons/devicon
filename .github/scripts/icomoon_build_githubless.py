@@ -29,6 +29,9 @@ def main():
 
         print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n", file=logfile)
 
+        # Snapshot the codepoints so we can verify icomoon.io kept them
+        codes_before = get_glyph_codes(args.icomoon_json_path)
+
         print("Begin optimizing files...", file=logfile)
         optimize_svgs(new_icons, args.icons_folder_path, logfile=logfile)
 
@@ -53,6 +56,9 @@ def main():
         print("Renaming extracted files...", file=logfile)
         filehandler.rename_extracted_files(args.download_path, logfile)
 
+        print("Verifying codepoints...", file=logfile)
+        verify_glyph_codes(codes_before, get_glyph_codes(args.icomoon_json_path), new_icons, logfile)
+
         print("Task completed!", file=logfile)
     except TimeoutException as e:
         util.exit_with_err(Exception("Selenium Time Out Error: \n" + str(e)), logfile)
@@ -66,6 +72,56 @@ def main():
 
 
 GLYPH_NAME_PATTERN = re.compile(r"^(.+)-((?:original|plain|line)(?:-wordmark)?)$")
+
+
+def get_glyph_codes(icomoon_json_path: str) -> Dict[str, int]:
+    """
+    Get the codepoint of every glyph in the `icomoon.json`.
+    :return a dict of glyph name -> codepoint.
+    """
+    icomoon_json = filehandler.get_json_file_content(icomoon_json_path)
+    return {glyph["properties"]["name"]: glyph["properties"]["code"] for glyph in icomoon_json["icons"]}
+
+
+def verify_glyph_codes(codes_before: Dict[str, int], codes_after: Dict[str, int], built_icons: List[dict], logfile: FileIO):
+    """
+    Make sure icomoon.io kept the codepoints of every glyph that wasn't rebuilt,
+    so the icons people already use keep their codepoints. Rebuilt glyphs are
+    re-uploaded and get their codepoint from icomoon.io; those are only logged.
+    :param codes_before - glyph name -> codepoint before the build.
+    :param codes_after - glyph name -> codepoint in the downloaded icomoon.json.
+    :param built_icons - the devicon.json objects of the icons that were (re)built.
+    :raise Exception if a glyph that wasn't rebuilt changed or disappeared, or
+    two glyphs share a codepoint.
+    """
+    built_names = {icon["name"] for icon in built_icons}
+    def is_built(glyph_name):
+        match = GLYPH_NAME_PATTERN.match(glyph_name)
+        return match is not None and match.group(1) in built_names
+
+    problems = []
+    for name, code in codes_before.items():
+        if is_built(name):
+            continue
+        if name not in codes_after:
+            problems.append(f"- {name}: missing from the new font")
+        elif codes_after[name] != code:
+            problems.append(f"- {name}: codepoint changed {code:x} -> {codes_after[name]:x}")
+
+    glyphs_by_code = {}
+    for name, code in codes_after.items():
+        glyphs_by_code.setdefault(code, []).append(name)
+    for code, names in glyphs_by_code.items():
+        if len(names) > 1:
+            problems.append(f"- codepoint {code:x} is used by several glyphs: {', '.join(names)}")
+
+    for name in sorted(n for n in codes_after if is_built(n)):
+        before = f"{codes_before[name]:x}" if name in codes_before else "new"
+        print(f"Rebuilt glyph {name}: codepoint {before} -> {codes_after[name]:x}", file=logfile)
+
+    if problems:
+        raise Exception(f"icomoon.io changed existing glyphs ({len(problems)} problems), not committing this build:\n" + "\n".join(problems))
+    print(f"Codepoints verified: all {len(codes_before)} existing glyphs that weren't rebuilt kept theirs.", file=logfile)
 
 
 def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, since: str, logfile: FileIO):
