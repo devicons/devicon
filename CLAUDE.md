@@ -45,6 +45,7 @@ devicon/
 
 ### Repo setup the workflows depend on
 - Ruleset on `master`: require PR + 1 approval, squash only, block force-push/deletion. Bypass: the bot GitHub App (always).
+- No classic branch protection rule on `master` (Settings → Branches). A push must pass both, and a classic rule requiring PRs has its own bypass list, so it blocks the bot's `build:`/version pushes (GH013) even when the ruleset allows them. Delete it, or add the bot app to its "allow specified actors to bypass required pull requests" list.
 - Bot GitHub App with `Contents: Read and write` (pushes to master) and `Pull requests: Read and write` (renames icon PRs), installed on the repo; `vars.BOT_APP_ID` + `secrets.BOT_APP_PRIVATE_KEY`.
 - Environments: `production` (required reviewers, gates releases), `release` (holds `NPM_AUTOMATION_TOKEN`). Forks run `npm publish --dry-run`.
 - Labels: `release: major`, `release: minor`.

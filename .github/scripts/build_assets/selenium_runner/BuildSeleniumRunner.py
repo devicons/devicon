@@ -14,9 +14,8 @@ class BuildSeleniumRunner(SeleniumRunner):
     def build_icons(self, icomoon_json_path: str,
         zip_path: Path, svgs: List[str], screenshot_folder: str):
         self.upload_icomoon(icomoon_json_path)
-        # Deselect all existing icons BEFORE uploading new SVGs.
-        # Newly uploaded SVGs are auto-selected by icomoon.io, so after this
-        # only the new icons will be selected — giving clean "new icons only" screenshots.
+        # Deselect all existing icons BEFORE uploading new SVGs. upload_svgs()
+        # then selects only the new icons, giving "new icons only" screenshots.
         # download_icomoon_fonts() calls select_all before generating the font,
         # so the full icon set is always used for font generation.
         self.deselect_all_icons_in_top_set()
@@ -93,10 +92,12 @@ class BuildSeleniumRunner(SeleniumRunner):
             message = "BuildSeleniumRunner - Issues found when uploading SVGs:\n"
             raise Exception(message + '\n'.join(err_messages))
 
-        # Take a screenshot of only the newly uploaded SVGs.
-        # Because we called deselect_all before uploading, only the new icons
-        # are selected at this point — no need to call select_all here.
+        # Select only the newly uploaded SVGs, so the screenshots below and in
+        # take_icon_screenshot() show just those. icomoon.io doesn't select
+        # uploaded icons by itself; new icons are the first ones in the top set.
         self.switch_toolbar_option(IcomoonOptionState.SELECT)
+        self.click_latest_icons_in_top_set(len(svgs))
+        print(f"Selected the {len(svgs)} new icon(s).", file=self.log_output)
         new_svgs_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
         self.driver.save_screenshot(new_svgs_path)
 
