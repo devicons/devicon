@@ -33,28 +33,39 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./.github/scripts/requirements.txt
 
-      - name: Run the check_svg script
-        env:
-          PR_TITLE: ${{ github.event.pull_request.title }}
-        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
-
-      - name: Upload the err messages
-        uses: actions/upload-artifact@v4
-        if: success()
-        with:
-          name: err_messages
-          path: ./err_messages.txt
-
       - name: Save the pr num in an artifact
         shell: bash
-        if: success()
         env:
           PR_NUM: ${{ github.event.number }}
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the pr num
         uses: actions/upload-artifact@v4
-        if: success()
         with:
           name: pr_num
           path: ./pr_num.txt
+
+      - name: Run the check_svg script
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
+
+      # Uploaded even if the script crashed: it writes the error to this file
+      - name: Upload the err messages
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: err_messages
+          path: ./err_messages.txt
+          if-no-files-found: ignore
+
+      # Fail the check when issues were found, so the PR shows a red check.
+      # post_check_icon_pr_comment.yml posts the details as a comment.
+      - name: Fail if issues were found
+        shell: bash
+        run: |
+          if [ -s err_messages.txt ]; then
+            echo "::error::Issues found in this PR (details in the check-bot comment):"
+            cat err_messages.txt
+            exit 1
+          fi

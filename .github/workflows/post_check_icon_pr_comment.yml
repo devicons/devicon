@@ -8,11 +8,11 @@ jobs:
   post_result_of_svg_check:
     name: Post the result of the Check SVG Action
     runs-on: ubuntu-latest
+    # The check fails when it finds issues, so post on failure too. If the check
+    # couldn't produce its artifacts at all, the steps below fail and the
+    # "Failure" comment is posted instead.
+    if: github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure'
     steps:
-      - name: Check if the trigger run worked. If it failed, fail the current run.
-        if: github.event.workflow_run.conclusion != 'success'
-        uses: cutenode/action-always-fail@v1.0.1
-
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v7
         if: success()
@@ -50,7 +50,7 @@ jobs:
 
             Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/wiki/SVG-Standards) for more details regarding these errors.
 
-            Please address these issues. When you update this PR, I will check your SVGs again.
+            Please address these issues. When you push new commits or edit the PR title, I will check your PR again.
 
             Thanks for your help,
             SVG-Checker Bot :smile:
