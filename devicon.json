@@ -14193,6 +14193,21 @@
         ]
     },
     {
+        "name": "temporalio",
+        "altnames": [],
+        "tags": [
+            "components",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": []
+        }
+    },
+    {
         "name": "tensorflow",
         "altnames": [],
         "tags": [
