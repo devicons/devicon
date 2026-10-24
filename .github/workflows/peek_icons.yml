@@ -11,7 +11,7 @@ jobs:
     # unsuccessful check (fail due to user),
     # fail due to system, skipped
     name: Peek Icons
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       # Checks out the PR's merge commit; depth 2 so HEAD^1 (the target branch)
       # is available to diff against
@@ -19,10 +19,10 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Setup Python v3.8
+      - name: Setup Python v3.10
         uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |

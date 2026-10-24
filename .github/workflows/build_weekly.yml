@@ -36,7 +36,7 @@ concurrency:
 jobs:
   build:
     name: Build Fonts and CSS
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       should_release: ${{ steps.release-check.outputs.should_release }}
 
@@ -250,7 +250,7 @@ jobs:
     name: Bump Version and Release
     needs: build
     if: needs.build.outputs.should_release == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: production
     outputs:
       version: ${{ steps.bump.outputs.version }}
