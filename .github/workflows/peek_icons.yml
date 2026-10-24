@@ -1,17 +1,23 @@
 name: Peek Icons
 on:
   pull_request:
-    types: [labeled]
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'icons/**'
+      - 'devicon.json'
 jobs:
   peek:
     # four outcomes: successful check and upload,
     # unsuccessful check (fail due to user),
     # fail due to system, skipped
     name: Peek Icons
-    if: github.event.label.name == 'bot:peek'
     runs-on: ubuntu-latest
     steps:
+      # Checks out the PR's merge commit; depth 2 so HEAD^1 (the target branch)
+      # is available to diff against
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Setup Python v3.8
         uses: actions/setup-python@v5
@@ -36,13 +42,11 @@ jobs:
           path: ./pr_num.txt
 
       - name: Run icomoon_peek.py
-        env:
-          PR_TITLE: ${{ github.event.pull_request.title }}
         shell: bash
         run: >
           python ./.github/scripts/icomoon_peek.py
           ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json
-          ./devicon.json ./icons ./ --headless "$PR_TITLE"
+          ./devicon.json ./icons ./ --headless
 
       - name: Upload the err messages (created by icomoon_peek.py)
         uses: actions/upload-artifact@v4

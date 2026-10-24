@@ -1,7 +1,16 @@
 name: "Publish to npm"
 on:
+  # Releases created by hand in the GitHub UI
   release:
     types: [released]
+  # Releases created by build_weekly.yml. Those use GITHUB_TOKEN, which doesn't
+  # trigger other workflows, so build_weekly.yml calls this one directly.
+  workflow_call:
+    inputs:
+      ref:
+        description: 'Tag or branch to publish'
+        required: true
+        type: string
 jobs:
   publish:
     environment: release
@@ -10,14 +19,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           # "ref" specifies the branch to check out.
-          # "github.event.release.target_commitish" is a global variable and specifies the branch the release targeted
-          ref: ${{ github.event.release.target_commitish }}
-      - name: Use Node.js v16
+          # inputs.ref is set when called from build_weekly.yml; otherwise
+          # "github.event.release.target_commitish" is the branch the release targeted
+          ref: ${{ inputs.ref || github.event.release.target_commitish }}
+      - name: Use Node.js v24
         uses: actions/setup-node@v4
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org/ # Specifies the registry, this field is required!
       - run: npm ci
-      - run: npm publish
+      # Forks only do a dry run so they can't publish the real package
+      - run: npm publish ${{ github.repository != 'devicons/devicon' && '--dry-run' || '' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}

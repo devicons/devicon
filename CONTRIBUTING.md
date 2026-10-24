@@ -75,7 +75,7 @@ First of all, thanks for taking the time to contribute! This project can only gr
   <li>Create the SVGs for each <a href="#versionNaming"> SVG versions </a> that you have. Follow the <a href="#SVGStandards">convention</a> listed.</li>
   <li>Put the SVGs of each Icon into its own <a href="#orgGuidelines">folders</a> in <code>/icons</code></li>
   <li><a href="#updateDevicon">Update the <code>devicon.json</code> to include the new Icon</a> </li>
-  <li>Create a separated pull request (PR) towards the <code>develop</code> branch for each Icon.</li>
+  <li>Create a separated pull request (PR) towards the <code>master</code> branch for each Icon.</li>
   <li>Fill out the info as stated in the PR template.</li>
   <li>Include the name of the Icon in the pull request title in this format: <code>new icon: <i>Icon name</i> (<i>versions</i>)</code> </li>
   <li><i>Optional</i>: Reference the issues regarding the new icon and label the PR `feature:icon`. </li>
@@ -344,7 +344,7 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
     Create a new commit to fix the SVGs.
   </li>
   <li>
-    Open a pull request based on the `develop` branch. 
+    Open a pull request based on the `master` branch.
   </li>
   <li>
     <strong>IMPORTANT</strong>: name the pull request <code>update icon: <i>icon-name</i> (<i>versions</i>)</code>. Basically, follow the <a href="#overview">Overview on Submitting Icon</a> but replace the <code>new</code> with <code>update</code> in name of request with the above.
@@ -361,19 +361,19 @@ As an example, let's assume you have created the SVGs for Redhat and Amazon Web 
     You <b>don't</b> have to be in a team to contribute!
 </p>
 <p>
-    The branches <code>master</code> and <code>develop</code> are protected branches and only members
-    with corresponding permissions (see teams below) are able to push changes to them.
+    The <code>master</code> branch is the protected branch and only members
+    with corresponding permissions (see teams below) are able to push changes to it.
     Additional branches <b>must</b> follow the pattern <code><i>username</i>/feature/<i>description</i></code>.
     The <code>/feature/</code> indicates that a change is made to existing code (regardless
-    if it's a fix, refactor or actual feature). The naming convention is based on the <i>gitflow</i>-workflow.
+    if it's a fix, refactor or actual feature).
 </p>
 <p>For organisational purposes we introduced <a href="https://github.com/orgs/devicons/teams">teams</a> with permissions and responsibilities:</p>
 <dl>
     <dt>Supporter (@devicons/supporter)</dt>
     <dd>
         Members of this team are responsible for reviewing pull request (auto assigned), managing issues and preparing the upcoming release.<br />
-        Supporters have <code>Write</code> access to the repository (allowing them to create own branches) 
-        and are allowed to push changes to the <code>develop</code> branch (pull request and status checks required).
+        Supporters have <code>Write</code> access to the repository (allowing them to create own branches)
+        and are allowed to push changes to the <code>master</code> branch (pull request and status checks required).
     </dd>
     <dt>Maintainer (@devicons/maintainer)</dt>
     <dd>
@@ -457,8 +457,7 @@ We are running a Discord server. You can go here to talk, discuss, and more with
 
 <h2 id='release'>Release strategy, conventions, preparation and execution</h2>
 <h5>Release strategy</h5>
-<p>Devicon does not follow a strict release plan. A new release is depended on current amount of contributions, required bugfixes/patches and will be discussed by the team of maintainers.</p>
-<p>Generally speaking: A new release will be published when new icons are added or a bug was fixed. When it's predictable that multiple icons are added in a foreseeable amount of time they are usually wrapped together.</p>
+<p>Devicon releases weekly. Every Monday the <code><a href="/.github/workflows/build_weekly.yml">build_weekly.yml</a></code> workflow builds the fonts for icons added or changed since the last build, and if anything changed since the last release, a maintainer approves the release.</p>
 <h5>Conventions</h5>
 <p>The version naming follows the rules of <a href="https://semver.org/">Semantic Versioning</a>. Given a version number MAJOR.MINOR.PATCH, increment the:</p>
 <ul>
@@ -466,34 +465,17 @@ We are running a Discord server. You can go here to talk, discuss, and more with
     <li>MINOR version when you add functionality <b>(like a new icon)</b> in a backwards compatible manner, and</li>
     <li>PATCH version when you make backwards compatible bug fixes.</li>
 </ul>
+<p>The bump is derived from the labels of the pull requests merged since the last release: <code>release: major</code>, <code>release: minor</code>, or patch if neither is present.</p>
 
 <h5>Release preparation and execution</h5>
+<p>The weekly run handles everything automatically:</p>
 <ol>
-    <li>Define the next release version number based on the conventions</li>
-    <li>Checkout <code>development</code> as <code>draft-release</code> branch</li>
-    <li>Bump the package version using <code>npm version v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i> -m "bump npm version to v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>"</code>  (see <code><a href="https://github.com/devicons/devicon/pull/497">#487</a></code>)</li>
-    <li>Push the branch <code>draft-release</code></li>
-    <li>Manually trigger the workflow <code><a href="https://github.com/devicons/devicon/actions/workflows/build_icons.yml">build_icons.yml</a></code> (which has a <code>workflow_dispatch</code> event trigger) and select the branch <code>draft-release</code> as target branch. This will build a font version of all icons using icomoon and automatically creates a pull request to merge the build result back into <code>draft-release</code></li>
-    <li>Review and approve the auto-create pull request created by the action of the step above</li>
-    <li>Create a pull request towards <code>development</code>. Mention the release number in the pull request title (like "Build preparation for release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).
-      <ul> 
-        <li>
-        Add information about all new icons, fixes, features and enhancements in the description of the pull request. 
-        </li>
-        <li>
-        Take the PRs/commits as a guideline. It's also a good idea to mention and thank all contributions who participated in the release (take description of <code><a href="https://github.com/devicons/devicon/pull/504">#504</a></code> as an example).
-        </li>
-        <li>
-        We now have a script that will do this for us. Check the `build-bot`'s PR message in the last step. There should be a section where it displays the features that have been added to the release. You can copy the markdown there and use it for the release message.
-        </li>
-      </ul>
-    </li>
-    <li>Wait for review and approval of the pull request (you can perform a squash-merge)</li>
-    <li>Once merged create a pull request with BASE <code>master</code> and HEAD <code>development</code>. Copy the description of the earlier pull request.</li>
-    <li>Since it was already approved in the 'development' stage a maintainer is allowed to merge it (<b>DON'T</b> perform a squash-merge).</li>
-    <li>Create a <a href="https://github.com/devicons/devicon/releases/new">new release</a> using the format "<b>Release v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i></b>" as tag and release title. Use the earlier created description as description of the release.</li>
-    <li>Publishing the release will trigger the <a href="/.github/workflows/npm_publish.yml">npm_publish.yml</a> workflow which will execute a <code>npm publish</code> leading to a updated <a href="https://www.npmjs.com/package/devicon">npm package</a> (v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i>).</li>
+    <li>The <code>build</code> job builds the font glyphs of new and updated icons and the CSS with icomoon, and commits them to <code>master</code> with a <code>build:</code> commit. If the build fails, an issue labelled <code>build-failed</code> is created.</li>
+    <li>If anything users receive (SVGs, <code>devicon.json</code>, CSS or fonts) changed since the last release, the <code>release</code> job waits for a maintainer to approve the <code>production</code> environment, then bumps the version, pushes the <code>v<i>MAJOR</i>.<i>MINOR</i>.<i>PATCH</i></code> tag and creates the GitHub release with generated release notes.</li>
+    <li>The <code>publish</code> job runs <a href="/.github/workflows/npm_publish.yml">npm_publish.yml</a>, which updates the <a href="https://www.npmjs.com/package/devicon">npm package</a>.</li>
+    <li>If icons fail to appear on the website, clear the CDN cache.</li>
 </ol>
+<p>To build and release outside the weekly schedule, run <code>build_weekly.yml</code> manually; it does the same as the weekly run. The <code>bump</code> input overrides the label-derived version bump.</p>
 
 <h2 id='resources'>Recommended resources and tools</h2>
 

@@ -1,0 +1,387 @@
+name: Weekly Build and Release
+# Runs every Monday at 2 AM UTC, or manually via workflow_dispatch (same steps).
+#
+#   build   - (re)builds font glyphs for new/changed icons and the CSS, commits
+#             them to master as "build: ...". Decides whether there's anything
+#             to release.
+#   release - waits for approval on the "production" environment, then bumps
+#             the version, tags and creates the GitHub release.
+#   publish - publishes the release to npm.
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # 2 AM UTC every Monday
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Version bump level (auto = derive from PR labels)'
+        required: false
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - patch
+          - minor
+          - major
+
+permissions:
+  contents: write
+  issues: write
+
+# Never run two builds/releases at once — they'd race on icomoon.json and tags
+concurrency:
+  group: build-and-release
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Fonts and CSS
+    runs-on: ubuntu-latest
+    outputs:
+      should_release: ${{ steps.release-check.outputs.should_release }}
+
+    steps:
+      # Token for pushing to master. See "Pushing to a protected master" below.
+      - name: Get bot token
+        id: bot-token
+        if: vars.BOT_APP_ID != ''
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.bot-token.outputs.token || secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Check for icon changes since last build
+        id: check-changes
+        run: |
+          # Find the last commit whose message starts with "build:"
+          SINCE=$(git log --format="%H %s" | awk '/^[a-f0-9]+ build:/ { print $1; exit }')
+
+          if [ -z "$SINCE" ]; then
+            echo "No previous build commit found - falling back to last release tag"
+            SINCE=$(git describe --tags --abbrev=0 --match 'v[0-9]*' 2>/dev/null || true)
+          fi
+          if [ -z "$SINCE" ]; then
+            echo "No release tag found either - checking all history"
+            SINCE=$(git rev-list --max-parents=0 HEAD | tail -1)
+          fi
+          echo "Building changes since $SINCE"
+          echo "since=$SINCE" >> $GITHUB_OUTPUT
+
+          if git diff --quiet "$SINCE" HEAD -- icons/ devicon.json; then
+            echo "No icon changes since last build — skipping build"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Python 3.10
+        if: steps.check-changes.outputs.has_changes == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Setup Node.js
+        if: steps.check-changes.outputs.has_changes == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python dependencies
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ./.github/scripts/requirements.txt
+
+      - name: Install Node dependencies
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: npm install
+
+      - name: Install Firefox
+        if: steps.check-changes.outputs.has_changes == 'true'
+        uses: browser-actions/setup-firefox@v1
+
+      - name: Make geckodriver executable
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: chmod +x ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver
+
+      # Rebuilds icons whose glyphs don't match devicon.json (new icons, changed
+      # font versions) or whose font SVGs changed since the last build. Exits
+      # successfully without touching anything if there's nothing to build.
+      - name: Run Icomoon build
+        if: steps.check-changes.outputs.has_changes == 'true'
+        id: build
+        continue-on-error: true
+        env:
+          SINCE: ${{ steps.check-changes.outputs.since }}
+        run: |
+          python ./.github/scripts/icomoon_build_githubless.py \
+            ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver \
+            ./icomoon.json \
+            ./devicon.json \
+            ./icons \
+            ./ \
+            --headless \
+            --since "$SINCE"
+
+      # Always rebuilt when icons/devicon.json changed: aliases and colors in
+      # devicon.json end up in devicon.min.css even when no glyphs change.
+      - name: Build CSS
+        if: steps.check-changes.outputs.has_changes == 'true' && steps.build.outcome == 'success'
+        id: build-css
+        continue-on-error: true
+        run: npm run build-css
+
+      - name: Upload build log
+        uses: actions/upload-artifact@v4
+        if: always() && steps.check-changes.outputs.has_changes == 'true'
+        with:
+          name: build-log
+          path: ./log.txt
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        if: always() && steps.check-changes.outputs.has_changes == 'true'
+        with:
+          name: build-screenshots
+          path: ./screenshots/
+          if-no-files-found: ignore
+
+      - name: Upload geckodriver log on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: geckodriver-log
+          path: ./geckodriver.log
+
+      - name: Handle build failure
+        if: steps.check-changes.outputs.has_changes == 'true' && (steps.build.outcome == 'failure' || steps.build-css.outcome == 'failure')
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toISOString().split('T')[0];
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            // Ensure the build-failed label exists
+            try {
+              await github.rest.issues.getLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: 'build-failed'
+              });
+            } catch (e) {
+              await github.rest.issues.createLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: 'build-failed',
+                color: 'd73a4a',
+                description: 'Weekly build failed'
+              });
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Weekly build failed - ${today}`,
+              body: `The weekly Icomoon build failed.\n\n**Workflow run:** ${runUrl}\n\nPlease investigate and re-run manually once fixed using the \`workflow_dispatch\` trigger on \`build_weekly.yml\`.`,
+              labels: ['build-failed']
+            });
+
+            core.setFailed('Weekly build failed - issue created');
+
+      - name: Commit build artifacts
+        if: steps.check-changes.outputs.has_changes == 'true' && steps.build.outcome == 'success' && steps.build-css.outcome == 'success'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          if ! git diff --staged --quiet; then
+            git commit -m "build: generate font files and CSS"
+            # master may have moved while the build ran
+            git pull --rebase origin master
+            git push origin HEAD:master
+          else
+            echo "No build artifacts changed"
+          fi
+
+      # Release when anything users get (via npm / jsDelivr) changed since the
+      # last release tag: SVGs, devicon.json, CSS or fonts. Decided here rather
+      # than in the release job so weeks with nothing to ship don't ask for an
+      # approval. Skipped (= no release) if the build failed.
+      - name: Check for changes to release
+        id: release-check
+        run: |
+          SHIPPED="icons devicon.json devicon.min.css devicon-base.css fonts"
+          LAST_TAG=$(git describe --tags --abbrev=0 --match 'v[0-9]*' 2>/dev/null || true)
+          if [ -z "$LAST_TAG" ]; then
+            echo "No previous release tag — releasing"
+            echo "should_release=true" >> $GITHUB_OUTPUT
+          elif git diff --quiet "$LAST_TAG" HEAD -- $SHIPPED; then
+            echo "Nothing to release since $LAST_TAG"
+            echo "should_release=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes to release since $LAST_TAG:"
+            git diff --stat "$LAST_TAG" HEAD -- $SHIPPED | tail -1
+            echo "should_release=true" >> $GITHUB_OUTPUT
+          fi
+
+  # ── Release gate ─────────────────────────────────────────────────────────────
+  # This job requires a manual approval in the "production" GitHub Environment
+  # before bumping the version and publishing the release.
+  #
+  # One-time setup (repo admin):
+  #   Settings → Environments → New environment → name it "production"
+  #   Add required reviewers (maintainers who should approve releases).
+  #
+  # ── Pushing to a protected master ────────────────────────────────────────────
+  # The build and release jobs push commits/tags straight to master. When master
+  # is protected, GITHUB_TOKEN can't do that, so both jobs use a token from a
+  # GitHub App that is on the ruleset's bypass list:
+  #   vars.BOT_APP_ID             - the App ID
+  #   secrets.BOT_APP_PRIVATE_KEY - a private key generated for the app
+  # The app only needs "Contents: Read and write". Without these set, the jobs
+  # fall back to GITHUB_TOKEN (fine for an unprotected master).
+  release:
+    name: Bump Version and Release
+    needs: build
+    if: needs.build.outputs.should_release == 'true'
+    runs-on: ubuntu-latest
+    environment: production
+    outputs:
+      version: ${{ steps.bump.outputs.version }}
+
+    steps:
+      - name: Get bot token
+        id: bot-token
+        if: vars.BOT_APP_ID != ''
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          # Explicit ref so we get the build: commit pushed by the build job,
+          # not the commit the workflow was triggered on
+          ref: master
+          token: ${{ steps.bot-token.outputs.token || secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Find commits since last release
+        id: range
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 --match 'v[0-9]*' 2>/dev/null || true)
+          if [ -z "$LAST_TAG" ]; then
+            echo "No previous release tag — using full history"
+            echo "range=HEAD" >> $GITHUB_OUTPUT
+          else
+            echo "Last release: $LAST_TAG"
+            echo "range=${LAST_TAG}..HEAD" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Determine version bump level
+        id: version-bump
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const manualBump = '${{ inputs.bump }}';
+            if (manualBump && manualBump !== 'auto') {
+              console.log('Manual bump override:', manualBump);
+              core.setOutput('bump', manualBump);
+              return;
+            }
+
+            const range = '${{ steps.range.outputs.range }}';
+            const { execSync } = require('child_process');
+
+            let log = '';
+            try {
+              log = execSync(`git log --format="%s" ${range}`).toString().trim();
+            } catch (e) {
+              console.log('Could not get git log:', e.message);
+            }
+
+            // Extract PR numbers from squash commit messages like "new icon: foo (#123)"
+            const prNumbers = [...new Set([...log.matchAll(/\(#(\d+)\)/g)].map(m => parseInt(m[1])))];
+            console.log('PR numbers found in commits:', prNumbers);
+
+            let bump = 'patch';
+
+            for (const prNumber of prNumbers) {
+              try {
+                const { data: pr } = await github.rest.pulls.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber
+                });
+
+                const labels = pr.labels.map(l => l.name);
+                console.log(`PR #${prNumber} labels:`, labels);
+
+                if (labels.includes('release: major')) {
+                  bump = 'major';
+                  break; // Can't go higher
+                } else if (labels.includes('release: minor') && bump !== 'major') {
+                  bump = 'minor';
+                }
+              } catch (e) {
+                console.log(`Could not fetch PR #${prNumber}:`, e.message);
+              }
+            }
+
+            console.log('Final version bump:', bump);
+            core.setOutput('bump', bump);
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Bump version
+        id: bump
+        run: |
+          BUMP="${{ steps.version-bump.outputs.bump }}"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          npm version $BUMP -m "chore: bump version to %s"
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          git push --follow-tags
+
+      # Deliberately uses GITHUB_TOKEN (github-script's default), not the bot
+      # token: a release created with GITHUB_TOKEN doesn't trigger npm_publish.yml,
+      # so the publish job below is the only thing that publishes to npm.
+      - name: Create GitHub release
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const version = '${{ steps.bump.outputs.version }}';
+            const bump = '${{ steps.version-bump.outputs.bump }}';
+
+            await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: `v${version}`,
+              name: `Release v${version}`,
+              generate_release_notes: true,
+              draft: false
+            });
+
+            console.log(`Released v${version} (${bump} bump).`);
+
+  publish:
+    name: Publish to npm
+    needs: release
+    uses: ./.github/workflows/npm_publish.yml
+    with:
+      ref: v${{ needs.release.outputs.version }}
+    secrets: inherit

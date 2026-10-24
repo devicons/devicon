@@ -61,7 +61,7 @@
     <li><a href="#request-icon">Requesting Icon</a></li>
     <li><a href="#contribute">Contributing</a></li>
     <li><a href="#discord-community">Discord Community</a></li>
-    <li><a href="#develop-vs-master"><code>develop</code> vs <code>master</code></a></li>
+    <li><a href="#branching-and-releases">Branching and Releases</a></li>
     <li><a href="#stale-prs">Stale Pull Requests</a></li>
     <li><a href="#building-devicon">Building Devicon</a></li>
 </ol>
@@ -180,30 +180,20 @@ Add the following CSS rules in your stylesheet:
 We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join the official Discord Server <a href="https://discord.gg/hScy8KWACQ">here!</a>
 </p>
 
-<h2 id="develop-vs-master"><code>develop</code> vs <code>master</code></h2>
+<h2 id="branching-and-releases">Branching and Releases</h2>
 <p>
-All official releases shall be in <code>master</code>. Any updates in between (icons, features, etc.) will be kept in <code>develop</code>.
+Devicon uses trunk-based development. <code>master</code> is the only long-lived branch, and all pull requests should target it.
 </p>
-<b><code>develop</code> contains:</b>
 <ul>
     <li>
-        Latest SVGs (non-optimized).
+        Approved pull requests are merged straight into <code>master</code>.
     </li>
     <li>
-        No icons for the latest SVGs. These will be built at every release.<br>
-        Can be built manually. See <a href="#building-devicon"><i>Building Devicon</i></a>.
+        Font files and CSS for newly merged icons are built by a weekly job, so <code>master</code> can contain SVGs whose font icons have not been built yet.<br>
+        You can also build them manually. See <a href="#building-devicon"><i>Building Devicon</i></a>.
     </li>
     <li>
-        Experimental changes.
-    </li>
-</ul>
-<b><code>master</code> contains:</b>
-<ul>
-    <li>
-        Latest official release, which contains all the SVGs and icons.
-    </li>
-    <li>
-        Official, tested changes.
+        When a weekly build produces new icons, a maintainer approves the release, and the version is bumped and published.
     </li>
 </ul>
 
@@ -232,7 +222,7 @@ Follow these steps to build the website and icons either locally or using <a hre
 <h2 id="using-gitpod">Using Gitpod.io</h2>
 <p>By using <a href=https://www.gitpod.io>Gitpod.io</a>, you can easily build the icons and install the<br>required dependencies in one single click. No extra setup is required.</p>
 
-<a href=https://gitpod.io/#https://github.com/devicons/devicon/tree/develop><img src=https://gitpod.io/button/open-in-gitpod.svg alt="Open in Gitpod"></img></a>
+<a href=https://gitpod.io/#https://github.com/devicons/devicon/tree/master><img src=https://gitpod.io/button/open-in-gitpod.svg alt="Open in Gitpod"></img></a>
 
 > **Note**
 > In case some of the commands are not properly ran, you can\

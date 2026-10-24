@@ -160,11 +160,29 @@ class SeleniumRunner:
         self.driver = self.create_driver_instance(options, geckodriver_path)
 
         self.driver.get(self.ICOMOON_URL)
-        # wait until the whole web page is loaded by testing the hamburger input
-        WebDriverWait(self.driver, self.LONG_WAIT_IN_SEC).until(
-            ec.element_to_be_clickable((By.XPATH, "(//i[@class='icon-menu'])[2]"))
-        )
-        print("Accessed icomoon.io", file=self.log_output)
+
+        # wait until the whole web page is loaded
+        # Try original selector first, fall back to a more generic check
+        try:
+            WebDriverWait(self.driver, self.MED_WAIT_IN_SEC).until(
+                ec.element_to_be_clickable((By.XPATH, "(//i[@class='icon-menu'])[2]"))
+            )
+            print("Accessed icomoon.io (via icon-menu selector)", file=self.log_output)
+        except SeleniumTimeoutException:
+            print("icon-menu selector not found, trying fallback selectors...", file=self.log_output)
+            # Fallback: wait up to 90s for any file input (the core upload mechanism)
+            # icomoon.io can be slow to initialize the Angular app
+            try:
+                WebDriverWait(self.driver, 90).until(
+                    ec.presence_of_element_located((By.CSS_SELECTOR, "input[type='file']"))
+                )
+                print("Accessed icomoon.io (via file input fallback)", file=self.log_output)
+            except SeleniumTimeoutException:
+                self.driver.save_screenshot("./screenshots/icomoon_load_failed.png")
+                raise Exception(
+                    f"Could not load icomoon.io after 90s. Page title: '{self.driver.title}'. "
+                    "The page may have changed structure or blocked headless browsing."
+                )
 
     def create_driver_instance(self, options: Options, geckodriver_path: str):
         """
@@ -227,7 +245,10 @@ class SeleniumRunner:
         input two times before the menu appears.
         :return: None.
         """
-        top_set_hamburger_input_xpath = '//*[@id="setH2"]/button[1]/i' 
+        # Target the first icon-menu button inside any h1 set header.
+        # icomoon always renders the most recently uploaded (top) set first in the DOM,
+        # so [1] reliably selects it without relying on a hardcoded element ID.
+        top_set_hamburger_input_xpath = '(//h1//i[@class="icon-menu"])[1]'
         hamburger_input = self.driver.find_element_by_xpath(
             top_set_hamburger_input_xpath
         )

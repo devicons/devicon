@@ -4,22 +4,25 @@ on:
     workflows: ['Peek Icons']
     types:
       - completed
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
 jobs:
   post_screenshots_in_comment:
     name: Post the screenshot
     runs-on: ubuntu-latest
     if: github.event.action == 'completed' && github.event.workflow_run.conclusion != 'skipped'
     env:
-      # three possible values: 'skipped', 'success', 'failure'
-      # have to print github.event to console to see these values
-      # note: can't use this env variable up in the if statement above for some reason.
-      # I don't think it's an ordering issue cause it seems 'if' is auto evaluate first
       PEEK_STATUS: ${{ github.event.workflow_run.conclusion }}
+
     steps:
       - name: Check state of last run
-        run: echo $PEEK_STATUS
+        run: echo "Peek status $PEEK_STATUS"
 
-      - name: Download workflow artifact
+      - name: Download workflow artifacts
         uses: dawidd6/action-download-artifact@v7
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -28,156 +31,234 @@ jobs:
 
       - name: Read the pr_num file
         id: pr_num_reader
-        uses: juliangruber/read-file-action@v1.1.6
-        with:
-          path: ./pr_num/pr_num.txt
+        run: |
+          PR_NUM=$(cat ./pr_num/pr_num.txt | tr -d '[:space:]')
+          echo "pr_num=$PR_NUM" >> $GITHUB_OUTPUT
 
       - name: Read the err message file
-        if: success()
         id: err_message_reader
-        uses: juliangruber/read-file-action@v1.1.6
-        with:
-          path: ./err_messages/err_messages.txt
+        run: |
+          if [ -f ./err_messages/err_messages.txt ]; then
+            ERR=$(cat ./err_messages/err_messages.txt)
+          else
+            ERR=""
+          fi
+          echo "err_message<<EOF" >> $GITHUB_OUTPUT
+          echo "$ERR" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
-      # using this trigger allowed us to access secrets
-      - name: Upload screenshot of the SVGs gotten from the artifacts
-        id: svgs_overview_img_step
-        if: env.PEEK_STATUS == 'success' && success()
-        uses: devicons/public-upload-to-imgur@v2.2.2
+      - name: Upload screenshots to screenshots branch
+        if: env.PEEK_STATUS == 'success'
+        id: upload_screenshots
+        uses: actions/github-script@v7
         with:
-          path: ./screenshots/new_svgs.png
-          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const prNum = '${{ steps.pr_num_reader.outputs.pr_num }}';
+            const repo = context.repo;
+            const branch = 'screenshots';
+            const screenshotsDir = './screenshots';
 
-      - name: Upload zoomed in screenshot of the SVGs gotten from the artifacts
-        id: svgs_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.2
-        if: env.PEEK_STATUS == 'success' && success()
-        with:
-          path: ./screenshots/new_svg_*.png
-          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+            // A successful peek without screenshots means the PR changed no icon
+            // SVGs (e.g. a devicon.json-only change), so there's nothing to post
+            const files = fs.existsSync(screenshotsDir)
+              ? fs.readdirSync(screenshotsDir).filter(f => f.endsWith('.png'))
+              : [];
+            if (files.length === 0) {
+              console.log('No screenshots — nothing to post');
+              core.setOutput('skipped', 'true');
+              return;
+            }
 
-      - name: Upload screenshot of the newly made icons gotten from the artifacts
-        id: icons_overview_img_step
-        if: env.PEEK_STATUS == 'success' && success()
-        uses: devicons/public-upload-to-imgur@v2.2.2
-        with:
-          path: ./screenshots/new_icons.png
-          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+            // Get or create screenshots branch
+            let branchSha;
+            try {
+              const { data: ref } = await github.rest.git.getRef({
+                ...repo,
+                ref: `heads/${branch}`
+              });
+              branchSha = ref.object.sha;
+            } catch (e) {
+              const { data: master } = await github.rest.git.getRef({
+                ...repo,
+                ref: 'heads/master'
+              });
+              const { data: newBranch } = await github.rest.git.createRef({
+                ...repo,
+                ref: `refs/heads/${branch}`,
+                sha: master.object.sha
+              });
+              branchSha = newBranch.object.sha;
+            }
 
-      - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
-        id: icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.2
-        if: env.PEEK_STATUS == 'success' && success()
-        with:
-          path: ./screenshots/new_icon_*.png
-          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+            // Get current tree SHA
+            const { data: commit } = await github.rest.git.getCommit({
+              ...repo,
+              commit_sha: branchSha
+            });
 
-      - name: Upload zoomed in screenshot of the colored icons gotten from the artifacts 
-        id: colored_icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.2
-        if: env.PEEK_STATUS == 'success' && success()
-        with:
-          path: ./screenshots/new_colored_icon_*.png
-          client_id: ${{secrets.IMGUR_CLIENT_ID}}
+            // Upload each screenshot as a blob
+            const blobs = await Promise.all(files.map(async f => {
+              const content = fs.readFileSync(path.join(screenshotsDir, f));
+              const { data: blob } = await github.rest.git.createBlob({
+                ...repo,
+                content: content.toString('base64'),
+                encoding: 'base64'
+              });
+              return { path: `pr-${prNum}/${f}`, sha: blob.sha, mode: '100644', type: 'blob' };
+            }));
 
-      - name: Comment on the PR about the result - Success
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
-        if: env.PEEK_STATUS == 'success' && success()
+            // Create new tree and commit
+            const { data: tree } = await github.rest.git.createTree({
+              ...repo,
+              base_tree: commit.tree.sha,
+              tree: blobs
+            });
+
+            const { data: newCommit } = await github.rest.git.createCommit({
+              ...repo,
+              message: `screenshots: add PR #${prNum} previews`,
+              tree: tree.sha,
+              parents: [branchSha]
+            });
+
+            await github.rest.git.updateRef({
+              ...repo,
+              ref: `heads/${branch}`,
+              sha: newCommit.sha
+            });
+
+            const baseUrl = `https://raw.githubusercontent.com/${repo.owner}/${repo.repo}/${branch}/pr-${prNum}`;
+            core.setOutput('base_url', baseUrl);
+            core.setOutput('files', files.join(','));
+            console.log(`Uploaded ${files.length} screenshots to ${baseUrl}`);
+
+      - name: Comment on the PR - Success
+        if: env.PEEK_STATUS == 'success' && success() && steps.upload_screenshots.outputs.skipped != 'true'
+        uses: actions/github-script@v7
         env:
-          MESSAGE: |
-            Hi there,
-
-            I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).
-
-            Here are the SVGs as intepreted by Icomoon when we upload the files:
-            {0}
-
-            Here are the zoomed-in screenshots of the added icons as **SVGs**:
-            {1}
-
-            Here are the icons that will be generated by Icomoon:
-            {2}
-
-            Here are the zoomed-in screenshots of the added icons as **icons**:
-            {3}
-
-            Here are the colored versions:
-            {4}
-            {5}
-
-            The maintainers will now check for:
-            1. The number of Glyphs matches the number of SVGs that were selected.
-            2. The icons (second group of pictures) look the same as the SVGs (first group of pictures).
-            3. The icons are of high quality (legible, matches the official logo, etc.)
-            4. A new object is added in the `devicon.json` file at the correct alphabetic position as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)
-
-            In case of font issues, it might be caused by Icomoon not accepting strokes in the SVGs.  Check this [doc](https://icomoon.io/#faq/importing) for more details and fix the issues as instructed by Icomoon and update this PR once you are done.
-
-            Thank you for contributing to Devicon! I hope that your icons are accepted into the repository.
-
-            Note: If the images don't show up, it has been autodeleted by Imgur after 6 months due to our API choice.
-
-            Cheers,
-            Peek Bot :blush:
+          BASE_URL: ${{ steps.upload_screenshots.outputs.base_url }}
+          FILES: ${{ steps.upload_screenshots.outputs.files }}
+          ERR_MSG: ${{ steps.err_message_reader.outputs.err_message }}
         with:
-          type: create
-          issue_number: ${{ steps.pr_num_reader.outputs.content }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          body: >
-            ${{
-              format(
-                env.MESSAGE,
-                fromJSON(steps.svgs_overview_img_step.outputs.markdown_urls)[0],
-                join(fromJSON(steps.svgs_detailed_img_step.outputs.markdown_urls), '  '),
-                fromJSON(steps.icons_overview_img_step.outputs.markdown_urls)[0],
-                join(fromJSON(steps.icons_detailed_img_step.outputs.markdown_urls), '  '),
-                join(fromJSON(steps.colored_icons_detailed_img_step.outputs.markdown_urls), '  '),
-                steps.err_message_reader.outputs.content
-              )
-            }}
+          script: |
+            const prNum = parseInt('${{ steps.pr_num_reader.outputs.pr_num }}');
+            const baseUrl = process.env.BASE_URL;
+            const files = process.env.FILES.split(',');
+            const errMsg = process.env.ERR_MSG || '';
 
-      - name: Comment on the PR about the result - Failure
-        if: env.PEEK_STATUS == 'failure'
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
+            const img = (name) => files.includes(name)
+              ? `![${name}](${baseUrl}/${name})`
+              : '_not generated_';
+
+            const imgGroup = (prefix) => files
+              .filter(f => f.startsWith(prefix))
+              .map(f => `![${f}](${baseUrl}/${f})`)
+              .join('  \n');
+
+            const body = [
+              'Hi there,',
+              '',
+              "I'm Devicons' Peek Bot and I just peeked at the icons that you wanted to add using [icomoon.io](https://icomoon.io/app/#/select).",
+              '',
+              'Here are the zoomed-in screenshots of the added icons as **SVGs**:',
+              imgGroup('new_svg_'),
+              '',
+              'Here are the zoomed-in screenshots of the added icons as **font icons**:',
+              imgGroup('new_icon_'),
+              '',
+              'Here are the colored versions:',
+              imgGroup('new_colored_icon_'),
+              '',
+              errMsg ? errMsg : '',
+              '',
+              'The maintainers will now check for:',
+              '1. The number of Glyphs matches the number of SVGs that were selected.',
+              '2. The icons (second group of pictures) look the same as the SVGs (first group of pictures).',
+              '3. The icons are of high quality (legible, matches the official logo, etc.)',
+              '4. A new object is added in the `devicon.json` file at the correct alphabetic position as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)',
+              '',
+              'In case of font issues, it might be caused by Icomoon not accepting strokes in the SVGs. Check this [doc](https://icomoon.io/#faq/importing) for more details.',
+              '',
+              'Thank you for contributing to Devicon!',
+              '',
+              'Cheers,',
+              'Peek Bot 😊',
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNum,
+              body
+            });
+
+      - name: Comment on the PR - Peek failure
+        if: env.PEEK_STATUS == 'failure' && success()
+        uses: actions/github-script@v7
         env:
-          MESSAGE: |
-            Hi there,
-
-            I'm Devicons' Peek Bot and it seems we've ran into a problem.
-
-            ```
-            {0}
-            ```
-
-            Make sure that:
-
-            - Your SVGs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/wiki/Organizing-SVGs).
-            - Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)
-            - Your PR title follows the format seen [here](https://github.com/devicons/devicon/wiki/Overview-on-Submitting-Icons)
-
-            I will retry once everything is fixed. If I still fail or there are other error, the maintainers will investigate.
-
-            Best of luck,
-            Peek Bot :relaxed:
+          ERR_MSG: ${{ steps.err_message_reader.outputs.err_message }}
         with:
-          type: create
-          issue_number: ${{ steps.pr_num_reader.outputs.content }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
-      - name: Comment on the PR about the result - Failure
+          script: |
+            const prNum = parseInt('${{ steps.pr_num_reader.outputs.pr_num }}');
+            const errMsg = process.env.ERR_MSG || 'Unknown error';
+
+            const body = [
+              'Hi there,',
+              '',
+              "I'm Devicons' Peek Bot and it seems we've run into a problem.",
+              '',
+              '```',
+              errMsg,
+              '```',
+              '',
+              'Make sure that:',
+              '',
+              '- Your SVGs are named and added correctly to the /icons folder as seen [here](https://github.com/devicons/devicon/wiki/Organizing-SVGs).',
+              '- Your icon information has been added to the `devicon.json` as seen [here](https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60)',
+              '- Your PR title follows the format seen [here](https://github.com/devicons/devicon/wiki/Overview-on-Submitting-Icons)',
+              '',
+              'I will retry once everything is fixed. If I still fail, the maintainers will investigate.',
+              '',
+              'Best of luck,',
+              'Peek Bot 😊',
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNum,
+              body
+            });
+
+      - name: Comment on the PR - Workflow error
         if: failure()
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
-        env:
-          MESSAGE: |
-            Hi there,
-
-            I'm Devicons' Peek Bot and we've ran into a problem with the `post_peek_screenshot` workflow.
-            The maintainers will take a look and fix the issue. Please wait for further instructions.
-
-            Thank you,
-            Peek Bot :relaxed:
+        uses: actions/github-script@v7
         with:
-          type: create
-          issue_number: ${{ steps.pr_num_reader.outputs.content }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          body: env.MESSAGE
+          script: |
+            let prNum;
+            try {
+              prNum = parseInt('${{ steps.pr_num_reader.outputs.pr_num }}');
+              if (!prNum) throw new Error('no pr_num');
+            } catch (e) {
+              core.warning('Could not read PR number — skipping comment');
+              return;
+            }
+
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNum,
+              body: [
+                'Hi there,',
+                '',
+                "I'm Devicons' Peek Bot and we've run into a problem with the `post_peek_screenshot` workflow.",
+                `The maintainers will take a look at the [workflow run](${runUrl}) and fix the issue.`,
+                '',
+                'Thank you,',
+                'Peek Bot 😊',
+              ].join('\n')
+            });

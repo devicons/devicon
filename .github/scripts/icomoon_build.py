@@ -52,11 +52,6 @@ def main():
         print("Creating the release message by querying the GitHub API...", file=logfile)
         get_release_message(args.token, logfile)
 
-        print("Closing issues with the `in-develop` label.", file=logfile)
-        issues = api_handler.get_issues_by_labels(args.token, ["in-develop"])
-        issue_nums = [issue_num["number"] for issue_num in issues]
-        api_handler.close_issues(args.token, issue_nums)
-
         print("Task completed.", file=logfile)
     except TimeoutException as e:
         util.exit_with_err(Exception("Selenium Time Out Error: \n" + str(e)), logfile)
@@ -80,14 +75,17 @@ def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, token
     from the `devicon.json`.
     """
     devicon_json = filehandler.get_json_file_content(devicon_json_path)
-    pull_reqs = api_handler.get_merged_pull_reqs_since_last_release(token, logfile)
     new_icons = []
 
-    for pull_req in pull_reqs:
-        if api_handler.is_feature_icon(pull_req):
-            filtered_icon = util.find_object_added_in_pr(devicon_json, pull_req["title"])
-            if filtered_icon not in new_icons:
-                new_icons.append(filtered_icon)
+    try:
+        pull_reqs = api_handler.get_merged_pull_reqs_since_last_release(token, logfile)
+        for pull_req in pull_reqs:
+            if api_handler.is_feature_icon(pull_req):
+                filtered_icon = util.find_object_added_in_pr(devicon_json, pull_req["title"])
+                if filtered_icon not in new_icons:
+                    new_icons.append(filtered_icon)
+    except Exception as e:
+        print(f"Warning: could not fetch PRs from GitHub API: {e}. Falling back to devicon.json diff.", file=logfile)
 
     # get any icons that might not have been found by the API
     # sometimes happen due to the PR being opened before the latest build release

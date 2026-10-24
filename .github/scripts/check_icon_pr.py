@@ -10,49 +10,67 @@ from build_assets import filehandler, arg_getters, util
 
 def main():
     """
-    Check the quality of the svgs IF this is an icon PR. Else, does nothing.
-    If any svg error is found, create a json file called 'svg_err_messages.json'
-    in the root folder that will contains the error messages.
+    Check the icons touched by this PR, found from the changed files: the
+    `devicon.json` entries and the SVGs. If the PR changes SVGs, also check that
+    it covers a single icon and that the PR title describes it.
+    Error messages are written to './err_messages.txt' (empty if all is well).
     """
     args = arg_getters.get_check_icon_pr_args()
     try:
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
-
-        devicon_err_msg = []
-        #First check if devicon.json is sorted
-        if sorted(all_icons, key=lambda d: d['name']) != all_icons:
-            devicon_err_msg.append(f"devicon.json is not sorted correctly.\nPlease make sure that your icon is added in the `devicon.json` file at the correct alphabetic position\nas seen here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60")
-
-        # get only the icon object that has the name matching the pr title
-        filtered_icon = util.find_object_added_in_pr(all_icons, args.pr_title)
-        print("Checking devicon.json object: " + str(filtered_icon))
-        devicon_err_msg.append(check_devicon_object(filtered_icon))
-
-        # check the file names
-        filename_err_msg = ""
-        svgs = None
-        try:
-            svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, as_str=False)
-            print("SVGs to check: ", *svgs, sep='\n')
-        except ValueError as e:
-            filename_err_msg = "Error found regarding filenames:\n- " + e.args[0]
-
-        # check the svgs
-        if svgs is None or len(svgs) == 0:
-            print("No SVGs to check, ending script.")
-            svg_err_msg = "Error checking SVGs: no SVGs to check. Might be caused by above issues."
-        else:
-            svg_err_msg = check_svgs(svgs, filtered_icon)
+        icons_by_name = {icon["name"]: icon for icon in all_icons}
+        changes = util.get_pr_icon_changes(all_icons, args.base)
+        print("Changed SVGs:", changes["svgs"])
+        print("Changed devicon.json entries:", changes["json"])
 
         err_msg = []
-        if devicon_err_msg != []:
-            err_msg.extend(devicon_err_msg)
+        #First check if devicon.json is sorted
+        if sorted(all_icons, key=lambda d: d['name']) != all_icons:
+            err_msg.append(f"devicon.json is not sorted correctly.\nPlease make sure that your icon is added in the `devicon.json` file at the correct alphabetic position\nas seen here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60")
 
-        if filename_err_msg != "":
-            err_msg.append(filename_err_msg)
+        # An icon PR changes the SVGs of exactly one icon, and its title says which
+        svg_icons = sorted(changes["svgs"])
+        if len(svg_icons) > 1:
+            err_msg.append(f"This PR changes the SVGs of several icons ({', '.join(svg_icons)}).\nPlease open a separate PR for each icon.")
+        for name in svg_icons:
+            if name not in icons_by_name:
+                err_msg.append(f"`icons/{name}/` was changed, but `devicon.json` has no entry named \"{name}\".")
+        if len(svg_icons) == 1 and svg_icons[0] in icons_by_name:
+            name = svg_icons[0]
+            icon = icons_by_name[name]
+            versions, invalid_files = util.get_svg_versions(icon, changes["svgs"][name])
+            if invalid_files:
+                err_msg.append("These SVG file names don't match our pattern of `<name>-(original|plain|line)(-wordmark)?.svg`:\n" +
+                    "\n".join(f"- icons/{name}/{file}" for file in invalid_files))
+            if versions:
+                title_err = util.check_pr_title(args.pr_title, icon, name not in changes["existing"], versions)
+                if title_err:
+                    err_msg.append(title_err)
 
-        if svg_err_msg != "":
-            err_msg.append(svg_err_msg)
+        # Check every icon this PR touches
+        to_check = sorted(set(svg_icons) | set(changes["json"]))
+        for name in to_check:
+            if name not in icons_by_name:
+                continue
+            icon = icons_by_name[name]
+            print("Checking devicon.json object: " + str(icon))
+            devicon_err = check_devicon_object(icon)
+            if devicon_err:
+                err_msg.append(devicon_err)
+
+            try:
+                svgs = filehandler.get_svgs_paths([icon], args.icons_folder_path, as_str=False)
+                print("SVGs to check: ", *svgs, sep='\n')
+            except ValueError as e:
+                err_msg.append(f"Error found regarding filenames of \"{name}\":\n- " + e.args[0])
+                continue
+
+            if len(svgs) == 0:
+                err_msg.append(f"Error checking SVGs of \"{name}\": no SVGs to check. Might be caused by above issues.")
+            else:
+                svg_err = check_svgs(svgs, icon)
+                if svg_err:
+                    err_msg.append(svg_err)
 
         filehandler.write_to_file("./err_messages.txt", "\n\n".join(err_msg))
         print("Task completed.")

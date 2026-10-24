@@ -1,7 +1,6 @@
 import requests
 import sys
 import re
-from typing import List
 from io import FileIO
 
 
@@ -103,83 +102,6 @@ def find_all_authors(pull_req_data, token):
             authors.add(commit["commit"]["author"]["name"]) 
             print(f"This URL didn't have an `author` attribute: {pull_req_data['commits_url']}")
     return ", ".join(["@" + author for author in list(authors)])
-
-
-def label_issues(token: str, issues: List[str], labels: List[str]):
-    """
-    Label the issues specified with the label specified.
-    :param token: the GitHub API token.
-    :param issues: the issue numbers (as str) that we are labelling.
-    :param labels: the labels that we are labelling.
-    """
-    headers = {
-        "Authorization": f"token {token}",
-        "accept": "application/vnd.github.v3+json"
-    }
-    url = base_url + "issues/{}/labels"
-    for issue in issues:
-        body = {
-            "labels": labels
-        }
-        response = requests.post(url.format(issue), headers=headers, json=body)
-        if not response:
-            raise Exception(f"Can't label the Issue provided. Issue: {issue}, labels: {labels}, API response: " + response.text)
-        else:
-            print(f"Successfully labelled issue {issue}")
-
-
-def close_issues(token: str, issues: List[str]):
-    """
-    Close issues.
-    :param token: the GitHub API token.
-    :param issues: the issue numbers (as str) that we are labelling.
-    """
-    headers = {
-        "Authorization": f"token {token}",
-        "accept": "application/vnd.github.v3+json"
-    }
-    url = base_url + "issues/{}"
-    body = {
-        "state": "closed"
-    }
-    for issue in issues:
-        response = requests.patch(url.format(issue), headers=headers, json=body)
-        if not response:
-            raise Exception(f"Can't close Issue provided. Issue: {issue}, API response: " + response.text)
-        else:
-            print(f"Successfully closed issue {issue}")
-
-
-def get_issues_by_labels(token: str, labels: List[str]):
-    """
-    Get a list of issues based on their labels.
-    :param token: the GitHub API token.
-    :param labels: the labels that we are labelling.
-    """
-    url = base_url + "issues?per_page=100&labels={}&page={}"
-    headers = {
-        "Authorization": f"token {token}",
-        "accept": "application/vnd.github.v3+json"
-    }
-    issues = []
-    done = False
-    page_num = 1
-    while not done:
-        response = requests.get(url.format(",".join(labels), page_num), headers=headers)
-        if not response:
-            raise Exception(f"Can't access API. Can't get issues for labels: {labels}, API response: " + response.text)
-        else:
-            results = response.json()
-            if len(results) < 100:
-                done = True # we are done
-            else:
-                page_num += 1 # page is full => might need to check another page
-
-            # GitHub API also returns PRs for issues queries => have to check
-            issues_only = [issue for issue in results if issue.get("pull_request") is None]
-            issues.extend(issues_only)
-
-    return issues
 
 
 def get_pr_by_number(token: str, pr_num: str):

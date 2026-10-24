@@ -19,10 +19,13 @@ def main():
     runner = None
     logfile = open("log.txt", "w")
     try:
-        args = arg_getters.get_selenium_runner_args(has_token=False)
-        new_icons = get_icons_for_building(args.icomoon_json_path, args.devicon_json_path, logfile)
+        args = arg_getters.get_selenium_runner_args(has_token=False, build_since=True)
+        new_icons = get_icons_for_building(args.icomoon_json_path, args.devicon_json_path, args.since, logfile)
         if len(new_icons) == 0:
-            sys.exit("No files need to be uploaded. Ending script...")
+            msg = "No new or changed font icons — nothing to build."
+            print(msg, file=logfile)
+            print(msg)
+            return
 
         print(f"There are {len(new_icons)} icons to be build. Here are they:", *new_icons, sep = "\n", file=logfile)
 
@@ -62,28 +65,66 @@ def main():
         logfile.close()
 
 
-def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, logfile: FileIO):
+GLYPH_NAME_PATTERN = re.compile(r"^(.+)-((?:original|plain|line)(?:-wordmark)?)$")
+
+
+def get_icons_for_building(icomoon_json_path: str, devicon_json_path: str, since: str, logfile: FileIO):
     """
-    Get the icons for building.
+    Get the icons whose font glyphs need to be (re)built. An icon is built when:
+    - its glyphs in `icomoon.json` don't match its font versions in `devicon.json`
+      (new icon, or font versions added/removed/renamed), or
+    - one of its font SVGs changed since the `since` commit (updated icon).
+    Font versions that are aliases are ignored, since the CSS provides those.
     :param icomoon_json_path - the path to the `icomoon.json`.
     :param devicon_json_path - the path to the `devicon.json`.
+    :param since - commit to diff against for changed SVGs. None to skip that check.
     :param logfile.
-    :return a list of dict containing info on the icons. These are 
+    :return a list of dict containing info on the icons. These are
     from the `devicon.json`.
     """
+    devicon_json = filehandler.get_json_file_content(devicon_json_path)
+    icomoon_json = filehandler.get_json_file_content(icomoon_json_path)
 
-    new_icons = []
+    glyphs_by_icon = {}
+    for glyph in icomoon_json["icons"]:
+        match = GLYPH_NAME_PATTERN.match(glyph["properties"]["name"])
+        if match:
+            glyphs_by_icon.setdefault(match.group(1), set()).add(match.group(2))
 
-    # get any icons that might not have been found by the API
-    # sometimes happen due to the PR being opened before the latest build release
-    new_icons_from_devicon_json = filehandler.find_new_icons_in_devicon_json(
-        devicon_json_path, icomoon_json_path)
+    changed_svgs = get_changed_svgs(since, logfile) if since else set()
 
-    for icon in new_icons_from_devicon_json:
-        if icon not in new_icons:
-            new_icons.append(icon)
+    icons_to_build = []
+    for icon in devicon_json:
+        aliases = {alias["alias"] for alias in icon["aliases"]}
+        expected = {v for v in icon["versions"]["font"] if v not in aliases}
+        if not expected:
+            continue
 
-    return new_icons
+        actual = glyphs_by_icon.get(icon["name"], set())
+        if not actual:
+            reason = "new icon"
+        elif expected != actual:
+            reason = f"font versions changed (devicon.json: {sorted(expected)}, icomoon.json: {sorted(actual)})"
+        elif any(f"icons/{icon['name']}/{icon['name']}-{v}.svg" in changed_svgs for v in expected):
+            reason = "font SVG updated"
+        else:
+            continue
+
+        print(f"{icon['name']}: {reason}", file=logfile)
+        icons_to_build.append(icon)
+
+    return icons_to_build
+
+
+def get_changed_svgs(since: str, logfile: FileIO):
+    """
+    Get the SVG paths (relative to the repo root) changed between `since` and HEAD.
+    """
+    result = subprocess.run(["git", "diff", "--name-only", since, "HEAD", "--", "icons"],
+        capture_output=True, text=True, check=True)
+    changed = {path for path in result.stdout.splitlines() if path.endswith(".svg")}
+    print(f"{len(changed)} SVGs changed since {since}", file=logfile)
+    return changed
 
 
 def optimize_svgs(new_icons: List[str], icons_folder_path: str, logfile: FileIO):
@@ -133,9 +174,10 @@ def find_icomoon_icon_not_in_new_icons(icomoon_icon: Dict, new_icons: List, mess
     :param messages - an empty list where the function can attach logging on which 
     icon were removed.
     """
+    match = GLYPH_NAME_PATTERN.match(icomoon_icon["properties"]["name"])
     for new_icon in new_icons:
-        pattern = re.compile(f"^{new_icon['name']}-")
-        if pattern.search(icomoon_icon["properties"]["name"]):
+        # exact name match, so rebuilding "foo" never removes "foo-bar" glyphs
+        if match and match.group(1) == new_icon["name"]:
             message = f"-'{icomoon_icon['properties']['name']}' cause it matches '{new_icon['name']}'"
             messages.append(message)
             return False
