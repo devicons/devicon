@@ -49,6 +49,8 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+          # Only what this workflow needs; fails here if the installation lacks it
+          permission-contents: write
 
       - name: Checkout master
         uses: actions/checkout@v4
@@ -263,6 +265,8 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+          # Only what this workflow needs; fails here if the installation lacks it
+          permission-contents: write
 
       - name: Checkout master
         uses: actions/checkout@v4

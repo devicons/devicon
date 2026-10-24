@@ -71,6 +71,8 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+          # Only what this workflow needs; fails here if the installation lacks it
+          permission-pull-requests: write
 
       - name: Validate the expected title
         id: validate
