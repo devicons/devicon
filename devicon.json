@@ -16245,6 +16245,30 @@
         "color": "#494949",
         "aliases": []
     },
+     {
+        "name": "xai",
+        "altnames": [],
+        "tags": [
+            "AI",
+            "assistant",
+            "language-model",
+            "llm"        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
     {
         "name": "xamarin",
         "altnames": [],
