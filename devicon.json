@@ -16247,12 +16247,15 @@
     },
      {
         "name": "xai",
-        "altnames": [],
+        "altnames": [
+            "X AI",
+            "X.ai"
+        ],
         "tags": [
             "AI",
             "assistant",
             "language-model",
-            "llm"        
+            "llm"    
         ],
         "versions": {
             "svg": [
