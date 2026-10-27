@@ -9799,6 +9799,35 @@
         "aliases": []
     },
     {
+        "name": "nx",
+        "altnames": [
+            "nrwl"
+        ],
+        "tags": [
+            "build",
+            "monorepo",
+            "javascript",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#0c0c0d",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "oauth",
         "altnames": [],
         "tags": [
