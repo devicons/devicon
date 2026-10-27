@@ -10203,6 +10203,29 @@
         "aliases": []
     },
     {
+        "name": "opentofu",
+        "altnames": [],
+        "tags": [
+            "infrastructure",
+            "deployment",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0d1a2a",
+        "aliases": []
+    },
+    {
         "name": "opera",
         "altnames": [],
         "tags": [
