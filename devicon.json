@@ -9057,6 +9057,35 @@
         "aliases": []
     },
     {
+        "name": "neon",
+        "altnames": [
+            "neondb"
+        ],
+        "tags": [
+            "serverless",
+            "database",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#34d59a",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "neovim",
         "altnames": [],
         "tags": [
