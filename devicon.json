@@ -541,7 +541,7 @@
                 "original",
                 "plain"
             ],
-            "font": [
+            "font":[
                 "plain"
             ]
         },
@@ -2170,9 +2170,9 @@
         "aliases": []
     },
     {
-        "name": "claudecode",
+        "name":"claudecode",
         "altnames": [],
-        "tags": [
+        "tags":[
             "ai",
             "coding",
             "assistant"
@@ -5169,9 +5169,7 @@
     },
     {
         "name": "githubcopilot",
-        "altnames": [
-            "github copilot"
-        ],
+        "altnames": ["github copilot"],
         "tags": [
             "automation",
             "AI",
@@ -5989,11 +5987,11 @@
             "svg": [
                 "original",
                 "plain",
-                "line"
+				"line"
             ],
             "font": [
                 "plain",
-                "line"
+				"line"
             ]
         },
         "color": "#997ff8",
@@ -6289,22 +6287,20 @@
         "color": "#00c6e2",
         "aliases": []
     },
-    {
+	{
         "name": "idris",
-        "altnames": [
-            "idris2"
-        ],
+        "altnames": ["idris2"],
         "tags": [
-            "language",
-            "functional"
-        ],
+			"language", 
+			"functional"
+		],
         "versions": {
             "svg": [
-                "original"
-            ],
+				"original"
+			],
             "font": [
-                "original"
-            ]
+				"original"
+			]
         },
         "color": "#8a0819",
         "aliases": [
@@ -13035,7 +13031,7 @@
     {
         "name": "shadcn",
         "altnames": [],
-        "color": "#000000",
+        "color":"#000000",
         "tags": [
             "ui",
             "components",
@@ -14067,7 +14063,7 @@
             }
         ]
     },
-    {
+        {
         "name": "systemverilog",
         "altnames": [
             "system verilog",
@@ -14358,7 +14354,7 @@
             ]
         },
         "color": "#50d18d",
-        "aliases": [
+        "aliases":[
             {
                 "base": "original",
                 "alias": "plain"
@@ -15410,7 +15406,7 @@
             }
         ]
     },
-    {
+        {
         "name": "verilog",
         "altnames": [
             "verilog hdl"
@@ -16011,14 +16007,14 @@
             "graphics",
             "web",
             "3d"
-        ],
+         ],
         "versions": {
             "svg": [
                 "original"
             ],
-            "font": [
+           "font": [
                 "original"
-            ]
+           ]
         },
         "color": "#990000",
         "aliases": [
