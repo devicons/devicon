@@ -10893,6 +10893,29 @@
         ]
     },
     {
+        "name": "postgis",
+        "altnames": [],
+        "tags": [
+            "database",
+            "gis",
+            "geospatial",
+            "postgresql",
+            "spatial"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "original",
+                "plain"
+            ]
+        },
+        "color": "#288c68",
+        "aliases": []
+    },
+    {
         "name": "postgresql",
         "altnames": [],
         "tags": [
