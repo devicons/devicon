@@ -14072,6 +14072,28 @@
         ]
     },
         {
+        "name": "systemd",
+        "altnames": [],
+        "tags": [
+            "linux",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#30d475",
+        "aliases": []
+    },
+    {
         "name": "systemverilog",
         "altnames": [
             "system verilog",
