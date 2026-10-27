@@ -10694,6 +10694,31 @@
         "aliases": []
     },
     {
+        "name": "plsql",
+        "altnames": [
+            "pl/sql"
+        ],
+        "tags": [
+            "language",
+            "database",
+            "oracle",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#f80000",
+        "aliases": []
+    },
+    {
         "name": "pm2",
         "altnames": [],
         "tags": [
