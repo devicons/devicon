@@ -69,6 +69,28 @@
         ]
     },
     {
+        "name": "aerospace",
+        "altnames": [],
+        "tags": [
+            "window manager",
+            "macos",
+            "tiling"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#60c652",
+        "aliases": []
+    },
+    {
         "name": "aerospike",
         "altnames": [],
         "tags": [
