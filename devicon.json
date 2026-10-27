@@ -10778,6 +10778,28 @@
         "aliases": []
     },
     {
+        "name": "pocketbase",
+        "altnames": [
+            "pocketbase.io"
+        ],
+        "tags": [
+            "database",
+            "backend",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
         "name": "podman",
         "altnames": [],
         "tags": [
