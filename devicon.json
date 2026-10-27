@@ -4567,6 +4567,31 @@
         "aliases": []
     },
     {
+        "name": "fluxcd",
+        "altnames": [
+            "Flux"
+        ],
+        "tags": [
+            "gitops",
+            "continuous-delivery",
+            "kubernetes"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#326ce5",
+        "aliases": []
+    },
+    {
         "name": "flyway",
         "altnames": [],
         "tags": [
