@@ -15028,6 +15028,30 @@
         ]
     },
     {
+        "name": "typst",
+        "altnames": [],
+        "tags": [
+            "markup",
+            "typesetting-system",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#239dad",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "ubuntu",
         "altnames": [],
         "tags": [
