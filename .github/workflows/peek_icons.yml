@@ -9,9 +9,9 @@ jobs:
     # fail due to system, skipped
     name: Peek Icons
     if: github.event.label.name == 'bot:peek'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Python v3.8
         uses: actions/setup-python@v5
