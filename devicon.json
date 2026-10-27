@@ -13790,6 +13790,36 @@
         "aliases": []
     },
     {
+        "name": "stylelint",
+        "altnames": [],
+        "tags": [
+            "linter",
+            "css",
+            "code-quality"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "stylus",
         "altnames": [
             "styluslang"
