@@ -13413,6 +13413,31 @@
         ]
     },
     {
+        "name": "springboot",
+        "altnames": [
+            "Spring Boot"
+        ],
+        "tags": [
+            "framework",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#6db33f",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "spss",
         "altnames": [
             "ibmspss"
