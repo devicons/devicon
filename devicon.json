@@ -3862,6 +3862,43 @@
         "aliases": []
     },
     {
+        "name": "elementplus",
+        "altnames": [
+            "element-plus"
+        ],
+        "tags": [
+            "ui",
+            "library",
+            "vue",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#409eff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "eleventy",
         "altnames": [
             "11ty"
