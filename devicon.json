@@ -6264,29 +6264,6 @@
         "color": "#00c6e2",
         "aliases": []
     },
-	{
-        "name": "idris",
-        "altnames": ["idris2"],
-        "tags": [
-			"language", 
-			"functional"
-		],
-        "versions": {
-            "svg": [
-				"original"
-			],
-            "font": [
-				"original"
-			]
-        },
-        "color": "#8a0819",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
-    },
     {
         "name": "icinga",
         "altnames": [],
@@ -6308,6 +6285,31 @@
         },
         "color": "#ffffff",
         "aliases": []
+    },
+    {
+        "name": "idris",
+        "altnames": [
+            "idris2"
+        ],
+        "tags": [
+            "language",
+            "functional"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#8a0819",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "ie10",
