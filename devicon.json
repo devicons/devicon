@@ -6494,6 +6494,34 @@
         ]
     },
     {
+        "name": "informatica",
+        "altnames": [],
+        "tags": [
+            "data",
+            "etl",
+            "integration",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#ff4d00",
+        "aliases": []
+    },
+    {
         "name": "inkscape",
         "altnames": [],
         "tags": [
