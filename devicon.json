@@ -8688,6 +8688,32 @@
         "aliases": []
     },
     {
+        "name": "mockito",
+        "altnames": [],
+        "tags": [
+            "testing",
+            "java",
+            "mocking",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#7ba33f",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "modx",
         "altnames": [],
         "tags": [
