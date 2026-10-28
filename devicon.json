@@ -10790,13 +10790,15 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "plain",
+                "line"
             ],
             "font": [
-                "plain"
+                "plain",
+                "line"
             ]
         },
-        "color": "#000000",
+        "color": "#000",
         "aliases": []
     },
     {
