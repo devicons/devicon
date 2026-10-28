@@ -10950,6 +10950,29 @@
         ]
     },
     {
+        "name": "postfix",
+        "altnames": [],
+        "tags": [
+            "mail",
+            "mta",
+            "server",
+            "e-mail"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#60625f",
+        "aliases": []
+    },
+    {
         "name": "postgresql",
         "altnames": [],
         "tags": [
