@@ -3644,6 +3644,33 @@
         "aliases": []
     },
     {
+        "name": "drizzle",
+        "altnames": [
+            "Drizzle ORM"
+        ],
+        "tags": [
+            "database",
+            "orm",
+            "typescript",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#C5F74F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "dropwizard",
         "altnames": [],
         "tags": [
@@ -4453,7 +4480,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#ffa000",
+        "color": "#dd2c00",
         "aliases": []
     },
     {
@@ -4899,6 +4926,35 @@
         ]
     },
     {
+        "name": "gemini",
+        "altnames": [
+            "google gemini"
+        ],
+        "tags": [
+            "AI",
+            "llm",
+            "assistant"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+       "color": "#3581E5",
+        "aliases": []
+    },
+    {
         "name": "gentoo",
         "altnames": [],
         "tags": [
@@ -5303,6 +5359,32 @@
         },
         "color": "#000000",
         "aliases": []
+    },
+    {
+        "name": "gnu",
+        "altnames": [
+            "gnu project"
+        ],
+        "tags": [
+            "os",
+            "free software",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "gnuradio",
@@ -6335,6 +6417,31 @@
         "aliases": []
     },
     {
+        "name": "idris",
+        "altnames": [
+            "idris2"
+        ],
+        "tags": [
+            "language",
+            "functional"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#8a0819",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "ie10",
         "altnames": [
             "internetexplorer10"
@@ -6462,6 +6569,34 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "informatica",
+        "altnames": [],
+        "tags": [
+            "data",
+            "etl",
+            "integration",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#ff4d00",
+        "aliases": []
     },
     {
         "name": "inkscape",
@@ -6959,6 +7094,34 @@
             ]
         },
         "color": "#505050",
+        "aliases": []
+    },
+    {
+        "name": "juce",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "audio",
+            "c++",
+            "plugins"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#8dc63f",
         "aliases": []
     },
     {
@@ -9080,6 +9243,35 @@
         "aliases": []
     },
     {
+        "name": "neon",
+        "altnames": [
+            "neondb"
+        ],
+        "tags": [
+            "serverless",
+            "database",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#34d59a",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "neovim",
         "altnames": [],
         "tags": [
@@ -9822,6 +10014,47 @@
         },
         "color": "#00c48d",
         "aliases": []
+    },
+    {
+        "name": "nx",
+        "altnames": [
+            "nrwl"
+        ],
+        "tags": [
+            "build",
+            "monorepo",
+            "javascript",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#0c0c0d",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "original",
+                "alias": "plain-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
     },
     {
         "name": "oauth",
@@ -10719,6 +10952,31 @@
         "aliases": []
     },
     {
+        "name": "plsql",
+        "altnames": [
+            "pl/sql"
+        ],
+        "tags": [
+            "language",
+            "database",
+            "oracle",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#f80000",
+        "aliases": []
+    },
+    {
         "name": "pm2",
         "altnames": [],
         "tags": [
@@ -10916,6 +11174,35 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "postgis",
+        "altnames": [],
+        "tags": [
+            "database",
+            "gis",
+            "geospatial",
+            "postgresql",
+            "spatial"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#6796b6",
+        "aliases": []
     },
     {
         "name": "postgresql",
@@ -16269,6 +16556,34 @@
         },
         "color": "#494949",
         "aliases": []
+    },
+     {
+        "name": "xai",
+        "altnames": [
+            "X AI",
+            "X.ai"
+        ],
+        "tags": [
+            "AI",
+            "assistant",
+            "language-model",
+            "llm"    
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "xamarin",

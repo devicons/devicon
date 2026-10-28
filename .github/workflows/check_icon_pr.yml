@@ -17,13 +17,13 @@ jobs:
       - uses: actions/setup-python@v5
         if: ${{ !env.wrong_branch }}
         with:
-          python-version: 3.8
+          python-version: 3.12
 
       - name: Install dependencies
         if: ${{ !env.wrong_branch }}
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./.github/scripts/requirements.txt
+          python -m pip install -r ./.github/scripts/requirements.txt
 
       - name: Run the check_svg script
         if: ${{ !env.wrong_branch }}
