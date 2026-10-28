@@ -1,0 +1,37 @@
+name: PR Title
+# PRs are squash-merged, so the PR title becomes the commit message
+# and a line in the release notes. This checks it follows the format:
+#   new icon: <name> (<versions>)     update icon: <name> (<versions>)
+#   <type>[(scope)][!]: <description>  (conventional commits, for everything else)
+# Fixing the title re-runs this check.
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions: {}
+
+jobs:
+  title:
+    name: Semantic PR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+            const types = ['new icon', 'update icon', 'feat', 'fix', 'docs', 'chore', 'ci', 'refactor', 'style', 'test', 'perf', 'build', 'revert'];
+            const conventional = new RegExp(`^(${types.join('|')})(\\([\\w$.\\-*/ ,]+\\))?!?: \\S`);
+            if (conventional.test(title) || /^Revert ".+"$/.test(title)) {
+              core.info(`"${title}" is a valid PR title.`);
+              return;
+            }
+            // The summary is rendered as HTML/Markdown: show the title as text
+            const shown = title.replace(/[<>&`]/g, c => `&#${c.charCodeAt(0)};`);
+            core.summary.addRaw([
+              `"${shown}" isn't a valid PR title. The title becomes the commit message and the release-notes line, so it needs one of these formats:`,
+              '',
+              '- `new icon: <name> (<versions>)` or `update icon: <name> (<versions>)`, e.g. `new icon: vlang (original, plain)`',
+              `- \`<type>: <description>\`, e.g. \`fix: correct the jekyll wordmark\`, where type is one of ${types.slice(2).map(t => '`' + t + '`').join(', ')}`,
+            ].join('\n'));
+            await core.summary.write();
+            core.setFailed(`Invalid PR title: "${title}". See the job summary for the expected format.`);
