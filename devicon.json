@@ -4926,6 +4926,35 @@
         ]
     },
     {
+        "name": "gemini",
+        "altnames": [
+            "google gemini"
+        ],
+        "tags": [
+            "AI",
+            "llm",
+            "assistant"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+       "color": "#3581E5",
+        "aliases": []
+    },
+    {
         "name": "gentoo",
         "altnames": [],
         "tags": [
