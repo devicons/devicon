@@ -10937,16 +10937,24 @@
         "versions": {
             "svg": [
                 "original",
+                "original-wordmark",
                 "plain",
-                "line"
+                "line",
+                "line-wordmark"
             ],
             "font": [
                 "plain",
-                "line"
+                "line",
+                "line-wordmark"
             ]
         },
         "color": "#000",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "podman",
