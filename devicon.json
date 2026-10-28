@@ -3656,15 +3656,19 @@
         ],
         "versions": {
             "svg": [
-                "original",
-                "plain"
+                "original"
             ],
             "font": [
                 "plain"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#C5F74F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "dropwizard",
