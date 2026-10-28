@@ -3644,6 +3644,33 @@
         "aliases": []
     },
     {
+        "name": "drizzle",
+        "altnames": [
+            "Drizzle ORM"
+        ],
+        "tags": [
+            "database",
+            "orm",
+            "typescript",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#C5F74F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "dropwizard",
         "altnames": [],
         "tags": [
@@ -5325,6 +5352,32 @@
         },
         "color": "#000000",
         "aliases": []
+    },
+    {
+        "name": "gnu",
+        "altnames": [
+            "gnu project"
+        ],
+        "tags": [
+            "os",
+            "free software",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "gnuradio",
