@@ -10682,6 +10682,28 @@
         "aliases": []
     },
     {
+        "name": "pinia",
+        "altnames": [],
+        "tags": [
+            "vuejs",
+            "javascript",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#ffc63a",
+        "aliases": []
+    },
+    {
         "name": "pixijs",
         "altnames": [],
         "tags": [
