@@ -10904,13 +10904,15 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
-                "original"
+                "original",
+                "plain"
             ]
         },
-        "color": "#288c68",
+        "color": "#5b7b9f",
         "aliases": []
     },
     {
