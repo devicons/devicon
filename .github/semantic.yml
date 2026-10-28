@@ -1,6 +1,0 @@
----
-# Configuration for the Ezard/semantic-prs GitHub App, which is turned off:
-# its parser only accepts one-word types, so "new icon:" / "update icon:"
-# titles always failed. PR titles are checked by .github/workflows/pr_title.yml
-# instead. Once the app is uninstalled, this file can be deleted.
-enabled: false
