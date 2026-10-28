@@ -3644,6 +3644,33 @@
         "aliases": []
     },
     {
+        "name": "drizzle",
+        "altnames": [
+            "Drizzle ORM"
+        ],
+        "tags": [
+            "database",
+            "orm",
+            "typescript",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#C5F74F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "dropwizard",
         "altnames": [],
         "tags": [
@@ -5305,6 +5332,32 @@
         "aliases": []
     },
     {
+        "name": "gnu",
+        "altnames": [
+            "gnu project"
+        ],
+        "tags": [
+            "os",
+            "free software",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "gnuradio",
         "altnames": [
             "gnu radio"
@@ -6264,29 +6317,6 @@
         "color": "#00c6e2",
         "aliases": []
     },
-	{
-        "name": "idris",
-        "altnames": ["idris2"],
-        "tags": [
-			"language", 
-			"functional"
-		],
-        "versions": {
-            "svg": [
-				"original"
-			],
-            "font": [
-				"original"
-			]
-        },
-        "color": "#8a0819",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
-    },
     {
         "name": "icinga",
         "altnames": [],
@@ -6308,6 +6338,31 @@
         },
         "color": "#ffffff",
         "aliases": []
+    },
+    {
+        "name": "idris",
+        "altnames": [
+            "idris2"
+        ],
+        "tags": [
+            "language",
+            "functional"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#8a0819",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "ie10",
@@ -9055,6 +9110,35 @@
         "aliases": []
     },
     {
+        "name": "neon",
+        "altnames": [
+            "neondb"
+        ],
+        "tags": [
+            "serverless",
+            "database",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#34d59a",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "neovim",
         "altnames": [],
         "tags": [
@@ -10691,6 +10775,31 @@
             ]
         },
         "color": "#3d4c73",
+        "aliases": []
+    },
+    {
+        "name": "plsql",
+        "altnames": [
+            "pl/sql"
+        ],
+        "tags": [
+            "language",
+            "database",
+            "oracle",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#f80000",
         "aliases": []
     },
     {
@@ -16244,6 +16353,34 @@
         },
         "color": "#494949",
         "aliases": []
+    },
+     {
+        "name": "xai",
+        "altnames": [
+            "X AI",
+            "X.ai"
+        ],
+        "tags": [
+            "AI",
+            "assistant",
+            "language-model",
+            "llm"    
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "xamarin",
