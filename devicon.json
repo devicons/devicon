@@ -15795,12 +15795,16 @@
                 "plain"
             ],
             "font": [
-                "original",
                 "plain"
             ]
         },
         "color": "#5d87bf",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "original"
+            }
+        ]
     },
     {
         "name": "vscode",
