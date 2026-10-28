@@ -6992,6 +6992,34 @@
         "aliases": []
     },
     {
+        "name": "juce",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "audio",
+            "c++",
+            "plugins"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#8dc63f",
+        "aliases": []
+    },
+    {
         "name": "jule",
         "altnames": [
             "julelang"
