@@ -5662,6 +5662,31 @@
         "aliases": []
     },
     {
+        "name": "groq",
+        "altnames": [],
+        "tags": [
+            "AI",
+            "llm",
+            "hardware",
+            "inference",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f04d22",
+        "aliases": []
+    },
+    {
         "name": "grpc",
         "altnames": [
             "grpcio",
@@ -6268,7 +6293,7 @@
         "name": "idris",
         "altnames": ["idris2"],
         "tags": [
-			"language", 
+			"language",
 			"functional"
 		],
         "versions": {
