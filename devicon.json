@@ -5744,6 +5744,31 @@
         "aliases": []
     },
     {
+        "name": "groq",
+        "altnames": [],
+        "tags": [
+            "AI",
+            "llm",
+            "hardware",
+            "inference",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f04d22",
+        "aliases": []
+    },
+    {
         "name": "grpc",
         "altnames": [
             "grpcio",
@@ -6367,31 +6392,6 @@
         },
         "color": "#ffffff",
         "aliases": []
-    },
-    {
-        "name": "idris",
-        "altnames": [
-            "idris2"
-        ],
-        "tags": [
-            "language",
-            "functional"
-        ],
-        "versions": {
-            "svg": [
-                "original"
-            ],
-            "font": [
-                "original"
-            ]
-        },
-        "color": "#8a0819",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
     },
     {
         "name": "ie10",
@@ -16519,7 +16519,7 @@
             "AI",
             "assistant",
             "language-model",
-            "llm"    
+            "llm"
         ],
         "versions": {
             "svg": [
