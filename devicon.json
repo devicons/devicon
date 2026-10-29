@@ -15885,12 +15885,7 @@
             ]
         },
         "color": "#5d87bf",
-        "aliases": [
-            {
-                "base": "plain",
-                "alias": "original"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "vscode",
