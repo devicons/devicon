@@ -3242,6 +3242,34 @@
         "aliases": []
     },
     {
+        "name": "dbt",
+        "altnames": [
+            "data build tool"
+        ],
+        "tags": [
+            "data",
+            "sql",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#fe6703",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "debian",
         "altnames": [],
         "tags": [
