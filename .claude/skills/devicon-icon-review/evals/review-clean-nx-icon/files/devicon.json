@@ -1,0 +1,311 @@
+[
+    {
+        "name": "npm",
+        "altnames": [
+            "npmjs",
+            "nodepackagemanager"
+        ],
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#cb3837",
+        "aliases": []
+    },
+    {
+        "name": "npss",
+        "altnames": [],
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0a37b2",
+        "aliases": []
+    },
+    {
+        "name": "nuget",
+        "altnames": [],
+        "tags": [
+            "package",
+            "manager"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#004880",
+        "aliases": []
+    },
+    {
+        "name": "numpy",
+        "altnames": [],
+        "tags": [
+            "library",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#4dabcf",
+        "aliases": []
+    },
+    {
+        "name": "nuxt",
+        "altnames": [],
+        "tags": [
+            "js",
+            "javascript",
+            "framework",
+            "fullstack",
+            "vuejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00dc82",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "nuxtjs",
+        "altnames": [],
+        "tags": [
+            "js",
+            "javascript",
+            "framework",
+            "frontend",
+            "vuejs"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00c48d",
+        "aliases": []
+    },
+    {
+        "name": "nx",
+        "altnames": [
+            "nrwl"
+        ],
+        "tags": [
+            "build",
+            "monorepo",
+            "javascript",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#0c0c0d",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "oauth",
+        "altnames": [],
+        "tags": [
+            "authentication",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "objectivec",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0b5a9d",
+        "aliases": []
+    },
+    {
+        "name": "ocaml",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#F18803",
+        "aliases": []
+    },
+    {
+        "name": "odin",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FFFFFF",
+        "aliases": []
+    },
+    {
+        "name": "ohmyzsh",
+        "altnames": [
+            "omz",
+            "ohmyz.sh",
+            "Oh My Zsh"
+        ],
+        "tags": [
+            "shell",
+            "script",
+            "scripting",
+            "language",
+            "command"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "okta",
+        "altnames": [
+            "okta developer"
+        ],
+        "tags": [
+            "auth",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0f82c2",
+        "aliases": []
+    }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "svg-icons-scripts",
+  "private": true,
+  "description": "Helpers for the svg-icons skill: render, inspect, build icon versions, optimize, validate, trace.",
+  "dependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "jimp": "0.16.13",
+    "jsdom": "24.1.3",
+    "paper": "0.12.18",
+    "paperjs-offset": "1.0.8",
+    "potrace": "2.1.8",
+    "svgo": "3.3.2",
+    "svgpath": "2.6.0"
+  }
+}
