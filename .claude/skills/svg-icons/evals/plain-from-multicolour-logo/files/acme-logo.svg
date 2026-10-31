@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Adobe Illustrator 27.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <style>.blue{fill:#1e6fd9}.orange{fill:#f59e0b}</style>
+  <g transform="translate(56 56)">
+    <rect class="blue" x="0" y="40" width="360" height="360" rx="48"/>
+    <path fill="#ffffff" d="M180 110 L290 330 L240 330 L218 282 L142 282 L120 330 L70 330 Z M180 190 L156 244 L204 244 Z"/>
+    <circle class="orange" cx="330" cy="60" r="70"/>
+  </g>
+</svg>

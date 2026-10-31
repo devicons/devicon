@@ -1,0 +1,302 @@
+[
+    {
+        "name": "docker",
+        "altnames": [],
+        "tags": [
+            "platform",
+            "deploy"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#019bc6",
+        "aliases": []
+    },
+    {
+        "name": "doctrine",
+        "altnames": [],
+        "tags": [],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#f56d39",
+        "aliases": []
+    },
+    {
+        "name": "dot-net",
+        "altnames": [
+            "dotnet",
+            ".net"
+        ],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1384c8",
+        "aliases": []
+    },
+    {
+        "name": "dotnetcore",
+        "altnames": [
+            ".netcore"
+        ],
+        "tags": [
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#623697",
+        "aliases": []
+    },
+    {
+        "name": "dovecot",
+        "altnames": [],
+        "tags": [
+            "imap",
+            "pop3",
+            "e-mail"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#54bbab",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "original-wordmark"
+            },
+            {
+                "base": "plain",
+                "alias": "line-wordmark"
+            },
+            {
+                "base": "line",
+                "alias": "line-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "dreamweaver",
+        "altnames": [
+            "Adobe Dreamweaver"
+        ],
+        "tags": [
+            "web-development",
+            "editor",
+            "software",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#470137",
+        "aliases": []
+    },
+    {
+        "name": "drizzle",
+        "altnames": [
+            "Drizzle ORM"
+        ],
+        "tags": [
+            "database",
+            "orm",
+            "typescript",
+            "javascript"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#C5F74F",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "dropwizard",
+        "altnames": [],
+        "tags": [
+            "java",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#24265d",
+        "aliases": []
+    },
+    {
+        "name": "drupal",
+        "altnames": [],
+        "tags": [
+            "cms"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0073BA",
+        "aliases": []
+    },
+    {
+        "name": "duckdb",
+        "altnames": [],
+        "tags": [
+            "database",
+            "sql"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    },
+    {
+        "name": "dyalog",
+        "altnames": [],
+        "tags": [
+            "language"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ff6a13",
+        "aliases": []
+    },
+    {
+        "name": "dynamodb",
+        "altnames": [],
+        "tags": [
+            "key-value",
+            "database",
+            "java"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#527fff",
+        "aliases": []
+    },
+    {
+        "name": "dynatrace",
+        "altnames": [],
+        "tags": [
+            "monitoring",
+            "performance",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": []
+    }
+]
