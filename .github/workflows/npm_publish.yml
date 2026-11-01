@@ -2,22 +2,30 @@ name: "Publish to npm"
 on:
   release:
     types: [released]
+  # Allows re-running a failed publish by hand from the Actions tab
+  workflow_dispatch:
+permissions: {}
 jobs:
   publish:
     environment: release
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Required for npm trusted publishing (OIDC)
+      contents: read
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
-          # "ref" specifies the branch to check out.
-          # "github.event.release.target_commitish" is a global variable and specifies the branch the release targeted
-          ref: ${{ github.event.release.target_commitish }}
-      - name: Use Node.js v16
-        uses: actions/setup-node@v4
+          # Check out the release tag for release events.
+          # For manual runs, use the branch or tag selected in the Actions tab.
+          ref: ${{ github.event_name == 'release' && github.event.release.tag_name || github.ref }}
+          persist-credentials: false
+      # Node 24 ships with npm 11.5.1 or later, which trusted publishing requires
+      - name: Use Node.js v24
+        uses: actions/setup-node@v7
         with:
           node-version: 24
-          registry-url: https://registry.npmjs.org/ # Specifies the registry, this field is required!
-      - run: npm ci
+          package-manager-cache: false
+      # No dependencies are installed: the package has no build step, and skipping
+      # them keeps third-party install scripts out of the job that can publish.
+      # Authenticates through the trusted publisher configured on npmjs.com, so no token is needed
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
