@@ -7889,10 +7889,11 @@
         "versions": {
             "svg": [
                 "original",
+                "plain",
                 "line"
             ],
             "font": [
-                "original",
+                "plain",
                 "line"
             ]
         },
