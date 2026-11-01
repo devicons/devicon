@@ -26,7 +26,7 @@ All in `scripts/`, run with `node <script>`:
 | `render.js <svg|dir>... [--out p.png] [--sizes 128,32,16] [--zoom x,y,w,h] [--big]` | PNG preview: each SVG on light and dark backgrounds at several sizes. `--zoom` crops to a region of the viewBox to inspect details; `--big` renders one 600px image per file. Then **Read the PNG**. |
 | `inspect.js <svg>...` | Root attributes, element counts (paths, gradients, strokes, transforms, `<style>`, `<image>`, `<text>`), ids, and every visible shape in paint order with index, colour and bounds. Shape indexes feed `versions.js`. |
 | `versions.js <logo.svg> --name foo --out dir [--logo 6-9] [--text 0-5] [--gap 2.5] [--color '#hex'] [--line-width 4] [--plain-only '#000000'] [--skip line]` | Builds `foo-original`, `foo-plain`, `foo-line` and, with `--text`, the three `-wordmark` versions, fitted to `0 0 128 128`, optimized, ids prefixed, plus `preview.png`. |
-| `optimize.js <svg>... [--out dir]` | SVGO (multipass, 2-decimal precision), id prefixing with the file name, trailing newline. |
+| `optimize.js <svg>... [--out dir] [--check]` | SVGO with `svgo.config.js` (devicon's SVGOMG settings: multipass, 3 decimals), id prefixing with the file name, trailing newline. `--check` changes nothing and flags files that optimizing would shrink a lot (for reviews). |
 | `validate.js <svg|dir>...` | Checks icon rules (devicon's by default): viewBox, no padding, centred, no strokes/`<image>`/`<text>`/transforms, prefixed ids, trailing newline; `*-plain*`/`*-line*` = only `<svg xmlns viewBox>` and one `<path d fill>`. Exit 1 on failure. |
 | `pixdiff.js <a> <b>` | Renders two SVGs (or folders) and counts differing pixels — proves an optimization or id rename changed nothing visible. |
 | `trace.js` (library) | `traceMask(png, keep(r,g,b), box)` → potrace path data for one colour of a raster logo. |
@@ -39,7 +39,8 @@ All in `scripts/`, run with `node <script>`:
 3. **Build** versions (`versions.js`), or hand-build the hard parts with `build.js` (see techniques).
 4. **Render and look** at `preview.png`. Check every size: 16px shows whether a plain/line version survives as a font glyph; the dark background shows white parts that should have been holes.
 5. **Fix and repeat.** Typical fixes are in `references/techniques.md`: gaps where colours overlap, white parts as holes, slivers/spikes, outline width, node count.
-6. **Validate** (`validate.js`) and keep the renders to show the user.
+6. **Optimize last**, once, and only the files you made or changed (`optimize.js`; `versions.js` output already is). Optimizing is the last step that changes the files, but not the last check: SVGO can merge paths or round away detail.
+7. **Validate** (`validate.js`), render again (or `pixdiff.js` against the unoptimized files) and keep the renders to show the user. For icon fonts, also check a font preview after optimizing (devicon's peek-bot runs on the PR): SVGO output sometimes breaks glyphs that looked fine as SVGs.
 
 **Fixing an existing icon:** change only what the task needs and keep its size, position and shape (`pixdiff.js` against the input proves it). Other rule breaks you notice, like padding, are worth mentioning with the fix, but leave them unless asked: "looks the same" means the same.
 
@@ -52,7 +53,7 @@ These are the rules mature icon sets converge on (devicon maintainers, Nerd Font
 - **Plain = one colour + transparency, one path.** Icon fonts throw colour away: every filled area becomes the same ink. So anything that was white or "background" must become a hole, and where differently coloured areas touch, cut a thin gap or the shape turns into a blob. Use the logo's main colour.
 - **Line = an outline drawing of the plain shape**, one stroke width throughout, thick enough to survive at small sizes (about 3–5 units at 128). Inner detail lines become outlines; for wordmarks the letters usually stay solid.
 - **Simple geometry.** Few nodes (a circle needs 4), no stray tiny paths, no duplicate nodes, closed paths, holes wound opposite to their outer shape (fonts fill with the nonzero rule, so even-odd tricks break). Keep files small — huge paths (hundreds of KB) break font builds.
-- **Clean markup.** Only `xmlns`, `viewBox` and fills; no `width`/`height`, `<style>`, classes, editor metadata, strokes (convert to paths), `<text>` (convert to paths), raster `<image>`, clip-paths/masks in one-colour versions. Single line, newline at the end. Optimize once — repeated SVGO passes degrade outlines, and too-low precision causes artifacts.
+- **Clean markup.** Only `xmlns`, `viewBox` and fills; no `width`/`height`, `<style>`, classes, editor metadata, strokes (convert to paths), `<text>` (convert to paths), raster `<image>`, clip-paths/masks in one-colour versions. Single line, newline at the end. Optimize once, as the last change: repeated SVGO runs degrade outlines, and too-low precision causes artifacts.
 
 ## Showing results
 

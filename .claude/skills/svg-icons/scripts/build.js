@@ -178,13 +178,12 @@ function ungroup(svg) {
   return `${m[1]}${body}</svg>`;
 }
 
-// SVGO (as the wiki asks), keeping ids readable for the file-name prefix.
+// SVGO with svgo.config.js (devicon's SVGOMG settings); prefix the ids after.
 // opts.generic: an arbitrary SVG (optimize.js), so skip cleanPaperExport; it's
 // only safe on paper.js's flat output, where no attribute is inherited.
 function optimize(svg, opts = {}) {
   if (!opts.generic) svg = cleanPaperExport(svg);
-  return require('svgo').optimize(svg, { multipass: true, floatPrecision: 2,
-    plugins: [{ name: 'preset-default', params: { overrides: { cleanupIds: { minify: true }, convertColors: { shortname: false } } } }] }).data;
+  return require('svgo').optimize(svg, require('./svgo.config')).data;
 }
 
 // paper.js export leftovers that SVGO keeps: no-op styles and zero-width strokes

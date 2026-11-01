@@ -30,11 +30,13 @@ Standards live in `references/devicon-standards.md` (with links to the maintaine
    ```bash
    node .claude/skills/devicon-icon-review/scripts/check_icon.js <name> --repo .
    node .claude/skills/svg-icons/scripts/validate.js icons/<name>
+   node .claude/skills/svg-icons/scripts/optimize.js --check <the SVGs the PR adds or changes>
    node .claude/skills/svg-icons/scripts/render.js icons/<name> --out /tmp/<name>-preview.png
    ```
+   `UNOPTIMIZED` from `--check` is a should-fix (optimizing would shrink the file by over 20%); small savings are noise, don't report them. Only judge the files the PR changes: asking to re-optimize untouched versions widens the PR.
    Then **look at the preview**: blobs (white not cut out), slivers, uneven line widths, things outside the box, off-centre, squished, unreadable at 16px.
 6. **Versions and devicon.json** (§3, §6): original exists; at least one font version; priority original > plain > line; duplicates replaced by aliases; an alias never names an existing font version; `color` = main logo colour and present in the SVGs; order and formatting of the entry.
-7. **Font preview** (§5): read the peek-bot comment's screenshots (download the images and look). Glyph count must equal the number of font versions; check each glyph for spikes, filled holes, missing parts. If peek hasn't run or failed, say so — the maintainer adds `bot:peek`.
+7. **Font preview** (§5): read the peek-bot comment's screenshots (download the images and look). Glyph count must equal the number of font versions; check each glyph for spikes, filled holes, missing parts. The screenshots must be from the PR's latest SVG change: optimizing can break glyphs (§5), so a peek from before an optimizing push proves nothing. If peek hasn't run on the latest SVGs or failed, say so — a maintainer adds `bot:peek` to (re)run it.
 8. **Write the review** (format below). Offer fixed SVGs or `devicon.json` suggestions when the fix is mechanical; you can usually produce them with the svg-icons scripts.
 
 ## Review format

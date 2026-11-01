@@ -80,7 +80,7 @@ If the logo is a symbol on a coloured tile (app-icon style), the original keeps 
 
 - **Slivers and spikes** after cutting gaps at an angle: morphological opening — shrink by ~1 unit and grow back with round joins (`plainPath` does this whenever `gap` is set). Look at zoomed renders (`render.js --zoom`) of every acute corner.
 - **Filled gaps / missing holes in the font** but not in the SVG: winding direction. `pathSvg()` reorients (outer clockwise, holes counter-clockwise); for hand-made paths, reorient before export.
-- **Artifacts only after optimization**: precision too low or path compression the font tool misreads. Re-optimize from the unoptimized file with more precision (3–4 decimals) or without `convertPathData`, then re-check the font preview.
+- **Artifacts only after optimization**: precision too low or path compression the font tool misreads. Re-optimize from the unoptimized file with more precision (4 decimals instead of `svgo.config.js`'s 3) or without `convertPathData`, then re-check the font preview.
 - **Stray "smudges"**: tiny paths or 3-node blobs left from tracing/merging. Inspect shapes by area (`inspect.js`) and delete the tiny ones.
 - **Duplicate nodes at the same coordinates**: usually harmless; breaking apart and recombining paths removes most.
 - **Something outside the box**: re-fit with `fitMatrix` on the true bounds; check that no shape (including invisible ones) extends the bounds.
