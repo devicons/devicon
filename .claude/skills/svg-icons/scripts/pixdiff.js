@@ -7,7 +7,7 @@ const args = process.argv.slice(2);
 const i = args.indexOf('--size'); const size = i >= 0 ? Number(args.splice(i, 2)[1]) : 256;
 const [A, Bp] = args;
 const pairs = fs.statSync(A).isDirectory()
-  ? fs.readdirSync(A).filter(f => f.endsWith('.svg') && fs.existsSync(path.join(Bp, f))).map(f => [path.join(A, f), path.join(Bp, f)])
+  ? [...new Set([A, Bp].flatMap(d => fs.readdirSync(d).filter(f => f.endsWith('.svg'))))].sort().map(f => [path.join(A, f), path.join(Bp, f)])
   : [[A, Bp]];
 const render = f => {
   let s = fs.readFileSync(f, 'utf8');
@@ -16,6 +16,8 @@ const render = f => {
 };
 let same = 0;
 for (const [a, b] of pairs) {
+  const gone = [a, b].find(f => !fs.existsSync(f));
+  if (gone) { console.log(`MISS ${path.basename(a)}: not in ${path.dirname(gone)}`); continue; }
   try {
     const ra = render(a), rb = render(b);
     if (ra.width !== rb.width || ra.height !== rb.height) { console.log(`DIFF ${path.basename(a)}: size ${ra.width}x${ra.height} vs ${rb.width}x${rb.height}`); continue; }

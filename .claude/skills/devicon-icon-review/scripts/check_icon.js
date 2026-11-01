@@ -58,7 +58,9 @@ for (const a of aliases) {
   if (a.base === a.alias) err(`alias ${a.base} -> ${a.alias}: base and alias are the same`);
   if (!svgV.includes(a.base)) err(`alias base "${a.base}" is not an existing SVG version`);
   else if (!fontV.includes(a.base)) err(`alias base "${a.base}" is not a font version: aliases only work for font versions`);
-  if (svgV.includes(a.alias)) err(`alias "${a.alias}" exists as a file: aliases are only for versions that don't exist`);
+  // an SVG file may share the alias name (e.g. a multi-colour original aliased
+  // to plain for the font); only a font version of that name would clash
+  if (fontV.includes(a.alias)) err(`alias "${a.alias}" is also a font version: the font would get that class twice`);
   if (aliasNames.has(a.alias)) err(`alias "${a.alias}" defined twice`);
   aliasNames.add(a.alias);
   const style = v => v.split('-')[0];
@@ -113,6 +115,7 @@ for (const v of svgV) {
     if (/<g\b/.test(s)) err(`${rel}: font versions must not use groups`);
     if (/Gradient|<clipPath|<mask|<filter/.test(s)) err(`${rel}: font versions can't use gradients, clip-paths, masks or filters`);
     if (fills.length > 1) err(`${rel}: font versions need one fill colour (found ${fills.join(', ')})`);
+    if (/fill="none"|fill:\s*none/.test(s)) err(`${rel}: fill="none" in a font version: the glyph comes out empty`);
     if (fills.includes('#ffffff')) err(`${rel}: white fill in a font version turns into ink; cut white parts out as holes`);
     if (!fills.length && colour !== '#000000') warn(`${rel}: no fill; expected fill="${entry.color}" (the entry's color)`);
     else if (fills.length === 1 && fills[0] !== colour) warn(`${rel}: fill ${fills[0]} differs from the entry's color ${entry.color}`);

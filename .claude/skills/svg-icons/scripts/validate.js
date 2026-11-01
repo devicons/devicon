@@ -22,13 +22,16 @@ for (const f of files) {
   for (const m of s.matchAll(/\sid="([^"]+)"/g)) if (!m[1].startsWith(stem + '-')) p.push(`id "${m[1]}" not prefixed with "${stem}-"`);
   if (/-(plain|line)(-wordmark)?$/.test(stem)) {
     const n = (s.match(/<path\b/g) || []).length, fills = new Set(s.match(/fill="(?!none)[^"]+"/g) || []);
-    if (n !== 1) p.push(`${n} paths (plain/line need exactly 1)`);
+    const shapes = (s.match(/<(circle|rect|ellipse|polygon|polyline|line|use)\b/g) || []).length;
+    if (n !== 1 || shapes) p.push(`${n} paths${shapes ? ` and ${shapes} other shapes` : ''} (plain/line need exactly 1 path)`);
+    if (/<g\b/.test(s)) p.push('has groups (plain/line need one bare path)');
     if (fills.size > 1) p.push(`${fills.size} fill colours (plain/line need 1)`);
     if (/Gradient|<mask|<clipPath/.test(s)) p.push('gradient/mask/clip in a plain/line version');
   }
   try { // padding/centring from the rendered shapes
     const b = B.unionAll(B.leaves(s).map(l => l.path)).bounds;
     const big = Math.max(b.width, b.height);
+    if (b.left < -0.5 || b.top < -0.5 || b.right > 128.5 || b.bottom > 128.5) p.push(`outside the box (${b.left.toFixed(1)},${b.top.toFixed(1)} to ${b.right.toFixed(1)},${b.bottom.toFixed(1)})`);
     if (big < 127) p.push(`padding: content is ${big.toFixed(1)} wide/high, should fill 128`);
     if (Math.abs(b.center.x - 64) > 1 || Math.abs(b.center.y - 64) > 1) p.push(`not centred (centre ${b.center.x.toFixed(1)},${b.center.y.toFixed(1)})`);
   } catch (e) { p.push('could not parse shapes: ' + e.message.split('\n')[0]); }

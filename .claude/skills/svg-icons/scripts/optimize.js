@@ -10,7 +10,7 @@ const outDir = i >= 0 ? args.splice(i, 2)[1] : null;
 for (const f of args) {
   const before = fs.readFileSync(f, 'utf8');
   const stem = path.basename(f, '.svg');
-  const after = B.prefixIds(B.optimize(before), stem).trim() + '\n';
+  const after = B.prefixIds(B.optimize(before, { generic: true }), stem).trim() + '\n';
   const o = outDir ? path.join(outDir, path.basename(f)) : f;
   if (outDir) fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(o, after);

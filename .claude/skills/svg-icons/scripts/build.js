@@ -35,7 +35,8 @@ function leaves(svg) {
   paper.project.clear();
   const root = paper.project.importSVG(svg, { expandShapes: true });
   const out = [];
-  const walk = (item, clip) => {
+  // op: the opacity of the enclosing groups, carried onto each leaf
+  const walk = (item, clip, op = 1) => {
     if (!item.visible || item.opacity === 0) return;
     if (item.className === 'Group' || item.className === 'Layer') {
       let mask = clip;
@@ -46,14 +47,14 @@ function leaves(svg) {
         mask = clip ? clip.intersect(m, { insert: false }) : m;
         kids.shift();
       }
-      kids.forEach(k => walk(k, mask));
+      kids.forEach(k => walk(k, mask, op * item.opacity));
       return;
     }
     if (!isPath(item) || item.clipMask) return;
     const base = item.clone({ insert: false });
     base.transform(item.parent.globalMatrix);
     const add = (p, color) => {
-      p.fillColor = color; p.strokeColor = null;
+      p.fillColor = color; p.strokeColor = null; p.opacity = item.opacity * op;
       if (clip) { const f = p.fillColor; p = p.intersect(clip, { insert: false }); p.fillColor = f; }
       if (!p.isEmpty() && Math.abs(p.area) > 0.01) out.push({ path: p, color, raw: color, src: item });
     };
@@ -161,6 +162,8 @@ function ungroup(svg) {
     .replace(/\sfill-rule="none"/g, ''); // not a valid value
   const m = svg.match(/^(<svg\b[^>]*>(?:<defs>[\s\S]*?<\/defs>)?)<g\b([^>]*)>([\s\S]*)<\/g><\/svg>$/);
   if (!m || /<g\b/.test(m[3])) return svg;
+  // these don't distribute onto children without changing the artwork
+  if (/\s(transform|opacity|clip-path|mask|filter|style)=/.test(m[2])) return svg;
   const attrs = [...m[2].matchAll(/\s([\w:-]+)="([^"]*)"/g)];
   const body = m[3].replace(/<(\w+)\b((?:[^>"]|"[^"]*")*?)(\/?)>/g, (t, tag, a, close) => {
     for (const [, k, v] of attrs) if (!new RegExp(`\\s${k}="`).test(a)) a += ` ${k}="${v}"`;
@@ -169,15 +172,21 @@ function ungroup(svg) {
   return `${m[1]}${body}</svg>`;
 }
 
-// SVGO (as the wiki asks), keeping ids readable for the file-name prefix
-function optimize(svg) {
-  // paper.js export leftovers that SVGO keeps: no-op styles and zero-width strokes
+// SVGO (as the wiki asks), keeping ids readable for the file-name prefix.
+// opts.generic: an arbitrary SVG (optimize.js), so skip cleanPaperExport; it's
+// only safe on paper.js's flat output, where no attribute is inherited.
+function optimize(svg, opts = {}) {
+  if (!opts.generic) svg = cleanPaperExport(svg);
+  return require('svgo').optimize(svg, { multipass: true, floatPrecision: 2,
+    plugins: [{ name: 'preset-default', params: { overrides: { cleanupIds: { minify: true } } } }] }).data;
+}
+
+// paper.js export leftovers that SVGO keeps: no-op styles and zero-width strokes
+function cleanPaperExport(svg) {
   svg = svg.replace(/\sstyle="mix-blend-mode:\s*normal;?"/g, '')
     .replace(/\s(font-family|font-size|font-weight|text-anchor)="none"/g, '')
     .replace(/\s(stroke-width="0"|stroke-miterlimit="[^"]*"|stroke="none"|fill-rule="nonzero"|stroke-dasharray="none")/g, '');
-  svg = ungroup(svg);
-  return require('svgo').optimize(svg, { multipass: true, floatPrecision: 2,
-    plugins: [{ name: 'preset-default', params: { overrides: { cleanupIds: { minify: true } } } }] }).data;
+  return ungroup(svg);
 }
 
 // Prefix ids with the file name (same rule as the check-bot/build)

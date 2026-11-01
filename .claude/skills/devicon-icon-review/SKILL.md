@@ -33,7 +33,7 @@ Standards live in `references/devicon-standards.md` (with links to the maintaine
    node .claude/skills/svg-icons/scripts/render.js icons/<name> --out /tmp/<name>-preview.png
    ```
    Then **look at the preview**: blobs (white not cut out), slivers, uneven line widths, things outside the box, off-centre, squished, unreadable at 16px.
-6. **Versions and devicon.json** (§3, §6): original exists; at least one font version; priority original > plain > line; duplicates replaced by aliases; aliases only for versions without files; `color` = main logo colour and present in the SVGs; order and formatting of the entry.
+6. **Versions and devicon.json** (§3, §6): original exists; at least one font version; priority original > plain > line; duplicates replaced by aliases; an alias never names an existing font version; `color` = main logo colour and present in the SVGs; order and formatting of the entry.
 7. **Font preview** (§5): read the peek-bot comment's screenshots (download the images and look). Glyph count must equal the number of font versions; check each glyph for spikes, filled holes, missing parts. If peek hasn't run or failed, say so — the maintainer adds `bot:peek`.
 8. **Write the review** (format below). Offer fixed SVGs or `devicon.json` suggestions when the fix is mechanical; you can usually produce them with the svg-icons scripts.
 
@@ -70,4 +70,4 @@ Thanks for the PR! Here's what I found:
 
 ## Posting
 
-Only post to GitHub when the user asks. Reviews and comments posted through `gh` appear under the user's account, so start them with a line saying they were prepared by Claude on the user's behalf (unless the user has set up a separate bot identity). Prefer `gh pr review <n> --comment|--request-changes|--approve --body-file …`; approving is the user's call — never approve on your own initiative. Link issues and PRs with full `https://github.com/devicons/devicon/...` URLs in chat (bare `#123` can resolve to a fork).
+Only post to GitHub when the user asks. Reviews and comments posted through `gh` appear under the user's account, so start them with a line saying they were prepared by an AI assistant on the user's behalf (unless the user has set up a separate bot identity). Prefer `gh pr review <n> --comment|--request-changes|--approve --body-file …`; approving is the user's call — never approve on your own initiative. Link issues and PRs with full `https://github.com/devicons/devicon/...` URLs in chat (bare `#123` can resolve to a fork).
