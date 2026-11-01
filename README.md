@@ -296,21 +296,17 @@ This file is used to show all the new icons previously built.</p>
 npm run build-css
 ```
 
-<h3 id="web-server">Setting up the web server</h3>
+<h3 id="web-server">Setting up the website locally</h3>
 
-<p>Run the following command to start the web server with Python.</p>
-
-```bash
-npm run dev # Will run on port 8000
-```
-
-<p>Or this command, which does exactly the same, but the port can be customized.</p>
+<p>Run the website locally with:</p>
 
 ```bash
-python -m http.server <port>
+npm run site:dev
+# or
+npm run dev
 ```
 
-<p>You're done now! :tada: Your build of Devicons should be available at <code>https://localhost:8000</code> (or the desired port).</p>
+<p>Your build of the Devicon website will be available at <code>http://localhost:5173</code>.</p>
 
 <br/>
 <div align="center">
