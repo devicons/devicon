@@ -55,7 +55,7 @@ Contents
 
 Every version listed in `versions.font` becomes a glyph in an icon font, where **all colour is discarded**:
 
-- **Exactly one `<path>`, one fill colour, no groups**, no gradients, clip-paths, masks or filters ([wiki](https://github.com/devicons/devicon/wiki/SVG-Versions), canaleal [#2301](https://github.com/devicons/devicon/pull/2301#issuecomment-2525311988)).
+- **Only `<svg xmlns viewBox>` and one `<path d fill>`**: nothing else (no groups, other shapes, defs, styles, opacity, transforms, gradients, clip-paths, masks or filters), since the font build loses or misreads it ([wiki](https://github.com/devicons/devicon/wiki/SVG-Versions), canaleal [#2301](https://github.com/devicons/devicon/pull/2301#issuecomment-2525311988)).
 - **White is not transparent.** White parts turn into ink and the icon becomes a blob; they must be cut out as holes (Thomas-Boi [#892](https://github.com/devicons/devicon/pull/892#issuecomment-948889487), [#1097](https://github.com/devicons/devicon/pull/1097#issuecomment-1077051443); Finii [#2427](https://github.com/devicons/devicon/pull/2427#issuecomment-2930982922)).
 - **Fill = the entry's `color`.** canaleal's validation report flags missing or different fills ([#2436](https://github.com/devicons/devicon/pull/2436#issuecomment-2975459914)); `#000000` may be omitted (SVG default black) but explicit is preferred.
 - **Holes must work with the nonzero fill rule** that fonts use: holes wound opposite to their outer contour. Even-odd-only holes may fill in the font (Finii [#2290](https://github.com/devicons/devicon/pull/2290#issuecomment-2647523553)).

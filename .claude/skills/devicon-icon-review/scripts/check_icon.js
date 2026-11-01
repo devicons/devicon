@@ -69,6 +69,27 @@ for (const a of aliases) {
   if (!a.base.endsWith('wordmark') && a.alias.endsWith('wordmark')) note(`alias ${a.base} -> ${a.alias}: only valid if the ${a.base} logo contains the technology's name`);
 }
 
+// Font versions may only contain <svg xmlns viewBox> with one <path d fill>:
+// everything else (groups, other shapes, defs/use, styles, opacity, fill-rule,
+// transforms, ...) is lost or misread by the font build. Returns the problems.
+function fontMarkupProblems(s) {
+  const tags = [...s.matchAll(/<([a-zA-Z][\w:-]*)\b([^>]*?)\/?>/g)].map(m => ({ name: m[1], attrs: [...m[2].matchAll(/([\w:-]+)\s*=/g)].map(a => a[1]) }));
+  const p = [];
+  const extra = tags.filter(t => t.name !== 'svg' && t.name !== 'path').map(t => `<${t.name}>`);
+  const paths = tags.filter(t => t.name === 'path');
+  if (paths.length !== 1) p.push(`${paths.length} <path> elements (exactly 1 allowed)`);
+  if (extra.length) p.push(`other elements: ${[...new Set(extra)].join(', ')}`);
+  const bad = (t, ok) => t.attrs.filter(a => !ok.includes(a));
+  const svgExtra = tags.filter(t => t.name === 'svg').flatMap(t => bad(t, ['xmlns', 'viewBox']));
+  const pathExtra = paths.flatMap(t => bad(t, ['d', 'fill']));
+  if (svgExtra.length) p.push(`<svg> attributes besides xmlns/viewBox: ${svgExtra.join(', ')}`);
+  if (pathExtra.length) p.push(`<path> attributes besides d/fill: ${pathExtra.join(', ')}`);
+  if (/<(?!\/?(svg|path)\b)[!?]/.test(s)) p.push('comments, doctype or XML declaration');
+  const fill = (s.match(/<path\b[^>]*\sfill="([^"]*)"/) || [])[1];
+  if (fill !== undefined && !/^#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?$/.test(fill)) p.push(`fill="${fill}" (needs a #hex colour)`);
+  return p;
+}
+
 // --- files ---
 const dir = path.join(repo, 'icons', name);
 const files = fs.existsSync(dir) ? fs.readdirSync(dir) : [];
@@ -110,17 +131,11 @@ for (const v of svgV) {
   const light = c => { const n = parseInt(c.slice(1), 16); return ((n >> 16) & 255) > 225 && ((n >> 8) & 255) > 225 && (n & 255) > 225; };
   if (fills.length && fills.every(light) && !/fill="url\(/.test(s)) warn(`${rel}: only white/near-white fills (${fills.join(', ')}): looks like the logo's variant for dark backgrounds; use the primary (light-background) version`);
   if (isFont) {
-    if (/<defs\b|<use\b|<symbol\b/.test(s)) err(`${rel}: font versions can't use <defs>, <symbol> or <use>; put the one path in directly`);
-    const paths = (s.match(/<path\b/g) || []).length, shapes = (s.match(/<(circle|rect|ellipse|polygon|polyline|line)\b/g) || []).length;
-    if (paths !== 1 || shapes) err(`${rel}: font versions need exactly one <path> (found ${paths} paths${shapes ? ` and ${shapes} other shapes` : ''}); unite them`);
-    if (/<g\b/.test(s)) err(`${rel}: font versions must not use groups`);
-    if (/Gradient|<clipPath|<mask|<filter/.test(s)) err(`${rel}: font versions can't use gradients, clip-paths, masks or filters`);
-    if (fills.length > 1) err(`${rel}: font versions need one fill colour (found ${fills.join(', ')})`);
-    if (/fill="none"|fill:\s*none/.test(s)) err(`${rel}: fill="none" in a font version: the glyph comes out empty`);
+    // allowlist: only <svg xmlns viewBox> and one <path d fill>
+    for (const m of fontMarkupProblems(s)) err(`${rel}: font versions may only have <svg xmlns viewBox> and one <path d fill>; found ${m}`);
     if (fills.includes('#ffffff')) err(`${rel}: white fill in a font version turns into ink; cut white parts out as holes`);
     if (!fills.length && colour !== '#000000') warn(`${rel}: no fill; expected fill="${entry.color}" (the entry's color)`);
     else if (fills.length === 1 && fills[0] !== colour) warn(`${rel}: fill ${fills[0]} differs from the entry's color ${entry.color}`);
-    if (/fill-rule="evenodd"/.test(s)) note(`${rel}: uses fill-rule="evenodd"; fonts fill with nonzero, so check holes in the peek/icomoon preview`);
   }
 }
 if (!colourSeen && colour && colour !== '#000000') warn(`color ${entry.color} doesn't appear in any of the SVGs: use a colour from the logo`);
