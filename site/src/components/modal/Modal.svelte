@@ -10,7 +10,7 @@ export let title
     on:click|self={onClose}
   >
     <div
-      class="max-h-[100vh] w-full max-w-xl rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800"
+      class="max-h-[100vh] w-full max-w-xl rounded-lg bg-white p-6 text-left cursor-default shadow-xl dark:bg-gray-800"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"

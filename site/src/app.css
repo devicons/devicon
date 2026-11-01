@@ -35,3 +35,14 @@
   background-size: 16px 16px;
   background-color: #1f2937;
 }
+
+.no-scrollbar,
+.code-snippet {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.code-snippet::-webkit-scrollbar {
+  display: none;
+}

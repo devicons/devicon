@@ -34,6 +34,40 @@ $: if (versions.length > 0 && !versions.includes(selectedVersion)) {
   selectedVersion = versions.includes("original") ? "original" : versions[0]
 }
 
+function formatSvg(raw: string): string {
+  if (!raw) return ""
+
+  const viewBoxMatch = raw.match(/viewBox=["']([^"']+)["']/i)
+  const viewBox = viewBoxMatch ? viewBoxMatch[1] : "0 0 128 128"
+
+  const match = raw.match(/<svg[^>]*>([\s\S]*?)<\/svg>/i)
+  const inner = match ? match[1].trim() : raw.trim()
+
+  const tokens = inner.replace(/>\s*</g, ">\n<").split("\n")
+  let indent = 2
+  const formattedLines: string[] = []
+
+  for (let token of tokens) {
+    token = token.trim()
+    if (!token) continue
+    if (token.startsWith("</")) {
+      indent = Math.max(2, indent - 2)
+    }
+    formattedLines.push(" ".repeat(indent) + token)
+    if (
+      token.startsWith("<") &&
+      !token.startsWith("</") &&
+      !token.endsWith("/>") &&
+      !token.startsWith("<!--")
+    ) {
+      indent += 2
+    }
+  }
+
+  return `<svg viewBox="${viewBox}">\n${formattedLines.join("\n")}\n</svg>`
+}
+
+$: formattedSvgText = formatSvg(rawSvgText)
 $: imgSnippet = `<img src="${getIconUrl(selectedIcon, selectedVersion)}" />`
 
 const selectVersion = (version: IconVersions) => (selectedVersion = version)
@@ -106,8 +140,9 @@ $: if (selectedIcon && selectedVersion) {
 }
 
 function downloadSvg() {
-  if (!rawSvgText || typeof window === "undefined") return
-  const blob = new Blob([rawSvgText], { type: "image/svg+xml;charset=utf-8" })
+  const contentToDownload = formattedSvgText || rawSvgText
+  if (!contentToDownload || typeof window === "undefined") return
+  const blob = new Blob([contentToDownload], { type: "image/svg+xml;charset=utf-8" })
   const url = URL.createObjectURL(blob)
   const a = document.createElement("a")
   a.href = url
@@ -177,7 +212,7 @@ function downloadSvg() {
           type="button"
           class="flex cursor-pointer items-center gap-1.5 rounded-md border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-700 transition hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 disabled:cursor-not-allowed disabled:opacity-50"
           on:click={downloadSvg}
-          disabled={isLoadingSvg || !rawSvgText}
+          disabled={isLoadingSvg || !formattedSvgText}
           aria-label="Download SVG"
         >
           <svg
@@ -201,8 +236,8 @@ function downloadSvg() {
           <button
             type="button"
             class="flex cursor-pointer items-center gap-1.5 rounded-md bg-green-500 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-green-600 disabled:cursor-not-allowed disabled:opacity-50"
-            on:click={() => copyToClipboard(rawSvgText)}
-            disabled={isLoadingSvg || !rawSvgText}
+            on:click={() => copyToClipboard(formattedSvgText)}
+            disabled={isLoadingSvg || !formattedSvgText}
             aria-label="Copy Pure SVG"
           >
             <svg
@@ -252,7 +287,7 @@ function downloadSvg() {
   </div>
 
   <div
-    class="code-snippet relative mt-2 max-h-36 w-full overflow-y-auto rounded-md bg-gray-100 p-4 font-mono text-xs break-all dark:bg-gray-900 dark:text-gray-400"
+    class="code-snippet relative mt-2 max-h-48 w-full overflow-x-auto overflow-y-auto rounded-md bg-gray-100 p-4 font-mono text-xs text-left no-scrollbar dark:bg-gray-900 dark:text-gray-400"
   >
     {#if activeTab === "svg"}
       {#if isLoadingSvg}
@@ -260,10 +295,10 @@ function downloadSvg() {
       {:else if svgFetchError}
         <span class="text-red-500">Failed to load SVG markup.</span>
       {:else}
-        <code>{rawSvgText}</code>
+        <pre class="font-mono text-xs whitespace-pre text-left no-scrollbar"><code>{formattedSvgText}</code></pre>
       {/if}
     {:else}
-      <code>{imgSnippet}</code>
+      <pre class="font-mono text-xs whitespace-pre-wrap break-all text-left no-scrollbar"><code>{imgSnippet}</code></pre>
     {/if}
   </div>
 {:else}
