@@ -41,6 +41,8 @@ All in `scripts/`, run with `node <script>`:
 5. **Fix and repeat.** Typical fixes are in `references/techniques.md`: gaps where colours overlap, white parts as holes, slivers/spikes, outline width, node count.
 6. **Validate** (`validate.js`) and keep the renders to show the user.
 
+**Fixing an existing icon:** change only what the task needs and keep its size, position and shape (`pixdiff.js` against the input proves it). Other rule breaks you notice, like padding, are worth mentioning with the fix, but leave them unless asked: "looks the same" means the same.
+
 ## What good icon versions look like
 
 These are the rules mature icon sets converge on (devicon maintainers, Nerd Fonts, Iconify); the reasons matter more than the rules:
