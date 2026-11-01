@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: vectorize-raster-logo
+expected_outcome: |
+  ember-original.svg is a vector version of the PNG logo: viewBox 0 0 128 128 filling the box, no raster image, fills exactly the brand colours (navy #1b2a4a, coral #ff6b4a, white), the white drop inside the flame kept as a white fill (not a hole), and it matches the logo's shapes (reference/ember-reference.svg, which the agent doesn't see).
+context:
+  scaffold_script: place-files.sh

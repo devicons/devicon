@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: review-drizzle-pr-snapshot
+expected_outcome: |
+  review.md requests changes and names, each with a fix: width/height on the svg root, the artwork not filling the box (scale(0.8) transform), the near-white #F0F0F0 fill that disappears on light backgrounds and does not match color #C5F74F, and versions.font listing "plain", which is not an existing SVG file.
+context:
+  scaffold_script: place-files.sh
