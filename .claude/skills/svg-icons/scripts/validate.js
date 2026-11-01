@@ -16,6 +16,7 @@ function fontMarkupProblems(s) {
   const extra = tags.filter(t => t.name !== 'svg' && t.name !== 'path').map(t => `<${t.name}>`);
   const paths = tags.filter(t => t.name === 'path');
   if (paths.length !== 1) p.push(`${paths.length} <path> elements (exactly 1 allowed)`);
+  else if (!/<path\b[^>]*\sd="[^"]*[0-9][^"]*"/.test(s)) p.push('a <path> without path data (renders nothing)');
   if (extra.length) p.push(`other elements: ${[...new Set(extra)].join(', ')}`);
   const bad = (t, ok) => t.attrs.filter(a => !ok.includes(a));
   const svgExtra = tags.filter(t => t.name === 'svg').flatMap(t => bad(t, ['xmlns', 'viewBox']));

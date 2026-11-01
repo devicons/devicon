@@ -57,7 +57,9 @@ const oneColour = ls => !ls.some(l => l.color.gradient || B.isWhite(l.color) || 
 const solo = oneColour(logo), soloW = text.length && oneColour([...logo, ...text]);
 const lp = plainOf(logo, B.fitMatrix(B.unionAll(logo.map(l => l.path)).bounds));
 lp.transform(B.fitMatrix(lp.bounds));
-if (!skip.includes('original')) files.original = solo ? one(lp, prominent(logo)) : originalOf(logo);
+// the one-colour original comes from the raw shapes, untouched by --gap's smoothing
+const rawOf = (ls, m) => { const p = plainOf(ls, m, 0); p.transform(B.fitMatrix(p.bounds)); return p; };
+if (!skip.includes('original')) files.original = solo ? one(rawOf(logo, B.fitMatrix(B.unionAll(logo.map(l => l.path)).bounds)), prominent(logo)) : originalOf(logo);
 if (!skip.includes('plain') && !solo) files.plain = one(lp, col);
 if (!skip.includes('line')) files.line = one(B.linePath(lp, lineWidth), col);
 if (solo) console.log('note: one-colour logo, so original is font-ready: add "original" to versions.font and alias original -> plain');
@@ -70,7 +72,7 @@ if (text.length) {
   const s = B.fitMatrix(plainW.bounds);
   [plainW, lpW, tpW].forEach(p => p.transform(s));
   const wc = wordmarkColor || col;
-  if (!skip.includes('original-wordmark')) files['original-wordmark'] = soloW ? one(plainW, prominent(both)) : originalOf(both);
+  if (!skip.includes('original-wordmark')) files['original-wordmark'] = soloW ? one(rawOf(both, mw), prominent(both)) : originalOf(both);
   if (!skip.includes('plain-wordmark') && !soloW) files['plain-wordmark'] = one(plainW, wc);
   if (soloW) console.log('note: one-colour wordmark: add "original-wordmark" to versions.font and alias original-wordmark -> plain-wordmark');
   if (!skip.includes('line-wordmark')) {

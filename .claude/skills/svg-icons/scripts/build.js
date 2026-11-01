@@ -56,7 +56,9 @@ function leaves(svg) {
     const add = (p, color) => {
       p.fillColor = color; p.strokeColor = null; p.opacity = item.opacity * op;
       if (clip) { const f = p.fillColor; p = p.intersect(clip, { insert: false }); p.fillColor = f; }
-      if (!p.isEmpty() && Math.abs(p.area) > 0.01) out.push({ path: p, color, raw: color, src: item });
+      // non-empty by bounds, not signed area: that's tiny in small source units
+      // and cancels out for disjoint contours wound opposite ways
+      if (!p.isEmpty() && p.bounds.width > 0 && p.bounds.height > 0) out.push({ path: p, color, raw: color, src: item });
     };
     const fill = item.fillColor;
     if (fill && fill.alpha !== 0) add(base.clone({ insert: false }), fill);
@@ -182,7 +184,7 @@ function ungroup(svg) {
 function optimize(svg, opts = {}) {
   if (!opts.generic) svg = cleanPaperExport(svg);
   return require('svgo').optimize(svg, { multipass: true, floatPrecision: 2,
-    plugins: [{ name: 'preset-default', params: { overrides: { cleanupIds: { minify: true } } } }] }).data;
+    plugins: [{ name: 'preset-default', params: { overrides: { cleanupIds: { minify: true }, convertColors: { shortname: false } } } }] }).data;
 }
 
 // paper.js export leftovers that SVGO keeps: no-op styles and zero-width strokes

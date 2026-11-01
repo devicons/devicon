@@ -43,7 +43,7 @@ const panelW = sizes.reduce((a, s) => a + s + pad, pad);
 let body = '', y = 10;
 for (const f of files) {
   const src = load(f);
-  body += `<text x="10" y="${y + 14}" font-family="sans-serif" font-size="13">${path.basename(f)}</text>`;
+  body += `<text x="10" y="${y + 14}" font-family="sans-serif" font-size="13">${path.basename(f).replace(/[<>&"']/g, c => `&#${c.charCodeAt(0)};`)}</text>`;
   [['#ffffff', 10], ['#0d1117', 20 + panelW]].forEach(([bg, x0]) => {
     body += `<rect x="${x0}" y="${y + 22}" width="${panelW}" height="${cell}" fill="${bg}" stroke="#ccc"/>`;
     let x = x0 + pad;
