@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --color-green-50: #f2faf8;
+  --color-green-100: #e6f5f0;
+  --color-green-200: #c3e6d9;
+  --color-green-300: #4ab475;
+  --color-green-400: #6bb590;
+  --color-green-500: #3d9561;
+  --color-green-600: #318552;
+  --color-green-700: #2d804e;
+  --color-green-800: #16592d;
+  --color-green-900: #0c421c;
+  --color-green-950: #052b0f;
+  --color-black-950: #000000aa;
+
+  --primaryColor: #3d9561;
+  --primaryColorDark: #2d804e;
+  --primaryColorLight: #4ab475;
+}
+
+.base-container {
+  @apply mx-auto w-full px-4 py-6 sm:max-w-[45rem] md:max-w-[55rem] lg:max-w-[64rem] xl:max-w-[100rem];
+}
+
+.checkerboard {
+  background-image: repeating-conic-gradient(#d1d5db 0% 25%, #f3f4f6 0% 50%);
+  background-size: 16px 16px;
+  background-color: #f3f4f6;
+}
+
+:global(.dark) .checkerboard,
+.dark .checkerboard {
+  background-image: repeating-conic-gradient(#374151 0% 25%, #1f2937 0% 50%);
+  background-size: 16px 16px;
+  background-color: #1f2937;
+}
