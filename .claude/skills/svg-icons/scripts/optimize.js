@@ -3,7 +3,7 @@
 //   node optimize.js <file.svg>... [--out dir]   (in place without --out)
 //   node optimize.js --check <file.svg>...       (review: change nothing)
 // --check reports files that optimizing would shrink by more than 20% (and
-// 500 bytes) or 4 KB, and exits 1 if there are any. Smaller differences are
+// 200 bytes) or 4 KB, and exits 1 if there are any. Smaller differences are
 // noise: an icon optimized with another SVGO version or SVGOMG still shrinks
 // a little.
 const fs = require('fs'), path = require('path');
@@ -21,7 +21,7 @@ for (const f of args) {
   const after = B.prefixIds(B.optimize(before, { generic: true }), stem).trim() + '\n';
   const saved = before.length - after.length, pct = Math.round(100 * saved / before.length);
   if (check) {
-    const bad = (pct > 20 && saved > 500) || saved > 4096;
+    const bad = (pct > 20 && saved > 200) || saved > 4096;
     if (bad) unoptimized++;
     console.log(`${bad ? 'UNOPTIMIZED' : 'ok'} ${f}: optimizing would save ${saved} bytes (${pct}%)`);
     continue;
