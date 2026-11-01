@@ -12,13 +12,29 @@ export let getFallbackIconUrl:
   | undefined = undefined
 export let isCheckerboard: boolean = false
 
+type FormatTab = "svg" | "img"
+let activeTab: FormatTab = "svg"
+
 let selectedVersion: IconVersions = versions.includes("original")
   ? "original"
   : versions[0]
 
-let isCopyingSvg = false
+let currentIconName = ""
+let rawSvgText = ""
+let isLoadingSvg = false
+let svgFetchError = false
+let fetchToken = 0
 
-$: codeSnippet = `<img src="${getIconUrl(selectedIcon, selectedVersion)}"/>`
+$: if (selectedIcon && selectedIcon.name !== currentIconName) {
+  currentIconName = selectedIcon.name
+  selectedVersion = versions.includes("original") ? "original" : versions[0]
+}
+
+$: if (versions.length > 0 && !versions.includes(selectedVersion)) {
+  selectedVersion = versions.includes("original") ? "original" : versions[0]
+}
+
+$: imgSnippet = `<img src="${getIconUrl(selectedIcon, selectedVersion)}" />`
 
 const selectVersion = (version: IconVersions) => (selectedVersion = version)
 
@@ -34,36 +50,72 @@ function handleImageError(e: Event, version: IconVersions) {
   }
 }
 
-async function copyRawSvg() {
-  if (isCopyingSvg) return
-  isCopyingSvg = true
+async function fetchRawSvg(icon: IIcon, version: IconVersions) {
+  if (typeof window === "undefined" || !icon || !version) return
+  const currentToken = ++fetchToken
+  isLoadingSvg = true
+  svgFetchError = false
+  rawSvgText = ""
+
   try {
-    const primaryUrl = getIconUrl(selectedIcon, selectedVersion)
+    const primaryUrl = getIconUrl(icon, version)
     let res = await fetch(primaryUrl)
     if (!res.ok && getFallbackIconUrl) {
-      res = await fetch(getFallbackIconUrl(selectedIcon, selectedVersion))
+      res = await fetch(getFallbackIconUrl(icon, version))
     }
+    if (currentToken !== fetchToken) return
+
     if (res.ok) {
-      const svgText = await res.text()
-      await copyToClipboard(svgText)
+      const text = await res.text()
+      if (currentToken === fetchToken) {
+        rawSvgText = text.trim()
+        isLoadingSvg = false
+      }
+    } else {
+      if (currentToken === fetchToken) {
+        svgFetchError = true
+        isLoadingSvg = false
+      }
     }
   } catch (err) {
     if (getFallbackIconUrl) {
       try {
-        const fallbackRes = await fetch(
-          getFallbackIconUrl(selectedIcon, selectedVersion),
-        )
+        const fallbackRes = await fetch(getFallbackIconUrl(icon, version))
+        if (currentToken !== fetchToken) return
         if (fallbackRes.ok) {
-          const svgText = await fallbackRes.text()
-          await copyToClipboard(svgText)
+          const text = await fallbackRes.text()
+          if (currentToken === fetchToken) {
+            rawSvgText = text.trim()
+            isLoadingSvg = false
+            return
+          }
         }
-      } catch (fallbackErr) {
-        console.error("Failed to fetch fallback SVG:", fallbackErr)
+      } catch {
+        // ignore fallback errors
       }
     }
-  } finally {
-    isCopyingSvg = false
+    if (currentToken === fetchToken) {
+      svgFetchError = true
+      isLoadingSvg = false
+    }
   }
+}
+
+$: if (selectedIcon && selectedVersion) {
+  fetchRawSvg(selectedIcon, selectedVersion)
+}
+
+function downloadSvg() {
+  if (!rawSvgText || typeof window === "undefined") return
+  const blob = new Blob([rawSvgText], { type: "image/svg+xml;charset=utf-8" })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement("a")
+  a.href = url
+  a.download = `${selectedIcon.name}-${selectedVersion}.svg`
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  URL.revokeObjectURL(url)
 }
 </script>
 
@@ -95,61 +147,124 @@ async function copyRawSvg() {
     {/each}
   </div>
 
-  <div class="mt-4 flex items-center justify-between">
-    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">HTML & SVG Markup</span>
-    <Tooltip content="Copy raw SVG text" flashMessage="Copied SVG!">
+  <div class="mt-4 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center rounded-lg bg-gray-200 p-1 dark:bg-gray-800">
       <button
         type="button"
-        class="flex cursor-pointer items-center gap-1.5 rounded-md bg-green-500 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-green-600"
-        on:click={copyRawSvg}
-        aria-label="Copy SVG Code"
+        class="cursor-pointer rounded-md px-3 py-1 text-xs font-semibold transition-all {activeTab === 'svg'
+          ? 'bg-white text-gray-900 shadow-sm dark:bg-gray-700 dark:text-white'
+          : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'}"
+        on:click={() => (activeTab = "svg")}
+        aria-label="Pure SVG format"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          class="size-4"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-          />
-        </svg>
-        <span>Copy SVG Code</span>
+        Pure SVG
       </button>
-    </Tooltip>
+      <button
+        type="button"
+        class="cursor-pointer rounded-md px-3 py-1 text-xs font-semibold transition-all {activeTab === 'img'
+          ? 'bg-white text-gray-900 shadow-sm dark:bg-gray-700 dark:text-white'
+          : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'}"
+        on:click={() => (activeTab = "img")}
+        aria-label="&lt;img&gt; Element format"
+      >
+        &lt;img&gt; Element
+      </button>
+    </div>
+
+    <div class="flex items-center gap-2">
+      {#if activeTab === "svg"}
+        <button
+          type="button"
+          class="flex cursor-pointer items-center gap-1.5 rounded-md border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-700 transition hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 disabled:cursor-not-allowed disabled:opacity-50"
+          on:click={downloadSvg}
+          disabled={isLoadingSvg || !rawSvgText}
+          aria-label="Download SVG"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="size-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+            />
+          </svg>
+          <span>Download SVG</span>
+        </button>
+
+        <Tooltip content="Copy raw SVG text" flashMessage="Copied SVG!">
+          <button
+            type="button"
+            class="flex cursor-pointer items-center gap-1.5 rounded-md bg-green-500 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-green-600 disabled:cursor-not-allowed disabled:opacity-50"
+            on:click={() => copyToClipboard(rawSvgText)}
+            disabled={isLoadingSvg || !rawSvgText}
+            aria-label="Copy Pure SVG"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
+              />
+            </svg>
+            <span>Copy Pure SVG</span>
+          </button>
+        </Tooltip>
+      {:else}
+        <Tooltip content="Copy <img> tag" flashMessage="Copied <img>!">
+          <button
+            type="button"
+            class="flex cursor-pointer items-center gap-1.5 rounded-md bg-green-500 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-green-600"
+            on:click={() => copyToClipboard(imgSnippet)}
+            aria-label="Copy <img> Tag"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
+              />
+            </svg>
+            <span>Copy &lt;img&gt; Tag</span>
+          </button>
+        </Tooltip>
+      {/if}
+    </div>
   </div>
 
   <div
-    class="code-snippet relative mt-2 flex w-full items-center justify-between rounded-md bg-gray-100 p-4 dark:bg-gray-900 dark:text-gray-400"
+    class="code-snippet relative mt-2 max-h-36 w-full overflow-y-auto rounded-md bg-gray-100 p-4 font-mono text-xs break-all dark:bg-gray-900 dark:text-gray-400"
   >
-    <code class="break-all">{codeSnippet}</code>
-    <Tooltip content="Copy to clipboard" flashMessage="Copied!">
-      <button
-        type="button"
-        class="ml-2 flex-shrink-0 cursor-pointer rounded-full text-xl"
-        on:click={() => copyToClipboard(codeSnippet)}
-        aria-label="Copy code snippet"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
-          />
-        </svg>
-      </button>
-    </Tooltip>
+    {#if activeTab === "svg"}
+      {#if isLoadingSvg}
+        <span class="text-gray-500 italic">Loading SVG content...</span>
+      {:else if svgFetchError}
+        <span class="text-red-500">Failed to load SVG markup.</span>
+      {:else}
+        <code>{rawSvgText}</code>
+      {/if}
+    {:else}
+      <code>{imgSnippet}</code>
+    {/if}
   </div>
 {:else}
   <p class="text-gray-500 dark:text-gray-400">No SVG versions available</p>

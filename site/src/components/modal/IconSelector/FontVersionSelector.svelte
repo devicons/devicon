@@ -12,7 +12,17 @@ let selectedVersion: IconVersions = versions.includes("plain")
   ? "plain"
   : versions[0]
 
+let currentIconName = ""
 let isColored = false
+
+$: if (selectedIcon && selectedIcon.name !== currentIconName) {
+  currentIconName = selectedIcon.name
+  selectedVersion = versions.includes("plain") ? "plain" : versions[0]
+}
+
+$: if (versions.length > 0 && !versions.includes(selectedVersion)) {
+  selectedVersion = versions.includes("plain") ? "plain" : versions[0]
+}
 
 $: coloredSuffix = isColored ? " colored" : ""
 $: codeSnippet = `<i class="devicon-${selectedIcon.name}-${selectedVersion}${coloredSuffix}"></i>`
