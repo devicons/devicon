@@ -53,7 +53,7 @@ const col = color || prominent(logo);
 // A logo in one solid colour is already font-ready: its original is a single
 // path (holes wound for the nonzero rule) and plain becomes an alias of it.
 // Not when it has white parts: the original keeps those as white fills.
-const oneColour = ls => !ls.some(l => l.color.gradient || B.isWhite(l.color)) && new Set(ls.filter(l => !B.isWhite(l.color)).map(l => B.hex(l.color))).size === 1;
+const oneColour = ls => !ls.some(l => l.color.gradient || B.isWhite(l.color) || l.path.opacity < 1 || l.color.alpha < 1) && new Set(ls.filter(l => !B.isWhite(l.color)).map(l => B.hex(l.color))).size === 1;
 const solo = oneColour(logo), soloW = text.length && oneColour([...logo, ...text]);
 const lp = plainOf(logo, B.fitMatrix(B.unionAll(logo.map(l => l.path)).bounds));
 lp.transform(B.fitMatrix(lp.bounds));

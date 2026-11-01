@@ -67,6 +67,10 @@ function leaves(svg) {
     }
   };
   walk(root, null);
+  // Group opacity is multiplied into each leaf: right for shapes that don't
+  // overlap, too dark where they do. Rare in logos, so warn instead of
+  // rebuilding compositing groups.
+  if (out.some(l => l.path.opacity < 1)) console.warn('warning: semi-transparent shapes; check overlaps in the original against the source');
   return out;
 }
 
@@ -197,6 +201,9 @@ function prefixIds(svg, prefix) {
     svg = svg.split(` id="${id}"`).join(` id="${to}"`)
       .split(`url(#${id})`).join(`url(#${to})`)
       .split(`href="#${id}"`).join(`href="#${to}"`);
+    // ID selectors in <style> blocks
+    const sel = new RegExp(`#${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`, 'g');
+    svg = svg.replace(/(<style\b[^>]*>)([\s\S]*?)(<\/style>)/g, (m, a, css, c) => a + css.replace(sel, `#${to}`) + c);
   }
   return svg;
 }

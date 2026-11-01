@@ -50,10 +50,10 @@ if (fontV.includes('original') && fontV.includes('plain')) warn('both original a
 if (!/^#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?$/.test(entry.color || '')) err(`color "${entry.color}" must be "#rgb" or "#rrggbb"`);
 else if (/^#fff(fff)?$/i.test(entry.color)) warn('color is white: invisible on light backgrounds; use the logo\'s main non-white colour');
 
-const aliases = entry.aliases || [];
+const validAlias = a => a !== null && typeof a === 'object' && !Array.isArray(a) && typeof a.base === 'string' && typeof a.alias === 'string';
+const aliases = (entry.aliases || []).filter(a => { if (validAlias(a)) return true; err(`alias ${JSON.stringify(a)} must be an object {"base": "...", "alias": "..."}`); return false; });
 const aliasNames = new Set();
 for (const a of aliases) {
-  if (typeof a !== 'object' || Array.isArray(a) || typeof a.base !== 'string' || typeof a.alias !== 'string') { err(`alias ${JSON.stringify(a)} must be an object {"base": "...", "alias": "..."}`); continue; }
   if (!ORDER.includes(a.base) || !ORDER.includes(a.alias)) err(`alias ${a.base} -> ${a.alias}: invalid version name`);
   if (a.base === a.alias) err(`alias ${a.base} -> ${a.alias}: base and alias are the same`);
   if (!svgV.includes(a.base)) err(`alias base "${a.base}" is not an existing SVG version`);
@@ -110,6 +110,7 @@ for (const v of svgV) {
   const light = c => { const n = parseInt(c.slice(1), 16); return ((n >> 16) & 255) > 225 && ((n >> 8) & 255) > 225 && (n & 255) > 225; };
   if (fills.length && fills.every(light) && !/fill="url\(/.test(s)) warn(`${rel}: only white/near-white fills (${fills.join(', ')}): looks like the logo's variant for dark backgrounds; use the primary (light-background) version`);
   if (isFont) {
+    if (/<defs\b|<use\b|<symbol\b/.test(s)) err(`${rel}: font versions can't use <defs>, <symbol> or <use>; put the one path in directly`);
     const paths = (s.match(/<path\b/g) || []).length, shapes = (s.match(/<(circle|rect|ellipse|polygon|polyline|line)\b/g) || []).length;
     if (paths !== 1 || shapes) err(`${rel}: font versions need exactly one <path> (found ${paths} paths${shapes ? ` and ${shapes} other shapes` : ''}); unite them`);
     if (/<g\b/.test(s)) err(`${rel}: font versions must not use groups`);
