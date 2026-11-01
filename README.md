@@ -175,6 +175,18 @@ Add the following CSS rules in your stylesheet:
     We are happy with every contribution, whether it's new icons, features, or maintainers. Please have a look at our <a href="https://github.com/devicons/devicon/wiki">Wiki</a> to see how you can contribute to this project.
 </p>
 
+
+<h3>Contributors</h3>
+<p>
+    Thanks to all our contributors! Devicon would not be possible without you.
+</p>
+<a href="https://github.com/devicons/devicon/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=devicons/devicon" alt="Devicon Contributors" />
+</a>
+<p>
+    <sub>Made with <a href="https://contrib.rocks">contrib.rocks</a>.</sub>
+</p>
+
 <h2 id="discord-community">Discord community</h2>
 <p>
 We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join the official Discord Server <a href="https://discord.gg/hScy8KWACQ">here!</a>

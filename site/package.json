@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.12",
-    "devicon": "^2.17.0",
+    "devicon": "^2.18.0",
     "tailwindcss": "^4.0.12"
   }
 }

@@ -1,4 +1,4 @@
-export const CURRENT_VERSION = "2.17.0"
+export const CURRENT_VERSION = "2.18.0"
 
 export type SortOption = "name-asc" | "name-desc" | "newest"
 

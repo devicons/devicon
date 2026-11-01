@@ -12,8 +12,8 @@ importers:
         specifier: ^4.0.12
         version: 4.0.12(vite@6.4.1(jiti@2.4.2)(lightningcss@1.29.2))
       devicon:
-        specifier: ^2.17.0
-        version: 2.17.0
+        specifier: ^2.18.0
+        version: 2.18.0
       tailwindcss:
         specifier: ^4.0.12
         version: 4.0.12
@@ -633,8 +633,8 @@ packages:
   devalue@5.3.2:
     resolution: {integrity: sha512-UDsjUbpQn9kvm68slnrs+mfxwFkIflOhkanmyabZ8zOYk8SMEIbJ3TK+88g70hSIeytu4y18f0z/hYHMTrXIWw==}
 
-  devicon@2.17.0:
-    resolution: {integrity: sha512-2nKUdjobJlmRSaCHa50PGsVq0VDURnq9gVzQoJggsM/NKN0tLhC/Uq2zmy2pH36Q/1q3gvYwp/GjTgv/R0Ysbg==}
+  devicon@2.18.0:
+    resolution: {integrity: sha512-jmLZPdTfO9d0GlnTX8Qw2SxZj71My6WAVEZtgmWErVju/uSUqmk2hxKzXo9Pw7IfqV9PEwcOKrywZA1etryRPA==}
 
   enhanced-resolve@5.18.1:
     resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
@@ -1407,7 +1407,7 @@ snapshots:
 
   devalue@5.3.2: {}
 
-  devicon@2.17.0: {}
+  devicon@2.18.0: {}
 
   enhanced-resolve@5.18.1:
     dependencies:

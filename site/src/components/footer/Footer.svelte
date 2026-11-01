@@ -1,5 +1,5 @@
 <script>
-import { CURRENT_VERSION } from "$lib/types/types"
+import { latestVersion } from "$lib/stores/iconStore"
 </script>
 
 <footer
@@ -9,7 +9,7 @@ import { CURRENT_VERSION } from "$lib/types/types"
     <div class="font-damion flex flex-row gap-2 text-4xl text-green-500">
       <i class="devicon-devicon-plain colored"></i>
       Devicon
-      <span class=" block sm:mt-auto sm:inline">{CURRENT_VERSION}</span>
+      <span class=" block sm:mt-auto sm:inline">v{$latestVersion}</span>
     </div>
 
     <p>
@@ -52,6 +52,36 @@ import { CURRENT_VERSION } from "$lib/types/types"
         >Icomoon</a
       >
     </p>
+
+    <div class="flex flex-col gap-2 pt-2">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">
+        Thanks to all our contributors!
+      </h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        Devicon would not be possible without you. Thanks for contributing!
+      </p>
+      <a
+        href="https://github.com/devicons/devicon/graphs/contributors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://contrib.rocks/image?repo=devicons/devicon"
+          alt="Devicon Contributors"
+          loading="lazy"
+          class="max-w-full h-auto"
+        />
+      </a>
+      <p class="text-xs text-gray-500 dark:text-gray-400">
+        Made with <a
+          href="https://contrib.rocks"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline"
+          >contrib.rocks</a
+        >.
+      </p>
+    </div>
   </div>
 </footer>
 
