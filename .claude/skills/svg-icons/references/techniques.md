@@ -73,7 +73,12 @@ If the logo is a symbol on a coloured tile (app-icon style), the original keeps 
 
 1. Look harder for a vector first: the project's repo (`docs/`, `assets/`, `branding/`), site header (inline SVG/`<symbol>`), favicon SVGs, press kits, older releases.
 2. **Simple geometry** (circles, bars, rounded rectangles): rebuild it exactly. Measure from the image — fit circles to edge pixels, take bounding boxes of symbols, sample flat colours away from edges — and draw clean shapes. Far better than tracing.
-3. **Organic shapes or letters**: trace per colour with `trace.js` (`traceMask(png, (r,g,b) => <colour test>, [x0,y0,x1,y1])`), use `fill-rule="evenodd"` on traced paths (potrace holes), then snap colours to the logo's real values. Online tracers (vectorizer.ai, "group paths by colour") work well too; afterwards remove stray outlines/backgrounds and snap the palette.
+3. **Organic shapes or letters**: `vectorize.js logo.png --out logo.svg --palette '#hex,#hex'`. Use the largest PNG there is (the image is resampled to 1024px, but detail lost in a small file stays lost) and the brand's real colours. Then render it next to the PNG and check:
+   - **Colours**: without `--palette` it prints the colours it found; gradients become flat bands (pick the dominant colour per area, or rebuild the gradient by hand).
+   - **Thin lines** (outlines, strokes of 1–2 px in the PNG) can vanish or break: try `--smooth 1` or `2` (wobblier edges, which plain/line versions can show as notches), a larger PNG, or redraw those lines with `build.js`.
+   - **Background**: it removes the border colour only where it touches the border, so white details enclosed by the logo stay white fills. A logo on a tile keeps the tile if the tile has its own colour.
+   - **Hidden overlap**: each colour layer reaches a few pixels under the layers above it, so no seams show; plain versions cut their gaps around the upper layers as usual.
+   For one-off masks use `trace.js` directly (`traceMask(png, (r,g,b) => <colour test>, [x0,y0,x1,y1])` or `traceBits`). Online tracers (vectorizer.ai, "group paths by colour") also work; afterwards remove stray outlines and backgrounds and snap the palette.
 4. Say clearly that the result is traced/rebuilt and from which file.
 
 ## 8. Fixing artifacts
