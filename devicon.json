@@ -3365,6 +3365,26 @@
         "aliases": []
     },
     {
+        "name": "dialogflow",
+        "altnames": [],
+        "tags": [
+            "google",
+            "ai",
+            "chat"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ef6c00",
+        "aliases": []
+    },
+    {
         "name": "digitalocean",
         "altnames": [],
         "tags": [
