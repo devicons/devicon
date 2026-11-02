@@ -43,7 +43,7 @@ onMount(() => {
 <section class="relative pt-12 pb-6 md:pt-20 md:pb-8">
   <div class="base-container flex flex-col items-center text-center">
     <!-- Headline -->
-    <h1 class="max-w-4xl text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl md:text-7xl">
+    <h1 class="max-w-4xl text-4xl sm:text-6xl md:text-7xl font-bold tracking-[-0.045em] leading-[1.08] text-slate-900 dark:text-white">
       Developer icons for every stack.
     </h1>
 
