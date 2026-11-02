@@ -570,6 +570,28 @@
         "aliases": []
     },
     {
+        "name": "antlr",
+        "altnames": [
+            "ANTLR4"
+        ],
+        "tags": [
+            "programming",
+            "tool",
+            "parser"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#E44A32",
+        "aliases": []
+    },
+    {
         "name": "apache",
         "altnames": [
             "The Apache Software Foundation"
