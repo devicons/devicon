@@ -12942,6 +12942,32 @@
         "aliases": []
     },
     {
+        "name": "rqlite",
+        "altnames": [
+            "rqlite.io"
+        ],
+        "tags": [
+            "database",
+            "sql",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#0169C9",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "rspec",
         "altnames": [],
         "tags": [
