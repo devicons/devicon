@@ -1,26 +1,40 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-@theme {
-  --color-green-50: #f2faf8;
-  --color-green-100: #e6f5f0;
-  --color-green-200: #c3e6d9;
-  --color-green-300: #4ab475;
-  --color-green-400: #6bb590;
-  --color-green-500: #3d9561;
-  --color-green-600: #318552;
-  --color-green-700: #2d804e;
-  --color-green-800: #16592d;
-  --color-green-900: #0c421c;
-  --color-green-950: #052b0f;
-  --color-black-950: #000000aa;
 
-  --primaryColor: #3d9561;
-  --primaryColorDark: #2d804e;
-  --primaryColorLight: #4ab475;
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-dark-bg: #09090b;
+  --color-surface-900: #11131a;
+  --color-surface-850: #181b24;
+  --color-surface-800: #222634;
+
+  --color-devicon-emerald: #10b981;
+  --color-devicon-emerald-light: #34d399;
+  --color-devicon-emerald-dark: #059669;
+
+  --color-border-subtle: rgba(255, 255, 255, 0.07);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+
+  --primaryColor: #10b981;
+  --primaryColorDark: #059669;
+  --primaryColorLight: #34d399;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* Prevent full-page repaint/layout lag across 600+ icon cards during theme toggle */
+html.disable-transitions,
+html.disable-transitions *:not(.theme-toggle-icon, .theme-toggle-icon *) {
+  transition: none !important;
 }
 
 .base-container {
-  @apply mx-auto w-full px-4 py-6 sm:max-w-[45rem] md:max-w-[55rem] lg:max-w-[64rem] xl:max-w-[100rem];
+  @apply mx-auto w-full px-4 sm:px-6 lg:px-8 max-w-7xl;
 }
 
 .checkerboard {
@@ -31,9 +45,9 @@
 
 :global(.dark) .checkerboard,
 .dark .checkerboard {
-  background-image: repeating-conic-gradient(#374151 0% 25%, #1f2937 0% 50%);
+  background-image: repeating-conic-gradient(#222634 0% 25%, #11131a 0% 50%);
   background-size: 16px 16px;
-  background-color: #1f2937;
+  background-color: #11131a;
 }
 
 .no-scrollbar,
@@ -45,4 +59,38 @@
 .no-scrollbar::-webkit-scrollbar,
 .code-snippet::-webkit-scrollbar {
   display: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-marquee {
+    animation: none !important;
+  }
 }

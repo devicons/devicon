@@ -1,24 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
+    <title>DEVICON | All programming languages and development tools related icons font</title>
     <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Damion&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-      // On page load, check for dark mode preference
-      if (localStorage.getItem('darkMode') === 'true') {
+      // On page load, check for dark mode preference (defaults to dark)
+      if (localStorage.getItem('darkMode') !== 'false') {
         document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
       }
     </script>
     %sveltekit.head%
   </head>
-  <body data-sveltekit-preload-data="hover">
+  <body data-sveltekit-preload-data="hover" class="bg-white text-zinc-900 antialiased dark:bg-[#09090b] dark:text-zinc-100 selection:bg-emerald-500/20 selection:text-emerald-300">
     <div style="display: contents">%sveltekit.body%</div>
   </body>
 </html>

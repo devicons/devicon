@@ -1,14 +1,15 @@
 <script lang="ts">
 const { children } = $props()
-import Header from "../components/header/Header.svelte"
+import Navbar from "../components/navigation/Navbar.svelte"
 import Footer from "../components/footer/Footer.svelte"
 import "../app.css"
 import "devicon/devicon.min.css"
-import DarkModeToggle from "../components/darkMode/DarkModeToggle.svelte"
 </script>
 
-<Header />
-
-{@render children()}
-<DarkModeToggle />
-<Footer />
+<div class="flex min-h-screen flex-col bg-white text-zinc-900 dark:bg-[#09090b] dark:text-zinc-100">
+  <Navbar />
+  <div class="flex-1">
+    {@render children()}
+  </div>
+  <Footer />
+</div>
