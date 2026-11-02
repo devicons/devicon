@@ -64,7 +64,10 @@ function leaves(svg) {
       if (!p.isEmpty() && p.bounds.width > 0 && p.bounds.height > 0) out.push({ path: p, color, raw: color, src: item });
     };
     const fill = item.fillColor;
-    if (fill && fill.alpha !== 0) add(base.clone({ insert: false }), fill);
+    // SVG fills open subpaths as if closed; paper's boolean ops drop the last
+    // segment of an open one, so close them (strokes stay as drawn)
+    const closed = p => { (p.children || [p]).forEach(c => { if (!c.closed) c.closePath(1e-6); }); return p; };
+    if (fill && fill.alpha !== 0) add(closed(base.clone({ insert: false })), fill);
     if (item.strokeColor && item.strokeWidth > 0 && item.strokeColor.alpha !== 0) {
       const w = item.strokeWidth * Math.sqrt(Math.abs(item.parent.globalMatrix.scaling.x * item.parent.globalMatrix.scaling.y));
       const s = PaperOffset.offsetStroke(base, w / 2, { cap: item.strokeCap || 'butt', join: item.strokeJoin || 'miter', insert: false });
