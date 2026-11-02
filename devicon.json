@@ -560,19 +560,15 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
         "color": "#E44A32",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "apache",
