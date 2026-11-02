@@ -1,9 +1,11 @@
 <script lang="ts">
 import { onMount } from "svelte"
+import { base } from "$app/paths"
 import { icons, totalVersions, searchTerm, setSearchTerm } from "$lib/stores/iconStore"
 import IconMarquee from "./IconMarquee.svelte"
 
 let searchInputEl: HTMLInputElement | null = null
+const ballmerSrc = base ? `${base}/ballmer.gif` : "ballmer.gif"
 
 function handleGlobalKeyDown(e: KeyboardEvent) {
   if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
@@ -72,7 +74,7 @@ onMount(() => {
         <!-- Media Screen (Exact 4:3 aspect ratio matching 480x360 source) -->
         <div class="relative aspect-[4/3] w-full overflow-hidden bg-black">
           <img
-            src="/steve.gif"
+            src={ballmerSrc}
             alt="Steve Ballmer chanting developers, developers, developers"
             class="size-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
             width="480"
