@@ -13315,6 +13315,28 @@
         ]
     },
     {
+        "name": "semanticui",
+        "altnames": [
+            "Semantic UI"
+        ],
+        "tags": [
+            "css",
+            "framework",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#35bdb2",
+        "aliases": []
+    },
+    {
         "name": "sentry",
         "altnames": [],
         "tags": [
