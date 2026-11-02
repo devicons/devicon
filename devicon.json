@@ -3263,6 +3263,28 @@
         "aliases": []
     },
     {
+        "name": "dbvisualizer",
+        "altnames": [
+            "DbVis"
+        ],
+        "tags": [
+            "database",
+            "sql",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#24c780",
+        "aliases": []
+    },
+    {
         "name": "debian",
         "altnames": [],
         "tags": [
