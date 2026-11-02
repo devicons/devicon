@@ -44,13 +44,46 @@ onMount(() => {
   <div class="base-container flex flex-col items-center text-center">
     <!-- Headline -->
     <h1 class="max-w-4xl text-4xl sm:text-6xl md:text-7xl font-bold tracking-[-0.045em] leading-[1.08] text-slate-900 dark:text-white">
-      Developer icons for every stack.
+      Icons for developers, developers, developers!
     </h1>
 
     <!-- Natural Project Statement with Store-derived Metrics -->
     <p class="mt-4 max-w-2xl text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
       Over {$icons.length > 0 ? $icons.length : 660}+ technology icons and {$totalVersions > 0 ? $totalVersions.toLocaleString() : "2,100"}+ SVG variants for modern software engineering. Free and open source under MIT.
     </p>
+
+    <!-- Steve Ballmer Featured Window Frame -->
+    <div class="mt-6 flex flex-col items-center">
+      <div class="group relative w-72 sm:w-80 md:w-96 overflow-hidden rounded-xl border border-slate-200/80 bg-white shadow-lg transition-all duration-200 hover:border-slate-300 dark:border-white/10 dark:bg-[#11131a] dark:shadow-2xl dark:hover:border-white/20">
+        <!-- Window Titlebar -->
+        <div class="flex items-center justify-between border-b border-slate-200/80 px-3 py-1.5 bg-slate-50/80 dark:border-white/[0.06] dark:bg-white/[0.02]">
+          <div class="flex items-center gap-1.5">
+            <span class="size-2.5 rounded-full bg-red-400/80 dark:bg-red-500/70"></span>
+            <span class="size-2.5 rounded-full bg-amber-400/80 dark:bg-amber-500/70"></span>
+            <span class="size-2.5 rounded-full bg-emerald-400/80 dark:bg-emerald-500/70"></span>
+          </div>
+          <div class="flex items-center gap-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+            <span class="size-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>ballmer.gif</span>
+          </div>
+          <span class="text-[10px] font-mono text-slate-400 dark:text-slate-500">DEV DAYS</span>
+        </div>
+
+        <!-- Media Screen (Exact 4:3 aspect ratio matching 480x360 source) -->
+        <div class="relative aspect-[4/3] w-full overflow-hidden bg-black">
+          <img
+            src="/steve.gif"
+            alt="Steve Ballmer chanting developers, developers, developers"
+            class="size-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
+            width="480"
+            height="360"
+            loading="eager"
+          />
+          <!-- Subtle edge highlight -->
+          <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/5 dark:ring-white/5"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- Linear-style Search Bar -->
     <div class="mt-8 w-full max-w-2xl">
