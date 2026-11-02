@@ -13369,6 +13369,31 @@
         "aliases": []
     },
     {
+        "name": "servicenow",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "platform",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#62d84e",
+        "aliases": [
+            {
+                "base": "plain",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "sfml",
         "altnames": [
             "Simple and Fast Multimedia",
