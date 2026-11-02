@@ -11320,6 +11320,31 @@
         "aliases": []
     },
     {
+        "name": "powerbi",
+        "altnames": [
+            "Power BI",
+            "microsoftpowerbi"
+        ],
+        "tags": [
+            "data",
+            "analytics",
+            "visualization"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#e6ad10",
+        "aliases": []
+    },
+    {
         "name": "powershell",
         "altnames": [
             "ps"
