@@ -12953,19 +12953,15 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
         "color": "#0169C9",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "rspec",
