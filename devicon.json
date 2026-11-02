@@ -10873,6 +10873,30 @@
         "aliases": []
     },
     {
+        "name": "phpmyadmin",
+        "altnames": [],
+        "tags": [
+            "database",
+            "sql",
+            "php",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#6c78af",
+        "aliases": []
+    },
+    {
         "name": "phpstorm",
         "altnames": [],
         "tags": [
@@ -13338,6 +13362,28 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "semanticui",
+        "altnames": [
+            "Semantic UI"
+        ],
+        "tags": [
+            "css",
+            "framework",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#35bdb2",
+        "aliases": []
     },
     {
         "name": "sentry",
@@ -15893,6 +15939,32 @@
         },
         "color": "#004e8c",
         "aliases": []
+    },
+    {
+        "name": "visualparadigm",
+        "altnames": [
+            "Visual Paradigm"
+        ],
+        "tags": [
+            "design",
+            "modeling",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#c33",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "visualstudio",
