@@ -49,6 +49,8 @@ if (!fontV.length) err('versions.font is empty: at least one font-ready version 
 if (fontV.includes('original') && fontV.includes('plain')) warn('both original and plain are font versions: if plain is just the original in one colour, remove it and alias instead');
 if (!/^#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?$/.test(entry.color || '')) err(`color "${entry.color}" must be "#rgb" or "#rrggbb"`);
 else if (/^#fff(fff)?$/i.test(entry.color)) warn('color is white: invisible on light backgrounds; use the logo\'s main non-white colour');
+const short = c => c.replace(/^#([0-9a-f])\1([0-9a-f])\2([0-9a-f])\3$/i, '#$1$2$3');
+if (entry.color && short(entry.color) !== entry.color) warn(`color "${entry.color}" can be shortened to "${short(entry.color)}"`);
 
 const validAlias = a => a !== null && typeof a === 'object' && !Array.isArray(a) && typeof a.base === 'string' && typeof a.alias === 'string';
 const aliases = (entry.aliases || []).filter(a => { if (validAlias(a)) return true; err(`alias ${JSON.stringify(a)} must be an object {"base": "...", "alias": "..."}`); return false; });
@@ -121,6 +123,8 @@ for (const v of svgV) {
   if (/\sstyle="/.test(s)) warn(`${rel}: has style="..." attributes; use plain attributes`);
   if (/transform=/.test(s)) warn(`${rel}: has transforms; bake them into the paths (SVGO does most)`);
   if (/(sodipodi|inkscape):|xml:space|<metadata|data-name=/.test(s)) warn(`${rel}: editor leftovers (sodipodi/inkscape/xml:space/metadata/data-name); optimize with SVGO`);
+  const longHex = [...new Set([...s.matchAll(/#[0-9a-f]{6}\b/gi)].map(m => m[0]).filter(c => short(c) !== c))];
+  if (longHex.length) warn(`${rel}: shorten ${longHex.join(', ')} to ${longHex.map(short).join(', ')} (SVGO does this)`);
   if (/opacity="(0?\.\d+|0)"/.test(s)) warn(`${rel}: uses opacity; faded paths render wrongly in the font and are usually a tracing leftover`);
   if (s.trimEnd().split('\n').length > 1) warn(`${rel}: should be optimized onto a single line`);
   if (!s.endsWith('\n')) warn(`${rel}: add an empty line at the end of the file`);
