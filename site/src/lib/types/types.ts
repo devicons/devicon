@@ -1,6 +1,17 @@
 export const CURRENT_VERSION = "2.18.0"
 
-export type SortOption = "name-asc" | "name-desc" | "newest"
+export type SortOption = "name-asc" | "name-desc" | "most-versions" | "newest"
+
+export type CategoryOption =
+  | "all"
+  | "language"
+  | "framework"
+  | "database"
+  | "library"
+  | "cloud"
+  | "tool"
+
+export type IntegrationTab = "react" | "html" | "svg"
 
 export type IconVersions =
   | "plain"

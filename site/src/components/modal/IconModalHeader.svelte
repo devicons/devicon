@@ -1,51 +1,34 @@
 <script lang="ts">
 export let title: string | undefined = undefined
 export let onClose: () => void
-export let isCheckerboard: boolean = false
-export let onToggleCheckerboard: (() => void) | undefined = undefined
+export let tags: string[] = []
 </script>
 
-<div class="mb-4 flex items-center justify-between">
-  <h2 id="modal-title" class="text-xl font-bold dark:text-white">
-    {title}
-  </h2>
-  <div class="flex items-center gap-2">
-    {#if onToggleCheckerboard}
-      <button
-        type="button"
-        class="flex cursor-pointer items-center gap-1.5 rounded-md border border-gray-200 px-2 py-1 text-xs font-medium text-gray-700 transition hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
-        on:click={onToggleCheckerboard}
-        title="Toggle checkerboard background"
-        aria-label="Toggle checkerboard background"
-      >
-        <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor">
-          <rect x="0" y="0" width="8" height="8" fill="currentColor" opacity="0.3"/>
-          <rect x="8" y="0" width="8" height="8" fill="currentColor" opacity="0.8"/>
-          <rect x="0" y="8" width="8" height="8" fill="currentColor" opacity="0.8"/>
-          <rect x="8" y="8" width="8" height="8" fill="currentColor" opacity="0.3"/>
-        </svg>
-        <span>{isCheckerboard ? "Solid BG" : "Checkerboard"}</span>
-      </button>
+<div class="mb-5 flex items-center justify-between border-b border-slate-100 pb-3.5 dark:border-white/[0.06]">
+  <div class="flex items-center gap-3">
+    <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white capitalize">
+      {title}
+    </h2>
+    {#if tags && tags.length > 0}
+      <div class="hidden sm:flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+        {#each tags.slice(0, 3) as tag}
+          <span class="rounded bg-slate-100 px-2 py-0.5 text-[11px] font-mono text-slate-500 dark:bg-white/[0.04] dark:text-slate-400">
+            #{tag}
+          </span>
+        {/each}
+      </div>
     {/if}
-    <button
-      class="cursor-pointer text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-      on:click={onClose}
-      aria-label="Close modal"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    </button>
   </div>
+
+  <button
+    type="button"
+    class="flex size-8 items-center justify-center rounded-lg text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-white/5 dark:hover:text-white cursor-pointer"
+    on:click={onClose}
+    aria-label="Close modal"
+  >
+    <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
 </div>
