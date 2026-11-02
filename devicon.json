@@ -16389,6 +16389,30 @@
         ]
     },
     {
+        "name": "wakatime",
+        "altnames": [],
+        "tags": [
+            "development",
+            "monitoring",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "waku",
         "altnames": [],
         "tags": [
