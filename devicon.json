@@ -13379,17 +13379,19 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "original",
+                "plain-wordmark"
             ]
         },
         "color": "#62d84e",
         "aliases": [
             {
-                "base": "plain",
-                "alias": "plain-wordmark"
+                "base": "original",
+                "alias": "plain"
             }
         ]
     },
