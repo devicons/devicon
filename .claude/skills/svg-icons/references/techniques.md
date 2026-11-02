@@ -67,7 +67,7 @@ Simplify: remove tiny details that vanish at 32px, merge near-duplicate lines, a
 
 ## 6. Logos on a tile or background
 
-If the logo is a symbol on a coloured tile (app-icon style), the original keeps the tile. For plain, keep the tile and cut the symbol out of it (the plain icon then looks like the original on a dark background) — or, if the brand uses the bare symbol, use that. Don't fill a transparent area with a background colour; users choose their own background.
+If the logo is a symbol on a coloured tile (app-icon style), the original keeps the tile. For plain, keep the tile and cut the symbol out of it (the plain icon then looks like the original on a dark background; `versions.js` does this for white symbols, and `--holes '#hex'` for light ones like `#e7f8ff`) — or, if the brand uses the bare symbol, use that. Don't fill a transparent area with a background colour; users choose their own background.
 
 ## 7. Raster-only logos
 

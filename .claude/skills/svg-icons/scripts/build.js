@@ -17,9 +17,12 @@ function colorOf(c) {
 
 // Visible shapes in paint order, as global-coordinate paths with a colour.
 function leaves(svg) {
-  // paper ignores <style> rules: inline them as attributes first
+  // paper ignores <style> rules: inline them as attributes first. Colour names
+  // become hex: paper resolves names through a canvas, which is a stub here
+  // ("black" would come out as NaN)
   svg = require('svgo').optimize(svg, { plugins: [
-    { name: 'inlineStyles', params: { onlyMatchedOnce: false } }, 'convertStyleToAttrs', 'removeTitle', 'removeDesc',
+    { name: 'inlineStyles', params: { onlyMatchedOnce: false } }, 'convertStyleToAttrs',
+    { name: 'convertColors', params: { names2hex: true, rgb2hex: true, shorthex: false, shortname: false, currentColor: false } }, 'removeTitle', 'removeDesc',
     'removeMetadata', 'removeEditorsNSData', 'removeXMLProcInst', 'removeComments', 'convertShapeToPath'] }).data;
   // paper can't parse compact arc flags ("a1 1 0 0130 4"): turn arcs into curves
   const svgpath = require('svgpath');

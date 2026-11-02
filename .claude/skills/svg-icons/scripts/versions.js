@@ -13,6 +13,8 @@
 //     [--wordmark-color '#hex']
 //     [--line-width 4]     outline width of line versions (128 units)
 //     [--plain-only '#000000']  build plain/line from shapes of this colour only
+//     [--holes '#e7f8ff,...']   shapes of these colours become holes in plain/line
+//                          (like white ones; for light artwork on a tile)
 //     [--skip line,plain-wordmark]
 // Writes <name>-<version>.svg files and preview.png into --out.
 const fs = require('fs'), path = require('path');
@@ -26,6 +28,7 @@ const name = opt('--name'), outDir = opt('--out', '.');
 const logoIdx = range(opt('--logo')), textIdx = range(opt('--text'));
 const gap = Number(opt('--gap', 0)), color = opt('--color'), wordmarkColor = opt('--wordmark-color');
 const lineWidth = Number(opt('--line-width', 4)), plainOnly = opt('--plain-only');
+const holes = (opt('--holes', '') || '').split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
 const skip = (opt('--skip', '') || '').split(',');
 const src = args[0];
 if (!src || !name) { console.error('usage: node versions.js <logo.svg> --name foo --out dir [options]'); process.exit(1); }
@@ -34,17 +37,20 @@ const all = B.leaves(fs.readFileSync(src, 'utf8'));
 const logo = all.filter((l, i) => logoIdx ? logoIdx.includes(i) : !(textIdx || []).includes(i));
 const text = textIdx ? all.filter((l, i) => textIdx.includes(i)) : [];
 const clone = (p, m) => { const c = p.clone({ insert: false }); if (m) c.transform(m); return c; };
-const plainOf = (ls, m, g = gap) => B.plainPath(ls.filter(l => !plainOnly || B.hex(l.color) === plainOnly).map(l => ({ ...l, path: clone(l.path, m) })), { gap: g });
+const isHole = l => B.isWhite(l.color) || holes.includes(B.hex(l.color));
+const plainOf = (ls, m, g = gap) => B.plainPath(ls.filter(l => !plainOnly || B.hex(l.color) === plainOnly).map(l => ({ ...l, path: clone(l.path, m) })), { gap: g, cutout: isHole });
 const one = (p, c) => B.optimize(B.pathSvg(p, c));
 const prominent = ls => {
   const area = {};
-  for (const l of ls) if (!B.isWhite(l.color)) { const h = B.hex(l.color); area[h] = (area[h] || 0) + Math.abs(l.path.area); }
+  for (const l of ls) if (!isHole(l)) { const h = B.hex(l.color); area[h] = (area[h] || 0) + Math.abs(l.path.area); }
   return Object.entries(area).sort((a, b) => b[1] - a[1])[0][0];
 };
 const originalOf = ls => {
   const m = B.fitMatrix(B.unionAll(ls.map(l => l.path)).bounds);
   paper.project.clear();
-  const g = new paper.Group(ls.map(l => { const p = clone(l.path, m); p.fillColor = l.path.fillColor; return p; }));
+  // gradients are in the source's coordinates: move their points with the shape
+  const fillOf = c => c && c.gradient ? new paper.Color({ gradient: c.gradient, origin: m.transform(c.origin), destination: m.transform(c.destination), highlight: c.highlight ? m.transform(c.highlight) : undefined }) : c;
+  const g = new paper.Group(ls.map(l => { const p = clone(l.path, m); p.fillColor = fillOf(l.path.fillColor); return p; }));
   return B.optimize(B.svgDoc(g.exportSVG({ asString: true, precision: 3 }).replace(/ xmlns="[^"]*"/g, '')));
 };
 
@@ -53,7 +59,7 @@ const col = color || prominent(logo);
 // A logo in one solid colour is already font-ready: its original is a single
 // path (holes wound for the nonzero rule) and plain becomes an alias of it.
 // Not when it has white parts: the original keeps those as white fills.
-const oneColour = ls => !ls.some(l => l.color.gradient || B.isWhite(l.color) || l.path.opacity < 1 || l.color.alpha < 1) && new Set(ls.filter(l => !B.isWhite(l.color)).map(l => B.hex(l.color))).size === 1;
+const oneColour = ls => !ls.some(l => l.color.gradient || isHole(l) || l.path.opacity < 1 || l.color.alpha < 1) && new Set(ls.filter(l => !B.isWhite(l.color)).map(l => B.hex(l.color))).size === 1;
 const solo = oneColour(logo), soloW = text.length && oneColour([...logo, ...text]);
 const lp = plainOf(logo, B.fitMatrix(B.unionAll(logo.map(l => l.path)).bounds));
 lp.transform(B.fitMatrix(lp.bounds));
