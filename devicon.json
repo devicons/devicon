@@ -3253,19 +3253,15 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
         "color": "#24c780",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            }
-        ]
+        "aliases": []
     },
     {
         "name": "debian",
