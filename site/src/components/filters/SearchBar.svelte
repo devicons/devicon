@@ -7,8 +7,8 @@ function handleSearch(e: Event) {
 }
 </script>
 
-<div class="relative w-full">
-  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400 dark:text-slate-500">
+<div class="group relative w-full">
+  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400 transition-colors group-focus-within:text-emerald-500 dark:text-slate-500">
     <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="11" cy="11" r="8"/>
       <path d="m21 21-4.35-4.35"/>
@@ -21,7 +21,7 @@ function handleSearch(e: Event) {
     value={$searchTerm}
     on:input={handleSearch}
     placeholder="Filter icons..."
-    class="w-full rounded-lg border border-slate-200 bg-white py-1.5 pr-7 pl-8 text-xs text-slate-800 outline-none transition placeholder:text-slate-400 hover:border-slate-300 focus:border-slate-400 dark:border-white/[0.08] dark:bg-[#11131a] dark:text-slate-100 dark:placeholder:text-slate-500 dark:hover:border-white/[0.15] dark:focus:border-white/25"
+    class="w-full rounded-lg border border-slate-200 bg-white py-1.5 pr-7 pl-8 text-xs text-slate-800 outline-none transition placeholder:text-slate-400 hover:border-slate-300 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/50 dark:border-white/[0.08] dark:bg-[#11131a] dark:text-slate-100 dark:placeholder:text-slate-500 dark:hover:border-white/[0.15] dark:focus:border-emerald-500/60 dark:focus:ring-emerald-500/40"
   />
 
   {#if $searchTerm}

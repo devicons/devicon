@@ -14,7 +14,9 @@ function closeMobileMenu() {
 }
 </script>
 
-<header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-md transition-colors dark:border-white/[0.07] dark:bg-[#09090b]/80">
+<header class="relative sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-md transition-colors dark:border-white/[0.07] dark:bg-[#09090b]/80">
+  <!-- Subtle emerald horizon accent line -->
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent"></div>
   <div class="base-container flex h-14 items-center justify-between">
     <!-- Brand / Logo -->
     <a
@@ -22,14 +24,21 @@ function closeMobileMenu() {
       class="group flex items-center gap-2.5 transition focus:outline-none"
       aria-label="Devicon Home"
     >
-      <div class="flex size-7 items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 transition group-hover:bg-emerald-500/20">
-        <i class="devicon-devicon-plain colored text-base"></i>
+      <div class="flex size-7.5 sm:size-8 items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/20 p-1 transition group-hover:bg-emerald-500/20 group-hover:border-emerald-500/30">
+        <svg class="size-full" viewBox="0 0 128 128" aria-hidden="true">
+          <path fill="#558d6c" d="M4.92 8l10.17 87.05L64 119.95V8H4.92z"/>
+          <path fill="#5aa579" d="M64 8v111.95l.05.05 48.93-24.91L123.08 8H64z"/>
+          <path fill="#60be86" d="M18.84 22.11l6.49 65.18L64 105.97V22.11H18.84z"/>
+          <path fill="#65d693" d="M64 22.11v83.86l.05.05 38.69-18.76 6.42-65.15H64z"/>
+          <path fill="#5aa579" d="M105.72 54.9L73.14 39.42l-1.83-.9-1.12 2.28L64 53.41V68.3l9.15-18.08 21.5 9.57-23.09 10.37-.87.47v10.88L73 80.38l32.78-15.69a2 2 0 00.92-2v-5.78a2 2 0 00-.98-2.01z"/>
+          <path fill="#558d6c" d="M56 69.39l-21.79-9.6 23.3-10.37 1.76-.7V37.76l-3.4 1.44-33.93 15.69a2.26 2.26 0 00-1.28 2v5.77a2.22 2.22 0 001.24 2l33.44 15.52 2 .9 1.21-2.26L64 68.3V53.41z"/>
+        </svg>
       </div>
-      <div class="flex items-baseline gap-2">
+      <div class="flex items-center gap-2">
         <span class="text-slate-900 dark:text-white font-semibold tracking-tight text-lg">
           Devicon
         </span>
-        <span class="text-slate-500 font-mono text-xs">
+        <span class="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-[11px] font-mono font-medium text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
           v{$latestVersion}
         </span>
       </div>
@@ -40,21 +49,21 @@ function closeMobileMenu() {
       <a
         href="#icons"
         on:click={(e) => scrollToSection("icons", e)}
-        class="rounded-md px-3 py-1.5 transition hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 cursor-pointer"
+        class="rounded-md px-3 py-1.5 transition hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-500/5 dark:hover:bg-emerald-500/10 cursor-pointer"
       >
         Icons
       </a>
       <a
         href="#integrations"
         on:click={(e) => scrollToSection("integrations", e)}
-        class="rounded-md px-3 py-1.5 transition hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 cursor-pointer"
+        class="rounded-md px-3 py-1.5 transition hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-500/5 dark:hover:bg-emerald-500/10 cursor-pointer"
       >
         Integrations
       </a>
       <a
         href="#cdn"
         on:click={(e) => scrollToSection("cdn", e)}
-        class="rounded-md px-3 py-1.5 transition hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 cursor-pointer"
+        class="rounded-md px-3 py-1.5 transition hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-500/5 dark:hover:bg-emerald-500/10 cursor-pointer"
       >
         CDN
       </a>
@@ -131,7 +140,7 @@ function closeMobileMenu() {
             closeMobileMenu()
             scrollToSection("icons", e)
           }}
-          class="rounded-lg px-3 py-2 transition hover:bg-slate-100 dark:hover:bg-white/5 cursor-pointer"
+          class="rounded-lg px-3 py-2 transition hover:bg-slate-100 hover:text-emerald-600 dark:hover:bg-white/5 dark:hover:text-emerald-400 cursor-pointer"
         >
           Icons
         </a>
@@ -141,7 +150,7 @@ function closeMobileMenu() {
             closeMobileMenu()
             scrollToSection("integrations", e)
           }}
-          class="rounded-lg px-3 py-2 transition hover:bg-slate-100 dark:hover:bg-white/5 cursor-pointer"
+          class="rounded-lg px-3 py-2 transition hover:bg-slate-100 hover:text-emerald-600 dark:hover:bg-white/5 dark:hover:text-emerald-400 cursor-pointer"
         >
           Integrations
         </a>
@@ -151,7 +160,7 @@ function closeMobileMenu() {
             closeMobileMenu()
             scrollToSection("cdn", e)
           }}
-          class="rounded-lg px-3 py-2 transition hover:bg-slate-100 dark:hover:bg-white/5 cursor-pointer"
+          class="rounded-lg px-3 py-2 transition hover:bg-slate-100 hover:text-emerald-600 dark:hover:bg-white/5 dark:hover:text-emerald-400 cursor-pointer"
         >
           CDN
         </a>

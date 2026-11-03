@@ -10,6 +10,16 @@
   --color-surface-850: #181b24;
   --color-surface-800: #222634;
 
+  /* Devicon Brand Tokens */
+  --color-devicon-primary: #10b981;
+  --color-devicon-primary-dark: #059669;
+  --color-devicon-primary-light: #34d399;
+  --color-devicon-accent: #3ecf8e;
+  --color-devicon-shield: #60be86;
+  --color-devicon-shield-light: #65d693;
+  --color-devicon-shield-dark: #558d6c;
+  --color-devicon-shield-mid: #5aa579;
+
   --color-devicon-emerald: #10b981;
   --color-devicon-emerald-light: #34d399;
   --color-devicon-emerald-dark: #059669;
@@ -93,4 +103,42 @@ html.disable-transitions *:not(.theme-toggle-icon, .theme-toggle-icon *) {
   .animate-marquee {
     animation: none !important;
   }
+}
+
+/* Devicon Developer Grid Background */
+.bg-devicon-grid {
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+:global(.dark) .bg-devicon-grid,
+.dark .bg-devicon-grid {
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Devicon Engineering Margin Stripes */
+.bg-devicon-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(16, 185, 129, 0.05) 0,
+    rgba(16, 185, 129, 0.05) 1px,
+    transparent 0,
+    transparent 10px
+  );
+}
+
+:global(.dark) .bg-devicon-stripes,
+.dark .bg-devicon-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(16, 185, 129, 0.07) 0,
+    rgba(16, 185, 129, 0.07) 1px,
+    transparent 0,
+    transparent 10px
+  );
 }
