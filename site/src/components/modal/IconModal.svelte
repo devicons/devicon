@@ -4,11 +4,14 @@ import {
   selectedIcon,
   closeIconModal,
   latestVersion,
+  isDarkMode,
   getIconSvgUrl,
   getIconFallbackSvgUrl,
+  getIconSvgCandidates,
   getIconAllVariants,
   resolveSvgVersion,
   isDarkLogo,
+  isWhiteLogo,
 } from "$lib/stores/iconStore"
 import Modal from "./Modal.svelte"
 import IconModalHeader from "./IconModalHeader.svelte"
@@ -23,10 +26,11 @@ const previewSizes = [24, 32, 48, 64, 128] as const
 type PreviewSize = (typeof previewSizes)[number]
 
 let activeTab: IntegrationTab = "react"
-let bgMode: BgMode = "dark"
+let userSelectedBg = false
+let bgMode: BgMode = $isDarkMode ? "dark" : "light"
 let isColored = true
 let activePkg: PkgManager = "npm"
-let previewSize: PreviewSize = 64
+let previewSize: PreviewSize = 128
 
 const pkgCommands: Record<PkgManager, string> = {
   npm: "npm i react-devicons",
@@ -37,6 +41,7 @@ const pkgCommands: Record<PkgManager, string> = {
 
 let availableVariants: string[] = []
 let selectedVersion = "original"
+let selectedFontVersion = "plain"
 let currentIconName = ""
 
 let rawSvgText = ""
@@ -55,6 +60,17 @@ function triggerFeedback(msg: string) {
   }, 2000)
 }
 
+$: isDark = $selectedIcon ? isDarkLogo($selectedIcon) : false
+$: isWhite = $selectedIcon ? isWhiteLogo($selectedIcon) : false
+$: fontVersions = $selectedIcon?.versions?.font || []
+$: themeAdaptiveVersion = fontVersions.includes("plain")
+  ? "plain"
+  : (fontVersions[0] || selectedFontVersion || "plain")
+
+$: if (!userSelectedBg) {
+  bgMode = $isDarkMode ? "dark" : "light"
+}
+
 $: if ($selectedIcon) {
   if ($selectedIcon.name !== currentIconName) {
     currentIconName = $selectedIcon.name
@@ -62,27 +78,59 @@ $: if ($selectedIcon) {
     selectedVersion = availableVariants.includes("original")
       ? "original"
       : (availableVariants[0] ?? "plain")
+
+    const fonts = $selectedIcon.versions?.font || []
+    if (bgMode === "dark" && isDark) {
+      isColored = false
+      selectedFontVersion = fonts.includes("plain") ? "plain" : (fonts[0] || "plain")
+    } else {
+      isColored = true
+      selectedFontVersion = fonts.includes("original")
+        ? "original"
+        : (fonts.includes("plain") ? "plain" : (fonts[0] || "plain"))
+    }
   }
 } else {
   currentIconName = ""
 }
 
-$: isDark = $selectedIcon ? isDarkLogo($selectedIcon) : false
+function setBgMode(mode: BgMode) {
+  bgMode = mode
+  userSelectedBg = true
+  const fonts = $selectedIcon?.versions?.font || []
+  if (mode === "dark" && isDark) {
+    isColored = false
+    if (fonts.includes("plain")) {
+      selectedFontVersion = "plain"
+    } else if (fonts.length > 0) {
+      selectedFontVersion = fonts[0]
+    }
+  } else if (mode === "light") {
+    isColored = true
+    if (fonts.includes("original")) {
+      selectedFontVersion = "original"
+    } else if (fonts.includes("plain")) {
+      selectedFontVersion = "plain"
+    } else if (fonts.length > 0) {
+      selectedFontVersion = fonts[0]
+    }
+  }
+}
 
 function getIconUrl(icon: IIcon, version: string) {
   return getIconSvgUrl(icon, version, $latestVersion)
 }
 
-function getFallbackIconUrl(icon: IIcon, version: string) {
-  return getIconFallbackSvgUrl(icon, version)
+function getFallbackIconUrl(icon: IIcon, version: string, currentSrc?: string) {
+  return getIconFallbackSvgUrl(icon, version, currentSrc)
 }
 
 function handleImageError(e: Event, version: string) {
   if (!$selectedIcon) return
   const target = e.currentTarget as HTMLImageElement | null
   if (target) {
-    const fallback = getFallbackIconUrl($selectedIcon, version)
-    if (target.src !== fallback) {
+    const fallback = getFallbackIconUrl($selectedIcon, version, target.src)
+    if (target.src !== fallback && !target.src.endsWith(fallback)) {
       target.src = fallback
     }
   }
@@ -128,45 +176,26 @@ async function fetchRawSvg(icon: IIcon, version: string) {
   svgFetchError = false
   rawSvgText = ""
 
-  try {
-    const primaryUrl = getIconUrl(icon, version)
-    let res = await fetch(primaryUrl)
-    if (!res.ok) {
-      res = await fetch(getFallbackIconUrl(icon, version))
-    }
-    if (currentToken !== fetchToken) return
-
-    if (res.ok) {
-      const text = await res.text()
-      if (currentToken === fetchToken) {
+  const candidates = getIconSvgCandidates(icon, version, $latestVersion)
+  for (const candidate of candidates) {
+    try {
+      const res = await fetch(candidate)
+      if (currentToken !== fetchToken) return
+      if (res.ok) {
+        const text = await res.text()
+        if (currentToken !== fetchToken) return
         rawSvgText = text.trim()
         isLoadingSvg = false
-      }
-    } else {
-      if (currentToken === fetchToken) {
-        svgFetchError = true
-        isLoadingSvg = false
-      }
-    }
-  } catch {
-    try {
-      const fallbackRes = await fetch(getFallbackIconUrl(icon, version))
-      if (currentToken !== fetchToken) return
-      if (fallbackRes.ok) {
-        const text = await fallbackRes.text()
-        if (currentToken === fetchToken) {
-          rawSvgText = text.trim()
-          isLoadingSvg = false
-          return
-        }
+        return
       }
     } catch {
-      // ignore
+      // try next candidate
     }
-    if (currentToken === fetchToken) {
-      svgFetchError = true
-      isLoadingSvg = false
-    }
+  }
+
+  if (currentToken === fetchToken) {
+    svgFetchError = true
+    isLoadingSvg = false
   }
 }
 
@@ -199,7 +228,10 @@ export function HeaderIcon() {
 
 $: jsxComponentSnippet = `<${reactComponentName} size={32} />`
 $: coloredSuffix = isColored ? " colored" : ""
-$: fontClassSnippet = `<i class="devicon-${$selectedIcon?.name}-${selectedVersion}${coloredSuffix}"></i>`
+$: effectiveFontVersion = selectedFontVersion || selectedVersion || "plain"
+$: fontClassSnippet = `<i class="devicon-${$selectedIcon?.name}-${effectiveFontVersion}${coloredSuffix}"></i>`
+$: adaptiveFontClassSnippet = `<i class="devicon-${$selectedIcon?.name}-${themeAdaptiveVersion}"></i>`
+$: coloredFontClassSnippet = `<i class="devicon-${$selectedIcon?.name}-${effectiveFontVersion} colored"></i>`
 $: cdnSnippet =
   '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />'
 
@@ -289,7 +321,7 @@ onMount(() => {
       <!-- LEFT COLUMN: Preview & Customization (5 cols) -->
       <div class="lg:col-span-5 flex flex-col gap-3.5">
         <!-- Main Preview Box with 4 Background Surfaces -->
-        <div class="relative flex flex-col items-center justify-center rounded-xl p-6 transition-all min-h-[200px] overflow-hidden {
+        <div class="relative flex flex-col items-center justify-center rounded-xl p-6 transition-all min-h-[220px] overflow-hidden {
           bgMode === 'dark' ? 'bg-[#11131a] border border-white/[0.08]' :
           bgMode === 'light' ? 'bg-white border border-slate-200' :
           bgMode === 'checkerboard' ? 'checkerboard border border-slate-200 dark:border-white/[0.08]' :
@@ -302,7 +334,7 @@ onMount(() => {
           >
             {#if rawSvgText && !isLoadingSvg}
               <!-- Real Inline Vector SVG rendering -->
-              <div class="flex items-center justify-center size-full [&>svg]:size-full [&>svg]:max-h-full [&>svg]:max-w-full [&>svg]:object-contain {isDark && bgMode === 'dark' ? 'brightness-0 invert' : ''}">
+              <div class="flex items-center justify-center size-full [&>svg]:size-full [&>svg]:max-h-full [&>svg]:max-w-full [&>svg]:object-contain {isDark && bgMode === 'dark' ? 'invert' : ''} {isWhite && bgMode === 'light' ? 'invert' : ''}">
                 {@html rawSvgText}
               </div>
             {:else if currentSvgUrl}
@@ -310,7 +342,7 @@ onMount(() => {
                 src={currentSvgUrl}
                 alt={`${$selectedIcon.name} (${selectedVersion})`}
                 on:error={(e) => handleImageError(e, selectedVersion)}
-                class="size-full object-contain transition-transform {isDark && bgMode === 'dark' ? 'brightness-0 invert' : ''}"
+                class="size-full object-contain transition-transform {isDark && bgMode === 'dark' ? 'invert' : ''} {isWhite && bgMode === 'light' ? 'invert' : ''}"
               />
             {/if}
           </div>
@@ -335,28 +367,28 @@ onMount(() => {
               <span class="mr-1 text-[11px] text-slate-500 dark:text-slate-400">Surface:</span>
               <button
                 type="button"
-                on:click={() => (bgMode = "dark")}
+                on:click={() => setBgMode("dark")}
                 class="size-5 rounded bg-[#11131a] border transition cursor-pointer {bgMode === 'dark' ? 'border-emerald-500 ring-1 ring-emerald-500/50' : 'border-white/20'}"
                 title="Dark surface"
                 aria-label="Dark Surface"
               ></button>
               <button
                 type="button"
-                on:click={() => (bgMode = "light")}
+                on:click={() => setBgMode("light")}
                 class="size-5 rounded bg-white border transition cursor-pointer {bgMode === 'light' ? 'border-emerald-500 ring-1 ring-emerald-500/50' : 'border-slate-300'}"
                 title="Light surface"
                 aria-label="Light Surface"
               ></button>
               <button
                 type="button"
-                on:click={() => (bgMode = "checkerboard")}
+                on:click={() => setBgMode("checkerboard")}
                 class="size-5 rounded checkerboard border transition cursor-pointer {bgMode === 'checkerboard' ? 'border-emerald-500 ring-1 ring-emerald-500/50' : 'border-slate-300 dark:border-white/20'}"
                 title="Checkerboard surface"
                 aria-label="Checkerboard Surface"
               ></button>
               <button
                 type="button"
-                on:click={() => (bgMode = "transparent")}
+                on:click={() => setBgMode("transparent")}
                 class="flex size-5 items-center justify-center rounded border border-dashed transition cursor-pointer text-[10px] {bgMode === 'transparent' ? 'border-emerald-500 text-emerald-500 ring-1 ring-emerald-500/50' : 'border-slate-300 text-slate-400 dark:border-white/20'}"
                 title="Transparent surface"
                 aria-label="Transparent Surface"
@@ -423,7 +455,7 @@ onMount(() => {
                   src={getIconUrl($selectedIcon, version)}
                   alt={version}
                   on:error={(e) => handleImageError(e, version)}
-                  class="size-4 object-contain {isDark ? 'dark:brightness-0 dark:invert' : ''}"
+                  class="size-4 object-contain {isDark ? 'dark:invert' : ''} {isWhite ? 'invert dark:filter-none' : ''}"
                 />
                 <span class="text-[11px]">{version}</span>
               </button>
@@ -597,20 +629,78 @@ onMount(() => {
         {:else if activeTab === "html"}
           <!-- HTML / Webfont Panel -->
           <div class="flex flex-col gap-2.5">
+            <!-- 1. Live Font Icon Preview & Font Variant Selector -->
+            <div class="rounded-xl border border-slate-200/90 bg-slate-50 p-3.5 dark:border-white/[0.06] dark:bg-[#11131a] flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">
+                  Webfont Live Preview
+                </span>
+                {#if fontVersions.length > 1}
+                  <div class="flex items-center gap-1">
+                    <span class="text-[10px] font-medium text-slate-400 dark:text-slate-500 mr-1">Version:</span>
+                    {#each fontVersions as fVer}
+                      <button
+                        type="button"
+                        on:click={() => (selectedFontVersion = fVer)}
+                        class="rounded px-2 py-0.5 font-mono text-[10px] font-semibold transition cursor-pointer {selectedFontVersion === fVer
+                          ? 'bg-slate-900 text-white dark:bg-white/15 dark:text-white'
+                          : 'text-slate-500 hover:bg-slate-200 dark:text-slate-400 dark:hover:bg-white/5'}"
+                      >
+                        {fVer}
+                      </button>
+                    {/each}
+                  </div>
+                {/if}
+              </div>
+
+              <!-- Live Icon rendering on active surface -->
+              <div class="flex items-center justify-center py-6 rounded-lg transition-colors {
+                bgMode === 'dark' ? 'bg-[#09090b] border border-white/[0.08]' :
+                bgMode === 'light' ? 'bg-white border border-slate-200' :
+                bgMode === 'checkerboard' ? 'checkerboard border border-slate-200 dark:border-white/[0.08]' :
+                'bg-transparent border border-dashed border-slate-200 dark:border-white/[0.12]'
+              }">
+                <i
+                  class="devicon-{$selectedIcon.name}-{effectiveFontVersion}{coloredSuffix} text-5xl transition-colors {isColored ? '' : (bgMode === 'dark' ? 'text-white' : 'text-slate-900')} {isDark && bgMode === 'dark' ? '!text-white' : ''} {isWhite && bgMode === 'light' ? '!text-slate-900' : ''}"
+                ></i>
+              </div>
+
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Rendered with CSS class <code class="font-mono text-emerald-600 dark:text-emerald-400">devicon-{$selectedIcon.name}-{effectiveFontVersion}{coloredSuffix}</code>.
+              </p>
+            </div>
+
+            <!-- 2. Code Snippets -->
             <SyntaxCodeBlock
               title="1. Add CDN link to HTML <head>"
               language="html"
               code={cdnSnippet}
             />
 
-            <SyntaxCodeBlock
-              title="2. Insert Font Icon element"
-              language="html"
-              code={fontClassSnippet}
-            />
+            <!-- Theme-Adaptive Monochrome Snippet -->
+            <div class="flex flex-col gap-1">
+              <SyntaxCodeBlock
+                title="Theme-Adaptive Snippet (Monochrome)"
+                language="html"
+                code={adaptiveFontClassSnippet}
+              />
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 pl-1">
+                Inherits <code class="font-mono text-slate-700 dark:text-slate-300">currentColor</code> to adapt seamlessly to light and dark backgrounds.
+              </span>
+            </div>
 
-            <div class="rounded-lg bg-slate-50 p-2.5 text-[11px] text-slate-500 dark:bg-white/[0.02] dark:text-slate-400 border border-slate-200/60 dark:border-white/[0.06] leading-relaxed">
-              The <code class="font-mono text-emerald-600 dark:text-emerald-400">colored</code> class displays original multi-color styling. Remove it for monochrome color matching your CSS text color.
+            <!-- Brand Colored Snippet -->
+            <div class="flex flex-col gap-1">
+              <SyntaxCodeBlock
+                title="Brand Colored Snippet"
+                language="html"
+                code={coloredFontClassSnippet}
+              />
+              {#if isDark}
+                <span class="text-[11px] text-amber-600 dark:text-amber-400/90 pl-1">
+                  Note: This icon has dark brand coloring and may have low contrast on dark backgrounds. Use the theme-adaptive snippet above for dark modes.
+                </span>
+              {/if}
             </div>
           </div>
         {:else}

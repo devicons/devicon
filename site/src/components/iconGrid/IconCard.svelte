@@ -7,6 +7,7 @@
     getIconFallbackSvgUrl,
     getIconAllVariants,
     isDarkLogo,
+    isWhiteLogo,
   } from "$lib/stores/iconStore";
   import type { IIcon, IconVersions } from "$lib/types/types";
 
@@ -20,12 +21,13 @@
   ) as IconVersions;
   $: isSelected = $selectedIcon?.name === icon.name;
   $: isDark = isDarkLogo(icon);
+  $: isWhite = isWhiteLogo(icon);
 
   function handleImageError(e: Event, version: IconVersions | string) {
     const target = e.currentTarget as HTMLImageElement | null;
     if (target) {
-      const fallback = getIconFallbackSvgUrl(icon, version);
-      if (target.src !== fallback) {
+      const fallback = getIconFallbackSvgUrl(icon, version, target.src);
+      if (target.src !== fallback && !target.src.endsWith(fallback)) {
         target.src = fallback;
       }
     }
@@ -52,8 +54,8 @@
       height="44"
       on:error={(e) => handleImageError(e, defaultSvgVersion)}
       class="size-10 sm:size-11 object-contain transition-transform duration-150 group-hover:scale-105 {isDark
-        ? 'dark:brightness-0 dark:invert'
-        : ''}"
+        ? 'dark:invert'
+        : ''} {isWhite ? 'invert dark:filter-none' : ''}"
     />
   </div>
 

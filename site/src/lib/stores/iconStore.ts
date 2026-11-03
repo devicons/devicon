@@ -1,4 +1,5 @@
 import { writable, derived, get, type Writable, type Readable } from "svelte/store"
+import { base } from "$app/paths"
 import {
   CURRENT_VERSION,
   type IIcon,
@@ -120,37 +121,95 @@ export function resolveSvgVersion(icon: IIcon, variant: string): string {
   return icon.versions?.svg?.[0] || "original"
 }
 
-export function isDarkLogo(icon: IIcon): boolean {
-  if (!icon) return false
-  const explicitDark = [
-    "github",
-    "apple",
-    "nextjs",
-    "express",
-    "socketio",
-    "vercel",
-    "bash",
-  ]
-  if (explicitDark.includes(icon.name?.toLowerCase())) return true
+export function hexToHsl(hex: string): { h: number; s: number; l: number } {
+  if (!hex || typeof hex !== "string") {
+    return { h: 0, s: 0, l: 0 }
+  }
 
-  if (!icon.color) return false
-  let hex = icon.color.trim().toLowerCase()
-  if (hex.startsWith("#")) hex = hex.slice(1)
-  if (hex.length === 3) {
-    hex = hex
+  let cleaned = hex.trim().replace(/^#/, "")
+
+  // Support 3, 4, 6, or 8 digit hex codes
+  if (cleaned.length === 3 || cleaned.length === 4) {
+    cleaned = cleaned
+      .slice(0, 3)
       .split("")
       .map((c) => c + c)
       .join("")
+  } else if (cleaned.length >= 6) {
+    cleaned = cleaned.slice(0, 6)
+  } else {
+    return { h: 0, s: 0, l: 0 }
   }
-  if (hex.length !== 6) return false
-  const r = parseInt(hex.substring(0, 2), 16)
-  const g = parseInt(hex.substring(2, 4), 16)
-  const b = parseInt(hex.substring(4, 6), 16)
+
+  const num = parseInt(cleaned, 16)
+  if (Number.isNaN(num)) {
+    return { h: 0, s: 0, l: 0 }
+  }
+
+  const r = ((num >> 16) & 255) / 255
+  const g = ((num >> 8) & 255) / 255
+  const b = (num & 255) / 255
+
   const max = Math.max(r, g, b)
   const min = Math.min(r, g, b)
-  const saturation = max === 0 ? 0 : (max - min) / max
-  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
-  return saturation < 0.35 && luminance < 0.35
+  let h = 0
+  let s = 0
+  const l = (max + min) / 2
+
+  if (max !== min) {
+    const d = max - min
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
+
+    switch (max) {
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0)
+        break
+      case g:
+        h = (b - r) / d + 2
+        break
+      case b:
+        h = (r - g) / d + 4
+        break
+    }
+    h /= 6
+  }
+
+  return { h, s, l }
+}
+
+export function isDarkLogo(icon: IIcon): boolean {
+  if (!icon) return false
+  if (icon.theme === "dark") return true
+  if (icon.theme === "light" || icon.theme === "color") return false
+  if (!icon.color) return false
+  const { s, l } = hexToHsl(icon.color)
+  return s < 0.20 && l < 0.35
+}
+
+export function isWhiteLogo(icon: IIcon): boolean {
+  if (!icon) return false
+  if (icon.theme === "light") return true
+  if (icon.theme === "dark" || icon.theme === "color") return false
+  if (!icon.color) return false
+  const { s, l } = hexToHsl(icon.color)
+  return s < 0.20 && l > 0.85
+}
+
+export function getIconSvgCandidates(
+  icon: IIcon,
+  version: IconVersions | string,
+  ver?: string,
+): string[] {
+  const resolved = resolveSvgVersion(icon, version)
+  const v = ver || get(latestVersion) || CURRENT_VERSION
+  const localUrl = `${base}/icons/${icon.name}/${icon.name}-${resolved}.svg`
+  const npmUrl = `https://cdn.jsdelivr.net/npm/devicon@${v}/icons/${icon.name}/${icon.name}-${resolved}.svg`
+  const ghUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/${icon.name}/${icon.name}-${resolved}.svg`
+
+  if (import.meta.env.DEV) {
+    return [localUrl, npmUrl, ghUrl]
+  }
+  return [npmUrl, ghUrl, localUrl]
 }
 
 export function getIconSvgUrl(
@@ -158,20 +217,39 @@ export function getIconSvgUrl(
   version: IconVersions | string,
   ver?: string,
 ): string {
-  const resolved = resolveSvgVersion(icon, version)
-  const v = ver || get(latestVersion) || CURRENT_VERSION
-  return `https://cdn.jsdelivr.net/npm/devicon@${v}/icons/${icon.name}/${icon.name}-${resolved}.svg`
+  const candidates = getIconSvgCandidates(icon, version, ver)
+  return candidates[0]
 }
 
 export function getIconFallbackSvgUrl(
   icon: IIcon,
   version: IconVersions | string,
+  currentSrc?: string,
 ): string {
-  const resolved = resolveSvgVersion(icon, version)
-  return `https://raw.githubusercontent.com/devicons/devicon/master/icons/${icon.name}/${icon.name}-${resolved}.svg`
+  const candidates = getIconSvgCandidates(icon, version)
+  if (!currentSrc) return candidates[1] || candidates[0]
+  const index = candidates.findIndex(
+    (c) => currentSrc === c || currentSrc.endsWith(c),
+  )
+  if (index >= 0 && index < candidates.length - 1) {
+    return candidates[index + 1]
+  }
+  return candidates[candidates.length - 1]
 }
 
 async function fetchLatestVersion(): Promise<string> {
+  try {
+    const npmResponse = await fetch("https://registry.npmjs.org/devicon/latest")
+    if (npmResponse.ok) {
+      const npmData = await npmResponse.json()
+      if (npmData?.version) {
+        return npmData.version
+      }
+    }
+  } catch {
+    // try github fallback
+  }
+
   try {
     const response = await fetch(
       "https://api.github.com/repos/devicons/devicon/releases/latest",
@@ -180,18 +258,6 @@ async function fetchLatestVersion(): Promise<string> {
       const data = await response.json()
       if (data?.tag_name) {
         return data.tag_name.replace(/^v/, "")
-      }
-    }
-  } catch {
-    // try npm fallback
-  }
-
-  try {
-    const npmResponse = await fetch("https://registry.npmjs.org/devicon/latest")
-    if (npmResponse.ok) {
-      const npmData = await npmResponse.json()
-      if (npmData?.version) {
-        return npmData.version
       }
     }
   } catch {
@@ -210,17 +276,32 @@ export async function fetchIconsData(): Promise<void> {
     latestVersion.set(version)
 
     let response: Response | null = null
+
+    // 1. Try local devicon.json first (enables local dev without CDN latency)
     try {
-      response = await fetch(
-        `https://cdn.jsdelivr.net/npm/devicon@${version}/devicon.json`,
-      )
-      if (!response.ok) {
-        response = null
+      const localResponse = await fetch(`${base}/devicon.json`)
+      if (localResponse.ok) {
+        response = localResponse
       }
     } catch {
-      response = null
+      // fallback to CDN
     }
 
+    // 2. Fall back to jsdelivr npm CDN
+    if (!response) {
+      try {
+        const cdnResponse = await fetch(
+          `https://cdn.jsdelivr.net/npm/devicon@${version}/devicon.json`,
+        )
+        if (cdnResponse.ok) {
+          response = cdnResponse
+        }
+      } catch {
+        // fallback to github master
+      }
+    }
+
+    // 3. Fall back to GitHub master
     if (!response) {
       response = await fetch(
         "https://raw.githubusercontent.com/devicons/devicon/master/devicon.json",

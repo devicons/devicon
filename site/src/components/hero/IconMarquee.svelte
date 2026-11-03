@@ -1,5 +1,6 @@
 <script lang="ts">
-import { setSearchTerm } from "$lib/stores/iconStore"
+import { setSearchTerm, isDarkLogo, isWhiteLogo } from "$lib/stores/iconStore"
+import type { IIcon } from "$lib/types/types"
 
 const marqueeIcons = [
   { name: "react", version: "original", label: "React" },
@@ -51,7 +52,7 @@ function handleTechClick(techName: string) {
         title={`Filter icons for ${item.label}`}
         aria-label={`Search for ${item.label} icons`}
       >
-        <i class="devicon-{item.name}-{item.version} colored text-lg"></i>
+        <i class="devicon-{item.name}-{item.version} text-lg {isDarkLogo({ name: item.name } as unknown as IIcon) || isWhiteLogo({ name: item.name } as unknown as IIcon) ? 'text-slate-900 dark:text-white' : 'colored'}"></i>
         <span class="text-xs font-medium text-slate-500 dark:text-slate-400 whitespace-nowrap">
           {item.label}
         </span>

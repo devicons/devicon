@@ -36,4 +36,5 @@ export interface IIcon {
     base: IconVersions
     alias: IconVersions
   }[]
+  theme?: "dark" | "light" | "color"
 }
