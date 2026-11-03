@@ -9225,6 +9225,29 @@
         ]
     },
     {
+        "name": "mysqlworkbench",
+        "altnames": [
+            "MySQL Workbench"
+        ],
+        "tags": [
+            "database",
+            "sql",
+            "mysql",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2e6695",
+        "aliases": []
+    },
+    {
         "name": "n8n",
         "altnames": [],
         "tags": [
