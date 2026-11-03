@@ -6394,6 +6394,31 @@
         "aliases": []
     },
     {
+        "name": "idris",
+        "altnames": [
+            "idris2"
+        ],
+        "tags": [
+            "language",
+            "functional"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#8a0819",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "ie10",
         "altnames": [
             "internetexplorer10"
@@ -16519,7 +16544,7 @@
             "AI",
             "assistant",
             "language-model",
-            "llm"
+            "llm"    
         ],
         "versions": {
             "svg": [
