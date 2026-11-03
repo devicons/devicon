@@ -6262,6 +6262,31 @@
         "aliases": []
     },
     {
+        "name": "homeassistant",
+        "altnames": [
+            "Home Assistant"
+        ],
+        "tags": [
+            "automation",
+            "platform",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#18BCF2",
+        "aliases": []
+    },
+    {
         "name": "homebrew",
         "altnames": [],
         "tags": [
@@ -8830,6 +8855,29 @@
         "aliases": []
     },
     {
+        "name": "microsoftgraph",
+        "altnames": [
+            "Microsoft Graph",
+            "msgraph",
+            "graphapi"
+        ],
+        "tags": [
+            "api",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0078d4",
+        "aliases": []
+    },
+    {
         "name": "microsoftsqlserver",
         "altnames": [
             "msql",
@@ -9225,6 +9273,29 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "mysqlworkbench",
+        "altnames": [
+            "MySQL Workbench"
+        ],
+        "tags": [
+            "database",
+            "sql",
+            "mysql",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2e6695",
+        "aliases": []
     },
     {
         "name": "n8n",
@@ -16929,6 +17000,26 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "xampp",
+        "altnames": [],
+        "tags": [
+            "server",
+            "php",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#fb7a24",
+        "aliases": []
     },
     {
         "name": "xcode",
