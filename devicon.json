@@ -16952,6 +16952,26 @@
         ]
     },
     {
+        "name": "xampp",
+        "altnames": [],
+        "tags": [
+            "server",
+            "php",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#fb7a24",
+        "aliases": []
+    },
+    {
         "name": "xcode",
         "altnames": [],
         "tags": [
