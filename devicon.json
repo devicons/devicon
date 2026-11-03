@@ -8828,6 +8828,34 @@
         "aliases": []
     },
     {
+        "name": "microsoftentraid",
+        "altnames": [
+            "entraid",
+            "Microsoft Entra ID",
+            "azuread",
+            "Azure Active Directory"
+        ],
+        "tags": [
+            "azure",
+            "cloud",
+            "auth",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#0294e4",
+        "aliases": []
+    },
+    {
         "name": "microsoftsqlserver",
         "altnames": [
             "msql",
