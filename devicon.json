@@ -7111,15 +7111,19 @@
         ],
         "versions": {
             "svg": [
-                "original",
-                "plain"
+                "original"
             ],
             "font": [
-                "plain"
+                "original"
             ]
         },
         "color": "#7e0c1b",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "jira",
