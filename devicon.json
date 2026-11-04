@@ -5755,14 +5755,12 @@
         ],
         "versions": {
             "svg": [
-                "original",
                 "original-wordmark",
-                "plain-wordmark"
+                "original"
             ],
             "font": [
-                "original",
                 "original-wordmark",
-                "plain-wordmark"
+                "original"
             ]
         },
         "color": "#f04d22",
@@ -16544,7 +16542,7 @@
             "AI",
             "assistant",
             "language-model",
-            "llm"    
+            "llm"
         ],
         "versions": {
             "svg": [
