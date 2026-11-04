@@ -7100,6 +7100,28 @@
         "aliases": []
     },
     {
+        "name": "jinja",
+        "altnames": [
+            "Jinja2"
+        ],
+        "tags": [
+            "python",
+            "template",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#7e0c1b",
+        "aliases": []
+    },
+    {
         "name": "jira",
         "altnames": [
             "atlassianjira"
