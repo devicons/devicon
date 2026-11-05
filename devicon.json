@@ -6234,6 +6234,28 @@
         ]
     },
     {
+        "name": "hermes",
+        "altnames": [
+            "Hermes Engine"
+        ],
+        "tags": [
+            "javascript",
+            "engine",
+            "react-native"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2bb673",
+        "aliases": []
+    },
+    {
         "name": "heroku",
         "altnames": [],
         "tags": [
@@ -7127,6 +7149,32 @@
         },
         "color": "#4289c7",
         "aliases": []
+    },
+    {
+        "name": "jinja",
+        "altnames": [
+            "Jinja2"
+        ],
+        "tags": [
+            "python",
+            "template",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#7e0c1b",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "jira",
@@ -8953,6 +9001,38 @@
         },
         "color": "#8dc63f",
         "aliases": []
+    },
+    {
+        "name": "mise",
+        "altnames": [
+            "mise-en-place"
+        ],
+        "tags": [
+            "tool",
+            "manager",
+            "development"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "mithril",
@@ -16017,6 +16097,29 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "velite",
+        "altnames": [],
+        "tags": [
+            "library",
+            "markdown",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#08A771",
+        "aliases": []
     },
     {
         "name": "vercel",
