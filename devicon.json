@@ -6986,6 +6986,26 @@
         "aliases": []
     },
     {
+        "name": "jax",
+        "altnames": [],
+        "tags": [
+            "machine-learning",
+            "python",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#5e97f6",
+        "aliases": []
+    },
+    {
         "name": "jeet",
         "altnames": [],
         "tags": [
