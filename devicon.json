@@ -14865,6 +14865,31 @@
         "aliases": []
     },
     {
+        "name": "taskade",
+        "altnames": [
+            "taskade genesis",
+            "taskade ai"
+        ],
+        "tags": [
+            "ai",
+            "agents",
+            "automation",
+            "workspace",
+            "productivity"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0A0A0A",
+        "aliases": []
+    },
+    {
         "name": "tauri",
         "altnames": [],
         "tags": [
