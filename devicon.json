@@ -2124,6 +2124,29 @@
         "aliases": []
     },
     {
+        "name": "checkmk",
+        "altnames": [
+            "Checkmk",
+            "check-mk"
+        ],
+        "tags": [
+            "monitoring",
+            "infrastructure",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#15D1A0",
+        "aliases": []
+    },
+    {
         "name": "chrome",
         "altnames": [
             "googlechrome"
