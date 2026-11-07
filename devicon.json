@@ -14283,11 +14283,13 @@
         "versions": {
             "svg": [
                 "original-wordmark",
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
                 "original-wordmark",
-                "original"
+                "original",
+                "plain"
             ]
         },
         "color": "#00C3CD",
@@ -17069,7 +17071,7 @@
             "AI",
             "assistant",
             "language-model",
-            "llm"    
+            "llm"
         ],
         "versions": {
             "svg": [
