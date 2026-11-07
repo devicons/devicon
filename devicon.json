@@ -14282,18 +14282,22 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
                 "original",
+                "original-wordmark",
                 "plain"
             ],
             "font": [
-                "original-wordmark",
-                "original",
-                "plain"
+                "plain",
+                "original-wordmark"
             ]
         },
-        "color": "#00C3CD",
-        "aliases": []
+        "color": "#081723",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "stackoverflow",
