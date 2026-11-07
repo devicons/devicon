@@ -38,6 +38,27 @@
         ]
     },
     {
+        "name": "adminer",
+        "altnames": [],
+        "tags": [
+            "database",
+            "sql",
+            "php",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#34567c",
+        "aliases": []
+    },
+    {
         "name": "adonisjs",
         "altnames": [
             "adonis"
@@ -546,6 +567,28 @@
             ]
         },
         "color": "#3581E5",
+        "aliases": []
+    },
+    {
+        "name": "antlr",
+        "altnames": [
+            "ANTLR4"
+        ],
+        "tags": [
+            "programming",
+            "tool",
+            "parser"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#E44A32",
         "aliases": []
     },
     {
@@ -3242,6 +3285,57 @@
         "aliases": []
     },
     {
+        "name": "dbt",
+        "altnames": [
+            "data build tool"
+        ],
+        "tags": [
+            "analytics",
+            "data",
+            "sql",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#fe6703",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "dbvisualizer",
+        "altnames": [
+            "DbVis"
+        ],
+        "tags": [
+            "database",
+            "sql",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#24c780",
+        "aliases": []
+    },
+    {
         "name": "debian",
         "altnames": [],
         "tags": [
@@ -3362,6 +3456,26 @@
             ]
         },
         "color": "#60BE86",
+        "aliases": []
+    },
+    {
+        "name": "dialogflow",
+        "altnames": [],
+        "tags": [
+            "google",
+            "ai",
+            "chat"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ef6c00",
         "aliases": []
     },
     {
@@ -3887,6 +4001,43 @@
         },
         "color": "#47848f",
         "aliases": []
+    },
+    {
+        "name": "elementplus",
+        "altnames": [
+            "element-plus"
+        ],
+        "tags": [
+            "ui",
+            "library",
+            "vue",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#409eff",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "eleventy",
@@ -6112,6 +6263,28 @@
         ]
     },
     {
+        "name": "hermes",
+        "altnames": [
+            "Hermes Engine"
+        ],
+        "tags": [
+            "javascript",
+            "engine",
+            "react-native"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2bb673",
+        "aliases": []
+    },
+    {
         "name": "heroku",
         "altnames": [],
         "tags": [
@@ -6164,6 +6337,31 @@
             ]
         },
         "color": "#bcae79",
+        "aliases": []
+    },
+    {
+        "name": "homeassistant",
+        "altnames": [
+            "Home Assistant"
+        ],
+        "tags": [
+            "automation",
+            "platform",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#18BCF2",
         "aliases": []
     },
     {
@@ -6980,6 +7178,32 @@
         },
         "color": "#4289c7",
         "aliases": []
+    },
+    {
+        "name": "jinja",
+        "altnames": [
+            "Jinja2"
+        ],
+        "tags": [
+            "python",
+            "template",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#7e0c1b",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "jira",
@@ -8320,6 +8544,32 @@
         ]
     },
     {
+        "name": "lwc",
+        "altnames": [
+            "Lightning Web Components"
+        ],
+        "tags": [
+            "framework",
+            "frontend",
+            "html",
+            "javascript",
+            "css"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#14305c",
+        "aliases": []
+    },
+    {
         "name": "magento",
         "altnames": [],
         "tags": [
@@ -8709,6 +8959,29 @@
         "aliases": []
     },
     {
+        "name": "microsoftgraph",
+        "altnames": [
+            "Microsoft Graph",
+            "msgraph",
+            "graphapi"
+        ],
+        "tags": [
+            "api",
+            "cloud"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0078d4",
+        "aliases": []
+    },
+    {
         "name": "microsoftsqlserver",
         "altnames": [
             "msql",
@@ -8757,6 +9030,38 @@
         },
         "color": "#8dc63f",
         "aliases": []
+    },
+    {
+        "name": "mise",
+        "altnames": [
+            "mise-en-place"
+        ],
+        "tags": [
+            "tool",
+            "manager",
+            "development"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "mithril",
@@ -9104,6 +9409,29 @@
                 "alias": "plain"
             }
         ]
+    },
+    {
+        "name": "mysqlworkbench",
+        "altnames": [
+            "MySQL Workbench"
+        ],
+        "tags": [
+            "database",
+            "sql",
+            "mysql",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#2e6695",
+        "aliases": []
     },
     {
         "name": "n8n",
@@ -10839,6 +11167,30 @@
         "aliases": []
     },
     {
+        "name": "phpmyadmin",
+        "altnames": [],
+        "tags": [
+            "database",
+            "sql",
+            "php",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#6c78af",
+        "aliases": []
+    },
+    {
         "name": "phpstorm",
         "altnames": [],
         "tags": [
@@ -11009,6 +11361,39 @@
         },
         "color": "#f9ad00",
         "aliases": []
+    },
+    {
+        "name": "pocketbase",
+        "altnames": [
+            "pocketbase.io"
+        ],
+        "tags": [
+            "database",
+            "backend",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "original-wordmark",
+                "plain",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "podman",
@@ -11229,6 +11614,31 @@
         "aliases": []
     },
     {
+        "name": "powerbi",
+        "altnames": [
+            "Power BI",
+            "microsoftpowerbi"
+        ],
+        "tags": [
+            "data",
+            "analytics",
+            "visualization"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#e6ad10",
+        "aliases": []
+    },
+    {
         "name": "powershell",
         "altnames": [
             "ps"
@@ -11330,24 +11740,21 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ],
             "font": [
-                "original",
-                "original-wordmark"
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
             ]
         },
-        "color": "#2D3748",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original-wordmark",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "color": "#FE4352",
+        "aliases": []
     },
     {
         "name": "processing",
@@ -12565,6 +12972,36 @@
         ]
     },
     {
+        "name": "render",
+        "altnames": [],
+        "tags": [
+            "hosting",
+            "platform",
+            "deployment"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "renpy",
         "altnames": [
             "Ren'Py"
@@ -13221,6 +13658,28 @@
         ]
     },
     {
+        "name": "semanticui",
+        "altnames": [
+            "Semantic UI"
+        ],
+        "tags": [
+            "css",
+            "framework",
+            "ui"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#35bdb2",
+        "aliases": []
+    },
+    {
         "name": "sentry",
         "altnames": [],
         "tags": [
@@ -13273,6 +13732,33 @@
         },
         "color": "#3b4b72",
         "aliases": []
+    },
+    {
+        "name": "servicenow",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "platform",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#62d84e",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "sfml",
@@ -13841,6 +14327,33 @@
             {
                 "base": "original",
                 "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "stackit",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "hosting",
+            "infrastructure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#081723",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
@@ -15642,6 +16155,29 @@
         ]
     },
     {
+        "name": "velite",
+        "altnames": [],
+        "tags": [
+            "library",
+            "markdown",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#08A771",
+        "aliases": []
+    },
+    {
         "name": "vercel",
         "altnames": [],
         "tags": [
@@ -15774,6 +16310,32 @@
         },
         "color": "#004e8c",
         "aliases": []
+    },
+    {
+        "name": "visualparadigm",
+        "altnames": [
+            "Visual Paradigm"
+        ],
+        "tags": [
+            "design",
+            "modeling",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#c33",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "visualstudio",
@@ -15910,7 +16472,6 @@
                 "plain"
             ],
             "font": [
-                "original",
                 "plain"
             ]
         },
@@ -16127,6 +16688,30 @@
             {
                 "base": "original-wordmark",
                 "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "wakatime",
+        "altnames": [],
+        "tags": [
+            "development",
+            "monitoring",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
             }
         ]
     },
@@ -16601,6 +17186,26 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "xampp",
+        "altnames": [],
+        "tags": [
+            "server",
+            "php",
+            "database"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#fb7a24",
+        "aliases": []
     },
     {
         "name": "xcode",
