@@ -9754,31 +9754,27 @@
         "name": "nginx",
         "altnames": [],
         "tags": [
-            "server"
+            "server",
+            "web",
+            "proxy",
+            "open-source"
         ],
         "versions": {
             "svg": [
-                "original"
+                "original-wordmark",
+                "original",
+                "plain-wordmark",
+                "plain"
             ],
             "font": [
-                "original"
+                "original-wordmark",
+                "original",
+                "plain-wordmark",
+                "plain"
             ]
         },
-        "color": "#090",
-        "aliases": [
-            {
-                "base": "original",
-                "alias": "original-wordmark"
-            },
-            {
-                "base": "original",
-                "alias": "plain"
-            },
-            {
-                "base": "original",
-                "alias": "plain-wordmark"
-            }
-        ]
+        "color": "#009639",
+        "aliases": []
     },
     {
         "name": "ngrok",
@@ -17048,7 +17044,7 @@
             "AI",
             "assistant",
             "language-model",
-            "llm"    
+            "llm"
         ],
         "versions": {
             "svg": [
