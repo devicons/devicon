@@ -5755,16 +5755,22 @@
         ],
         "versions": {
             "svg": [
+                "original",
                 "original-wordmark",
-                "original"
+                "plain"
             ],
             "font": [
-                "original-wordmark",
-                "original"
+                "plain",
+                "original-wordmark"
             ]
         },
         "color": "#f04d22",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "grpc",
