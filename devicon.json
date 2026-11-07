@@ -14302,6 +14302,33 @@
         ]
     },
     {
+        "name": "stackit",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "hosting",
+            "infrastructure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#081723",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "stackoverflow",
         "altnames": [
             "Stack Overflow"
