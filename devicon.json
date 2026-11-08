@@ -2136,15 +2136,19 @@
         ],
         "versions": {
             "svg": [
-                "original",
-                "plain"
+                "original"
             ],
             "font": [
-                "plain"
+                "original"
             ]
         },
         "color": "#15D1A0",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "chrome",
