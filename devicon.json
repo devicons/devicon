@@ -2124,6 +2124,38 @@
         "aliases": []
     },
     {
+        "name": "checkmk",
+        "altnames": [
+            "check-mk"
+        ],
+        "tags": [
+            "monitoring",
+            "infrastructure",
+            "devops"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#15D1A0",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "chrome",
         "altnames": [
             "googlechrome"
@@ -3283,6 +3315,35 @@
         },
         "color": "#382a24",
         "aliases": []
+    },
+    {
+        "name": "dbt",
+        "altnames": [
+            "data build tool"
+        ],
+        "tags": [
+            "analytics",
+            "data",
+            "sql",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#fe6703",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "dbvisualizer",
@@ -5866,6 +5927,35 @@
         "aliases": []
     },
     {
+        "name": "groq",
+        "altnames": [],
+        "tags": [
+            "AI",
+            "llm",
+            "hardware",
+            "inference",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#f04d22",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "grpc",
         "altnames": [
             "grpcio",
@@ -6140,7 +6230,8 @@
         "name": "haxe",
         "altnames": [],
         "tags": [
-            "language"
+            "language",
+            "programming"
         ],
         "versions": {
             "svg": [
@@ -10735,10 +10826,12 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark"
             ],
             "font": [
-                "original"
+                "original",
+                "original-wordmark"
             ]
         },
         "color": "#EA1B22",
@@ -10746,6 +10839,10 @@
             {
                 "base": "original",
                 "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
@@ -14265,6 +14362,33 @@
             {
                 "base": "original",
                 "alias": "plain"
+            }
+        ]
+    },
+    {
+        "name": "stackit",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "hosting",
+            "infrastructure"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "plain",
+                "original-wordmark"
+            ]
+        },
+        "color": "#081723",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
