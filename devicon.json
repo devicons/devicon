@@ -10178,6 +10178,32 @@
         "aliases": []
     },
     {
+        "name": "notepadplusplus",
+        "altnames": [
+            "notepad++",
+            "npp"
+        ],
+        "tags": [
+            "editor",
+            "text editor",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#75d66f",
+        "aliases": []
+    },
+    {
         "name": "notion",
         "altnames": [],
         "tags": [
