@@ -9852,16 +9852,14 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
                 "original",
-                "plain-wordmark",
-                "plain"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "original-wordmark",
-                "original",
-                "plain-wordmark",
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#009639",
