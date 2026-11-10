@@ -193,7 +193,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#955AE0",
         "aliases": []
     },
     {
@@ -286,7 +286,7 @@
                 "original-wordmark"
             ]
         },
-        "color": "#2d3441",
+        "color": "#77C1D2",
         "aliases": [
             {
                 "base": "original",
@@ -517,7 +517,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#FFB71B",
         "aliases": []
     },
     {
@@ -562,7 +562,7 @@
                 "original",
                 "plain"
             ],
-            "font":[
+            "font": [
                 "plain"
             ]
         },
@@ -1699,7 +1699,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#161414",
+        "color": "#F6A71A",
         "aliases": []
     },
     {
@@ -2220,7 +2220,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#13171a",
+        "color": "#0079B8",
         "aliases": []
     },
     {
@@ -2245,9 +2245,9 @@
         "aliases": []
     },
     {
-        "name":"claudecode",
+        "name": "claudecode",
         "altnames": [],
-        "tags":[
+        "tags": [
             "ai",
             "coding",
             "assistant"
@@ -2312,7 +2312,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#009AE5",
         "aliases": []
     },
     {
@@ -2782,7 +2782,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#444",
+        "color": "#4CC2E4",
         "aliases": []
     },
     {
@@ -3241,7 +3241,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#34A853",
         "aliases": []
     },
     {
@@ -3872,7 +3872,7 @@
                 "plain"
             ]
         },
-        "color": "#000000",
+        "color": "#FFF100",
         "aliases": []
     },
     {
@@ -3937,7 +3937,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#1496FF",
         "aliases": []
     },
     {
@@ -5134,7 +5134,7 @@
                 "line-wordmark"
             ]
         },
-       "color": "#3581E5",
+        "color": "#3581E5",
         "aliases": []
     },
     {
@@ -5380,12 +5380,14 @@
                 "plain"
             ]
         },
-        "color": "#24292e",
+        "color": "#007ACC",
         "aliases": []
     },
     {
         "name": "githubcopilot",
-        "altnames": ["github copilot"],
+        "altnames": [
+            "github copilot"
+        ],
         "tags": [
             "automation",
             "AI",
@@ -5407,7 +5409,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#000",
+        "color": "#8534F3",
         "aliases": []
     },
     {
@@ -5540,7 +5542,7 @@
                 "plain"
             ]
         },
-        "color": "#000000",
+        "color": "#3333FF",
         "aliases": []
     },
     {
@@ -5700,7 +5702,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#00ADD8",
         "aliases": []
     },
     {
@@ -6290,11 +6292,11 @@
             "svg": [
                 "original",
                 "plain",
-				"line"
+                "line"
             ],
             "font": [
                 "plain",
-				"line"
+                "line"
             ]
         },
         "color": "#997ff8",
@@ -6528,7 +6530,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#333333",
+        "color": "#3465A4",
         "aliases": []
     },
     {
@@ -6910,7 +6912,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#FE315D",
         "aliases": []
     },
     {
@@ -7121,7 +7123,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#CC0000",
         "aliases": []
     },
     {
@@ -8307,7 +8309,7 @@
                 "plain"
             ]
         },
-        "color": "#000000",
+        "color": "#FCC624",
         "aliases": []
     },
     {
@@ -8428,7 +8430,7 @@
                 "plain"
             ]
         },
-        "color": "#000",
+        "color": "#3492FF",
         "aliases": []
     },
     {
@@ -8471,13 +8473,13 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#4B73FF",
         "aliases": []
     },
     {
         "name": "love2d",
         "altnames": [
-            "löve"
+            "l\u00f6ve"
         ],
         "tags": [
             "programming",
@@ -9827,7 +9829,7 @@
                 "line"
             ]
         },
-        "color": "#1d252c",
+        "color": "#00AC69",
         "aliases": [
             {
                 "base": "original",
@@ -10150,7 +10152,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#3d3b47",
+        "color": "#0977F7",
         "aliases": []
     },
     {
@@ -10657,7 +10659,7 @@
                 "line"
             ]
         },
-        "color": "#000",
+        "color": "#3DAE2B",
         "aliases": [
             {
                 "base": "original",
@@ -11276,7 +11278,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#B41E8E",
         "aliases": []
     },
     {
@@ -11399,7 +11401,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#000",
+        "color": "#2B037A",
         "aliases": []
     },
     {
@@ -11790,7 +11792,7 @@
                 "plain"
             ]
         },
-        "color": "#000",
+        "color": "#DD0031",
         "aliases": []
     },
     {
@@ -12159,7 +12161,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#21D789",
         "aliases": []
     },
     {
@@ -13155,7 +13157,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#C41475",
         "aliases": []
     },
     {
@@ -13349,7 +13351,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#D72B2B",
         "aliases": []
     },
     {
@@ -13462,7 +13464,7 @@
                 "plain"
             ]
         },
-        "color": "#0D0E12",
+        "color": "#F03E2F",
         "aliases": []
     },
     {
@@ -13851,7 +13853,7 @@
     {
         "name": "shadcn",
         "altnames": [],
-        "color":"#000000",
+        "color": "#000000",
         "tags": [
             "ui",
             "components",
@@ -13961,7 +13963,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#2D333A",
+        "color": "#4A154B",
         "aliases": []
     },
     {
@@ -14186,7 +14188,7 @@
                 "original-wordmark"
             ]
         },
-        "color": "#0C1724",
+        "color": "#EA005A",
         "aliases": [
             {
                 "base": "original-wordmark",
@@ -14313,7 +14315,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#333333",
+        "color": "#CA2727",
         "aliases": []
     },
     {
@@ -14545,7 +14547,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000",
+        "color": "#FFFFFF",
         "aliases": []
     },
     {
@@ -14986,7 +14988,7 @@
             }
         ]
     },
-        {
+    {
         "name": "systemverilog",
         "altnames": [
             "system verilog",
@@ -15106,7 +15108,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#00F076",
         "aliases": []
     },
     {
@@ -15277,7 +15279,7 @@
             ]
         },
         "color": "#50d18d",
-        "aliases":[
+        "aliases": [
             {
                 "base": "original",
                 "alias": "plain"
@@ -15468,7 +15470,7 @@
                 "plain"
             ]
         },
-        "color": "#1d1d1b",
+        "color": "#00ADD8",
         "aliases": [
             {
                 "base": "plain",
@@ -15692,7 +15694,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#2d3136",
+        "color": "#CB3349",
         "aliases": []
     },
     {
@@ -15881,7 +15883,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#F14A00",
         "aliases": []
     },
     {
@@ -16287,7 +16289,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#141416",
+        "color": "#3DC4FF",
         "aliases": []
     },
     {
@@ -16403,7 +16405,7 @@
             }
         ]
     },
-        {
+    {
         "name": "verilog",
         "altnames": [
             "verilog hdl"
@@ -16983,7 +16985,7 @@
                 "plain"
             ]
         },
-        "color": "#000000",
+        "color": "#F5C842",
         "aliases": []
     },
     {
@@ -17053,14 +17055,14 @@
             "graphics",
             "web",
             "3d"
-         ],
+        ],
         "versions": {
             "svg": [
                 "original"
             ],
-           "font": [
+            "font": [
                 "original"
-           ]
+            ]
         },
         "color": "#990000",
         "aliases": [
@@ -17161,7 +17163,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#00CDD7",
         "aliases": []
     },
     {
@@ -17311,10 +17313,10 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#494949",
+        "color": "#21759B",
         "aliases": []
     },
-     {
+    {
         "name": "xai",
         "altnames": [
             "X AI",
@@ -17324,7 +17326,7 @@
             "AI",
             "assistant",
             "language-model",
-            "llm"    
+            "llm"
         ],
         "versions": {
             "svg": [
@@ -17592,7 +17594,7 @@
                 "plain-wordmark"
             ]
         },
-        "color": "#000000",
+        "color": "#FB406D",
         "aliases": []
     },
     {
@@ -17747,7 +17749,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#000",
+        "color": "#F15A24",
         "aliases": []
     },
     {
@@ -17765,7 +17767,7 @@
                 "plain"
             ]
         },
-        "color": "#443e38",
+        "color": "#685B4F",
         "aliases": []
     }
 ]

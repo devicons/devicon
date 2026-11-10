@@ -12,9 +12,11 @@
         "build-icons:linux:macOS": "python ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_assets/geckodriver-v0.32.2-linux64/geckodriver ./icomoon.json ./devicon.json ./icons ./ --headless",
         "build-icons:windows": "python ./.github/scripts/icomoon_build_githubless.py ./.github/scripts/build_assets/geckodriver-v0.32.2-win64/geckodriver.exe ./icomoon.json ./devicon.json ./icons ./ --headless",
         "build-icons:default": "echo 'Unsupported OS' && exit 1",
-        "dev": "concurrently \"npm:open-browser\" \"npm:start-local-server\"",
-        "start-local-server": "python -m http.server 8000",
-        "open-browser": "node -e \"import('open').then(pkg => pkg.default('http://localhost:8000/docs'))\""
+        "dev": "npm run site:dev",
+        "site:dev": "pnpm --dir site dev",
+        "site:build": "pnpm --dir site build",
+        "site:preview": "pnpm --dir site preview",
+        "site:check": "pnpm --dir site check"
     },
     "repository": {
         "type": "git",

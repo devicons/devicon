@@ -175,6 +175,18 @@ Add the following CSS rules in your stylesheet:
     We are happy with every contribution, whether it's new icons, features, or maintainers. Please have a look at our <a href="https://github.com/devicons/devicon/wiki">Wiki</a> to see how you can contribute to this project.
 </p>
 
+
+<h3>Contributors</h3>
+<p>
+    Thanks to all our contributors! Devicon would not be possible without you.
+</p>
+<a href="https://github.com/devicons/devicon/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=devicons/devicon" alt="Devicon Contributors" />
+</a>
+<p>
+    <sub>Made with <a href="https://contrib.rocks">contrib.rocks</a>.</sub>
+</p>
+
 <h2 id="discord-community">Discord community</h2>
 <p>
 We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join the official Discord Server <a href="https://discord.gg/hScy8KWACQ">here!</a>
@@ -296,21 +308,17 @@ This file is used to show all the new icons previously built.</p>
 npm run build-css
 ```
 
-<h3 id="web-server">Setting up the web server</h3>
+<h3 id="web-server">Setting up the website locally</h3>
 
-<p>Run the following command to start the web server with Python.</p>
-
-```bash
-npm run dev # Will run on port 8000
-```
-
-<p>Or this command, which does exactly the same, but the port can be customized.</p>
+<p>Run the website locally with:</p>
 
 ```bash
-python -m http.server <port>
+npm run site:dev
+# or
+npm run dev
 ```
 
-<p>You're done now! :tada: Your build of Devicons should be available at <code>https://localhost:8000</code> (or the desired port).</p>
+<p>Your build of the Devicon website will be available at <code>http://localhost:5173</code>.</p>
 
 <br/>
 <div align="center">
