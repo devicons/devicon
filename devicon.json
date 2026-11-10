@@ -12686,6 +12686,28 @@
         ]
     },
     {
+        "name": "reactquery",
+        "altnames": ["tanstackquery", "TanStack Query", "React Query"],
+        "tags": [
+            "library",
+            "react",
+            "data-fetching",
+            "state-management"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ff4154",
+        "aliases": []
+    },
+    {
         "name": "reactrouter",
         "altnames": [],
         "tags": [
