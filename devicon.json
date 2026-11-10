@@ -14649,6 +14649,27 @@
         "aliases": []
     },
     {
+        "name": "sublimetext",
+        "altnames": [
+            "sublime"
+        ],
+        "tags": [
+            "editor",
+            "text editor"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#ff9800",
+        "aliases": []
+    },
+    {
         "name": "subversion",
         "altnames": [
             "apachesubversion"
