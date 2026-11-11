@@ -3213,6 +3213,36 @@
         "aliases": []
     },
     {
+        "name": "databricks",
+        "altnames": [],
+        "tags": [
+            "data",
+            "analytics",
+            "machine-learning",
+            "data-science",
+            "cloud",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FF3621",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "datadog",
         "altnames": [],
         "tags": [
