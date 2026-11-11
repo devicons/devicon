@@ -2671,27 +2671,29 @@
         "tags": [
             "data",
             "analytics",
-            "big-data",
             "machine-learning",
             "data-science",
-            "spark",
             "cloud",
-            "platform",
-            "databricks"
+            "platform"
         ],
         "versions": {
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "plain-wordmark"
             ],
-            "font": []
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
         },
         "color": "#FF3621",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "datadog",
