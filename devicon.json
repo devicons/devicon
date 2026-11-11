@@ -90,6 +90,28 @@
         ]
     },
     {
+        "name": "aerospace",
+        "altnames": [],
+        "tags": [
+            "window manager",
+            "macos",
+            "tiling"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#60c652",
+        "aliases": []
+    },
+    {
         "name": "aerospike",
         "altnames": [],
         "tags": [
@@ -4777,6 +4799,31 @@
         "aliases": []
     },
     {
+        "name": "fluxcd",
+        "altnames": [
+            "Flux"
+        ],
+        "tags": [
+            "gitops",
+            "continuous-delivery",
+            "kubernetes"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#326ce5",
+        "aliases": []
+    },
+    {
         "name": "flyway",
         "altnames": [],
         "tags": [
@@ -7498,7 +7545,7 @@
                 "line-wordmark"
             ]
         },
-        "color": "#dc514a",
+        "color": "#d84445",
         "aliases": []
     },
     {
@@ -10794,6 +10841,29 @@
             ]
         },
         "color": "#f5a800",
+        "aliases": []
+    },
+    {
+        "name": "opentofu",
+        "altnames": [],
+        "tags": [
+            "infrastructure",
+            "deployment",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0d1a2a",
         "aliases": []
     },
     {
@@ -16136,6 +16206,30 @@
             ]
         },
         "color": "#4051b5",
+        "aliases": []
+    },
+    {
+        "name": "unraid",
+        "altnames": [],
+        "tags": [
+            "os",
+            "nas",
+            "server",
+            "linux"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f15a2c",
         "aliases": []
     },
     {
