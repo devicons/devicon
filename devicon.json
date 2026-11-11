@@ -15266,6 +15266,39 @@
         ]
     },
     {
+        "name": "temporal",
+        "altnames": [
+            "temporal.io"
+        ],
+        "tags": [
+            "AI",
+            "tool",
+            "workflows",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#444ce7",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "tensorflow",
         "altnames": [],
         "tags": [
