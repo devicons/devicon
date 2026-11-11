@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
       - name: Save the PR number in an artifact
         shell: bash
@@ -18,7 +18,7 @@ jobs:
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the PR number
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: pr_num
           path: ./pr_num.txt
