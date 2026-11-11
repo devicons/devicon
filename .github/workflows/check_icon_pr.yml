@@ -3,10 +3,10 @@ on: pull_request
 jobs:
   check:
     name: Check the `devicon.json` and the SVGs' quality
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: startsWith(github.event.pull_request.title, 'new icon') || startsWith(github.event.pull_request.title, 'update icon')  # only checks icon PR
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Check if PR is develop
         if: ${{ github.base_ref != 'develop' }}
@@ -17,13 +17,13 @@ jobs:
       - uses: actions/setup-python@v5
         if: ${{ !env.wrong_branch }}
         with:
-          python-version: 3.8
+          python-version: 3.12
 
       - name: Install dependencies
         if: ${{ !env.wrong_branch }}
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./.github/scripts/requirements.txt
+          python -m pip install -r ./.github/scripts/requirements.txt
 
       - name: Run the check_svg script
         if: ${{ !env.wrong_branch }}
