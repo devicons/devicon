@@ -7119,10 +7119,13 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#00b8e3",
