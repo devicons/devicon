@@ -1,0 +1,152 @@
+name: Icon request triage
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: read
+  issues: write
+
+# Serialize runs for the same issue
+concurrency:
+  group: icon-request-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    # Only run when the `request:icon` label is added, and skip if the issue
+    # carries `in-develop`.
+    if: >
+      github.event.label.name == 'request:icon' &&
+      !contains(github.event.issue.labels.*.name, 'in-develop')
+
+    steps:
+      - name: Checkout (to read devicon.json)
+        uses: actions/checkout@v5
+        with:
+          sparse-checkout: devicon.json
+          sparse-checkout-cone-mode: false
+
+      - name: Check request against devicon.json
+        uses: actions/github-script@v8
+        env:
+          TRIAGE_LABEL: awaiting triage
+        with:
+          script: |
+            const fs = require('fs');
+            const { owner, repo } = context.repo;
+
+            // Fetch the CURRENT state of the issue (the event payload is a snapshot)
+            // so we don't act on an issue that was already closed or triaged.
+            const { data: issue } = await github.rest.issues.get({
+              owner, repo, issue_number: context.payload.issue.number,
+            });
+            const labelNames = issue.labels.map((l) => (typeof l === 'string' ? l : l.name));
+
+            if (issue.state === 'closed') {
+              core.info('Issue already closed; nothing to do.');
+              return;
+            }
+            if (labelNames.includes(process.env.TRIAGE_LABEL)) {
+              core.info('Issue already marked for triage; nothing to do.');
+              return;
+            }
+            if (labelNames.includes('in-develop')) {
+              core.info('Issue is in-develop; nothing to do.');
+              return;
+            }
+
+            const normalize = (s) =>
+              String(s)
+                .toLowerCase()
+                .replace(/[-_]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+            // Helper: add the triage label + comment
+            const sendToTriage = async (comment) => {
+              await github.rest.issues.addLabels({
+                owner, repo, issue_number: issue.number,
+                labels: [process.env.TRIAGE_LABEL],
+              });
+
+              await github.rest.issues.createComment({
+                owner, repo, issue_number: issue.number, body: comment,
+              });
+            };
+
+            // 1. Title "[ICON REQUEST]: prisma update" -> "prisma update"
+            const rawName = issue.title.replace(
+              /^\s*\[?\s*(icon\s+)?request\s*\]?\s*[:\-–]?\s*/i,
+              ''
+            );
+            const query = normalize(rawName);
+
+            if (!query) {
+              core.info('Could not extract an icon name from the title; skipping.');
+              return;
+            }
+
+            // 2. "update" in the title -> never auto-close, send to triage
+            if (/\bupdate[sd]?\b/i.test(rawName)) {
+              await sendToTriage(
+                `Thanks for the request! This looks like an update to an existing ` +
+                `icon, so a maintainer will review it.`
+              );
+              return;
+            }
+
+            // 3. Build searchable list from `name` + `altnames`
+            const icons = JSON.parse(fs.readFileSync('devicon.json', 'utf8'));
+            const entries = icons.flatMap((icon) =>
+              [icon.name, ...(icon.altnames || [])]
+                .filter(Boolean)
+                .map((n) => ({ icon: icon.name, candidate: normalize(n) }))
+            );
+
+            // Exact match -> close
+            const exact = entries.find((e) => e.candidate === query);
+            if (exact) {
+              await github.rest.issues.createComment({
+                owner, repo, issue_number: issue.number,
+                body:
+                  `Thanks for the request! An icon named **${exact.icon}** ` +
+                  `already exists in \`devicon.json\` (matched on "${rawName.trim()}"), ` +
+                  `so I'm closing this issue. If you think this is a mistake, ` +
+                  `please reopen it and let us know what's different.`,
+              });
+              await github.rest.issues.update({
+                owner, repo, issue_number: issue.number,
+                state: 'closed',
+                state_reason: 'not_planned',
+              });
+              return;
+            }
+
+            // Approximate match (whole-word containment, either direction)
+            const contains = (haystack, needle) =>
+              ` ${haystack} `.includes(` ${needle} `);
+            const approx = [
+              ...new Set(
+                entries
+                  .filter(
+                    (e) =>
+                      contains(e.candidate, query) || contains(query, e.candidate)
+                  )
+                  .map((e) => e.icon)
+              ),
+            ];
+
+            if (approx.length > 0) {
+              await sendToTriage(
+                `Thanks for the request! I found similar existing icon(s): ` +
+                approx.slice(0, 10).map((n) => `\`${n}\``).join(', ') +
+                `. A maintainer will take a look to decide whether this is a ` +
+                `new icon or already covered.`
+              );
+              return;
+            }
+
+            core.info(`No match for "${query}" in devicon.json; leaving issue as is.`);
