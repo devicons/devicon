@@ -7118,13 +7118,14 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "plain"
             ],
             "font": [
-                "original"
+                "plain"
             ]
         },
-        "color": "#4482C1",
+        "color": "#00b8e3",
         "aliases": []
     },
     {
