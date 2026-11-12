@@ -7976,6 +7976,33 @@
         "aliases": []
     },
     {
+        "name": "keycloak",
+        "altnames": [],
+        "tags": [
+            "auth",
+            "security",
+            "application",
+            "server",
+            "open-source",
+            "infrastructure",
+            "web"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#00b8e3",
+        "aliases": []
+    },
+    {
         "name": "kibana",
         "altnames": [],
         "tags": [
