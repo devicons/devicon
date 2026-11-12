@@ -15592,6 +15592,28 @@
         ]
     },
     {
+        "name": "testinglibrary",
+        "altnames": [
+            "testing-library",
+            "react-testing-library"
+        ],
+        "tags": [
+            "testing",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#fe4646",
+        "aliases":[]
+    },
+    {
         "name": "testrail",
         "altnames": [],
         "tags": [
