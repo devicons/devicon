@@ -14836,6 +14836,43 @@
         "aliases": []
     },
     {
+        "name": "tanstack",
+        "altnames": [
+            "TanStack",
+            "tanstackquery",
+            "TanStack Query",
+            "React Query",
+            "tanstackrouter",
+            "TanStack Router",
+            "tanstackstart",
+            "TanStack Start",
+            "tanstacktable",
+            "TanStack Table"
+        ],
+        "tags": [
+            "library",
+            "framework",
+            "react",
+            "frontend",
+            "data-fetching",
+            "state-management",
+            "routing",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ece8d1",
+        "aliases": []
+    },
+    {
         "name": "tauri",
         "altnames": [],
         "tags": [
@@ -17048,7 +17085,7 @@
             "AI",
             "assistant",
             "language-model",
-            "llm"    
+            "llm"
         ],
         "versions": {
             "svg": [
