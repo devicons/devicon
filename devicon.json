@@ -12535,6 +12535,29 @@
         "aliases": []
     },
     {
+        "name": "qodo",
+        "altnames": [],
+        "tags": [
+            "AI",
+            "tool",
+            "code-review"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#7968fa",
+        "aliases": []
+    },
+    {
         "name": "qt",
         "altnames": [],
         "tags": [
