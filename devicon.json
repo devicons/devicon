@@ -15292,6 +15292,47 @@
         "aliases": []
     },
     {
+        "name": "tanstack",
+        "altnames": [
+            "tanStack query",
+            "react query",
+            "tanstack router",
+            "tanstack start",
+            "tanstack table"
+        ],
+        "tags": [
+            "library",
+            "framework",
+            "react",
+            "frontend",
+            "data-fetching",
+            "state-management",
+            "router",
+            "typescript"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#ece8d1",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "taskade",
         "altnames": [
             "taskade genesis",
