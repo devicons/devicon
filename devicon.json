@@ -1223,6 +1223,32 @@
         "aliases": []
     },
     {
+        "name": "azurelogicapps",
+        "altnames": [
+            "azure logic apps"
+        ],
+        "tags": [
+            "azure",
+            "cloud",
+            "low-code",
+            "no-code",
+            "workflow"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#005ba1",
+        "aliases": []
+    },
+    {
         "name": "azuresqldatabase",
         "altnames": [
             "azure-sql-database"
@@ -3213,6 +3239,36 @@
         "aliases": []
     },
     {
+        "name": "databricks",
+        "altnames": [],
+        "tags": [
+            "data",
+            "analytics",
+            "machine-learning",
+            "data-science",
+            "cloud",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#FF3621",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "datadog",
         "altnames": [],
         "tags": [
@@ -3412,6 +3468,36 @@
         "aliases": []
     },
     {
+        "name": "deepseek",
+        "altnames": [],
+        "tags": [
+            "AI",
+            "LLM",
+            "tool"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#4d6bfe",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "delphi",
         "altnames": [
             "embarcadero"
@@ -3460,6 +3546,32 @@
                 "alias": "plain-wordmark"
             }
         ]
+    },
+    {
+        "name": "dependabot",
+        "altnames": [],
+        "tags": [
+            "dependency",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark",
+                "line",
+                "line-wordmark"
+            ]
+        },
+        "color": "#0366d6",
+        "aliases": []
     },
     {
         "name": "detaspace",
@@ -15153,6 +15265,34 @@
         "aliases": []
     },
     {
+        "name": "taskade",
+        "altnames": [
+            "taskade genesis",
+            "taskade ai"
+        ],
+        "tags": [
+            "ai",
+            "agents",
+            "automation",
+            "workspace",
+            "productivity"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#0A0A0A",
+        "aliases": []
+    },
+    {
         "name": "tauri",
         "altnames": [],
         "tags": [
@@ -15226,6 +15366,39 @@
             ]
         },
         "color": "#512fc9",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
+        "name": "temporal",
+        "altnames": [
+            "temporal.io"
+        ],
+        "tags": [
+            "AI",
+            "tool",
+            "workflows",
+            "automation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#444ce7",
         "aliases": [
             {
                 "base": "original",
