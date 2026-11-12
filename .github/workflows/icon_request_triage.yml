@@ -125,6 +125,9 @@ jobs:
             const approx = [
               ...new Set(
                 entries
+                  // Skip 1-2 character altnames ("v", "js"): as whole words they
+                  // match unrelated requests such as "RISC-V" or "Elysia js"
+                  .filter((e) => e.isName || e.candidate.length >= 3)
                   .filter(
                     (e) =>
                       contains(e.candidate, query) || contains(query, e.candidate)
