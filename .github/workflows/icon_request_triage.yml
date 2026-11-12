@@ -103,7 +103,7 @@ jobs:
             const entries = icons.flatMap((icon) =>
               [icon.name, ...(icon.altnames || [])]
                 .filter(Boolean)
-                .map((n) => ({ icon: icon.name, candidate: normalize(n) }))
+                .map((n) => ({ icon: icon.name, candidate: normalize(n), isName: n === icon.name }))
             );
 
             // Exact match -> flag for a maintainer, never auto-close
