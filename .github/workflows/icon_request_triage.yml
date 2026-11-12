@@ -106,22 +106,16 @@ jobs:
                 .map((n) => ({ icon: icon.name, candidate: normalize(n) }))
             );
 
-            // Exact match -> close
+            // Exact match -> flag for a maintainer, never auto-close
+            // (names collide, e.g. Cairo language vs cairo graphics, and
+            // requests for new versions of existing icons share the name)
             const exact = entries.find((e) => e.candidate === query);
             if (exact) {
-              await github.rest.issues.createComment({
-                owner, repo, issue_number: issue.number,
-                body:
-                  `Thanks for the request! An icon named **${exact.icon}** ` +
-                  `already exists in \`devicon.json\` (matched on "${rawName.trim()}"), ` +
-                  `so I'm closing this issue. If you think this is a mistake, ` +
-                  `please reopen it and let us know what's different.`,
-              });
-              await github.rest.issues.update({
-                owner, repo, issue_number: issue.number,
-                state: 'closed',
-                state_reason: 'not_planned',
-              });
+              await sendToTriage(
+                `Thanks for the request! An icon named **${exact.icon}** already ` +
+                `exists. A maintainer will check whether this is the same ` +
+                `technology or a request for changes to it.`
+              );
               return;
             }
 
