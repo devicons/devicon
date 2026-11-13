@@ -2050,6 +2050,28 @@
         "aliases": []
     },
     {
+        "name": "celery",
+        "altnames": [],
+        "tags": [
+            "framework",
+            "python",
+            "task-runner"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#b5dd63",
+        "aliases": []
+    },
+    {
         "name": "centos",
         "altnames": [],
         "tags": [
