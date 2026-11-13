@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: fix-stroked-plain-for-font
+expected_outcome: |
+  radar-plain.svg is a single filled path in #e44d26 with no strokes or circles, renders the same as the input (ring, centre dot, needle), and the answer explains that icon-font tools ignore strokes.
+context:
+  scaffold_script: place-files.sh
