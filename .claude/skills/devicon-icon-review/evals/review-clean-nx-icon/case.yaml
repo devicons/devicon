@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: review-clean-nx-icon
+expected_outcome: |
+  review.md approves (or lists only optional suggestions), does not invent standards violations, and confirms the line version is font-ready and the original matches the official logo.
+context:
+  scaffold_script: place-files.sh

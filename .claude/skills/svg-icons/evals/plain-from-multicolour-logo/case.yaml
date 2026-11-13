@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: plain-from-multicolour-logo
+expected_outcome: |
+  acme-original.svg is the full-colour logo and acme-plain.svg a font-ready one-colour version (one path, one fill, white letter cut out as a hole, a gap between the orange circle and the blue square), both on a 0 0 128 128 viewBox filling the box with no padding.
+context:
+  scaffold_script: place-files.sh
