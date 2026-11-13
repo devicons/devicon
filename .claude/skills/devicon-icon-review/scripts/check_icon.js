@@ -93,13 +93,16 @@ function fontMarkupProblems(s) {
   return p;
 }
 
+// attribute values in single quotes are valid XML; rewrite them to double quotes so the checks see one style
+const dq = svg => svg.replace(/(\s[\w:-]+\s*=\s*)'([^']*)'/g, (m, a, v) => `${a}"${v.replace(/"/g, '&quot;')}"`);
+
 // --- files ---
 const dir = path.join(repo, 'icons', name);
 const files = fs.existsSync(dir) ? fs.readdirSync(dir) : [];
 if (!files.length) err(`icons/${name}/ is missing or empty`);
 for (const f of files) {
   if (f.endsWith('.eps')) continue;
-  const m = f.match(new RegExp(`^${name}-(.+)\\.svg$`));
+  const m = f.startsWith(`${name}-`) && f.endsWith('.svg') ? [f, f.slice(name.length + 1, -4)] : null;
   if (!m || !ORDER.includes(m[1])) err(`icons/${name}/${f}: file name must be ${name}-<version>.svg`);
   else if (!svgV.includes(m[1])) err(`icons/${name}/${f} is not listed in versions.svg`);
 }
@@ -110,7 +113,7 @@ let colourSeen = false;
 for (const v of svgV) {
   const f = path.join(dir, `${name}-${v}.svg`);
   if (!fs.existsSync(f)) continue;
-  const s = fs.readFileSync(f, 'utf8'), rel = `${name}-${v}.svg`, root = (s.match(/<svg\b[^>]*>/) || [''])[0];
+  const s = dq(fs.readFileSync(f, 'utf8')), rel = `${name}-${v}.svg`, root = (s.match(/<svg\b[^>]*>/) || [''])[0];
   const isFont = fontV.includes(v) || aliases.some(a => a.base === v);
   if (!/viewBox="0 0 128 128"/.test(root)) err(`${rel}: viewBox must be exactly "0 0 128 128" (found ${(root.match(/viewBox="[^"]*"/) || ['none'])[0]})`);
   if (/\s(width|height)="/.test(root)) err(`${rel}: remove width/height from <svg>`);

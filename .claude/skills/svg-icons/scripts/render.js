@@ -28,6 +28,7 @@ const load = f => {
 // clipped to their viewBox, so zoomed shapes would spill out of their cells.
 const png = (s, size) => 'data:image/png;base64,' + new Resvg(s, { fitTo: { mode: 'width', value: size } }).render().asPng().toString('base64');
 
+fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
 if (big) {
   for (const f of files) {
     const o = files.length === 1 ? out : out.replace(/\.png$/, `-${path.basename(f, '.svg')}.png`);

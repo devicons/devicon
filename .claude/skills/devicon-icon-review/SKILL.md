@@ -31,7 +31,7 @@ Standards live in `references/devicon-standards.md` (with links to the maintaine
    node .claude/skills/devicon-icon-review/scripts/check_icon.js <name> --repo .
    node .claude/skills/svg-icons/scripts/validate.js icons/<name>
    node .claude/skills/svg-icons/scripts/optimize.js --check <the SVGs the PR adds or changes>
-   node .claude/skills/svg-icons/scripts/render.js icons/<name> --out /tmp/<name>-preview.png
+   node .claude/skills/svg-icons/scripts/render.js icons/<name> --out <scratch-folder>/<name>-preview.png
    ```
    `UNOPTIMIZED` from `--check` is a should-fix (optimizing would shrink the file by over 20%); small savings are noise, don't report them. Only judge the files the PR changes: asking to re-optimize untouched versions widens the PR.
    Then **look at the preview**: blobs (white not cut out), slivers, uneven line widths, things outside the box, off-centre, squished, unreadable at 16px.

@@ -32,6 +32,7 @@ const holes = (opt('--holes', '') || '').split(',').map(s => s.trim().toLowerCas
 const skip = (opt('--skip', '') || '').split(',');
 const src = args[0];
 if (!src || !name) { console.error('usage: node versions.js <logo.svg> --name foo --out dir [options]'); process.exit(1); }
+if (!/^[a-z0-9][a-z0-9_-]*$/i.test(name)) { console.error(`--name must be letters, digits, - or _ (got "${name}")`); process.exit(1); }
 
 const all = B.leaves(fs.readFileSync(src, 'utf8'));
 const logo = all.filter((l, i) => logoIdx ? logoIdx.includes(i) : !(textIdx || []).includes(i));

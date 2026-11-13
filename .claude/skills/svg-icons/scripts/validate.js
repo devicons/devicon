@@ -33,7 +33,7 @@ const files = process.argv.slice(2).flatMap(a => fs.statSync(a).isDirectory()
   ? fs.readdirSync(a).filter(f => f.endsWith('.svg')).map(f => path.join(a, f)) : [a]);
 let bad = 0;
 for (const f of files) {
-  const s = fs.readFileSync(f, 'utf8'), stem = path.basename(f, '.svg'), p = [];
+  const s = fs.readFileSync(f, 'utf8').replace(/(\s[\w:-]+\s*=\s*)'([^']*)'/g, (m, a, v) => `${a}"${v.replace(/"/g, '&quot;')}"`), stem = path.basename(f, '.svg'), p = [];
   if (!/viewBox="0 0 128 128"/.test(s)) p.push('viewBox is not "0 0 128 128"');
   if (/\s(width|height)="/.test((s.match(/<svg\b[^>]*>/) || [''])[0])) p.push('root has width/height attributes');
   if (/(^|[\s;"])stroke\s*[=:]\s*"?(?!none|transparent)[#a-z]/i.test(s)) p.push('has strokes');

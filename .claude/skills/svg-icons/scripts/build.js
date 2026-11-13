@@ -207,6 +207,9 @@ function prefixIds(svg, prefix) {
     const to = `${prefix}-${id}`;
     svg = svg.split(` id="${id}"`).join(` id="${to}"`)
       .split(`url(#${id})`).join(`url(#${to})`)
+      .split(`url('#${id}')`).join(`url('#${to}')`)
+      .split(`url("#${id}")`).join(`url("#${to}")`)
+      .split(`url(&quot;#${id}&quot;)`).join(`url(&quot;#${to}&quot;)`)
       .split(`href="#${id}"`).join(`href="#${to}"`);
     // ID selectors in <style> blocks
     const sel = new RegExp(`#${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`, 'g');
