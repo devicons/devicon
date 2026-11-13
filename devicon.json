@@ -15618,7 +15618,8 @@
         "name": "testinglibrary",
         "altnames": [
             "testing-library",
-            "react-testing-library"
+            "react-testing-library",
+            "Testing Library"
         ],
         "tags": [
             "testing",
