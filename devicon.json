@@ -7929,6 +7929,26 @@
         "aliases": []
     },
     {
+        "name": "kate",
+        "altnames": [],
+        "tags": [
+            "editor",
+            "text editor",
+            "open-source"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#15a6ff",
+        "aliases": []
+    },
+    {
         "name": "kdeneon",
         "altnames": [],
         "tags": [
