@@ -9442,10 +9442,12 @@
             "svg": [
                 "original",
                 "original-wordmark",
-                "plain"
+                "plain",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "plain",
+                "plain-wordmark"
             ]
         },
         "color": "#ff4c1f",
