@@ -2317,6 +2317,35 @@
         ]
     },
     {
+        "name": "clevertap",
+        "altnames": [
+            "CleverTap"
+        ],
+        "tags": [
+            "analytics",
+            "marketing",
+            "customer-engagement"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f04444",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "clickhouse",
         "altnames": [],
         "tags": [
