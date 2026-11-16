@@ -13605,6 +13605,34 @@
         "aliases": []
     },
     {
+        "name": "rundeck",
+        "altnames": [],
+        "tags": [
+            "automation",
+            "devops",
+            "operations",
+            "orchestration"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f73f39",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "rust",
         "altnames": [
             "rustlang"
