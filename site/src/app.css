@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Geist", "Geist Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-dark-bg: #09090b;
+  --color-surface-900: #11131a;
+  --color-surface-850: #181b24;
+  --color-surface-800: #222634;
+
+  /* Devicon Brand Tokens */
+  --color-devicon-primary: #10b981;
+  --color-devicon-primary-dark: #059669;
+  --color-devicon-primary-light: #34d399;
+  --color-devicon-accent: #3ecf8e;
+  --color-devicon-shield: #60be86;
+  --color-devicon-shield-light: #65d693;
+  --color-devicon-shield-dark: #558d6c;
+  --color-devicon-shield-mid: #5aa579;
+
+  --color-devicon-emerald: #10b981;
+  --color-devicon-emerald-light: #34d399;
+  --color-devicon-emerald-dark: #059669;
+
+  --color-border-subtle: rgba(255, 255, 255, 0.07);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+
+  --primaryColor: #10b981;
+  --primaryColorDark: #059669;
+  --primaryColorLight: #34d399;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* Prevent full-page repaint/layout lag across 600+ icon cards during theme toggle */
+html.disable-transitions,
+html.disable-transitions *:not(.theme-toggle-icon, .theme-toggle-icon *) {
+  transition: none !important;
+}
+
+.base-container {
+  @apply mx-auto w-full px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+.checkerboard {
+  background-image: repeating-conic-gradient(#d1d5db 0% 25%, #f3f4f6 0% 50%);
+  background-size: 16px 16px;
+  background-color: #f3f4f6;
+}
+
+:global(.dark) .checkerboard,
+.dark .checkerboard {
+  background-image: repeating-conic-gradient(#222634 0% 25%, #11131a 0% 50%);
+  background-size: 16px 16px;
+  background-color: #11131a;
+}
+
+.no-scrollbar,
+.code-snippet {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.code-snippet::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-marquee {
+    animation: none !important;
+  }
+}
+
+/* Devicon Developer Grid Background */
+.bg-devicon-grid {
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+:global(.dark) .bg-devicon-grid,
+.dark .bg-devicon-grid {
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Devicon Engineering Margin Stripes */
+.bg-devicon-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(16, 185, 129, 0.05) 0,
+    rgba(16, 185, 129, 0.05) 1px,
+    transparent 0,
+    transparent 10px
+  );
+}
+
+:global(.dark) .bg-devicon-stripes,
+.dark .bg-devicon-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(16, 185, 129, 0.07) 0,
+    rgba(16, 185, 129, 0.07) 1px,
+    transparent 0,
+    transparent 10px
+  );
+}
