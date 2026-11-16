@@ -11261,11 +11261,14 @@
         "versions": {
             "svg": [
                 "original",
-                "line"
+                "original-wordmark",
+                "line",
+                "plain-wordmark"
             ],
             "font": [
                 "original",
-                "line"
+                "line",
+                "plain-wordmark"
             ]
         },
         "color": "#000000",
