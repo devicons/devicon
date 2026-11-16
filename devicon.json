@@ -17566,6 +17566,29 @@
         "aliases": []
     },
     {
+        "name": "webrtc",
+        "altnames": [],
+        "tags": [
+            "streaming",
+            "communication",
+            "p2p",
+            "real-time"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#0089cc",
+        "aliases": []
+    },
+    {
         "name": "webstorm",
         "altnames": [],
         "tags": [
