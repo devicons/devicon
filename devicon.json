@@ -11250,6 +11250,33 @@
         ]
     },
     {
+        "name": "pathway",
+        "altnames": [],
+        "tags": [
+            "python",
+            "data-processing",
+            "streaming",
+            "analytics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "line"
+            ],
+            "font": [
+                "original",
+                "line"
+            ]
+        },
+        "color": "#000000",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "payloadcms",
         "altnames": [
             "payload"
