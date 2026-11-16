@@ -584,7 +584,7 @@
                 "original",
                 "plain"
             ],
-            "font":[
+            "font": [
                 "plain"
             ]
         },
@@ -2293,9 +2293,9 @@
         "aliases": []
     },
     {
-        "name":"claudecode",
+        "name": "claudecode",
         "altnames": [],
-        "tags":[
+        "tags": [
             "ai",
             "coding",
             "assistant"
@@ -4892,6 +4892,31 @@
         ]
     },
     {
+        "name": "flow",
+        "altnames": [],
+        "tags": [
+            "javascript",
+            "typechecker",
+            "meta",
+            "facebook",
+            "typing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffcf39",
+        "aliases": []
+    },
+    {
         "name": "flutter",
         "altnames": [],
         "tags": [
@@ -5293,7 +5318,7 @@
                 "line-wordmark"
             ]
         },
-       "color": "#3581E5",
+        "color": "#3581E5",
         "aliases": []
     },
     {
@@ -5544,7 +5569,9 @@
     },
     {
         "name": "githubcopilot",
-        "altnames": ["github copilot"],
+        "altnames": [
+            "github copilot"
+        ],
         "tags": [
             "automation",
             "AI",
@@ -6449,11 +6476,11 @@
             "svg": [
                 "original",
                 "plain",
-				"line"
+                "line"
             ],
             "font": [
                 "plain",
-				"line"
+                "line"
             ]
         },
         "color": "#997ff8",
@@ -14103,7 +14130,7 @@
     {
         "name": "shadcn",
         "altnames": [],
-        "color":"#000000",
+        "color": "#000000",
         "tags": [
             "ui",
             "components",
@@ -15238,7 +15265,7 @@
             }
         ]
     },
-        {
+    {
         "name": "systemd",
         "altnames": [],
         "tags": [
@@ -15655,7 +15682,7 @@
             ]
         },
         "color": "#e33332",
-        "aliases":[]
+        "aliases": []
     },
     {
         "name": "testrail",
@@ -15676,7 +15703,7 @@
             ]
         },
         "color": "#50d18d",
-        "aliases":[
+        "aliases": [
             {
                 "base": "original",
                 "alias": "plain"
@@ -16826,7 +16853,7 @@
             }
         ]
     },
-        {
+    {
         "name": "verilog",
         "altnames": [
             "verilog hdl"
@@ -17476,14 +17503,14 @@
             "graphics",
             "web",
             "3d"
-         ],
+        ],
         "versions": {
             "svg": [
                 "original"
             ],
-           "font": [
+            "font": [
                 "original"
-           ]
+            ]
         },
         "color": "#990000",
         "aliases": [
@@ -17737,7 +17764,7 @@
         "color": "#494949",
         "aliases": []
     },
-     {
+    {
         "name": "xai",
         "altnames": [
             "X AI",
@@ -17747,7 +17774,7 @@
             "AI",
             "assistant",
             "language-model",
-            "llm"    
+            "llm"
         ],
         "versions": {
             "svg": [
