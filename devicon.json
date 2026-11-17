@@ -6220,6 +6220,29 @@
         "aliases": []
     },
     {
+        "name": "hackerrank",
+        "altnames": [],
+        "tags": [
+            "competitive-programming",
+            "recruiting",
+            "coding"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#05c770",
+        "aliases": []
+    },
+    {
         "name": "hadoop",
         "altnames": [
             "Apache Hadoop"
