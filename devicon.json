@@ -2527,6 +2527,39 @@
         ]
     },
     {
+        "name": "cockroachlabs",
+        "altnames": [
+            "cockroachdb",
+            "cockroach"
+        ],
+        "tags": [
+            "database",
+            "sql",
+            "distributed"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#aede54",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "codeac",
         "altnames": [
             "codeacio"
