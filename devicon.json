@@ -8119,6 +8119,34 @@
         "aliases": []
     },
     {
+        "name": "koyeb",
+        "altnames": [
+            "Koyeb"
+        ],
+        "tags": [
+            "hosting",
+            "serverless",
+            "cloud",
+            "deployment",
+            "platform"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#121212",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "krakenjs",
         "altnames": [
             "kraken"
