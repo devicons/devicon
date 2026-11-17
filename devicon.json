@@ -12672,6 +12672,32 @@
         "aliases": []
     },
     {
+        "name": "qwen",
+        "altnames": [
+            "qwenlm",
+            "tongyi qianwen"
+        ],
+        "tags": [
+            "llm",
+            "ai",
+            "nlp"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#615ced",
+        "aliases": []
+    },
+    {
         "name": "qwik",
         "altnames": [],
         "tags": [
