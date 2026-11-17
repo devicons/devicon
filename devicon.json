@@ -219,6 +219,29 @@
         "aliases": []
     },
     {
+        "name": "airtable",
+        "altnames": [
+            "airtable"
+        ],
+        "tags": [
+            "database",
+            "spreadsheet",
+            "collaboration",
+            "saas"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#26b5f8",
+        "aliases": []
+    },
+    {
         "name": "akka",
         "altnames": [
             "akka-framework"
