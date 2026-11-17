@@ -220,9 +220,7 @@
     },
     {
         "name": "airtable",
-        "altnames": [
-            "airtable"
-        ],
+        "altnames": [],
         "tags": [
             "database",
             "spreadsheet",
