@@ -5152,6 +5152,29 @@
         "aliases": []
     },
     {
+        "name": "gate",
+        "altnames": [
+            "gate simulator",
+            "general architecture for text engineering"
+        ],
+        "tags": [
+            "nlp",
+            "text-mining",
+            "ai"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#008080",
+        "aliases": []
+    },
+    {
         "name": "gatling",
         "altnames": [],
         "tags": [
