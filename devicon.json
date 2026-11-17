@@ -4465,6 +4465,34 @@
         "aliases": []
     },
     {
+        "name": "ethersjs",
+        "altnames": [
+            "ethers",
+            "ethers.js"
+        ],
+        "tags": [
+            "blockchain",
+            "ethereum",
+            "web3",
+            "library"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#24339b",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "expo",
         "altnames": [],
         "tags": [
