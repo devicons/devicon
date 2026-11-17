@@ -4465,6 +4465,33 @@
         "aliases": []
     },
     {
+        "name": "excalidraw",
+        "altnames": [
+            "excalidraw"
+        ],
+        "tags": [
+            "diagram",
+            "whiteboard",
+            "drawing",
+            "collaboration"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#6965db",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "expo",
         "altnames": [],
         "tags": [
