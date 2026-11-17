@@ -5131,6 +5131,33 @@
         "aliases": []
     },
     {
+        "name": "ganache",
+        "altnames": [
+            "truffle-ganache"
+        ],
+        "tags": [
+            "blockchain",
+            "ethereum",
+            "truffle",
+            "testing",
+            "web3"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e4a663",
+        "aliases": []
+    },
+    {
         "name": "gardener",
         "altnames": [],
         "tags": [
