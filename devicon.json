@@ -2732,6 +2732,33 @@
         ]
     },
     {
+        "name": "conda",
+        "altnames": [
+            "Conda",
+            "conda package manager"
+        ],
+        "tags": [
+            "package-manager",
+            "environment-manager",
+            "python",
+            "data-science"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#43b02a",
+        "aliases": []
+    },
+    {
         "name": "confluence",
         "altnames": [
             "atlassianconfluence"
