@@ -1100,9 +1100,7 @@
     },
     {
         "name": "auth0",
-        "altnames": [
-            "auth0"
-        ],
+        "altnames": [],
         "tags": [
             "authentication",
             "security",
