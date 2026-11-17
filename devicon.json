@@ -7001,6 +7001,33 @@
         "aliases": []
     },
     {
+        "name": "infura",
+        "altnames": [
+            "infura-io"
+        ],
+        "tags": [
+            "blockchain",
+            "ethereum",
+            "web3",
+            "infrastructure",
+            "api"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff6b4a",
+        "aliases": []
+    },
+    {
         "name": "inkscape",
         "altnames": [],
         "tags": [
