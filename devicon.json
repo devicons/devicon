@@ -9579,6 +9579,33 @@
         "aliases": []
     },
     {
+        "name": "moralis",
+        "altnames": [
+            "moralis-io"
+        ],
+        "tags": [
+            "blockchain",
+            "web3",
+            "api",
+            "backend",
+            "ethereum"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#1da6ff",
+        "aliases": []
+    },
+    {
         "name": "motion",
         "altnames": [
             "framer-motion",
