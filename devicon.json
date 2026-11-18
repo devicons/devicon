@@ -667,6 +667,31 @@
         "aliases": []
     },
     {
+        "name": "apacheflink",
+        "altnames": [
+            "Flink"
+        ],
+        "tags": [
+            "framework",
+            "stream-processing",
+            "distributed"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e65271",
+        "aliases": []
+    },
+    {
         "name": "apacheignite",
         "altnames": [
             "Ignite"
@@ -12694,6 +12719,32 @@
             ]
         },
         "color": "#00b4ff",
+        "aliases": []
+    },
+    {
+        "name": "qwen",
+        "altnames": [
+            "qwenlm",
+            "tongyi qianwen"
+        ],
+        "tags": [
+            "llm",
+            "ai",
+            "nlp"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#615ced",
         "aliases": []
     },
     {
