@@ -18268,6 +18268,28 @@
         ]
     },
     {
+        "name": "zod",
+        "altnames": [],
+        "tags": [
+            "typescript",
+            "library",
+            "validation"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain",
+                "line"
+            ],
+            "font": [
+                "plain",
+                "line"
+            ]
+        },
+        "color": "#408aff",
+        "aliases": []
+    },
+    {
         "name": "zsh",
         "altnames": [],
         "tags": [
