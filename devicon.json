@@ -1124,6 +1124,31 @@
         ]
     },
     {
+        "name": "auth0",
+        "altnames": [],
+        "tags": [
+            "authentication",
+            "security",
+            "identity",
+            "oauth"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#eb5424",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "awk",
         "altnames": [
             "the awk programming language"
