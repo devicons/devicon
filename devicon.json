@@ -2272,6 +2272,32 @@
         "aliases": []
     },
     {
+        "name": "cisco",
+        "altnames": [
+            "cisco-systems"
+        ],
+        "tags": [
+            "networking",
+            "infrastructure",
+            "hardware"
+        ],
+        "versions": {
+            "svg": [
+                "original"
+            ],
+            "font": [
+                "original"
+            ]
+        },
+        "color": "#049fd9",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "clarity",
         "altnames": [
             "clarity-lang"
