@@ -16539,6 +16539,29 @@
         "aliases": []
     },
     {
+        "name": "uipath",
+        "altnames": [],
+        "tags": [
+            "automation",
+            "rpa",
+            "ai"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#fa4616",
+        "aliases": []
+    },
+    {
         "name": "unifiedmodelinglanguage",
         "altnames": [
             "uml",
