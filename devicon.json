@@ -6036,6 +6036,31 @@
         "aliases": []
     },
     {
+        "name": "googlesearchconsole",
+        "altnames": [],
+        "tags": [
+            "google",
+            "seo",
+            "search",
+            "analytics",
+            "webmaster"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#4285f4",
+        "aliases": []
+    },
+    {
         "name": "gradle",
         "altnames": [
             "apachegradle",
