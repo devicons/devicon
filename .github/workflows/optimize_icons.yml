@@ -1,0 +1,23 @@
+name: Optimize icons
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    name: Optimize icons with SVGO
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ericcornelissen/svgo-action@v3
+        id: svgo
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          svgo-config: ./.github/scripts/svgo.config.js
+          svgo-version: 3
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "SVG Optimization: ${{ steps.svgo.outputs.OPTIMIZED_COUNT }}/${{ steps.svgo.outputs.SVG_COUNT }} SVGs got optimized."
