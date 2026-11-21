@@ -5181,6 +5181,38 @@
         "aliases": []
     },
     {
+        "name": "gamemaker",
+        "altnames": [
+            "gamemakerstudio",
+            "GameMaker Studio"
+        ],
+        "tags": [
+            "engine",
+            "game-engine"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark"
+            ],
+            "font": [
+                "original",
+                "original-wordmark"
+            ]
+        },
+        "color": "#231f20",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            },
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "gardener",
         "altnames": [],
         "tags": [
