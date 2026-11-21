@@ -4986,6 +4986,31 @@
         "aliases": []
     },
     {
+        "name": "flyio",
+        "altnames": [],
+        "tags": [
+            "cloud",
+            "infrastructure",
+            "deployment",
+            "hosting",
+            "serverless"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#24175b",
+        "aliases": []
+    },
+    {
         "name": "flyway",
         "altnames": [],
         "tags": [
