@@ -396,16 +396,13 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark",
-                "plain",
-                "plain-wordmark"
+                "plain"
             ],
             "font": [
-                "plain",
-                "plain-wordmark"
+                "plain"
             ]
         },
-        "color": "#A4C439",
+        "color": "#34a853",
         "aliases": []
     },
     {
