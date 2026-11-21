@@ -4942,6 +4942,31 @@
         ]
     },
     {
+        "name": "flow",
+        "altnames": [],
+        "tags": [
+            "javascript",
+            "typechecker",
+            "meta",
+            "facebook",
+            "typing"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ffcf39",
+        "aliases": []
+    },
+    {
         "name": "flutter",
         "altnames": [],
         "tags": [
