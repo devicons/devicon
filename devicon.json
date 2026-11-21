@@ -3471,6 +3471,31 @@
         "aliases": []
     },
     {
+        "name": "debezium",
+        "altnames": [],
+        "tags": [
+            "cdc",
+            "database",
+            "streaming",
+            "kafka",
+            "integration"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#48bfe0",
+        "aliases": []
+    },
+    {
         "name": "debian",
         "altnames": [],
         "tags": [
