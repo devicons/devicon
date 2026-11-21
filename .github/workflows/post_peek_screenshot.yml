@@ -20,7 +20,7 @@ jobs:
         run: echo $PEEK_STATUS
 
       - name: Download workflow artifact
-        uses: dawidd6/action-download-artifact@v7
+        uses: dawidd6/action-download-artifact@80620a5d27ce0ae443b965134db88467fc607b43 # v7
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: peek_icons.yml
@@ -28,14 +28,14 @@ jobs:
 
       - name: Read the pr_num file
         id: pr_num_reader
-        uses: juliangruber/read-file-action@v1.1.6
+        uses: juliangruber/read-file-action@02bbba9876a8f870efd4ad64e3b9088d3fb94d4b # v1.1.6
         with:
           path: ./pr_num/pr_num.txt
 
       - name: Read the err message file
         if: success()
         id: err_message_reader
-        uses: juliangruber/read-file-action@v1.1.6
+        uses: juliangruber/read-file-action@02bbba9876a8f870efd4ad64e3b9088d3fb94d4b # v1.1.6
         with:
           path: ./err_messages/err_messages.txt
 
@@ -43,14 +43,14 @@ jobs:
       - name: Upload screenshot of the SVGs gotten from the artifacts
         id: svgs_overview_img_step
         if: env.PEEK_STATUS == 'success' && success()
-        uses: devicons/public-upload-to-imgur@v2.2.2
+        uses: devicons/public-upload-to-imgur@352cf5f2805c692539a96cfe49a09669e6fca88e # v2.2.2
         with:
           path: ./screenshots/new_svgs.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Upload zoomed in screenshot of the SVGs gotten from the artifacts
         id: svgs_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.2
+        uses: devicons/public-upload-to-imgur@352cf5f2805c692539a96cfe49a09669e6fca88e # v2.2.2
         if: env.PEEK_STATUS == 'success' && success()
         with:
           path: ./screenshots/new_svg_*.png
@@ -59,14 +59,14 @@ jobs:
       - name: Upload screenshot of the newly made icons gotten from the artifacts
         id: icons_overview_img_step
         if: env.PEEK_STATUS == 'success' && success()
-        uses: devicons/public-upload-to-imgur@v2.2.2
+        uses: devicons/public-upload-to-imgur@352cf5f2805c692539a96cfe49a09669e6fca88e # v2.2.2
         with:
           path: ./screenshots/new_icons.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Upload zoomed in screenshot of the newly made icons gotten from the artifacts 
         id: icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.2
+        uses: devicons/public-upload-to-imgur@352cf5f2805c692539a96cfe49a09669e6fca88e # v2.2.2
         if: env.PEEK_STATUS == 'success' && success()
         with:
           path: ./screenshots/new_icon_*.png
@@ -74,14 +74,14 @@ jobs:
 
       - name: Upload zoomed in screenshot of the colored icons gotten from the artifacts 
         id: colored_icons_detailed_img_step
-        uses: devicons/public-upload-to-imgur@v2.2.2
+        uses: devicons/public-upload-to-imgur@352cf5f2805c692539a96cfe49a09669e6fca88e # v2.2.2
         if: env.PEEK_STATUS == 'success' && success()
         with:
           path: ./screenshots/new_colored_icon_*.png
           client_id: ${{secrets.IMGUR_CLIENT_ID}}
 
       - name: Comment on the PR about the result - Success
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
+        uses: jungwinter/comment@fda92dbcb5e7e79cccd55ecb107a8a3d7802a469 # v1.1.0; let us comment on a specific PR
         if: env.PEEK_STATUS == 'success' && success()
         env:
           MESSAGE: |
@@ -138,7 +138,7 @@ jobs:
 
       - name: Comment on the PR about the result - Failure
         if: env.PEEK_STATUS == 'failure'
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
+        uses: jungwinter/comment@fda92dbcb5e7e79cccd55ecb107a8a3d7802a469 # v1.1.0; let us comment on a specific PR
         env:
           MESSAGE: |
             Hi there,
@@ -166,7 +166,7 @@ jobs:
           body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
       - name: Comment on the PR about the result - Failure
         if: failure()
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
+        uses: jungwinter/comment@fda92dbcb5e7e79cccd55ecb107a8a3d7802a469 # v1.1.0; let us comment on a specific PR
         env:
           MESSAGE: |
             Hi there,

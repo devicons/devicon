@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-24.04
     if: startsWith(github.event.pull_request.title, 'new icon') || startsWith(github.event.pull_request.title, 'update icon')  # only checks icon PR
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
       - name: Check if PR is develop
         if: ${{ github.base_ref != 'develop' }}
@@ -14,7 +14,7 @@ jobs:
           echo -e "The PR's base branch is \`${{ github.base_ref }}\`, but should be \`develop\`\nPlease change the PR so that it's based on, and merged into \`develop\`" > ./err_messages.txt
           echo "wrong_branch=true" >> $GITHUB_ENV
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         if: ${{ !env.wrong_branch }}
         with:
           python-version: 3.12
@@ -32,7 +32,7 @@ jobs:
         run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
 
       - name: Upload the err messages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: success()
         with:
           name: err_messages
@@ -46,7 +46,7 @@ jobs:
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the pr num
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: success()
         with:
           name: pr_num
