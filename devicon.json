@@ -1051,6 +1051,27 @@
         "aliases": []
     },
     {
+        "name": "aseprite",
+        "altnames": [],
+        "tags": [
+            "pixel-art",
+            "animation",
+            "editor",
+            "graphics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#7d929e",
+        "aliases": []
+    },
+    {
         "name": "aspire",
         "altnames": [],
         "tags": [
