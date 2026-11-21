@@ -9298,6 +9298,32 @@
         "aliases": []
     },
     {
+        "name": "metamask",
+        "altnames": [
+            "metamask-wallet"
+        ],
+        "tags": [
+            "wallet",
+            "ethereum",
+            "crypto",
+            "web3"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#e27625",
+        "aliases": []
+    },
+    {
         "name": "meteor",
         "altnames": [
             "meteorjs"
