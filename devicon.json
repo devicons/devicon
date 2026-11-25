@@ -1574,17 +1574,20 @@
         ],
         "versions": {
             "svg": [
-                "original"
+                "original",
+                "original-wordmark",
+                "plain"
             ],
             "font": [
-                "original"
+                "original-wordmark",
+                "plain"
             ]
         },
-        "color": "#3B82F6",
+        "color": "#07f",
         "aliases": [
             {
-                "base": "original",
-                "alias": "plain"
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
             }
         ]
     },
