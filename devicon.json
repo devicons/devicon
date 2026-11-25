@@ -14900,6 +14900,30 @@
         ]
     },
     {
+        "name": "statuspage",
+        "altnames": [
+            "atlassian statuspage"
+        ],
+        "tags": [
+            "incident-management",
+            "communication",
+            "monitoring",
+            "atlassian",
+            "uptime"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0052cc",
+        "aliases": []
+    },
+    {
         "name": "stenciljs",
         "altnames": [
             "stencil"
