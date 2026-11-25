@@ -2672,6 +2672,35 @@
         ]
     },
     {
+        "name": "codewars",
+        "altnames": [],
+        "tags": [
+            "education",
+            "coding",
+            "challenges",
+            "kata",
+            "practice"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain-wordmark"
+            ],
+            "font": [
+                "original",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#f05656",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
+    },
+    {
         "name": "codex",
         "altnames": [
             "openaicodex"
