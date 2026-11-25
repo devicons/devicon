@@ -13718,6 +13718,28 @@
         "aliases": []
     },
     {
+        "name": "rstan",
+        "altnames": [],
+        "tags": [
+            "r",
+            "package",
+            "mcmc",
+            "bayesian-inference",
+            "statistics"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#3e8ebc",
+        "aliases": []
+    },
+    {
         "name": "rstudio",
         "altnames": [],
         "tags": [
