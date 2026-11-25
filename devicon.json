@@ -3714,15 +3714,19 @@
         ],
         "versions": {
             "svg": [
-                "original-wordmark",
-                "plain-wordmark"
+                "original-wordmark"
             ],
             "font": [
-                "plain-wordmark"
+                "original-wordmark"
             ]
         },
-        "color": "#000000",
-        "aliases": []
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "discloud",
