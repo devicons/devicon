@@ -3701,6 +3701,34 @@
         ]
     },
     {
+        "name": "directx",
+        "altnames": [
+            "microsoft directx"
+        ],
+        "tags": [
+            "graphics",
+            "api",
+            "game-development",
+            "microsoft",
+            "windows"
+        ],
+        "versions": {
+            "svg": [
+                "original-wordmark"
+            ],
+            "font": [
+                "original-wordmark"
+            ]
+        },
+        "color": "#000",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "discloud",
         "altnames": [],
         "tags": [
