@@ -4,77 +4,236 @@ on:
     workflows: ['Check Icon PR']
     types:
       - completed
+
+permissions:
+  actions: read
+  issues: write
+  pull-requests: write
+
 jobs:
   post_result_of_svg_check:
     name: Post the result of the Check SVG Action
     runs-on: ubuntu-latest
+    # The check fails when it finds issues, so post on failure too. If the check
+    # couldn't produce its artifacts at all, the steps below fail and the
+    # "Failure" comment is posted instead.
+    if: github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure'
     steps:
-      - name: Check if the trigger run worked. If it failed, fail the current run.
-        if: github.event.workflow_run.conclusion != 'success'
-        uses: cutenode/action-always-fail@v1.0.1
-
       - name: Download workflow artifact
-        uses: dawidd6/action-download-artifact@v7
-        if: success()
+        uses: dawidd6/action-download-artifact@eab87c9830c39eff17e5a6eadb20bfb4bc880477 # v27
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: check_icon_pr.yml
           run_id: ${{ github.event.workflow_run.id }}
 
-      - name: Read the pr_num file
-        if: success()
-        id: pr_num_reader
-        uses: juliangruber/read-file-action@v1.1.6
+      # For PRs from forks the check runs the fork's own workflow code, so its
+      # artifacts can't be trusted. Only act on the PR if its head is the commit
+      # that was checked.
+      - name: Verify the PR
+        id: pr
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
-          path: ./pr_num/pr_num.txt
+          script: |
+            const fs = require('fs');
+            const num = parseInt(fs.readFileSync('./pr_num/pr_num.txt', 'utf8').trim(), 10);
+            if (!Number.isInteger(num) || num <= 0) {
+              core.setFailed('pr_num artifact is not a PR number');
+              return;
+            }
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: num
+            });
+            const checked = context.payload.workflow_run.head_sha;
+            if (pr.head.sha !== checked) {
+              core.setFailed(`PR #${num} is at ${pr.head.sha}, but the check ran on ${checked}. Not acting on it.`);
+              return;
+            }
+            core.setOutput('number', String(num));
 
-      - name: Read the err message file
-        if: success()
-        id: err_message_reader
-        uses: juliangruber/read-file-action@v1.1.6
+      - name: Read the expected title
+        id: title
+        run: |
+          TITLE=""
+          if [ -f ./err_messages/expected_title.txt ]; then
+            TITLE=$(head -c 300 ./err_messages/expected_title.txt | tr -d '\r\n')
+          fi
+          echo "expected=$TITLE" >> $GITHUB_OUTPUT
+
+      # Renaming with the bot app's token (not GITHUB_TOKEN) re-runs the check
+      # on the new title. See build_weekly.yml for the app setup; it also needs
+      # the "Pull requests: Read and write" permission for this.
+      - name: Get bot token
+        id: bot-token
+        if: steps.title.outputs.expected != '' && vars.BOT_APP_ID != ''
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         with:
-          path: ./err_messages/err_messages.txt
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+          # Only what this workflow needs; fails here if the installation lacks it
+          permission-pull-requests: write
+
+      - name: Validate the expected title
+        id: validate
+        if: steps.title.outputs.expected != ''
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          EXPECTED: ${{ steps.title.outputs.expected }}
+          PR_NUM: ${{ steps.pr.outputs.number }}
+        with:
+          script: |
+            const expected = process.env.EXPECTED;
+            const version = '(original|plain|line)(-wordmark)?';
+            const valid = new RegExp(`^(new|update) icon: [a-z0-9._-]+ \\(${version}(, ${version})*\\)$`);
+            if (expected.length > 200 || !valid.test(expected)) {
+              core.setFailed(`Refusing to use an unexpected title: ${expected}`);
+              return;
+            }
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: parseInt(process.env.PR_NUM, 10)
+            });
+            core.setOutput('old_title', pr.title);
+
+      # Its own step so it runs as the bot app (github-token), not GITHUB_TOKEN
+      - name: Rename the PR
+        if: steps.title.outputs.expected != '' && steps.bot-token.outputs.token != ''
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          EXPECTED: ${{ steps.title.outputs.expected }}
+          PR_NUM: ${{ steps.pr.outputs.number }}
+        with:
+          github-token: ${{ steps.bot-token.outputs.token }}
+          script: |
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: parseInt(process.env.PR_NUM, 10),
+              title: process.env.EXPECTED
+            });
+
+      - name: Comment on the PR about the title
+        if: steps.title.outputs.expected != ''
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          EXPECTED: ${{ steps.title.outputs.expected }}
+          OLD_TITLE: ${{ steps.validate.outputs.old_title }}
+          PR_NUM: ${{ steps.pr.outputs.number }}
+          RENAMED: ${{ steps.bot-token.outputs.token != '' }}
+        with:
+          script: |
+            const body = process.env.RENAMED === 'true'
+              ? [
+                  "Hi!", "",
+                  "I'm the `check-bot`. The PR title didn't match the icon this PR changes, so I renamed it:", "",
+                  "```", `from: ${process.env.OLD_TITLE}`, `to:   ${process.env.EXPECTED}`, "```", "",
+                  "The title becomes the commit message and the line in the release notes. I'll check the PR again with the new title.", "",
+                  "Thanks for your help,", "SVG-Checker Bot :smile:"
+                ]
+              : [
+                  // Without the bot app a rename wouldn't re-run the check, so ask instead
+                  "Hi!", "",
+                  "I'm the `check-bot`. This PR's title doesn't match the icon it changes. Please rename it to:", "",
+                  "```", process.env.EXPECTED, "```", "",
+                  "Thanks for your help,", "SVG-Checker Bot :smile:"
+                ];
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt(process.env.PR_NUM, 10),
+              body: body.join('\n')
+            });
+
+      # Add the release label the check suggests, unless the PR already has a
+      # release label (maintainers override by setting another one, e.g.
+      # "release: patch").
+      - name: Label the release level
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        continue-on-error: true
+        env:
+          PR_NUM: ${{ steps.pr.outputs.number }}
+        with:
+          script: |
+            const fs = require('fs');
+            const file = './err_messages/release_label.txt';
+            const label = fs.existsSync(file) ? fs.readFileSync(file, 'utf8').trim() : '';
+            if (!['release: major', 'release: minor'].includes(label)) return;
+
+            const issue = { owner: context.repo.owner, repo: context.repo.repo, issue_number: parseInt(process.env.PR_NUM, 10) };
+            const { data: labels } = await github.rest.issues.listLabelsOnIssue(issue);
+            if (labels.some(l => l.name.startsWith('release:'))) return;
+            await github.rest.issues.addLabels({ ...issue, labels: [label] });
+            if (label !== 'release: major') return;
+
+            // Explain why a rename or removal is a major release. The check only
+            // passes the icon names; the message is written here.
+            const noticeFile = './err_messages/release_notice.json';
+            const notice = fs.existsSync(noticeFile) ? JSON.parse(fs.readFileSync(noticeFile, 'utf8')) : {};
+            const names = [...(notice.renamed || []), ...(notice.removed || [])];
+            if (!names.length || !names.every(n => /^[a-z0-9._-]{1,50}$/.test(n))) return;
+
+            let what, old;
+            if (notice.renamed) {
+              const [from, to] = notice.renamed;
+              what = `**\`${from}\` is renamed to \`${to}\`.**`;
+              old = [from];
+            } else {
+              what = `**This PR removes ${notice.removed.map(n => `\`${n}\``).join(', ')}.**`;
+              old = notice.removed;
+            }
+            const uses = old.map(n => `\`icons/${n}/…\` SVG links or \`devicon-${n}-*\` classes`).join(', ');
+            await github.rest.issues.createComment({ ...issue, body: [
+              "Hi!", "",
+              `I'm the \`check-bot\`. ${what}`, "",
+              `Sites that use the old name (${uses}) can break, so this is a breaking change. ` +
+              "I've labelled this PR `release: major`: it will be part of the next major release. " +
+              "If it isn't breaking after all, a maintainer can replace the label.", "",
+              "Thanks for your help,", "SVG-Checker Bot :smile:"
+            ].join('\n') });
 
       - name: Comment on the PR about the result - SVG Error
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
-        if: success() && (steps.err_message_reader.outputs.content != '')
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          MESSAGE: |
-            Hi!
-
-            I'm the `check-bot` and we have some issues with your PR:
-
-            ```
-            {0}
-            ```
-
-            Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/wiki/SVG-Standards) for more details regarding these errors.
-
-            Please address these issues. When you update this PR, I will check your SVGs again.
-
-            Thanks for your help,
-            SVG-Checker Bot :smile:
+          PR_NUM: ${{ steps.pr.outputs.number }}
         with:
-          type: create
-          issue_number: ${{ steps.pr_num_reader.outputs.content }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ format(env.MESSAGE, steps.err_message_reader.outputs.content) }}
+          script: |
+            const fs = require('fs');
+            const file = './err_messages/err_messages.txt';
+            const errors = fs.existsSync(file) ? fs.readFileSync(file, 'utf8').trim() : '';
+            if (!errors) return;
 
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt(process.env.PR_NUM, 10),
+              body: [
+                "Hi!", "",
+                "I'm the `check-bot` and we have some issues with your PR:", "",
+                "```", errors, "```", "",
+                "Check our [CONTRIBUTING guide](https://github.com/devicons/devicon/wiki/SVG-Standards) for more details regarding these errors.", "",
+                "Please address these issues. When you push new commits or edit the PR title, I will check your PR again.", "",
+                "Thanks for your help,", "SVG-Checker Bot :smile:"
+              ].join('\n')
+            });
+
+      # Only with a verified PR number: never comment on a PR named by an unverified artifact
       - name: Comment on the PR about the result - Failure
-        uses: jungwinter/comment@v1.1.0 # let us comment on a specific PR
-        if: failure()
+        if: failure() && steps.pr.outputs.number != ''
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          MESSAGE: |
-            Hi!
-
-            I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.
-
-            Please let my maintainers know of the issues. They will take a look at my work and try to resolve the problem. Until then, please hang tight and sorry for the inconvenience.
-
-            Cheers,
-            SVG-Checker Bot :smile:
+          PR_NUM: ${{ steps.pr.outputs.number }}
         with:
-          type: create
-          issue_number: ${{ steps.pr_num_reader.outputs.content }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ env.MESSAGE }}
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt(process.env.PR_NUM, 10),
+              body: [
+                "Hi!", "",
+                "I'm Devicons' SVG-Checker Bot and it seems we've ran into a problem. I'm supposed to check your svgs but I couldn't do my task due to an issue.", "",
+                "Please let my maintainers know of the issues. They will take a look at my work and try to resolve the problem. Until then, please hang tight and sorry for the inconvenience.", "",
+                "Cheers,", "SVG-Checker Bot :smile:"
+              ].join('\n')
+            });

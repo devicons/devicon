@@ -2,10 +2,10 @@ from argparse import ArgumentParser
 from build_assets.PathResolverAction import PathResolverAction
 
 
-def get_selenium_runner_args(has_token=True, peek_mode=False):
+def get_selenium_runner_args(has_token=True, peek_mode=False, build_since=False):
     """
     Get the commandline arguments for the icomoon_peek.py and 
-    icomoon_build.py.
+    icomoon_build_githubless.py.
     """
     parser = ArgumentParser(description="Upload svgs to Icomoon to create icon files.")
 
@@ -34,11 +34,16 @@ def get_selenium_runner_args(has_token=True, peek_mode=False):
                         action=PathResolverAction)
 
     if peek_mode:
-        parser.add_argument("pr_title",
-                            help="The title of the PR that we are peeking at")
+        parser.add_argument("--base",
+                            help="Commit to diff against to find the PR's changes (HEAD^1 in a PR merge commit)",
+                            default="HEAD^1")
     if has_token != False:
         parser.add_argument("token",
                             help="The GitHub token to access the GitHub REST API.")
+    if build_since:
+        parser.add_argument("--since",
+                            help="Commit to diff against to find updated SVGs (usually the last build commit)",
+                            default=None)
 
     return parser.parse_args()
 
@@ -50,7 +55,7 @@ def get_check_icon_pr_args():
     parser = ArgumentParser(description="Check the SVGs to ensure their attributes are correct. Run whenever a PR is opened")
 
     parser.add_argument("pr_title",
-                        help="The title of the PR that we are peeking at")
+                        help="The title of the PR that we are checking")
 
     parser.add_argument("icons_folder_path",
                         help="The path to the icons folder",
@@ -60,29 +65,10 @@ def get_check_icon_pr_args():
                         help="The path to the devicon.json",
                         action=PathResolverAction)
 
+    parser.add_argument("--base",
+                        help="Commit to diff against to find the PR's changes (HEAD^1 in a PR merge commit)",
+                        default="HEAD^1")
+
     return parser.parse_args()
 
 
-def get_release_message_args():
-    """
-    Get the commandline arguments for get_release_message.py.
-    """
-    parser = ArgumentParser(description="Create a text containing the icons and features added since last release.")
-    parser.add_argument("token",
-                        help="The GitHub token to access the GitHub REST API.")
-    return parser.parse_args()
-
-
-def get_in_develop_labeler_args():
-    """
-    Get the commandline arguments for in_develop_labeler.py.
-    """
-    parser = ArgumentParser(description="Parse the PR body to find the issue(s) we are labelling.")
-    parser.add_argument("token",
-                        help="The GitHub token to access the GitHub REST API.",
-                        type=str)
-
-    parser.add_argument("pr_num",
-                        help="The PR's number",
-                        type=str)
-    return parser.parse_args()

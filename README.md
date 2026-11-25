@@ -178,12 +178,7 @@ Join the [official Discord server](https://discord.gg/hScy8KWACQ) to request ico
 
 ## Branches
 
-All official releases live on `master`. Everything in between (icons, features, experiments) is kept on `develop`.
-
-| Branch | Contains |
-| --- | --- |
-| `master` | The latest official release with all SVGs and built icons. Official, tested changes only. |
-| `develop` | The latest non-optimized SVGs, with no built icons for them (these are built at each release, or manually, see [Building Devicon](#building-devicon)). Experimental changes. |
+There is one branch, `master`. Pull requests target it and are squash-merged. The icon font and CSS aren't built per pull request: a weekly workflow builds them and then publishes a release, so `master` can have SVGs that aren't in the font yet. Use a [release](https://github.com/devicons/devicon/releases) or the npm package for a stable version.
 
 ## Stale Pull Requests
 
@@ -268,7 +263,7 @@ Build the icons and website locally, or use Gitpod to skip the setup.
 
 [Gitpod](https://www.gitpod.io) installs the required dependencies and builds the icons in one click. No extra setup is needed.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/devicons/devicon/tree/develop)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/devicons/devicon)
 
 > [!NOTE]
 > If a command doesn't run properly on Gitpod, follow the local steps below and run them in the Gitpod terminal.

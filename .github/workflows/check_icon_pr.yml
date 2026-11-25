@@ -1,53 +1,83 @@
 name: Check Icon PR
-on: pull_request
+on:
+  pull_request:
+    # edited: re-check when the PR title is fixed
+    types: [opened, synchronize, reopened, edited]
+    paths:
+      - 'icons/**'
+      - 'devicon.json'
 jobs:
   check:
     name: Check the `devicon.json` and the SVGs' quality
     runs-on: ubuntu-24.04
-    if: startsWith(github.event.pull_request.title, 'new icon') || startsWith(github.event.pull_request.title, 'update icon')  # only checks icon PR
     steps:
-      - uses: actions/checkout@v5
-
-      - name: Check if PR is develop
-        if: ${{ github.base_ref != 'develop' }}
-        run: |
-          echo -e "The PR's base branch is \`${{ github.base_ref }}\`, but should be \`develop\`\nPlease change the PR so that it's based on, and merged into \`develop\`" > ./err_messages.txt
-          echo "wrong_branch=true" >> $GITHUB_ENV
-
-      - uses: actions/setup-python@v5
-        if: ${{ !env.wrong_branch }}
+      # Checks out the PR's merge commit; depth 2 so HEAD^1 (the target branch)
+      # is available to diff against
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          python-version: 3.12
+          fetch-depth: 2
+
+      - name: Check if PR targets master
+        if: ${{ github.base_ref != 'master' }}
+        run: |
+          echo "Error: This PR targets '${{ github.base_ref }}' but should target 'master'"
+          echo "Please change the PR so that it's based on, and merged into 'master'"
+          exit 1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
 
       - name: Install dependencies
-        if: ${{ !env.wrong_branch }}
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r ./.github/scripts/requirements.txt
-
-      - name: Run the check_svg script
-        if: ${{ !env.wrong_branch }}
-        env:
-          PR_TITLE: ${{ github.event.pull_request.title }}
-        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
-
-      - name: Upload the err messages
-        uses: actions/upload-artifact@v4
-        if: success()
-        with:
-          name: err_messages
-          path: ./err_messages.txt
+          pip install -r ./.github/scripts/requirements.txt
 
       - name: Save the pr num in an artifact
         shell: bash
-        if: success()
         env:
           PR_NUM: ${{ github.event.number }}
         run: echo $PR_NUM > pr_num.txt
 
       - name: Upload the pr num
-        uses: actions/upload-artifact@v4
-        if: success()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: pr_num
           path: ./pr_num.txt
+
+      - name: Run the check_svg script
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: python ./.github/scripts/check_icon_pr.py "$PR_TITLE" ./icons ./devicon.json
+
+      # Uploaded even if the script crashed: it writes the error to err_messages.txt.
+      # expected_title.txt is set when the bot should rename the PR.
+      - name: Upload the err messages
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: err_messages
+          path: |
+            ./err_messages.txt
+            ./expected_title.txt
+            ./release_label.txt
+            ./release_notice.json
+          if-no-files-found: ignore
+
+      # Fail the check when issues were found or the title is wrong, so the PR
+      # shows a red check. post_check_icon_pr_comment.yml posts the details and
+      # renames the PR; the rename re-runs this check.
+      - name: Fail if issues were found
+        shell: bash
+        run: |
+          FAIL=0
+          if [ -s expected_title.txt ]; then
+            echo "::error::PR title should be: $(cat expected_title.txt) (the check-bot will rename the PR)"
+            FAIL=1
+          fi
+          if [ -s err_messages.txt ]; then
+            echo "::error::Issues found in this PR (details in the check-bot comment):"
+            cat err_messages.txt
+            FAIL=1
+          fi
+          exit $FAIL
