@@ -2684,14 +2684,21 @@
         "versions": {
             "svg": [
                 "original",
-                "plain"
+                "original-wordmark",
+                "plain-wordmark"
             ],
             "font": [
-                "plain"
+                "original",
+                "plain-wordmark"
             ]
         },
-        "color": "#ad2c27",
-        "aliases": []
+        "color": "#f05656",
+        "aliases": [
+            {
+                "base": "original",
+                "alias": "plain"
+            }
+        ]
     },
     {
         "name": "codex",
