@@ -1557,6 +1557,41 @@
         "aliases": []
     },
     {
+        "name": "binijs",
+        "altnames": [
+            "bini",
+            "bini-js"
+        ],
+        "tags": [
+            "framework",
+            "react",
+            "vite",
+            "javascript",
+            "typescript",
+            "web",
+            "development",
+            "frontend"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#07f",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "biome",
         "altnames": [
             "biomejs"
