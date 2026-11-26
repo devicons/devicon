@@ -157,6 +157,16 @@ def check_devicon_object(icon: dict):
     except KeyError:
         err_msgs.append("- missing key: \"alias\" in \"aliases\".")
 
+    if isinstance(icon.get("aliases"), list):
+        for alias_objects in icon["aliases"]:
+            if isinstance(alias_objects, dict):
+                base = alias_objects.get("base")
+                alias = alias_objects.get("alias")
+                if isinstance(base, str) and isinstance(alias, str) and base == alias:
+                    err_msgs.append(
+                        f"- \"base\" and \"alias\" in \"aliases\" must have different values, got \"{base}\" for both."
+                    )
+
     if len(err_msgs) > 0:
         message = "Error found in \"devicon.json\" for \"{}\" entry: \n{}".format(icon["name"], "\n".join(err_msgs))
         return message
