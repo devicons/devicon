@@ -4390,6 +4390,28 @@
         "aliases": []
     },
     {
+        "name": "elysia",
+        "altnames": [
+            "elysiajs"
+        ],
+        "tags": [
+            "framework",
+            "bun",
+            "backend"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#F39189",
+        "aliases": []
+    },
+    {
         "name": "emacs",
         "altnames": [
             "editingmacros"
