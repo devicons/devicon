@@ -2436,8 +2436,7 @@
                 "line"
             ],
             "font": [
-                "line",
-                "plain"
+                "line"
             ]
         },
         "color": "#5881d8",
@@ -3146,9 +3145,7 @@
             ],
             "font": [
                 "plain",
-                "plain-wordmark",
-                "line",
-                "line-wordmark"
+                "line"
             ]
         },
         "color": "#68217a",
@@ -7803,7 +7800,8 @@
         "versions": {
             "svg": [
                 "original",
-                "original-wordmark"
+                "original-wordmark",
+                "plain-wordmark"
             ],
             "font": [
                 "original",
