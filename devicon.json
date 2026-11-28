@@ -6005,6 +6005,32 @@
         "aliases": []
     },
     {
+        "name": "gogs",
+        "altnames": [
+            "Gogs"
+        ],
+        "tags": [
+            "git",
+            "vcs",
+            "self-hosted",
+            "go"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#be4025",
+        "aliases": []
+    },
+    {
         "name": "goland",
         "altnames": [],
         "tags": [
