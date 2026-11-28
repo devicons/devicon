@@ -9612,6 +9612,31 @@
         "aliases": []
     },
     {
+        "name": "mojolang",
+        "altnames": [],
+        "tags": [
+            "programming",
+            "language",
+            "ai",
+            "modular",
+            "python"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#ff4c1f",
+        "aliases": []
+    },
+    {
         "name": "moleculer",
         "altnames": [
             "moleculerjs",
