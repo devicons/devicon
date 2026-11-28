@@ -14761,6 +14761,34 @@
         ]
     },
     {
+        "name": "springtools",
+        "altnames": [
+            "spring tool suite",
+            "sts"
+        ],
+        "tags": [
+            "ide",
+            "java",
+            "spring",
+            "eclipse",
+            "framework"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#6db33f",
+        "aliases": []
+    },
+    {
         "name": "spss",
         "altnames": [
             "ibmspss"
