@@ -10,13 +10,13 @@ class PeekSeleniumRunner(SeleniumRunner):
         Upload the SVGs and peek at how Icomoon interpret its SVGs and
         font versions.
         :param svgs: a list of svg Paths that we'll upload to icomoon.
-        :param screenshot_folder: the name of the screenshot_folder. 
+        :param screenshot_folder: the name of the screenshot_folder.
         :param icon_info: a dictionary containing info on an icon. Taken from the devicon.json.
         :return an array of svgs with strokes as strings. These show which icon
         contains stroke.
         """
-        messages = self.peek_svgs(svgs, screenshot_folder)        
-        self.peek_icons(screenshot_folder, icon_info)
+        messages = self.peek_svgs(svgs, screenshot_folder)
+        self.peek_icons(screenshot_folder, icon_info, len(svgs))
         return messages
 
     def peek_svgs(self, svgs: List[str], screenshot_folder: str):
@@ -52,24 +52,19 @@ class PeekSeleniumRunner(SeleniumRunner):
 
             self.edit_svg(screenshot_folder, i)
 
-        # take a screenshot of the svgs that were just added
-        self.select_all_icons_in_top_set()
-        new_svgs_path = str(Path(screenshot_folder, "new_svgs.png").resolve())
-        icon_set_xpath = "/html/body/div[4]/div[1]/div[2]/div[1]"
-        icon_set = self.driver.find_element_by_xpath(icon_set_xpath)
-        icon_set.screenshot(new_svgs_path)
-
         print("Finished peeking the svgs...", file=self.log_output)
         return svgs_with_strokes
 
-    def peek_icons(self, screenshot_folder: str, icon_info: dict):
+    def peek_icons(self, screenshot_folder: str, icon_info: dict, num_svgs: int):
         """
         Peek at the icon versions of the SVGs that were uploaded.
-        :param screenshot_folder: the name of the screenshot_folder. 
+        :param screenshot_folder: the name of the screenshot_folder.
         :param icon_info: a dictionary containing info on an icon. Taken from the devicon.json.
+        :param num_svgs: the number of SVGs that were uploaded (used to guard against
+        extra icons from icomoon's default sets leaking into the font preview).
         """
         print("Begin peeking at the icons...", file=self.log_output)
-        # ensure all icons in the set is selected.
+        # Select only the newly uploaded icons in the top set before generating font.
         self.select_all_icons_in_top_set()
         self.go_to_page(IcomoonPage.GENERATE_FONT)
         alert = self.test_for_possible_alert(self.MED_WAIT_IN_SEC)
@@ -80,43 +75,28 @@ class PeekSeleniumRunner(SeleniumRunner):
         else:
             raise Exception(f"Unexpected alert found: {alert}")
 
-        # take an overall screenshot of the icons that were just added
-        # also include the glyph count
-        new_icons_path = str(Path(screenshot_folder, "new_icons.png").resolve())
-        main_content_xpath = "/html/body/div[4]/div[2]/div/div[1]"
-        main_content = self.driver.find_element_by_xpath(main_content_xpath)
-        main_content.screenshot(new_icons_path);
-
-        # go in reverse order so we get the oldest icon first
+        # Collect glyph divs; reverse so screenshots are ordered oldest-first
+        # (matching the SVG upload order). Cap at num_svgs as a safety guard
+        # in case any icons from icomoon's default sets bleed into glyphSet0.
         icon_divs_xpath = f'//div[@id="glyphSet0"]/div'
-        icon_divs = self.driver.find_elements_by_xpath(icon_divs_xpath)
-        icon_divs.reverse()
-        i = 0
-        for icon_div in icon_divs:
-            if not icon_div.is_displayed():
-                continue
+        all_icon_divs = self.driver.find_elements_by_xpath(icon_divs_xpath)
+        all_icon_divs.reverse()
+        icon_divs = [d for d in all_icon_divs if d.is_displayed()][:num_svgs]
 
+        for i, icon_div in enumerate(icon_divs):
             icon_screenshot = str(
                 Path(screenshot_folder, f"new_icon_{i}.png").resolve()
             )
             icon_div.screenshot(icon_screenshot)
 
-            i += 1
-
         # test the colors
         style = "#glyphSet0 span:first-of-type {color: " + icon_info["color"] + "}"
         script = f"document.styleSheets[0].insertRule('{style}', 0)"
         self.driver.execute_script(script)
-        i = 0
-        for icon_div in icon_divs:
-            if not icon_div.is_displayed():
-                continue
-
+        for i, icon_div in enumerate(icon_divs):
             icon_screenshot = str(
                 Path(screenshot_folder, f"new_colored_icon_{i}.png").resolve()
             )
             icon_div.screenshot(icon_screenshot)
-
-            i += 1
 
         print("Finished peeking the icons...", file=self.log_output)

@@ -1,0 +1,13 @@
+# Actions are pinned to commit SHAs (a tag can be moved to malicious code);
+# Dependabot keeps the pins and their "# vX.Y.Z" comments up to date.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ['*']
+    commit-message:
+      prefix: ci

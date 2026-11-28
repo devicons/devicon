@@ -1,4 +1,5 @@
 from typing import List
+import json
 import xml.etree.ElementTree as et
 from pathlib import Path
 
@@ -10,55 +11,128 @@ from build_assets import filehandler, arg_getters, util
 
 def main():
     """
-    Check the quality of the svgs IF this is an icon PR. Else, does nothing.
-    If any svg error is found, create a json file called 'svg_err_messages.json'
-    in the root folder that will contains the error messages.
+    Check the icons touched by this PR, found from the changed files: the
+    `devicon.json` entries and the SVGs.
+
+    An icon PR (one that changes anything in icons/) must only change one
+    icons/<name>/ folder and that icon's `devicon.json` entry (or rename one
+    icon), and its title must describe it. If the title is the only thing wrong about the PR's scope, the
+    expected title is written to './expected_title.txt' so the bot can rename the
+    PR, instead of reporting it as an error.
+
+    Error messages are written to './err_messages.txt' (empty if all is well).
     """
     args = arg_getters.get_check_icon_pr_args()
     try:
         all_icons = filehandler.get_json_file_content(args.devicon_json_path)
-
-        devicon_err_msg = []
-        #First check if devicon.json is sorted
-        if sorted(all_icons, key=lambda d: d['name']) != all_icons:
-            devicon_err_msg.append(f"devicon.json is not sorted correctly.\nPlease make sure that your icon is added in the `devicon.json` file at the correct alphabetic position\nas seen here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60")
-
-        # get only the icon object that has the name matching the pr title
-        filtered_icon = util.find_object_added_in_pr(all_icons, args.pr_title)
-        print("Checking devicon.json object: " + str(filtered_icon))
-        devicon_err_msg.append(check_devicon_object(filtered_icon))
-
-        # check the file names
-        filename_err_msg = ""
-        svgs = None
-        try:
-            svgs = filehandler.get_svgs_paths([filtered_icon], args.icons_folder_path, as_str=False)
-            print("SVGs to check: ", *svgs, sep='\n')
-        except ValueError as e:
-            filename_err_msg = "Error found regarding filenames:\n- " + e.args[0]
-
-        # check the svgs
-        if svgs is None or len(svgs) == 0:
-            print("No SVGs to check, ending script.")
-            svg_err_msg = "Error checking SVGs: no SVGs to check. Might be caused by above issues."
-        else:
-            svg_err_msg = check_svgs(svgs, filtered_icon)
+        icons_by_name = {icon["name"]: icon for icon in all_icons}
+        changes = util.get_pr_icon_changes(all_icons, args.base)
+        print("Changed icon folders:", changes["icon_folders"])
+        print("Changed SVGs:", changes["svgs"])
+        print("Changed devicon.json entries:", changes["json"])
+        print("Other changed files:", changes["other_files"])
 
         err_msg = []
-        if devicon_err_msg != []:
-            err_msg.extend(devicon_err_msg)
+        #First check if devicon.json is sorted
+        if sorted(all_icons, key=lambda d: d['name']) != all_icons:
+            err_msg.append(f"devicon.json is not sorted correctly.\nPlease make sure that your icon is added in the `devicon.json` file at the correct alphabetic position\nas seen here: https://github.com/devicons/devicon/wiki/Updating-%60devicon.json%60")
 
-        if filename_err_msg != "":
-            err_msg.append(filename_err_msg)
+        # An icon PR only touches one icons/<name>/ folder and that icon's devicon.json entry
+        icon_folders = changes["icon_folders"]
+        removed = sorted(changes["existing"] - set(icons_by_name))
+        added = sorted(set(icons_by_name) - changes["existing"])
 
-        if svg_err_msg != "":
-            err_msg.append(svg_err_msg)
+        # A rename moves one icon folder to another and renames its devicon.json
+        # entry; treat it as a change to the new icon
+        renamed_from = None
+        if len(icon_folders) == 2 and len(removed) == 1 and len(added) == 1 and set(icon_folders) == {removed[0], added[0]}:
+            renamed_from = removed[0]
+            icon_folders = [added[0]]
+            print(f"Rename: {renamed_from} -> {added[0]}")
+
+        if icon_folders:
+            if changes["other_files"]:
+                err_msg.append("Icon PRs should only change files in `icons/<icon name>/` and `devicon.json`, but this PR also changes:\n" +
+                    "\n".join(f"- {path}" for path in changes["other_files"]) +
+                    "\nPlease remove these changes from this PR (open a separate PR for them if they're needed).")
+            if len(icon_folders) > 1:
+                err_msg.append(f"This PR changes several icons ({', '.join(icon_folders)}).\nPlease open a separate PR for each icon.")
+
+        expected_title = ""
+        if len(icon_folders) == 1:
+            name = icon_folders[0]
+            other_entries = [n for n in changes["json"] if n not in (name, renamed_from)]
+            if other_entries:
+                err_msg.append(f"Icon PRs should only change the `devicon.json` entry of their own icon (\"{name}\"), but this PR also changes: {', '.join(other_entries)}.")
+
+            if name in changes["svgs"] and name not in icons_by_name:
+                err_msg.append(f"`icons/{name}/` was changed, but `devicon.json` has no entry named \"{name}\".")
+            elif name in changes["svgs"]:
+                icon = icons_by_name[name]
+                versions, invalid_files = util.get_svg_versions(icon, changes["svgs"][name])
+                if invalid_files:
+                    err_msg.append("These SVG file names don't match our pattern of `<name>-(original|plain|line)(-wordmark)?.svg`:\n" +
+                        "\n".join(f"- icons/{name}/{file}" for file in invalid_files))
+                if versions:
+                    is_new = name not in changes["existing"] and not renamed_from
+                    title_err, title = util.check_pr_title(args.pr_title, icon, is_new, versions)
+                    # Only rename automatically when the PR's scope is clean
+                    if title_err and not (changes["other_files"] or other_entries or invalid_files):
+                        expected_title = title
+                    elif title_err:
+                        err_msg.append(title_err)
+
+        # Check every icon this PR touches
+        to_check = sorted(set(icon_folders) | set(changes["json"]))
+        for name in to_check:
+            if name not in icons_by_name:
+                continue
+            icon = icons_by_name[name]
+            print("Checking devicon.json object: " + str(icon))
+            devicon_err = check_devicon_object(icon)
+            if devicon_err:
+                err_msg.append(devicon_err)
+
+            try:
+                svgs = filehandler.get_svgs_paths([icon], args.icons_folder_path, as_str=False)
+                print("SVGs to check: ", *svgs, sep='\n')
+            except ValueError as e:
+                err_msg.append(f"Error found regarding filenames of \"{name}\":\n- " + e.args[0])
+                continue
+
+            if len(svgs) == 0:
+                err_msg.append(f"Error checking SVGs of \"{name}\": no SVGs to check. Might be caused by above issues.")
+            else:
+                svg_err = check_svgs(svgs, icon)
+                if svg_err:
+                    err_msg.append(svg_err)
 
         filehandler.write_to_file("./err_messages.txt", "\n\n".join(err_msg))
+        filehandler.write_to_file("./expected_title.txt", expected_title)
+        if expected_title:
+            print(f"PR title should be: {expected_title}")
+        filehandler.write_to_file("./release_label.txt", get_release_label(changes, set(icons_by_name)))
+        # Facts for the bot's "why this is a major release" comment; the comment
+        # workflow writes the actual message
+        notice = {"renamed": [renamed_from, added[0]]} if renamed_from else {"removed": removed} if removed else {}
+        filehandler.write_to_file("./release_notice.json", json.dumps(notice))
         print("Task completed.")
     except Exception as e:
         filehandler.write_to_file("./err_messages.txt", str(e))
         util.exit_with_err(e)
+
+
+def get_release_label(changes: dict, current_names: set):
+    """
+    The release label the check-bot adds to this PR: major if an icon was
+    renamed or removed (its classes disappear), minor if an icon was added or
+    updated, none (patch) otherwise.
+    """
+    if changes["existing"] - current_names:
+        return "release: major"
+    if changes["icon_folders"]:
+        return "release: minor"
+    return ""
 
 
 def check_devicon_object(icon: dict):

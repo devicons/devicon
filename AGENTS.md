@@ -26,7 +26,9 @@ The [wiki](https://github.com/devicons/devicon/wiki) is the source of truth for 
 
 ## Branches and releases
 
-See [Release strategy](https://github.com/devicons/devicon/wiki/Release-strategy,-conventions,-preparation-and-execution) for which branch PRs target and how releases are built. Fonts are built by the release workflow, not in PRs.
+- One branch, `master`. PRs target it and are squash-merged, so the PR title becomes the commit message and the release-notes line.
+- Fonts and CSS aren't built in PRs. `build_weekly.yml` builds them every Monday (or when run by hand) and then releases, after a maintainer approves the `production` environment. The version bump comes from the `release: major|minor|patch` labels of the PRs merged since the last release; the check-bot sets them on icon PRs.
+- Details: [Release strategy](https://github.com/devicons/devicon/wiki/Release-strategy,-conventions,-preparation-and-execution).
 
 ## Posting on GitHub
 
