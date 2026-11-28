@@ -8641,6 +8641,30 @@
         ]
     },
     {
+        "name": "lighthouse",
+        "altnames": [
+            "google lighthouse",
+            "Google Lighthouse"
+        ],
+        "tags": [
+            "testing",
+            "performance",
+            "seo",
+            "audit"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#0535c1",
+        "aliases": []
+    },
+    {
         "name": "linear",
         "altnames": [],
         "tags": [
