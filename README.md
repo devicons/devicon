@@ -1,5 +1,23 @@
-<p align="center">
-    <a href="https://github.com/devicons/devicon/releases">
+<div align="center">
+  <a href="https://github.com/devicons/devicon">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original-wordmark.svg" alt="Devicon Logo" height="140" />
+  </a>
+  <h3>Devicon</h3>
+  <p>
+    A curated collection of logos for programming languages, frameworks, and development tools.<br />
+    Available as a font, as raw SVGs, or via CDN.
+  </p>
+  <p>
+    <a href="https://devicon.dev">Website</a>
+    &middot;
+    <a href="https://github.com/devicons/devicon/issues/new?assignees=&labels=request%3Aicon&template=icon-request.md&title=Icon+request%3A+%5BNAME%5D">Request an Icon</a>
+    &middot;
+    <a href="#contributing">Contribute</a>
+    &middot;
+    <a href="https://discord.gg/hScy8KWACQ">Discord</a>
+  </p>
+
+  <a href="https://github.com/devicons/devicon/releases">
         <img alt="GitHub release (latest by semver)" src="https://img.shields.io/github/v/release/devicons/devicon?color=%2360be86&label=Latest%20release&style=for-the-badge&sort=semver">
     </a>
     <a href="/LICENSE">
@@ -26,294 +44,305 @@
     <a href="https://www.npmjs.com/package/devicon">
         <img alt="Devicons npm downloads/month" src="https://img.shields.io/npm/dm/devicon?color=%2360be86&style=for-the-badge">
     </a>
-</p>
-<br />
-<div align="center">
-    <a href="https://github.com/devicons/devicon">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/devicon/devicon-original-wordmark.svg" alt="Devicon Logo" height="140" />
-    </a>
-    <h5 align="center">
-        Devicon aims to gather all logos representing development languages and tools.
-    </h5>
-    <p align="center">
-        <a target="_blank" href="https://devicon.dev">Demo</a>
-        &middot;
-        <a target="_blank" href="https://github.com/devicons/devicon/issues/new?assignees=&labels=request%3Aicon&template=icon-request.md&title=Icon+request%3A+%5BNAME%5D">Request Icon</a>
-        &middot;
-        <a href="#contribute">Contribute</a>
-    </p>
 </div>
 
-<h2>TL;DR</h2>
+<br />
 
-```html
-<!-- in your header -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+## Table of Contents
 
-<!-- in your body -->
-<i class="devicon-devicon-plain"></i>
-```
+- [About](#about)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+  - [Font (recommended)](#font-recommended)
+  - [Inline SVG](#inline-svg)
+  - [Image tag](#image-tag)
+  - [CDN](#cdn)
+- [Requesting an Icon](#requesting-an-icon)
+- [Contributing](#contributing)
+- [Community](#community)
+- [Branches](#branches)
+- [Stale Pull Requests](#stale-pull-requests)
+- [Tools](#tools)
+- [Building Devicon](#building-devicon)
+- [Acknowledgements](#acknowledgements)
+- [Disclaimer](#disclaimer)
 
-<h2>Table of Contents</h2>
-<ol>
-    <li><a href="#about">About the Project</a></li>
-    <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#request-icon">Requesting Icon</a></li>
-    <li><a href="#contribute">Contributing</a></li>
-    <li><a href="#discord-community">Discord Community</a></li>
-    <li><a href="#develop-vs-master"><code>develop</code> vs <code>master</code></a></li>
-    <li><a href="#stale-prs">Stale Pull Requests</a></li>
-    <li><a href="#building-devicon">Building Devicon</a></li>
-</ol>
+## About
 
-<h2 id="about">About the Project</h2>
-<p>
-    Devicon aims to gather all logos representing development languages and tools.
-    Each icon comes in several versions: font/SVG, original/plain/line, colored/not colored, wordmark/no wordmark.
-    Devicon has 150+ icons. And it's growing!<br/>
-</p>
-<p>
-    See the <a href="/devicon.json">devicon.json</a> or <a href="https://devicon.dev">our website</a> for complete and up to date reference of
-    all available icons.
-</p>
+Devicon gathers the logos of development languages and tools in one place. Every icon comes in several variants:
 
+| Variant | Options |
+| --- | --- |
+| Format | Font or SVG |
+| Style | `original`, `plain`, `line` |
+| Color | Colored or monochrome |
+| Wordmark | With or without |
+
+Devicon has 600+ icons, and it's growing. See [`devicon.json`](/devicon.json) or [devicon.dev](https://devicon.dev) for the complete, up-to-date list.
 <p>
     Thanks to all our contributors and the <a href="https://icomoon.io/#home">IcoMoon app</a>. Devicon would not be possible without you.
 </p>
 
-<sub>
-    All product names, logos, and brands are property of their respective owners. All company, product and service
-    names used in this website are for identification purposes only. Use of these names, logos, and brands does not
-    imply endorsement. Usage of these logos should be done according to the company/brand/service's brand policy.
-</sub>
+## Quick Start
 
-<h2 id="getting-started">Getting Started</h2>
-<p>
-    For a super fast setup, go check <a href="https://devicon.dev">devicon.dev</a>.<br />
-    You can either use the <a href="#getting-started-svg">raw SVG</a> icons, our <a href="#getting-started-font">Devicon font</a> (which is
-    also available via <a href=https://www.jsdelivr.com/package/npm/devicon>CDN</a>), or by <a href=#building-devicon>building Devicon</a> yourself.
-</p>
+```html
+<!-- in your <head> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-<h3 id="getting-started-font">Use the <code>devicon</code> font (recommended)</h3>
-<p>
-    You can install devicon as a dependency to your project either with <code>npm</code> or <code>yarn</code>:
-</p>
+<!-- in your <body> -->
+<i class="devicon-devicon-plain"></i>
+```
+
+## Usage
+
+For the fastest setup, head to [devicon.dev](https://devicon.dev). Otherwise, pick whichever method suits your project.
+
+### Font (recommended)
+
+Install Devicon with your package manager:
 
 ```bash
 npm install --save devicon
+# or
 yarn add devicon
 ```
 
-<p>
-    If you don't want to use a package manager, you can also download
-    and include <a href="/devicon.min.css">devicon.min.css</a> next to the <a href="/fonts">font files</a> to your project.
-    See <a href="https://devicon.dev">devicon.dev</a> for details about how to add Devicon to your project via
-    a CDN.
-</p>
-<p>
-    After setting up you just have to include the stylesheet in your header
-    to get started:
-</p>
+No package manager? Download [`devicon.min.css`](/devicon.min.css) and place it next to the [`fonts`](/fonts) folder in your project.
+
+Include the stylesheet in your header:
 
 ```html
 <link rel="stylesheet" href="devicon.min.css">
 ```
 
-<p>Start using icons with <code>&lt;i&gt;</code>-tag:</p>
+Then use icons with the `<i>` tag:
 
 ```html
-<!--  for devicon plain version -->
+<!-- plain -->
 <i class="devicon-devicon-plain"></i>
 
-<!--  for devicon plain version with wordmark -->
+<!-- plain with wordmark -->
 <i class="devicon-devicon-plain-wordmark"></i>
 
-<!--  for devicon plain version colored with devicon main color -->
+<!-- plain, colored with the icon's brand color -->
 <i class="devicon-devicon-plain colored"></i>
 
-<!--  for devicon plain version with wordmark colored with devicon main color -->
+<!-- plain with wordmark, colored -->
 <i class="devicon-devicon-plain-wordmark colored"></i>
 ```
 
-<p>
-    An alternate way to use <code>devicon</code> is by copy/pasting the raw SVG code
-    to your project.
-</p>
-<h3 id="getting-started-svg">Copy/paste SVG code (from the <a href="https://github.com/devicons/devicon/tree/master/icons">SVG folder</a> or the <a href="https://devicon.dev">project page</a>):</h3>
+### Inline SVG
+
+Copy the SVG code from the [`icons`](https://github.com/devicons/devicon/tree/master/icons) folder or from [devicon.dev](https://devicon.dev) and paste it into your markup:
 
 ```html
-<!--  for devicon plain version -->
-<svg id="Devicon" class='devicon-devicon-plain' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path id="plain" fill="#60be86" d="M64,7.83H4.77L14.95,95.13l49,25,.06,0,49.07-25L123.23,7.83Zm42.77,54.86c0,.88,0,1.67-.77,2L73.25,80.44l-2.42,1.13-.27-3.15V72.23l.24-1.57,1.09-.47L95.07,59.81l-21.54-9.6L64.35,68.34,58.9,78.87l-1.22,2.27-2.05-.9L22,64.71a2.42,2.42,0,0,1-1.45-2V56.91a2.39,2.39,0,0,1,1.42-2l34-15.73,3.21-1.44v9.66l.24,1.34-1.56.7L34.45,59.79,56.3,69.42l8.05-16,6.21-12.65,1.13-2.28,1.81.91L106,54.89c.73.35.76,1.14.76,2Z"/></svg>
+<svg id="Devicon" class="devicon-devicon-plain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path id="plain" fill="#60be86" d="M64,7.83H4.77L14.95,95.13l49,25,.06,0,49.07-25L123.23,7.83Zm42.77,54.86c0,.88,0,1.67-.77,2L73.25,80.44l-2.42,1.13-.27-3.15V72.23l.24-1.57,1.09-.47L95.07,59.81l-21.54-9.6L64.35,68.34,58.9,78.87l-1.22,2.27-2.05-.9L22,64.71a2.42,2.42,0,0,1-1.45-2V56.91a2.39,2.39,0,0,1,1.42-2l34-15.73,3.21-1.44v9.66l.24,1.34-1.56.7L34.45,59.79,56.3,69.42l8.05-16,6.21-12.65,1.13-2.28,1.81.91L106,54.89c.73.35.76,1.14.76,2Z"/></svg>
 ```
 
-Add the following CSS rules in your stylesheet:
+Style it with CSS:
 
 ```css
 .devicon-devicon-plain {
   max-width: 2em;
 }
 
-/* if you want to change the original color */
+/* change the original color */
 .devicon-devicon-plain path {
   fill: #4691f6;
 }
 ```
 
-<h4>You can also use the <code>img</code> tag and reference an SVG directly from the repository:</h4>
+### Image tag
+
+Reference an SVG straight from the repository:
 
 ```html
-<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg' />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg" alt="Devicon" height="48" />
 ```
 
-<h2 id="request-icon">Requesting an icon</h2>
-<p>
-    When you want to request an icon please feel free to create an issue. Check out our <a href="https://github.com/devicons/devicon/wiki/Requesting-an-Icon">Wiki</a> for more information.
-</p>
+### CDN
 
-<h2 id="contribute">Contributing</h2>
-<p>
-    We are happy with every contribution, whether it's new icons, features, or maintainers. Please have a look at our <a href="https://github.com/devicons/devicon/wiki">Wiki</a> to see how you can contribute to this project.
-</p>
+Devicon is served through [jsDelivr](https://www.jsdelivr.com/package/npm/devicon). See [devicon.dev](https://devicon.dev) for details on adding it to your project via CDN.
 
-<h2 id="discord-community">Discord community</h2>
-<p>
-We have a Discord community for Devicons. You can easily request icons, discuss, and have a good time talking with the community members! Join the official Discord Server <a href="https://discord.gg/hScy8KWACQ">here!</a>
-</p>
+## Requesting an Icon
 
-<h2 id="develop-vs-master"><code>develop</code> vs <code>master</code></h2>
-<p>
-All official releases shall be in <code>master</code>. Any updates in between (icons, features, etc.) will be kept in <code>develop</code>.
-</p>
-<b><code>develop</code> contains:</b>
-<ul>
-    <li>
-        Latest SVGs (non-optimized).
-    </li>
-    <li>
-        No icons for the latest SVGs. These will be built at every release.<br>
-        Can be built manually. See <a href="#building-devicon"><i>Building Devicon</i></a>.
-    </li>
-    <li>
-        Experimental changes.
-    </li>
-</ul>
-<b><code>master</code> contains:</b>
-<ul>
-    <li>
-        Latest official release, which contains all the SVGs and icons.
-    </li>
-    <li>
-        Official, tested changes.
-    </li>
-</ul>
+Missing a logo? [Open an icon request](https://github.com/devicons/devicon/issues/new?assignees=&labels=request%3Aicon&template=icon-request.md&title=Icon+request%3A+%5BNAME%5D). The [wiki](https://github.com/devicons/devicon/wiki/Requesting-an-Icon) has more information on what makes a good request.
 
-<h2 id="stale-prs">Stale Pull Requests</h2>
-<p>
-After a pull request has been open for over 30 days with no activity or response from the author, it'll be automatically marked as stale. We might fork your changes and merge the changes ourselves. Since GitHub tracks contributions by commits, you will be credited.
-</p>
+## Contributing
 
-<h2 id="building-devicon">Building Devicon</h2>
-<p>
-Follow these steps to build the website and icons either locally or using <a href=https://www.gitpod.io>Gitpod.io</a>.
-</p>
+Every contribution is welcome, whether it's new icons, features, or maintainers. The [wiki](https://github.com/devicons/devicon/wiki) explains how to get started.
 
-<h3>Table of contents</h3>
-<ol>
-    <li><a href="#using-gitpod">Using Gitpod to build</a></li>
-    <li><a href="#local-installation">Local Installation</a></li>
-    <ol>
-      <li><a href="#install-dependencies">Install dependencies</a></li>
-      <li><a href="#building-icons">Build the icons</a></li>
-      <li><a href="#build-css">Build the CSS stylesheet</a></li>
-      <li><a href="#web-server">Setting up the web server</a></li>
-    </ol>
-</ol>
+## Community
 
-<h2 id="using-gitpod">Using Gitpod.io</h2>
-<p>By using <a href=https://www.gitpod.io>Gitpod.io</a>, you can easily build the icons and install the<br>required dependencies in one single click. No extra setup is required.</p>
+Join the [official Discord server](https://discord.gg/hScy8KWACQ) to request icons, ask questions, and chat with other contributors.
 
-<a href=https://gitpod.io/#https://github.com/devicons/devicon/tree/develop><img src=https://gitpod.io/button/open-in-gitpod.svg alt="Open in Gitpod"></img></a>
+## Branches
 
-> **Note**
-> In case some of the commands are not properly ran, you can\
-> follow the steps below and run the same commands on Gitpod.io
+All official releases live on `master`. Everything in between (icons, features, experiments) is kept on `develop`.
 
-<h2 id="local-installation">Local Installation</h3>
+| Branch | Contains |
+| --- | --- |
+| `master` | The latest official release with all SVGs and built icons. Official, tested changes only. |
+| `develop` | The latest non-optimized SVGs, with no built icons for them (these are built at each release, or manually, see [Building Devicon](#building-devicon)). Experimental changes. |
 
-<h3 id="install-dependencies">Install dependencies</h3>
+## Stale Pull Requests
 
-<p><a href=https://github.com/devicons/devicon/fork>Fork</a> the repository and clone the forked repository.</p>
+A pull request with no activity or response from the author for over 30 days is automatically marked as stale. We may fork your changes and merge them ourselves. Because GitHub tracks contributions by commit, you will still be credited.
+
+## Tools
+
+These are the tools and services we use to build, maintain, and distribute Devicon.
+
+<table>
+  <thead>
+    <tr>
+      <th align="center"></th>
+      <th align="left">Tool</th>
+      <th align="left">Used for</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" height="32" alt="Git" /></td>
+      <td><a href="https://git-scm.com">Git</a></td>
+      <td>Version control</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" height="32" alt="GitHub" /></td>
+      <td><a href="https://github.com/devicons/devicon">GitHub</a></td>
+      <td>Hosting, issues, pull requests, and releases</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height="32" alt="GitHub Actions" /></td>
+      <td><a href="https://github.com/devicons/devicon/actions">GitHub Actions</a></td>
+      <td>Automated checks, icon validation, and release workflows</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" height="32" alt="Node.js" /></td>
+      <td><a href="https://nodejs.org">Node.js</a> &amp; <a href="https://www.npmjs.com">npm</a></td>
+      <td>Build scripts, dependencies, and publishing the <code>devicon</code> package</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" height="32" alt="Python" /></td>
+      <td><a href="https://www.python.org">Python</a></td>
+      <td>Automation scripts and the local development server</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" height="32" alt="Selenium" /></td>
+      <td><a href="https://www.selenium.dev">Selenium</a></td>
+      <td>Browser automation to generate the icon font</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-original.svg" height="32" alt="Firefox" /></td>
+      <td><a href="https://www.mozilla.org/firefox">Firefox</a></td>
+      <td>Browser used by Selenium during the icon build</td>
+    </tr>
+    <tr>
+      <td align="center">🎨</td>
+      <td><a href="https://icomoon.io/#home">IcoMoon</a></td>
+      <td>Converting SVGs into the Devicon icon font</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitpod/gitpod-original.svg" height="32" alt="Gitpod" /></td>
+      <td><a href="https://www.gitpod.io">Gitpod</a></td>
+      <td>One-click, preconfigured development environment</td>
+    </tr>
+    <tr>
+      <td align="center">📦</td>
+      <td><a href="https://www.jsdelivr.com">jsDelivr</a></td>
+      <td>CDN delivery of the stylesheet, fonts, and SVGs</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/discordjs/discordjs-original.svg" height="32" alt="Discord" /></td>
+      <td><a href="https://discord.gg/hScy8KWACQ">Discord</a></td>
+      <td>Community support and icon requests</td>
+    </tr>
+  </tbody>
+</table>
+
+## Building Devicon
+
+Build the icons and website locally, or use Gitpod to skip the setup.
+
+### Using Gitpod
+
+[Gitpod](https://www.gitpod.io) installs the required dependencies and builds the icons in one click. No extra setup is needed.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/devicons/devicon/tree/develop)
+
+> [!NOTE]
+> If a command doesn't run properly on Gitpod, follow the local steps below and run them in the Gitpod terminal.
+
+### Local installation
+
+#### 1. Prerequisites
+
+| Requirement | Notes |
+| --- | --- |
+| [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) | Needed to clone the repository |
+| [Node.js and npm](https://kinsta.com/blog/how-to-install-node-js/) | Required to build Devicon |
+| [Firefox](https://www.mozilla.org/en-US/firefox/new/) | Used for the icon build |
+| [Python 3.8](https://www.python.org/downloads/) | Make sure your install includes [pip](https://pypi.org/project/pip/) |
+
+#### 2. Clone and install dependencies
+
+[Fork](https://github.com/devicons/devicon/fork) the repository, then clone your fork:
 
 ```bash
 git clone https://github.com/<your-github-username>/devicon.git
+cd devicon
 ```
 
-> **Note**
-> In case you don't have Git installed, check the <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official guide</a> to install Git on your operating system.
-
-<h3>Install all the necessary NPM dependencies</h3>
+Install the Node and Python dependencies:
 
 ```bash
 npm install
-```
-
-> **Note**
-> In case you don't have NPM installed, check this <a href=https://kinsta.com/blog/how-to-install-node-js/><b>ultimate guide</b></a> on installing Node.js and NPM. These tools are required in order to build Devicon properly.
-
-<h3>Install Firefox</h3>
-https://www.mozilla.org/en-US/firefox/new/
-
-<h3>Install Python 3.8</h3>
-https://www.python.org/downloads/
-
-> **Note**
-> Make sure your Python install includes [pip](https://pypi.org/project/pip/)
-
-<h3>Install Dependencies</h3>
-
-```bash
 python -m pip install -r ./.github/scripts/requirements.txt
 ```
 
-<h3 id="building-icons">Build the new icons</h3>
+#### 3. Build the icons
 
-<p>Once all the dependencies are installed, you can proceed to build the newest icons.<br>
-Usually, this is done on each release, but you can have a sneak peek before a release.</p>
+Icons are normally built on each release, but you can build the latest ones yourself for a sneak peek:
 
 ```bash
 npm run build-icons
 ```
 
-<i>The process might take a while, depending on your operating system's speed and the amount of icons.</i>
-<p>If there are any errors shown, please let us know by <a href=https://github.com/devicons/devicon/issues/new/choose>creating an issue</a> or contacting us on our <a href=https://discord.gg/hScy8KWACQ>Discord community</a>.</p>
+> [!NOTE]
+> This can take a while, depending on your system and the number of icons. If you hit errors, please [create an issue](https://github.com/devicons/devicon/issues/new/choose) or reach out on [Discord](https://discord.gg/hScy8KWACQ).
 
-<h3 id="build-css">Build the CSS stylesheet</h3>
+#### 4. Build the CSS stylesheet
 
-<p>Run the following command to build the new CSS stylesheet.<br>
-This file is used to show all the new icons previously built.</p>
+This generates the stylesheet that displays the newly built icons:
 
 ```bash
 npm run build-css
 ```
 
-<h3 id="web-server">Setting up the web server</h3>
-
-<p>Run the following command to start the web server with Python.</p>
+#### 5. Start the web server
 
 ```bash
-npm run dev # Will run on port 8000
+npm run dev   # runs on port 8000
 ```
 
-<p>Or this command, which does exactly the same, but the port can be customized.</p>
+Or choose your own port:
 
 ```bash
 python -m http.server <port>
 ```
 
-<p>You're done now! :tada: Your build of Devicons should be available at <code>https://localhost:8000</code> (or the desired port).</p>
+Done! 🎉 Your build is now available at `http://localhost:8000` (or your chosen port).
 
-<br/>
+## Acknowledgements
+
+Thanks to all of our [contributors](https://github.com/devicons/devicon/graphs/contributors) and to the [IcoMoon app](https://icomoon.io/#home). Devicon would not be possible without you.
+
+## Disclaimer
+
+All product names, logos, and brands are property of their respective owners. All company, product, and service names used in this project are for identification purposes only. Use of these names, logos, and brands does not imply endorsement. Please use these logos in accordance with each company, brand, or service's brand policy.
+
+<br />
 <div align="center">
-    <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-    <img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" />
+  <img src="https://forthebadge.com/images/badges/built-by-developers.svg" alt="Built by developers" />
 </div>
