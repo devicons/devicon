@@ -16992,7 +16992,12 @@
             ]
         },
         "color": "#1269ff",
-        "aliases": []
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
     },
     {
         "name": "wolfram",
