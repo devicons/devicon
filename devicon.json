@@ -16625,6 +16625,29 @@
         ]
     },
     {
+        "name": "typesense",
+        "altnames": [],
+        "tags": [
+            "search",
+            "database",
+            "engine"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain",
+                "plain-wordmark"
+            ],
+            "font": [
+                "plain",
+                "plain-wordmark"
+            ]
+        },
+        "color": "#c0ff58",
+        "aliases": []
+    },
+    {
         "name": "typo3",
         "altnames": [],
         "tags": [
