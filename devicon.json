@@ -8641,6 +8641,30 @@
         ]
     },
     {
+        "name": "lightroom",
+        "altnames": [
+            "adobelightroom",
+            "lr"
+        ],
+        "tags": [
+            "editor",
+            "photo",
+            "graphic",
+            "adobe"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "plain"
+            ],
+            "font": [
+                "plain"
+            ]
+        },
+        "color": "#001e36",
+        "aliases": []
+    },
+    {
         "name": "linear",
         "altnames": [],
         "tags": [
