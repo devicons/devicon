@@ -17958,6 +17958,33 @@
         ]
     },
     {
+        "name": "wireshark",
+        "altnames": [],
+        "tags": [
+            "network",
+            "packet-analyzer",
+            "security"
+        ],
+        "versions": {
+            "svg": [
+                "original",
+                "original-wordmark",
+                "plain"
+            ],
+            "font": [
+                "original-wordmark",
+                "plain"
+            ]
+        },
+        "color": "#1269ff",
+        "aliases": [
+            {
+                "base": "original-wordmark",
+                "alias": "plain-wordmark"
+            }
+        ]
+    },
+    {
         "name": "wolfram",
         "altnames": [
             "wolframlanguage"
